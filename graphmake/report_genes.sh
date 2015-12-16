@@ -1,9 +1,8 @@
 ROOT="/misc/pipeline42/mbelmadani/rnaseq/"
 if [ $# -lt 1 ]; then
     echo "Missing arguments"
-    echo "First argument should be 'bipolar' or 'normal' "
-    echo "Second argument should be the path to write files"
-    echo "Example: ./SCRIPT bipolar /misc/pipeline42/mbelmadani/rnaseq/"
+    echo "First argument should be the path to write files"
+    echo "Example: ./SCRIPT /misc/pipeline42/mbelmadani/rnaseq/portable"
     exit
 else
     ROOT=$1
