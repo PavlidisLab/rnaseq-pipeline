@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 
+# Editors
+*\#
+*~
+
 # C extensions
 *.so
 
