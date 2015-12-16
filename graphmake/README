@@ -1,9 +1,9 @@
 To create reports, call
 
-$ python tablulate_reads.py bipolar
-$ python tablulate_reads.py normal
+$ python tablulate_reads.py bipolar $MY_OUTPUT_PATH
+$ python tablulate_reads.py normal  $MY_OUTPUT_PATH
 
-Output should be in /misc/pipeline42/mbelmadani/rnaseq/reports
+Output should be in  $MY_OUTPUT_PATH/reports
 
 The class Utils from "utils.py" does the actual computations, parsing, etc. The tablulate_reads.py files only handles creation of paths and delegating the proper information to utils.
 
