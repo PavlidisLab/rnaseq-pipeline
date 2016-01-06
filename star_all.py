@@ -9,7 +9,7 @@ import time
 
 experiment = "bipolar"
 outpath = "/misc/pipeline42/mbelmadani/rnaseq/"
-MAX_THREADS = 4
+MAX_THREADS = 2
 
 if len(sys.argv) > 2:
 	experiment = sys.argv[1]
@@ -38,7 +38,10 @@ for i in glob.glob(outpath + '/'+experiment+'/C*_1/*C*1P.txt'):
 	term = [p.poll() for p in procs]
 	while term.count(None) == MAX_THREADS: #len(term):
 		print "Sleeping, blocked by", MAX_THREADS, "jobs."
+		print "Run codes", term
 		time.sleep(30)
+		term = [p.poll() for p in procs]
+
 
 print "Launched everything"
 #os.system("/space/bin/STAR-STAR_2.4.0h/bin/Linux_x86_64_static/STAR --genomeDir /misc/pipeline42/reference_data --runThreadN 16 --readFilesIn " + sampfile1 + " " +  sampfile2 + " --outFileNamePrefix " + starout + " --outSAMtype BAM Unsorted")
