@@ -1,0 +1,5 @@
+# Assemblies
+
+Indexes for assemblies are generated using rsem-prepare-reference. 
+
+The source assemblies are Illumina iGenomes downloaded from: http://support.illumina.com/sequencing/sequencing_software/igenome.html
