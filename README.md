@@ -1,4 +1,3 @@
-# bipolar-hippocampus-rnaseq-pipeline
-Bipolar hippocampal sample RNA-seq analysis pipeline
+# Pavlidis Lab RNA-seq pipeline repository
 
-Use on Linux systems with bash and Python 2.7
+TODO: Documentation
