@@ -3,3 +3,19 @@
 Indexes for assemblies are generated using rsem-prepare-reference. 
 
 The source assemblies are Illumina iGenomes downloaded from: http://support.illumina.com/sequencing/sequencing_software/igenome.html
+
+Tested assemblies:
+
+	# Mouse NCBIm37 (Ensembl)	
+	ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Mus_musculus/Ensembl/NCBIM37/Mus_musculus_Ensembl_NCBIM37.tar.gz
+
+	# Mouse GRCm38 (Ensembl)
+	ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Mus_musculus/Ensembl/GRCm38/Mus_musculus_Ensembl_GRCm38.tar.gz
+
+	# Human GRCh37 (Ensembl)
+	ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/Ensembl/GRCh37/Homo_sapiens_Ensembl_GRCh37.tar.gz
+
+	# Human GRCh38 (NCBI)
+	ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/NCBI/GRCh38/Homo_sapiens_NCBI_GRCh38.tar.gz
+
+
