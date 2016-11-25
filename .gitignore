@@ -70,5 +70,8 @@ target/
 
 # Project specific ignores
 
-Requirements/RSEM
+Requirements/
 Assemblies/
+
+etc/common.cfg
+etc/tmp/*
