@@ -1,0 +1,7 @@
+# Withing the pipeline
+
+#Database file
+SRAmetadb.sqlite
+
+#Any kind of GEO sample directory.
+GSE*
