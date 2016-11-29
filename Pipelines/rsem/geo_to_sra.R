@@ -12,8 +12,10 @@ library("GEOquery")
 library("plyr")
 library("doMC")
 
-# Function definitions
+# Load project common variables
+source("../../etc/load_configs.R", chdir = T)
 
+# Function definitions
 wprint <- function(X, file = "default.log", append = TRUE){
   # Prints text and also outputs it to a file.
   #
@@ -24,6 +26,7 @@ wprint <- function(X, file = "default.log", append = TRUE){
   #
   # Returns:
   #   Nothing
+    
   print(X)
   write(X, file, append=TRUE)
 }
@@ -100,7 +103,7 @@ for (sample in SAMPLE_LIST) {
     CMDS <- adply(.data = SRRs,
                   .margins = 1,
                   .fun = function(X) {
-                      CMD <- paste("/misc/pipeline42/NeuroGem/install/wonderdump.sh", X, SEQUENCE_OUTPUT)                      
+                      CMD <- paste(WONDERDUMP_EXE, X, SEQUENCE_OUTPUT)                      
                       return(CMD)
                  }
                )

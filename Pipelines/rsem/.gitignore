@@ -5,3 +5,8 @@ SRAmetadb.sqlite
 
 #Any kind of GEO sample directory.
 GSE*
+
+# SGE specific files
+SGE_OUT/error
+SGE_OUT/output
+SGE_OUT/*.time
