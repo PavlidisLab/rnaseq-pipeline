@@ -1,0 +1,17 @@
+## Common directories
+ROOT_DIR="/home/ppavlidis/development/rnaseq-pipeline"
+
+ASSEMBLIES="$ROOT_DIR/Assemblies"
+REQUIREMENTS="$ROOT_DIR/Requirements"
+
+## Common tools
+WONDERDUMP_EXE="$REQUIREMENTS/wonderdump.sh"
+
+## RSEM Specific
+RSEM_DIR="$REQUIREMENTS/RSEM"
+
+FASTQDUMP_EXE="$REQUIREMENTS/sratoolkit.2.5.0-centos_linux64/bin/fastq-dump"
+
+## STAR Specific
+STAR_PATH="$REQUIREMENTS/STAR-2.5.2b/bin/Linux_x86_64_static"
+STAR_EXE="$STAR_PATH/STAR"
