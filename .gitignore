@@ -75,3 +75,6 @@ Assemblies/
 
 etc/common.cfg
 etc/tmp/*
+
+# R files
+.Rhistory

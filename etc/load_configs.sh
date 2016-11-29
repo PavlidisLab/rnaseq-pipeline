@@ -12,7 +12,7 @@ if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then
   echo "Config file is unclean, cleaning it..." >&2
 
   # Save output to temporary directory.
-  egrep '^#|^[^ ]*=[^;&]*'  "$configfile" > "$configfile_secured"
+  egrep '^#|^[^ ]*=[^;&]*' "$configfile" > "$configfile_secured"
   configfile="$configfile_secured"
 fi
 
