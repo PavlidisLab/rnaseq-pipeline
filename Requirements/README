@@ -1,0 +1,4 @@
+-add sratoolkit.2.5.0 under sratoolkit.2.5.0/
+  - Prebuilt binary for 2.5.0 on CentOS was downloaded from: https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.0/sratoolkit.2.5.0-centos_linux64.tar.gz
+-add RSEM under RSEM/ ( run "git clone https://github.com/deweylab/RSEM.git" )
+  -git repository already includes version controlled rsem-generate-fpkm-matrix and rsem-generate-tpm-matrix
