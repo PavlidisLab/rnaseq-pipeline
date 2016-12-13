@@ -34,17 +34,18 @@ fi
 PAIRED_END=""
 PAIR=""
 
+#    --temporary-folder $TMP \
 CMD=$(echo $RSEM_EXE \
     -p 1 \
     --star-gzipped-read-file \
-    --temporary-folder $TMP \
+    "$2" \
     --time \
     --star \
     --star-path $STAR_PATH \
-    "$2" \
+    --temporary-folder $TMP \
     $OUTPUT \
     $REFERENCE \
-    "--star-shared-memory LoadAndKeep" 
+    "--star-shared-memory LoadAndKeep"
 )
 
 if [ $# -gt 2 ]
@@ -68,5 +69,5 @@ if [ $# -gt 2 ]
 )
 fi
 
-echo $CMD
+echo $CMD >> log.txt
 $CMD
