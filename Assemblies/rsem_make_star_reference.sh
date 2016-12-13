@@ -28,5 +28,5 @@ $EXE --gtf $GTF \
      --star \
      --star-path $STAR_PATH \
      -p 8 \
-    $GENOME \
+    $GENOME_PATH \
     $OUTPUT

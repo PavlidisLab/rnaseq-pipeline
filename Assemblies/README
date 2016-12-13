@@ -21,12 +21,13 @@ Tested assemblies:
 
 
 ## Generating a runtime assembly
+./rsem_make_star_reference.sh SPECIESNAME /path/to/iGenome
 
-TODO: Update when finished.
-
-Generate the assembly by simply running ./rsem_make_star_human_reference.sh
---- TODO: Option for mouse or alternative versions. 
+Example:
+./rsem_make_star_reference.sh human Assemblies/Homo_sapiens/NCBI/GRCh38/
+Output:
+rnaseq-pipeline/Assemblies/runtime/human_ref38/human_0*
 
 Make sure that RSEM is installed and compilled. RSEM should be cloned from its GitHub repository, then build with the "make" command from inside the RSEM directory.
-Also make sure that RSEM correctly identified by the configuration file (etc/common.cfg). In general, it should simply be: 'RSEM_DIR="$REQUIREMENTS/RSEM"', assuming $REQUIREMENTS is also confirgured to point to the Requirements directory.
+Also make sure that RSEM correctly identified by the configuration file of this pipeline (etc/common.cfg). In general, it should simply be: 'RSEM_DIR="$REQUIREMENTS/RSEM"', assuming $REQUIREMENTS is also confirgured to point to the Requirements directory.
 
