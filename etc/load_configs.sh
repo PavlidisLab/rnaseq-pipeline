@@ -4,8 +4,10 @@ set -e
 
 LOCATION="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p "$LOCATION/tmp"
 configfile="$LOCATION/common.cfg"
-configfile_secured="$LOCATION/tmp/common.cfg"
+configfile_secured="$LOCATION/tmp/common_"$(uuidgen)".cfg"
+cp $configfile $configfile_secured
 
 # Sanitize files
 if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then

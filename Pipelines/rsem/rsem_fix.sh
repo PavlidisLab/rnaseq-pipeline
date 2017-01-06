@@ -1,9 +1,10 @@
 #!/bin/bash
+set -eu
+source ../../etc/load_configs.sh
 
-RSEM_EXE="/misc/pipeline42/NeuroGem/pipeline/RSEM/bin/rsem-calculate-expression"
+RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
 STAR="/space/bin/STAR-STAR_2.4.0h/bin/Linux_x86_64_static"
 REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/human_ref38/human_0"
-#REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/mouse_ref38/mouse_0"
 
 SAMPLE=$(basename $1)
 SERIES=$2 # TODO : Make this nicer
@@ -36,7 +37,7 @@ fi
 #    <(zcat -f $1) <(zcat -f /dev/null) \
 #    --paired-end \
 $RSEM_EXE \
-    -p 16 \
+    -p 1 \
     --temporary-folder $TMP \
     --time \
     --star \

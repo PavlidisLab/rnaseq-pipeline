@@ -1,44 +1,67 @@
 #!/bin/bash
+set -eu
+source ../../etc/load_configs.sh
 
-RSEM_EXE="/misc/pipeline42/NeuroGem/pipeline/RSEM/bin/rsem-calculate-expression"
-STAR="/space/bin/STAR-STAR_2.4.0h/bin/Linux_x86_64_static"
-#REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/human_ref38/human_0"
-REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/mouse_ref38/mouse_0"
+if [ $# -eq 0 ]
+    then
+    SERIES="GSE123456"
+    OUTPUT="quantified/$SERIES/SAMPLE1.fastq.gz"
+    echo "Usage:"
+    echo $0" $SERIES SAMPLE1.fastq.gz <Optional, SAMPLE2.fastq.gz>"    
+    exit
+fi
+echo "Launching: -->" $0 $@
+RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
+REFERENCE=$STAR_DEFAULT_REFERENCE
+REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/mouse_ref38/mouse_0" 
 
-SAMPLE=$(basename $1)
-OUTPUT="quantified/$SAMPLE"
-TMP="temporary/$SAMPLE"
+SERIES=$1
+SAMPLE=$(echo $(basename $2) | sed 's/,.*//g' | sed 's/.fastq.gz//g')
 
+OUTPUT="quantified/$SERIES/$SAMPLE"
+TMP="temporary/$SERIES/$SAMPLE"
 
 mkdir -p $OUTPUT
 mkdir -p $TMP
 
-if [ $# -eq 0 ]
-    then
-    echo "No arguments supplied. Please specify one or two (for paired-end data) fastq file(s)."
-    exit
+SEQUENCES=$2
+PAIRED_END=""
+MATE=""
+
+if [ $# -gt 3 ] 
+then
+    echo " Will be paired end!"
+    PAIRED_END=" --paired-end "
+    MATES=$3
+
+    CMD=$(echo $RSEM_EXE \
+	-p "$NCPU_NICE" \
+	--star-gzipped-read-file \
+	--temporary-folder $TMP \
+	--time \
+	--star \
+	--star-path $STAR_PATH \
+	$PAIRED_END \
+	" $SEQUENCES $MATE " \
+	$REFERENCE \
+	$OUTPUT \
+	"--star-shared-memory LoadAndKeep" \
+)
+else
+    echo " Will be singled end!"
+    CMD=$(echo $RSEM_EXE \
+	-p "$NCPU_NICE" \
+	--star-gzipped-read-file \
+	--time \
+	--star \
+	--star-path $STAR_PATH \
+	--temporary-folder $TMP \
+	" $SEQUENCES " \
+	$REFERENCE \
+	$OUTPUT \
+	"--star-shared-memory LoadAndKeep"
+    )   
 fi
 
-if [ $# -gt 0 ]
-    then
-    ARGUMENTS="<(zcat -f $1)"
-fi
-
-if [ $# -eq 0 ]
-    then
-    echo "Paired-end version not implemented."
-    exit
-fi
-
-#    <(zcat -f $@) \
-#    <(zcat -f $1) <(zcat -f /dev/null) \
-#    --paired-end \
-$RSEM_EXE \
-    -p 16 \
-    --temporary-folder $TMP \
-    --time \
-    --star \
-    --star-path $STAR \
-    <(zcat -f $@) \
-    $REFERENCE \
-    $OUTPUT   
+echo $CMD 2>>  "error-$SERIES.txt" 1>> "log-$SERIES.txt"
+$CMD
