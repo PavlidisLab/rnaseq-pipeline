@@ -2,7 +2,7 @@
 set -eu
 source ../../etc/load_configs.sh
 
-if [ $# -eq 0 ]
+if [ $# -lt 2 ]
     then
     FILES="data/GSE123456/"
     SERIES="GSE123456"
@@ -19,9 +19,10 @@ fi
 MATES=""
 if [ $# -eq 3 ]
 then
-    MATES=1
+    MATES=" --paired-end "
 else
     if [ $# -gt 3 ]
+    then
 	echo "Too many arguments! Please check your command."
 	exit -1
     fi
@@ -30,16 +31,23 @@ fi
 FILES=$1
 SERIES=$2
 REFERENCE=$(dirname $STAR_DEFAULT_REFERENCE)
-NCPU=1 # Set to 2 because limited memory.
 
 echo "Preparing memory..."
-$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE $NCPU #/misc/pipeline42/NeuroGem/pipeline/runtime/human_ref38/
+$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE $NCPU
 echo "Memory loaded."
 
-echo "Launching parallel RSEM."
+echo "Launching parallel RSEM for:"
+#echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
+find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | \
+    sort | \
+    uniq | \
+    xargs -n1 -I % ./samplist.sh % $MATES | \
+    parallel -j "$NCPU_NICE" --colsep ' ' ./rsem.sh $SERIES {1} {2} >> paralog.txt
+    #sem --wait --colsep ' ' -n2 -P $NCPU --load "$MAX_CPU_LOAD" -I % ./rsem.sh $SERIES {1} {2}
 
-find $FILES/ -name "*.fastq.gz" | parallel -P $NCPU --load "$MAX_CPU_LOAD" -I % ./rsem.sh $SERIES %
+#echo "Flushing memory..."
+#echo "Skipped!"
+#$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE $NCPU
+#echo "Memory flushed."
 
-echo "Flushing memory..."
-$RSEM_DIR/rsem-star-clear-shmem $STAR_DIRECTORY $REFERENCE $NCPU
-echo "Memory flushed."
+echo "Done."
