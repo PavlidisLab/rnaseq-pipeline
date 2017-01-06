@@ -10,8 +10,4 @@
   $ ./configure prefix=<The ../Requirements directory>
   $ make
   $ make install
-<<<<<<< HEAD
   $ ../Requirements/bin/parallel --citation # Gets rid of the warning asking to cite parallel.
-=======
-  $ ../Requirements/bin/parallel --citation # Gets rid of the warning asking to cite parallel.
->>>>>>> 9bca392bea0fe9c71cb295f5d799b82d81095457
