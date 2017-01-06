@@ -1,0 +1,3 @@
+[submodule "Requirements/RSEM"]
+	path = Requirements/RSEM
+	url = https://github.com/mbelmadani/RSEM.git
