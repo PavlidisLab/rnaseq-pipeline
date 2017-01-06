@@ -1,5 +1,6 @@
 ## Common directories
-ROOT_DIR="/home/ppavlidis/development/rnaseq-pipeline"
+USERNAME=$(whoami)
+ROOT_DIR="/home/$USERNAME/development/rnaseq-pipeline"
 
 ASSEMBLIES="$ROOT_DIR/Assemblies"
 REQUIREMENTS="$ROOT_DIR/Requirements"

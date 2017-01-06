@@ -1,7 +1,0 @@
-
--add sratoolkit.2.5.0 under sratoolkit.2.5.0/
--add RSEM under RSEM/ ( run "git clone https://github.com/deweylab/RSEM.git" )
-  -Includes version controlled rsem-generate-fpkm-matrix
-  -Includes version controlled rsem-generate-tpm-matrix
-
--Includes wonderdump.sh
