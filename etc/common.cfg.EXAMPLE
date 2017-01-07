@@ -19,4 +19,9 @@ STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_ref38/mouse_0/"
 
 ## Resources
 NCPU="$(grep -c ^processor /proc/cpuinfo)"
-MAX_CPU_LOAD="800%" #"$($(expr $NCPU / 2)"00%")" 
+NCPU_NICE=$(echo "sqrt ( $NCPU )" | bc -l | cut -f1 -d".")
+MAX_CPU_LOAD="800%"
+
+## Runtime parameters                 
+DEFAULT_MATE_SOURCE="_R1_"
+DEFAULT_MATE_REPLACEMENT="_R2_"

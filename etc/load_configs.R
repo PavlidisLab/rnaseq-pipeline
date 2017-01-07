@@ -6,7 +6,7 @@
 #' ---
 #'
 
-CONFIGS_PATH <- "tmp/common.cfg"
+CONFIGS_PATH <- "common.cfg"
 system("sh load_configs.sh")
 CONFIGS <- read.csv(CONFIGS_PATH, sep="=", header=FALSE, col.names=c("Key", "Value") )
 CONFIGS
@@ -34,3 +34,5 @@ for ( i in 1:nrow(KV) ){
 #print("Created variable CONFIGS")
 #print("Available configurations:")
 #print(KV$Key)
+
+print("Configurations loaded for Rscript.")

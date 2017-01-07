@@ -39,8 +39,13 @@ wprint <- function(X, file = "default.log", append = TRUE){
 sqlfile <- "SRAmetadb.sqlite"
 
 # If file is not downloaded, redownloaded.
-if(!file.exists(sqlfile)) sqlfile <<- getSRAdbFile()
-
+if(!file.exists(sqlfile)){
+  wprint(paste("SRAmetadb does not exists. Downloading at", sqlfile))
+  sqlfile <<- getSRAdbFile(method="wget")
+} else {
+  wprint(paste("SRAmetadb exists at", sqlfile,"; no need to redownload unless GEO samples were recently updated."))
+}
+  
 dbcon = dbConnect(RSQLite::SQLite(), sqlfile)
 
 # Prepare parameters
