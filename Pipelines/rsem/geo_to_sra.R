@@ -5,6 +5,18 @@
 #' description: "Given a GSE accession number, retreive all .sra files for SRR and extract the fastq files. "
 #' ---
 
+###
+# Check parameters before anything else.
+#
+if ( is.na(commandArgs(TRUE)[1]) ){
+  # print Usage menu.
+  me <- sub(".*=", "", commandArgs()[4])
+  print("Usage:")
+  print( paste("Rscript", me, "GSE123456 <Optional, OUTPUT_DIRECTORY>") )
+  q(save="no")
+}
+###
+
 source("http://bioconductor.org/biocLite.R")
 library("DBI")
 library(SRAdb)
