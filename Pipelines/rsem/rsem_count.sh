@@ -2,7 +2,7 @@
 
 if [ $# -lt 2 ] 
 then
-    echo "Usage: ./rsem_count PATHTOFILES <transcript|gene>"
+    echo "Usage: ./rsem_count PATHTOFILES <isoforms|genes>"
     exit
 fi
 

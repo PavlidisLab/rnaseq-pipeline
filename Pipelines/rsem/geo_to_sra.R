@@ -28,7 +28,7 @@ library("doMC")
 source("../../etc/load_configs.R", chdir = T)
 
 # Function definitions
-wprint <- function(X, file = "default.log", append = TRUE){
+wprint <- function(X, file = "default-GEO.log", append = TRUE){
   # Prints text and also outputs it to a file.
   #
   # Args:
