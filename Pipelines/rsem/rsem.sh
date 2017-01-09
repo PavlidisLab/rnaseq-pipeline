@@ -5,9 +5,8 @@ source ../../etc/load_configs.sh
 if [ $# -eq 0 ]
     then
     SERIES="GSE123456"
-    OUTPUT="quantified/$SERIES/SAMPLE1.fastq.gz"
     echo "Usage:"
-    echo $0" $SERIES SAMPLE1.fastq.gz <Optional, SAMPLE2.fastq.gz>"    
+    echo $0" $SERIES SEQUENCES1.fastq.gz,SEQUENCES2.fastq.gz... <Optional, SEQUENCES1_MATE.fastq.gz,SEQUENCES2_MATE.fastq.gz...>"    
     exit
 fi
 echo "Launching: -->" $0 $@
@@ -16,7 +15,17 @@ REFERENCE=$STAR_DEFAULT_REFERENCE
 REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/mouse_ref38/mouse_0" 
 
 SERIES=$1
-SAMPLE=$(echo $(basename $2) | sed 's/,.*//g' | sed 's/.fastq.gz//g')
+
+while [[ $SERIES == */ ]]; do
+    # Cleaning up "$SERIES"
+    SERIES=$(echo $SERIES | sed 's|/$||g')
+    echo "WARNING: Please do not use trailing forward-slashes in $SERIES. Removing it..." 
+done 
+
+# SAMPLE=$(echo $(basename $2) | sed 's/,.*//g' | sed 's/.fastq.gz//g')
+# SAMPLE=$(echo $2 | sed "s|.*$SERIES|$SERIES|g" | sed  "s|.*$SERIES\/?\(.*\)|\\1|g" | sed "s|\/.*||" ) 
+SAMPLE=$(echo $2 | sed "s|.*$SERIES\/|\/|g" | sed "s|\/\/|\/|g" | cut -d"/" -f2) # Grab whatever trails $SERIES until the next forward slash.
+echo "SampleID: $SAMPLE"
 
 OUTPUT="quantified/$SERIES/$SAMPLE"
 TMP="temporary/$SERIES/$SAMPLE"
