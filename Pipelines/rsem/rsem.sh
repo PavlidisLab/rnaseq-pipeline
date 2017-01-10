@@ -12,7 +12,6 @@ fi
 echo "Launching: -->" $0 $@
 RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
 REFERENCE=$STAR_DEFAULT_REFERENCE
-REFERENCE="/misc/pipeline42/NeuroGem/pipeline/runtime/mouse_ref38/mouse_0" 
 
 SERIES=$1
 
