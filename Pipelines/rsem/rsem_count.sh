@@ -13,6 +13,8 @@ EXE="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-data-matrix"
 EXE_TPM="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-tpm-matrix"
 EXE_FPKM="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-fpkm-matrix"
 
-$EXE      $FILES/*".$LEVEL.results" > $FILES/countMatrix.$LEVEL
-$EXE_TPM  $FILES/*".$LEVEL.results" > $FILES/tpmMatrix.$LEVEL
-$EXE_FPKM $FILES/*".$LEVEL.results" > $FILES/fpkmMatrix.$LEVEL
+cd $FILES
+
+$EXE      *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > countMatrix.$LEVEL
+$EXE_TPM  *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > tpmMatrix.$LEVEL
+$EXE_FPKM *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > fpkmMatrix.$LEVEL
