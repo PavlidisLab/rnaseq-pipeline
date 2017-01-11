@@ -13,7 +13,7 @@ RSEM_DIR="$REQUIREMENTS/RSEM"
 FASTQDUMP_EXE="$REQUIREMENTS/sratoolkit.2.5.0-centos_linux64/bin/fastq-dump"
 
 ## STAR Specific
-STAR_PATH="$REQUIREMENTS/STAR-2.5.2b/bin/Linux_x86_64_static"
+STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static"
 STAR_EXE="$STAR_PATH/STAR"
 STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_ref38/mouse_0/"
 

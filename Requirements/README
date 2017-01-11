@@ -3,6 +3,9 @@
 
 -run 'git submodule init' and then 'git submodule update' from the project root.
   - This will fetch dependencies from other git repositories.
+  - Currently: RSEM (forked with shared memory), STAR.
+
+-run "make" in Requirements/RSEM and Requirements/STAR
 
 -Optional? Install GNU Parallel
   $ wget https://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
