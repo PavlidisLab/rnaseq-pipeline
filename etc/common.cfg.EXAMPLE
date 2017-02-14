@@ -23,5 +23,5 @@ NCPU_NICE=$(echo "sqrt ( $NCPU )" | bc -l | cut -f1 -d".")
 MAX_CPU_LOAD="800%"
 
 ## Runtime parameters                 
-DEFAULT_MATE_SOURCE="_R1_"
-DEFAULT_MATE_REPLACEMENT="_R2_"
+DEFAULT_MATE_SOURCE="_R1"
+DEFAULT_MATE_REPLACEMENT="_R2"

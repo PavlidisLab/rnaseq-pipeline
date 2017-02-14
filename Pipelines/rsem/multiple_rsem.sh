@@ -38,13 +38,10 @@ echo "Memory loaded."
 
 echo "Launching parallel RSEM for:"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
-find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | \
-    sort | \
-    uniq | \
-    xargs -n1 -I % ./samplist.sh % $MATES | \
+find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
+    xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.
     parallel -j "$NCPU_NICE" --colsep ' ' ./rsem.sh $SERIES {1} {2} >> paralog.txt
-    #sem --wait --colsep ' ' -n2 -P $NCPU --load "$MAX_CPU_LOAD" -I % ./rsem.sh $SERIES {1} {2}
-
+    
 #echo "Flushing memory..."
 #echo "Skipped!"
 #$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE $NCPU
