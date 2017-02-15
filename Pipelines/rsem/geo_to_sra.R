@@ -1,3 +1,5 @@
+#!/space/opt/bin/Rscript
+
 #' ---
 #' title: "GEO to FASTQ"
 #' author: "Manuel Belmadani"
@@ -8,6 +10,7 @@
 ###
 # Check parameters before anything else.
 #
+
 if ( is.na(commandArgs(TRUE)[1]) ){
   # print Usage menu.
   me <- sub(".*=", "", commandArgs()[4])
@@ -18,11 +21,11 @@ if ( is.na(commandArgs(TRUE)[1]) ){
 ###
 
 source("http://bioconductor.org/biocLite.R")
-library("DBI")
-library(SRAdb)
-library("GEOquery")
-library("plyr")
-library("doMC")
+library("DBI", lib="~/R/")
+library(SRAdb, lib="~/R/")
+library("GEOquery", lib="~/R/")
+library("plyr", lib="~/R/")
+library("doMC", lib="~/R/")
 
 # Load project common variables
 source("../../etc/load_configs.R", chdir = T)
@@ -48,12 +51,13 @@ wprint <- function(X, file = "default-GEO.log", append = TRUE){
 ########################################################
 
 # Set up database connection for SRAdb
-sqlfile <- "SRAmetadb.sqlite"
+sqlfile <- paste0(DATA,"/","SRAmetadb.sqlite")
 
 # If file is not downloaded, redownloaded.
 if(!file.exists(sqlfile)){
   wprint(paste("SRAmetadb does not exists. Downloading at", sqlfile))
-  sqlfile <<- getSRAdbFile(method="wget")
+  sqlfile <<- getSRAdbFile(destdir=DATA,
+                           method="wget")
 } else {
   wprint(paste("SRAmetadb exists at", sqlfile,"; no need to redownload unless GEO samples were recently updated."))
 }
@@ -70,6 +74,10 @@ if (is.na(OUTPUT_PATH)){
 if (is.na(OUTPUT_PATH)){
    OUTPUT_PATH <- "default_fastq" # Default output is fastq from where ever you're working from.
 }
+
+# FIXME: Do we want to override this?
+OUTPUT_PATH <- paste0( DATA, "/", OUTPUT_PATH)
+
 
 # Create output directories
 dir.create(OUTPUT_PATH, showWarnings=FALSE)

@@ -1,9 +1,10 @@
 ## Common directories
 USERNAME=$(whoami)
-ROOT_DIR="/home/$USERNAME/development/rnaseq-pipeline"
 
+ROOT_DIR="/home/$USERNAME/development/rnaseq-pipeline"
 ASSEMBLIES="$ROOT_DIR/Assemblies"
 REQUIREMENTS="$ROOT_DIR/Requirements"
+DATA="$ROOT_DIR/Data"
 
 ## Common tools
 WONDERDUMP_EXE="$REQUIREMENTS/wonderdump.sh"

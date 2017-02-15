@@ -64,5 +64,4 @@ else
     )   
 fi
 
-echo $CMD 2>>  "error-$SERIES.txt" 1>> "log-$SERIES.txt"
-$CMD
+echo $CMD 2>>  "error-$SERIES.txt" 1> count-"$SAMPLE"-"$SERIES".txt
