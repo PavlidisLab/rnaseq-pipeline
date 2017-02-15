@@ -19,4 +19,4 @@ if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then
 fi
 
 source $configfile
-echo "Config file '$LOCATION/common.config' loaded."
+>&2 echo "Config file '$LOCATION/common.config' loaded."
