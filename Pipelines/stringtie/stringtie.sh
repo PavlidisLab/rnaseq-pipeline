@@ -9,11 +9,11 @@ if [ $# -eq 0 ]
     echo $0" $SERIES SEQUENCES1.fastq.gz,SEQUENCES2.fastq.gz... <Optional, SEQUENCES1_MATE.fastq.gz,SEQUENCES2_MATE.fastq.gz...>"    
     exit
 fi
-echo "Launching: -->" $0 $@
+echo "Launching script:" $0 
+echo "Arguments:" $@
 
 
-# SAMPLE=$(echo $(basename $2) | sed 's/,.*//g' | sed 's/.fastq.gz//g')
-# SAMPLE=$(echo $2 | sed "s|.*$SERIES|$SERIES|g" | sed  "s|.*$SERIES\/?\(.*\)|\\1|g" | sed "s|\/.*||" ) 
+# Clean SERIES name
 SERIES=$1
 while [[ $SERIES == */ ]]; do
     # Cleaning up "$SERIES"
@@ -21,17 +21,14 @@ while [[ $SERIES == */ ]]; do
     echo "WARNING: Please do not use trailing forward-slashes in $SERIES. Removing it..." 
 done 
 
-SAMPLE=$(echo $2 | sed "s|.*$SERIES\/|\/|g" | sed "s|\/\/|\/|g" | cut -d"/" -f2) # Grab whatever trails $SERIES until the next forward slash.
+# Obtain SampleID
+SAMPLE=$(echo $2 | sed "s|.*$SERIES\/||g" | cut -d"/" -f1) # Grab whatever trails $SERIES until the next forward slash.
 echo "SampleID: $SAMPLE"
 
 OUTPUT="quantified/$SERIES/$SAMPLE"
-TMP="temporary/$SERIES/$SAMPLE"
-
 mkdir -p $OUTPUT
-mkdir -p $TMP
 
 PAIRED_END=""
-MATE=""
 
 echo "Sequence type:"
 if [ $# -gt 9999999999 ] 
@@ -58,10 +55,29 @@ then
 	"--star-shared-memory LoadAndKeep" \
 )
 else
-    echo " Single-end sequences!"
-    CMD=$( ./align_for_stringtie.sh $@ |
-	$STRINGTIE_EXE  --bam - 
-    )   
+    echo " Single-end sequences."
+    set -- "${@:1:$(($#-1))}" # FIXME: multiple_stringtie.sh passes a {2} for cases with paired end.
+                              # This gets rid of that, for now.
+
+    echo "Align stringtie with " $@
+    echo "./align_for_stringtie.sh $@ |	
+    $STRINGTIE_EXE \
+	-o $OUTPUT/counts.gtf \
+	-G $STAR_REFERENCE_GTF \
+	-C $OUTPUT/covrefs-count.gtf \
+	--bam - \
+	2>  $OUTPUT/error.txt"
+
+    echo ' --- '
+    ./align_for_stringtie.sh $@ |	
+    $STRINGTIE_EXE \
+	-p "$NCPU_NICE" \
+	-e \
+	-o $OUTPUT/counts.gtf \
+	-G $STAR_REFERENCE_GTF \
+	-C $OUTPUT/covrefs-count.txt \
+	--bam - \
+	2>  $OUTPUT/error.txt    
 fi
 
-echo $CMD 2>>  "error-$SERIES.txt" 1> count-"$SAMPLE"-"$SERIES".txt
+echo "Done $SAMPLE ."

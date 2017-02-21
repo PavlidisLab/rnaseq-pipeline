@@ -18,7 +18,7 @@ fi
 
 SPECIES=$1
 GENOME_PATH=$2
-if [ $# -lt 3 ]
+if [ $# -lt 3 ]; then
     VERSION=""
 else
     VERSION=$3

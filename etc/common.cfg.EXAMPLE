@@ -17,6 +17,7 @@ FASTQDUMP_EXE="$REQUIREMENTS/sratoolkit.2.5.0-centos_linux64/bin/fastq-dump"
 STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static"
 STAR_EXE="$STAR_PATH/STAR"
 STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_ref38/mouse_0/"
+STAR_REFERENCE_GTF="$ASSEMBLIES/Mus_musculus/NCBI/GRCh38/Annotation/Genes/genes.gtf"
 STAR_MAX_BAM_RAM="33000000000"
 
 ## Resources
