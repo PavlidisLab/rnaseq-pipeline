@@ -2,3 +2,5 @@
 
 TODO: Documentation
 
+## Updating submodules
+git submodule update --init --recursive

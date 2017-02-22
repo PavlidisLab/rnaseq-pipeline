@@ -61,7 +61,7 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | # Get samples directories
     sort | # sorted
     uniq | # and unique.
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample (in pairs if needed).
-    parallel -j "$NCPU_NICE" --colsep ' ' ./stringtie.sh $SERIES {1} {2} >> parallel-log.txt
+    parallel -S rod,todd -P 0 --colsep ' ' $(pwd)/stringtie.sh $SERIES {1} {2} >> parallel-log.txt
     
 #echo "Flushing memory..."
 #$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE $NCPU

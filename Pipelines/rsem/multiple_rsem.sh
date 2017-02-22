@@ -32,15 +32,31 @@ FILES=$1
 SERIES=$2
 REFERENCE=$(dirname $STAR_DEFAULT_REFERENCE)
 
-echo "Preparing memory..."
-$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE $NCPU
-echo "Memory loaded."
+if [[ -d $FILES ]]; then
+    # Path is a directory, no need to preprend $DATA directory.
+    echo "Using files at path $FILES"
+else
+    # Look for files in $DATA.
+    FILES=$DATA"/"$FILES
+    echo "Searching for files in $DATA."
+    if [[ -d $FILES ]]; then
+	echo "Using files at path $FILES"
+    else
+	echo "No files found at $1 or $FILES."
+	echo "Abort."
+	exit 1
+    fi
+fi
+
+#echo "Preparing memory..."
+#$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE $NCPU
+#echo "Memory loaded."
 
 echo "Launching parallel RSEM for:"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.
-    parallel -j "$NCPU_NICE" --colsep ' ' ./rsem.sh $SERIES {1} {2} >> parallel-log.txt
+    parallel -S ranier,apu --jobs 1 --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
     
 #echo "Flushing memory..."
 #echo "Skipped!"

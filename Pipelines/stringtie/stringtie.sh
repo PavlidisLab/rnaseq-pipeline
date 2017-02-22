@@ -1,5 +1,7 @@
 #!/bin/bash
 set -eu
+
+cd $(dirname $0)
 source ../../etc/load_configs.sh
 
 if [ $# -eq 0 ]

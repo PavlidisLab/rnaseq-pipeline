@@ -1,4 +1,7 @@
 #!/bin/bash
+set -eu
+cd $(dirname $0) 
+source ../../etc/load_configs.sh
 
 if [ $# -lt 2 ] 
 then
@@ -9,9 +12,9 @@ fi
 FILES=$1
 LEVEL=$2
 
-EXE="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-data-matrix"
-EXE_TPM="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-tpm-matrix"
-EXE_FPKM="/misc/pipeline42/NeuroGem/install/RSEM/rsem-generate-fpkm-matrix"
+EXE="$RSEM_DIR""/rsem-generate-data-matrix"
+EXE_TPM="$RSEM_DIR""/rsem-generate-tpm-matrix"
+EXE_FPKM="$RSEM_DIR""/rsem-generate-fpkm-matrix"
 
 cd $FILES
 
