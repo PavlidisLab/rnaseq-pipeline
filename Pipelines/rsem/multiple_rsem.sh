@@ -31,6 +31,10 @@ fi
 FILES=$1
 SERIES=$2
 REFERENCE=$(dirname $STAR_DEFAULT_REFERENCE)
+PARALLEL_MACHINES=""
+if [ -n "$MACHINES" ]; then
+    PARALLEL_MACHINES=" -S $MACHINES "
+fi
 
 if [[ -d $FILES ]]; then
     # Path is a directory, no need to preprend $DATA directory.
@@ -56,7 +60,7 @@ echo "Launching parallel RSEM for:"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.
-    parallel -S ranier,apu --jobs 1 --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
+    parallel $PARALLEL_MACHINES -P $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
     
 #echo "Flushing memory..."
 #echo "Skipped!"

@@ -24,6 +24,7 @@ STAR_MAX_BAM_RAM="33000000000"
 NCPU="$(grep -c ^processor /proc/cpuinfo)"
 NCPU_NICE=$(echo "sqrt ( $NCPU )" | bc -l | cut -f1 -d".")
 MAX_CPU_LOAD="800%"
+MACHINES=""
 
 ## Runtime parameters                 
 DEFAULT_MATE_SOURCE="_R1"

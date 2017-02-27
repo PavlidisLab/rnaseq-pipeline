@@ -32,54 +32,34 @@ mkdir -p $OUTPUT
 
 PAIRED_END=""
 
-echo "Sequence type:"
-if [ $# -gt 9999999999 ] 
-then
-    echo "Not implemented"
-    return 1
-    exit
-    
-    echo " Paired end sequences. "
-    PAIRED_END=" --paired-end "
-    MATES=$3
-
-    CMD=$(echo $RSEM_EXE \
-	-p "$NCPU_NICE" \
-	--star-gzipped-read-file \
-	--temporary-folder $TMP \
-	--time \
-	--star \
-	--star-path $STAR_PATH \
-	$PAIRED_END \
-	" $SEQUENCES $MATE " \
-	$REFERENCE \
-	$OUTPUT \
-	"--star-shared-memory LoadAndKeep" \
-)
+echo "Sequencing type:"
+if [ $# -eq 3 ] &&  [ "$3" -eq "{2}"  ]; then
+    echo " Unpaired reads."
+    set -- "${@:1:$(($#-1))}" # FIXME: multiple_stringtie.sh passes a {2} for cases with paired end. This gets rid of that, for now.
 else
-    echo " Single-end sequences."
-    set -- "${@:1:$(($#-1))}" # FIXME: multiple_stringtie.sh passes a {2} for cases with paired end.
-                              # This gets rid of that, for now.
-
-    echo "Align stringtie with " $@
-    echo "./align_for_stringtie.sh $@ |	
-    $STRINGTIE_EXE \
-	-o $OUTPUT/counts.gtf \
-	-G $STAR_REFERENCE_GTF \
-	-C $OUTPUT/covrefs-count.gtf \
-	--bam - \
-	2>  $OUTPUT/error.txt"
-
-    echo ' --- '
-    ./align_for_stringtie.sh $@ |	
-    $STRINGTIE_EXE \
-	-p "$NCPU_NICE" \
-	-e \
-	-o $OUTPUT/counts.gtf \
-	-G $STAR_REFERENCE_GTF \
-	-C $OUTPUT/covrefs-count.txt \
-	--bam - \
-	2>  $OUTPUT/error.txt    
+    echo " Paired reads."
 fi
+
+
+echo "Align stringtie with " $@
+echo "./align_for_stringtie.sh $@ |	
+$STRINGTIE_EXE \
+    -o $OUTPUT/counts.gtf \
+    -G $STAR_REFERENCE_GTF \
+    -C $OUTPUT/covrefs-count.gtf \
+    --bam - \
+    2>  $OUTPUT/error.txt"
+
+echo ' --- '
+./align_for_stringtie.sh $@ |	
+$STRINGTIE_EXE \
+    -p "$NCPU_NICE" \
+    -e \
+    -o $OUTPUT/counts.gtf \
+    -G $STAR_REFERENCE_GTF \
+    -C $OUTPUT/covrefs-count.txt \
+    --bam - \
+    2>  $OUTPUT/error.txt    
+
 
 echo "Done $SAMPLE ."

@@ -70,11 +70,27 @@ target/
 
 # Project specific ignores
 
-Requirements/
 Assemblies/
+Data/
+Requirements/
 
 etc/common.cfg
 etc/tmp/*
 
 # R files
 .Rhistory
+
+
+# Sequencing outputs
+*.bam
+*.out
+*.tab
+
+# Misc directories
+*.csv
+temporary/
+quantified/
+
+# Logs
+log-*.txt
+error-*.txt

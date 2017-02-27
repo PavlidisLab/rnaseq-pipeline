@@ -6,7 +6,7 @@
 #' date: "November 25th 2016"
 #' description: "Given a GSE accession number, retreive all .sra files for SRR and extract the fastq files. "
 #' ---
-
+B
 ###
 # Check parameters before anything else.
 #
@@ -28,7 +28,7 @@ library("plyr", lib="~/R/")
 library("doMC", lib="~/R/")
 
 # Load project common variables
-source("../../etc/load_configs.R", chdir = T)
+source("../etc/load_configs.R", chdir = T)
 
 # Function definitions
 wprint <- function(X, file = "default-GEO.log", append = TRUE){

@@ -40,7 +40,7 @@ MATE=""
 
 if [ $# -gt 3 ] 
 then
-    echo " Will be paired end!"
+    echo " Called for paired-end data."
     PAIRED_END=" --paired-end "
     MATES=$3
 
@@ -58,7 +58,7 @@ then
 	"--star-shared-memory LoadAndKeep" \
 )
 else
-    echo " Will be singled end!"
+    echo " Called for single-end data.!"
     CMD=$(echo $RSEM_EXE \
 	-p "$NCPU_NICE" \
 	--star-gzipped-read-file \

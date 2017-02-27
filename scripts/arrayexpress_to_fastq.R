@@ -1,5 +1,13 @@
 #!/space/opt/bin/Rscript
 
+#' ---
+#' title: "GEO to FASTQ"
+#' author: "Manuel Belmadani"
+#' date: "November 25th 2016"
+#' description: "Given a GSE accession number, retreive all .sra files for SRR and extract the fastq files. "
+#' ---
+                                        
+
 #############################################################################################
 # Description: For a given ArrayExpress identifier, retreive all FASTQ files.               #
 #############################################################################################
@@ -8,6 +16,9 @@ source("http://bioconductor.org/biocLite.R")
 library("doMC")
 library("RCurl")
 library("plyr", lib="~/R/")
+
+# Load project common variables
+source("../etc/load_configs.R", chdir = T)
 
 CORES <- parallel:::detectCores()
 
@@ -25,6 +36,10 @@ if (is.na(OUTPUT_PATH)){
 if (is.na(OUTPUT_PATH)){
    OUTPUT_PATH <- "default_arrayexpress" # Default output is fastq from where ever you're working from.
 }
+
+# FIXME: Do we want to override this?
+OUTPUT_PATH <- paste0( DATA, "/", OUTPUT_PATH)
+
 dir.create(OUTPUT_PATH, showWarnings=FALSE)
 LOGFILE <- paste0(OUTPUT_PATH, "/", "wget-", AE_ID, ".log")
 
@@ -33,6 +48,10 @@ LOGFILE <- paste0(OUTPUT_PATH, "/", "wget-", AE_ID, ".log")
 SAMPLE_MATRIX_URL <- paste0("http://www.ebi.ac.uk/arrayexpress/files/",AE_ID,"/",AE_ID,".sdrf.txt")
 SAMPLE_MATRIX_TEXT <- getURL(SAMPLE_MATRIX_URL)
 SAMPLES_CSV <-read.csv(text = SAMPLE_MATRIX_TEXT, sep='\t')
+
+#print(SAMPLE_MATRIX_TEXT)
+#print(SAMPLE_MATRIX_URL)
+#stop()
 
 processAE <- function(ROW){
   FASTQ <- ROW["Comment.FASTQ_URI."]
