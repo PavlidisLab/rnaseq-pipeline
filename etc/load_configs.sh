@@ -2,6 +2,14 @@
 
 set -e
 
+## Functions
+err_report() {
+    echo "Error on line $1"
+}
+trap 'err_report $LINENO' ERR
+
+## Configurations
+ 
 LOCATION="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 mkdir -p "$LOCATION/tmp"

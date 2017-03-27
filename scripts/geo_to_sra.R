@@ -6,7 +6,7 @@
 #' date: "November 25th 2016"
 #' description: "Given a GSE accession number, retreive all .sra files for SRR and extract the fastq files. "
 #' ---
-B
+
 ###
 # Check parameters before anything else.
 #
@@ -22,7 +22,8 @@ if ( is.na(commandArgs(TRUE)[1]) ){
 
 source("http://bioconductor.org/biocLite.R")
 library("DBI", lib="~/R/")
-library(SRAdb, lib="~/R/")
+library("SRAdb", lib="~/R/")
+biocLite("SRAdb", lib="~/R/")
 library("GEOquery", lib="~/R/")
 library("plyr", lib="~/R/")
 library("doMC", lib="~/R/")
@@ -51,7 +52,8 @@ wprint <- function(X, file = "default-GEO.log", append = TRUE){
 ########################################################
 
 # Set up database connection for SRAdb
-sqlfile <- paste0(DATA,"/","SRAmetadb.sqlite")
+#sqlfile <- paste0(DATA,"/","SRAmetadb.sqlite")
+sqlfile <- paste0("./","SRAmetadb.sqlite")
 
 # If file is not downloaded, redownloaded.
 if(!file.exists(sqlfile)){
@@ -62,7 +64,8 @@ if(!file.exists(sqlfile)){
   wprint(paste("SRAmetadb exists at", sqlfile,"; no need to redownload unless GEO samples were recently updated."))
 }
   
-dbcon = dbConnect(RSQLite::SQLite(), sqlfile)
+dbcon <- dbConnect(dbDriver("SQLite"),
+                   dbname = sqlfile)
 
 # Prepare parameters
 GEO_ID <- commandArgs(TRUE)[1] #e.g "GSE12946"
@@ -116,6 +119,8 @@ for (sample in SAMPLE_LIST) {
     
     SRX <- SRA_EXPERIMENTS[countSamples]
     SRX <- strsplit(SRA_EXPERIMENTS[countSamples], "/")[[1]][length(strsplit(SRA_EXPERIMENTS[countSamples], "/")[[1]]) ]
+
+    print(paste("sraConvert for", SRX))
     SRRs <- sraConvert(SRX, 'run', dbcon)$run
 
     wprint("Fetching fastq for:", LOGFILE)

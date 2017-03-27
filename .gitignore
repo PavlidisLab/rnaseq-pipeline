@@ -76,6 +76,7 @@ Requirements/
 
 etc/common.cfg
 etc/tmp/*
+tmp.*
 
 # R files
 .Rhistory

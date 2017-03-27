@@ -8,7 +8,11 @@
 #   wonderdump SRR1553500 -X 10000
 
 set -ue
-FASTQ_DUMP_EXE="/misc/pipeline42/NeuroGem/pipeline/sratoolkit/bin/fastq-dump"
+
+cd $(dirname $0) 
+source ../etc/load_configs.sh
+
+# ASSUMING CONFIGURATION FILE HAS $FASTQDUMP_EXE
 
 # The first paramter must be the SRR number.
 SRR=$1
@@ -40,7 +44,7 @@ shift
 if [ $# -gt 0 ]
 then
     # Run the fastq-dump.
-    CMD="$FASTQ_DUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical  --readids --dumpbase --split-files --clip"
+    CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical  --readids --dumpbase --split-files --clip"
     $CMD
-    #$FASTQ_DUMP_EXE ${SRA_FILE}
+    #$FASTQDUMP_EXE ${SRA_FILE}
 fi

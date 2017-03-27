@@ -20,14 +20,17 @@ while [[ $SERIES == */ ]]; do
 done 
 
 shift
+
 FASTQ_GZ=$@
+FASTQ_GZ=$( echo $FASTQ_GZ | sed 's|{2}||g' ) 
+
 
 # Using aligner $STAR_EXE
 STAR_GENOMEDIR=$(dirname $STAR_DEFAULT_REFERENCE) # TODO: Add parameter for this
 
 # Create TMP directories.
 TMPDIR="temporary/_STARtmp"
-mkdir -p TMPDIR
+mkdir -p "$TMPDIR"
 UUID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 TMPDIR="$TMPDIR/$UUID"
 
