@@ -11,6 +11,7 @@
 #############################################################################################
 # Description: For a given ArrayExpress identifier, retreive all FASTQ files.               #
 #############################################################################################
+system(paste("ldd", dir(system.file("libs", package = "RCurl"), full=TRUE)))
 
 source("http://bioconductor.org/biocLite.R")
 library("doMC")

@@ -27,6 +27,10 @@ then
 	echo "Unknown parameter: $2"
 	exit
     fi
+
+
 fi
 
-echo $FILES $MATES
+if [ ! -z $FILES ]; then
+    echo $FILES $MATES
+fi

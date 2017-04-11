@@ -21,7 +21,7 @@ fi
 MATES=""
 GTF=""
 BAM=0
-BAM_RE="*.bam"
+BAM_RE=".*\.bam"
 if [ $# -gt 2  ] && [ "$3" == "--paired-end" ]; then
     echo " Using paired-end sequences. "
     MATES=" --paired-end "
@@ -30,8 +30,9 @@ elif [ $# -gt 2  ] && [ "$3" == "--bam" ]; then
     BAM=1
     if [ $# -ge 5 ]; then
 	BAM_RE="$5"
-    fi
-    echo " Usign pre-aligned BAM files with refrence $GTF"
+    fi    
+    echo " Using pre-aligned BAM files with refrence $GTF"
+    echo " Using BAM_RE matching: $BAM_RE "
 else
     if [ $# -gt 3 ]
     then
@@ -75,9 +76,9 @@ fi
 if [ $BAM -eq 1 ]; then
     echo "Launching parallel Stringtie using BAM files: $FILES "
     find $FILES/ -name "*.bam"  | # Get samples
-       grep "$BAM_RE" | # Just the bam the user wants filtered by regex.
-       sort | # sorted
-       uniq | # and unique.
+       egrep $BAM_RE | # Just the bam the user wants filtered by regex.
+       sort | 
+       uniq | 
        parallel $PARALLEL_MACHINES -P $NCPU_NICE --colsep ' ' \
 	   $(pwd)/stringtie.sh $SERIES {1} --bam "$GTF" >> parallel-log.txt
 else
