@@ -45,11 +45,11 @@ ALIGN="./align_for_stringtie.sh"
 BAM="FALSE"
 echo "Sequencing type:"
 
-if [ $# -eq 3 ] &&  [ "$3" = "{2}"  ]; then
+if [ $# -eq 3 ] &&  [ "$3" == "{2}"  ]; then
     echo " Unpaired reads."
     set -- "${@:1:$(($#-1))}" # FIXME: multiple_stringtie.sh passes a {2} for cases with paired end. This gets rid of that, for now.
     echo "Preparing aligner with $ALIGN $@"
-elif [ $# -eq 4 ] &&  [ "$3" = "--bam" ]; then
+elif [ $# -eq 4 ] &&  [ "$3" == "--bam" ]; then
     echo " Bam file"
     ALIGN="echo"
     BAM="$FILES"
@@ -84,7 +84,7 @@ if [ "$BAM" == "FALSE" ]; then
 	-G $STAR_REFERENCE_GTF \
 	-C $OUTPUT/covrefs-count.txt \
 	--bam - \
-	2>  $OUTPUT/error.txt    
+	2>>  $OUTPUT/error.txt    
 else
     echo "Aligned BAM file directly"
     $STRINGTIE_EXE \
@@ -94,7 +94,7 @@ else
 	-G $STAR_REFERENCE_GTF \
 	-C $OUTPUT/covrefs-count.txt \
 	--bam $BAM  \
-	2>  $OUTPUT/error.txt    
+	2>>  $OUTPUT/error.txt    
 fi
 
 echo "Done $SAMPLE ."

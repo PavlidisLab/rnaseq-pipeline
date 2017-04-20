@@ -75,6 +75,10 @@ fi
 
 if [ $BAM -eq 1 ]; then
     echo "Launching parallel Stringtie using BAM files: $FILES "
+
+    echo "Files found:"
+    find $FILES/ -name "*.bam"  | egrep $BAM_RE 
+
     find $FILES/ -name "*.bam"  | # Get samples
        egrep $BAM_RE | # Just the bam the user wants filtered by regex.
        sort | 
