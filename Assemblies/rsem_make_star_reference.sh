@@ -8,9 +8,9 @@ if [ $# -lt 2 ]
     echo $0" SPECIESNAME /path/to/iGenome VERSION"
     echo "Example:"
     SPECIES="human"
-    GENOME="Assemblies/Homo_sapiens/NCBI/GRCh38/"
-    VERSION=38
-    echo $0" $SPECIES $GENOME"
+    GENOME="Homo_sapiens/NCBI/GRCh38/"
+    VERSION="ncbi38"
+    echo $0" $SPECIES $GENOME $VERSION"
     echo "Output:"
     echo "$ASSEMBLIES/runtime/"$SPECIES"_ref"$VERSION"/"$SPECIES"_0""*"
     exit -1

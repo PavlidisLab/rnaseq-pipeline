@@ -30,7 +30,7 @@ fi
 
 FILES=$1
 SERIES=$2
-REFERENCE=$(dirname $STAR_DEFAULT_REFERENCE)
+REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
 PARALLEL_MACHINES=""
 if [ -n "$MACHINES" ]; then
     PARALLEL_MACHINES=" -S $MACHINES "
@@ -52,9 +52,9 @@ else
     fi
 fi
 
-#echo "Preparing memory..."
-#$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE $NCPU
-#echo "Memory loaded."
+echo "Preparing memory..."
+$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+echo "Memory loaded."
 
 echo "Launching parallel RSEM for:"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
@@ -62,9 +62,8 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get sampl
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.    
     parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
     
-#echo "Flushing memory..."
-#echo "Skipped!"
-#$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE $NCPU
-#echo "Memory flushed."
+echo "Flushing memory..."
+$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+echo "Memory flushed."
 
 echo "Done."
