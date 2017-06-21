@@ -2,6 +2,8 @@
 set -eu
 source ../../etc/load_configs.sh
 
+echo "MACHINES: $MACHINES"
+
 if [ $# -lt 2 ]
     then
     FILES="data/GSE123456/"
@@ -42,6 +44,7 @@ SERIES=$2
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
 PARALLEL_MACHINES=""
 if [ -n "$MACHINES" ]; then
+    echo "Using distributed mode on: $MACHINES"
     PARALLEL_MACHINES=" -S $MACHINES "
 fi
 
@@ -65,7 +68,7 @@ echo "Preparing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $PARALLEL_MACHINES $RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory loaded."
 
-echo "Launching parallel RSEM for: $SERIES"
+echo "Launching RSEM for: $SERIES"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.    

@@ -67,7 +67,6 @@ wprint <- function(X, file = "default-GEO.log", append = TRUE){
 # Set up database connection for SRAdb
 #sqlfile <- paste0(DATA,"/","SRAmetadb.sqlite")
 sqlfile <- paste0("./","SRAmetadb.sqlite")
-#sqlfile <- paste0("/space/grp/Pipelines/rnaseq-pipeline/scripts/" ,"SRAmetadb.sqlite")
 # If file is not downloaded, redownloaded.
 if(!file.exists(sqlfile)){
   wprint(paste("SRAmetadb does not exists. Downloading at", sqlfile))
