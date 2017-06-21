@@ -20,12 +20,21 @@ MATES=""
 if [ $# -eq 3 ]
 then
     MATES=" --paired-end "
+    echo "Setting to --paired-end"
 else
     if [ $# -gt 3 ]
     then
 	echo "Too many arguments! Please check your command."
 	exit -1
+    fi   
+fi
+
+if [ MATES == "" ]; then
+    if [ $(find $FILES | grep -c "DEFAULT_MATE_REPLACEMENT" || echo 0) -gt 0 ]; then  
+	echo "Automatically detected --paired-end sequences."
+	MATES="--paired-end" ; 
     fi
+
 fi
 
 FILES=$1
@@ -53,17 +62,17 @@ else
 fi
 
 echo "Preparing memory..."
-$RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+# echo $MACHINES | tr ',' '\n' | parallel -n0 $PARALLEL_MACHINES $RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory loaded."
 
-echo "Launching parallel RSEM for:"
+echo "Launching parallel RSEM for: $SERIES"
 #echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
     xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.    
     parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
     
 echo "Flushing memory..."
-$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+# echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory flushed."
 
 echo "Done."

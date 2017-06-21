@@ -73,5 +73,5 @@ else
     )   
 fi
 
-echo $CMD 2>>  "error-$SERIES.txt" 1>> "log-$SERIES.txt"
+echo $CMD 2>>  "errors/$SERIES.txt" 1>> "logs/$SERIES.txt"
 $CMD

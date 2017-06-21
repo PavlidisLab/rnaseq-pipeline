@@ -18,6 +18,6 @@ EXE_FPKM="$RSEM_DIR""/rsem-generate-fpkm-matrix"
 
 cd $FILES
 
-$EXE      *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > countMatrix.$LEVEL
-$EXE_TPM  *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > tpmMatrix.$LEVEL
-$EXE_FPKM *".$LEVEL.results" | sed "s|.$LEVEL.results||g" > fpkmMatrix.$LEVEL
+$EXE      *".$LEVEL.results" | sed "s|.$LEVEL.results||g" | sed 's|"||g' > countMatrix.$LEVEL
+$EXE_TPM  *".$LEVEL.results" | sed "s|.$LEVEL.results||g" | sed 's|"||g' > tpmMatrix.$LEVEL
+$EXE_FPKM *".$LEVEL.results" | sed "s|.$LEVEL.results||g" | sed 's|"||g' > fpkmMatrix.$LEVEL

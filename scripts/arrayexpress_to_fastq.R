@@ -11,6 +11,20 @@
 #############################################################################################
 # Description: For a given ArrayExpress identifier, retreive all FASTQ files.               #
 #############################################################################################
+
+###
+# Check parameters before anything else.
+#
+
+if ( is.na(commandArgs(TRUE)[1]) ){
+  # print Usage menu.
+  me <- sub(".*=", "", commandArgs()[4])
+  print("Usage:")
+  print( paste("Rscript", me, "ETAB-923903902 <Optional, OUTPUT_DIRECTORY>") )
+  q(save="no")
+}
+###
+
 system(paste("ldd", dir(system.file("libs", package = "RCurl"), full=TRUE)))
 
 source("http://bioconductor.org/biocLite.R")

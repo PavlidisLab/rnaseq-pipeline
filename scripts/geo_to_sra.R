@@ -1,5 +1,3 @@
-#!/space/opt/bin/Rscript
-
 #' ---
 #' title: "GEO to FASTQ"
 #' author: "Manuel Belmadani"
@@ -11,6 +9,17 @@
 # Check parameters before anything else.
 #
 
+# TODO: Move in a utils library
+here <- function(X){
+  this.dir <- dirname(parent.frame(2)$ofile)
+  return(this.dir)
+}
+
+sethere <- function(){
+  setwd(here())
+}
+
+sethere()
 if ( is.na(commandArgs(TRUE)[1]) ){
   # print Usage menu.
   me <- sub(".*=", "", commandArgs()[4])
@@ -30,6 +39,10 @@ library("doMC", lib="~/R/")
 
 # Load project common variables
 source("../etc/load_configs.R", chdir = T)
+
+# Configure SSL
+#httr::config(ssl_verifypeer = FALSE)
+
 
 # Function definitions
 wprint <- function(X, file = "default-GEO.log", append = TRUE){
@@ -54,12 +67,15 @@ wprint <- function(X, file = "default-GEO.log", append = TRUE){
 # Set up database connection for SRAdb
 #sqlfile <- paste0(DATA,"/","SRAmetadb.sqlite")
 sqlfile <- paste0("./","SRAmetadb.sqlite")
-
+#sqlfile <- paste0("/space/grp/Pipelines/rnaseq-pipeline/scripts/" ,"SRAmetadb.sqlite")
 # If file is not downloaded, redownloaded.
 if(!file.exists(sqlfile)){
   wprint(paste("SRAmetadb does not exists. Downloading at", sqlfile))
-  sqlfile <<- getSRAdbFile(destdir=DATA,
-                           method="wget")
+  #sqlfile <<- getSRAdbFile(destdir=DATA,
+  #                         method="wget",
+  #                         )
+  system(paste("wget -O https://dl.dropboxusercontent.com/u/51653511/SRAmetadb.sqlite.gz --no-check-certificate && gunzip -c SRAmetadb.sqlite.gz > ", sqlfile) )
+  
 } else {
   wprint(paste("SRAmetadb exists at", sqlfile,"; no need to redownload unless GEO samples were recently updated."))
 }
@@ -156,5 +172,6 @@ system.time(
                   .parallel = TRUE
                   )
             )
+
 wprint(paste("Extracted FastQ for", GEO_ID), LOGFILE)
 
