@@ -4,9 +4,9 @@ set -e
 
 ## Functions
 err_report() {
-    echo "Error on line $1"
+    echo "Error on line $1 in $2"
 }
-trap 'err_report $LINENO' ERR
+trap 'err_report $LINENO $(basename "$0")' ERR
 
 ## Configurations
  
@@ -17,11 +17,13 @@ configfile="$LOCATION/common.cfg"
 configfile_secured="$LOCATION/tmp/common_"$(uuidgen)".cfg"
 
 cat $configfile > $configfile_secured
+printf "\n" >>$configfile_secured
 if ! [ -z ${MODES+x} ]; then  
     ## Load additional configuration files
-    for MODE in $(echo $MODES | tr ',' 'n'); do
+    for MODE in $(echo $MODES | tr ',' '\n'); do
 	echo " Loading $MODE"
 	cat "$MODES_DIR/"$MODE".cfg" >> $configfile_secured 
+	printf "\n" >> $configfile_secured
     done
 fi
 
@@ -37,5 +39,5 @@ if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile_secured"; then
 fi
 
 source $configfile
->&2 echo "Config file '$LOCATION/common.config' loaded."
+>&2 echo "Config file '$configfile' loaded."
 

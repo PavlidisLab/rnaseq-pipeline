@@ -6,27 +6,55 @@
 #' ---
 #'
 
-CONFIGS_PATH <- "common.cfg"
-system("sh load_configs.sh")
-CONFIGS <- read.csv(CONFIGS_PATH, sep="=", header=FALSE, col.names=c("Key", "Value") )
+print("here now!")
+print(getwd())
+
+CONFIGS_PATH_CLEAN <- system("sh load_configs.sh 2>&1 | tail -n1 | cut -d\"'\" -f2  " ,
+                             intern=TRUE)
+CONFIGS_PATH_CLEAN
+print(paste0("TMP config file created at ", CONFIGS_PATH_CLEAN))
+CONFIGS <- read.csv(CONFIGS_PATH_CLEAN, sep="=", header=FALSE, col.names=c("Key", "Value") )
 CONFIGS
 
 KEY='ROOT_DIR'
 for (KEY in CONFIGS$Key){
     BEFORE <- paste0("[$]",KEY)
-    AFTER <- CONFIGS$Value[ which(CONFIGS$Key == KEY) ]
-    CONFIGS$Value <- gsub(BEFORE, AFTER, CONFIGS$Value)
+    for ( TOREPLACE in which(CONFIGS$Key == KEY) ){
+        AFTER <- CONFIGS$Value[ TOREPLACE ]
+        CONFIGS$Value <- gsub(BEFORE, AFTER, CONFIGS$Value)
+    }
 }
 
 # CONFIGS after shell expansion
 KV <- CONFIGS
-CONFIGS <- list()
+#CONFIGS <- list()
 for ( i in 1:nrow(KV) ){
     KEY <- as.character(KV$Key[i])
     VALUE <- as.character(KV$Value[i])
-    if (grepl("#", KEY)) {
+    #print(paste("PRESIGNED", KEY, "TO", VALUE))
+    
+    if (grepl("#", KEY) | length(gsub(x=VALUE, pattern=" ", replacement="")) < 1) {
       next
     }
+
+    if (KEY == "NCPU_NICE"){
+       # FIXME: Hack. Couldn't get the subshell expansion to work elegantly.
+        VALUE <- sqrt(NCPU)
+    } else {
+       # print(paste("Attemtping to convert VALUE", VALUE))
+       VALUE <- system( paste0("VAR=", VALUE, " && echo $VAR"), intern=TRUE)
+    }
+    
+
+
+    if (length(VALUE) < 1){
+        next
+    }    
+
+    if (grepl(pattern="^\\d+$", VALUE)){
+        VALUE <- as.numeric(VALUE)
+    }
+    
     assign(KEY,VALUE)
     print(paste("ASSIGNED", KEY, "TO", VALUE))
 }

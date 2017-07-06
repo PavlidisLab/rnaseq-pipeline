@@ -18,9 +18,9 @@ EXE_FPKM="$RSEM_DIR""/rsem-generate-fpkm-matrix"
 
 cd $FILES
 
-echo $LEVELS > countMatrix.$LEVEL
-echo $LEVELS > tpmMatrix.$LEVEL
-echo $LEVELS > fpkmMatrix.$LEVEL
+printf $LEVEL > countMatrix.$LEVEL
+printf $LEVEL > tpmMatrix.$LEVEL
+printf $LEVEL > fpkmMatrix.$LEVEL
 
 $EXE      *".$LEVEL.results" | sed "s|.$LEVEL.results||g" | sed 's|"||g' >> countMatrix.$LEVEL
 $EXE_TPM  *".$LEVEL.results" | sed "s|.$LEVEL.results||g" | sed 's|"||g' >> tpmMatrix.$LEVEL

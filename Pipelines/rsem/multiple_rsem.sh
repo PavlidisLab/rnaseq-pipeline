@@ -2,7 +2,7 @@
 set -eu
 source ../../etc/load_configs.sh
 
-echo "MACHINES: $MACHINES"
+echo "USING MACHINES: $MACHINES"
 
 if [ $# -lt 2 ]
     then
@@ -31,14 +31,6 @@ else
     fi   
 fi
 
-if [ MATES == "" ]; then
-    if [ $(find $FILES | grep -c "DEFAULT_MATE_REPLACEMENT" || echo 0) -gt 0 ]; then  
-	echo "Automatically detected --paired-end sequences."
-	MATES="--paired-end" ; 
-    fi
-
-fi
-
 FILES=$1
 SERIES=$2
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
@@ -64,15 +56,31 @@ else
     fi
 fi
 
+if [ "$MATES" == "" ]; then
+    isMate=$(find $FILES | grep -c "$DEFAULT_MATE_REPLACEMENT") || :
+    echo "Found $isMate potential mates."
+    if [ $isMate -gt 0 ];
+    then  
+	echo "Automatically detected --paired-end sequences."
+	MATES="--paired-end"
+    else
+	echo "No mate-pairs found. Treating as single-end sequences."
+    fi    
+fi
+
 echo "Preparing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $PARALLEL_MACHINES $RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory loaded."
 
 echo "Launching RSEM for: $SERIES"
-#echo "Template:"  "$SEM --wait --colsep ' ' -n2 -P $NCPU ./rsem.sh $SERIES {1} {2}"
-find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |  # Get samples directories, sorted and unique.
-    xargs -n1 -I % ./samplist.sh % $MATES | # Prepare sample pairs.    
-    parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
+# Get samples directories, sorted and unique.
+# Prepare sample pairs.    
+# Run in parallel
+echo "DEBUG: find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq | xargs -n1 -I % $SAMPLIST % $MATES |  parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt" 
+
+find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |
+    xargs -n1 -I % $SAMPLIST % $MATES |
+    parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
     
 echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE

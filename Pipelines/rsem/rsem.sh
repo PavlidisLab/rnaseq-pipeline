@@ -3,6 +3,7 @@ set -eu
 
 cd $(dirname $0) 
 source ../../etc/load_configs.sh
+echo " In $0, modes are: $MODES "
 
 if [ $# -eq 0 ]
     then
@@ -56,6 +57,8 @@ then
 	$REFERENCE \
 	$OUTPUT \
 	"--star-shared-memory LoadAndKeep" \
+	" --keep-intermediate-files "
+
 )
 else
     echo " Called for single-end data.!"
@@ -69,9 +72,10 @@ else
 	" $SEQUENCES " \
 	$REFERENCE \
 	$OUTPUT \
-	"--star-shared-memory LoadAndKeep"
-    )   
+	" --star-shared-memory LoadAndKeep " \
+	" --keep-intermediate-files "
+    )    
 fi
 
-echo $CMD 2>>  "errors/$SERIES.txt" 1>> "logs/$SERIES.txt"
-$CMD
+echo $CMD   
+$CMD 2>> "errors/$SERIES.txt" 1>> "logs/$SERIES.txt"

@@ -9,7 +9,7 @@
 
 set -ue
 
-cd $(dirname $0) 
+# cd $(dirname $0) 
 source ../etc/load_configs.sh
 
 # ASSUMING CONFIGURATION FILE HAS $FASTQDUMP_EXE

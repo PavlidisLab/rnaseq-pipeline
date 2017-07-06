@@ -35,7 +35,7 @@ library("plyr", lib="~/R/")
 # Load project common variables
 source("../etc/load_configs.R", chdir = T)
 
-CORES <- parallel:::detectCores()
+CORES <- NCPU_NICE # parallel:::detectCores()
 
 wprint <- function(X, file = "default.log", append = TRUE){
   print(X)

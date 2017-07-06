@@ -8,18 +8,6 @@
 ###
 # Check parameters before anything else.
 #
-
-# TODO: Move in a utils library
-here <- function(X){
-  this.dir <- dirname(parent.frame(2)$ofile)
-  return(this.dir)
-}
-
-sethere <- function(){
-  setwd(here())
-}
-
-sethere()
 if ( is.na(commandArgs(TRUE)[1]) ){
   # print Usage menu.
   me <- sub(".*=", "", commandArgs()[4])
@@ -28,18 +16,28 @@ if ( is.na(commandArgs(TRUE)[1]) ){
   q(save="no")
 }
 ###
-
-source("http://bioconductor.org/biocLite.R")
-library("DBI", lib="~/R/")
-library("SRAdb", lib="~/R/")
-biocLite("SRAdb", lib="~/R/")
-library("GEOquery", lib="~/R/")
-library("plyr", lib="~/R/")
-library("doMC", lib="~/R/")
-
 # Load project common variables
-source("../etc/load_configs.R", chdir = T)
 
+#CONFIGFILE <- paste0(getwd(), "/
+setwd("../etc/")
+CONFIGFILE<-"load_configs.R"
+source( CONFIGFILE )
+
+print(getwd())
+print("COnfigs loaded")
+###
+# Load libraries
+source("http://bioconductor.org/biocLite.R")
+library("DBI") #, lib="~/R/")
+library("SRAdb") #, lib="~/R/")
+#biocLite("SRAdb") #, lib="~/R/")
+library("GEOquery") #, lib="~/R/")
+library("plyr") #, lib="~/R/")
+library("doMC") #, lib="~/R/")
+
+
+here <- paste0(ROOT_DIR, "/scripts/")
+setwd(here)
 # Configure SSL
 #httr::config(ssl_verifypeer = FALSE)
 
@@ -78,8 +76,9 @@ if(!file.exists(sqlfile)){
 } else {
   wprint(paste("SRAmetadb exists at", sqlfile,"; no need to redownload unless GEO samples were recently updated."))
 }
-  
-dbcon <- dbConnect(dbDriver("SQLite"),
+
+library("RSQLite")
+dbcon <- dbConnect(DBI::dbDriver("SQLite"),
                    dbname = sqlfile)
 
 # Prepare parameters
@@ -102,7 +101,7 @@ dir.create(OUTPUT_PATH, showWarnings=FALSE)
 LOGFILE <- paste0(OUTPUT_PATH, "/", "fastq-dump-", GEO_ID, ".log")
 
 # Obtain maximum number of cores
-CORES <- parallel:::detectCores()
+CORES <- NCPU_NICE #parallel:::detectCores()
 DRY <- TRUE # If file exists; don't redownload it.
 
 
@@ -158,7 +157,7 @@ wprint(paste("Expecting to download", length(COMMANDS), "runs from SRA."), LOGFI
 wprint("Commands prepared. Launching parallelized downloader...", LOGFILE)
 
 # Prepare parallel execution of commands
-doMC::registerDoMC(cores=CORES) # or however many cores you have access to
+doMC::registerDoMC(cores=NCPU_NICE) # or however many cores you have access to
 system.time(
             adply(.data = COMMANDS, 
                   .margins = 1, 
