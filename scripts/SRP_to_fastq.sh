@@ -2,7 +2,7 @@
 set -eu
 source ../etc/load_configs.sh
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -lt 1 ]; then
     ACCESSION="SRP055008"
     echo "Description: "
     echo "Provide a project identifier to download all fastq files from.."
@@ -14,8 +14,17 @@ if [ "$#" -ne 1 ]; then
     exit
 fi
 
+
 ACCESSION=$1
-DOWNLOAD_DIR="$DATA/$ACCESSION"
+
+if [ "$#" -eq 2 ]; then
+    # Override output path
+    ACCESSION_DIR=$2
+else
+    ACCSSION_DIR=$ACCESSION
+fi
+
+DOWNLOAD_DIR="$DATA/$ACCESSION_DIR"
 mkdir -p $DOWNLOAD_DIR
 
 echo "Obtaining metadata."
@@ -30,6 +39,13 @@ if [ -n "$MACHINES" ]; then
     PARALLEL_MACHINES=" -S $MACHINES "
 fi
 
+LOGDIR=$LOGS/wonderdump
+mkdir -p $LOGDIR
+
 echo "Obtaining individual FASTQs"
-cut -f1 -d"," $METADATA | tail -n +2 | parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE  -I@ $WONDERDUMP_EXE @ "$DOWNLOAD_DIR/"@ >> logs/parallel.log
+cut -f1 -d"," $METADATA \
+    | grep -v "^$" \
+    | tail -n +2 \
+    | parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE  -I@ $WONDERDUMP_EXE @ "$DOWNLOAD_DIR/" \
+    >> $LOGDIR"/"$ACCESSION".log"
 

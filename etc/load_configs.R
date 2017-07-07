@@ -6,12 +6,10 @@
 #' ---
 #'
 
-print("here now!")
-print(getwd())
-
-CONFIGS_PATH_CLEAN <- system("sh load_configs.sh 2>&1 | tail -n1 | cut -d\"'\" -f2  " ,
+CONFIGS_PATH_CLEAN <- system("sh ../etc/load_configs.sh 2>&1 | tail -n1 | cut -d\"'\" -f2  " ,
                              intern=TRUE)
-CONFIGS_PATH_CLEAN
+print(paste("Configurations generated at:", CONFIGS_PATH_CLEAN))
+
 print(paste0("TMP config file created at ", CONFIGS_PATH_CLEAN))
 CONFIGS <- read.csv(CONFIGS_PATH_CLEAN, sep="=", header=FALSE, col.names=c("Key", "Value") )
 CONFIGS

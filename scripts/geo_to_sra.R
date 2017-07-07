@@ -19,8 +19,39 @@ if ( is.na(commandArgs(TRUE)[1]) ){
 # Load project common variables
 
 #CONFIGFILE <- paste0(getwd(), "/
-setwd("../etc/")
-CONFIGFILE<-"load_configs.R"
+# Hack
+here <- function() {
+    # http://stackoverflow.com/a/32016824/2292993
+    cmdArgs = commandArgs(trailingOnly = FALSE)
+    needle = "--file="
+    match = grep(needle, cmdArgs)
+    if (length(match) > 0) {
+        # Rscript via command line
+        return(normalizePath(sub(needle, "", cmdArgs[match])))
+    } else {
+        ls_vars = ls(sys.frames()[[1]])
+        if ("fileName" %in% ls_vars) {
+            # Source'd via RStudio
+            return(normalizePath(sys.frames()[[1]]$fileName)) 
+        } else {
+            if (!is.null(sys.frames()[[1]]$ofile)) {
+            # Source'd via R console
+            return(normalizePath(sys.frames()[[1]]$ofile))
+            } else {
+                # RStudio Run Selection
+                # http://stackoverflow.com/a/35842176/2292993  
+                return(normalizePath(rstudioapi::getActiveDocumentContext()$path))
+            }
+        }
+    }
+}
+
+
+here <- dirname(here())
+print("Running from")
+print(here)
+#setwd("../etc/")
+CONFIGFILE<-paste0(here,"/../etc/", "load_configs.R")
 source( CONFIGFILE )
 
 print(getwd())

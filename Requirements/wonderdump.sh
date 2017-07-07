@@ -9,16 +9,17 @@
 
 set -ue
 
-# cd $(dirname $0) 
+cd $(dirname $0) 
 source ../etc/load_configs.sh
 
 # ASSUMING CONFIGURATION FILE HAS $FASTQDUMP_EXE
 
-# The first paramter must be the SRR number.
+# The first parameter must be the SRR number.
 SRR=$1
 
 # This is where we will store the file.
 SRA_DIR=$2
+echo "SRR/DESTINATION" $SRR $SRA_DIR
 
 # Make the directory if it does not exist.
 mkdir -p $SRA_DIR
@@ -33,7 +34,10 @@ then
     PATH1=${SRR:0:6}
     PATH2=${SRR:0:10}
     echo "*** downloading: $SRA_FILE"
-    curl ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra > $TMP_FILE
+    echo "curl ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra > $TMP_FILE"
+    curl "ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra" > $TMP_FILE
+    #echo "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra -O $TMP_FILE"
+    #wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra -O $TMP_FILE
     mv $TMP_FILE $SRA_FILE
 fi
 
