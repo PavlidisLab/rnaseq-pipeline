@@ -13,7 +13,7 @@ if [ "$#" -ne 1 ]; then
     echo "Example:"
     echo "$0 $ACCESSION"
     echo "   where $DATA/$ACCESSION would hold all the downloaded data."
-    exit
+    exit -1
 fi
 
 ACCESSION=$1
