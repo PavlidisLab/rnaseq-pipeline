@@ -38,7 +38,7 @@ def tabulate(root):
     for x in root.findall(SAMPLE_NODE):
         SAMPLE_ID = x.get("iid")
 
-        print SAMPLE_ID
+        #print SAMPLE_ID
         for y in x.findall(LIBRARYSTRAT_NODE):
             if y.text not in ACCEPTED_LIBRARYSTRAT:
                 #print "Rejected on Library strategy."

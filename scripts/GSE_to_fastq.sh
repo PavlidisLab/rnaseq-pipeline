@@ -61,4 +61,4 @@ python parse_miniml.py $MINIMLXML \
     | cut -f1,30 -d"," \
     | sort \
     | uniq \
-    | parallel --colsep=',' $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE $WONDERDUMP_EXE {1} "$DATA/"{2}
+    | parallel --colsep ',' $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE $WONDERDUMP_EXE {1} "$DATA/$ACCESSION/{2}"
