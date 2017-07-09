@@ -55,7 +55,7 @@ echo "Launching parallel Wonderdump"
 METADATA_URL="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term="
 python parse_miniml.py $MINIMLXML \
     | cut -f1 -d" " \
-    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" 2> $LOGDIR/@ \
+    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" 2> "$LOGDIR/SRA_METADATA" \
     | grep -v "SampleName" \
     | grep -v "^$" \
     | cut -f1,30 -d"," \

@@ -40,21 +40,24 @@ def tabulate(root):
 
         #print SAMPLE_ID
         for y in x.findall(LIBRARYSTRAT_NODE):
+            targets = []
+            REJECT = False
             if y.text not in ACCEPTED_LIBRARYSTRAT:
                 #print "Rejected on Library strategy."
-                break
+                REJECT = True
+                continue
             else:
-                pass # Data is RNA-Seq (or other accepted formats.)
-
-        targets = []
-        for y in x.findall(RELATION_NODE):
-            if y.get("type") not in ACCEPTED_RELATIONS:
-                #print "Rejected on relation type:", y.get("type")                
-                pass
-            else:
-                targets.append(y.get("target"))
-            
+                # Data is RNA-Seq (or other accepted formats.)            
+                targets = []
+                for y in x.findall(RELATION_NODE):
+                    if y.get("type") not in ACCEPTED_RELATIONS:
+                        #print "Rejected on relation type:", y.get("type")                
+                        pass
+                    else:
+                        targets.append(y.get("target"))
+                        
         #print "Relation:", targets
+        if len(targets) < 1: continue
         for target in targets:
             GSM_SRX[SAMPLE_ID].append(target)
 
