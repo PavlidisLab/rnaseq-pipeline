@@ -5,6 +5,7 @@ set -e
 ## Functions
 err_report() {
     echo "Error on line $1 in $2"
+    exit 123
 }
 trap 'err_report $LINENO $(basename "$0")' ERR
 

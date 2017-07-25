@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eu
+
 source ../../etc/load_configs.sh &> /dev/null # Be quiet!
 
 if [ $# -eq 0 ]

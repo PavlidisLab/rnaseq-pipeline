@@ -13,7 +13,7 @@ if [ $# -lt 1 ]
   then
     GSE="GSE64978"
     JOB="ProcessGSE"
-    MODES="(Optional)distributed"
+    MODES="mouse,distributed"
     echo "Incorrect arguments."
     echo "Example:"
     echo "  $0 $JOB $MODES [args]"

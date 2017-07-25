@@ -48,6 +48,7 @@ class QcGSE(BaseTask):
         except Exception as e:
             print "EXCEPTION:", e, "with", " ".join([str(x) for x in job])
             print "Message:",  e.message
+            raise e
 
         if ret != 0:
             exit("Job '{}' executed, but failed with exit code {}.".format( " ".join([str(x) for x in job]), ret))

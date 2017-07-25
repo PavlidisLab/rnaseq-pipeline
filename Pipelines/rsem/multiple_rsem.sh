@@ -1,6 +1,8 @@
 #!/bin/bash
+
 set -eu
 source ../../etc/load_configs.sh
+mkdir -p $LOGS/$(basename $0)
 
 echo "USING MACHINES: $MACHINES"
 
@@ -18,6 +20,7 @@ if [ $# -lt 2 ]
     echo "   where $FILES would have each sample under it's own directory."
     exit
 fi
+
 MATES=""
 if [ $# -eq 3 ]
 then
@@ -33,6 +36,7 @@ fi
 
 FILES=$1
 SERIES=$2
+SAMPLIST="/space/grp/Pipelines/rnaseq-pipeline/Pipelines/rsem/samplist.sh"
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
 PARALLEL_MACHINES=""
 if [ -n "$MACHINES" ]; then
@@ -72,16 +76,36 @@ echo "Preparing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $PARALLEL_MACHINES $RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory loaded."
 
+
+# If directories exists, clean them.
+quantDir=$(pwd)"/quantified/$SERIES" # TODO: This should be part of config variables
+tmpDir=$(pwd)"/temporary/$SERIES" # TODO: This should be part of config variables
+
+cleanQuant="rm -rf $quantDir"
+cleanTmp="rm -rf $tmpDir"
+
+if [ -d $quantDir ]; then
+    echo "Cleaning stale quantification data"
+    echo $cleanQuant
+    $cleanQuant
+fi
+
+if [ -d $tmpDir ]; then
+    echo "Cleaning stale temporary data"
+    echo $cleanTmp
+    $cleanTmp
+fi
+
 echo "Launching RSEM for: $SERIES"
 # Get samples directories, sorted and unique.
 # Prepare sample pairs.    
 # Run in parallel
-echo "DEBUG: find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq | xargs -n1 -I % $SAMPLIST % $MATES |  parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt" 
+find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
+    | sort \
+    | uniq \
+    | xargs -n1 -I % $SAMPLIST % $MATES \
+    | parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
 
-find $FILES/ -name "*.fastq.gz" -exec dirname {} \; | sort | uniq |
-    xargs -n1 -I % $SAMPLIST % $MATES |
-    parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' ' $(pwd)/rsem.sh $SERIES {1} {2} >> parallel-log.txt
-    
 echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory flushed."

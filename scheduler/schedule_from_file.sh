@@ -20,10 +20,15 @@ GEO_SAMPLES="$1"
 JOB="$2"
 
 OUTPUT="$LOGS/MultiScheduler/"$(basename $GEO_SAMPLES)
-mkdir -p $OUTPUT
+echo "Writing logs in $OUTPUT"
+mkdir -p $(dirname $OUTPUT)
 
 echo "##================Launching new batch======================##"
 sed 's|\t| |g' $GEO_SAMPLES \
     | cut -d' ' -f2,3,4 \
     | tail -n +2 \
-    | parallel --jobs $NTASKS --colsep " " ./schedule.sh "$JOB {2},distributed --gse {1} --nsamples {3}" 2>> $OUTPUT".err" 1>> $OUTPUT".out"
+    | grep -v "^$" \
+    | parallel --jobs $NTASKS \
+               --colsep " " \
+               --progress --bar --eta \
+                ./schedule.sh "$JOB {2},distributed --gse {1} --nsamples {3}"  #1>> $OUTPUT".out" 2>> $OUTPUT".err"

@@ -1,8 +1,10 @@
 #!/bin/bash
-set -eu
 
+set -eu
 cd $(dirname $0) 
 source ../../etc/load_configs.sh
+mkdir -p $LOGS/$(basename $0)
+
 echo " In $0, modes are: $MODES "
 
 if [ $# -eq 0 ]
@@ -24,8 +26,6 @@ while [[ $SERIES == */ ]]; do
     echo "WARNING: Please do not use trailing forward-slashes in $SERIES. Removing it..." 
 done 
 
-# SAMPLE=$(echo $(basename $2) | sed 's/,.*//g' | sed 's/.fastq.gz//g')
-# SAMPLE=$(echo $2 | sed "s|.*$SERIES|$SERIES|g" | sed  "s|.*$SERIES\/?\(.*\)|\\1|g" | sed "s|\/.*||" ) 
 SAMPLE=$(echo $2 | sed "s|.*$SERIES\/|\/|g" | sed "s|\/\/|\/|g" | cut -d"/" -f2) # Grab whatever trails $SERIES until the next forward slash.
 echo "SampleID: $SAMPLE"
 
@@ -77,5 +77,5 @@ else
     )    
 fi
 
-echo $CMD   
-$CMD 2>> "errors/$SERIES.txt" 1>> "logs/$SERIES.txt"
+echo "Launching" $CMD #| tee $LOGS/$0/$SERIES.log
+$CMD >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
