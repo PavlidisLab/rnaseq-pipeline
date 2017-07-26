@@ -18,7 +18,7 @@ if [ $# -lt 2 ]
     echo "Example:"
     echo "$0 $FILES $SERIES"
     echo "   where $FILES would have each sample under it's own directory."
-    exit
+    exit -1
 fi
 
 MATES=""
