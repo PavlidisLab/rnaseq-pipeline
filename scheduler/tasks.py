@@ -3,6 +3,9 @@ import os
 from subprocess import call
 from shutil import copyfile
 
+#from meta import ExcavateFQ
+#from meta import LogAssembly
+
 class BaseTask(luigi.Task):
     here = os.path.dirname(os.path.realpath(__file__))
     commit_dir = os.path.dirname(os.path.realpath(__file__)) + "/commit"

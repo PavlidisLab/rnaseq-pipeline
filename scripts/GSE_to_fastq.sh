@@ -48,17 +48,19 @@ tar -xvzf $MINIMLOUT --to-stdout > $MINIMLXML
 echo "Extracting $SOFTOUT"
 gunzip -f $SOFTOUT 
 
-LOGDIR=$LOGS/$0
+LOGDIR=$LOGS/$(basename $0)/$ACCESSION
 mkdir -p $LOGDIR
 
 echo "Launching parallel Wonderdump"
 METADATA_URL="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term="
+echo "Using MINIML at: " $MINIMLXML
 python parse_miniml.py $MINIMLXML \
     | cut -f1 -d" " \
-    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" 2> "$LOGDIR/SRA_METADATA" \
+    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" 2>> "$LOGDIR.SRA_METADATA" \
     | grep -v "SampleName" \
     | grep -v "^$" \
-    | cut -f1,30 -d"," \
+    | cut -f1,30 -d","  \
     | sort \
     | uniq \
-    | parallel --colsep ',' $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE $WONDERDUMP_EXE {1} "$DATA/$ACCESSION/{2}"
+    | parallel --colsep ',' $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE $WONDERDUMP_EXE {1} "$DATA/$ACCESSION/{2}" 1> $LOGDIR".out" 2> $LOGDIR".err"
+
