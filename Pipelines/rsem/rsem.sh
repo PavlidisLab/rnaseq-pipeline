@@ -14,7 +14,7 @@ if [ $# -eq 0 ]
     echo $0" $SERIES SEQUENCES1.fastq.gz,SEQUENCES2.fastq.gz... <Optional, SEQUENCES1_MATE.fastq.gz,SEQUENCES2_MATE.fastq.gz...>"    
     exit
 fi
-echo "Launching: -->" $0 $@
+echo "Launching: -->" $0 $@ " |  $# arguments."
 RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
 REFERENCE=$STAR_DEFAULT_REFERENCE
 
@@ -39,7 +39,7 @@ SEQUENCES=$2
 PAIRED_END=""
 MATE=""
 
-if [ $# -gt 3 ] 
+if [ $# -gt 2 ] 
 then
     echo " Called for paired-end data."
     PAIRED_END=" --paired-end "
@@ -48,12 +48,12 @@ then
     CMD=$(echo $RSEM_EXE \
 	-p "$NCPU_NICE" \
 	--star-gzipped-read-file \
-	--temporary-folder $TMP \
 	--time \
 	--star \
 	--star-path $STAR_PATH \
+	--temporary-folder $TMP \
 	$PAIRED_END \
-	" $SEQUENCES $MATE " \
+	" $SEQUENCES $MATES " \
 	$REFERENCE \
 	$OUTPUT \
 	"--star-shared-memory LoadAndKeep" \

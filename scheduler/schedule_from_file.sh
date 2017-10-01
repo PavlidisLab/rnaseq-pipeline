@@ -30,5 +30,5 @@ sed 's|\t| |g' $GEO_SAMPLES \
     | grep -v "^$" \
     | parallel --jobs $NTASKS \
                --colsep " " \
-               --progress --bar --eta \
+               --progress \
                 ./schedule.sh "$JOB {2},distributed --gse {1} --nsamples {3}"  #1>> $OUTPUT".out" 2>> $OUTPUT".err"

@@ -73,6 +73,7 @@ target/
 Assemblies/
 Data/
 Requirements/
+Logs/ 
 
 etc/common.cfg
 etc/tmp/*

@@ -100,11 +100,12 @@ echo "Launching RSEM for: $SERIES"
 # Get samples directories, sorted and unique.
 # Prepare sample pairs.    
 # Run in parallel
+# samplist.sh will return the sequence (and mates) as 1 (or 2) lists of FASTQ files.
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
     | sort \
     | uniq \
     | xargs -n1 -I % $SAMPLIST % $MATES \
-    | parallel --env MODES $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
+    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
 
 echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
