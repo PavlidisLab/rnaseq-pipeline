@@ -163,7 +163,8 @@ class DownloadGSE(BaseTask):
 
     #method_geo = "../scripts/geo_to_sra.R" # TODO: Generalize
     #method_geo = "/space/grp/Pipelines/rnaseq-pipeline/scripts/geo_to_sra.R" # TODO: Generalize
-    method_arrayexpres = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.R"
+    #method_arrayexpres = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.R"
+    method_arrayexpress = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.sh"
     method_gse = "/space/grp/Pipelines/rnaseq-pipeline/scripts/GSE_to_fastq.sh"
     method = None
 
@@ -177,7 +178,7 @@ class DownloadGSE(BaseTask):
         if any([ TOKEN in self.gse for TOKEN in self.GEO_TOKENS ]):
             self.method = self.method_gse
         else:
-            self.method = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.R" #self.method_arrayexpress
+            self.method = self.method_arrayexpress
 
         # Call job
         #job = ["Rscript", self.method, self.gse] 

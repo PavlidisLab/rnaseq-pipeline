@@ -6,8 +6,10 @@ set -eu
 if [ "$#" -lt 2 ]; then
     echo "Usage:"
     echo " $0 FILE JOB"
+    echo "MODES=centos5,distributed $0 FILE JOB"
     echo 
     echo "File should have format: EEID GSE TAXON NSAMPLES"
+    echo "The MODES= environment variable will add additional modes from etc/modes."
     echo
     echo "Example:"
     echo -e "eeID\teeName\ttaxon\tsample"
@@ -18,6 +20,13 @@ fi
 # TODO: 
 GEO_SAMPLES="$1"
 JOB="$2"
+if [ -z ${MODES+x} ]; then 
+    echo "MODES is unset"; 
+    MODES=""
+else 
+    echo "MODES is set to '$MODES'"; 
+    MODES=$MODES","
+fi
 
 OUTPUT="$LOGS/MultiScheduler/"$(basename $GEO_SAMPLES)
 echo "Writing logs in $OUTPUT"
@@ -31,4 +40,4 @@ sed 's|\t| |g' $GEO_SAMPLES \
     | parallel --jobs $NTASKS \
                --colsep " " \
                --progress \
-                ./schedule.sh "$JOB {2},distributed --gse {1} --nsamples {3}"  #1>> $OUTPUT".out" 2>> $OUTPUT".err"
+                ./schedule.sh "$JOB $MODES{2} --gse {1} --nsamples {3}"  #1>> $OUTPUT".out" 2>> $OUTPUT".err"

@@ -1,5 +1,3 @@
-#!/space/opt/bin/Rscript
-
 #' ---
 #' title: "GEO to FASTQ"
 #' author: "Manuel Belmadani"
