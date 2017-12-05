@@ -1,16 +1,22 @@
 #!/bin/bash
 set -eu
 
-source ../../etc/load_configs.sh &> /dev/null # Be quiet!
-
 if [ $# -eq 0 ]
     then
     echo "Usage:"
-    echo $0" PATH_TO_SAMPLE_RUNS <Optional, --paired-end>"    
+    echo $0" PATH_TO_SAMPLE_RUNS MODES <Optional, --paired-end>"    
     echo "Description:"
     echo "For a path with multiple sequencing runs, assemble the list of sequences and mates if --paired-end is provided."
     exit
 fi
+
+ # TODO: Clean this up
+export MODES=$2
+source ../../etc/load_configs.sh &> /dev/null # Be quiet!
+
+#echo $1
+#echo $2
+#echo $3
 
 include_exclude () 
 {
@@ -56,16 +62,16 @@ FILES=$(echo $INPUTS | sed 's/,$//g' )
 
 MATES=""
 
-if [ $# -eq 2 ]
+if [ $# -eq 3 ]
 then
-    if [ $2 = "--paired-end" ]
+    if [ $3 = "--paired-end" ]
     then
 	INPUTS=$(find $1"/" -name "*$BEFORE*.fastq.gz" | tr "\n" "," | tr " ", "," )
 	include_exclude $INPUTS # Call inclusion/exclusion subroutine
 	FILES=$(echo $INPUTS| sed 's/,$//g')
 	MATES=$(echo $FILES | sed "s/$BEFORE/$AFTER/g")
     else
-	echo "Unknown parameter: $2"
+	echo "Unknown parameter: $3"
 	exit
     fi
 fi

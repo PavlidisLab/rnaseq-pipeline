@@ -14,8 +14,9 @@ class BaseTask(luigi.Task):
 
     # Para meters
     gse = luigi.Parameter()
-    nsamples = luigi.Parameter()
-
+    nsamples = luigi.Parameter(default=0)
+    scope = luigi.Parameter(default="genes")
+    
 
 class QcGSE(BaseTask):
 
@@ -67,18 +68,34 @@ class CountGSE(BaseTask):
 
     method = "./rsem_count.sh" # TODO: Generalize
     #wd = "."
-    scope = "genes"
-
 
     def init(self):
         """
         Set paths and whatnot.
         """
-        self.path_to_inputs = "quantified/" +str(self.gse)+ "/"
-        self.count_source = self.path_to_inputs + "countMatrix.genes"
-        self.count_destination = "quantified/counted/" +str(self.gse)+ "_counts.genes"
-        self.fpkm_source = self.path_to_inputs + "fpkmMatrix.genes"
-        self.fpkm_destination = "quantified/counted/" +str(self.gse)+ "_fpkm.genes"
+        if self.scope is None:
+            self.scope = "genes"
+            
+        quantDir = os.environ['QUANTDIR']
+        countDir = os.environ['COUNTDIR']
+
+        try:
+            os.mkdir(countDir)
+        except:
+            pass # Dir must exists
+
+        print "INFO: QUANTDIR => ", quantDir
+        print "INFO: COUNTDIR => ", countDir
+        self.path_to_inputs = quantDir + "/"  +str(self.gse)+ "/"
+
+        self.count_source = self.path_to_inputs + "countMatrix."+self.scope
+        self.count_destination = countDir +str(self.gse)+ "_counts."+self.scope
+
+        self.fpkm_source = self.path_to_inputs + "fpkmMatrix."+self.scope
+        self.fpkm_destination = countDir  +str(self.gse)+ "_fpkm."+self.scope
+
+        self.tpm_source = self.path_to_inputs + "tpmMatrix."+self.scope
+        self.tpm_destination = countDir  +str(self.gse)+ "_tpm."+self.scope
 
 
     def requires(self):        
@@ -103,9 +120,16 @@ class CountGSE(BaseTask):
         try:
             job = [ self.method, self.path_to_inputs, self.scope ] 
             ret = call(job)
+            
+            print "Copying files from (e.g. ", self.count_source, ") to destination (e.g. ", self.count_destination, ")."
             copyfile( self.count_source, self.count_destination)
             copyfile( self.fpkm_source, self.fpkm_destination)
-
+            copyfile( self.tpm_source, self.tpm_destination)
+            
+            # Might as well do isoforms while we're here.
+            job = [ self.method, self.path_to_inputs, "isoforms" ] 
+            ret = call(job)            
+            
         except Exception as e:
             print "EXCEPTION:", e, "with", " ".join(job)
             print e.message
@@ -119,6 +143,54 @@ class CountGSE(BaseTask):
                  out_file.write(self.gse+"\n")
 
 
+class PurgeGSE(BaseTask):
+    self.method = " rm "
+    self.method_args = " -rf "
+    def init(self):
+        """
+        Set paths and whatnot.
+        """
+        dataDir = os.environ['DATA']
+        # TODO: Possibly, also get rid of quant dir?
+        print "INFO: DATADIR => ", dataDir
+        self.purgeDir = dataDir + "/" + str(self.gse)+ "/"
+
+    def requires(self):        
+        self.init()
+        return CountGSE(self.gse, self.nsamples)
+
+    def output(self):
+        return luigi.LocalTarget(self.commit_dir + "/purge_%s.tsv" % self.gse)
+
+    def run(self):
+
+        try:
+            os.chdir(self.wd)
+        except Exception as e:
+            print "=======> CountGSE <=========="
+            print e.message
+            print "Error changing to", self.wd, "when in", os.getcwd()
+            raise e
+            
+
+        # Call job
+        try:
+            print "Deleting files from", self.purgeDir, "."
+            job = [ self.method, self.method_args, self.purgeDir ] 
+            ret = call(job)
+            print "Done."
+
+        except Exception as e:
+            print "EXCEPTION:", e, "with", " ".join(job)
+            print e.message
+            ret = -1
+
+        if ret:
+            exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
+
+        # Commit output
+        with self.output().open('w') as out_file:                    
+                 out_file.write(self.gse+"\n")
 
 class ProcessGSE(BaseTask):
 

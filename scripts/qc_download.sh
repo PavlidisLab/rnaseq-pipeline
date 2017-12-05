@@ -16,7 +16,7 @@ if [ $# -eq 0 ]
     exit
 fi
  
-FILES=$1
+FILES=$1"/"
 EXPECTED=$2
 
 if [[ -d $FILES ]]; then
@@ -25,7 +25,7 @@ if [[ -d $FILES ]]; then
 else
     # Look for files in $DATA.
     FILES=$DATA"/"$FILES
-    echo "Searching for files in $DATA."
+    echo "Searching for files in $DATA"
     if [[ -d $FILES ]]; then
 	echo "Using files at path $FILES"
     else
@@ -35,8 +35,8 @@ else
     fi
 fi
 
-nSEQUENCES=$(find $FILES -name "*$DEFAULT_MATE_SOURCE.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
-nMATES=$(find $FILES -name "*$DEFAULT_MATE_REPLACEMENT.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nSEQUENCES=$(find $FILES -name "*$DEFAULT_MATE_SOURCE*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nMATES=$(find $FILES -name "*$DEFAULT_MATE_REPLACEMENT*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 echo "$nSEQUENCES SEQUENCE FILES FOUND."
 echo "$nMATES MATE FILES FOUND."

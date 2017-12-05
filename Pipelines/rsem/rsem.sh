@@ -29,8 +29,8 @@ done
 SAMPLE=$(echo $2 | sed "s|.*$SERIES\/|\/|g" | sed "s|\/\/|\/|g" | cut -d"/" -f2) # Grab whatever trails $SERIES until the next forward slash.
 echo "SampleID: $SAMPLE"
 
-OUTPUT="quantified/$SERIES/$SAMPLE"
-TMP="temporary/$SERIES/$SAMPLE"
+OUTPUT="$QUANTDIR/$SERIES/$SAMPLE"
+TMP="$TMPDIR/$SERIES/$SAMPLE"
 
 mkdir -p $OUTPUT
 mkdir -p $TMP
@@ -39,8 +39,7 @@ SEQUENCES=$2
 PAIRED_END=""
 MATE=""
 
-if [ $# -gt 2 ] 
-then
+if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
     echo " Called for paired-end data."
     PAIRED_END=" --paired-end "
     MATES=$3
@@ -56,10 +55,8 @@ then
 	" $SEQUENCES $MATES " \
 	$REFERENCE \
 	$OUTPUT \
-	"--star-shared-memory LoadAndKeep" \
-	" --keep-intermediate-files "
-
-)
+	"--star-shared-memory LoadAndRemove "
+    )
 else
     echo " Called for single-end data.!"
     CMD=$(echo $RSEM_EXE \
@@ -72,10 +69,9 @@ else
 	" $SEQUENCES " \
 	$REFERENCE \
 	$OUTPUT \
-	" --star-shared-memory LoadAndKeep " \
-	" --keep-intermediate-files "
+	" --star-shared-memory LoadAndRemove "
     )    
 fi
 
 echo "Launching" $CMD #| tee $LOGS/$0/$SERIES.log
-$CMD >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
+$CMD > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err

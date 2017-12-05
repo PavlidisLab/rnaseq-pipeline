@@ -9,8 +9,18 @@ then
     exit
 fi
 
-FILES=$1
+FILES=$1"/"
 LEVEL=$2
+
+# Check if directory needs "DATA" path appended.
+if [ -d $FILES ]; then 
+    #OK
+    touch /dev/null
+else
+    FILES=$QUANTDIR/$1
+fi
+echo "INFO: COUNTING FILES AT $FILES"
+
 
 EXE="$RSEM_DIR""/rsem-generate-data-matrix"
 EXE_TPM="$RSEM_DIR""/rsem-generate-tpm-matrix"

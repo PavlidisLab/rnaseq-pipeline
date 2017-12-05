@@ -15,6 +15,7 @@ if [ $# -lt 2 ]
     echo "Usage:"
     echo "$0 <FILES> <SERIES>"
     echo "$0 <FILES> <SERIES> --paired-end"
+    echo "   Note: If --paired-end is not specified, then automatic detection will be performed."
     echo "Example:"
     echo "$0 $FILES $SERIES"
     echo "   where $FILES would have each sample under it's own directory."
@@ -34,9 +35,13 @@ else
     fi   
 fi
 
+export MODES=$MODES  # TODO: Doesn't seem needed.
+echo "$0 using modes: $MODES"
+
 FILES=$1
 SERIES=$2
-SAMPLIST="/space/grp/Pipelines/rnaseq-pipeline/Pipelines/rsem/samplist.sh"
+SAMPLIST="/space/grp/Pipelines/rnaseq-pipeline/Pipelines/rsem/samplist.sh" # TODO: Centralize into scripts/ directory.
+
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
 PARALLEL_MACHINES=""
 if [ -n "$MACHINES" ]; then
@@ -49,7 +54,7 @@ if [[ -d $FILES ]]; then
     echo "Using files at path $FILES"
 else
     # Look for files in $DATA.
-    FILES=$DATA"/"$FILES
+    FILES=$DATA"/"$FILES"/"
     echo "Searching for files in $DATA."
     if [[ -d $FILES ]]; then
 	echo "Using files at path $FILES"
@@ -78,20 +83,23 @@ echo "Memory loaded."
 
 
 # If directories exists, clean them.
-quantDir=$(pwd)"/quantified/$SERIES" # TODO: This should be part of config variables
-tmpDir=$(pwd)"/temporary/$SERIES" # TODO: This should be part of config variables
+#quantDir=$(pwd)"/quantified/$SERIES" # TODO: This should be part of config variables
+#tmpDir=$(pwd)"/temporary/$SERIES" # TODO: This should be part of config variables
+
+quantDir="$QUANTDIR/$SERIES" 
+tmpDir="$TMPDIR/$SERIES" 
 
 cleanQuant="rm -rf $quantDir"
 cleanTmp="rm -rf $tmpDir"
 
 if [ -d $quantDir ]; then
-    echo "Cleaning stale quantification data"
+    echo "Cleaning stale quantification data at $quantDir"
     echo $cleanQuant
     $cleanQuant
 fi
 
 if [ -d $tmpDir ]; then
-    echo "Cleaning stale temporary data"
+    echo "Cleaning stale temporary data at $quantDir"
     echo $cleanTmp
     $cleanTmp
 fi
@@ -104,11 +112,11 @@ echo "Launching RSEM for: $SERIES"
 find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
     | sort \
     | uniq \
-    | xargs -n1 -I % $SAMPLIST % $MATES \
-    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} >> $LOGS/$(basename $0)/$SERIES.log 2>> $LOGS/$(basename $0)/$SERIES.err
+    | xargs -n1 -I % $SAMPLIST % $MODES $MATES \
+    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
 
-echo "Flushing memory..."
+# echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
-echo "Memory flushed."
+# echo "Memory flushed."
 
 echo "Done."

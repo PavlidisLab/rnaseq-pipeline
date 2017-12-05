@@ -70,10 +70,30 @@ target/
 
 # Project specific ignores
 
-Assemblies/
-Data/
-Requirements/
-Logs/ 
+Assemblies/*
+Data/*
+Data*
+Requirements/*
+Requirements/STAR/
+Logs/*
+COUNTS/*
+COUNTS
+BAMs/*
+BAMs
+INSTALL/
+RESULTS/
+RESULTS*
+
+scheduler/IN/*
+scheduler/OUT/*
+scheduler/PIDS/*
+scheduler/STATE
+scheduler/logs-*
+scheduler/venv*
+scheduler/commit*
+
+Pipelines/rsem/quantified
+Pipelines/rsem/temporary
 
 etc/common.cfg
 etc/tmp/*
@@ -87,11 +107,20 @@ tmp.*
 *.bam
 *.out
 *.tab
+*.bam
+*.sam
+*.sra
+
+# Other machine files
+*.xml
+*.tgz
+*.sqlite
+*.zip
 
 # Misc directories
 *.csv
 temporary/
-quantified/
+vquantified/
 
 # Logs
 log-*.txt
