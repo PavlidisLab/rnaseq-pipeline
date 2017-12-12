@@ -6,9 +6,14 @@ set -e
 # Set PERL modules
 export PERL5LIB=/home/mbelmadani/.local_CENTOS7/lib/perl5/share/perl5/
 
+## Traps
+
 ## Functions
 err_report() {
-    echo "Error on line $1 in $2"
+	#echo "Last command run was ["!:0"] with arguments ["!:*"]"
+    echo "[ERROR] Error on line $1 in $2"
+	PROGRAM=$(basename $0)
+	echo "[ERROR] See logs at $LOGS/$PROGRAM/$CURRENTGSE.err/.log"
     exit 123
 }
 trap 'err_report $LINENO $(basename "$0")' ERR

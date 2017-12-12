@@ -99,7 +99,7 @@ if [ -d $quantDir ]; then
 fi
 
 if [ -d $tmpDir ]; then
-    echo "Cleaning stale temporary data at $quantDir"
+    echo "Cleaning stale temporary data at $tmpDir"
     echo $cleanTmp
     $cleanTmp
 fi
@@ -119,4 +119,9 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 # echo "Memory flushed."
 
-echo "Done."
+echo "Done calling RSEM."
+if [ -d $tmpDir ]; then
+    echo "Cleaning stale temporary data at $quantDir"
+    echo $cleanTmp
+    $cleanTmp
+fi

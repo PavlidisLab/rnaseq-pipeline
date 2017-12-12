@@ -8,6 +8,7 @@ __version__ = "1.0.0"
 __maintainer__ = "Manuel Belmadani"
 __email__ = "manuel.belmadani@msl.ubc.ca"
 __status__ = "Production"
+__description__ = "Download all RNA-Seq datasets by parsing the MINiML files."
 
 import sys
 import xml.etree.ElementTree

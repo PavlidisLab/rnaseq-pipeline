@@ -74,4 +74,9 @@ else
 fi
 
 echo "Launching" $CMD #| tee $LOGS/$0/$SERIES.log
-$CMD > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
+echo "Launching" $CMD > $LOGS/$(basename $0)/$SERIES.log
+
+echo  "Sequences:" $SEQUENCES >> $LOGS/$(basename $0)/$SERIES.log
+echo  "Mates:" $$MATES >> $LOGS/$(basename $0)/$SERIES.log
+
+$CMD >> $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err

@@ -8,6 +8,9 @@ __version__ = "1.0.0"
 __maintainer__ = "Manuel Belmadani"
 __email__ = "manuel.belmadani@msl.ubc.ca"
 __status__ = "Production"
+__description__ = "Download a platform specific RNA-Seq dataset by parsing the MINiML files."
+
+# TODO: This should really just be an extension of parse_miniml.py
 
 import sys
 import xml.etree.ElementTree

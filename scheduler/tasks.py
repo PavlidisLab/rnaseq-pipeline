@@ -144,8 +144,9 @@ class CountGSE(BaseTask):
 
 
 class PurgeGSE(BaseTask):
-    self.method = " rm "
-    self.method_args = " -rf "
+    method = "rm"
+    method_args = "-rf"
+
     def init(self):
         """
         Set paths and whatnot.
@@ -175,9 +176,15 @@ class PurgeGSE(BaseTask):
 
         # Call job
         try:
+            ## Workaround for missing DIR
+            job = [ "mkdir", "-p", self.purgeDir ] 
+            ret = call(job)
+            
+            ## Ok, not delete directory
             print "Deleting files from", self.purgeDir, "."
             job = [ self.method, self.method_args, self.purgeDir ] 
             ret = call(job)
+
             print "Done."
 
         except Exception as e:
@@ -186,6 +193,8 @@ class PurgeGSE(BaseTask):
             ret = -1
 
         if ret:
+            print "Error code", ret,"."
+            print ""
             exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
 
         # Commit output

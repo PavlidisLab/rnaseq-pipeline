@@ -9,7 +9,7 @@ if [ $# -lt 1 ]
     MODES="mouse,distributed"
     echo "Incorrect arguments."
     echo "Example:"
-    echo "  $0 $JOB $MODES [args/GSE]"
+    echo "  $0 $JOB $MODES --gse=$GSE [other args]"
     exit -1
 fi
 
@@ -22,8 +22,19 @@ shift
 echo "Scheduling $JOB job for $@"
 
 export MODES=$MODES
+export DATA=$DATA
 export QUANTDIR=$QUANTDIR
 export RESULTDIR=$RESULTDIR
 export COUNTDIR=$COUNTDIR
+
+echo @ $@
+# Assuming the --gse argument is required.
+export CURRENTGSE=$(echo $@ \
+						| tr " " "\n" \
+						| grep "\-\-gse\=" \
+ 						| sed 's|\-\-gse\=||g' \
+						| head -n1)
+
+echo "Current GSE="$CURRENTGSE
 
 MODES=$MODES PYTHONPATH='.' luigi --scheduler-port $SCHEDULER_PORT --module tasks $JOB $@
