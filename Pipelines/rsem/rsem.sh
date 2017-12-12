@@ -39,6 +39,11 @@ SEQUENCES=$2
 PAIRED_END=""
 MATE=""
 
+BAMFILES=""
+if [ $STAR_KEEP_BAM -eq 1 ]; then
+	BAMFILES=" --keep-intermediate-files "
+fi
+
 if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
     echo " Called for paired-end data."
     PAIRED_END=" --paired-end "
@@ -55,7 +60,7 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
 	" $SEQUENCES $MATES " \
 	$REFERENCE \
 	$OUTPUT \
-	"--star-shared-memory LoadAndRemove "
+	"--star-shared-memory LoadAndRemove $BAMFILES "
     )
 else
     echo " Called for single-end data.!"
@@ -69,7 +74,7 @@ else
 	" $SEQUENCES " \
 	$REFERENCE \
 	$OUTPUT \
-	" --star-shared-memory LoadAndRemove "
+	" --star-shared-memory LoadAndRemove $BAMFILES "
     )    
 fi
 

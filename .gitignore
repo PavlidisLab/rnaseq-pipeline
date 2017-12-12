@@ -72,7 +72,11 @@ target/
 
 Assemblies/*
 Data/*
-Data*
+Data/
+Data
+data/*
+data/
+data
 Requirements/*
 Requirements/STAR/
 Logs/*
