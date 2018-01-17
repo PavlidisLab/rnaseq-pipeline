@@ -2,7 +2,7 @@
 
 set -eu
 source ../../etc/load_configs.sh
-mkdir -p $LOGS/$(basename $0)
+
 
 echo "USING MACHINES: $MACHINES"
 
@@ -41,6 +41,11 @@ echo "$0 using modes: $MODES"
 FILES=$1
 SERIES=$2
 SAMPLIST="/space/grp/Pipelines/rnaseq-pipeline/Pipelines/rsem/samplist.sh" # TODO: Centralize into scripts/ directory.
+
+#mkdir -p $LOGS/$(basename $0)
+CURRENTLOGS=$LOGS/$SERIES/$(basename $0)
+mkdir -p $CURRENTLOGS # Initialize log directory
+
 
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
 PARALLEL_MACHINES=""
@@ -101,7 +106,9 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
     | sort \
     | uniq \
     | xargs -n1 -I % $SAMPLIST % $MODES $MATES \
-    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
+    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $CURRENTLOGS.log 2> $CURRENTLOGS.err
+
+#parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
 
 # echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
