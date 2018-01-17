@@ -65,18 +65,6 @@ else
     fi
 fi
 
-if [ "$MATES" == "" ]; then
-    isMate=$(find $FILES | grep -c "$DEFAULT_MATE_REPLACEMENT") || :
-    echo "Found $isMate potential mates."
-    if [ $isMate -gt 0 ];
-    then  
-	echo "Automatically detected --paired-end sequences."
-	MATES="--paired-end"
-    else
-	echo "No mate-pairs found. Treating as single-end sequences."
-    fi    
-fi
-
 echo "Preparing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $PARALLEL_MACHINES $RSEM_DIR/rsem-star-load-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 echo "Memory loaded."
@@ -117,6 +105,8 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
 
 # echo "Flushing memory..."
 # echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+
 # echo "Memory flushed."
 
 echo "Done calling RSEM."

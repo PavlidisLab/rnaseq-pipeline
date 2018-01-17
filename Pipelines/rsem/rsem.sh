@@ -60,7 +60,7 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
 	" $SEQUENCES $MATES " \
 	$REFERENCE \
 	$OUTPUT \
-	"--star-shared-memory LoadAndRemove $BAMFILES "
+	"--star-shared-memory LoadAndKeep $BAMFILES "
     )
 else
     echo " Called for single-end data.!"
@@ -74,7 +74,7 @@ else
 	" $SEQUENCES " \
 	$REFERENCE \
 	$OUTPUT \
-	" --star-shared-memory LoadAndRemove $BAMFILES "
+	" --star-shared-memory LoadAndKeep $BAMFILES "
     )    
 fi
 
