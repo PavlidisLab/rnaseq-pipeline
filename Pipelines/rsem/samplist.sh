@@ -61,11 +61,10 @@ include_exclude $INPUTS # Call inclusion/exclusion subroutine
 FILES=$(echo $INPUTS | sed 's/,$//g' )
 
 MATES=""
-
 # If forced --paired end, use that.
 if [ $# -eq 3 ]; then
 	if [ $3 == "--paired-end" ]; then
-		echo "Forced paired-end in $0"
+		## "Forced paired-end in $0"
 		MATES=$3
 	fi
 fi
@@ -73,17 +72,18 @@ fi
 # Try to detect if mates not set.
 if [ "$MATES" == "" ]; then
     isMate=$(find $1 | grep -c "$DEFAULT_MATE_REPLACEMENT") || :
-    echo "Found $isMate potential mates."
+    ## "Found $isMate potential mates."
     if [ $isMate -gt 0 ]; then  
-		echo "Automatically detected --paired-end sequences."
+		## "Automatically detected --paired-end sequences."
 		MATES="--paired-end"
     else
-		echo "No mate-pairs found. Treating as single-end sequences."
+		## "No mate-pairs found. Treating as single-end sequences."
+		DO_NOTHING=TRUE
     fi    
 fi
 
 #then
-if [ $MATES = "--paired-end" ]; then
+if [ "$MATES" == "--paired-end" ]; then
 		INPUTS=$(find $1"/" -name "*$BEFORE*.fastq.gz" | tr "\n" "," | tr " ", "," )
 		include_exclude $INPUTS # Call inclusion/exclusion subroutine
 		FILES=$(echo $INPUTS| sed 's/,$//g')

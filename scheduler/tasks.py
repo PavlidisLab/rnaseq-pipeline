@@ -78,6 +78,8 @@ class CountGSE(BaseTask):
             
         quantDir = os.environ['QUANTDIR']
         countDir = os.environ['COUNTDIR']
+	if 'SCOPE' in  os.environ.keys():
+            self.scope = os.environ['SCOPE']
 
         try:
             os.mkdir(countDir)

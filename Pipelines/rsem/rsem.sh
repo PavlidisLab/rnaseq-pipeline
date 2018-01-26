@@ -91,4 +91,4 @@ echo  "Sequences:" $SEQUENCES >> $CURRENTLOGS.log
 echo  "Mates:" $$MATES >> $CURRENTLOGS.log
 
 #$CMD >> $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
-$CMD >> $CURRENTLOGS.log 2> $CURRENTLOGS.err
+$CMD >> $CURRENTLOGS.log 2>> $CURRENTLOGS.err

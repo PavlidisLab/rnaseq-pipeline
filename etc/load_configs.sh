@@ -13,10 +13,19 @@ err_report() {
 	#echo "Last command run was ["!:0"] with arguments ["!:*"]"
     echo "[ERROR] Error on line $1 in $2"
 	PROGRAM=$(basename $0)
-	echo "[ERROR] See logs at $LOGS/$PROGRAM/$CURRENTGSE.err/.log"
+
+	if [ -z ${CURRENTGSE+x} ]; then 
+		CURRENTGSE="CurrentGSE" ; 
+	fi
+
+	echo "[ERROR] See logs at $LOGS/$CURRENTGSE/$PROGRAM{.err,.log}"
     exit 123
 }
 trap 'err_report $LINENO $(basename "$0")' ERR
+
+### Get the header of a .gz file
+function zhead(){ zcat $1 | head -n1;  }; 
+export -f zhead;
 
 ## Configurations
  
