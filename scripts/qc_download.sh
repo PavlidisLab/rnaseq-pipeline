@@ -15,8 +15,9 @@ if [ $# -eq 0 ]
     echo "Returns: The number of samples and pairs. Error if not equal to expected."
     exit
 fi
- 
-FILES=$1"/"
+
+GSE=$1 
+FILES=$GSE"/"
 EXPECTED=$2
 
 if [[ -d $FILES ]]; then
@@ -35,11 +36,27 @@ else
     fi
 fi
 
+
+# Prepare a clean metadata file
+METADATA_OUT=$METADATA/$GSE".metadata"
+if [  -f $METADATA_OUT ]; then
+	mv $METADATA_OUT $METADATA_OUT".old"
+fi
+./pipeline_metadata.sh $GSE > $METADATA_OUT
+
+# Count number of sequences
 nSEQUENCES=$(find $FILES -name "*$DEFAULT_MATE_SOURCE*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+
+# Count number of mate pairs.
 nMATES=$(find $FILES -name "*$DEFAULT_MATE_REPLACEMENT*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 echo "$nSEQUENCES SEQUENCE FILES FOUND."
 echo "$nMATES MATE FILES FOUND."
+
+echo ""
+echo "# Fastq files per pairing "
+echo -e "Number of fastq files ("$DEFAULT_MATE_SOURCE")$MDL$nSEQUENCES" >> $METADATA_OUT
+echo -e "Number of fastq files ("$DEFAULT_MATE_REPLACEMENT")$MDL$nMATES" >> $METADATA_OUT
 
 if [ $nMATES -gt 0 ]; then
     echo "LOG: Data appears to be paired-end"
