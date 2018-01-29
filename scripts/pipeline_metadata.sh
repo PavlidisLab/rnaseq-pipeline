@@ -3,6 +3,10 @@
 source ../etc/load_configs.sh &> /dev/null
 set -eu
 
+### Get the header of a .gz file
+function zhead(){ zcat $1 | head -n1 | tail -n1 ;   }; 
+export -f zhead;
+
 GSE=$1 # GSE ID
 
 echo -e "ID"$MDL$GSE 
@@ -17,6 +21,7 @@ $FASTQDUMP_EXE --version | head -n2 | tail -n1 | rev | cut -f1 -d"/" | rev | sed
 $RSEM_DIR/rsem-calculate-expression --version | sed 's|Current version: ||g' | tr " " "\t"
 $STAR_EXE --version | tr "_" "\t"
 
+
 # Assembly information
 echo ""
 echo "# Assembly information"
@@ -26,7 +31,8 @@ echo -e "Assembly"$MDL$ASSEMBLY_METADATA
 # Run information
 echo ""
 echo "# Sequencing runs"
-echo -e "RunID"$MDL$( find $DATA/$GSE/ -name "*.fastq.gz" | xargs -I@ bash -c "zhead "@ | cut -f1 -d" " | sort | uniq ) # | tr "\n" "," )
+echo -e "RunIDs:"
+find $DATA/$GSE/ -name "*.fastq.gz" -exec bash -c 'zhead "$0"' {} \; | cut -f1 -d" " | sort | uniq 
 
 echo ""
 echo "# Instrument/Batch information"

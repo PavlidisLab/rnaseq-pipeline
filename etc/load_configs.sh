@@ -24,7 +24,7 @@ err_report() {
 trap 'err_report $LINENO $(basename "$0")' ERR
 
 ### Get the header of a .gz file
-function zhead(){ zcat $1 | head -n1;  }; 
+function zhead(){ zcat $1 | head -n1 ; }; 
 export -f zhead;
 
 ## Configurations

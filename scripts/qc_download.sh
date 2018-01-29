@@ -42,7 +42,9 @@ METADATA_OUT=$METADATA/$GSE".metadata"
 if [  -f $METADATA_OUT ]; then
 	mv $METADATA_OUT $METADATA_OUT".old"
 fi
-./pipeline_metadata.sh $GSE > $METADATA_OUT
+
+
+# $SCRIPTS/pipeline_metadata.sh $GSE > $METADATA_OUT
 
 # Count number of sequences
 nSEQUENCES=$(find $FILES -name "*$DEFAULT_MATE_SOURCE*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
