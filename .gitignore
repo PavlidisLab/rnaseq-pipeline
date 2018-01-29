@@ -87,6 +87,8 @@ BAMs
 INSTALL/
 RESULTS/
 RESULTS*
+metadata
+
 
 scheduler/IN/*
 scheduler/OUT/*
