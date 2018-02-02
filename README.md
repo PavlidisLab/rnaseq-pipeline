@@ -9,10 +9,11 @@ The documentation is still being written and tested. In the meantime, users inte
 ## Getting started
 Create a directory where you will clone this repository. From example `/home/username/Pipeline`
 
-`mkdir -p /home/$(whoami)/Pipelines`
-
-`cd /home/$(whoami)/Pipelines`
-`git clone https://github.com/PavlidisLab/rnaseq-pipeline`
+```
+mkdir -p /home/$(whoami)/Pipelines
+cd /home/$(whoami)/Pipelines
+git clone https://github.com/PavlidisLab/rnaseq-pipeline
+```
 
 
 ## Creating/Updating configuration
