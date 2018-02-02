@@ -4,7 +4,7 @@ TODO: Documentation
 
 The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact @mbelmadani - manuel.belmadani@msl.ubc.ca for configuration assistance.
 
-# Pavlab install instructions
+# General install instructions
 
 ## Getting started
 Create a directory where you will clone this repository. From example `/home/username/Pipeline`
