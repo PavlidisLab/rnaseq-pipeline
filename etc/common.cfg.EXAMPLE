@@ -1,31 +1,61 @@
 ## Common directories
 USERNAME=$(whoami)
 
-ROOT_DIR="/home/$USERNAME/development/rnaseq-pipeline"
+ROOT_DIR="/home/$USERNAME/Pipelines/rnaseq-pipeline"
+RESULTS_DIR=$ROOT_DIR # This is where results and input data will be stores
+SCRATCH_DIR=$SCRATCH_DIR # This is where scratch data will be written, like metadata.
+
 ASSEMBLIES="$ROOT_DIR/Assemblies"
 REQUIREMENTS="$ROOT_DIR/Requirements"
-DATA="$ROOT_DIR/Data"
+SCRIPTS="$ROOT_DIR/scripts"
+LOGS="$ROOT_DIR/Logs"
+
+DATA="$SCRATCH_DIR/Data"
+METADATA="$SCRATCH_DIR/metadata/"
+
+METADATA_DELIM=":\t"
+MDL=$METADATA_DELIM
 
 ## Common tools
 WONDERDUMP_EXE="$REQUIREMENTS/wonderdump.sh"
 
+## Possibly relative path (overridable)
+QUANTDIR="$RESULTS_DIR""/quantified/"
+ERCCDIR="$RESULTS_DIR""/ERCC/"
+TMPDIR="$RESULTS_DIR""/temporary/"
+COUNTDIR="$RESULTS_DIR""/counted/"
+
+## Common tools
+WONDERDUMP_EXE="$REQUIREMENTS/wonderdump.sh"
+FASTQC_EXE="$REQUIREMENTS/fastqc"
+FASTQDUMP_EXE="$REQUIREMENTS/fastq-dump"
+
+
 ## RSEM Specific
 RSEM_DIR="$REQUIREMENTS/RSEM"
-FASTQDUMP_EXE="$REQUIREMENTS/sratoolkit.2.5.0-centos_linux64/bin/fastq-dump"
 
 ## STAR Specific
-STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static"
+STAR_PATH="$REQUIREMENTS/STAR-STAR_2.4.0h/bin/Linux_x86_64_static"
 STAR_EXE="$STAR_PATH/STAR"
-STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_refncbi38/mouse_0"
-STAR_REFERENCE_GTF="$ASSEMBLIES/Mus_musculus/NCBI/GRCm38/Annotation/Genes/genes.gtf"
+
+STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_refensembl38/mouse_0"
+STAR_REFERENCE_GTF="$ASSEMBLIES/Mus_musculus/Ensembl/GRCm38/Annotation/Genes/genes.gtf"
+
 STAR_MAX_BAM_RAM="33000000000"
+
+STAR_KEEP_BAM=0
 
 ## Resources
 NCPU="$(grep -c ^processor /proc/cpuinfo)"
-NCPU_NICE=$(echo "sqrt ( $NCPU )" | bc -l | cut -f1 -d".")
-MAX_CPU_LOAD="800%"
+NCPU_NICE=3
+NCPU_ALL=16
+NTASKS=2
 MACHINES=""
+MACHINES_DOWNLOAD="chalmers"
 
 ## Runtime parameters                 
-DEFAULT_MATE_SOURCE="_R1"
-DEFAULT_MATE_REPLACEMENT="_R2"
+DEFAULT_MATE_SOURCE="_1"
+DEFAULT_MATE_REPLACEMENT="_2"
+
+## Scheduler parameters
+SCHEDULER_PORT=8079
