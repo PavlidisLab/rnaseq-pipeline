@@ -18,7 +18,7 @@ Create a directory where you will clone this repository. From example `/home/use
 ## Creating/Updating configuration
 The bulk of how this pipeline works relies on a main configuration file (in etc/common.cfg) as well as "modes" to run tasks with modified configurations (see etc/modes/* for some examples).
 
-To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in /home/$USERNAME/Pipelines/. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set DATA=`$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
+To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in `/home/$USERNAME/Pipelines/`. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set `DATA=$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
 
 ## Getting the requirements
 
