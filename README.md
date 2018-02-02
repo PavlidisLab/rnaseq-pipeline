@@ -2,7 +2,7 @@
 
 TODO: Documentation
 
-The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact [https://github.com/mbelmadani](@mbelmadani) - manuel.belmadani@msl.ubc.ca for configuration assistance.
+The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact [@mbelmadani](https://github.com/mbelmadani) - manuel.belmadani@msl.ubc.ca for configuration assistance.
 
 # General install instructions
 
