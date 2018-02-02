@@ -14,6 +14,7 @@ Make sure that your executable mentionned in `etc/common.cfg` point to binaries 
 
 ## Install GNU Parallel
 GNU Parallel is used extensively in this pipeline. A lot of systems include it by default, but if not you can install is as so:
+```
   $ wget https://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
   $ tar -xvf parallel-lastest.tar.bz2
   $ cd parallel-xxxxxxxx
@@ -24,4 +25,4 @@ GNU Parallel is used extensively in this pipeline. A lot of systems include it b
   $ Requirements/bin/parallel --citation # Gets rid of the warning asking to cite parallel.
   $ Make sure parallel is in your PATH
   $ export PATH=$PATH:$Requirements/bin/parallel # Or add this to your .bashrc
-  
+```
