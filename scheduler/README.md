@@ -46,6 +46,7 @@ Parameters:
   --scope={genes|isoforms}  
 ```
 Description:
+
   Generate count matrices (Count, FPKM, TPM) from the results and stores them in `$COUNTDIR`. `--scope` determines if the matrices are done for genes or isoforms.
 
 ### PurgeGSE
@@ -54,6 +55,7 @@ Parameters:
   --gse=XXXXXX
 ```
 Description:
+
   Delete the raw data for the series. Does not delete bam files if they were kept.
   
 Progess can be checked with the `scheduler/progressReport.sh` script, which prints a tables of tasks and series processed.
