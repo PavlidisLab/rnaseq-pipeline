@@ -30,7 +30,7 @@ To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMP
 
 ## Using modes
 
-Modes are configuration files that are loaded after `common.cfg` to overides the settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
+Modes are configuration files that are loaded after `common.cfg` to override the default settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
 
 # Automated processing
 
