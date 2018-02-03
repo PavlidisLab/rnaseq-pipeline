@@ -12,36 +12,47 @@ If ProcessGSE is requested for a series, the scheduler will attempt to complete 
 
 ### DownloadGSE
 Parameters:
+```
   --gse=XXXXXX
+```
 Description:
   Download a GEO or ArrayExpress dataset. Downloaded files are stored in `$DATA`.
 
 
 ### QcGSE
 Parameters:
+```
   --gse=XXXXXX
   --nsamples=N
+```
 Description:
-  Quality check for the download. Checks that there's exactly N samples. Automatically counts mate pairs together based on the filenames and according to the mate pair identifiers, `$DEFAULT_MATE_SOURCE` and `$DEFAULT_MATE_REPLACEMENT`, which should be "_1" and "_2" by default. A warning is printed if the number of mate-pairs are not equal, but doesn't halt as long as the number of samples is correct.
+
+  Quality check for the download. Checks that there's exactly `N` samples. Automatically counts mate pairs together based on the filenames and according to the mate pair identifiers, `$DEFAULT_MATE_SOURCE` and `$DEFAULT_MATE_REPLACEMENT`, which should be "_1" and "_2" by default. A warning is printed if the number of mate-pairs are not equal, but doesn't halt as long as the number of samples is correct.
 
 ### ProcessGSE
 Parameters:
+```
   --gse=XXXXXX
-  
+```
 Description:
-  Process all samples from XXXXXX using STAR and RSEM. Typically, the first call to STAR will start loading the genome in shared memory so that it can be shared between other STAR processes, as long as they're aligning for the same genome. The human and mouse genomes requires about ~30Gbs in memory, so make sure to have more than 30Gbs of usuable memory for per genome and some extra for RSEM as well.
+
+  Process all samples from `XXXXXX` using STAR and RSEM. Typically, the first call to STAR will start loading the genome in shared memory so that it can be shared between other STAR processes, as long as they're aligning for the same genome. The human and mouse genomes requires about ~30Gbs in memory, so make sure to have more than 30Gbs of usuable memory for per genome and some extra for RSEM as well.
    Sample results are stored under `GSMyyyyyyy.results` files in `$QUANTDIR`, and the bam files are kept under `$TMPDIR` if  `$STAR_KEEP_BAM$ = 1` (Default: 0).
  
 ### CountGSE
 Parameters:
+```
   --gse=XXXXXX
   --scope={genes|isoforms}  
+```
 Description:
   Generate count matrices (Count, FPKM, TPM) from the results and stores them in `$COUNTDIR`. `--scope` determines if the matrices are done for genes or isoforms.
 
 ### PurgeGSE
 Parameters:
+```
   --gse=XXXXXX
+```
 Description:
   Delete the raw data for the series. Does not delete bam files if they were kept.
   
