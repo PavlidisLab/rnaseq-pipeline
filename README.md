@@ -20,12 +20,17 @@ Please see Requirements/README.md for information on how to set up the different
 If you already have them installed on your machine, you can simply edit the configuration file described in the next section to point to existing executables.
 
 # Getting started
-The most important step is to set your configuration file. 
 
 ## Creating/Updating configuration
+The most important step to get this pipeline working is to set your configuration file.
+
 The bulk of how this pipeline works relies on a main configuration file (in etc/common.cfg) as well as "modes" to run tasks with modified configurations (see etc/modes/* for some examples).
 
 To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in `/home/$USERNAME/Pipelines/`. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set `DATA=$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
+
+## Using modes
+
+Modes are configuration files that are loaded after `common.cfg` to overides the settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
 
 # Automated processing
 
