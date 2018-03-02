@@ -2,7 +2,7 @@
 set -eu
 source ../etc/load_configs.sh
 
-if [ $# -lt 1 ]
+if [ $# -lt 3 ]
   then
     GSE="GSE64978"
     JOB="ProcessGSE"
@@ -36,5 +36,5 @@ export CURRENTGSE=$(echo $@ \
 						| head -n1)
 
 echo "Current GSE="$CURRENTGSE
-
+echo "Args=" $@
 MODES=$MODES PYTHONPATH='.' luigi --scheduler-port $SCHEDULER_PORT --module tasks $JOB $@

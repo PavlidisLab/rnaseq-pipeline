@@ -3,6 +3,7 @@ import os
 from subprocess import call
 from shutil import copyfile
 
+from parson import Parson
 #from meta import ExcavateFQ
 #from meta import LogAssembly
 
@@ -143,6 +144,60 @@ class CountGSE(BaseTask):
         # Commit output
         with self.output().open('w') as out_file:                    
                  out_file.write(self.gse+"\n")
+
+
+class CheckGemmaGSE(BaseTask):
+    """
+	Check that the GSE is ready to be loaded in Gemma.
+    """
+    method = ""
+    method_args = ""
+
+    def init(self):
+        """
+        Set paths and whatnot.
+        """
+        self.url = "https://gemma.msl.ubc.ca/rest/v2/datasets/"+ self.gse  +"?offset=0&limit=20&sort=%2Bid"
+        print "INFO: GEMMA URL => ", self.url
+
+
+    def requires(self):        
+        self.init()
+        return CountGSE(self.gse, self.nsamples)
+
+    def output(self):
+        return luigi.LocalTarget(self.commit_dir + "/checkgemma_%s.tsv" % self.gse)
+
+    def run(self):
+
+        #print "=======> CheckGemmaGSE <=========="
+        
+        # Call job
+        try:
+            p = Parson(self.url)
+
+            ret = 1
+            if p.isEmpty():
+                print self.gse  + " is not created in Gemma."
+                ret = 1
+            else:
+                print self.gse  + " should be ready for upload."
+                ret = 0
+
+        except Exception as e:
+            print "EXCEPTION:", e, "with checkGemma for", self.gse
+            print e.message
+            ret = -1
+
+        if ret:
+            print "Error code", ret, "."
+            print ""
+            exit( "CheckGemmaGSE failed for request '{}' with exit code {}.".format( self.url, ret) )
+
+        # Commit output
+        with self.output().open('w') as out_file:                    
+                 out_file.write(self.gse+"\n")
+
 
 
 class PurgeGSE(BaseTask):

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 usage ()
 {
     echo "Usage:"
@@ -15,7 +14,7 @@ fi
 MODE=$1 # Optional
 
 commits=$(find commit/ | grep ".tsv" )
-TYPES="download qc process count purge"
+TYPES="download qc process count purge checkgemma loadgemma"
 IDS=$(find commit/ | cut -d"_" -f2 | grep ".tsv"| cut -d"." -f1 | sort | uniq)
 
 filter="grep ."
