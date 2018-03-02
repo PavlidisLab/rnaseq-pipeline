@@ -3,7 +3,6 @@
 set -eu
 source ../../etc/load_configs.sh
 
-
 echo "USING MACHINES: $MACHINES"
 
 if [ $# -lt 2 ]
@@ -40,11 +39,19 @@ echo "$0 using modes: $MODES"
 
 FILES=$1
 SERIES=$2
-SAMPLIST="/space/grp/Pipelines/rnaseq-pipeline/Pipelines/rsem/samplist.sh" # TODO: Centralize into scripts/ directory.
+SAMPLIST="$ROOT_DIR/Pipelines/rsem/samplist.sh" # TODO: Centralize into scripts/ directory.
 
 #mkdir -p $LOGS/$(basename $0)
-CURRENTLOGS=$LOGS/$SERIES/$(basename $0)
-mkdir -p $CURRENTLOGS # Initialize log directory
+
+CURRENTLOGDIR=$LOGS/$SERIES
+if [ $CLEARLOGS == "1" ]; then
+	find $CURRENTLOGDIR -name "*.log" -delete
+	find $CURRENTLOGDIR -name "*.err" -delete
+fi
+
+# CURRENTLOGS is a prefix
+CURRENTLOGS=$CURRENTLOGDIR/$(basename $0)
+mkdir -p $CURRENTLOGDIR # Initialize log directory
 
 
 REFERENCE_DIR=$(dirname $STAR_DEFAULT_REFERENCE)
@@ -82,19 +89,24 @@ echo "Memory loaded."
 quantDir="$QUANTDIR/$SERIES" 
 tmpDir="$TMPDIR/$SERIES" 
 
-cleanQuant="rm -rf $quantDir"
-cleanTmp="rm -rf $tmpDir"
+printf  "Reprocess is set to $REPROCESS."
+if [ $REPROCESS == "1" ]; then
+    cleanQuant="rm -rf $quantDir"
+    cleanTmp="rm -rf $tmpDir"
 
-if [ -d $quantDir ]; then
-    echo "Cleaning stale quantification data at $quantDir"
-    echo $cleanQuant
-    $cleanQuant
-fi
+    if [ -d $quantDir ]; then
+	echo "Cleaning stale quantification data at $quantDir"
+	echo $cleanQuant
+	$cleanQuant
+    fi
 
-if [ -d $tmpDir ]; then
-    echo "Cleaning stale temporary data at $tmpDir"
-    echo $cleanTmp
-    $cleanTmp
+    if [ -d $tmpDir ]; then
+	echo "Cleaning stale temporary data at $tmpDir"
+	echo $cleanTmp
+	$cleanTmp
+    fi
+else
+    echo " Nothing to do/Not deleting files before processing."
 fi
 
 echo "Launching RSEM for: $SERIES"
@@ -110,15 +122,16 @@ find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
 
 #parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
 
-# echo "Flushing memory..."
-# echo $MACHINES | tr ',' '\n' | parallel -n0 $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
-$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+echo "Flushing shared memory temporarily disabled; don't forget to clear your mempry once you're done!"
+#echo "Flushing memory..."
+#echo $MACHINES | tr ',' '\n' | parallel -S $MACHINES $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
+#$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 
 # echo "Memory flushed."
 
-echo "Done calling RSEM."
-if [ -d $tmpDir ]; then
-    echo "Cleaning stale temporary data at $quantDir"
-    echo $cleanTmp
-    $cleanTmp
-fi
+# echo "Done calling RSEM."
+# if [ -d $tmpDir ]; then
+#     echo "Cleaning stale temporary data at $quantDir"
+#     echo $cleanTmp
+#     $cleanTmp
+# fi
