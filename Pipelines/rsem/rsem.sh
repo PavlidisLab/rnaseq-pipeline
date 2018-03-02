@@ -19,7 +19,6 @@ RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
 REFERENCE=$STAR_DEFAULT_REFERENCE
 
 SERIES=$1
-#mkdir -p $LOGS/$(basename $0)
 CURRENTLOGS=$LOGS/$SERIES/$(basename $0)
 mkdir -p $CURRENTLOGS
 
