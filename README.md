@@ -2,51 +2,41 @@
 
 TODO: Documentation
 
-The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact @mbelmadani - manuel.belmadani@msl.ubc.ca for configuration assistance.
+The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact [@mbelmadani](https://github.com/mbelmadani) - manuel.belmadani@msl.ubc.ca for configuration assistance.
 
 # General install instructions
 
-## Getting started
+## Downloading and installing
 Create a directory where you will clone this repository. From example `/home/username/Pipeline`
 
-`mkdir -p /home/$(whoami)/Pipelines`
+```
+mkdir -p /home/$(whoami)/Pipelines
+cd /home/$(whoami)/Pipelines
+git clone https://github.com/PavlidisLab/rnaseq-pipeline
+```
 
-`cd /home/$(whoami)/Pipelines`
-`git clone https://github.com/PavlidisLab/rnaseq-pipeline`
+Please see Requirements/README.md for information on how to set up the different requirements for this pipeline.
 
+If you already have them installed on your machine, you can simply edit the configuration file described in the next section to point to existing executables.
+
+# Getting started
 
 ## Creating/Updating configuration
+The most important step to get this pipeline working is to set your configuration file.
+
 The bulk of how this pipeline works relies on a main configuration file (in etc/common.cfg) as well as "modes" to run tasks with modified configurations (see etc/modes/* for some examples).
 
-To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in /home/$USERNAME/Pipelines/. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set DATA=`$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
+To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in `/home/$USERNAME/Pipelines/`. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set `DATA=$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
 
-## Getting the requirements
+## Using modes
 
-### Updating submodules
-git submodule update --init --recursive
-
-See Requirements/README.md
-
-## Creating assemblies
-
-See Assemblies/README.md
+Modes are configuration files that are loaded after `common.cfg` to override the default settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
 
 # Automated processing
 
 ## Using the scheduler to automatically download and process datasets with RSEM
 
-Note: This steps requirement a virtual environment in `scheduler/` with packages such as spotify/luigi installed. Contact @mbelmadani if you need assistance with this.
-
-This directory holds a scheduler to handle task processing and dependencies between tasks (e.g. making sure a series is download before attempting to process it.)
-
-Please enter `scheduler/` and run included scripts from this location in order to schedule tasks. 
-The scheduler can be started with `./start_scheduler.sh` and stopped with `./stop_scheduler.sh`.
-
-We currently support scheduled processing of GEO or ArrayExpress datasets. All you need is an ID (of the form GSEnnnnn or E-MTAB-nnnnn) and the number of RNA-Seq samples expected.
-
-Run `./schedule.sh` or `./schedule_from_file.sh` with not arguments for more information.
-
-For example, `./schedule.sh CountGSE mouse,distributed --gse=GSE64978 --nsamples=10` would download, qc, process and generate count matrices for the GEO series `GSE64978`. 
+See scheduler/README.md
 
 # Manual processing
 
