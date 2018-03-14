@@ -7,63 +7,44 @@ __description__="This script was added as part of the pipeline to load processed
 
 import os
 
-# entry point of script; after importing argparse.
+COUNT_PATH="../COUNTS/"
+
+
 def rnaseq_add():
-
-    # read text file for experiments
-    file = args.file
-
-    # read the taxon
-    taxon = args.taxon
-    
-    # read the count path
-    if args.path:
-        path = args.path
-
-    # if a path isn't specified, use the current working directory.
-    else:
-        path = os.getcwd()
-    
-    with open(file) as file:
-        EE_array = [line for line in file.read().splitlines()]
-
-    # make sure file being read is closed
-    if file:
-        file.close()
+    """
+    Call the gemma command line script and upload available count matrices from the pipeline.
+    """
 
 
+    bash_command = ("""$GEMMACMD rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD """ +
+                    """-e {arg_shortname} -a Generic_{arg_taxon}_ensemblIds -count {arg_path}/{arg_shortname}_counts.genes -rpkm {arg_path}/{arg_shortname}_fpkm.genes""".format(
+            arg_path = args.path, 
+            arg_taxon = args.taxon, 
+            arg_shortname= args.shortname))
 
-    # print each gseid for diagnostic purposes
-    for EE in EE_array:
-        print "now parsing: {eeid}".format(eeid=EE)
+    print "Executing:"
+    print bash_command
 
-    # run the commands
-    for item in EE_array:
-
-            # string to pass into bash shell
-            bash_command = ("""$GEMMACMD rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD -e {arg_item} -a Generic_{arg_taxon}_ensemblIds -count {arg_path}/{arg_item}_counts.genes -rpkm {arg_path}/{arg_item}_fpkm.genes""".format(arg_path = path, arg_taxon = taxon, arg_item=item))
-
-            # execute command string
-            os.system(bash_command)
-
-    
+    os.system(bash_command)
 
 
-# if we're running module as script, load argument parser.
 if __name__ == '__main__':
     import argparse
 
+    TAXONS = ['human', 'mouse', 'rat']
+
+    # TODO: Need to get eeid from last API call when checking if Gemma already has the exp.
     parser = argparse.ArgumentParser()
+    parser.add_argument("--shortname", help = 'Prefix to count/fpkm matrices name (e.g. GSE12345).', dest = 'shortname', type = str)
+    parser.add_argument("--taxon", help = 'Taxon of experiment (Currently supported: '+ ",".join(TAXONS) +')', dest = 'taxon', type = str)
+    parser.add_argument("--path", help = 'Directory where counts are stored.', dest = 'path', type = str, default=None)
 
-    # setup argument for destination of .txt file to parse from.
-    parser.add_argument("-f", help = 'directory of file', dest = 'file', type = str)
-
-    # setup argument for destination of count/rpkm files 
-    parser.add_argument("-path", help = "the path where the count/rpkm data lies", dest = "path", type = str)
-
-    # setup argument for taxon; options are human, mouse or rat.
-    parser.add_argument("-taxon", help = 'taxon of experiment', dest = 'taxon', type = str)
-
-    # variable that holds arguments; called from rnaseq_add()
+    # Parse arguments to args object
     args = parser.parse_args()
+
+    if args.taxon not in TAXONS:
+        print "Unknown taxon", args.taxon
+        print "Please use one from", TAXONS
+        exit(-1)
+    
     rnaseq_add()

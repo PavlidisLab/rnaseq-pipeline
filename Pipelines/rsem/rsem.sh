@@ -19,8 +19,10 @@ RSEM_EXE="$RSEM_DIR/rsem-calculate-expression"
 REFERENCE=$STAR_DEFAULT_REFERENCE
 
 SERIES=$1
-CURRENTLOGS=$LOGS/$SERIES/$(basename $0)
-mkdir -p $CURRENTLOGS
+
+CURRENTLOGDIR="$LOGS/$SERIES"
+mkdir -p $CURRENTLOGDIR
+CURRENTLOGS=$CURRENTLOGDIR/$(basename $0)
 
 while [[ $SERIES == */ ]]; do
     # Cleaning up "$SERIES"
@@ -81,13 +83,9 @@ else
 fi
 
 echo "Launching" $CMD 
-#echo "Launching" $CMD > $LOGS/$(basename $0)/$SERIES.log
 echo "Launching" $CMD > $CURRENTLOGS.log
 
-#echo  "Sequences:" $SEQUENCES >> $LOGS/$(basename $0)/$SERIES.log
-#echo  "Mates:" $$MATES >> $LOGS/$(basename $0)/$SERIES.log
 echo  "Sequences:" $SEQUENCES >> $CURRENTLOGS.log
-echo  "Mates:" $$MATES >> $CURRENTLOGS.log
+echo  "Mates:" $MATES >> $CURRENTLOGS.log
 
-#$CMD >> $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
 $CMD >> $CURRENTLOGS.log 2>> $CURRENTLOGS.err

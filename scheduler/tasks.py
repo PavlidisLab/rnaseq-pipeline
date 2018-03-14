@@ -2,8 +2,9 @@ import luigi
 import os
 from subprocess import call
 from shutil import copyfile
+from base64 import b64encode
 
-from parson import Parson
+from gemmaclient import GemmaClientAPI
 #from meta import ExcavateFQ
 #from meta import LogAssembly
 
@@ -150,16 +151,22 @@ class CheckGemmaGSE(BaseTask):
     """
 	Check that the GSE is ready to be loaded in Gemma.
     """
-    method = ""
-    method_args = ""
+    method = None
+    method_args = None
 
     def init(self):
         """
-        Set paths and whatnot.
-        """
-        self.url = "https://gemma.msl.ubc.ca/rest/v2/datasets/"+ self.gse  +"?offset=0&limit=20&sort=%2Bid"
-        print "INFO: GEMMA URL => ", self.url
+        Set CLI method.
+        """    
+        try:
+            self.method = os.getenv("GEMMACMD").split(" ")
+            self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse]
 
+        except Exception as e:
+            print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
+            raise e                
+
+        print "INFO: Method => " + str(self.method_args)
 
     def requires(self):        
         self.init()
@@ -169,19 +176,35 @@ class CheckGemmaGSE(BaseTask):
         return luigi.LocalTarget(self.commit_dir + "/checkgemma_%s.tsv" % self.gse)
 
     def run(self):
+        prejob = self.method + []
+        job = self.method + self.method_args
 
-        #print "=======> CheckGemmaGSE <=========="
-        
         # Call job
         try:
-            p = Parson(self.url)
+            g = GemmaClientAPI(dataset=self.gse)
+            username, password = [os.getenv(x) for x in ["GEMMAUSERNAME", "GEMMAPASSWORD"] ]
+            g.setCredentials(username, password)
 
-            ret = 1
-            if p.isEmpty():
-                print self.gse  + " is not created in Gemma."
-                ret = 1
+            ret = 0
+            if g.isEmpty():
+                print self.gse  + " is not created in Gemma."                
+                try:
+                    print "Attempting to create experiment for " + self.gse
+                    ret = call(job)
+                    print "Done."
+                    print "Checking that the experiment exists."
+                    g.clear()
+                    if g.isEmpty():
+                        print "Experiment doesn't appear to have been added."
+                        ret = -1
+                    else:
+                        print "Experiment added."                        
+
+                except Exception as e:
+                    print "EXCEPTION: Could not create Gemma experiment with '" + " ".join(job) + "' ."
+                    ret = -1
             else:
-                print self.gse  + " should be ready for upload."
+                print self.gse  + " exists and should be ready for upload."
                 ret = 0
 
         except Exception as e:
@@ -196,7 +219,79 @@ class CheckGemmaGSE(BaseTask):
 
         # Commit output
         with self.output().open('w') as out_file:                    
-                 out_file.write(self.gse+"\n")
+                 out_file.write(g.toString()+"\n")
+
+class LoadGemmaGSE(BaseTask):
+    """
+	Load into Gemma.
+    """
+    method = None
+    method_args = None
+
+    def init(self):
+        """
+        Set CLI method.
+        """    
+        try:            
+            # Check if GEMMACMD is set, otherwise problems will happen later.
+            foo = os.getenv("GEMMACMD").split(" ")
+            foo = os.getenv("GEMMAUSERNAME")
+            foo = os.getenv("GEMMAPASSWORD")
+        except Exception as e:
+            print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
+            raise e                
+            
+        try:
+            PATH = os.getenv("COUNTDIR")
+            TAXONS = ['human', 'mouse', 'rat']
+            MODES = os.getenv("MODES").split(",")
+            SCRIPTS = os.getenv("SCRIPTS")
+            taxon = None
+
+            for taxon_ in MODES :
+                if taxon_ in TAXONS:
+                    taxon = taxon_
+                    break
+
+            print "Using scripts from", SCRIPTS
+            print "Loading matrices from", PATH
+            print "Taxon:", taxon
+            self.method = ["python", SCRIPTS+"/load_rnaseq_to_gemma.py"]
+            self.method_args = ["--shortname", self.gse, "--taxon", taxon, "--path", PATH]
+
+        except Exception as e:
+            print "Error accessing environment variables."
+            raise e                
+
+        print "INFO: Method => " + str(self.method_args)
+
+    def requires(self):        
+        self.init()
+        return CountGSE(self.gse, self.nsamples)
+
+    def output(self):
+        return luigi.LocalTarget(self.commit_dir + "/loadgemma_%s.tsv" % self.gse)
+
+    def run(self):
+        job = self.method + self.method_args
+
+        # Call job
+        try:
+            print "Attempting to load experiment for " + self.gse
+            ret = call(job)
+            print "Done."
+        except Exception as e:
+            print "EXCEPTION: Could not load Gemma experiment with '" + " ".join(job) + "' ."
+            ret = -1
+
+        if ret:
+            print "Error code", ret, "."
+            print ""
+            exit( "LoadGemmaGSE failed for request '{}' with exit code {}.".format( self.url, ret) )
+
+        # Commit output
+        with self.output().open('w') as out_file:                    
+                 out_file.write(g.toString()+"\n")
 
 
 
@@ -294,8 +389,6 @@ class ProcessGSE(BaseTask):
         # Commit output
         with self.output().open('w') as out_file:                    
                  out_file.write(self.gse+"\n")
-
-
 
 class DownloadGSE(BaseTask):    
 
