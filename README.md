@@ -19,6 +19,12 @@ Please see Requirements/README.md for information on how to set up the different
 
 If you already have them installed on your machine, you can simply edit the configuration file described in the next section to point to existing executables.
 
+## Assemblies
+See [README in Assemblies](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Assemblies/README.md)
+
+## Requirements
+See [README in Requirements](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Requirements/README.md)
+
 # Getting started
 
 ## Creating/Updating configuration
