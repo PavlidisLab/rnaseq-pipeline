@@ -31,8 +31,8 @@ If parallel is not installed, you can install is as so:
   $ make
   $ make install
   $ Requirements/bin/parallel --citation # Gets rid of the warning asking to cite parallel.
-  $ # Make sure parallel is in your PATH
-  $ export PATH=$PATH:$Requirements/bin/parallel # Or add this to your .bashrc
+  $ # Make sure the full path to the parallel directory is in your PATH
+  $ export PATH=$PATH:PIPELINEDIRECTORY/Requirements/bin/parallel # Or add this to your .bashrc
 ```
 
-And then you should be able to do `which  parallel`. It's best to add the `export` statement in the .bashrc/.bash_profile of the user(s) running the pipeline to avoid having to reconfigure the path for each bash session.
+And then you should be able to do `which  parallel` if it's set correctly. It's best to add the `export` statement in the .bashrc/.bash_profile of the user(s) running the pipeline to avoid having to reconfigure the path for each bash session.
