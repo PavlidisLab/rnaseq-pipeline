@@ -21,7 +21,7 @@ if [ "$#" -eq 2 ]; then
     # Override output path
     ACCESSION_DIR=$2
 else
-    ACCSSION_DIR=$ACCESSION
+    ACCESSION_DIR=$ACCESSION
 fi
 
 DOWNLOAD_DIR="$DATA/$ACCESSION_DIR"
@@ -46,6 +46,5 @@ echo "Obtaining individual FASTQs"
 cut -f1 -d"," $METADATA \
     | grep -v "^$" \
     | tail -n +2 \
-    | parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE  -I@ $WONDERDUMP_EXE @ "$DOWNLOAD_DIR/" \
-    >> $LOGDIR"/"$ACCESSION".log"
+    | parallel $PARALLEL_MACHINES -P $NCPU_NICE --jobs $NCPU_NICE  -I@ $WONDERDUMP_EXE @ "$DOWNLOAD_DIR/" >> $LOGDIR"/"$ACCESSION".log"
 

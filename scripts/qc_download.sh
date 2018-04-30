@@ -20,6 +20,13 @@ GSE=$1
 FILES=$GSE"/"
 EXPECTED=$2
 
+echo " Files: $FILES"
+if [[ -d "$FILES" ]]; then
+    echo "This is also true"
+    echo $PWD
+    ls -lth $FILES
+fi
+
 if [[ -d $FILES ]]; then
     # Path is a directory, no need to preprend $DATA directory.
     echo "Using files at path $FILES"
@@ -47,10 +54,10 @@ fi
 # $SCRIPTS/pipeline_metadata.sh $GSE > $METADATA_OUT
 
 # Count number of sequences
-nSEQUENCES=$(find $FILES -name "*$DEFAULT_MATE_SOURCE*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nSEQUENCES=$(find $FILES -name "*"$DEFAULT_MATE_SOURCE".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 # Count number of mate pairs.
-nMATES=$(find $FILES -name "*$DEFAULT_MATE_REPLACEMENT*.fastq.gz"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nMATES=$(find $FILES -name "*"$DEFAULT_MATE_REPLACEMENT".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 echo "$nSEQUENCES SEQUENCE FILES FOUND."
 echo "$nMATES MATE FILES FOUND."

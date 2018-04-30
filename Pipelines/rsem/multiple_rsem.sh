@@ -114,15 +114,14 @@ echo "Launching RSEM for: $SERIES"
 # Prepare sample pairs.    
 # Run in parallel
 # samplist.sh will return the sequence (and mates) as 1 (or 2) lists of FASTQ files.
-find $FILES/ -name "*.fastq.gz" -exec dirname {} \; \
+find $FILES/ -name "*.fastq*" -exec dirname {} \; \
     | sort \
     | uniq \
     | xargs -n1 -I % $SAMPLIST % $MODES $MATES \
-    | parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $CURRENTLOGS.log 2> $CURRENTLOGS.err
-
-#parallel --env MODES $PARALLEL_MACHINES  -j $NCPU_NICE --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $LOGS/$(basename $0)/$SERIES.log 2> $LOGS/$(basename $0)/$SERIES.err
+    | parallel --env MODES $PARALLEL_MACHINES  -j $NJOBS --colsep ' '  $(pwd)/rsem.sh $SERIES {1} {2} > $CURRENTLOGS.log 2> $CURRENTLOGS.err
 
 echo "Flushing shared memory temporarily disabled; don't forget to clear your mempry once you're done!"
+
 #echo "Flushing memory..."
 #echo $MACHINES | tr ',' '\n' | parallel -S $MACHINES $RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE
 #$RSEM_DIR/rsem-star-clear-shmem $STAR_EXE $REFERENCE_DIR $NCPU_NICE

@@ -12,7 +12,7 @@ fi
 
  # TODO: Clean this up
 export MODES=$2
-source ../../etc/load_configs.sh &> /dev/null # Be quiet!
+source etc/load_configs.sh 
 
 #echo $1
 #echo $2

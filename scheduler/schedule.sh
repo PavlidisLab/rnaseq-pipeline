@@ -1,4 +1,6 @@
 #!/bin/bash
+
+export MODES=$2 # Need to do this before in case MODES has something important (e.g. $SCHEDULER_PORT)
 set -eu
 source ../etc/load_configs.sh
 
@@ -13,9 +15,8 @@ if [ $# -lt 3 ]
     exit -1
 fi
 
-echo "INFO: ARGS:" $@
 JOB=$1
-MODES=$2
+# Pop non-pipeline arguments
 shift 
 shift 
 
@@ -28,6 +29,7 @@ export QUANTDIR=$QUANTDIR
 export RESULTDIR=$RESULTDIR
 export COUNTDIR=$COUNTDIR
 export SCRIPTS=$SCRIPTS
+export METADATA=$METADATA
 
 echo @ $@
 # Assuming the --gse argument is required.

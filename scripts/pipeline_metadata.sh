@@ -3,6 +3,22 @@
 source ../etc/load_configs.sh &> /dev/null
 set -eu
 
+if [ "$#" -lt 1 ] || [ "$#" -gt 2 ] ; then
+    ACCESSION="GSE12345"
+    echo "Description: "
+    echo "Gather and store pipeline parameter and sample information."
+    echo "Usage:"
+    echo "$0 <ACCESSION>"
+    echo "Example:"
+    echo "$0 $ACCESSION"
+    echo "   where $TMPDIR/$ACCESSION would hold all the temporary data."
+    exit -1
+fi
+
+if [ "$#" -eq 2 ]; then
+    MDL=$2
+fi
+
 ### Get the header of a .gz file
 function zhead(){ zcat $1 | head -n1 | tail -n1 ;   }; 
 export -f zhead;
@@ -11,7 +27,6 @@ GSE=$1 # GSE ID
 
 echo -e "ID"$MDL$GSE 
 echo -e "Date"$MDL$(date)
-
 
 # Print software information to metadata
 echo ""

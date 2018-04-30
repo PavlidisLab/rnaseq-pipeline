@@ -3,6 +3,7 @@ import os
 from subprocess import call
 from shutil import copyfile
 from base64 import b64encode
+import uuid
 
 from gemmaclient import GemmaClientAPI
 #from meta import ExcavateFQ
@@ -18,6 +19,7 @@ class BaseTask(luigi.Task):
     gse = luigi.Parameter()
     nsamples = luigi.Parameter(default=0)
     scope = luigi.Parameter(default="genes")
+    ignorecommit = luigi.Parameter(default=0)
     
 
 class QcGSE(BaseTask):
@@ -160,7 +162,7 @@ class CheckGemmaGSE(BaseTask):
         """    
         try:
             self.method = os.getenv("GEMMACMD").split(" ")
-            self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse]
+            self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
 
         except Exception as e:
             print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
@@ -215,7 +217,7 @@ class CheckGemmaGSE(BaseTask):
         if ret:
             print "Error code", ret, "."
             print ""
-            exit( "CheckGemmaGSE failed for request '{}' with exit code {}.".format( self.url, ret) )
+            exit( "CheckGemmaGSE failed for request '{}' with exit code {}.".format( g.getUrl(), ret) )
 
         # Commit output
         with self.output().open('w') as out_file:                    
@@ -267,7 +269,7 @@ class LoadGemmaGSE(BaseTask):
 
     def requires(self):        
         self.init()
-        return CountGSE(self.gse, self.nsamples)
+        return CheckGemmaGSE(self.gse, self.nsamples)
 
     def output(self):
         return luigi.LocalTarget(self.commit_dir + "/loadgemma_%s.tsv" % self.gse)
@@ -287,12 +289,120 @@ class LoadGemmaGSE(BaseTask):
         if ret:
             print "Error code", ret, "."
             print ""
-            exit( "LoadGemmaGSE failed for request '{}' with exit code {}.".format( self.url, ret) )
+            exit( "LoadGemmaGSE failed for request '{}' with exit code {}.".format( " ".join(job), ret) )
 
         # Commit output
         with self.output().open('w') as out_file:                    
-                 out_file.write(g.toString()+"\n")
+            out_file.write(" ".join(job) + "\n")
+                 
+class GatherMetadataGSE(BaseTask):
+    method = ["bash", "-c"]
+    method_args = None
+    metadataDir = None
 
+    def init(self):
+        """
+        Set paths and whatnot.
+        """
+        SCRIPTS = os.getenv("SCRIPTS")
+        self.base_method = SCRIPTS + "/" + "pipeline_metadata.sh"
+        self.alignment_method = SCRIPTS + "/" + "alignment_metadata.sh"
+        self.qc_method = SCRIPTS + "/" + "qc_report.sh"
+        
+        self.method_args = [self.gse]
+        
+        self.metadataDir = os.environ['METADATA'] + "/" + self.gse
+        print "INFO: METADATA DIRECTORY => ", os.environ['METADATA']
+
+    def requires(self):        
+        self.init()
+        return CountGSE(self.gse, self.nsamples)
+
+    def output(self):
+        return luigi.LocalTarget(self.commit_dir + "/metadata_%s.tsv" % self.gse)
+
+    def run(self):
+
+
+
+        # Change working directory
+        try:
+            os.chdir(os.environ['SCRIPTS'])
+            print "Entered:", os.environ['SCRIPTS']
+        except Exception as e:
+            print "=======> GatherMetadataGSE <=========="
+            print e.message
+            print "Error changing to", self.wd, "when in", os.getcwd()
+            raise e
+            
+        # Create metadata directory for GSE
+        try:
+            print "Creating",self.metadataDir
+            job = [ "mkdir", "-p", self.metadataDir ] 
+            ret = call(job)
+            job = None
+        except Exception as e:
+            print "EXCEPTION: Could not create directory at " + self.metadataDir 
+            raise e
+           
+        # Call base metadata gathering job
+        try:
+            base_metadata_file = self.metadataDir + "/" + self.gse + ".base.metadata"
+            print "Generating base metadata", base_metadata_file
+            f = open(base_metadata_file,"wb")
+            ferr = open("/dev/null", 'wb')
+            job = [ self.base_method ] + self.method_args 
+            print "Call:", " ".join(job)
+            ret = call(job, stdout=f, stderr=ferr)
+            job = None
+            f.close()
+
+            #os.system( self.base_method + " " + self.gse  + " '\t'  " " > " + base_metadata_file )
+
+        except Exception as e:
+            print "EXCEPTION: Gathering base metadata", e, "with", " ".join(job)
+            print e.message
+            ret = -1
+            raise e
+
+        # Call alignment metadata job
+        try:
+            print "Gathering STAR metadata to", self.metadataDir
+            job = [ self.alignment_method ] + self.method_args 
+            print "Call:", " ".join(job)
+            ret = call(job)
+            job = None
+            print "Done."
+
+        except Exception as e:
+            print "EXCEPTION: Gathering STAR metadata", e, "with", " ".join(job)
+            print e.message
+            ret = -1
+            raise e
+
+        # Call alignment metadata job
+        try:
+            print "Gathering FastQC reports to", self.metadataDir
+            job = [ self.qc_method ] + self.method_args 
+            print "Call:", " ".join(job)
+            ret = call(job)
+            job = None
+            print "Done."
+
+        except Exception as e:
+            print "EXCEPTION: Gathering FastQC metadata", e, "with", " ".join(job)
+            print e.message
+            ret = -1
+            raise e
+
+        if ret:
+            print "Error code", ret,"."
+            print ""
+            exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
+
+        # Commit output
+        with self.output().open('w') as out_file:                    
+                 out_file.write(self.gse+"\n")
 
 
 class PurgeGSE(BaseTask):
@@ -310,7 +420,7 @@ class PurgeGSE(BaseTask):
 
     def requires(self):        
         self.init()
-        return CountGSE(self.gse, self.nsamples)
+        return GatherMetadataGSE(self.gse, self.nsamples)
 
     def output(self):
         return luigi.LocalTarget(self.commit_dir + "/purge_%s.tsv" % self.gse)
@@ -361,7 +471,12 @@ class ProcessGSE(BaseTask):
         return QcGSE(self.gse, self.nsamples)
 
     def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/process_%s.tsv" % self.gse)
+        uniqueID=""
+        if int(self.ignorecommit) == 1:
+            print "INFO: Ignoring previous commits."
+            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
+            
+        return luigi.LocalTarget(self.commit_dir + "/process" +uniqueID+ "_%s.tsv" % self.gse)
 
     def run(self):
         try:

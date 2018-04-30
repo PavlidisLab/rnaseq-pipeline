@@ -39,6 +39,16 @@ TMP="$TMPDIR/$SERIES/$SAMPLE"
 mkdir -p $OUTPUT
 mkdir -p $TMP
 
+# Check if we can skip this sample
+if [ -f $OUTPUT.isoforms.results ] && [ -f $OUTPUT.genes.results ];
+then 
+    echo "Counts exists; Skipping $SAMPLE"; 
+    exit
+else 
+    echo "Counts do not exists; Processing. " ; 
+fi
+
+
 SEQUENCES=$2
 PAIRED_END=""
 MATE=""
@@ -48,6 +58,15 @@ if [ $STAR_KEEP_BAM -eq 1 ]; then
 	BAMFILES=" --keep-intermediate-files "
 fi
 
+GZIPPED=" --star-gzipped-read-file "
+if [ ! ${SEQUENCES: -3} == ".gz" ]; then
+    echo "Files in $SEQUENCES are *NOT* gzipped"
+    GZIPPED="" 
+else
+    echo "Files in $SEQUENCES are gzipped"
+fi
+
+
 if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
     echo " Called for paired-end data."
     PAIRED_END=" --paired-end "
@@ -55,7 +74,7 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
 
     CMD=$(echo $RSEM_EXE \
 	-p "$NCPU_NICE" \
-	--star-gzipped-read-file \
+	$GZIPPED \
 	--time \
 	--star \
 	--star-path $STAR_PATH \
@@ -64,13 +83,14 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
 	" $SEQUENCES $MATES " \
 	$REFERENCE \
 	$OUTPUT \
-	"--star-shared-memory LoadAndKeep $BAMFILES "
+	" $STAR_SAM_MAPPING "\
+	" --star-shared-memory LoadAndKeep $BAMFILES "
     )
 else
-    echo " Called for single-end data.!"
+    echo " Called for single-end data."
     CMD=$(echo $RSEM_EXE \
 	-p "$NCPU_NICE" \
-	--star-gzipped-read-file \
+	$GZIPPED \
 	--time \
 	--star \
 	--star-path $STAR_PATH \
@@ -78,6 +98,7 @@ else
 	" $SEQUENCES " \
 	$REFERENCE \
 	$OUTPUT \
+	" $STAR_SAM_MAPPING "\
 	" --star-shared-memory LoadAndKeep $BAMFILES "
     )    
 fi

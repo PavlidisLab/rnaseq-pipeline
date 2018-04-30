@@ -18,7 +18,7 @@ err_report() {
 		CURRENTGSE="CurrentGSE" ; 
 	fi
 
-	echo "[ERROR] See logs at $LOGS/$CURRENTGSE/$PROGRAM{.err,.log}"
+	echo "[ERROR] See logs at LOGS/CURRENTGSE/PROGRAM{.err,.log}"
     exit 123
 }
 trap 'err_report $LINENO $(basename "$0")' ERR
@@ -68,7 +68,7 @@ contains() {
 
 ## Hack to work on both types of servers
 HOSTFIRSTNAME=$(echo $HOSTNAME | cut -f1 -d".")
-isContained=$(contains "chalmers willie nelson smithers"  "$HOSTFIRSTNAME")
+isContained=$(contains "chalmers willie nelson smithers krusty patty frink stu"  "$HOSTFIRSTNAME")
 
 if [ "$isContained" == "yes" ]; then
     RSEM_DIR="$REQUIREMENTS/CENTOS7/RSEM/bin"
