@@ -22,4 +22,4 @@ find $DATA/$PROJECT/ -name "*.fastq*" \
     | xargs -P $NCPU_ALL -I@ $FASTQC_EXE @ -o $OUTDIR --extract
 
 # Aggregate reports
-multiqc $OUTDIR $TMPDIR/$PROJECT/
+$MULTIQC $OUTDIR $TMPDIR/$PROJECT/

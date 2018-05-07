@@ -17,7 +17,7 @@ if [ $# -eq 0 ]
 fi
 
 GSE=$1 
-FILES=$GSE"/"
+FILES=$DATA/$GSE"/"
 EXPECTED=$2
 
 echo " Files: $FILES"
@@ -51,6 +51,7 @@ if [  -f $METADATA_OUT ]; then
 fi
 
 
+# Todo: turn back on once format chosen
 # $SCRIPTS/pipeline_metadata.sh $GSE > $METADATA_OUT
 
 # Count number of sequences
@@ -83,5 +84,5 @@ if [ $EXPECTED -eq $nSEQUENCES ]; then
 else
     echo "$FILES 's sample count is not equal to expected count."
     echo "$EXPECTED !== $nSEQUENCES"
-    exit -1
+    exit 86
 fi

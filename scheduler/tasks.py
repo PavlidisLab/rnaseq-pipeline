@@ -14,6 +14,7 @@ class BaseTask(luigi.Task):
     commit_dir = os.path.dirname(os.path.realpath(__file__)) + "/commit"
     wd = here + "/../Pipelines/rsem/"
     MODES = os.getenv("MODES")
+    SCRIPTS = os.getenv("SCRIPTS")
 
     # Para meters
     gse = luigi.Parameter()
@@ -24,8 +25,8 @@ class BaseTask(luigi.Task):
 
 class QcGSE(BaseTask):
 
-    wd = BaseTask.here + "/../scripts/"
-
+    wd = BaseTask.SCRIPTS + "/"
+    
     method = "./qc_download.sh"    
 
     # Todo: Check taxon/assembly relation.
@@ -38,6 +39,7 @@ class QcGSE(BaseTask):
 
     def run(self):
         try:
+            print "Running from " + self.wd
             os.chdir(self.wd)
             
         except Exception as e:
@@ -59,7 +61,8 @@ class QcGSE(BaseTask):
             raise e
 
         if ret != 0:
-            exit("Job '{}' executed, but failed with exit code {}.".format( " ".join([str(x) for x in job]), ret))
+            print "# Job '{}' executed, but failed with exit code {}.".format( " ".join([str(x) for x in job]), ret)
+            exit(-1)
 
         # Commit output
         with self.output().open('w') as out_file:                    
@@ -162,7 +165,8 @@ class CheckGemmaGSE(BaseTask):
         """    
         try:
             self.method = os.getenv("GEMMACMD").split(" ")
-            self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
+            #self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
+            self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse]
 
         except Exception as e:
             print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."

@@ -14,8 +14,6 @@ def rnaseq_add():
     """
     Call the gemma command line script and upload available count matrices from the pipeline.
     """
-
-
     bash_command = ("""$GEMMACMD rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD """ +
                     """-e {arg_shortname} -a Generic_{arg_taxon}_ensemblIds -count {arg_path}/{arg_shortname}_counts.genes -rpkm {arg_path}/{arg_shortname}_fpkm.genes""".format(
             arg_path = args.path, 
