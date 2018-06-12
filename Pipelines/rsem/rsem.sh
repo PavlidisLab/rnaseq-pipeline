@@ -88,6 +88,7 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
     )
 else
     echo " Called for single-end data."
+    MATES=" NoneDetected "
     CMD=$(echo $RSEM_EXE \
 	-p "$NCPU_NICE" \
 	$GZIPPED \

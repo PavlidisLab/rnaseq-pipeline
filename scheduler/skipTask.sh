@@ -18,4 +18,4 @@ fi
 SERIES=$1
 TASK=$2
 
-touch "commit/"$TASK"_"$SERIES".tsv"
+echo "TASK SKIPPED" > "commit/"$TASK"_"$SERIES".tsv"

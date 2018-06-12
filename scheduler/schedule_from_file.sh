@@ -33,6 +33,7 @@ echo "Writing logs in $OUTPUT"
 mkdir -p $(dirname $OUTPUT)
 
 echo "##================Launching new batch======================##"
+echo " Rate: $NTASKS tasks simultaneously. " 
 sed 's|\t| |g' $GEO_SAMPLES \
     | cut -d' ' -f2,3,4 \
     | tail -n +2 \
