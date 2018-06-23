@@ -3,7 +3,7 @@
 ## About
 Indexes for assemblies are generated using `rsem-prepare-reference` from RSEM. 
 
-The script `rsem_make_star_reference.sh` included in this respository can take in an Illumina iGenome and produce an RSEM ready transcriptome. The resulting transcriptomes are stored in `Assemblies/runtime`.
+The script `rsem_make_star_reference.sh` included in this respository can take in an Illumina iGenome and produce an RSEM ready transcriptome. The resulting transcriptomes are stored in `$ASSEMBLIES/runtime`.
 
 The source assemblies are Illumina iGenomes downloaded from: http://support.illumina.com/sequencing/sequencing_software/igenome.html
 
