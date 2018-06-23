@@ -31,7 +31,7 @@ Example:
 Output:
 `Assemblies/runtime/human_ref38/human_0*`
 
-Make sure that RSEM is installed and compilled. RSEM should be cloned from the linked submodule, then built with the "make" command from inside the RSEM directory.
+Make sure that RSEM is installed and compilled. RSEM should be cloned from the linked submodule, then built with the `make` command from inside the RSEM directory.
 
-Also make sure that RSEM correctly identified by the configuration file of this pipeline (etc/common.cfg). In general, it should simply be: 'RSEM_DIR="$REQUIREMENTS/RSEM"', assuming $REQUIREMENTS is also confirgured to point to the Requirements directory.
+Also make sure that RSEM correctly identified by the configuration file of this pipeline (`etc/common.cfg`). In general, it should simply be: `RSEM_DIR="$REQUIREMENTS/RSEM"`, assuming `$REQUIREMENTS` is also confirgured to point to the Requirements directory.
 
