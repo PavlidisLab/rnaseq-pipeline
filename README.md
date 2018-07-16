@@ -1,8 +1,7 @@
 # Pavlidis Lab RNA-seq pipeline repository
 
-TODO: Documentation
+This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact [@mbelmadani](https://github.com/mbelmadani) - manuel.belmadani@msl.ubc.ca if troubleshooting assistance is needed.
 
-The documentation is still being written and tested. In the meantime, users interested in using this pipeline for RNASeq quantification should contact [@mbelmadani](https://github.com/mbelmadani) - manuel.belmadani@msl.ubc.ca for configuration assistance.
 
 # General install instructions
 
