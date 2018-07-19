@@ -23,13 +23,14 @@ Commonly used assemblies:
 ```
 
 ### Generating a runtime assembly
-`./rsem_make_star_reference.sh SPECIESNAME /path/to/iGenome/Organism/Version/`
-
+```
+Usage:
+./rsem_make_star_reference.sh SPECIESNAME /path/to/iGenome VERSION
 Example:
-`./rsem_make_star_reference.sh human Assemblies/Homo_sapiens/NCBI/GRCh38/`
-
+./rsem_make_star_reference.sh human Homo_sapiens/NCBI/GRCh38/ ncbi38
 Output:
-`Assemblies/runtime/human_ref38/human_0*`
+/space/grp/Pipelines/rnaseq-pipeline/Assemblies/runtime/human_refncbi38/human_0*
+```
 
 Make sure that RSEM is installed and compilled. RSEM should be cloned from the linked submodule, then built with the `make` command from inside the RSEM directory.
 
