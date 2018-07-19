@@ -1,5 +1,7 @@
 # Assemblies
 
+Note: It's probably better to install the `Requirements` before making assemblies. See the [Requirements documentation.](https://github.com/PavlidisLab/rnaseq-pipeline/tree/master/Requirements)
+
 ## About
 Indexes for assemblies are generated using `rsem-prepare-reference` from RSEM. 
 
@@ -32,7 +34,7 @@ Output:
 /space/grp/Pipelines/rnaseq-pipeline/Assemblies/runtime/human_refncbi38/human_0*
 ```
 
-Make sure that RSEM is installed and compilled. RSEM should be cloned from the linked submodule, then built with the `make` command from inside the RSEM directory.
+Make sure that RSEM is installed and compilled. RSEM should be cloned from the linked submodule, then built with the `make` command from inside the RSEM directory. See [Requirements documentation.](https://github.com/PavlidisLab/rnaseq-pipeline/tree/master/Requirements).
 
 Also make sure that RSEM correctly identified by the configuration file of this pipeline (`etc/common.cfg`). In general, it should simply be: `RSEM_DIR="$REQUIREMENTS/RSEM"`, assuming `$REQUIREMENTS` is also confirgured to point to the Requirements directory.
 
