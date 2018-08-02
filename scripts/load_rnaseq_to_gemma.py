@@ -14,7 +14,7 @@ def rnaseq_add():
     """
     Call the gemma command line script and upload available count matrices from the pipeline.
     """
-    bash_command = ("""$GEMMACMD rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD """ +
+    bash_command = ("""$GEMMACLI rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD """ +
                     """-e {arg_shortname} -a Generic_{arg_taxon}_ensemblIds -count {arg_path}/{arg_shortname}_counts.genes -rpkm {arg_path}/{arg_shortname}_fpkm.genes""".format(
             arg_path = args.path, 
             arg_taxon = args.taxon, 
@@ -23,7 +23,10 @@ def rnaseq_add():
     print "Executing:"
     print bash_command
 
-    os.system(bash_command)
+    retcode = os.system(bash_command)
+
+    return retcode
+        
 
 
 if __name__ == '__main__':
@@ -45,4 +48,6 @@ if __name__ == '__main__':
         print "Please use one from", TAXONS
         exit(-1)
     
-    rnaseq_add()
+    retcode = rnaseq_add()
+    if retcode != 0:
+        raise Exception("[ERROR] load_rnaseq_to_gemma.py; non-zero return code. ")

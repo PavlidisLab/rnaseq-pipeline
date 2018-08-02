@@ -69,16 +69,21 @@ contains() {
 ## Hack to work on both types of servers
 HOSTFIRSTNAME=$(echo $HOSTNAME | cut -f1 -d".")
 isContained=$(contains "chalmers willie nelson smithers krusty patty frink stu"  "$HOSTFIRSTNAME")
+isContained='yes' # TODO: Get rid of this
 
 if [ "$isContained" == "yes" ]; then
-    RSEM_DIR="$REQUIREMENTS/CENTOS7/RSEM/bin"
-    STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static/"
-    STAR_EXE="$STAR_PATH/STAR"
+    #RSEM_DIR="$REQUIREMENTS/CENTOS7/RSEM/bin"
+    #STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static/"
+    #STAR_EXE="$STAR_PATH/STAR"
     
     if [ -z ${VENV+x} ]; then
 	echo "No virtualenv."
     else
 	echo "Virtualenv:" $VENV
+	set +u
 	source $VENV
+	set -u
     fi
 fi
+
+

@@ -164,12 +164,12 @@ class CheckGemmaGSE(BaseTask):
         Set CLI method.
         """    
         try:
-            self.method = os.getenv("GEMMACMD").split(" ")
+            self.method = os.getenv("GEMMACLI").split(" ")
             #self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
             self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse]
 
         except Exception as e:
-            print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
+            print "$GEMMACLI/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
             raise e                
 
         print "INFO: Method => " + str(self.method_args)
@@ -239,12 +239,16 @@ class LoadGemmaGSE(BaseTask):
         Set CLI method.
         """    
         try:            
-            # Check if GEMMACMD is set, otherwise problems will happen later.
-            foo = os.getenv("GEMMACMD").split(" ")
-            foo = os.getenv("GEMMAUSERNAME")
-            foo = os.getenv("GEMMAPASSWORD")
+            # Check if GEMMACLI is set, otherwise problems will happen later.
+            foo1 = os.getenv("GEMMACLI").split(" ")
+
+            # foo2 = os.getenv("GEMMAUSERNAME")
+            # foo3 = os.getenv("GEMMAPASSWORD")
+            # if None in [foo1, foo2, foo3]:
+            #     raise Exception("At least one Gemma parameter is None!")
+        
         except Exception as e:
-            print "$GEMMACMD/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
+            print "$GEMMACLI/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
             raise e                
             
         try:

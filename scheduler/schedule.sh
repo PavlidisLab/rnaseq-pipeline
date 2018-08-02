@@ -2,7 +2,9 @@
 
 export MODES=$2 # Need to do this before in case MODES has something important (e.g. $SCHEDULER_PORT)
 set -eu
+echo "Loading config for $0 from $PWD using MODES: $MODES"
 source ../etc/load_configs.sh
+echo "Config loaded."
 
 if [ $# -lt 3 ]
   then
@@ -30,6 +32,9 @@ export RESULTDIR=$RESULTDIR
 export COUNTDIR=$COUNTDIR
 export SCRIPTS=$SCRIPTS
 export METADATA=$METADATA
+export GEMMACLI=$GEMMACLI
+export GEMMA_LIB=$GEMMA_LIB
+export JAVA_OPTS="-Dgemma.log.dir=$HOME/gemmalogs -Dehcache.disk.sort.dir=$HOME/gemmacache -Xmx45g -XX:MaxPermSize=256M" # TODO: Make part of configs?
 
 echo @ $@
 # Assuming the --gse argument is required.
@@ -41,4 +46,4 @@ export CURRENTGSE=$(echo $@ \
 
 echo "Current GSE="$CURRENTGSE
 echo "Args=" $@
-MODES=$MODES PYTHONPATH='.' luigi --scheduler-port $SCHEDULER_PORT --module tasks $JOB $@
+MODES=$MODES PYTHONPATH='.' luigi --scheduler-port $SCHEDULER_PORT $SCHEDULER_HOST --module tasks $JOB $@

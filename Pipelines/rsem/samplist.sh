@@ -55,7 +55,7 @@ include_exclude ()
 BEFORE=$DEFAULT_MATE_SOURCE
 AFTER=$DEFAULT_MATE_REPLACEMENT
 
-INPUTS=$(find $1"/" -name "*.fastq*"| tr "\n" "," | tr " " ",")
+INPUTS=$(find -L $1"/" -name "*.fastq*"| tr "\n" "," | tr " " ",")
 include_exclude $INPUTS # Call inclusion/exclusion subroutine
 
 FILES=$(echo $INPUTS | sed 's/,$//g' )

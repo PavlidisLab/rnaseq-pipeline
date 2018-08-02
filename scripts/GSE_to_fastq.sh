@@ -16,6 +16,8 @@ if [ "$#" -ne 1 ]; then
     exit -1
 fi
 
+mkdir -p $LOGS/$(basename $0)
+
 ACCESSION=$1
 RANK=$(echo $ACCESSION | sed 's|...$|nnn|g')
 

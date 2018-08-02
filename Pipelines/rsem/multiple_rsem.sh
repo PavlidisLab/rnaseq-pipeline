@@ -41,7 +41,13 @@ FILES=$1
 SERIES=$2
 SAMPLIST="$ROOT_DIR/Pipelines/rsem/samplist.sh" # TODO: Centralize into scripts/ directory.
 
-#mkdir -p $LOGS/$(basename $0)
+# Save excution metadata
+## Assuming $configfile from etc/load_configs.sh is set.
+CONFIGDIR=$METADATA"/"$SERIES"/configurations/"
+mkdir -p $CONFIGDIR
+configfileDest="multiple_rsem_"$(basename $configfile)
+cp $configfile $CONFIGDIR/$configfileDest
+##
 
 CURRENTLOGDIR=$LOGS/$SERIES
 if [ $CLEARLOGS == "1" ]; then
@@ -114,7 +120,7 @@ echo "Launching RSEM for: $SERIES"
 # Prepare sample pairs.    
 # Run in parallel
 # samplist.sh will return the sequence (and mates) as 1 (or 2) lists of FASTQ files.
-find $FILES/ -name "*.fastq*" -exec dirname {} \; \
+find -L $FILES/ -name "*.fastq*" -exec dirname {} \; \
     | sort \
     | uniq \
     | xargs -n1 -I % $SAMPLIST % $MODES $MATES \

@@ -43,22 +43,20 @@ else
     fi
 fi
 
-
 # Prepare a clean metadata file
 METADATA_OUT=$METADATA/$GSE".metadata"
 if [  -f $METADATA_OUT ]; then
 	mv $METADATA_OUT $METADATA_OUT".old"
 fi
 
-
 # Todo: turn back on once format chosen
 # $SCRIPTS/pipeline_metadata.sh $GSE > $METADATA_OUT
 
 # Count number of sequences
-nSEQUENCES=$(find $FILES -name "*"$DEFAULT_MATE_SOURCE".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nSEQUENCES=$(find -L $FILES -name "*"$DEFAULT_MATE_SOURCE".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 # Count number of mate pairs.
-nMATES=$(find $FILES -name "*"$DEFAULT_MATE_REPLACEMENT".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nMATES=$(find -L $FILES -name "*"$DEFAULT_MATE_REPLACEMENT".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 echo "$nSEQUENCES SEQUENCE FILES FOUND."
 echo "$nMATES MATE FILES FOUND."
