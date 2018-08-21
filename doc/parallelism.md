@@ -10,7 +10,7 @@ Parallel processing of samples can be acheived in a few ways. The most straightf
 
 Samples are either processed one locally if `$MACHINES=""`, or they can be distributed across servers defined in `$MACHINES` (e.g. server1,server2.example.net,server3.sub.example.net). Make sure you can authenticate to the servers by SSH keys. See instructions on how to do so here: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
-The current configuration assumes each server has the same directory stucture, and the pipeline is installed/accessible on each server. This works best in the case of an Networked Filesystem (NFS), otherwise a work around would be to network mount the shared locations needed in `etc/common.cfg`. An sshfs mount (https://github.com/libfuse/sshfs) could also be used. 
+The current configuration assumes each server has the same directory stucture, and the pipeline is installed/accessible on each server. This works best in the case of an Networked Filesystem (NFS), otherwise a work around would be to network mount the shared locations needed and point to them in `etc/common.cfg`. An sshfs mount (https://github.com/libfuse/sshfs) could also be used but could be slow due to network connections.
 
 ## Scheduler
 
