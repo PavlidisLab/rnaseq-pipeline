@@ -6,7 +6,7 @@ Note: This steps requirement a virtual environment in `scheduler/` with packages
 
 The scheduler handles task processing and automatically schedule dependencies required. The general flow of tasks is:
 
-`[DownloadGSE] -> [QcGSE] -> [ProcessGSE] -> [CountGSE] -> [PurgeGSE]`
+`[DownloadGSE] -> [QcGSE] -> [ProcessGSE] -> [CountGSE] -> [GatherMetadataGSE] -> [PurgeGSE]`
 
 If ProcessGSE is requested for a series, the scheduler will attempt to complete DownloadGSE and QcGSE before running ProcessGSE, or halt the task if it fails completing the dependencies.
 
