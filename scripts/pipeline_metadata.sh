@@ -63,8 +63,8 @@ echo "###########################"
 # Run information
 echo ""
 echo "# Sequencing runs"
-echo -e "Run\tRunIDs:"
-find $DATA/$GSE/ -name "*.fastq.gz" -exec bash -c 'echo -e "$0"'${TAB}'$(zhead "$0")' {} \; | get_series_sample_run |  cut -f1 -d" " | sort | uniq 
+echo -e "Run\tHeader:"
+find $DATA/$GSE/ -name "*.fastq.gz" -exec bash -c 'echo -e "$0"'${TAB}'$(zhead "$0")' {} \; |  sort | uniq | get_series_sample_run
 echo "###########################"
 
 echo ""
@@ -83,6 +83,6 @@ echo ""
 echo "# Read lengths summary (Sampling first 4k rows)."
 echo -e "Run\tCount\tSampledLength"
 #paste <(find $DATA/$GSE/ -name "*.fastq.gz" | get_series_sample_run) <(find $DATA/$GSE/ -name "*.fastq.gz" | xargs -I@ bash -c "readCount4k "@)
-find $DATA/$GSE/ -name "*.fastq.gz" | xargs -I@ bash -c "readCount4k "@ | get_series_sample_run
+find $DATA/$GSE/ -name "*.fastq.gz" | xargs -I@ bash -c "readCount4k "@ | sort | uniq |get_series_sample_run
 
 echo "###########################"
