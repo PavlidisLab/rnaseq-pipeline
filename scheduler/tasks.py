@@ -330,9 +330,6 @@ class GatherMetadataGSE(BaseTask):
         return luigi.LocalTarget(self.commit_dir + "/metadata_%s.tsv" % self.gse)
 
     def run(self):
-
-
-
         # Change working directory
         try:
             os.chdir(os.environ['SCRIPTS'])
@@ -345,29 +342,34 @@ class GatherMetadataGSE(BaseTask):
             
         # Create metadata directory for GSE
         try:
-            print "Creating",self.metadataDir
-            job = [ "mkdir", "-p", self.metadataDir ] 
+            print "JOB: Creating directory",self.metadataDir
+
+            job = [ "mkdir", "-p", self.metadataDir ] # TODO: Doesn't need to be a subprocess.
+            print "RUNNING: #" + " ".join(job)
             ret = call(job)
             job = None
+            print "Done (retcode == " + str(ret) + ")"
+
         except Exception as e:
             print "EXCEPTION: Could not create directory at " + self.metadataDir 
             raise e
            
         # Call base metadata gathering job
         try:
-            base_metadata_file = self.metadataDir + "/" + self.gse + ".base.metadata"
-            print "Generating base metadata", base_metadata_file
+            print "JOB: Generating base metadata at:"
+            base_metadata_file = self.metadataDir + "/" + self.gse + ".base.metadata"        
+            print "\t" + base_metadata_file
+
             f = open(base_metadata_file,"wb")
             ferr = open("/dev/null", 'wb')
             job = [ self.base_method ] + self.method_args 
-            print "Call:", " ".join(job)
+            print "RUNNING: #" + " ".join(job)
             ret = call(job, stdout=f, stderr=ferr)
             job = None
             f.close()
+            print "Done (retcode == " + str(ret) + ")"
 
-            #os.system( self.base_method + " " + self.gse  + " '\t'  " " > " + base_metadata_file )
-
-        except Exception as e:
+        except NotImplementedError as e:
             print "EXCEPTION: Gathering base metadata", e, "with", " ".join(job)
             print e.message
             ret = -1
@@ -375,12 +377,13 @@ class GatherMetadataGSE(BaseTask):
 
         # Call alignment metadata job
         try:
-            print "Gathering STAR metadata to", self.metadataDir
+            print "JOB: Gathering STAR metadata to", self.metadataDir
+
             job = [ self.alignment_method ] + self.method_args 
-            print "Call:", " ".join(job)
+            print "RUNNING: #" + " ".join(job)
             ret = call(job)
             job = None
-            print "Done."
+            print "Done (retcode == " + str(ret) + ")"
 
         except Exception as e:
             print "EXCEPTION: Gathering STAR metadata", e, "with", " ".join(job)
@@ -392,7 +395,7 @@ class GatherMetadataGSE(BaseTask):
         try:
             print "Gathering FastQC reports to", self.metadataDir
             job = [ self.qc_method ] + self.method_args 
-            print "Call:", " ".join(job)
+            print "RUNNING: #" + " ".join(job)
             ret = call(job)
             job = None
             print "Done."
@@ -414,6 +417,9 @@ class GatherMetadataGSE(BaseTask):
 
 
 class PurgeGSE(BaseTask):
+    """
+    After metadata has been gathered, get rid of raw data (DATA), bam files/STAR alignment.
+    """
     method = "rm"
     method_args = "-rf"
 
@@ -422,9 +428,15 @@ class PurgeGSE(BaseTask):
         Set paths and whatnot.
         """
         dataDir = os.environ['DATA']
-        # TODO: Possibly, also get rid of quant dir?
+        tmpDir = os.environ['TMPDIR']
+        quantDir = os.environ['QUANTDIR']
+        self.purgeDirs = []
+
         print "INFO: DATADIR => ", dataDir
-        self.purgeDir = dataDir + "/" + str(self.gse)+ "/"
+
+        # TODO: Possibly, quant dir?
+        for purgeDir in [dataDir, tmpDir]:
+            self.purgeDirs.append( purgeDir + "/" + str(self.gse)+ "/" )
 
     def requires(self):        
         self.init()
@@ -443,29 +455,29 @@ class PurgeGSE(BaseTask):
             print "Error changing to", self.wd, "when in", os.getcwd()
             raise e
             
+        # Call jobs
+        for purgeDir in self.purgeDirs:
+            try:
+                # Create DIR in case it doesn't exist.
+                job = [ "mkdir", "-p", purgeDir ] 
+                ret = call(job)
 
-        # Call job
-        try:
-            ## Workaround for missing DIR
-            job = [ "mkdir", "-p", self.purgeDir ] 
-            ret = call(job)
-            
-            ## Ok, not delete directory
-            print "Deleting files from", self.purgeDir, "."
-            job = [ self.method, self.method_args, self.purgeDir ] 
-            ret = call(job)
+                # Purge purgeDir
+                job = [ self.method, self.method_args, purgeDir ] 
+                print "Deleting files from:", purgeDir
+                print "JOB:" + " ".join(job)
+                ret = call(job)
+                print "Done."
 
-            print "Done."
+            except Exception as e:
+                print "EXCEPTION:", e, "with", " ".join(job)
+                print e.message
+                ret = -1
 
-        except Exception as e:
-            print "EXCEPTION:", e, "with", " ".join(job)
-            print e.message
-            ret = -1
-
-        if ret:
-            print "Error code", ret,"."
-            print ""
-            exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
+            if ret:
+                print "Error code", ret,"."
+                print ""
+                exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))                
 
         # Commit output
         with self.output().open('w') as out_file:                    

@@ -11,10 +11,10 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     usage
 fi
 
+TYPES="download qc process count metadata checkgemma loadgemma purge"
 MODE=$1 # Optional
 
 commits=$(find commit/ | grep ".tsv" )
-TYPES="download qc process count checkgemma loadgemma purge"
 IDS=$(find commit/ | cut -d"_" -f2 | grep ".tsv"| cut -d"." -f1 | sort | uniq)
 
 filter="grep ."

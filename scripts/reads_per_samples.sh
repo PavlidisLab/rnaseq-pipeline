@@ -8,8 +8,9 @@ OUTPUT=$METADATA/$SERIES
 
 mkdir -p $OUTPUT
 
+echo "" > $OUTPUT/$SERIES".readcount"
 for x in $(find $DATA/$SERIES -name "*.fastq.gz"); do 
-	echo "$x,"$(unpigz -p 8 -c $x | wc -l ) >> $OUTPUT/$SERIES".readcount"
+	echo "$x,"$(unpigz -p 8 -c $x | grep "^@" |  wc -l ) >> $OUTPUT/$SERIES".readcount"
 done
 
 
