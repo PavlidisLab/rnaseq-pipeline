@@ -39,8 +39,8 @@ SAMPLE_HEADER="Comment[ENA_RUN]"
 FASTQ_INDEX=$(head -n1 /tmp/$FILENAME | tr "\t" "\n" | fgrep -n "$FASTQ_HEADER" | cut -f1 -d":")
 SAMPLE_INDEX=$(head -n1 /tmp/$FILENAME | tr "\t" "\n" | fgrep -n "$SAMPLE_HEADER" | cut -f1 -d":")
 
-# echo "FASTQ_INDEX: $FASTQ_INDEX"
-# echo "SAMPLE_INDEX: $SAMPLE_INDEX"
+echo "FASTQ_INDEX: $FASTQ_INDEX"
+echo "SAMPLE_INDEX: $SAMPLE_INDEX"
 
 if [ -n "$MACHINES" ]; then
     echo "Running on: $MACHINES"
@@ -51,6 +51,7 @@ else
 fi
 
 DELIM=","
+echo "Extracting Sample Matrix at $SAMPLE_MATRIX"
 tail -n +2 $SAMPLE_MATRIX | tr "\t" "$DELIM" | \
     cut -d$DELIM -f$FASTQ_INDEX,$SAMPLE_INDEX | \
     parallel $COMPUTE_MACHINES --colsep "," -j $NCPU_NICE wget -P $OUTPUT_PATH"/"{1} {2} 1> $LOGFILES".out" 2> $LOGFILES".err"
