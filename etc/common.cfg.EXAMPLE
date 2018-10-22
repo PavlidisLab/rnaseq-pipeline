@@ -34,22 +34,21 @@ CLEARLOGS=0
 
 ## Common tools
 WONDERDUMP_EXE="$REQUIREMENTS/wonderdump.sh"
-FASTQC_EXE="/space/bin/fastqc"
-FASTQDUMP_EXE="/space/bin/fastq-dump"
+FASTQC_EXE="$REQUIREMENTS/fastqc"
+FASTQDUMP_EXE="$REQUIREMENTS/fastq-dump"
 FASTQDUMP_SPLIT="  --split-files "
-MULTIQC_EXE="$REQUIREMENTS/MultiQC/build/scripts-2.7/multiqc"
-BAMTOFASTQ="/space/bin/bamToFastq"
-PICARD="java -jar $REQUIREMENTS/picard.jar"
-SEQPURGE=$REQUIREMENTS/ngs-bits/bin/SeqPurge
+MULTIQC_EXE="$REQUIREMENTS/multiqc"
+BAMTOFASTQ="$REQUIREMENTS/bamToFastq"
+SEQPURGE="$REQUIREMENTS/ngs-bits/bin/SeqPurge"
 
 ## RSEM Specific
 RSEM_DIR="$REQUIREMENTS/RSEM/bin"
 
-## STAR Specific
+# STAR Specific
 STAR_PATH="$REQUIREMENTS/STAR/bin/Linux_x86_64_static"
 STAR_EXE="$STAR_PATH/STAR"
 
-# Assembly. Current example is based of illumina iGenomes GRCm38, Ensembl.
+## Assembly. Current example is based of illumina iGenomes GRCm38, Ensembl.
 REFERENCE_BUILD="ensembl38"
 STAR_DEFAULT_REFERENCE="$ASSEMBLIES/runtime/mouse_ref"$REFERENCE_BUILD"/mouse_0"
 STAR_REFERENCE_GTF="$ASSEMBLIES/Mus_musculus/Ensembl/GRCm38/Annotation/Genes/genes.gtf"
@@ -64,10 +63,12 @@ NCPU_ALL="$NCPU"
 NCPU_NICE=3
 NJOBS="$NCPU_NICE"
 NTASKS=2
+## [Optional] Comma-separated list of servers with ssh authentication access (e.g. serv1.ubc.ca,serv2.ubc.ca,serv3.ubc.ca etc.)
 MACHINES=""
 MACHINES_DOWNLOAD=""
 
-## Runtime parameters                 
+## Runtime parameters
+### Pair-ended file name markers for each mate in the pair. 
 DEFAULT_MATE_SOURCE="_1"
 DEFAULT_MATE_REPLACEMENT="_2"
 

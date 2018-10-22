@@ -6,7 +6,7 @@ Note: This steps requirement a virtual environment in `scheduler/` with packages
 
 The scheduler handles task processing and automatically schedule dependencies required. The general flow of tasks is:
 
-`[DownloadGSE] -> [QcGSE] -> [ProcessGSE] -> [CountGSE] -> [PurgeGSE]`
+`[DownloadGSE] -> [QcGSE] -> [ProcessGSE] -> [CountGSE] -> [GatherMetadataGSE] -> [PurgeGSE]`
 
 If ProcessGSE is requested for a series, the scheduler will attempt to complete DownloadGSE and QcGSE before running ProcessGSE, or halt the task if it fails completing the dependencies.
 
@@ -48,17 +48,33 @@ Parameters:
 Description:
 
   Generate count matrices (Count, FPKM, TPM) from the results and stores them in `$COUNTDIR`. `--scope` determines if the matrices are done for genes or isoforms.
+  
+### GatherMetadataGSE
+
+Parameters:
+```
+  --gse=XXXXXX
+```
+
+Description:
+  Compute/fetch the proper metadata.
+  * alignment_metadata.sh - Obtain STAR metadata by fetching.
+  * pipeline_metadata.sh - Summary statistics on the datasets (Number of reads, parsed fastq headers, config file etc.)
+  * qc_report.sh - Call fastqc on all files, and then multiqc.
 
 ### PurgeGSE
+
 Parameters:
 ```
   --gse=XXXXXX
 ```
 Description:
 
-  Delete the raw data for the series. Does not delete bam files if they were kept.
+  Delete the raw data, alignments and temporary files for the series. Does not delete bam files if they were kept in $RESULTS (the quantification directory).
   
-Progess can be checked with the `scheduler/progressReport.sh` script, which prints a tables of tasks and series processed.
+## Which tasks haven't been done on X dataset?
+  
+Progress can be checked with the `scheduler/progressReport.sh` script, which prints a tables of tasks and series processed.
 
 The tasks can be reprocessed after being sucessfully completed by deleting files in the `commit/` directory. The files start with either `download_, qc_, process_, count_ or purge_` and are followed by the series identifier. Conversely, tasks can be skipped by leave a file of that format, or using `scheduler/skipTask.sh`. 
 
