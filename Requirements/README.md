@@ -1,5 +1,23 @@
 Make sure that your executable mentionned in `etc/common.cfg` point to binaries included here, or some other location on your machine for software installed externally from this repository.
 
+## virtual environment and pip
+Create a virtual environment either in the top-level of the directory or in the `scheduler` directory.
+```
+# Create virtual enviroment
+$ virtualenv venv
+# Load virtual environment
+$ source venv/bin/activate
+```
+
+ALWAYS run `source venv/bin/activate` before using the pipeline to make sure you have all the python requirements loaded.
+
+### Installing pip requirements
+```
+$(venv) pip install -r pip-requirements.txt
+```
+This will install the content of `pip-requirements.txt` in the `venv`.
+
+
 ## Git submodules
 - run `git submodule update --init --recursive` from the project root
   - This will fetch dependencies from other git repositories.
