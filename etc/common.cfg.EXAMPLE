@@ -3,7 +3,7 @@ USERNAME=$(whoami)
 
 ROOT_DIR="/home/$USERNAME/Pipelines/rnaseq-pipeline"
 RESULTS_DIR=$ROOT_DIR # This is where results and input data will be stores
-SCRATCH_DIR=$SCRATCH_DIR # This is where scratch data will be written, like metadata.
+SCRATCH_DIR=$RESULTS_DIR # This is where scratch data will be written, like metadata.
 
 ASSEMBLIES="$ROOT_DIR/Assemblies"
 REQUIREMENTS="$ROOT_DIR/Requirements"
