@@ -1,4 +1,2 @@
-# NOTE: Incomplete; this is intended to be filled in as the pipeline gets reinstalled on different machines.
-
-pip install luigi
-pip install multiqc
+luigi
+multiqc

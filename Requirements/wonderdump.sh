@@ -49,6 +49,6 @@ shift
 if [ $# -gt 0 ]
 then
     # Run the fastq-dump.
-    CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical  --readids --dumpbase --split-files --clip"
+    CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical  --readids --dumpbase $FASTQDUMP_SPLIT --clip"
     $CMD 1> $LOGDIR".out" 2> $LOGDIR".err"
 fi
