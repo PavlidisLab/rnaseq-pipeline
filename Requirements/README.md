@@ -28,7 +28,7 @@ This will install the content of `pip-requirements.txt` in the `venv`.
 
 ## SRA-Toolkit
   - Add a directory for sratoolkit.X.Y.Z under `$REQUIREMENTS/sratoolkit.X.Y.Z/`
-    - For example, under CENTOS7, I've used the prebuilt binary for 2.8.2 on CentOS was downloaded from: https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz . I extracted it in the requirements directory and now have a directory under $REQUIREMENTS/sratoolkit.2.8.2/`. 
+    - For example, under CENTOS7, I've used the prebuilt binary for 2.8.2 on CentOS was downloaded from: https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-centos_linux64.tar.gz . I extracted it in the requirements directory and now have a directory under `$REQUIREMENTS/sratoolkit.2.8.2/`. 
    - See more distributions here: https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/
    - 2.8.2 is the version I've found to be best at the time. Avoid older version (for example, 2.5.0 no longer works for downloading from SRA and is obsolete.)
 
