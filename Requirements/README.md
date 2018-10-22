@@ -22,9 +22,9 @@ This will install the content of `pip-requirements.txt` in the `venv`.
 - run `git submodule update --init --recursive` from the project root
   - This will fetch dependencies from other git repositories.
   - Currently: RSEM (forked with shared memory), STAR.
-  - Run `make` in `$REQUIREMENTS/RSEM` and `$REQUIREMENTS/STAR`
-    - `cd $REQUIREMENTS/STAR/ ; make`
+  - Run `make` in `$REQUIREMENTS/RSEM`    
     - `cd $REQUIREMENTS/RSEM/ ; make`
+    - `STAR` should already have pre-built binaries under `STAR/bin/Linux_x86_64_static/`.
 
 ## SRA-Toolkit
   - Add a directory for sratoolkit.X.Y.Z under `$REQUIREMENTS/sratoolkit.X.Y.Z/`
