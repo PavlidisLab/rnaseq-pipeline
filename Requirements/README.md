@@ -23,6 +23,8 @@ This will install the content of `pip-requirements.txt` in the `venv`.
   - This will fetch dependencies from other git repositories.
   - Currently: RSEM (forked with shared memory), STAR.
   - Run `make` in `$REQUIREMENTS/RSEM` and `$REQUIREMENTS/STAR`
+    - `cd $REQUIREMENTS/STAR/ ; make`
+    - `cd $REQUIREMENTS/RSEM/ ; make`
 
 ## SRA-Toolkit
   - add sratoolkit.2.8.2 under `sratoolkit.2.8.2/`
