@@ -13,7 +13,8 @@ ALWAYS run `source venv/bin/activate` before using the pipeline to make sure you
 
 ### Installing pip requirements
 ```
-$(venv) pip install -r pip-requirements.txt
+$(venv) python -m pip install --upgrade pip setuptools wheel # Upgrade packages, just in case.
+$(venv) pip install -r pip-requirements.txt # Install requirements.
 ```
 This will install the content of `pip-requirements.txt` in the `venv`.
 
