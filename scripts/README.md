@@ -27,6 +27,7 @@ These scripts aren't be part of the pipeline but can be useful for ad-hoc usage/
 * samplist-DIRTY.sh - Sample lists with -L in find (allows traversal of symlinks.)
 * SA_download_miniml.sh - Standalone miniml download. Unclear purpose.
 * SRP_to_fastq.sh - Download FASTQ files using only the SRP (SRA Project ID).
+* star-clear-shmem.sh - Clear shared memories on all $MACHINES defined by the configurations.
 * transcript_lengths.sh - transcript lengths from the GTF.
 * trim_fastq.sh - Run ngs-bits seqpurge to trim sequences.
 * trimproject.sh - Not maintained - run trim_fastq.sh on the whole projects.
