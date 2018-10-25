@@ -38,6 +38,12 @@ To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMP
 
 Modes are configuration files that are loaded after `common.cfg` to override the default settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
 
+### Using multiple machines
+
+Distributed processing over multiple machines typically done by creating a 'mode' that sets the `$MACHINES` variable as a comma-separated list of server addresses (names or IPs). The connection is done over ssh using GNU Parallel, so as a requirement you should be able to connect to that server with a simple `ssh servername` or `ssh server.example.com` command. See how to set up ssh keys using this [guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604).
+
+Try to connect to each server via ssh as a pre-requisite; often on the first time you connect you'll get a prompt asking if that server's IP can be trusted/added to the ssh known_hosts file. Once all servers are able to connect directly with an ssh command, they should be ready to use as distributed machines. See [distributedLP](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/distributedLP.cfg) as an example, where we also set the number of CPU per job to 4, the number of jobs per server to 2, for each of the 4 servers to be used in parallel.
+
 # Automated processing
 
 ## Using the scheduler to automatically download and process datasets with RSEM

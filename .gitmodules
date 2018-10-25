@@ -1,6 +1,6 @@
 [submodule "Requirements/RSEM"]
 	path = Requirements/RSEM
-	url = https://github.com/mbelmadani/RSEM.git
+	url = https://github.com/PavlidisLab/RSEM
 [submodule "Requirements/STAR"]
 	path = Requirements/STAR
 	url = https://github.com/alexdobin/STAR
