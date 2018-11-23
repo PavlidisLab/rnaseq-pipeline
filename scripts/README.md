@@ -9,6 +9,7 @@ The following scripts are called automatically by the [scheduler tasks](https://
 * parse_miniml.py - Parse the locally downloaded MINIML file matching your GSE accession.
 * parse_minimlPF.py - Works like parse_miniml.py but with restricted platforms. (This could/should extend parse_miniml.py)
 * qc_download.sh - Scheduler task; perform qc of the downloaded files (e.g. sample numbers is what was expected by the curator.)
+* star-clear-shmem.sh - Clear shared memories on all $MACHINES defined by the configurations.
 
 ### Metadata gathering
 The scripts are specific to the `GatherMetadataGSE` task, which is responsible for collecting metadata and statistics on the data before the `PurgeGSE` task.
@@ -18,7 +19,7 @@ The scripts are specific to the `GatherMetadataGSE` task, which is responsible f
 
 
 ### ad-hoc
-These scripts aren't be part of the pipeline but can be useful for ad-hoc usage/one off jobs. Use with case.
+These scripts aren't be part of the pipeline but can be useful for ad-hoc usage/one off jobs. Use with care.
 
 * benchmarker.sh - Run a timed command with ouputs to a benchmark sub-directory.
 * fix-gene_id-for-gtf.sh - Unclear. Seems to replace gtf gene_id to transcript_id.
