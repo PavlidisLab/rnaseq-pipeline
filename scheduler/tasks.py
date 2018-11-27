@@ -537,7 +537,12 @@ class DownloadGSE(BaseTask):
     GEO_TOKENS = ["GSE"]
 
     def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/download_%s.tsv" % self.gse)
+        uniqueID = ""
+        if int(self.ignorecommit) == 1:
+            print "INFO: Ignoring previous commits."
+            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
+
+        return luigi.LocalTarget(self.commit_dir + "/download" +uniqueID+ "_%s.tsv" % self.gse)
 
     def run(self):
         # TODO: Figure wheter to call the GEO or ArrayExpress script
