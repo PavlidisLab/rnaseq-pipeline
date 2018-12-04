@@ -28,7 +28,7 @@ echo "Scheduling $JOB job for $@"
 export MODES=$MODES
 export DATA=$DATA
 export QUANTDIR=$QUANTDIR
-export RESULTDIR=$RESULTDIR
+export RESULTS_DIR=$RESULTS_DIR
 export TMPDIR=$TMPDIR
 export COUNTDIR=$COUNTDIR
 export SCRIPTS=$SCRIPTS
