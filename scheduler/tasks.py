@@ -527,11 +527,8 @@ class ProcessGSE(BaseTask):
 
 class DownloadGSE(BaseTask):    
 
-    #method_geo = "../scripts/geo_to_sra.R" # TODO: Generalize
-    #method_geo = "/space/grp/Pipelines/rnaseq-pipeline/scripts/geo_to_sra.R" # TODO: Generalize
-    #method_arrayexpres = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.R"
-    method_arrayexpress = "/space/grp/Pipelines/rnaseq-pipeline/scripts/arrayexpress_to_fastq.sh"
-    method_gse = "/space/grp/Pipelines/rnaseq-pipeline/scripts/GSE_to_fastq.sh"
+    method_arrayexpress = os.getenv('SCRIPTS') + "/arrayexpress_to_fastq.sh"
+    method_gse =  os.getenv('SCRIPTS') + "/GSE_to_fastq.sh"
     method = None
 
     GEO_TOKENS = ["GSE"]
@@ -545,15 +542,13 @@ class DownloadGSE(BaseTask):
         return luigi.LocalTarget(self.commit_dir + "/download" +uniqueID+ "_%s.tsv" % self.gse)
 
     def run(self):
-        # TODO: Figure wheter to call the GEO or ArrayExpress script
+        # TODO: Figure wheter to call the GEO or ArrayExpress script more explicitely
         if any([ TOKEN in self.gse for TOKEN in self.GEO_TOKENS ]):
             self.method = self.method_gse
         else:
             self.method = self.method_arrayexpress
 
         # Call job
-        #job = ["Rscript", self.method, self.gse] 
-        #job = ['ssh', 'chalmers', 'cd', '/space/grp/Pipelines/rnaseq-pipeline/scripts/', '&&', "Rscript", self.method, self.gse]
         job = [self.method, self.gse]
         ret = call(job)
 
