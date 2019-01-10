@@ -14,14 +14,30 @@ err_report() {
 		CURRENTGSE="CurrentGSE" ; 
 	fi
 
-	echo "[ERROR] See logs at LOGS/CURRENTGSE/PROGRAM{.err,.log}"
+	echo "[ERROR] See logs at LOGS/CURRENTGSE/PROGRAM{.err,.log} or LOGS/PROGRAM/"
     exit 123
 }
-trap 'err_report $LINENO $(basename "$0")' ERR
+# trap 'err_report $LINENO $(basename "$0")' ERR
 
-### Get the header of a .gz file
-function zhead(){ zcat $1 | head -n1 ; }; 
+function zhead () { 
+    # Get the header of a .gz file
+    zcat $1 | head -n1 ; 
+}; 
 export -f zhead;
+
+shellcheck_suppress () {
+    # Suppress a shellcheck warning by adding something harmless to then end of a pipe
+    tee;
+};
+export -f shellcheck_suppress
+
+## ShellCheck specific
+suppress_SC2001 () {
+    # Suppress the echo|sed replacement warning for cases where native bash substitutions isn't enough.
+    shellcheck_suppress ;
+};
+export -f suppress_SC2001
+
 
 ## Configurations
  
@@ -60,8 +76,6 @@ source $configfile
 contains() {
     [[ " $1 " =~ " $2 " ]] && echo "yes" || echo 0
 }
-
-
 
 # HOSTFIRSTNAME=$(echo $HOSTNAME | cut -f1 -d".")
 #$(contains "server1 server2 server3 "  "$HOSTFIRSTNAME")

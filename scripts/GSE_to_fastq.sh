@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-cd $(dirname $0) 
+cd "$(dirname "$0")" 
 source ../etc/load_configs.sh
 
 if [ "$#" -ne 1 ]; then
@@ -16,12 +16,12 @@ if [ "$#" -ne 1 ]; then
     exit -1
 fi
 
-mkdir -p $LOGS/$(basename $0)
+mkdir -p "$LOGS""/""$(basename "$0")"
 
-ACCESSION=$1
-RANK=$(echo $ACCESSION | sed 's|...$|nnn|g')
+ACCESSION="$1"
+RANK="$(echo "$ACCESSION" | sed 's|...$|nnn|g' | suppress_SC2001)"
 
-SOFTFILE="ftp://ftp.ncbi.nlm.nih.gov/geo/series/$RANK/$ACCESSION/soft/$ACCESSION""_family.soft.gz"
+# SOFTFILE="ftp://ftp.ncbi.nlm.nih.gov/geo/series/$RANK/$ACCESSION/soft/$ACCESSION""_family.soft.gz"
 MINIML="ftp://ftp.ncbi.nlm.nih.gov/geo/series/$RANK/$ACCESSION/miniml/$ACCESSION""_family.xml.tgz"
 
 DOWNLOAD_DIR="$DATA/$ACCESSION/METADATA"
@@ -32,36 +32,56 @@ if [ -n "$MACHINES" ]; then
     PARALLEL_MACHINES=" -S $MACHINES "
 fi
 
-# Download SOFT file
-mkdir -p $DOWNLOAD_DIR
+if [ -n "$MODES" ]; then
+    echo "Propagating environment for modes $MODES"
+    PARALLEL_MODES=" --env MODES "
+fi
 
-SOFTOUT="$DOWNLOAD_DIR/$ACCESSION.soft.gz"
-SOFT="$DOWNLOAD_DIR/$ACCESSION.soft"
+# Download metadata files
+mkdir -p "$DOWNLOAD_DIR"
+
+# SOFTOUT="$DOWNLOAD_DIR/$ACCESSION.soft.gz"
+# SOFT="$DOWNLOAD_DIR/$ACCESSION.soft"
 
 MINIMLOUT="$DOWNLOAD_DIR/$ACCESSION.xml.tgz"
 MINIMLXML="$DOWNLOAD_DIR/$ACCESSION.xml"
 
-wget -O $SOFTOUT $SOFTFILE
-wget -O $MINIMLOUT $MINIML
+###
+## TODO: SOFT file probably not needed
+# SOFTEXTRACTED="${$SOFTOUT%.*}"
+#if [ ! -f "$SOFTEXTRACTED" ]
+#then
+#    wget -O $SOFTOUT $SOFTFILE
+#    echo "Extracting $SOFTOUT"
+#    gunzip -f $SOFTOUT 
+#else
+#    echo "Zipped SOFT File exists at $SOFTOUT"
+#fi
+####
 
-echo "Extracting $MINIMLOUT"
-tar -xvzf $MINIMLOUT --to-stdout > $MINIMLXML
+if [ ! -f "$MINIMLXML" ]
+then
+    wget -O "$MINIMLOUT" "$MINIML"
+    echo "Extracting $MINIMLOUT"
+    tar -xvzf "$MINIMLOUT" --to-stdout > "$MINIMLXML"
+else
+    echo "MINIML xml file exists at $MINIMLXML."
+fi
 
-echo "Extracting $SOFTOUT"
-gunzip -f $SOFTOUT 
-
-LOGPREFIX=$LOGS/$(basename $0)/$ACCESSION
-mkdir -p $(basename $LOGPREFIX)
+LOGPREFIX="$LOGS""/""$(basename "$0")""/""$ACCESSION"
+mkdir -p "$(basename "$LOGPREFIX")"
 
 echo "Launching parallel Wonderdump"
 METADATA_URL="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term="
-echo "Using MINIML at: " $MINIMLXML
-python parse_miniml.py $MINIMLXML \
+
+echo "Parsing MINIML xml at: $MINIMLXML"
+python parse_miniml.py "$MINIMLXML" \
     | cut -f1 -d" " \
-    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" 2>> "$LOGPREFIX.SRA_METADATA" \
+    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@"  2>> "$LOGPREFIX.wget.err" \
     | grep -v "SampleName" \
     | grep -v "^$" \
     | cut -f1,30 -d","  \
     | sort \
     | uniq \
-    | parallel --colsep ',' $PARALLEL_MACHINES -j $NCPU_ALL $WONDERDUMP_EXE {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err"
+    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NJOBS" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err"
+

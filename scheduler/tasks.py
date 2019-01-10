@@ -536,8 +536,9 @@ class DownloadGSE(BaseTask):
     def output(self):
         uniqueID = ""
         if int(self.ignorecommit) == 1:
-            print "INFO: Ignoring previous commits."
-            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
+            uuid_tag = str(uuid.uuid1())
+            print "INFO: Ignoring previous commits. Current job UUID tag:", uuid_tag
+            uniqueID = "_" + uuid_tag # Skipping commit logic.
 
         return luigi.LocalTarget(self.commit_dir + "/download" +uniqueID+ "_%s.tsv" % self.gse)
 

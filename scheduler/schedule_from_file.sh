@@ -32,6 +32,10 @@ OUTPUT="$LOGS/MultiScheduler/"$(basename $GEO_SAMPLES)
 echo "Writing logs in $OUTPUT"
 mkdir -p $(dirname $OUTPUT)
 
+#Pop out parsed arguments but keep the rest (e.g. --ignorecommit=1)
+shift
+shift
+
 echo "##================Launching new batch======================##"
 echo " Rate: $NTASKS tasks simultaneously. " 
 sed 's|\t| |g' $GEO_SAMPLES \
@@ -41,4 +45,5 @@ sed 's|\t| |g' $GEO_SAMPLES \
     | parallel --jobs $NTASKS \
                --colsep " " \
                --progress \
-                ./schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3}"  #1>> $OUTPUT".out" 2>> $OUTPUT".err"
+                ./schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3} $@"  1>> $OUTPUT".out" 2>> $OUTPUT".err"
+
