@@ -55,7 +55,7 @@ shift
 if [ "$#" -gt "0" ]
 then
     # Clear any existing headers
-    find "$HEADERS_DIR""/" -name "*.header" -type f -delete
+    find "$HEADERS_DIR""/" -name "$SRR""*fastq.header" -type f -delete
 
     # Run the fastq-dump.
     if [ "$FASTQDUMP_BACKFILL" == "0" ]; then
