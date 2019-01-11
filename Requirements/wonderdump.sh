@@ -71,9 +71,9 @@ then
 	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
 
 	# Copy headers
-	find "$HEADERS_DIR""/" -name "*.fastq" -exec bash -c 'head -n1 "$1"  > "${1/.fastq/}".fastq.header' _ {}  \;
+	find "$HEADERS_DIR""/" -name "$SRR""*fastq" -exec bash -c 'head -n1 "$1"  > "${1/.fastq/}".fastq.header' _ {}  \;
 
 	# Clear raw data	
-	find "$HEADERS_DIR""/" -name "*.fastq" -type f -delete
+	find "$HEADERS_DIR""/" -name "$SRR""*fastq" -type f -delete
     fi
 fi
