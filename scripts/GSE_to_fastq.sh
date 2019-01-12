@@ -83,5 +83,5 @@ python parse_miniml.py "$MINIMLXML" \
     | cut -f1,30 -d","  \
     | sort \
     | uniq \
-    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NJOBS" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err"
+    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NCPU_NICE" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err"
 

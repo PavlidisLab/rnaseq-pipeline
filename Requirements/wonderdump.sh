@@ -64,7 +64,7 @@ then
 	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
 	
 	# Take raw data and bacfill header
-	find "$SRA_DIR""/" -name "*.fastq.gz" -exec bash -c 'zcat $1 | head -n1 > $HEADER_DIR/$(basename ${1/.fastq.gz/}).fastq.header' _ {}  \;
+	find "$SRA_DIR""/" -name "*.fastq.gz" -exec bash -c 'zcat $1 | head -n1 > $2/$(basename ${1/.fastq.gz/}).fastq.header' _ {} "$HEADERS_DIR"  \;
     else 
 	echo "[INFO] Using backfill mode"
 	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $HEADERS_DIR --skip-technical --readids --dumpbase $FASTQDUMP_SPLIT --clip"

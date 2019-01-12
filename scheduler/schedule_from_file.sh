@@ -37,7 +37,7 @@ shift
 shift
 
 echo "##================Launching new batch======================##"
-echo " Rate: $NTASKS tasks simultaneously. " 
+echo " Rate: $NTASKS tasks simultaneously. " # Default assumption is that each task takes 1/2 machine
 sed 's|\t| |g' $GEO_SAMPLES \
     | cut -d' ' -f2,3,4 \
     | tail -n +2 \
