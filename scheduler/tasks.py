@@ -74,7 +74,6 @@ class QcGSE(BaseTask):
 class CountGSE(BaseTask):
 
     method = "./rsem_count.sh" # TODO: Generalize
-    #wd = "."
 
     def init(self):
         """
@@ -83,19 +82,19 @@ class CountGSE(BaseTask):
         if self.scope is None:
             self.scope = "genes"
             
-        quantDir = os.environ['QUANTDIR']
-        countDir = os.environ['COUNTDIR']
+        quantDir = os.environ['QUANTDIR'] + "/"
+        countDir = os.environ['COUNTDIR'] + "/"
+
 	if 'SCOPE' in  os.environ.keys():
             self.scope = os.environ['SCOPE']
 
-        try:
+        if not os.path.isdir(countDir):
             os.mkdir(countDir)
-        except:
-            pass # Dir must exists
 
         print "INFO: QUANTDIR => ", quantDir
         print "INFO: COUNTDIR => ", countDir
-        self.path_to_inputs = quantDir + "/"  +str(self.gse)+ "/"
+
+        self.path_to_inputs = quantDir + str(self.gse)+ "/"
 
         self.count_source = self.path_to_inputs + "countMatrix."+self.scope
         self.count_destination = countDir +str(self.gse)+ "_counts."+self.scope
@@ -112,7 +111,12 @@ class CountGSE(BaseTask):
         return ProcessGSE(self.gse, self.nsamples)
 
     def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/count_%s.tsv" % self.gse)
+        uniqueID=""
+        if int(self.ignorecommit) == 1:
+            print "INFO: Ignoring previous commits."
+            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
+            
+        return luigi.LocalTarget(self.commit_dir + "/count" + uniqueID + "_%s.tsv" % self.gse)
 
     def run(self):
 
@@ -280,7 +284,12 @@ class LoadGemmaGSE(BaseTask):
         return CheckGemmaGSE(self.gse, self.nsamples)
 
     def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/loadgemma_%s.tsv" % self.gse)
+        uniqueID=""
+        if int(self.ignorecommit) == 1:
+            print "INFO: Ignoring previous commits."
+            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
+            
+        return luigi.LocalTarget(self.commit_dir + "/loadgemma" + uniqueID  + "_%s.tsv" % self.gse)
 
     def run(self):
         job = self.method + self.method_args

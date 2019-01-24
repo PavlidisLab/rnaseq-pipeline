@@ -122,9 +122,12 @@ tmp.*
 *.tgz
 *.sqlite
 *.zip
+*.csv
+
+# Misc files
+*.bak
 
 # Misc directories
-*.csv
 temporary/
 vquantified/
 

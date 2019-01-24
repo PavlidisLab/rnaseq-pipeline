@@ -84,7 +84,7 @@ if [ $# -gt 2 ] && [ "$3" != "{2}" ]; then
 	$REFERENCE \
 	$OUTPUT \
 	" $STAR_SAM_MAPPING "\
-	" --star-shared-memory LoadAndKeep $BAMFILES "
+	" --star-shared-memory $STAR_SHARED_MEMORY $BAMFILES "
     )
 else
     echo " Called for single-end data."
@@ -100,7 +100,7 @@ else
 	$REFERENCE \
 	$OUTPUT \
 	" $STAR_SAM_MAPPING "\
-	" --star-shared-memory LoadAndKeep $BAMFILES "
+	" --star-shared-memory $STAR_SHARED_MEMORY $BAMFILES "
     )    
 fi
 

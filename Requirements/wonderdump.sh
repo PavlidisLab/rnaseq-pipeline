@@ -45,7 +45,7 @@ fi
 
 # Download for backfilling purposes.
 SAMPLE_ACCESSION=$(echo "$SRA_DIR" | rev | cut -f1,2 -d"/" | rev)
-HEADERS_DIR="$BACKFILL_DIR""/""$SAMPLE_ACCESSION"
+HEADERS_DIR="$FASTQHEADERS_DIR""/""$SAMPLE_ACCESSION"
 mkdir -p "$HEADERS_DIR"
 
 # Shift paramters
