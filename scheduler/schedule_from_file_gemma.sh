@@ -50,6 +50,7 @@ sed 's|\t| |g' $GEO_SAMPLES \
     | cut -d' ' -f2,3,4 \
     | tail -n +2 \
     | grep -v "^$" \
+    | grep -f <($ROOT_DIR/scheduler/progressReport.sh | grep -P "X\tX\tX\tX\tX\t[_X]\t_" | cut -f1) \
     | parallel \
         $PARALLEL_MACHINES \
         $GEMMAINFO \

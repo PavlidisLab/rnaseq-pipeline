@@ -60,14 +60,14 @@ then
     # Run the fastq-dump.
     if [ "$FASTQDUMP_BACKFILL" == "0" ]; then
 	echo "[INFO] Using Standard fastq-dump mode"
-	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical  --readids --dumpbase $FASTQDUMP_SPLIT --clip"
+	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip"
 	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
 	
 	# Take raw data and bacfill header
 	find "$SRA_DIR""/" -name "*.fastq.gz" -exec bash -c 'zcat $1 | head -n1 > $2/$(basename ${1/.fastq.gz/}).fastq.header' _ {} "$HEADERS_DIR"  \;
     else 
 	echo "[INFO] Using backfill mode"
-	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $HEADERS_DIR --skip-technical --readids --dumpbase $FASTQDUMP_SPLIT --clip"
+	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $HEADERS_DIR --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip"
 	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
 
 	# Copy headers

@@ -21,6 +21,7 @@ class BaseTask(luigi.Task):
     nsamples = luigi.Parameter(default=0)
     scope = luigi.Parameter(default="genes")
     ignorecommit = luigi.Parameter(default=0)
+    allowsuper = luigi.Parameter(default=False)
     
 
 class QcGSE(BaseTask):
@@ -171,6 +172,8 @@ class CheckGemmaGSE(BaseTask):
             self.method = os.getenv("GEMMACLI").split(" ")
             #self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
             self.method_args = ["addGEOData", "-u",  os.getenv("GEMMAUSERNAME"), "-p", os.getenv("GEMMAPASSWORD"), "-e", self.gse]
+            if self.allowsuper:
+                self.method_args += ["--allowsuper"]
 
         except Exception as e:
             print "$GEMMACLI/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."

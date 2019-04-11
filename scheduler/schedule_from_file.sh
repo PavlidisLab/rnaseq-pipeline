@@ -45,5 +45,4 @@ sed 's|\t| |g' $GEO_SAMPLES \
     | parallel --jobs $NTASKS \
                --colsep " " \
                --progress \
-                ./schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3} $@"  1>> $OUTPUT".out" 2>> $OUTPUT".err"
-
+                ./schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3} $@" # 1>> $OUTPUT".out" 2>> $OUTPUT".err"

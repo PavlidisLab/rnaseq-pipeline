@@ -32,9 +32,11 @@ if [ -n "$MACHINES" ]; then
     PARALLEL_MACHINES=" -S $MACHINES "
 fi
 
-if [ -n "$MODES" ]; then
+if [ ! -z ${MODES+x} ] && [ -n "$MODES" ]; then
     echo "Propagating environment for modes $MODES"
     PARALLEL_MODES=" --env MODES "
+else
+    PARALLEL_MODES=""
 fi
 
 # Download metadata files
@@ -83,5 +85,5 @@ python parse_miniml.py "$MINIMLXML" \
     | cut -f1,30 -d","  \
     | sort \
     | uniq \
-    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NCPU_NICE" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err"
+    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NCPU_ALL" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err" 
 
