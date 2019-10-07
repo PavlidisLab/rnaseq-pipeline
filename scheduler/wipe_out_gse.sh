@@ -1,5 +1,12 @@
 #!/bin/bash
 # set -eu
+
+if [ -z "$1" ]; then
+    echo "Usage: wipe_gse <GSE>"
+    echo "A GSE identifier must be provided."
+    exit 1
+fi
+
 source ../etc/load_configs.sh
 
 GSE=$1
