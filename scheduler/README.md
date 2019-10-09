@@ -93,4 +93,4 @@ For example, `./schedule.sh CountGSE mouse,distributed --gse=GSE64978 --nsamples
 
 When the scheduler is running, you can view monitor the status of tasks via a web browser at `localhost:$SCHEDULER_PORT`. If you're running the pipeline on a remote server without a web browser, connect to the server via an ssh tunnel:
 
-` ssh -L 8079:localhost:8079 username@server.biz -p123456 ` where 8079 is `$SCHEDULER_PORT` and `123456` is the server's ssh port (often 20 by default.)
+` ssh -L 8079:localhost:8079 username@example.com -p123456 ` where 8079 is `$SCHEDULER_PORT` and `123456` is the server's ssh port (often 20 by default.)
