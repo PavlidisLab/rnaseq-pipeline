@@ -47,11 +47,13 @@ GEMMAINFO=" --env GEMMAUSERNAME --env GEMMAPASSWORD --env GEMMACLI "
 
 echo "##================Launching new batch======================##"
 echo " Rate: $NTASKS tasks simultaneously. " 
-sed 's|\t| |g' $GEO_SAMPLES \
-    | cut -d' ' -f2,3,4 \
-    | tail -n +2 \
-    | grep -v "^$" \
-    | grep -f <($ROOT_DIR/scheduler/progressReport.sh | grep -P "X\tX\tX\tX\t[_X]" | cut -f1) \
+#sed 's|\t| |g' $GEO_SAMPLES \
+#    | cut -d' ' -f2,3,4 \
+#    | tail -n +2 \
+#    | grep -v "^$" \
+#    | grep -f <($ROOT_DIR/scheduler/progressReport.sh | grep -P "X\tX\tX\tX\t[_X]" | cut -f1) \
+$ROOT_DIR/scheduler/progressReport.sh | grep -P "X\tX\tX\tX\t[_X]" | cut -f1 \
+    | grep "GSE" \
     | parallel \
         $PARALLEL_MACHINES \
         $GEMMAINFO \
@@ -59,4 +61,6 @@ sed 's|\t| |g' $GEO_SAMPLES \
         --colsep " " \
         --progress \
         --workdir $PWD \
-        $PWD/schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3}" 
+        $PWD/schedule.sh "$JOB $MODES --gse={1} --nsamples=0" 
+
+#       $PWD/schedule.sh "$JOB $MODES{2} --gse={1} --nsamples={3}" 

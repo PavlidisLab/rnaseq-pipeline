@@ -21,10 +21,10 @@ FILES=$DATA/$GSE"/"
 EXPECTED=$2
 
 echo " Files: $FILES"
-if [[ -d "$FILES" ]]; then
-    echo "This is also true"
-    echo $PWD
-    ls -lth $FILES
+if [[ -d "$FILES" ]]; then    
+    echo "Files expected at: $PWD"
+    echo "Samples:"
+    ls $FILES
 fi
 
 if [[ -d $FILES ]]; then
@@ -52,11 +52,13 @@ fi
 # Todo: turn back on once format chosen
 # $SCRIPTS/pipeline_metadata.sh $GSE > $METADATA_OUT
 
+set -o xtrace
 # Count number of sequences
-nSEQUENCES=$(find -L $FILES -name "*"$DEFAULT_MATE_SOURCE".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nSEQUENCES=$(find -L $FILES -name "*"$DEFAULT_MATE_SOURCE"*.fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
 
 # Count number of mate pairs.
-nMATES=$(find -L $FILES -name "*"$DEFAULT_MATE_REPLACEMENT".fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+nMATES=$(find -L $FILES -name "*"$DEFAULT_MATE_REPLACEMENT"*.fastq*"  | sed -e 's|.*\(GSM[0-9]\+\).*|\1|g'  | sort | uniq  | wc -l)
+set +o xtrace
 
 echo "$nSEQUENCES SEQUENCE FILES FOUND."
 echo "$nMATES MATE FILES FOUND."

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ../etc/load_configs.sh
-set -eu
+set -u
 
 if [ "$#" -lt 2 ]; then
     echo "Usage:"

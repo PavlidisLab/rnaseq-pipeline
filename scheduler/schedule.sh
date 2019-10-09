@@ -35,6 +35,7 @@ export SCRIPTS=$SCRIPTS
 export METADATA=$METADATA
 export GEMMACLI=$GEMMACLI
 export GEMMA_LIB=$GEMMA_LIB
+export JAVA_HOME=$JAVA_HOME
 export JAVA_OPTS="-Dgemma.log.dir=$HOME/gemmalogs -Dehcache.disk.sort.dir=$HOME/gemmacache -Xmx45g -XX:MaxPermSize=256M" # TODO: Make part of configs?
 
 echo @ $@

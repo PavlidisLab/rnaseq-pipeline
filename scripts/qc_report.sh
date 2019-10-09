@@ -34,7 +34,7 @@ mkdir -p $OUTDIRMULTI
 #  Call FastQC
 echo "FastQC reports should be in $OUTDIR"
 find $DATA/$PROJECT/ -name "*.fastq*" \
-    | xargs -P $NCPU_NICE -I@ $FASTQC_EXE @ -o $OUTDIR --threads $NCPU_NICE --extract
+    | xargs -P $NCPU_NICE -I@ echo $FASTQC_EXE @ -o $OUTDIR --threads $NCPU_NICE --extract
 echo "Done [fastqc]"
 
 # Aggregate reports

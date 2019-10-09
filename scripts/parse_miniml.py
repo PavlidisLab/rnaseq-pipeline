@@ -17,7 +17,8 @@ from collections import defaultdict
 filepath= None
 if len(sys.argv) < 2:
     print "Usage:"
-    print sys.argv[0], "GSEXXXXXX"
+    print sys.argv[0], "GSEXXXXXX.MINiML.xml"
+    print "Provide a MINiML.xml file as the argument."
     exit(-1)
 else:
     filepath = sys.argv[1]
@@ -30,7 +31,7 @@ TYPE_NODE = DUMMY+"Type" # Should be SRA
 LIBRARYSTRAT_NODE = DUMMY+"Library-Strategy" # Should be RNA-Seq
 RELATION_NODE = DUMMY+"Relation" # Type should be SRA, Target should have the SRX
 
-ACCEPTED_LIBRARYSTRAT = ["RNA-Seq", "miRNA-Seq", "MeDIP-Seq"]
+ACCEPTED_LIBRARYSTRAT = ["RNA-Seq", "miRNA-Seq", "MeDIP-Seq", "ncRNA-Seq"]
 ACCEPTED_RELATIONS = ["SRA"]
 
 GSM_SRX = defaultdict(list)
@@ -44,11 +45,12 @@ def tabulate(root):
             targets = []
             REJECT = False
             if y.text not in ACCEPTED_LIBRARYSTRAT:
-                #print "Rejected on Library strategy.", y.text
+                print "Rejected on Library strategy.", y.text
                 REJECT = True
                 continue
             else:
-                # Data is RNA-Seq (or other accepted formats.)            
+                # Data is RNA-Seq (or other accepted formats.)
+                print "Accepted Library strategy for", y.text
                 targets = []
                 for y in x.findall(RELATION_NODE):
                     if y.get("type") not in ACCEPTED_RELATIONS:

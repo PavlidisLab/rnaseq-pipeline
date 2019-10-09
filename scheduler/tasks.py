@@ -203,7 +203,7 @@ class CheckGemmaGSE(BaseTask):
                 print self.gse  + " is not created in Gemma."                
                 try:
                     print "Attempting to create experiment for " + self.gse
-                    ret = call(job)
+                    ret = call(job, env=os.environ.copy())
                     print "Done."
                     print "Checking that the experiment exists."
                     g.clear()
@@ -300,7 +300,8 @@ class LoadGemmaGSE(BaseTask):
         # Call job
         try:
             print "Attempting to load experiment for " + self.gse
-            ret = call(job)
+            print "JAVA_HOME:", rnaseq_pipeline().JAVA_HOME
+            ret = call(job, env=os.environ.copy())
             print "Done."
         except Exception as e:
             print "EXCEPTION: Could not load Gemma experiment with '" + " ".join(job) + "' ."

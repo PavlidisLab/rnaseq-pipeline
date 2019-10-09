@@ -14,20 +14,38 @@ def rnaseq_add():
     """
     Call the gemma command line script and upload available count matrices from the pipeline.
     """
+
     bash_command = ("""$GEMMACLI rnaseqDataAdd -u $GEMMAUSERNAME -p $GEMMAPASSWORD """ +
                     """-e {arg_shortname} -a Generic_{arg_taxon}_ensemblIds -count {arg_path}/{arg_shortname}_counts.genes -rpkm {arg_path}/{arg_shortname}_fpkm.genes""".format(
             arg_path = args.path, 
             arg_taxon = args.taxon, 
             arg_shortname= args.shortname))
 
+    try:
+        validate_args(args)
+    except Exception as e:
+        print "Argument validation failed."
+        raise e
+        
+
     print "Executing:"
     print bash_command
 
     retcode = os.system(bash_command)
-
+    print "gemmaCLI executed with return code:", retcode
     return retcode
         
-
+def validate_args(args):
+    # Check if count matrix exists.            
+    for mat_type in ["counts", "fpkm"]:
+        path_to_counts = args.path + "/" + args.shortname + "_"+mat_type+".genes"        
+        try:
+            # is fh readable?
+            open(path_to_counts, 'r')
+        except IOError as fe:
+            print "Problem with", mat_type, "matrix file."
+            print "Count matrix may not exist at (",path_to_counts,")."
+            raise fe        
 
 if __name__ == '__main__':
     import argparse
@@ -50,4 +68,4 @@ if __name__ == '__main__':
     
     retcode = rnaseq_add()
     if retcode != 0:
-        raise Exception("[ERROR] load_rnaseq_to_gemma.py; non-zero return code. ")
+        raise Exception("[ERROR] load_rnaseq_to_gemma.py; non-zero return code: " + str(retcode))

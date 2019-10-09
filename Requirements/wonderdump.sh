@@ -37,9 +37,11 @@ then
     PATH1=${SRR:0:6}
     PATH2=${SRR:0:10}
     echo "*** downloading: $SRA_FILE"
-    echo "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra -O $TMP_FILE"
-    wget "ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/""${PATH1}""/""${PATH2}""/""${SRR}"".sra" -O "$TMP_FILE"
-    mv "$TMP_FILE" "$SRA_FILE"
+    #echo "wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/${PATH1}/${PATH2}/${SRR}.sra -O $TMP_FILE"
+    #wget "ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/""${PATH1}""/""${PATH2}""/""${SRR}"".sra" -O "$TMP_FILE"
+    #mv "$TMP_FILE" "$SRA_FILE"
+    ${PREFETCH_EXE} -X ${PREFETCH_MAXSIZE} ${SRR}
+    ln -s ${SRA_CACHE}/${SRR}".sra" $SRA_FILE
 fi
 
 
