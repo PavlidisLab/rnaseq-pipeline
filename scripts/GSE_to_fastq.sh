@@ -1,8 +1,13 @@
 #!/bin/bash
+
+#
+# This script downloads a GSE metadata and produces a list of SRA and SRR pairs
+# for downstream processing.
+#
+
 set -eu
 
-cd "$(dirname "$0")" 
-source ../etc/load_configs.sh
+cd "$(dirname "$0")"
 
 if [ "$#" -ne 1 ]; then
     ACCESSION="GSE89692"
@@ -13,10 +18,21 @@ if [ "$#" -ne 1 ]; then
     echo "Example:"
     echo "$0 $ACCESSION"
     echo "   where $DATA/$ACCESSION would hold all the downloaded data."
-    exit -1
+    exit 1
 fi
 
-mkdir -p "$LOGS""/""$(basename "$0")"
+shellcheck_suppress () {
+    # Suppress a shellcheck warning by adding something harmless to then end of a pipe
+    tee;
+};
+export -f shellcheck_suppress
+
+## ShellCheck specific
+suppress_SC2001 () {
+    # Suppress the echo|sed replacement warning for cases where native bash substitutions isn't enough.
+    shellcheck_suppress ;
+};
+export -f suppress_SC2001
 
 ACCESSION="$1"
 RANK="$(echo "$ACCESSION" | sed 's|...$|nnn|g' | suppress_SC2001)"
@@ -28,12 +44,12 @@ DOWNLOAD_DIR="$DATA/$ACCESSION/METADATA"
 
 PARALLEL_MACHINES=""
 if [ -n "$MACHINES" ]; then
-    echo "Using distributed mode on: $MACHINES"
+    echo "Using distributed mode on: $MACHINES" 1>&2
     PARALLEL_MACHINES=" -S $MACHINES "
 fi
 
 if [ ! -z ${MODES+x} ] && [ -n "$MODES" ]; then
-    echo "Propagating environment for modes $MODES"
+    echo "Propagating environment for modes $MODES" 1>&2
     PARALLEL_MODES=" --env MODES "
 else
     PARALLEL_MODES=""
@@ -54,36 +70,30 @@ MINIMLXML="$DOWNLOAD_DIR/$ACCESSION.xml"
 #if [ ! -f "$SOFTEXTRACTED" ]
 #then
 #    wget -O $SOFTOUT $SOFTFILE
-#    echo "Extracting $SOFTOUT"
-#    gunzip -f $SOFTOUT 
+#    echo "Extracting $SOFTOUT" 1>&2
+#    gunzip -f $SOFTOUT
 #else
-#    echo "Zipped SOFT File exists at $SOFTOUT"
+#    echo "Zipped SOFT File exists at $SOFTOUT" 1>&2
 #fi
 ####
 
 if [ ! -f "$MINIMLXML" ]
 then
     wget -O "$MINIMLOUT" "$MINIML"
-    echo "Extracting $MINIMLOUT"
+    echo "Extracting $MINIMLOUT" 1>&2
     tar -xvzf "$MINIMLOUT" --to-stdout > "$MINIMLXML"
 else
-    echo "MINIML xml file exists at $MINIMLXML."
+    echo "MINIML xml file exists at $MINIMLXML." 1>&2
 fi
 
-LOGPREFIX="$LOGS""/""$(basename "$0")""/""$ACCESSION"
-mkdir -p "$(basename "$LOGPREFIX")"
-
-echo "Launching parallel Wonderdump"
 METADATA_URL="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term="
 
-echo "Parsing MINIML xml at: $MINIMLXML"
+echo "Parsing MINIML xml at: $MINIMLXML" 1>&2
 python parse_miniml.py "$MINIMLXML" \
     | cut -f1 -d" " \
-    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@"  2>> "$LOGPREFIX.wget.err" \
+    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" \
     | grep -v "SampleName" \
     | grep -v "^$" \
     | cut -f1,30 -d","  \
     | sort \
-    | uniq \
-    | parallel --halt now,fail=1 --colsep ',' $PARALLEL_MACHINES $PARALLEL_MODES -j "$NCPU_ALL" "$WONDERDUMP_EXE" {1} "$DATA/$ACCESSION/{2}" 1> $LOGPREFIX".out" 2> $LOGPREFIX".err" 
-
+    | uniq

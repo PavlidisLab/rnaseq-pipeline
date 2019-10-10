@@ -10,7 +10,6 @@
 set -ue
 
 cd "$(dirname "$0")"
-source ../etc/load_configs.sh
 
 # ASSUMING CONFIGURATION FILE HAS $FASTQDUMP_EXE
 
@@ -27,9 +26,6 @@ mkdir -p "$SRA_DIR"
 # Create the full path to the file.
 SRA_FILE="$SRA_DIR/$SRR.sra"
 TMP_FILE="$SRA_DIR/$SRR.tmp"
-
-LOGDIR="$LOGS/""$(basename "$0")""/""$(basename $(dirname "$SRA_DIR"))""/""$(basename "$SRA_DIR")""/""$SRR"
-mkdir -p "$LOGDIR"
 
 # Download only if it does not exist.
 if [ ! -f "$SRA_FILE" ];
@@ -62,20 +58,18 @@ then
     # Run the fastq-dump.
     if [ "$FASTQDUMP_BACKFILL" == "0" ]; then
 	echo "[INFO] Using Standard fastq-dump mode"
-	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip"
-	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
-	
+	$FASTQDUMP_EXE $SRA_FILE --outdir $SRA_DIR --gzip --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip
+
 	# Take raw data and bacfill header
 	find "$SRA_DIR""/" -name "*.fastq.gz" -exec bash -c 'zcat $1 | head -n1 > $2/$(basename ${1/.fastq.gz/}).fastq.header' _ {} "$HEADERS_DIR"  \;
-    else 
+    else
 	echo "[INFO] Using backfill mode"
-	CMD="$FASTQDUMP_EXE $SRA_FILE --outdir $HEADERS_DIR --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip"
-	$CMD > "$LOGDIR"".fastqdump.out" 2> "$LOGDIR"".fastqdump.err"
+	$FASTQDUMP_EXE $SRA_FILE --outdir $HEADERS_DIR --skip-technical $FASTQDUMP_READIDS --dumpbase $FASTQDUMP_SPLIT --clip
 
 	# Copy headers
 	find "$HEADERS_DIR""/" -name "$SRR""*fastq" -exec bash -c 'head -n1 "$1"  > "${1/.fastq/}".fastq.header' _ {}  \;
 
-	# Clear raw data	
+	# Clear raw data
 	find "$HEADERS_DIR""/" -name "$SRR""*fastq" -type f -delete
     fi
 fi
