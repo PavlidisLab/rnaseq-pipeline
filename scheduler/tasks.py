@@ -10,6 +10,9 @@ from gemmaclient import GemmaClientAPI
 import pandas as pd
 import urllib
 from subprocess import check_call
+import gzip
+import tarfile
+from miniml_utils import extract_rnaseq_gsm
 
 # see luigi.cfg for details
 class rnaseq_pipeline(luigi.Config):
@@ -70,6 +73,9 @@ class rnaseq_pipeline(luigi.Config):
     DEFAULT_MATE_SOURCE = luigi.Parameter()
     DEFAULT_MATE_REPLACEMENT = luigi.Parameter()
 
+    def asenv(self, attrs):
+        return {attr: getattr(self, attr) for attr in attrs}
+
 class BaseTask(luigi.Task):
     here = os.path.dirname(os.path.realpath(__file__))
     commit_dir = os.path.dirname(os.path.realpath(__file__)) + "/commit"
@@ -79,220 +85,323 @@ class BaseTask(luigi.Task):
 
     # Para meters
     gse = luigi.Parameter()
-    nsamples = luigi.Parameter(default=0)
+    nsamples = luigi.IntParameter(default=0)
     scope = luigi.Parameter(default="genes")
-    ignorecommit = luigi.Parameter(default=0)
+    ignorecommit = luigi.Parameter(default=False)
     allowsuper = luigi.Parameter(default=False)
 
-class QcGSE(BaseTask):
-
-    wd = BaseTask.SCRIPTS + "/"
-
-    method = "./qc_download.sh"
-
-    # Todo: Check taxon/assembly relation.
-
-    def requires(self):
-        return DownloadExperiment(self.gse)
-
-    def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/qc_%s.tsv" % self.gse)
-
-    def run(self):
-        try:
-            print "Running from " + self.wd
-            os.chdir(self.wd)
-
-        except Exception as e:
-            print "=======> QcGSE <=========="
-            print e.message
-            print "Error changing to", self.wd, "when in", os.getcwd()
-            raise e
-
-        # Call job
-        try:
-            job = [ self.method, self.gse, self.nsamples ]
-
-            ret = None
-            ret = call(job)
-
-        except Exception as e:
-            print "EXCEPTION:", e, "with", " ".join([str(x) for x in job])
-            print "Message:",  e.message
-            raise e
-
-        if ret != 0:
-            print "# Job '{}' executed, but failed with exit code {}.".format( " ".join([str(x) for x in job]), ret)
-            exit(-1)
-
-        # Commit output
-        with self.output().open('w') as out_file:
-            out_file.write(self.gse+"\n")
-
-
-
-
-class CountGSE(BaseTask):
-
-    method = "./rsem_count.sh" # TODO: Generalize
-
-    def init(self):
-        """
-        Set paths and whatnot.
-        """
-        if self.scope is None:
-            self.scope = "genes"
-
-        quantDir = rnaseq_pipeline().QUANTDIR + "/"
-        countDir = rnaseq_pipeline().COUNTDIR + "/"
-
-        if 'SCOPE' in  os.environ.keys():
-            self.scope = os.environ['SCOPE']
-
-        if not os.path.isdir(countDir):
-            os.mkdir(countDir)
-
-        print "INFO: QUANTDIR => ", quantDir
-        print "INFO: COUNTDIR => ", countDir
-
-        self.path_to_inputs = quantDir + str(self.gse)+ "/"
-
-        self.count_source = self.path_to_inputs + "countMatrix."+self.scope
-        self.count_destination = countDir +str(self.gse)+ "_counts."+self.scope
-
-        self.fpkm_source = self.path_to_inputs + "fpkmMatrix."+self.scope
-        self.fpkm_destination = countDir  +str(self.gse)+ "_fpkm."+self.scope
-
-        self.tpm_source = self.path_to_inputs + "tpmMatrix."+self.scope
-        self.tpm_destination = countDir  +str(self.gse)+ "_tpm."+self.scope
-
-
-    def requires(self):
-        self.init()
-        return ProcessGSE(self.gse, self.nsamples)
-
-    def output(self):
-        uniqueID=""
-        if int(self.ignorecommit) == 1:
-            print "INFO: Ignoring previous commits."
-            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
-
-        return luigi.LocalTarget(self.commit_dir + "/count" + uniqueID + "_%s.tsv" % self.gse)
-
-    def run(self):
-
-        try:
-            os.chdir(self.wd)
-        except Exception as e:
-            print "=======> CountGSE <=========="
-            print e.message
-            print "Error changing to", self.wd, "when in", os.getcwd()
-            raise e
-
-
-        # Call job
-        try:
-            job = [ self.method, self.path_to_inputs, self.scope ]
-            ret = call(job)
-
-            print "Copying files from (e.g. ", self.count_source, ") to destination (e.g. ", self.count_destination, ")."
-            copyfile( self.count_source, self.count_destination)
-            copyfile( self.fpkm_source, self.fpkm_destination)
-            copyfile( self.tpm_source, self.tpm_destination)
-
-            # Might as well do isoforms while we're here.
-            job = [ self.method, self.path_to_inputs, "isoforms" ]
-            ret = call(job)
-
-        except Exception as e:
-            print "EXCEPTION:", e, "with", " ".join(job)
-            print e.message
-            ret = -1
-
-        if ret:
-            exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
-
-        # Commit output
-        with self.output().open('w') as out_file:
-                 out_file.write(self.gse+"\n")
-
-
-class CheckGemmaGSE(BaseTask):
+class PrefetchSRR(ExternalProgramTask):
     """
-    Check that the GSE is ready to be loaded in Gemma.
+    Prefetch a SRR sample using prefetch
     """
-    method = None
-    method_args = None
+    srr = luigi.Parameter()
 
-    def init(self):
-        """
-        Set CLI method.
-        """
-        try:
-            self.method = rnaseq_pipeline().GEMMACLI.split(" ")
-            #self.method_args = ["addGEOData", "-u",  rnaseq_pipeline().GEMMAUSERNAME"), "-p", rnaseq_pipeline().GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
-            self.method_args = ["addGEOData", "-u",  rnaseq_pipeline().GEMMAUSERNAME, "-p", rnaseq_pipeline().GEMMAPASSWORD, "-e", self.gse]
-            if self.allowsuper:
-                self.method_args += ["--allowsuper"]
+    # FIXME: prefetch sometimes fail and will leave heavy temporary files
+    # behind
+    retry_count = 5
 
-        except Exception as e:
-            print "$GEMMACLI/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
-            raise e
+    resources = {'cpu': 1}
 
-        print "INFO: Method => " + str(self.method_args)
+    def program_environment(self):
+        # ensures that SRA Toolkit dumps content in scratch
+        return {'HOME': '/cosmos/scratch'}
 
-    def requires(self):
-        self.init()
-        return GatherMetadataGSE(self.gse, self.nsamples)
+    def program_args(self):
+        return [rnaseq_pipeline().PREFETCH_EXE, self.srr]
 
     def output(self):
-        return luigi.LocalTarget(self.commit_dir + "/checkgemma_%s.tsv" % self.gse)
+        return luigi.LocalTarget(join(rnaseq_pipeline().SRA_CACHE, '{}.sra'.format(self.srr)))
+
+class ExtractSRR(ExternalProgramTask):
+    """
+    Download FASTQ
+    """
+    gse = luigi.Parameter()
+    gsm = luigi.Parameter()
+    srr = luigi.Parameter()
+
+    resources = {'cpu': 1}
+
+    def requires(self):
+        return PrefetchSRR(self.srr)
+
+    def program_environment(self):
+        # ensures that SRA Toolkit dumps content in scratch
+        return {'HOME': '/cosmos/scratch'}
+
+    def program_args(self):
+        return [rnaseq_pipeline().PREFETCH_EXE, self.srr]
+
+    def program_args(self):
+        # FIXME: this is not atomic
+        return [rnaseq_pipeline().FASTQDUMP_EXE,
+                '--gzip', '--clip',
+                '--skip-technical',
+                rnaseq_pipeline().FASTQDUMP_READIDS,
+                '--dumpbase',
+                rnaseq_pipeline().FASTQDUMP_SPLIT,
+                '--outdir', os.path.dirname(self.output().path),
+                self.input().path]
+
+    def output(self):
+        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.gse, self.gsm, self.srr + '_1.fastq.gz'))
+
+class DownloadGSMMetadata(luigi.Task):
+    gse = luigi.Parameter()
+    gsm = luigi.Parameter()
 
     def run(self):
-        prejob = self.method + []
-        job = self.method + self.method_args
+        # TODO: find a nicer way to query this data
+        with self.output().temporary_path() as dest_filename:
+            urllib.urlretrieve('https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&amp;db=sra&amp;rettype=runinfo&amp;term={}'.format(self.gsm),
+                               filename=dest_filename)
 
-        # Call job
-        try:
-            g = GemmaClientAPI(dataset=self.gse)
-            username, password = rnaseq_pipeline().GEMMAUSERNAME, rnaseq_pipeline().GEMMAPASSWORD
-            g.setCredentials(username, password)
+    def output(self):
+        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.gse, 'METADATA', '{}.csv'.format(self.gsm)))
 
-            ret = 0
-            if g.isEmpty():
-                print self.gse  + " is not created in Gemma."
-                try:
-                    print "Attempting to create experiment for " + self.gse
-                    ret = call(job, env=os.environ.copy())
-                    print "Done."
-                    print "Checking that the experiment exists."
-                    g.clear()
-                    if g.isEmpty():
-                        print "Experiment doesn't appear to have been added."
-                        ret = -1
-                    else:
-                        print "Experiment added."
+class DownloadGSM(ExternalProgramTask):
+    """
+    Download all SRR related to a GSM
+    """
+    gse = luigi.Parameter()
+    gsm = luigi.Parameter()
 
-                except Exception as e:
-                    print "EXCEPTION: Could not create Gemma experiment with '" + " ".join(job) + "' ."
-                    ret = -1
-            else:
-                print self.gse  + " exists and should be ready for upload."
-                ret = 0
+    def requires(self):
+        return DownloadGSMMetadata(self.gse, self.gsm)
 
-        except Exception as e:
-            print "EXCEPTION:", e, "with checkGemma for", self.gse
-            print e.message
-            ret = -1
+    def run(self):
+        # find all SRA runs associated to this GSM
+        df = pd.read_csv(self.input().path)
+        yield [ExtractSRR(self.gse, self.gsm, run.Run) for _, run in df.iterrows()]
 
-        if ret:
-            print "Error code", ret, "."
-            print ""
-            exit( "CheckGemmaGSE failed for request '{}' with exit code {}.".format( g.getUrl(), ret) )
+    def output(self):
+        # this needs to be satisfied first
+        if not self.input().exists():
+            return self.input()
 
-        # Commit output
-        with self.output().open('w') as out_file:
-                 out_file.write(g.toString()+"\n")
+        df = pd.read_csv(self.input().path)
+        return [ExtractSRR(self.gse, self.gsm, run.Run).output()
+                    for _, run in df.iterrows()]
+
+class DownloadGSEMetadata(luigi.Task):
+    gse = luigi.Parameter()
+
+    def run(self):
+        # download compressed metadata
+        if not os.path.exists(metadata_xml_tgz):
+            # ensure that the download path exists
+            self.output().makedirs()
+            with self.output().temporary_path() as dest_filename:
+                urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
+                                   filename=dest_filename)
+
+        # extract metadata
+        with tarfile.open(metadata_xml_tgz, 'r:gz') as tf:
+            tf.extract('{}_family.xml'.format(self.gse), os.path.dirname(self.output().path))
+
+    def output(self):
+        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.gse, 'METADATA', '{}_family.xml'.format(self.gse)))
+
+class DownloadGSE(luigi.Task):
+    """
+    Download all GSM related to a GSE
+    """
+    gse = luigi.Parameter()
+
+    def requires(self):
+        return DownloadGSEMetadata(self.gse)
+
+    def run(self):
+        # parse MINiML format to get GSM and download each of them
+        yield [DownloadGSM(self.gse, gsm)
+                for gsm in extract_rnaseq_gsm(self.input().path)]
+
+    def output(self):
+        # this needs to be satisfied first
+        if not self.input().exists():
+            return self.input()
+        else:
+            return [DownloadGSM(self.gse, gsm).output()
+                        for gsm in extract_rnaseq_gsm(self.input().path)]
+
+class DownloadArrayExpressSample(luigi.Task):
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+    # TODO: remove this URL
+    sample_url = luigi.Parameter()
+
+    def run(self):
+        with self.output().temporary_path() as dest_filename:
+            urllib.urlretrieve(self.sample_url, filename=dest_filename)
+
+    def output(self):
+        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.experiment_id, self.sample_id, os.path.basename(self.sample_url)))
+
+class DownloadArrayExpressExperiment(luigi.Task):
+    """
+    Download all the related ArrayExpress sample to this ArrayExpress experiment.
+    """
+    experiment_id = luigi.Parameter()
+    def run(self):
+        ae_df = pd.read_csv('http://www.ebi.ac.uk/arrayexpress/files/{0}/{0}.sdrf.txt'.format(self.experiment_id), sep='\t')
+        yield [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=s['Comment[ENA_RUN]'], sample_url=s['Comment[FASTQ_URI]'])
+                for ix, s in ae_df.iterrows()]
+
+class DownloadSample(luigi.Task):
+    """
+    This is a generic task for downloading an individual sample in an
+    experiment.
+    """
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+
+    def requires(self):
+        if self.experiment_id.startswith('GSE'):
+            return DownloadGSM(self.experiment_id, self.sample_id)
+        else:
+            return DownloadArrayExpressSample(self.experiment_id, self.sample_id)
+
+    def output(self):
+        if self.experiment_id.startswith('GSE'):
+            return DownloadGSM(self.experiment_id, self.sample_id).output()
+        else:
+            return DownloadArrayExpressSample(self.experiment_id, self.sample_id).output()
+
+class DownloadExperiment(luigi.Task):
+    """
+    This is a generic task that detects which kind of experiment is intended to
+    be downloaded so that downstream tasks can process regardless of the data
+    source.
+    """
+    experiment_id = luigi.Parameter()
+    def requires(self):
+        if self.experiment_id.startswith('GSE'):
+            return DownloadGSE(self.experiment_id)
+        else:
+            return DownloadArrayExpressExperiment(self.experiment_id)
+
+    def output(self):
+        if self.experiment_id.startswith('GSE'):
+            return DownloadGSE(self.experiment_id).output()
+        else:
+            return DownloadArrayExpressExperiment(self.experiment_id).output()
+
+class QcExperiment(ExternalProgramTask):
+    experiment_id = luigi.Parameter()
+    nsamples = luigi.IntParameter()
+
+    resources = {'cpu': 1}
+
+    def requires(self):
+        return DownloadExperiment(self.experiment_id)
+
+    def program_environment(self):
+        return rnaseq_pipeline().asenv(['DATA', 'METADATA', 'MDL', 'DEFAULT_MATE_SOURCE', 'DEFAULT_MATE_REPLACEMENT', 'MODES'])
+
+    def program_args(self):
+        return [join(rnaseq_pipeline().SCRIPTS, 'qc_download.sh'), self.experiment_id, self.nsamples]
+
+    def output(self):
+        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.experiment_id, 'qc-done'))
+
+class AlignSample(ExternalProgramTask):
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+
+    reference = luigi.Parameter(default='mouse')
+    reference_build = luigi.Parameter(default='ensembl38')
+
+    # this setup should allow us to run 16 parallel jobs
+    resources = {'cpu': 4, 'mem': 32}
+
+    def requires(self):
+        # FIXME: put this in run
+        self.output()[0].makedirs()
+        check_output(['mkdir', '-p', join(rnaseq_pipeline().TMPDIR, self.experiment_id, self.sample_id)])
+        return DownloadSample(self.experiment_id, self.sample_id)
+
+    def program_args(self):
+        args = [join(rnaseq_pipeline().RSEM_DIR, 'rsem-calculate-expression'), '-p', self.resources['cpu']]
+
+        args.extend([
+            '--time',
+            '--star',
+            '--star-path', rnaseq_pipeline().STAR_PATH,
+            '--star-gzipped-read-file',
+            '--temporary-folder', join(rnaseq_pipeline().TMPDIR, self.experiment_id, self.sample_id)])
+
+        # FIXME
+        if len(self.input()) == 1:
+            pass # single-ended (default)
+        elif len(self.input()) == 2:
+            args.append('--paired-end')
+        else:
+            raise ValueError('More than 2 input FASTQs are not supported.')
+
+        for fastq in self.input():
+            args.append(fastq.path)
+
+        # STAR reference
+        args.append('/space/grp/Pipelines/rnaseq-pipeline/Assemblies/runtime/{0}_ref{1}/{0}_0'.format(self.reference, self.reference_build))
+
+        # output
+        args.append(join(rnaseq_pipeline().QUANTDIR, self.experiment_id, self.sample_id))
+
+        args.extend([
+            '--star-shared-memory', rnaseq_pipeline().STAR_SHARED_MEMORY,
+            '--keep-intermediate-files'])
+
+        return args
+
+    def output(self):
+        destdir = join(rnaseq_pipeline().QUANTDIR, self.experiment_id)
+        return [luigi.LocalTarget(join(destdir, '{}.isoforms.results'.format(self.sample_id))),
+                luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))]
+
+class AlignExperiment(luigi.Task):
+    experiment_id = luigi.Parameter()
+    nsamples = luigi.IntParameter()
+
+    reference = luigi.Parameter(default='mouse')
+    reference_build = luigi.Parameter(default='ensembl38')
+
+    def requires(self):
+        return QcExperiment(self.experiment_id, self.nsamples)
+
+    def run(self):
+        # FIXME: this is a hack, really, and it will not work with ArrayExpress
+        yield [AlignSample(self.experiment_id, sample.gsm, self.reference, self.reference_build)
+                    for sample in list(DownloadExperiment(self.experiment_id).requires().run())[0]]
+
+    def output(self):
+        return [AlignSample(self.experiment_id, sample.gsm, self.reference, self.reference_build).output()
+                    for sample in list(DownloadExperiment(self.experiment_id).requires().run())[0]]
+
+class CountExperiment(ExternalProgramTask):
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+
+    reference = luigi.Parameter(default='mouse')
+    reference_build = luigi.Parameter(default='ensembl38')
+
+    scope = luigi.Parameter(default='genes')
+
+    resources = {'cpu': 1}
+
+    def requires(self):
+        return AlignExperiment(self.experiment_id, self.sample_id, self.reference, self.reference_build)
+
+    def program_args(self):
+        return [join(rnaseq_pipeline().ROOT_DIR, 'Pipelines/rsem/rsem_count.sh'), join(rnaseq_pipeline().QUANTDIR, self.experiment_id), self.scope]
+
+    def program_environment(self):
+        return rnaseq_pipeline().asenv(['RSEM_DIR'])
+
+    def output(self):
+        destdir = join(rnaseq_pipeline().QUANTDIR, self.experiment_id)
+        return [luigi.LocalTarget(join(destdir, '{}.countMatrix'.format(self.sample_id))),
+                luigi.LocalTarget(join(destdir, '{}.tpmMatrix'.format(self.sample_id))),
+                luigi.LocalTarget(join(destdir, '{}.fpkmMatrix'.format(self.sample_id)))]
 
 class LoadGemmaGSE(BaseTask):
     """
@@ -375,6 +484,83 @@ class LoadGemmaGSE(BaseTask):
         # Commit output
         with self.output().open('w') as out_file:
             out_file.write(" ".join(job) + "\n")
+
+class CheckGemmaGSE(BaseTask):
+    """
+    Check that the GSE is ready to be loaded in Gemma.
+    """
+    method = None
+    method_args = None
+
+    def init(self):
+        """
+        Set CLI method.
+        """
+        try:
+            self.method = rnaseq_pipeline().GEMMACLI.split(" ")
+            #self.method_args = ["addGEOData", "-u",  rnaseq_pipeline().GEMMAUSERNAME"), "-p", rnaseq_pipeline().GEMMAPASSWORD"), "-e", self.gse, "--allowsuper"]
+            self.method_args = ["addGEOData", "-u",  rnaseq_pipeline().GEMMAUSERNAME, "-p", rnaseq_pipeline().GEMMAPASSWORD, "-e", self.gse]
+            if self.allowsuper:
+                self.method_args += ["--allowsuper"]
+
+        except Exception as e:
+            print "$GEMMACLI/GEMMAUSERNAME/GEMMPASSWORD appear to not all be set. Please set environment variables."
+            raise e
+
+        print "INFO: Method => " + str(self.method_args)
+
+    def requires(self):
+        self.init()
+        return GatherMetadataGSE(self.gse, self.nsamples)
+
+    def output(self):
+        return luigi.LocalTarget(self.commit_dir + "/checkgemma_%s.tsv" % self.gse)
+
+    def run(self):
+        prejob = self.method + []
+        job = self.method + self.method_args
+
+        # Call job
+        try:
+            g = GemmaClientAPI(dataset=self.gse)
+            username, password = rnaseq_pipeline().GEMMAUSERNAME, rnaseq_pipeline().GEMMAPASSWORD
+            g.setCredentials(username, password)
+
+            ret = 0
+            if g.isEmpty():
+                print self.gse  + " is not created in Gemma."
+                try:
+                    print "Attempting to create experiment for " + self.gse
+                    ret = call(job, env=os.environ.copy())
+                    print "Done."
+                    print "Checking that the experiment exists."
+                    g.clear()
+                    if g.isEmpty():
+                        print "Experiment doesn't appear to have been added."
+                        ret = -1
+                    else:
+                        print "Experiment added."
+
+                except Exception as e:
+                    print "EXCEPTION: Could not create Gemma experiment with '" + " ".join(job) + "' ."
+                    ret = -1
+            else:
+                print self.gse  + " exists and should be ready for upload."
+                ret = 0
+
+        except Exception as e:
+            print "EXCEPTION:", e, "with checkGemma for", self.gse
+            print e.message
+            ret = -1
+
+        if ret:
+            print "Error code", ret, "."
+            print ""
+            exit( "CheckGemmaGSE failed for request '{}' with exit code {}.".format( g.getUrl(), ret) )
+
+        # Commit output
+        with self.output().open('w') as out_file:
+                 out_file.write(g.toString()+"\n")
 
 class GatherMetadataGSE(BaseTask):
     method = ["bash", "-c"]
@@ -555,115 +741,3 @@ class PurgeGSE(BaseTask):
         # Commit output
         with self.output().open('w') as out_file:
             out_file.write(self.gse+"\n")
-
-class ProcessGSE(BaseTask):
-
-    method = "./multiple_rsem.sh" # TODO: Generalize
-
-    def requires(self):
-        return QcGSE(self.gse, self.nsamples)
-
-    def output(self):
-        uniqueID=""
-        if int(self.ignorecommit) == 1:
-            print "INFO: Ignoring previous commits."
-            uniqueID = "_" + str(uuid.uuid1()) # Skipping commit logic.
-
-        return luigi.LocalTarget(self.commit_dir + "/process" +uniqueID+ "_%s.tsv" % self.gse)
-
-    def run(self):
-        try:
-            os.chdir(self.wd)
-        except Exception as e:
-            print "Error changing to", self.wd, "when in", os.getcwd()
-            raise e
-
-        MODES = "MODES='"+BaseTask.MODES+"'"
-        # Call job
-        try:
-            job = [self.method, self.gse, self.gse]
-            ret = call(job, env=os.environ)
-
-        except Exception as e:
-            print "=======> ProcessGSE <=========="
-            print e.message
-            print "EXCEPTION:", e, "with", " ".join(job)
-
-            ret = -1
-
-        if ret:
-            exit("Job '{}' failed with exit code {}.".format( " ".join(job), ret))
-
-        # Commit output
-        with self.output().open('w') as out_file:
-                 out_file.write(self.gse+"\n")
-
-class DownloadSRR(ExternalProgramTask):
-    gse = luigi.Parameter()
-    sra = luigi.Parameter()
-    srr = luigi.Parameter()
-
-    def program_environment(self):
-        return {'DATA': rnaseq_pipeline().DATA,
-                'LOGS': rnaseq_pipeline().LOGS,
-                'MACHINES': rnaseq_pipeline().MACHINES,
-                'NCPU_ALL': rnaseq_pipeline().NCPU_ALL,
-                'WONDERDUMP_EXE': rnaseq_pipeline().WONDERDUMP_EXE,
-                'PREFETCH_EXE': rnaseq_pipeline().PREFETCH_EXE,
-                'PREFETCH_MAXSIZE': rnaseq_pipeline().PREFETCH_MAXSIZE,
-                'SRA_CACHE': rnaseq_pipeline().SRA_CACHE,
-                'FASTQHEADERS_DIR': rnaseq_pipeline().FASTQHEADERS_DIR,
-                'FASTQDUMP_EXE': rnaseq_pipeline().FASTQDUMP_EXE,
-                'FASTQDUMP_SPLIT': rnaseq_pipeline().FASTQDUMP_SPLIT,
-                'FASTQDUMP_READIDS': rnaseq_pipeline().FASTQDUMP_READIDS,
-                'FASTQDUMP_BACKFILL': rnaseq_pipeline().FASTQDUMP_BACKFILL,
-                'HOME': '/cosmos/scratch'}
-
-    def program_args(self):
-        return [rnaseq_pipeline().WONDERDUMP_EXE, self.srr, join(rnaseq_pipeline().DATA, self.gse, self.sra)]
-
-    def output(self):
-        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.gse, self.sra, '{}.sra'.format(self.srr)))
-
-class DownloadGSE(luigi.Task):
-    gse = luigi.Parameter()
-
-    def run(self):
-        method = join(rnaseq_pipeline().SCRIPTS, "GSE_to_fastq.sh")
-        out = check_output([method, self.gse], env={'DATA': rnaseq_pipeline().DATA, 'LOGS': rnaseq_pipeline().LOGS, 'MACHINES': rnaseq_pipeline().MACHINES})
-        yield [DownloadSRR(self.gse, line.split(',')[1], line.split(',')[0]) for line in out.splitlines()]
-
-class DownloadArrayExpressSample(luigi.Task):
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
-    sample_url = luigi.Parameter()
-
-    def run(self):
-        check_call(['mkdir', '-p', join(rnaseq_pipeline().DATA, self.experiment_id, self.sample_id)])
-        dest_filename = join(rnaseq_pipeline().DATA, self.experiment_id, self.sample_id, os.path.basename(self.sample_url))
-        urllib.urlretrieve(self.sample_url, filename=dest_filename + '.tmp')
-        os.rename(dest_filename + '.tmp', dest_filename)
-
-    def output(self):
-        return luigi.LocalTarget(join(rnaseq_pipeline().DATA, self.experiment_id, self.sample_id, os.path.basename(self.sample_url)))
-
-class DownloadArrayExpress(luigi.Task):
-    experiment_id = luigi.Parameter()
-
-    def run(self):
-        ae_df = pd.read_csv('http://www.ebi.ac.uk/arrayexpress/files/{0}/{0}.sdrf.txt'.format(self.experiment_id), sep='\t')
-        yield [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=s['Comment[ENA_RUN]'], sample_url=s['Comment[FASTQ_URI]'])
-                for ix, s in ae_df.iterrows()]
-
-class DownloadExperiment(luigi.Task):
-    """
-    This is a generic task that detects which kind of experiment is intended to
-    be downloaded so that downstream tasks can process regardless of the data
-    source.
-    """
-    experiment_id = luigi.Parameter()
-    def run(self):
-        if self.experiment_id.startswith('GSE'):
-            yield DownloadGSE(self.experiment_id)
-        else:
-            yield DownloadArrayExpress(self.experiment_id)

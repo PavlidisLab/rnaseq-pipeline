@@ -59,11 +59,11 @@ class ScheduledExternalProgramTask(ExternalProgramTask):
     Variant of luigi.contrib.external_program.ExternalProgramTask that runs on
     a job scheduler.
     """
+    scheduler = luigi.ChoiceParameter(choices=[cls.blurb for cls in Scheduler.__subclasses__()], default='local')
+
     walltime = luigi.TimeDeltaParameter(default=datetime.timedelta(hours=1))
     ncpus = luigi.IntParameter(default=1)
     memory = luigi.FloatParameter(default=1024)
-
-    scheduler = luigi.ChoiceParameter(choices=[cls.blurb for cls in Scheduler.__subclasses__()], default='local')
 
     def run(self):
         return Scheduler.fromblurb(self.scheduler).run(self)

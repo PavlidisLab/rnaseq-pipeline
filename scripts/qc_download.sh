@@ -1,10 +1,14 @@
 #!/bin/bash
 
-source ../etc/load_configs.sh
+#
+# TODO: convert that in Python
+# TODO: Check taxon/assembly relation.
+#
+
 set -eu
 
 if [ $# -eq 0 ]
-    then
+then
     FILES="GSE123456"
     EXPECTED="14"
     echo "Usage:"
@@ -16,12 +20,12 @@ if [ $# -eq 0 ]
     exit
 fi
 
-GSE=$1 
+GSE=$1
 FILES=$DATA/$GSE"/"
 EXPECTED=$2
 
 echo " Files: $FILES"
-if [[ -d "$FILES" ]]; then    
+if [[ -d "$FILES" ]]; then
     echo "Files expected at: $PWD"
     echo "Samples:"
     ls $FILES
@@ -35,18 +39,18 @@ else
     FILES=$DATA"/"$FILES
     echo "Searching for files in $DATA"
     if [[ -d $FILES ]]; then
-	echo "Using files at path $FILES"
+        echo "Using files at path $FILES"
     else
-	echo "No files found at $1 or $FILES."
-	echo "Abort."
-	exit 1
+        echo "No files found at $1 or $FILES."
+        echo "Abort."
+        exit 1
     fi
 fi
 
 # Prepare a clean metadata file
 METADATA_OUT=$METADATA/$GSE".metadata"
 if [  -f $METADATA_OUT ]; then
-	mv $METADATA_OUT $METADATA_OUT".old"
+    mv $METADATA_OUT $METADATA_OUT".old"
 fi
 
 # Todo: turn back on once format chosen
@@ -71,12 +75,14 @@ echo -e "Number of fastq files ("$DEFAULT_MATE_REPLACEMENT")$MDL$nMATES" >> $MET
 if [ $nMATES -gt 0 ]; then
     echo "LOG: Data appears to be paired-end"
     if [ $nSEQUENCES -ne $nMATES ]; then
-	echo "WARNING: SEQUENCES AND MATES SHOULD BE EQUAL UNLESS BOTH PAIRED-END AND SINGLE-END SEQUENCES SAMPLES ARE MIXED."
+        echo "WARNING: SEQUENCES AND MATES SHOULD BE EQUAL UNLESS BOTH PAIRED-END AND SINGLE-END SEQUENCES SAMPLES ARE MIXED."
     fi
 
     if [ $nSEQUENCES -eq $nMATES ]; then
-	echo "OK: #Sequences == #Mates"
+        echo "OK: #Sequences == #Mates"
     fi
+
+    touch $FILES/qc-done
 fi
 
 if [ $EXPECTED -eq $nSEQUENCES ]; then

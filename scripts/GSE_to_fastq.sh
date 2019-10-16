@@ -42,12 +42,6 @@ MINIML="ftp://ftp.ncbi.nlm.nih.gov/geo/series/$RANK/$ACCESSION/miniml/$ACCESSION
 
 DOWNLOAD_DIR="$DATA/$ACCESSION/METADATA"
 
-PARALLEL_MACHINES=""
-if [ -n "$MACHINES" ]; then
-    echo "Using distributed mode on: $MACHINES" 1>&2
-    PARALLEL_MACHINES=" -S $MACHINES "
-fi
-
 if [ ! -z ${MODES+x} ] && [ -n "$MODES" ]; then
     echo "Propagating environment for modes $MODES" 1>&2
     PARALLEL_MODES=" --env MODES "
@@ -58,24 +52,10 @@ fi
 # Download metadata files
 mkdir -p "$DOWNLOAD_DIR"
 
-# SOFTOUT="$DOWNLOAD_DIR/$ACCESSION.soft.gz"
-# SOFT="$DOWNLOAD_DIR/$ACCESSION.soft"
-
 MINIMLOUT="$DOWNLOAD_DIR/$ACCESSION.xml.tgz"
 MINIMLXML="$DOWNLOAD_DIR/$ACCESSION.xml"
 
-###
-## TODO: SOFT file probably not needed
-# SOFTEXTRACTED="${$SOFTOUT%.*}"
-#if [ ! -f "$SOFTEXTRACTED" ]
-#then
-#    wget -O $SOFTOUT $SOFTFILE
-#    echo "Extracting $SOFTOUT" 1>&2
-#    gunzip -f $SOFTOUT
-#else
-#    echo "Zipped SOFT File exists at $SOFTOUT" 1>&2
-#fi
-####
+echo $MINIMLXML 1>&2
 
 if [ ! -f "$MINIMLXML" ]
 then
@@ -89,11 +69,4 @@ fi
 METADATA_URL="http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term="
 
 echo "Parsing MINIML xml at: $MINIMLXML" 1>&2
-python parse_miniml.py "$MINIMLXML" \
-    | cut -f1 -d" " \
-    | xargs -n1 -I@ wget -qO- "$METADATA_URL""@" \
-    | grep -v "SampleName" \
-    | grep -v "^$" \
-    | cut -f1,30 -d","  \
-    | sort \
-    | uniq
+python parse_miniml.py "$MINIMLXML"

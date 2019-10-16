@@ -1,9 +1,8 @@
 #!/bin/bash
 set -eu
-cd $(dirname $0) 
-source ../../etc/load_configs.sh
+cd $(dirname $0)
 
-if [ $# -lt 2 ] 
+if [ $# -lt 2 ]
 then
     echo "Usage: ./rsem_count PATHTOFILES <isoforms|genes>"
     exit
@@ -12,13 +11,6 @@ fi
 FILES=$1"/"
 LEVEL=$2
 
-# Check if directory needs "DATA" path appended.
-if [ -d $FILES ]; then 
-    #OK
-    touch /dev/null
-else
-    FILES=$QUANTDIR/$1
-fi
 echo "INFO: COUNTING FILES AT $FILES"
 
 
