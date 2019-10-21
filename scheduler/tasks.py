@@ -4,6 +4,7 @@ from subprocess import check_output
 import urllib
 import tarfile
 import shlex
+from glob import glob
 
 import pandas as pd
 import luigi
@@ -221,6 +222,21 @@ class DownloadArrayExpressExperiment(WrapperTask):
         return [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=sample_id, fastq_urls=s['Comment[FASTQ_URI]'].sort_values().tolist())
                 for sample_id, s in ae_df.groupby('Comment[ENA_SAMPLE]')]
 
+class DownloadLocalSample(luigi.Task):
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+
+    def output(self):
+        # we sort to make sure that pair ends are in correct order
+        return [[luigi.LocalTarget(f) for f in sorted(glob(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.experiment_id, self.sample_id, '*.fastq.gz')))]]
+
+class DownloadLocalExperiment(WrapperTask):
+    experiment_id = luigi.Parameter()
+
+    def requires(self):
+        return [DownloadLocalSample(self.experiment_id, os.path.basename(f))
+                for f in glob(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.experiment_id, '*'))]
+
 class DownloadSample(WrapperTask):
     """
     This is a generic task for downloading an individual sample in an
@@ -232,8 +248,10 @@ class DownloadSample(WrapperTask):
     def requires(self):
         if self.experiment_id.startswith('GSE'):
             return DownloadGSM(self.experiment_id, self.sample_id)
-        else:
+        elif self.experiment_id.startswith('E-MTAB'):
             return DownloadArrayExpressSample(self.experiment_id, self.sample_id)
+        else:
+            return DownloadLocalSample(self.experiment_id, self.sample_id)
 
 class DownloadExperiment(WrapperTask):
     """
@@ -245,8 +263,10 @@ class DownloadExperiment(WrapperTask):
     def requires(self):
         if self.experiment_id.startswith('GSE'):
             return DownloadGSE(self.experiment_id)
-        else:
+        elif self.experiment_id.startswith('E-MTAB'):
             return DownloadArrayExpressExperiment(self.experiment_id)
+        else:
+            return DownloadLocalExperiment(self.experiment_id)
 
 class PrepareReference(ExternalProgramTask):
     """
