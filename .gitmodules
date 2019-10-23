@@ -4,3 +4,6 @@
 [submodule "Requirements/STAR"]
 	path = Requirements/STAR
 	url = https://github.com/alexdobin/STAR.git
+[submodule "Requirements/FastQC"]
+	path = Requirements/FastQC
+	url = https://github.com/s-andrews/FastQC.git

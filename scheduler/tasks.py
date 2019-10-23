@@ -32,6 +32,7 @@ class rnaseq_pipeline(luigi.Config):
 
     OUTPUT_DIR = luigi.Parameter()
     DATA = luigi.Parameter()
+    QCDIR = luigi.Parameter()
     QUANTDIR = luigi.Parameter()
     COUNTDIR = luigi.Parameter()
     TMPDIR = luigi.Parameter()
@@ -39,6 +40,8 @@ class rnaseq_pipeline(luigi.Config):
     PREFETCH_EXE = luigi.Parameter()
     PREFETCH_ARGS = luigi.Parameter()
     SRA_PUBLIC_DIR = luigi.Parameter()
+
+    FASTQC_EXE = luigi.Parameter()
 
     FASTQDUMP_EXE = luigi.Parameter()
 
@@ -268,6 +271,40 @@ class DownloadExperiment(WrapperTask):
         else:
             return DownloadLocalExperiment(self.experiment_id)
 
+class QualityControlSample(ExternalProgramTask):
+    experiment_id = luigi.Parameter()
+    sample_id = luigi.Parameter()
+
+    resources = {'cpu': 1, 'mem': 4}
+
+    def requires(self):
+        return DownloadSample(self.experiment_id, self.sample_id)
+
+    def program_args(self):
+        args = [rnaseq_pipeline().FASTQC_EXE, '--outdir', os.path.dirname(self.output()[0].path)]
+
+        if len(self.input()) > 1:
+            raise ValueError('Quality check for more than one run per sample is not supported.')
+
+        args.extend(f.path for f in self.input()[0])
+
+        return args
+
+    def run(self):
+        self.output()[0].makedirs()
+        return super(QualityControlSample, self).run()
+
+    def output(self):
+        destdir = join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().QCDIR, self.experiment_id, self.sample_id)
+        return [luigi.LocalTarget(join(destdir, '{}_fastqc.html'.format(os.path.basename(f.path).split(os.extsep)[0])))
+                for f in self.input()[0]]
+
+class QualityControlExperiment(WrapperTask):
+    experiment_id = luigi.Parameter()
+
+    def requires(self):
+        return [QualityControlSample(sample.experiment_id, sample.sample_id) for sample in DownloadExperiment(self.experiment_id).requires().requires()]
+
 class PrepareReference(ExternalProgramTask):
     """
     Prepare a STAR/RSEM reference.
@@ -312,7 +349,7 @@ class AlignSample(ExternalProgramTask):
         # FIXME: put this in run
         self.output()[0].makedirs()
         check_output(['mkdir', '-p', join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().TMPDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id, self.sample_id)])
-        return DownloadSample(self.experiment_id, self.sample_id)
+        return [DownloadSample(self.experiment_id, self.sample_id), QualityControlSample(self.experiment_id, self.sample_id)]
 
     def program_args(self):
         args = [join(rnaseq_pipeline().RSEM_DIR, 'rsem-calculate-expression'), '-p', self.resources['cpu']]
@@ -328,7 +365,7 @@ class AlignSample(ExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_runs = self.input()
+        sample_runs, _ = self.input()
 
         # FIXME: we should require at least one and choose one among them
         if len(sample_runs) != 1:
