@@ -296,7 +296,7 @@ class QualityControlSample(ExternalProgramTask):
 
     def output(self):
         destdir = join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().QCDIR, self.experiment_id, self.sample_id)
-        return [luigi.LocalTarget(join(destdir, '{}_fastqc.html'.format(os.path.basename(f.path).split(os.extsep)[0])))
+        return [luigi.LocalTarget(join(destdir, '{}_fastqc.html'.format(os.path.basename(f.path).rsplit(os.extsep, 2)[0])))
                 for f in self.input()[0]]
 
 class QualityControlExperiment(WrapperTask):
