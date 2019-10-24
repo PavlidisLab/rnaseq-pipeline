@@ -487,6 +487,11 @@ class SubmitExperimentToGemma(ExternalProgramTask):
                 '-count', count.path,
                 '-rpkm', fpkm.path]
 
-    def output(self):
-        # TODO: check if data is in Gemma
-        return []
+    def complete(self):
+        return False
+
+class SubmitExperimentsFromFileToGemma(WrapperTask):
+    input_path = luigi.Parameter()
+    def requires(self):
+        return [SubmitExperimentToGemma(row.experiment_id, row.taxon, row.genome_build, row.reference_build)
+                    for _, row in pd.read_csv(self.input_path, sep='\t').iterrows()]
