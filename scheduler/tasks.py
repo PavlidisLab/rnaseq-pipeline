@@ -31,6 +31,7 @@ class rnaseq_pipeline(luigi.Config):
     ASSEMBLIES = luigi.Parameter()
 
     OUTPUT_DIR = luigi.Parameter()
+    METADATA = luigi.Parameter()
     DATA = luigi.Parameter()
     QCDIR = luigi.Parameter()
     QUANTDIR = luigi.Parameter()
@@ -115,7 +116,6 @@ class DownloadGSMMetadata(luigi.Task):
     """
     Download a GSM metadata containing the details of all related SRR runs.
     """
-    gse = luigi.Parameter()
     gsm = luigi.Parameter()
 
     def run(self):
@@ -125,7 +125,7 @@ class DownloadGSMMetadata(luigi.Task):
                                filename=dest_filename)
 
     def output(self):
-        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.gse, 'METADATA', '{}.csv'.format(self.gsm)))
+        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().METADATA, '{}.csv'.format(self.gsm)))
 
 class DownloadGSM(luigi.Task):
     """
@@ -135,7 +135,7 @@ class DownloadGSM(luigi.Task):
     gsm = luigi.Parameter()
 
     def requires(self):
-        return DownloadGSMMetadata(self.gse, self.gsm)
+        return DownloadGSMMetadata(self.gsm)
 
     def run(self):
         # find all SRA runs associated to this GSM
@@ -169,7 +169,7 @@ class DownloadGSEMetadata(luigi.Task):
             tf.extract('{}_family.xml'.format(self.gse), os.path.dirname(self.output().path))
 
     def output(self):
-        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.gse, 'METADATA', '{}_family.xml'.format(self.gse)))
+        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().METADATA, '{}_family.xml'.format(self.gse)))
 
 class DownloadGSE(luigi.Task):
     """
