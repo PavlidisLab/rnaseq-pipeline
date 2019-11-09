@@ -118,7 +118,7 @@ class DownloadGSMMetadata(luigi.Task):
 
     def run(self):
         with self.output().temporary_path() as dest_filename:
-            urllib.urlretrieve('https://trace.ensembl98.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&amp;db=sra&amp;rettype=runinfo&amp;term={}'.format(self.gsm),
+            urllib.urlretrieve('https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&amp;db=sra&amp;rettype=runinfo&amp;term={}'.format(self.gsm),
                     filename=dest_filename)
 
     def output(self):
@@ -165,7 +165,7 @@ class DownloadGSEMetadata(luigi.Task):
         metadata_xml = join(destdir, '{}_family.xml'.format(self.gse))
 
         # download compressed metadata
-        urllib.urlretrieve('ftp://ftp.ensembl98.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
+        urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
                            filename=metadata_xml_tgz)
 
         # extract metadata
