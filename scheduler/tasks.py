@@ -35,7 +35,6 @@ class rnaseq_pipeline(luigi.Config):
     ALIGNDIR = luigi.Parameter()
     ALIGNQCDIR = luigi.Parameter()
     QUANTDIR = luigi.Parameter()
-    TMPDIR = luigi.Parameter()
 
     PREFETCH_EXE = luigi.Parameter()
     PREFETCH_ARGS = luigi.Parameter()
@@ -363,21 +362,17 @@ class AlignSample(ScheduledExternalProgramTask):
     def run(self):
         for out in self.output():
             out.makedirs()
-        # FIXME: have a proper target for this
-
-        check_output(['mkdir', '-p', join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().TMPDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id, self.sample_id)])
         return super(AlignSample, self).run()
 
     def program_args(self):
         args = [join(rnaseq_pipeline().RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
 
+        # FIXME: use local scratch for temporary files
         args.extend([
             '--time',
             '--star',
             '--star-path', rnaseq_pipeline().STAR_PATH,
-            '--star-gzipped-read-file',
-            '--star-output-genome-bam',
-            '--temporary-folder', join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().TMPDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id)])
+            '--star-gzipped-read-file')
 
         if self.strand_specific:
             args.append('--strand-specific')
@@ -405,8 +400,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     def output(self):
         destdir = join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().ALIGNDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id)
-        return [luigi.LocalTarget(join(destdir, '{}.STAR.genome.bam'.format(self.sample_id))),
-                luigi.LocalTarget(join(destdir, '{}.isoforms.results'.format(self.sample_id))),
+        return [luigi.LocalTarget(join(destdir, '{}.isoforms.results'.format(self.sample_id))),
                 luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))]
 
 class AlignExperiment(luigi.Task):
@@ -459,9 +453,9 @@ class CountExperiment(luigi.Task):
         # FIXME: this is a hack
         keys = [align_task.sample_id for align_task in next(self.requires().run())]
         counts_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).expected_count
-            for genome_alignment, isoform, gene in self.input()], keys=keys, axis=1)
+            for isoform, gene in self.input()], keys=keys, axis=1)
         fpkm_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).FPKM
-            for genome_alignment, isoform, gene in self.input()], keys=keys, axis=1)
+            for isoform, gene in self.input()], keys=keys, axis=1)
 
         with self.output()[0].open('w') as f:
             counts_df.to_csv(f, sep='\t')
