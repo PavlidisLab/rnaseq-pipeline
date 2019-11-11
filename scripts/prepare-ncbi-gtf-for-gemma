@@ -25,17 +25,18 @@ for line in sys.stdin:
 
     attribute_dict = defaultdict(list)
 
-    for tag in attribute.strip().rstrip(';').split(';'):
-        k, v = shlex.split(tag.strip())
+    attribute_iter = iter(shlex.split(attribute))
+    for k in attribute_iter:
+        if k == ';':
+            continue
+        v = next(attribute_iter).rstrip(';')
         attribute_dict[k].append(v)
 
     for xref in attribute_dict['db_xref']:
         db, value = xref.split(':', maxsplit=1)
         if db == 'GeneID':
             attribute_dict['gene_id'] = [value]
-    else:
-        #warn('Could not encounter db_xref:GeneID attribute at line: {}'.format(line))
-        pass
+            break
 
     print(seqname, source, feature, start, end, score, strand, frame, render_attribute_from_dict(attribute_dict),
           sep='\t',
