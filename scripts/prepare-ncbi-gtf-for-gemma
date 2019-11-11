@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+# Note that the parsing is done according to https://uswest.ensembl.org/info/website/upload/gff.html
+
+# Results are best with Python >=3.7 since it maintains the original attribute
+# order
+
+import sys
+from collections import defaultdict
+import shlex
+from warnings import warn
+
+def render_attribute_from_dict(dct):
+    return ' '.join('{} "{}";'.format(k, v)
+            for k, l in dct.items()
+                for v in l)
+
+for line in sys.stdin:
+    line = line.strip()
+    if line.startswith('#'):
+        print(line, file=sys.stdout)
+        continue
+
+    seqname, source, feature, start, end, score, strand, frame, attribute = line.split('\t')
+
+    attribute_dict = defaultdict(list)
+
+    for tag in attribute.strip().rstrip(';').split(';'):
+        k, v = shlex.split(tag.strip())
+        attribute_dict[k].append(v)
+
+    for xref in attribute_dict['db_xref']:
+        db, value = xref.split(':', maxsplit=1)
+        if db == 'GeneID':
+            attribute_dict['gene_id'] = [value]
+    else:
+        #warn('Could not encounter db_xref:GeneID attribute at line: {}'.format(line))
+        pass
+
+    print(seqname, source, feature, start, end, score, strand, frame, render_attribute_from_dict(attribute_dict),
+          sep='\t',
+          file=sys.stdout)
