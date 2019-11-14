@@ -372,7 +372,8 @@ class AlignSample(ScheduledExternalProgramTask):
             '--time',
             '--star',
             '--star-path', rnaseq_pipeline().STAR_PATH,
-            '--star-gzipped-read-file'])
+            '--star-gzipped-read-file',
+            '--no-bam-output'])
 
         if self.strand_specific:
             args.append('--strand-specific')
