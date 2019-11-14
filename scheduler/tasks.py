@@ -66,6 +66,8 @@ class PrefetchSRR(ExternalProgramTask):
     # behind
     retry_count = 5
 
+    resources = {'sra_connections': 1}
+
     def program_args(self):
         return [rnaseq_pipeline().PREFETCH_EXE] + shlex.split(rnaseq_pipeline().PREFETCH_ARGS) + [self.srr]
 
@@ -82,9 +84,11 @@ class ExtractSRR(ScheduledExternalProgramTask):
 
     paired_reads = luigi.BoolParameter()
 
+    resources = {'slurm_srun_ports': 3}
+
     scheduler = 'slurm'
     scheduler_extra_args = ['--partition', 'All']
-    walltime = datetime.timedelta(hours=2)
+    walltime = datetime.timedelta(hours=1)
     cpus = 1
     memory = 1
 
@@ -286,9 +290,11 @@ class QualityControlSample(ScheduledExternalProgramTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
+    resources = {'slurm_srun_ports': 3}
+
     scheduler = 'slurm'
     scheduler_extra_args = ['--partition', 'All']
-    walltime = datetime.timedelta(hours=2)
+    walltime = datetime.timedelta(minutes=30)
     cpus = 1
     memory = 2
 
@@ -313,15 +319,20 @@ class QualityControlSample(ScheduledExternalProgramTask):
         return [luigi.LocalTarget(join(destdir, '{}_fastqc.html'.format(os.path.basename(f.path).replace('.fastq.gz', ''))))
                     for f in self.input()]
 
-class PrepareReference(ExternalProgramTask):
+class PrepareReference(ScheduledExternalProgramTask):
     """
     Prepare a STAR/RSEM reference.
     """
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ensembl98')
+    reference_build = luigi.Parameter(default='ncbi')
 
-    resources = {'cpus': 16, 'memory': 32}
+    resources = {'slurm_srun_ports': 3}
+
+    scheduler = 'slurm'
+    scheduler_extra_args = ['--partition', 'All']
+    cpus = 16
+    memory = 32
 
     def program_args(self):
         return [join(rnaseq_pipeline().RSEM_DIR, 'rsem-prepare-reference'),
@@ -345,14 +356,16 @@ class AlignSample(ScheduledExternalProgramTask):
 
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ensembl98')
+    reference_build = luigi.Parameter(default='ncbi')
 
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False)
 
+    resources = {'slurm_srun_ports': 3}
+
     scheduler = 'slurm'
     scheduler_extra_args = ['--partition', 'All']
-    walltime = datetime.timedelta(days=1)
+    walltime = datetime.timedelta(hours=6)
     cpus = 8
     memory = 32
 
