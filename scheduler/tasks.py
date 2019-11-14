@@ -122,7 +122,9 @@ class DownloadGSMMetadata(luigi.Task):
 
     def run(self):
         with self.output().temporary_path() as dest_filename:
+            # FIXME: use Entrez Web API
             urllib.urlretrieve('https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&amp;db=sra&amp;rettype=runinfo&amp;term={}'.format(self.gsm),
+                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
                     filename=dest_filename)
 
     def output(self):
@@ -169,8 +171,11 @@ class DownloadGSEMetadata(luigi.Task):
         metadata_xml = join(destdir, '{}_family.xml'.format(self.gse))
 
         # download compressed metadata
+        # FIXME: use Entrez Web API
         urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
-                           filename=metadata_xml_tgz)
+                reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
+                filename=metadata_xml_tgz)
+
 
         # extract metadata
         # FIXME: this is not atomic
@@ -214,7 +219,9 @@ class DownloadArrayExpressFastq(luigi.Task):
 
     def run(self):
         with self.output().temporary_path() as dest_filename:
-            urllib.urlretrieve(self.fastq_url, filename=dest_filename)
+            urllib.urlretrieve(self.fastq_url,
+                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
+                    filename=dest_filename)
 
     def output(self):
         return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.experiment_id, self.sample_id, os.path.basename(self.fastq_url)))
