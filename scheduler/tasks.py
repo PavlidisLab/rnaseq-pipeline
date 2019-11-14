@@ -435,7 +435,7 @@ class AlignExperiment(luigi.Task):
 
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ensembl98')
+    reference_build = luigi.Parameter(default='ncbi')
 
     def requires(self):
         return DownloadExperiment(self.experiment_id)
@@ -463,7 +463,7 @@ class CountExperiment(luigi.Task):
 
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ensembl98')
+    reference_build = luigi.Parameter(default='ncbi')
 
     resources = {'cpus': 1}
 
@@ -501,7 +501,7 @@ class SubmitExperimentToGemma(ExternalProgramTask):
 
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ensembl98')
+    reference_build = luigi.Parameter(default='ncbi')
 
     resources = {'gemma_connections': 1}
 
@@ -517,7 +517,7 @@ class SubmitExperimentToGemma(ExternalProgramTask):
                 '-u', os.getenv('GEMMAUSERNAME'),
                 '-p', os.getenv('GEMMAPASSWORD'),
                 '-e', self.experiment_id,
-                '-a', 'Generic_{}_ensemblIds'.format(self.taxon),
+                '-a', 'Generic_{}_ncbiIds'.format(self.taxon),
                 '-count', count.path,
                 '-rpkm', fpkm.path]
 
