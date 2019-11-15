@@ -442,14 +442,10 @@ class AlignExperiment(luigi.Task):
     def run(self):
         # FIXME: do this better
         yield [AlignSample(self.experiment_id, os.path.basename(os.path.dirname(sample[0].path)), self.taxon, self.genome_build, self.reference_build)
-                    for sample in self.input()]
+                    for sample in self.input() if len(sample) > 0]
 
     def output(self):
-        try:
-            # FIXME: this is ugly
-            return [task.output() for task in next(self.run())]
-        except:
-            return []
+        return [task.output() for task in next(self.run())]
 
 class CountExperiment(luigi.Task):
     """
