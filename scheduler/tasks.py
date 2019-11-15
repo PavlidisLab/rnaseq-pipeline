@@ -316,15 +316,14 @@ class QualityControlSample(ScheduledExternalProgramTask):
         return args
 
     def run(self):
-        for out in self.output():
-            out.makedirs()
+        out.makedirs()
         return super(QualityControlSample, self).run()
 
     def output(self):
-        destdir = join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATAQCDIR, self.experiment_id, self.sample_id)
         # FIXME: replace should be anchored end of string
-        return [luigi.LocalTarget(join(destdir, '{}_fastqc.html'.format(os.path.basename(f.path).replace('.fastq.gz', ''))))
-                    for f in self.input()]
+        # FIXME: fastqc produces a single report for all the mates, but we
+        # should have one report per file
+        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATAQCDIR, self.experiment_id, self.sample_id, '{}_fastqc.html'.format(os.path.basename(self.input()[0].path).replace('.fastq.gz', ''))))
 
 class PrepareReference(ScheduledExternalProgramTask):
     """
