@@ -108,6 +108,7 @@ class ExtractSRR(ScheduledExternalProgramTask):
                 '--readids',
                 '--dumpbase',
                 '--split-files',
+                '--disable-multithreading', # TODO: this is a fairly recent flag, so it would be nice to do a version-check
                 '--outdir', join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.gse, self.gsm),
                 self.input().path]
 
