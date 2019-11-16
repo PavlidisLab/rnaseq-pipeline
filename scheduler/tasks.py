@@ -12,6 +12,7 @@ import pandas as pd
 import luigi
 import luigi.task
 from luigi.contrib.external_program import ExternalProgramTask
+from bioluigi.tasks import fastqc
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 
 from scheduler.miniml_utils import extract_rnaseq_gsm
@@ -55,6 +56,8 @@ class rnaseq_pipeline(luigi.Config):
 
     def asenv(self, attrs):
         return {attr: getattr(self, attr) for attr in attrs}
+
+cfg = rnaseq_pipeline()
 
 class PrefetchSRR(ExternalProgramTask):
     """
@@ -282,48 +285,45 @@ class DownloadExperiment(WrapperTask):
     This is a generic task that detects which kind of experiment is intended to
     be downloaded so that downstream tasks can process regardless of the data
     source.
+
+    :source: Indicate the origin of the experiment, otherwise it will be
+    inferred from the :experiment_id: parameter.
     """
     experiment_id = luigi.Parameter()
 
+    source = luigi.OptionalParameter(default='', positional=False)
+
     def requires(self):
-        if self.experiment_id.startswith('GSE'):
+        if self.source == 'gemma':
+            return DownloadGemmaExperiment(self.experiment_id)
+        elif self.experiment_id.startswith('GSE'):
             return DownloadGSE(self.experiment_id)
         elif self.experiment_id.startswith('E-MTAB'):
             return DownloadArrayExpressExperiment(self.experiment_id)
         else:
             return DownloadLocalExperiment(self.experiment_id)
 
-class QualityControlSample(ScheduledExternalProgramTask):
+class QualityControlSample(luigi.Task):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
     resources = {'slurm_srun_ports': 3}
 
-    scheduler = 'slurm'
-    scheduler_extra_args = ['--partition', 'All']
-    walltime = datetime.timedelta(minutes=30)
-    cpus = 1
-    memory = 2
-
     def requires(self):
         return DownloadSample(self.experiment_id, self.sample_id)
 
-    def program_args(self):
-        args = [rnaseq_pipeline().FASTQC_EXE, '--outdir', os.path.dirname(self.output()[0].path)]
-
-        args.extend(f.path for f in self.input())
-
-        return args
-
     def run(self):
-        out.makedirs()
-        return super(QualityControlSample, self).run()
+        for out in self.output():
+            out.makedirs()
+        yield [fastqc.GenerateReport(fastq.path,
+                                     join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id),
+                                     scheduler='slurm',
+                                     scheduler_extra_args=['--partition', 'All']) for fastq in self.input()]
 
     def output(self):
-        # FIXME: replace should be anchored end of string
-        # FIXME: fastqc produces a single report for all the mates, but we
-        # should have one report per file
-        return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATAQCDIR, self.experiment_id, self.sample_id, '{}_fastqc.html'.format(os.path.basename(self.input()[0].path).replace('.fastq.gz', ''))))
+        destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
+        return [luigi.LocalTarget(join(destdir, fastqc.GenerateReport.gen_report_basename(t.path)))
+            for t in self.input()]
 
 class PrepareReference(ScheduledExternalProgramTask):
     """
