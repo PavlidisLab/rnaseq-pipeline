@@ -8,6 +8,8 @@ import shlex
 from glob import glob
 import tempfile
 
+import requests
+from requests.auth import HTTPBasicAuth
 import pandas as pd
 import luigi
 import luigi.task
@@ -125,11 +127,9 @@ class DownloadGSMMetadata(luigi.Task):
     resources = {'geo_http_connections': 1}
 
     def run(self):
-        with self.output().temporary_path() as dest_filename:
-            # FIXME: use Entrez Web API
-            urllib.urlretrieve('https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&amp;db=sra&amp;rettype=runinfo&amp;term={}'.format(self.gsm),
-                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                    filename=dest_filename)
+        with self.output().open('w') as f:
+            esearch_proc = Popen(['Requirements/edirect/esearch', '-db', 'sra', '-query', self.gsm], stdout=PIPE)
+            check_call(['Requirements/edirect/efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
 
     def output(self):
         return luigi.LocalTarget(join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().METADATA, '{}.csv'.format(self.gsm)))
