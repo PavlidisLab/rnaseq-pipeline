@@ -1,21 +1,18 @@
-#############################################################################################################
-# Ignore file downloaded from https://github.com/github/gitignore/blob/master/Python.gitignore on 2016/11/23
-#############################################################################################################
 
+# Created by https://www.gitignore.io/api/python
+# Edit at https://www.gitignore.io/?templates=python
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-
-# Editors
-*\#
-*~
+*$py.class
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -27,9 +24,13 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -44,19 +45,22 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
 *.pot
 
-# Django stuff:
-*.log
+# Scrapy stuff:
+.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -64,73 +68,43 @@ docs/_build/
 # PyBuilder
 target/
 
-#############################################################################################################
-# End of templated ignore file ##############################################################################
-#############################################################################################################
+# pyenv
+.python-version
 
-# Project specific ignores
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
 
-Assemblies/*
-Data/*
-Data/
-Data
-data/*
-data/
-data
-Requirements/*
-Requirements/STAR/
-Logs/*
-COUNTS/*
-COUNTS
-BAMs/*
-BAMs
-INSTALL/
-RESULTS/
-RESULTS*
-metadata
+# celery beat schedule file
+celerybeat-schedule
 
+# SageMath parsed files
+*.sage.py
 
-scheduler/IN/*
-scheduler/OUT/*
-scheduler/PIDS/*
-scheduler/STATE
-scheduler/logs-*
-scheduler/venv*
-scheduler/commit*
+# Spyder project settings
+.spyderproject
+.spyproject
 
-Pipelines/rsem/quantified
-Pipelines/rsem/temporary
+# Rope project settings
+.ropeproject
 
-etc/common.cfg
-etc/tmp/*
-tmp.*
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
 
-# R files
-.Rhistory
+# mkdocs documentation
+/site
 
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
-# Sequencing outputs
-*.bam
-*.out
-*.tab
-*.bam
-*.sam
-*.sra
+# Pyre type checker
+.pyre/
 
-# Other machine files
-*.xml
-*.tgz
-*.sqlite
-*.zip
-*.csv
-
-# Misc files
-*.bak
-
-# Misc directories
-temporary/
-vquantified/
-
-# Logs
-log-*.txt
-error-*.txt
+# End of https://www.gitignore.io/api/python
