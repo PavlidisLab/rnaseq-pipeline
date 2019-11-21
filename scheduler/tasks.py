@@ -27,6 +27,23 @@ class WrapperTask(luigi.WrapperTask):
     def output(self):
         return luigi.task.getpaths(self.requires())
 
+class NonAtomicTaskRunContext(object):
+    """
+    Execution context for non-atomic tasks that ensures that any existing
+    output is deleted if the task fails.
+    """
+    def __init__(self, task):
+        self.task = task
+
+    def __enter__(self):
+        pass
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type is not None:
+            for out in self.task.output():
+                if out.exists():
+                    out.remove()
+
 # see luigi.cfg for details
 class rnaseq_pipeline(luigi.Config):
     ASSEMBLIES = luigi.Parameter()
@@ -113,6 +130,10 @@ class ExtractSRR(ScheduledExternalProgramTask):
                 '--disable-multithreading', # TODO: this is a fairly recent flag, so it would be nice to do a version-check
                 '--outdir', join(rnaseq_pipeline().OUTPUT_DIR, rnaseq_pipeline().DATA, self.gse, self.gsm),
                 self.input().path]
+
+    def run(self):
+        with NonAtomicTaskRunContext(self):
+            return super(ExtractSRR, self).run()
 
     def output(self):
         if self.paired_reads:
