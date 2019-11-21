@@ -1,7 +1,7 @@
 import datetime
 import os
 from os.path import join
-from subprocess import check_output
+from subprocess import Popen, check_call, PIPE
 import urllib
 import tarfile
 import shlex
