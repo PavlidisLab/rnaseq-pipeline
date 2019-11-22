@@ -1,12 +1,6 @@
 import datetime
 import os
 from os.path import join
-from subprocess import Popen, check_call, PIPE
-import urllib
-import tarfile
-import shlex
-from glob import glob
-import tempfile
 import logging
 
 import requests
@@ -15,12 +9,15 @@ import pandas as pd
 import luigi
 import luigi.task
 from luigi.contrib.external_program import ExternalProgramTask
-from bioluigi.tasks import sratoolkit, fastqc
+from bioluigi.tasks import fastqc
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 
 from .config import rnaseq_pipeline
-from .utils import WrapperTask, NonAtomicTaskRunContext
-from .miniml_utils import extract_rnaseq_gsm
+from .utils import WrapperTask
+from .sources.geo import DownloadGeoSample, DownloadGeoSeries
+from .sources.local import DownloadLocalSample, DownloadLocalExperiment
+from .sources.gemma import DownloadGemmaExperiment
+from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .targets import GemmaDatasetHasPlatform
 
 EXPERIMENT_SOURCES = ['gemma', 'geo', 'arrayexpress', 'local']
@@ -29,228 +26,6 @@ SAMPLE_SOURCES = ['geo', 'arrayexpress', 'local']
 logger = logging.getLogger('luigi-interface')
 
 cfg = rnaseq_pipeline()
-
-class PrefetchSraFastq(luigi.Task):
-    """
-    Prefetch a SRR sample using prefetch
-
-    Data is downloaded in a shared SRA cache.
-    """
-    srr = luigi.Parameter()
-
-    resources = {'sra_connections': 1}
-
-    def run(self):
-        yield sratoolkit.Prefetch(self.srr,
-                                  self.output().path,
-                                  max_size=30,
-                                  extra_args=shlex.split(cfg.PREFETCH_ARGS))
-
-    def output(self):
-        return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
-
-class ExtractSraFastq(ScheduledExternalProgramTask):
-    """
-    Extract FASTQs from a SRR archive
-
-    FASTQs are organized by :gsm: in a flattened layout.
-    """
-    gsm = luigi.Parameter()
-    srr = luigi.Parameter()
-
-    paired_reads = luigi.BoolParameter(positional=False)
-
-    scheduler_extra_args = ['--partition', 'All']
-    walltime = datetime.timedelta(hours=6)
-    cpus = 1
-    memory = 1
-
-    def requires(self):
-        return PrefetchSraFastq(self.srr)
-
-    def program_args(self):
-        # FIXME: this is not atomic
-        # FIXME: use fasterq-dump
-        return [cfg.FASTQDUMP_EXE,
-                '--gzip',
-                '--clip',
-                '--skip-technical',
-                '--readids',
-                '--dumpbase',
-                '--split-files',
-                '--disable-multithreading', # TODO: this is a fairly recent flag, so it would be nice to do a version-check
-                '--outdir', os.path.dirname(self.output()[0].path),
-                self.input().path]
-
-    def run(self):
-        with NonAtomicTaskRunContext(self):
-            return super(ExtractSraFastq, self).run()
-
-    def output(self):
-        if self.paired_reads:
-            return [luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_1.fastq.gz')),
-                    luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_2.fastq.gz'))]
-        else:
-            return [luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_1.fastq.gz'))]
-
-class DownloadGeoSampleMetadata(luigi.Task):
-    gsm = luigi.Parameter()
-
-    resources = {'edirect_http_connections': 1}
-
-    def run(self):
-        with self.output().open('w') as f:
-            esearch_proc = Popen(['Requirements/edirect/esearch', '-db', 'sra', '-query', self.gsm], stdout=PIPE)
-            check_call(['Requirements/edirect/efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
-
-    def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, '{}.csv'.format(self.gsm)))
-
-class DownloadGeoSample(luigi.Task):
-    """
-    Download all SRR related to a GSM
-    """
-    gsm = luigi.Parameter()
-
-    def requires(self):
-        return DownloadGeoSampleMetadata(self.gsm)
-
-    def run(self):
-        # this will raise an error of no FASTQs are related
-        df = pd.read_csv(self.input().path)
-
-        # Some GSM happen to have many related samples and we cannot
-        # realistically investigate why that is. Our best bet at this point
-        # is that the latest SRR properly represents the sample
-        latest_run = df.sort_values('Run', ascending=False).iloc[0]
-
-        yield ExtractSraFastq(self.gsm, latest_run.Run, paired_reads=latest_run.LibraryLayout == 'PAIRED')
-
-    def output(self):
-        if self.requires().complete():
-            try:
-                return next(self.run()).output()
-            except pd.errors.EmptyDataError:
-                logger.exception('{} has no related SRA RNA-Seq runs.'.format(self.gsm))
-        return super(DownloadGeoSample, self).output()
-
-class DownloadGeoSeriesMetadata(luigi.Task):
-    gse = luigi.Parameter()
-
-    resources = {'geo_ftp_connections': 1}
-
-    def run(self):
-        destdir = os.path.dirname(self.output().path)
-        metadata_xml_tgz = join(destdir, '{}_family.xml.tgz'.format(self.gse))
-        metadata_xml = join(destdir, '{}_family.xml'.format(self.gse))
-
-        # download compressed metadata
-        # FIXME: use Entrez Web API
-        urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
-                reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                filename=metadata_xml_tgz)
-
-        # extract metadata
-        # FIXME: this is not atomic
-        with tarfile.open(metadata_xml_tgz, 'r:gz') as tf:
-            tf.extract('{}_family.xml'.format(self.gse), destdir)
-
-    def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, '{}_family.xml'.format(self.gse)))
-
-class DownloadGeoSeries(luigi.Task):
-    """
-    Download all GSM related to a GSE
-    """
-    gse = luigi.Parameter()
-
-    def requires(self):
-        return DownloadGeoSeriesMetadata(self.gse)
-
-    def run(self):
-        gsms = extract_rnaseq_gsm(self.input().path)
-        if not gsms:
-            raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
-        yield [DownloadGeoSample(gsm) for gsm in gsms]
-
-    def output(self):
-        if self.requires().complete():
-            # FIXME: this is ugly
-            try:
-                return [task.output() for task in next(self.run())]
-            except ValueError:
-                logger.exception('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
-        return super(DownloadGeoSeries, self).output()
-
-class DownloadArrayExpressFastq(luigi.Task):
-    sample_id = luigi.Parameter()
-    fastq_url = luigi.Parameter()
-
-    resources = {'array_express_http_connections': 1}
-
-    def run(self):
-        with self.output().temporary_path() as dest_filename:
-            urllib.urlretrieve(self.fastq_url,
-                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                    filename=dest_filename)
-
-    def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'arrayexpress', self.sample_id, os.path.basename(self.fastq_url)))
-
-class DownloadArrayExpressSample(WrapperTask):
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
-    fastq_urls = luigi.ListParameter()
-
-    def requires(self):
-        return [DownloadArrayExpressFastq(self.sample_id, fastq_url) for fastq_url in self.fastq_urls]
-
-class DownloadArrayExpressExperiment(WrapperTask):
-    """
-    Download all the related ArrayExpress sample to this ArrayExpress experiment.
-    """
-    experiment_id = luigi.Parameter()
-
-    def requires(self):
-        ae_df = pd.read_csv('http://www.ebi.ac.uk/arrayexpress/files/{0}/{0}.sdrf.txt'.format(self.experiment_id), sep='\t')
-        # FIXME: properly handle the order of paired FASTQs
-        return [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=sample_id, fastq_urls=s['Comment[FASTQ_URI]'].sort_values().tolist())
-                for sample_id, s in ae_df.groupby('Comment[ENA_SAMPLE]')]
-
-class DownloadLocalSample(luigi.Task):
-    """
-    Local samples are organized by :experiment_id: to avoid name clashes across
-    experiments.
-    """
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
-
-    def output(self):
-        # we sort to make sure that pair ends are in correct order
-        return [luigi.LocalTarget(f) for f in sorted(glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, self.sample_id, '*.fastq.gz')))]
-
-class DownloadLocalExperiment(WrapperTask):
-    experiment_id = luigi.Parameter()
-
-    def requires(self):
-        return [DownloadLocalSample(self.experiment_id, os.path.basename(f))
-                for f in glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, '*'))]
-
-class DownloadGemmaExperiment(WrapperTask):
-    """
-    Download an experiment described by a Gemma dataset using the REST API.
-
-    Gemma itself does not retain raw data, so this task delegate the work to
-    other sources.
-    """
-    experiment_id = luigi.Parameter()
-
-    def requires(self):
-        res = requests.get('http://gemma.msl.ubc.ca/rest/v2/datasets/{}/samples'.format(self.experiment_id), auth=HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD')))
-        res.raise_for_status()
-        return [DownloadGeoSample(sample['accession']['accession'])
-                    for sample in res.json()['data']
-                        if sample['accession']['externalDatabase']['name'] == 'GEO']
 
 class DownloadSample(WrapperTask):
     """
