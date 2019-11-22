@@ -1,4 +1,5 @@
 import datetime
+import gzip
 import os
 from os.path import join
 import logging
@@ -14,7 +15,7 @@ from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 
 from .config import rnaseq_pipeline
 from .utils import WrapperTask
-from .sources.geo import DownloadGeoSample, DownloadGeoSeries
+from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment

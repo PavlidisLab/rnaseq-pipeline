@@ -1,4 +1,5 @@
 import datetime
+import gzip
 import logging
 import shlex
 from subprocess import Popen, check_call, PIPE
@@ -14,7 +15,7 @@ import pandas as pd
 
 from ..config import rnaseq_pipeline
 from ..utils import WrapperTask, NonAtomicTaskRunContext
-from ..miniml_utils import extract_rnaseq_gsm
+from ..miniml_utils import find_rnaseq_geo_samples, collect_geo_samples_info
 
 cfg = rnaseq_pipeline()
 
@@ -157,7 +158,7 @@ class DownloadGeoSeries(luigi.Task):
         return DownloadGeoSeriesMetadata(self.gse)
 
     def run(self):
-        gsms = extract_rnaseq_gsm(self.input().path)
+        gsms = find_rnaseq_geo_samples(self.input().path)
         if not gsms:
             raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
         yield [DownloadGeoSample(gsm) for gsm in gsms]
@@ -170,3 +171,27 @@ class DownloadGeoSeries(luigi.Task):
             except ValueError:
                 logger.exception('%s has no related GEO samples with RNA-Seq data.', self.gse)
         return super(DownloadGeoSeries, self).output()
+
+class ExtractGeoSeriesInfo(luigi.Task):
+    gse = luigi.Parameter()
+
+    def requires(self):
+        return [DownloadGeoSeriesMetadata(self.gse), DownloadGeoSeries(self.gse)]
+
+    def run(self):
+        geo_series_metadata, samples = self.input()
+        sample_geo_metadata = collect_geo_samples_info(geo_series_metadata.path)
+        with self.output().open('w') as info_out:
+            for sample in samples:
+                fastq = sample[0]
+                sample_id = os.path.basename(os.path.dirname(fastq.path))
+                fastq_name, _ = os.path.splitext(fastq.path)
+                fastq_name, _ = os.path.splitext(fastq_name)
+                fastq_id = os.path.basename(fastq_name).split('_')[0]
+                gse_id, platform_id, srx_uri = sample_geo_metadata[sample_id]
+                with gzip.open(fastq.path, 'rt') as f:
+                    fastq_header = f.readline().rstrip()
+                info_out.write('\t'.join([sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'fastq_headers', '{}.fastq-headers-table.txt'.format(self.gse)))
