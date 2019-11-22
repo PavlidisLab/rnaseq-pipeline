@@ -10,9 +10,7 @@ __email__ = "manuel.belmadani@msl.ubc.ca"
 __status__ = "Production"
 __description__ = "Parse MINiML file for RNA-Seq/miRNA-Seq datasets files to be downloaded."
 
-import sys
 import xml.etree.ElementTree
-from collections import defaultdict
 
 def extract_rnaseq_gsm(f):
     """

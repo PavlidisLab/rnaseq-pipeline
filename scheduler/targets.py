@@ -19,4 +19,4 @@ class GemmaDatasetHasPlatform(luigi.Target):
         res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}/platforms'.format(self.dataset_short_name), auth=basic_auth)
         res.raise_for_status()
         return any(platform['shortName'] == self.platform
-                for platform in res.json()['data'])
+                   for platform in res.json()['data'])

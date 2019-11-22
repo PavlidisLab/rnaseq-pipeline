@@ -34,7 +34,8 @@ class PrefetchSraFastq(luigi.Task):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
                                   max_size=30,
-                                  extra_args=shlex.split(cfg.PREFETCH_ARGS))
+                                  extra_args=shlex.split(cfg.PREFETCH_ARGS),
+                                  scheduler_extra_args=['--partition', 'Wormhole'])
 
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
@@ -80,8 +81,7 @@ class ExtractSraFastq(ScheduledExternalProgramTask):
         if self.paired_reads:
             return [luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_1.fastq.gz')),
                     luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_2.fastq.gz'))]
-        else:
-            return [luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_1.fastq.gz'))]
+        return [luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm, self.srr + '_1.fastq.gz'))]
 
 class DownloadGeoSampleMetadata(luigi.Task):
     gsm = luigi.Parameter()
@@ -121,7 +121,7 @@ class DownloadGeoSample(luigi.Task):
             try:
                 return next(self.run()).output()
             except pd.errors.EmptyDataError:
-                logger.exception('{} has no related SRA RNA-Seq runs.'.format(self.gsm))
+                logger.exception('%s has no related SRA RNA-Seq runs.', self.gsm)
         return super(DownloadGeoSample, self).output()
 
 class DownloadGeoSeriesMetadata(luigi.Task):
@@ -132,18 +132,17 @@ class DownloadGeoSeriesMetadata(luigi.Task):
     def run(self):
         destdir = os.path.dirname(self.output().path)
         metadata_xml_tgz = join(destdir, '{}_family.xml.tgz'.format(self.gse))
-        metadata_xml = join(destdir, '{}_family.xml'.format(self.gse))
 
         # download compressed metadata
         # FIXME: use Entrez Web API
         urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
-                reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                filename=metadata_xml_tgz)
+                           reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
+                           filename=metadata_xml_tgz)
 
         # extract metadata
         # FIXME: this is not atomic
         with tarfile.open(metadata_xml_tgz, 'r:gz') as tf:
-            tf.extract('{}_family.xml'.format(self.gse), destdir)
+            tf.extract(os.path.basename(self.output().path), destdir)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
@@ -169,5 +168,5 @@ class DownloadGeoSeries(luigi.Task):
             try:
                 return [task.output() for task in next(self.run())]
             except ValueError:
-                logger.exception('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
+                logger.exception('%s has no related GEO samples with RNA-Seq data.', self.gse)
         return super(DownloadGeoSeries, self).output()

@@ -20,5 +20,4 @@ class DownloadGemmaExperiment(WrapperTask):
         res = requests.get('http://gemma.msl.ubc.ca/rest/v2/datasets/{}/samples'.format(self.experiment_id), auth=HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD')))
         res.raise_for_status()
         return [DownloadGeoSample(sample['accession']['accession'])
-                    for sample in res.json()['data']
-                        if sample['accession']['externalDatabase']['name'] == 'GEO']
+                for sample in res.json()['data'] if sample['accession']['externalDatabase']['name'] == 'GEO']

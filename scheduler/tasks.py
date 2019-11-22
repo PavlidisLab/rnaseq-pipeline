@@ -87,12 +87,12 @@ class QualityControlSample(luigi.Task):
         for fastq_in, report_out in zip(self.input(), self.output()):
             report_out.makedirs()
             yield fastqc.GenerateReport(fastq_in.path, os.path.dirname(report_out.path),
-                    scheduler_extra_args=['--partition', 'All'])
+                                        scheduler_extra_args=['--partition', 'Cargo'])
 
     def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
         return [luigi.LocalTarget(join(destdir, fastqc.GenerateReport.gen_report_basename(t.path)))
-            for t in self.input()]
+                for t in self.input()]
 
 class PrepareReference(ScheduledExternalProgramTask):
     """
@@ -102,18 +102,18 @@ class PrepareReference(ScheduledExternalProgramTask):
     genome_build = luigi.Parameter(default='hg38')
     reference_build = luigi.Parameter(default='ncbi')
 
-    scheduler_extra_args = ['--partition', 'All']
+    scheduler_extra_args = ['--partition', 'Cargo']
     walltime = datetime.timedelta(hours=12)
     cpus = 16
     memory = 32
 
     def program_args(self):
         return [join(cfg.RSEM_DIR, 'rsem-prepare-reference'),
-                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build, '*.gtf')),
+                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), '*.gtf'),
                 '--star',
                 '--star-path', cfg.STAR_PATH,
                 '-p', self.cpus,
-                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build, 'primary_assembly.fa')),
+                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), 'primary_assembly.fa'),
                 self.output().path]
 
     def output(self):
@@ -140,7 +140,7 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
-    scheduler_extra_args = ['--partition', 'All']
+    scheduler_extra_args = ['--partition', 'Cargo']
     walltime = datetime.timedelta(hours=12)
     cpus = 8
     memory = 32
@@ -166,7 +166,7 @@ class AlignSample(ScheduledExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_run, qc_run = self.input()
+        sample_run, _ = self.input()
 
         fastqs = [mate.path for mate in sample_run]
 
@@ -175,7 +175,7 @@ class AlignSample(ScheduledExternalProgramTask):
         elif len(fastqs) == 2 and self.ignore_mate:
             logger.info('Mate is ignored for {}.'.format(self))
             args.append(fastqs[0])
-        elif len(fastqs) == 2 :
+        elif len(fastqs) == 2:
             args.append('--paired-end')
             args.extend(fastqs)
         else:
@@ -214,8 +214,8 @@ class AlignExperiment(luigi.Task):
     def run(self):
         samples = self.input()
         yield [AlignSample(self.experiment_id, os.path.basename(os.path.dirname(sample[0].path)),
-                    taxon=self.taxon, genome_build=self.genome_build, reference_build=self.reference_build)
-                    for sample in samples if len(sample) > 0]
+                           taxon=self.taxon, genome_build=self.genome_build, reference_build=self.reference_build)
+               for sample in samples if len(sample) > 0]
 
     def output(self):
         return [task.output() for task in next(self.run())]
