@@ -290,17 +290,31 @@ class SubmitExperimentToGemma(ExternalProgramTask):
 
     def requires(self):
         taxon = self.get_taxon_for_dataset_short_name(self.experiment_id)
-        return CountExperiment(self.experiment_id,
-                               taxon=taxon,
-                               genome_build=self.get_genome_build_for_taxon(taxon),
-                               reference_build='ncbi',
-                               source='gemma')
+
+        # If the experiment id refers to a GEO Series, we also want to extract
+        # its batch information
+        #
+        # If the GEO Series was split into multiple Gemma datasets, this will
+        # be marked by a '.'
+        #
+        # TOOD: Have a generic strategy for extracting batch info
+        if self.experiment_id.startswith('GSE'):
+            yield ExtractGeoSeriesBatchInfo(self.experiment_id.split('.')[0])
+        else:
+            logger.warn('Could not extract batch info for Gemma dataset %s.', self.experiment_id)
+            yield None
+
+        yield CountExperiment(self.experiment_id,
+                              taxon=taxon,
+                              genome_build=self.get_genome_build_for_taxon(taxon),
+                              reference_build='ncbi',
+                              source='gemma')
 
     def program_environment(self):
         return cfg.asenv(['GEMMA_LIB', 'JAVA_HOME', 'JAVA_OPTS'])
 
     def program_args(self):
-        count, fpkm = self.input()
+        batch_info, (count, fpkm) = self.input()
         taxon = self.get_taxon_for_dataset_short_name(self.experiment_id)
         return [cfg.GEMMACLI, 'rnaseqDataAdd',
                 '-u', os.getenv('GEMMAUSERNAME'),
