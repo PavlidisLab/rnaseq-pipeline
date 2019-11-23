@@ -9,6 +9,7 @@ import urllib
 import tarfile
 
 import luigi
+from luigi.util import requires
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import sratoolkit
 import pandas as pd
@@ -16,6 +17,11 @@ import pandas as pd
 from ..config import rnaseq_pipeline
 from ..utils import WrapperTask, NonAtomicTaskRunContext
 from ..miniml_utils import find_rnaseq_geo_samples, collect_geo_samples_info
+
+"""
+This module contains all the logic to retrieve RNA-Seq data from GEO and SRA
+databases.
+"""
 
 cfg = rnaseq_pipeline()
 
@@ -41,14 +47,16 @@ class PrefetchSraFastq(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
 
+@requires(PrefetchSraFastq)
 class ExtractSraFastq(ScheduledExternalProgramTask):
     """
     Extract FASTQs from a SRR archive
 
     FASTQs are organized by :gsm: in a flattened layout.
+
+    :param gsm: Geo Sample identifier
     """
     gsm = luigi.Parameter()
-    srr = luigi.Parameter()
 
     paired_reads = luigi.BoolParameter(positional=False)
 
@@ -56,9 +64,6 @@ class ExtractSraFastq(ScheduledExternalProgramTask):
     walltime = datetime.timedelta(hours=6)
     cpus = 1
     memory = 1
-
-    def requires(self):
-        return PrefetchSraFastq(self.srr)
 
     def program_args(self):
         # FIXME: this is not atomic
@@ -97,25 +102,22 @@ class DownloadGeoSampleMetadata(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.csv'.format(self.gsm)))
 
+@requires(DownloadGeoSampleMetadata)
 class DownloadGeoSample(luigi.Task):
     """
     Download all SRR related to a GSM
     """
-    gsm = luigi.Parameter()
-
-    def requires(self):
-        return DownloadGeoSampleMetadata(self.gsm)
 
     def run(self):
         # this will raise an error of no FASTQs are related
         df = pd.read_csv(self.input().path)
 
-        # Some GSM happen to have many related samples and we cannot
-        # realistically investigate why that is. Our best bet at this point
-        # is that the latest SRR properly represents the sample
+        # Some GSM happen to have many related SRA runs and we cannot
+        # realistically investigate why that is. Our best bet at this point is
+        # that the latest properly represents the sample
         latest_run = df.sort_values('Run', ascending=False).iloc[0]
 
-        yield ExtractSraFastq(self.gsm, latest_run.Run, paired_reads=latest_run.LibraryLayout == 'PAIRED')
+        yield ExtractSraFastq(latest_run.Run, self.gsm, paired_reads=latest_run.LibraryLayout == 'PAIRED')
 
     def output(self):
         if self.requires().complete():
@@ -148,14 +150,11 @@ class DownloadGeoSeriesMetadata(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
 
+@requires(DownloadGeoSeriesMetadata)
 class DownloadGeoSeries(luigi.Task):
     """
     Download all GSM related to a GSE
     """
-    gse = luigi.Parameter()
-
-    def requires(self):
-        return DownloadGeoSeriesMetadata(self.gse)
 
     def run(self):
         gsms = find_rnaseq_geo_samples(self.input().path)
@@ -172,11 +171,12 @@ class DownloadGeoSeries(luigi.Task):
                 logger.exception('%s has no related GEO samples with RNA-Seq data.', self.gse)
         return super(DownloadGeoSeries, self).output()
 
-class ExtractGeoSeriesInfo(luigi.Task):
-    gse = luigi.Parameter()
-
-    def requires(self):
-        return [DownloadGeoSeriesMetadata(self.gse), DownloadGeoSeries(self.gse)]
+@requires(DownloadGeoSeriesMetadata, DownloadGeoSeries)
+class ExtractGeoSeriesBatchInfo(luigi.Task):
+    """
+    Extract the GEO Series batch information by looking up the GEO Series
+    metadata and some downloaded FASTQs headers.
+    """
 
     def run(self):
         geo_series_metadata, samples = self.input()
