@@ -10,6 +10,7 @@ import pandas as pd
 import luigi
 import luigi.task
 from luigi.contrib.external_program import ExternalProgramTask
+from luigi.util import requires
 from bioluigi.tasks import fastqc
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 
@@ -20,9 +21,6 @@ from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .targets import GemmaDatasetHasPlatform
-
-EXPERIMENT_SOURCES = ['gemma', 'geo', 'arrayexpress', 'local']
-SAMPLE_SOURCES = ['geo', 'arrayexpress', 'local']
 
 logger = logging.getLogger('luigi-interface')
 
@@ -38,7 +36,7 @@ class DownloadSample(WrapperTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=SAMPLE_SOURCES, positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['geo', 'arrayexpress', 'local'], positional=False)
 
     def requires(self):
         if self.source == 'geo':
@@ -61,7 +59,7 @@ class DownloadExperiment(WrapperTask):
     """
     experiment_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=EXPERIMENT_SOURCES, positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local'], positional=False)
 
     def requires(self):
         if self.source == 'gemma':
@@ -75,11 +73,11 @@ class DownloadExperiment(WrapperTask):
         else:
             raise ValueError('Unknown download source for experiment: {}.')
 
+@requires(DownloadSample)
 class QualityControlSample(luigi.Task):
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
-
-    source = luigi.ChoiceParameter(default='local', choices=SAMPLE_SOURCES, positional=False)
+    """
+    Perform post-download quality control on the FASTQs.
+    """
 
     def requires(self):
         return DownloadSample(self.experiment_id, self.sample_id, source=self.source)
@@ -98,6 +96,10 @@ class QualityControlSample(luigi.Task):
 class PrepareReference(ScheduledExternalProgramTask):
     """
     Prepare a STAR/RSEM reference.
+
+    :param taxon: Taxon
+    :param genome_build: Genome build to use (i.e. hg19, hg38)
+    :param reference_build: Reference annotation build to use (i.e. ensembl98, ncbi)
     """
     taxon = luigi.Parameter(default='human')
     genome_build = luigi.Parameter(default='hg38')
@@ -108,34 +110,33 @@ class PrepareReference(ScheduledExternalProgramTask):
     cpus = 16
     memory = 32
 
+    def input(self):
+        # TODO: use globs for finding those files
+        return [luigi.LocalTarget(join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), '*.gtf')),
+                luigi.LocalTarget(join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), 'primary_assembly.fa'))]
+
     def program_args(self):
+        # TODO: test the following code
+        gtf, genome_fasta = self.input()
         return [join(cfg.RSEM_DIR, 'rsem-prepare-reference'),
-                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), '*.gtf'),
+                gtf.path,
                 '--star',
                 '--star-path', cfg.STAR_PATH,
                 '-p', self.cpus,
-                join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build), 'primary_assembly.fa'),
+                geonme_fasta.path,
                 self.output().path]
 
     def output(self):
         return luigi.LocalTarget(join(cfg.ASSEMBLIES, 'runtime/{}_{}/{}_0'.format(self.genome_build, self.reference_build, self.taxon)))
 
+@requires(DownloadSample, QualityControlSample, PrepareReference)
 class AlignSample(ScheduledExternalProgramTask):
     """
     The output of the task is a pair of isoform and gene quantification results
     processed by STAR and RSEM.
 
-    :ignore_mate:
+    :param ignore_mate: Ignore the second mate in the case of paired reads
     """
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
-
-    source = luigi.ChoiceParameter(default='local', choices=SAMPLE_SOURCES, positional=False)
-
-    taxon = luigi.Parameter(default='human', positional=False)
-    genome_build = luigi.Parameter(default='hg38', positional=False)
-    reference_build = luigi.Parameter(default='ncbi', positional=False)
-
     ignore_mate = luigi.BoolParameter(default=False, positional=False)
 
     # TODO: handle strand-specific reads
@@ -145,10 +146,6 @@ class AlignSample(ScheduledExternalProgramTask):
     walltime = datetime.timedelta(hours=12)
     cpus = 8
     memory = 32
-
-    def requires(self):
-        # FIXME: requiring the second task introduces a bottleneck in the pipeline
-        return [DownloadSample(self.experiment_id, self.sample_id, source=self.source), QualityControlSample(self.experiment_id, self.sample_id, source=self.source)]
 
     def run(self):
         self.output().makedirs()
@@ -194,6 +191,7 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
+@requires(DownloadExperiment)
 class AlignExperiment(luigi.Task):
     """
     Align all the samples in a given experiment.
@@ -201,16 +199,9 @@ class AlignExperiment(luigi.Task):
     The output is one sample alignment output per sample contained in the
     experiment.
     """
-    experiment_id = luigi.Parameter()
-
-    source = luigi.ChoiceParameter(default='local', choices=EXPERIMENT_SOURCES, positional=False)
-
     taxon = luigi.Parameter(default='human', positional=False)
     genome_build = luigi.Parameter(default='hg38', positional=False)
     reference_build = luigi.Parameter(default='ncbi', positional=False)
-
-    def requires(self):
-        return DownloadExperiment(self.experiment_id, source=self.source)
 
     def run(self):
         samples = self.input()
@@ -221,21 +212,11 @@ class AlignExperiment(luigi.Task):
     def output(self):
         return [task.output() for task in next(self.run())]
 
+@requires(AlignExperiment)
 class GenerateReportForExperiment(ExternalProgramTask):
     """
     MultiQC!
     """
-    experiment_id = luigi.Parameter()
-
-    source = luigi.ChoiceParameter(default='local', choices=EXPERIMENT_SOURCES, positional=False)
-
-    taxon = luigi.Parameter(default='human')
-    genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ncbi')
-
-    def requires(self):
-        return AlignExperiment(self.experiment_id, taxon=self.taxon, genome_build=self.genome_build, reference_build=self.reference_build)
-
     def program_args(self):
         args = ['multiqc',
                 '--outdir', os.path.dirname(self.output().path),
@@ -251,6 +232,7 @@ class GenerateReportForExperiment(ExternalProgramTask):
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report2', self.experiment_id, 'multiqc_report.html'))
 
+@requires(AlignExperiment)
 class CountExperiment(luigi.Task):
     """
     Combine the RSEM quantifications results from all the samples in a given
@@ -258,18 +240,7 @@ class CountExperiment(luigi.Task):
 
     The output is two matrices: counts and FPKM.
     """
-    experiment_id = luigi.Parameter()
-
-    source = luigi.ChoiceParameter(default='local', choices=EXPERIMENT_SOURCES, positional=False)
-
-    taxon = luigi.Parameter(default='human')
-    genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ncbi')
-
     resources = {'cpus': 1}
-
-    def requires(self):
-        return AlignExperiment(self.experiment_id, taxon=self.taxon, genome_build=self.genome_build, reference_build=self.reference_build, source=self.source)
 
     def run(self):
         # FIXME: this is a hack
