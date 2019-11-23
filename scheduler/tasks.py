@@ -85,8 +85,7 @@ class QualityControlSample(luigi.Task):
     def run(self):
         for fastq_in, report_out in zip(self.input(), self.output()):
             report_out.makedirs()
-            yield fastqc.GenerateReport(fastq_in.path, os.path.dirname(report_out.path),
-                                        scheduler_extra_args=['--partition', 'Cargo'])
+            yield fastqc.GenerateReport(fastq_in.path, os.path.dirname(report_out.path))
 
     def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
@@ -105,7 +104,6 @@ class PrepareReference(ScheduledExternalProgramTask):
     genome_build = luigi.Parameter(default='hg38')
     reference_build = luigi.Parameter(default='ncbi')
 
-    scheduler_extra_args = ['--partition', 'Cargo']
     walltime = datetime.timedelta(hours=12)
     cpus = 16
     memory = 32
@@ -142,7 +140,6 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
-    scheduler_extra_args = ['--partition', 'Cargo']
     walltime = datetime.timedelta(hours=12)
     cpus = 8
     memory = 32

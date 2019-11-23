@@ -41,8 +41,7 @@ class PrefetchSraFastq(luigi.Task):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
                                   max_size=30,
-                                  extra_args=shlex.split(cfg.PREFETCH_ARGS),
-                                  scheduler_extra_args=['--partition', 'Wormhole'])
+                                  extra_args=shlex.split(cfg.PREFETCH_ARGS))
 
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
@@ -60,7 +59,6 @@ class ExtractSraFastq(ScheduledExternalProgramTask):
 
     paired_reads = luigi.BoolParameter(positional=False)
 
-    scheduler_extra_args = ['--partition', 'Cargo']
     walltime = datetime.timedelta(hours=6)
     cpus = 1
     memory = 1
