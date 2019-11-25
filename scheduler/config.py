@@ -15,8 +15,6 @@ class rnaseq_pipeline(luigi.Config):
     PREFETCH_ARGS = luigi.Parameter()
     SRA_PUBLIC_DIR = luigi.Parameter()
 
-    FASTQDUMP_EXE = luigi.Parameter()
-
     STAR_PATH = luigi.Parameter()
 
     RSEM_DIR = luigi.Parameter()
