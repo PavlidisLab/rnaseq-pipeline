@@ -52,16 +52,14 @@ class DumpSraFastq(luigi.Task):
     paired_reads = luigi.BoolParameter(positional=False)
 
     def run(self):
-        yield sratoolkit.FastqDump(self.input().path,
-                                   os.path.dirname(self.output()[0].path),
-                                   paired_reads=self.paired_reads)
-
-    def run(self):
-            return super(DumpSraFastq, self).run()
+        with NonAtomicTaskRunContext(self):
+            yield sratoolkit.FastqDump(self.input().path,
+                                       os.path.dirname(self.output()[0].path),
+                                       paired_reads=self.paired_reads)
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm)
         if self.paired_reads:
             return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz')),
                     luigi.LocalTarget(join(output_dir, self.srr + '_2.fastq.gz'))]
-            return [luigi.LocalTarget(join(output_dir, self.gsm, self.srr + '_1.fastq.gz'))]
+        return [luigi.LocalTarget(join(output_dir, self.gsm, self.srr + '_1.fastq.gz'))]
