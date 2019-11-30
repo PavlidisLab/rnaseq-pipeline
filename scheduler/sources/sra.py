@@ -9,7 +9,6 @@ import luigi
 from luigi.util import requires
 
 from ..config import rnaseq_pipeline
-from ..utils import NonAtomicTaskRunContext
 
 cfg = rnaseq_pipeline()
 
@@ -52,10 +51,9 @@ class DumpSraFastq(luigi.Task):
     paired_reads = luigi.BoolParameter(positional=False)
 
     def run(self):
-        with NonAtomicTaskRunContext(self):
-            yield sratoolkit.FastqDump(self.input().path,
-                                       os.path.dirname(self.output()[0].path),
-                                       paired_reads=self.paired_reads)
+        yield sratoolkit.FastqDump(self.input().path,
+                                   os.path.dirname(self.output()[0].path),
+                                   paired_reads=self.paired_reads)
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm)
