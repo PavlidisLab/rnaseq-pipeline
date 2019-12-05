@@ -9,9 +9,10 @@ from requests.auth import HTTPBasicAuth
 import pandas as pd
 import luigi
 import luigi.task
+from luigi.task import flatten
 from luigi.contrib.external_program import ExternalProgramTask
 from luigi.util import requires
-from bioluigi.tasks import fastqc
+from bioluigi.tasks import fastqc, multiqc
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 
 from .config import rnaseq_pipeline
@@ -209,25 +210,24 @@ class AlignExperiment(luigi.Task):
     def output(self):
         return [task.output() for task in next(self.run())]
 
-@requires(AlignExperiment)
-class GenerateReportForExperiment(ExternalProgramTask):
+@requires(QualityControlExperiment,AlignExperiment)
+class GenerateReportForExperiment(luigi.Task):
     """
-    MultiQC!
-    """
-    def program_args(self):
-        args = ['multiqc',
-                '--outdir', os.path.dirname(self.output().path),
-                join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
-                join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id)]
+    Generate a summary report for an experiment with MultiQC.
 
-        return args
+    The report include collected FastQC reports and RSEM/STAR outputs.
+    """
 
     def run(self):
+        search_dirs = set()
+        search_dirs.update(os.path.dirname(out.path) for out in flatten(self.input()))
         self.output().makedirs()
-        return super(GenerateReportForExperiment, self).run()
+        yield multiqc.GenerateReport(list(search_dirs),
+                                     os.path.dirname(self.output().path),
+                                     title='Report for {}'.format(self.experiment_id))
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report2', self.experiment_id, 'multiqc_report.html'))
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id, 'multiqc_report.html'))
 
 @requires(AlignExperiment)
 class CountExperiment(luigi.Task):
