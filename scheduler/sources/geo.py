@@ -45,8 +45,11 @@ class DownloadGeoSampleRunInfo(luigi.Task):
 @requires(DownloadGeoSampleRunInfo)
 class DownloadGeoSample(luigi.Task):
     """
-    Download all SRA runs related to a GEO Sample.
+    Download a GEO Sample given a runinfo file and
     """
+
+    retry_count = 0
+
     def run(self):
         # this will raise an error of no FASTQs are related
         df = pd.read_csv(self.input().path)
@@ -99,6 +102,8 @@ class DownloadGeoSeries(luigi.Task):
     Download all GEO Samples related to a GEO Series.
     """
 
+    retry_count = 0
+
     def run(self):
         gsms = collect_geo_samples_with_rnaseq_data(self.input().path)
         if not gsms:
@@ -126,6 +131,9 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
         sample_geo_metadata = collect_geo_samples_info(geo_series_metadata.path)
         with self.output().open('w') as info_out:
             for sample in samples:
+                if len(sample) == 0:
+                    # FIXME:
+                    continue
                 fastq = sample[0]
                 sample_id = os.path.basename(os.path.dirname(fastq.path))
                 fastq_name, _ = os.path.splitext(fastq.path)

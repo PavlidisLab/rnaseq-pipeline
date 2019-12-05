@@ -23,16 +23,17 @@ class PrefetchSraFastq(luigi.Task):
     Prefetch a SRR sample using prefetch
 
     Data is downloaded in a shared SRA cache.
+
+    :attr srr: A SRA run accession
     """
     srr = luigi.Parameter()
-
-    resources = {'sra_connections': 1}
 
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
                                   max_size=30,
-                                  extra_args=shlex.split(cfg.PREFETCH_ARGS))
+                                  extra_args=shlex.split(cfg.PREFETCH_ARGS),
+                                  scheduler_extra_args=['--partition', 'Wormhole'])
 
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
@@ -44,7 +45,7 @@ class DumpSraFastq(luigi.Task):
 
     FASTQs are organized by :gsm: in a flattened layout.
 
-    :param gsm: Geo Sample identifier
+    :attr gsm: Geo Sample identifier
     """
     gsm = luigi.Parameter()
 
@@ -60,4 +61,4 @@ class DumpSraFastq(luigi.Task):
         if self.paired_reads:
             return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz')),
                     luigi.LocalTarget(join(output_dir, self.srr + '_2.fastq.gz'))]
-        return [luigi.LocalTarget(join(output_dir, self.gsm, self.srr + '_1.fastq.gz'))]
+        return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz'))]

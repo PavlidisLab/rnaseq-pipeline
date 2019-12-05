@@ -20,3 +20,6 @@ class GemmaDatasetHasPlatform(luigi.Target):
         res.raise_for_status()
         return any(platform['shortName'] == self.platform
                    for platform in res.json()['data'])
+
+    def __repr__(self):
+        return 'GemmaDatasetHasPlatform(dataset_short_name={}, platform={})'.format(self.dataset_short_name, self.platform)
