@@ -4,7 +4,7 @@ import luigi
 import requests
 from requests.auth import HTTPBasicAuth
 
-from geo import DownloadGeoSample
+from .geo import DownloadGeoSample
 from ..utils import WrapperTask
 
 class DownloadGemmaExperiment(WrapperTask):

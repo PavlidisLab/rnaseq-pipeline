@@ -19,7 +19,6 @@ import yaml
 
 from .config import rnaseq_pipeline
 from .utils import WrapperTask, DynamicWrapperTask
-from .cwl_utils import gen_workflow
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
