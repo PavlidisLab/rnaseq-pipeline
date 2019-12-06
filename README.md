@@ -10,7 +10,7 @@ This documentation is principally written to support the Pavlidis Lab, and we're
 Clone the repository:
 
 ```bash
-git clone https://github.com/PavlidisLab/rnaseq-pipeline
+git clone --recurse-submodules https://github.com/PavlidisLab/rnaseq-pipeline
 cd rnaseq-pipeline
 ```
 
