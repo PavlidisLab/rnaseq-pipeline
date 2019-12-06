@@ -1,4 +1,0 @@
-luigi
-requests
-sendgrid
-git+https://github.com/PavlidisLab/bioluigi.git
