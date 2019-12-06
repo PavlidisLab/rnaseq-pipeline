@@ -6,12 +6,28 @@ This documentation is principally written to support the Pavlidis Lab, and we're
 # General install instructions
 
 ## Downloading and installing
-Create a directory where you will clone this repository. From example `/home/username/Pipeline`
 
-```
-mkdir -p /home/$(whoami)/Pipelines
-cd /home/$(whoami)/Pipelines
+Clone the repository:
+
+```bash
 git clone https://github.com/PavlidisLab/rnaseq-pipeline
+cd rnaseq-pipeline
+```
+
+Create a virtual environment in which you can install the pipeline and all of its Python dependencies:
+
+```bash
+virtualenv venv
+source venv/bin/activate
+python setup.py install # use develop instead of install of you want to edit the pipeline
+```
+
+Create a copy of `the example.luigi.cfg` file to `luigi.cfg` and edit it the to point to the expected tools locations.
+
+For convenience, we provide a `luigi-wrapper` script that sets the `--module` flag to `rnaseq_pipeline.tasks` for you.
+
+```bash
+./luigi-wrapper <task> <task_args>
 ```
 
 Please see [Requirements/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Requirements/README.md) for information on how to set up the different requirements for this pipeline.
