@@ -41,6 +41,7 @@ class DownloadArrayExpressExperiment(WrapperTask):
 
     def requires(self):
         ae_df = pd.read_csv('http://www.ebi.ac.uk/arrayexpress/files/{0}/{0}.sdrf.txt'.format(self.experiment_id), sep='\t')
+        ae_df = ae_df[ae_df['Comment[LIBRARY_STRATEGY]'] == 'RNA-Seq']
         # FIXME: properly handle the order of paired FASTQs
         return [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=sample_id, fastq_urls=s['Comment[FASTQ_URI]'].sort_values().tolist())
                 for sample_id, s in ae_df.groupby('Comment[ENA_SAMPLE]')]
