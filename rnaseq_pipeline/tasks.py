@@ -246,8 +246,7 @@ class GenerateReportForExperiment(luigi.Task):
         search_dirs.update(os.path.dirname(out.path) for out in flatten(self.input()))
         self.output().makedirs()
         yield multiqc.GenerateReport(list(search_dirs),
-                                     os.path.dirname(self.output().path),
-                                     title='Report for {}'.format(self.experiment_id))
+                                     os.path.dirname(self.output().path))
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id, 'multiqc_report.html'))
