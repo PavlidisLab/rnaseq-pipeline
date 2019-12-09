@@ -146,7 +146,7 @@ class PrepareReference(ScheduledExternalProgramTask):
     def output(self):
         return luigi.LocalTarget(join(cfg.ASSEMBLIES, 'runtime/{}_{}'.format(self.genome_build, self.reference_build, self.taxon)))
 
-@requires(DownloadSample, PrepareReference)
+@requires(DownloadSample, QualityControlSample, PrepareReference)
 class AlignSample(ScheduledExternalProgramTask):
     """
     The output of the task is a pair of isoform and gene quantification results
@@ -183,7 +183,7 @@ class AlignSample(ScheduledExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_run, reference = self.input()
+        sample_run, qc_run, reference = self.input()
 
         fastqs = [mate.path for mate in sample_run]
 
