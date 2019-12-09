@@ -12,6 +12,7 @@ import pandas as pd
 
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples_with_rnaseq_data, collect_geo_samples_info
+from ..utils import DynamicWrapperTask
 
 """
 This module contains all the logic to retrieve RNA-Seq data from GEO.
@@ -43,7 +44,7 @@ class DownloadGeoSampleRunInfo(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.csv'.format(self.gsm)))
 
 @requires(DownloadGeoSampleRunInfo)
-class DownloadGeoSample(luigi.Task):
+class DownloadGeoSample(DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
@@ -60,14 +61,6 @@ class DownloadGeoSample(luigi.Task):
         latest_run = df.sort_values('Run', ascending=False).iloc[0]
 
         yield DumpSraFastq(latest_run.Run, self.gsm, paired_reads=latest_run.LibraryLayout == 'PAIRED')
-
-    def output(self):
-        if self.requires().complete():
-            try:
-                return next(self.run()).output()
-            except pd.errors.EmptyDataError:
-                logger.exception('%s has no related SRA RNA-Seq runs.', self.gsm)
-        return super(DownloadGeoSample, self).output()
 
 class DownloadGeoSeriesMetadata(luigi.Task):
     """
@@ -97,7 +90,7 @@ class DownloadGeoSeriesMetadata(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
 
 @requires(DownloadGeoSeriesMetadata)
-class DownloadGeoSeries(luigi.Task):
+class DownloadGeoSeries(DynamicWrapperTask):
     """
     Download all GEO Samples related to a GEO Series.
     """
@@ -109,15 +102,6 @@ class DownloadGeoSeries(luigi.Task):
         if not gsms:
             raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
         yield [DownloadGeoSample(gsm) for gsm in gsms]
-
-    def output(self):
-        if self.requires().complete():
-            # FIXME: this is ugly
-            try:
-                return [task.output() for task in next(self.run())]
-            except ValueError:
-                logger.exception('%s has no related GEO samples with RNA-Seq data.', self.gse)
-        return super(DownloadGeoSeries, self).output()
 
 @requires(DownloadGeoSeriesMetadata, DownloadGeoSeries)
 class ExtractGeoSeriesBatchInfo(luigi.Task):
