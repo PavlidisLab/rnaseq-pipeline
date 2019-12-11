@@ -4,6 +4,17 @@ import luigi
 import requests
 from requests.auth import HTTPBasicAuth
 
+class RsemReference(luigi.Target):
+    """
+    Represents the target of rsem-prepare-reference script.
+    """
+    def __init__(self, path):
+        self.path = path
+
+    def exists(self):
+        exts = ['grp', 'ti', 'seq', 'chrlist']
+        return all(os.path.exists(self.path + '.' + ext) for ext in exts)
+
 class GemmaDatasetHasPlatform(luigi.Target):
     """
     This target determines if a Gemma dataset, identified by a short name
