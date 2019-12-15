@@ -1,0 +1,12 @@
+name: rnaseq-pipeline
+channels:
+- bioconda
+dependencies:
+- python=2.7
+- sra-tools==2.10.0
+- fastqc==0.11.8
+- star==2.7.3a
+- entrez-direct==11.0
+- pip
+- pip:
+  - multiqc==1.8

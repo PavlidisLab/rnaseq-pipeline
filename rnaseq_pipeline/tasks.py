@@ -133,9 +133,8 @@ class PrepareReference(ScheduledExternalProgramTask):
         args.extend([t.path for t in gtf])
 
         args.extend([
-                '--star',
-                '--star-path', cfg.STAR_PATH,
-                '-p', self.cpus])
+            '--star',
+            '-p', self.cpus])
 
         args.extend([t.path for t in genome_fasta])
 
@@ -176,7 +175,6 @@ class AlignSample(ScheduledExternalProgramTask):
         args.extend([
             '--time',
             '--star',
-            '--star-path', cfg.STAR_PATH,
             '--star-gzipped-read-file',
             '--no-bam-output'])
 

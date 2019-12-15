@@ -37,8 +37,8 @@ class DownloadGeoSampleRunInfo(luigi.Task):
 
     def run(self):
         with self.output().open('w') as f:
-            esearch_proc = Popen(['Requirements/edirect/esearch', '-db', 'sra', '-query', self.gsm], stdout=PIPE)
-            check_call(['Requirements/edirect/efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
+            esearch_proc = Popen(['esearch', '-db', 'sra', '-query', self.gsm], stdout=PIPE)
+            check_call(['efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.csv'.format(self.gsm)))
