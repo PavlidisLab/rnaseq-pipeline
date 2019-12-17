@@ -2,80 +2,77 @@
 
 This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact [@mbelmadani](https://github.com/mbelmadani) - manuel.belmadani@msl.ubc.ca if troubleshooting assistance is needed.
 
+## Features
 
-# General install instructions
+ - source mechanism that support GEO, SRA, ArrayExpress and Gemma (in-house curation database)
+ - built with STAR, RSEM, MultiQC, FastQC
+ - produces count and FPKM matrices suitable for analysis with R and Python
+ - distributed via a workload manager
 
 ## Downloading and installing
 
-Clone the repository:
+Clone this repository:
 
 ```bash
 git clone --recurse-submodules https://github.com/PavlidisLab/rnaseq-pipeline
 cd rnaseq-pipeline
 ```
 
-Create a virtual environment in which you can install the pipeline and all of its Python dependencies:
+**Note:** We use a patched version of RSEM that honors the `$TMPDIR`
+environment variable for its intermediate outputs, fix issues with moving files
+across filesystems and uses STAR shared memory feature by default.
+
+Create and activate a Conda environment with all the required software
+dependencies:
 
 ```bash
-virtualenv venv
-source venv/bin/activate
+conda env setup -f environment.yml
+conda activate rnaseq-pipeline
+```
+
+Install the pipeline Python package in the Conda environment:
+
+```bash
 python setup.py install # use develop instead of install of you want to edit the pipeline
 ```
 
-Create a copy of `the example.luigi.cfg` file to `luigi.cfg` and edit it the to point to the expected tools locations.
+Create a copy of `the example.luigi.cfg` file to `luigi.cfg`. It should work
+as-is, but you might want to change the output location.
 
-For convenience, we provide a `luigi-wrapper` script that sets the `--module` flag to `rnaseq_pipeline.tasks` for you.
+For convenience, we provide a `luigi-wrapper` script that sets the `--module`
+flag to `rnaseq_pipeline.tasks` for you.
 
 ```bash
 ./luigi-wrapper <task> <task_args>
 ```
 
-Please see [Requirements/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Requirements/README.md) for information on how to set up the different requirements for this pipeline.
+## Setting up a genomic reference
 
-If you already have them installed on your machine, you can simply edit the configuration file described in the next section to point to existing executables.
+The pipeline automatically generate the RSEM/STAR index and all that is
+required is to drop the GTF annotations file and the primary assembly FASTA
+files under `genome/<reference_id>` subdirectory.
 
-## Requirements
-See [README in Requirements](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Requirements/README.md)
+For example, you can setup a mouse reference from Ensembl by downloading the
+following files under `genomes/mm10_ensembl98`:
 
-## Assemblies
-Once the Requirements are configured, see [README in Assemblies](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/Assemblies/README.md)
+ - ftp://ftp.ensembl.org/pub/release-98/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
+ - ftp://ftp.ensembl.org/pub/release-98/gtf/mus_musculus/Mus_musculus.GRCm38.98.gtf.gz
 
+## Triggering tasks
 
-# Getting started
+```bash
+./luigi-wrapper GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
+```
 
-## Creating/Updating configuration
-The most important step to get this pipeline working is to set your configuration file.
+## Setting up distributed computation
 
-The bulk of how this pipeline works relies on a main configuration file (in etc/common.cfg) as well as "modes" to run tasks with modified configurations (see `etc/modes/*` for some examples).
+The pipeline is build upon [Bioluigi](https://github.com/PavlidisLab/bioluigi)
+which supports dispatching external programs on a workload manager such as
+[Slurm](https://slurm.schedmd.com/).
 
-To start, you can copy `etc/common.cfg.EXAMPLE` to `etc/common.cfg`. The `.EXAMPLE` file shows a set up where the pipeline is installed in `/home/$USERNAME/Pipelines/`. If you want to install it somewhere else, change the `$ROOT_DIR`. There's also a separate `RESULTS_DIR` and `SCRATCH_DIR` which you can either leave the same as `ROOT_DIR` or point to different locations. For example, we do this to avoid storing raw data in locations with limited storage, so we set `DATA=$SCRATCH_DIR/Data`, and we can change `$SCRATCH_DIR` to point to a location with more storage if needed.
-
-## Using modes
-
-Modes are configuration files that are loaded after `common.cfg` to override the default settings, for example changing the download directory, or increasing the CPU count. See [etc/README.md](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/README.md) or have a look at some [existing examples](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/).
-
-### Using multiple machines
-
-Distributed processing over multiple machines typically done by creating a 'mode' that sets the `$MACHINES` variable as a comma-separated list of server addresses (names or IPs). The connection is done over ssh using GNU Parallel, so as a requirement you should be able to connect to that server with a simple `ssh servername` or `ssh server.example.com` command. See how to set up ssh keys using this [guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604).
-
-Try to connect to each server via ssh as a pre-requisite; often on the first time you connect you'll get a prompt asking if that server's IP can be trusted/added to the ssh known_hosts file. Once all servers are able to connect directly with an ssh command, they should be ready to use as distributed machines. See [distributedLP](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/modes/distributedLP.cfg) as an example, where we also set the number of CPU per job to 4, the number of jobs per server to 2, for each of the 4 servers to be used in parallel.
-
-# Automated processing
-
-## Using the scheduler to automatically download and process datasets with RSEM
-
-See scheduler/README.md
-
-# Manual processing
-
-## Downloading data
-See `scripts/`; run `./GSE_to_fastq.sh $ACCESSION` or `./arrayexpress_to_fastq.sh $ACCESSION`, where your accession is respectively a GEO series or an ArrayExpress identifier.
-
-## Using the pipelines
-
-In `Pipelines/`, you can see different flavors of pipelines. `Pipelines/rsem` is the most mature one, while `Pipelines/stringtie` has been used on limited occasions. 
-
-### Pipelines/rsem
-
-The directory includes scripts to process data with RSEM. If you've downloaded your data using `GSE_to_fastq.sh` or `arrayexpress_to_fastq.sh` methods, then most likely you'll want to use `./multiple_rsem.sh $ACCESSION $ACCESSION` (since the input data directory in `$DATA/` will be the accession name, and the script knows to look in `$DATA`, both parameters are the same.) The first argument is the path to the data, and the second is the name of the series. If the data is downloaded into `$DATA` according to [etc/common.cfg](https://github.com/PavlidisLab/rnaseq-pipeline/blob/master/etc/common.cfg.EXAMPLE), then it's sufficient to use the `$ACCESSION` as the path; the script will know to look in `$DATA`. If the path is different, then the first argument should be the full path to the series directory.
+```ini
+[bioluigi]
+scheduler=slurm
+scheduler_extra_args=[]
+```
 
