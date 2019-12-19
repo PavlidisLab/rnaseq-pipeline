@@ -34,3 +34,18 @@ class GemmaDatasetHasPlatform(luigi.Target):
 
     def __repr__(self):
         return 'GemmaDatasetHasPlatform(dataset_short_name={}, platform={})'.format(self.dataset_short_name, self.platform)
+
+class GemmaDatasetHasBatchInfo(luigi.Target):
+    """
+    This target determines if a Gemma dataset has batch information by ensuring
+    that all its samples have a batch factor.
+    """
+    def __init__(self, dataset_short_name):
+        self.dataset_short_name = dataset_short_name
+
+    def exists(self):
+        basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
+        res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}/samples'.format(self.dataset_short_name), auth=basic_auth)
+        res.raise_for_status()
+        # all samples must have a batch factor
+        return all('batch' in sample['sample']['factors'].values() for sample in res.json()['data'])

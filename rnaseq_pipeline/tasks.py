@@ -1,16 +1,13 @@
 import datetime
 from glob import glob
-import gzip
 import os
 from os.path import join
 import logging
 
-import requests
-from requests.auth import HTTPBasicAuth
 import pandas as pd
+import requests
 import luigi
 import luigi.task
-from luigi.task import flatten
 from luigi.contrib.external_program import ExternalProgramTask
 from luigi.util import requires
 from bioluigi.tasks import fastqc, multiqc
@@ -18,12 +15,14 @@ from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 
 from .config import rnaseq_pipeline
-from .utils import WrapperTask, DynamicWrapperTask
+from .cwl_utils import gen_workflow
+from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
+from .sources.sra import DownloadSraProject, DownloadSraExperiment
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
-from .targets import GemmaDatasetHasPlatform
+from .targets import GemmaDatasetHasPlatform, GemmaDatasetHasBatchInfo, RsemReference
 
 logger = logging.getLogger('luigi-interface')
 
@@ -39,11 +38,13 @@ class DownloadSample(WrapperTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local', 'sra'], positional=False)
 
     def requires(self):
         if self.source in ['geo', 'gemma']:
             return DownloadGeoSample(self.sample_id)
+        elif self.source == 'sra':
+            return DownloadSraExperiment(self.sample_id)
         elif self.source == 'arrayexpress':
             return DownloadArrayExpressSample(self.experiment_id, self.sample_id)
         elif self.source == 'local':
@@ -62,13 +63,15 @@ class DownloadExperiment(WrapperTask):
     """
     experiment_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
 
     def requires(self):
         if self.source == 'gemma':
             return DownloadGemmaExperiment(self.experiment_id)
         elif self.source == 'geo':
             return DownloadGeoSeries(self.experiment_id)
+        elif source == 'sra':
+            return DownloadSraProject(self.experiment_id)
         elif self.source == 'arrayexpress':
             return DownloadArrayExpressExperiment(self.experiment_id)
         elif self.source == 'local':
@@ -76,6 +79,7 @@ class DownloadExperiment(WrapperTask):
         else:
             raise ValueError('Unknown download source for experiment: {}.')
 
+@no_retry
 @requires(DownloadSample)
 class QualityControlSample(luigi.Task):
     """
@@ -98,39 +102,42 @@ class QualityControlExperiment(DynamicWrapperTask):
     Quality control all the samples in a given experiment.
     """
     def run(self):
-        samples = self.input()
         # FIXME: have a more reliable way to determine the sample id
+        # It should be something like [sample.sample_id for sample in self.requires()]
         yield [QualityControlSample(self.experiment_id,
                                     os.path.basename(os.path.dirname(sample[0].path)),
                                     source=self.source)
-               for sample in samples if len(sample) > 0]
+               for sample in self.input() if len(sample) > 0]
 
+@no_retry
 class PrepareReference(ScheduledExternalProgramTask):
     """
     Prepare a STAR/RSEM reference.
 
     :param taxon: Taxon
-    :param genome_build: Genome build to use (i.e. hg19, hg38)
-    :param reference_build: Reference annotation build to use (i.e. ensembl98, ncbi)
+    :param reference_id: Reference annotation build to use (i.e. ensembl98, hg38_ncbi)
     """
     taxon = luigi.Parameter(default='human')
-    genome_build = luigi.Parameter(default='hg38')
-    reference_build = luigi.Parameter(default='ncbi')
+    reference_id = luigi.Parameter(default='hg38_ncbi')
 
     walltime = datetime.timedelta(hours=12)
     cpus = 16
     memory = 32
 
     def input(self):
-        assembly_dir=join(cfg.ASSEMBLIES, '{}_{}'.format(self.genome_build, self.reference_build))
-        return [[luigi.LocalTarget(f) for f in glob(join(assembly_dir, '*.gtf'))],
-                [luigi.LocalTarget(f) for f in glob(join(assembly_dir, '*.fa'))]]
+        genome_dir = join(cfg.GENOMES, self.reference_id)
+        gtf_files = glob(join(genome_dir, '*.gtf'))
+        fasta_files = glob(join(genome_dir, '*.fa'))
+        if len(gtf_files) != 1:
+            raise ValueError('Only one GTF file is expected in {}.'.format(genome_dir))
+        return [luigi.LocalTarget(gtf_files[0]),
+                [luigi.LocalTarget(f) for f in fasta_files]]
 
     def program_args(self):
         gtf, genome_fasta = self.input()
         args = [join(cfg.RSEM_DIR, 'rsem-prepare-reference')]
 
-        args.extend([t.path for t in gtf])
+        args.extend(['--gtf', gtf.path])
 
         args.extend([
             '--star',
@@ -143,8 +150,9 @@ class PrepareReference(ScheduledExternalProgramTask):
         return args
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.ASSEMBLIES, 'runtime/{}_{}'.format(self.genome_build, self.reference_build, self.taxon)))
+        return RsemReference(join(cfg.REFERENCES, self.reference_id, '{}_0'.format(self.taxon)))
 
+@no_retry
 @requires(DownloadSample, QualityControlSample, PrepareReference)
 class AlignSample(ScheduledExternalProgramTask):
     """
@@ -159,11 +167,9 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
-    walltime = datetime.timedelta(hours=12)
+    walltime = datetime.timedelta(days=1)
     cpus = 8
     memory = 32
-
-    retry_count = 0
 
     def run(self):
         self.output().makedirs()
@@ -181,7 +187,7 @@ class AlignSample(ScheduledExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_run, qc_run, reference = self.input()
+        sample_run, _, reference = self.input()
 
         fastqs = [mate.path for mate in sample_run]
 
@@ -194,10 +200,10 @@ class AlignSample(ScheduledExternalProgramTask):
             args.append('--paired-end')
             args.extend(fastqs)
         else:
-            raise ValueError('More than two input FASTQs are not supported.')
+            raise NotImplementedError('More than two input FASTQs are not supported.')
 
         # reference for alignments and quantifications
-        args.append(join(reference.path, '{}_0'.format(self.taxon)))
+        args.append(join(reference.path))
 
         # output prefix
         args.append(join(os.path.dirname(self.output().path), self.sample_id))
@@ -205,7 +211,7 @@ class AlignSample(ScheduledExternalProgramTask):
         return args
 
     def output(self):
-        destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id)
+        destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
 @requires(DownloadExperiment)
@@ -217,8 +223,7 @@ class AlignExperiment(DynamicWrapperTask):
     experiment.
     """
     taxon = luigi.Parameter(default='human', positional=False)
-    genome_build = luigi.Parameter(default='hg38', positional=False)
-    reference_build = luigi.Parameter(default='ncbi', positional=False)
+    reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
 
     def run(self):
         samples = self.input()
@@ -227,11 +232,11 @@ class AlignExperiment(DynamicWrapperTask):
                            os.path.basename(os.path.dirname(sample[0].path)),
                            source=self.source,
                            taxon=self.taxon,
-                           genome_build=self.genome_build,
-                           reference_build=self.reference_build)
+                           reference_id=self.reference_id)
                for sample in samples if len(sample) > 0]
 
-@requires(QualityControlExperiment,AlignExperiment)
+@no_retry
+@requires(QualityControlExperiment, AlignExperiment)
 class GenerateReportForExperiment(luigi.Task):
     """
     Generate a summary report for an experiment with MultiQC.
@@ -240,14 +245,14 @@ class GenerateReportForExperiment(luigi.Task):
     """
 
     def run(self):
-        search_dirs = set()
-        search_dirs.update(os.path.dirname(out.path) for out in flatten(self.input()))
+        search_dirs = [
+            join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
+            join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)]
         self.output().makedirs()
-        yield multiqc.GenerateReport(list(search_dirs),
-                                     os.path.dirname(self.output().path))
+        yield multiqc.GenerateReport(search_dirs, os.path.dirname(self.output().path))
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', '{}_{}'.format(self.genome_build, self.reference_build), self.experiment_id, 'multiqc_report.html'))
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
 
 @requires(AlignExperiment)
 class CountExperiment(luigi.Task):
@@ -270,11 +275,44 @@ class CountExperiment(luigi.Task):
             fpkm_df.to_csv(fpkm_out, sep='\t')
 
     def output(self):
-        destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, '{}_{}'.format(self.genome_build, self.reference_build))
+        destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, self.reference_id)
         return [luigi.LocalTarget(join(destdir, '{}_counts.genes'.format(self.experiment_id))),
                 luigi.LocalTarget(join(destdir, '{}_fpkm.genes'.format(self.experiment_id)))]
 
-class SubmitExperimentToGemma(ExternalProgramTask):
+@requires(CountExperiment)
+class GenerateWorkflowMetadataForExperiment(luigi.Task):
+    def run(self):
+        with self.output().open('w') as f:
+            yaml.dump(gen_workflow(self.requires()), f)
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'workflow', '{}.cwl'.format(self.experiment_id)))
+
+class SubmitBatchInfoToGemma(GemmaTask):
+    """
+    Submit the batch information of an experiment to Gemma.
+    """
+
+    subcommand = 'fillBatchInfo'
+
+    def requires(self):
+        dataset_info = self.get_dataset_info()
+
+        # TODO: Have a generic strategy for extracting batch info that would
+        # work for all sources
+        if dataset_info['externalDatabase'] == 'GEO':
+            return ExtractGeoSeriesBatchInfo(dataset_info['accession'])
+        else:
+            raise NotImplementedError('Extracting batch information from {} is not implemented.'.format(dataset_info['externalDatabase']))
+
+    def subcommand_args(self):
+        return ['--force', 'yes', '-f', self.input().path]
+
+    def output(self):
+        return GemmaDatasetHasBatchInfo(self.experiment_id)
+
+@no_retry
+class SubmitExperimentToGemma(GemmaTask):
     """
     Submit an experiment to Gemma.
 
@@ -284,87 +322,54 @@ class SubmitExperimentToGemma(ExternalProgramTask):
 
     The output is a confirmation that the data is effectively in Gemma.
     """
-    experiment_id = luigi.Parameter()
 
-    resources = {'gemma_connections': 1}
+    subcommand = 'rnaseqDataAdd'
 
-    @staticmethod
-    def get_dataset_info(dataset_short_name):
-        basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
-        res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}'.format(dataset_short_name), auth=basic_auth)
-        res.raise_for_status()
-        return res.json()['data'][0]
+    resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
 
-    @staticmethod
-    def get_taxon_for_dataset_short_name(dataset_short_name):
-        basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
-        res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}'.format(dataset_short_name), auth=basic_auth)
-        res.raise_for_status()
-        return res.json()['data'][0]['taxon']
-
-    @staticmethod
-    def get_genome_build_for_taxon(taxon):
-        try:
-            return {'human': 'hg38', 'mouse': 'mm10', 'rat': 'm6'}[taxon]
-        except KeyError:
-            raise ValueError('Unsupported Gemma taxon {}.'.format(taxon))
-
-    @staticmethod
-    def get_platform_short_name_for_taxon(taxon):
-        return 'Generic_{}_ncbiIds'.format(taxon)
+    def on_success(self):
+        """
+        Notify curators that the dataset is now available on Gemma.
+        """
+        if cfg.SLACK_WEBHOOK_URL is not None:
+            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> RNA-Seq data has been successfully submitted to Gemma.'.format(self.experiment_id)}
+            requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
+        return super(SubmitExperimentToGemma, self).on_success()
 
     def requires(self):
-        dataset_info = self.get_dataset_info(self.experiment_id)
+        dataset_info = self.get_dataset_info()
 
         taxon = dataset_info['taxon']
 
         yield CountExperiment(self.experiment_id,
                               taxon=taxon,
-                              genome_build=self.get_genome_build_for_taxon(taxon),
-                              reference_build='ncbi',
+                              reference_id=self.get_reference_id_for_taxon(taxon),
                               source='gemma')
-
-        # If the experiment id refers to a GEO Series, we also want to extract
-        # its batch information
-        #
-        # If the GEO Series was split into multiple Gemma datasets, this will
-        # be marked by a '.'
-        #
-        # TOOD: Have a generic strategy for extracting batch info
-        # FIXME: this can result in unexpected sample from GEO being included
-        if dataset_info['externalDatabase'] == 'GEO':
-            yield ExtractGeoSeriesBatchInfo(dataset_info['accession'])
-        else:
-            yield None
 
         # FIXME: this does not always trigger the dependencies
         yield GenerateReportForExperiment(self.experiment_id,
                                           taxon=taxon,
-                                          genome_build=self.get_genome_build_for_taxon(taxon),
-                                          reference_build='ncbi',
+                                          reference_id=self.get_reference_id_for_taxon(taxon),
                                           source='gemma')
 
-    def program_environment(self):
-        return cfg.asenv(['GEMMA_LIB', 'JAVA_HOME', 'JAVA_OPTS'])
-
-    def program_args(self):
-        (count, fpkm), batch_info, multiqc_report = self.input()
-        taxon = self.get_taxon_for_dataset_short_name(self.experiment_id)
+    def subcommand_args(self):
+        (count, fpkm), _ = self.input()
         # TODO: submit the batch information and the MultiQC report
-        return [cfg.GEMMACLI, 'rnaseqDataAdd',
-                '-u', os.getenv('GEMMAUSERNAME'),
-                '-p', os.getenv('GEMMAPASSWORD'),
-                '-e', self.experiment_id,
-                '-a', self.get_platform_short_name_for_taxon(taxon),
+        return ['-a', self.get_platform_short_name(),
                 '-count', count.path,
                 '-rpkm', fpkm.path]
 
     def output(self):
-        taxon = self.get_taxon_for_dataset_short_name(self.experiment_id)
-        return GemmaDatasetHasPlatform(self.experiment_id, self.get_platform_short_name_for_taxon(taxon))
+        return GemmaDatasetHasPlatform(self.experiment_id, self.get_platform_short_name())
+
+    def complete(self):
+        return (not self.resubmit) and super(SubmitExperimentToGemma, self).complete()
 
 class SubmitExperimentsFromFileToGemma(WrapperTask):
     input_file = luigi.Parameter()
     def requires(self):
-        with open(self.input_file) as f:
-            return [SubmitExperimentToGemma(line.rstrip()) for line in f]
+        df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
+        return [[SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0)),
+                 SubmitBatchInfoToGemma(row.experiment_id)]
+                for _, row in df.iterrows()]
