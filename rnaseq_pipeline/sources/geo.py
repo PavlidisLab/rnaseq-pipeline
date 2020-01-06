@@ -4,15 +4,18 @@ from subprocess import Popen, check_call, PIPE
 import os
 from os.path import join
 import urllib
+from urlparse import urlparse, parse_qs
 import tarfile
 
 import luigi
 from luigi.util import requires
 import pandas as pd
+import requests
 
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples_with_rnaseq_data, collect_geo_samples_info
 from ..utils import DynamicWrapperTask
+from .sra import DownloadSraExperiment
 
 """
 This module contains all the logic to retrieve RNA-Seq data from GEO.
@@ -22,28 +25,22 @@ cfg = rnaseq_pipeline()
 
 logger = logging.getLogger('luigi-interface')
 
-from .sra import DumpSraFastq
-
-class DownloadGeoSampleRunInfo(luigi.Task):
+class DownloadGeoSampleMetadata(luigi.Task):
     """
-    Download all related SRA run infos from a GEO Sample.
-
-    TODO: use the related SRA Experiment to do this, because esearch does not
-    always work reliably given GEO Sample identifiers.
+    Download the MiNiML metadata for a given GEO Sample.
     """
     gsm = luigi.Parameter()
 
-    resources = {'edirect_http_connections': 1}
-
     def run(self):
+        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
+        res.raise_for_status()
         with self.output().open('w') as f:
-            esearch_proc = Popen(['esearch', '-db', 'sra', '-query', self.gsm], stdout=PIPE)
-            check_call(['efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
+            f.write(res.content)
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.csv'.format(self.gsm)))
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)))
 
-@requires(DownloadGeoSampleRunInfo)
+@requires(DownloadGeoSampleMetadata)
 class DownloadGeoSample(DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
@@ -52,15 +49,10 @@ class DownloadGeoSample(DynamicWrapperTask):
     retry_count = 0
 
     def run(self):
-        # this will raise an error of no FASTQs are related
-        df = pd.read_csv(self.input().path)
-
-        # Some GSM happen to have many related SRA runs and we cannot
-        # realistically investigate why that is. Our best bet at this point is
-        # that the latest properly represents the sample
-        latest_run = df.sort_values('Run', ascending=False).iloc[0]
-
-        yield DumpSraFastq(latest_run.Run, self.gsm, paired_reads=latest_run.LibraryLayout == 'PAIRED')
+        samples_info = collect_geo_samples_info(self.input().path)
+        platform, srx_url = samples_info[self.gsm]
+        srx = parse_qs(urlparse(srx_url).query)['term'][0]
+        yield DownloadSraExperiment(srx)
 
 class DownloadGeoSeriesMetadata(luigi.Task):
     """

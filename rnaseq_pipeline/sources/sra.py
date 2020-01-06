@@ -19,8 +19,6 @@ cfg = rnaseq_pipeline()
 This module contains all the logic to retrieve RNA-Seq data from SRA.
 """
 
-# TODO: decouple this from GEO-related code
-
 class PrefetchSraFastq(luigi.Task):
     """
     Prefetch a SRR sample using prefetch
@@ -48,9 +46,9 @@ class DumpSraFastq(luigi.Task):
 
     FASTQs are organized by :gsm: in a flattened layout.
 
-    :attr gsm: Geo Sample identifier
+    :attr srr: SRA experiment accession used as a parent folder for the run
     """
-    gsm = luigi.Parameter()
+    srx = luigi.Parameter()
 
     paired_reads = luigi.BoolParameter(positional=False)
 
@@ -60,7 +58,7 @@ class DumpSraFastq(luigi.Task):
                                    paired_reads=self.paired_reads)
 
     def output(self):
-        output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'geo', self.gsm)
+        output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
         if self.paired_reads:
             return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz')),
                     luigi.LocalTarget(join(output_dir, self.srr + '_2.fastq.gz'))]
@@ -87,9 +85,26 @@ class DownloadSraExperiment(DynamicWrapperTask):
 
         latest_run = df.sort_values('Run', ascending=False).iloc[0]
 
-        yield DumpSraFastq(latest_run.Run, self.srx, paired_reads=latest_run.LibraryLayout == 'PAIRED')
+        is_paired = latest_run.LibraryLayout == 'PAIRED'
 
-class DownloadSraProject(DynamicWrapperTask):
+        yield DumpSraFastq(latest_run.Run, self.srx, paired_reads=is_paired)
+
+class DownloadSraProjectRunInfo(luigi.Task):
     srp = luigi.Parameter()
+
+    resources = {'edirect_http_connections': 1}
+
     def run(self):
-        yield []
+        with self.output().open('w') as f:
+            esearch_proc = Popen(['esearch', '-db', 'sra', '-query', self.srp], stdout=PIPE)
+            check_call(['efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)))
+
+@requires(DownloadSraProjectRunInfo)
+class DownloadSraProject(DynamicWrapperTask):
+    def run(self):
+        df = pd.read_csv(self.input().path)
+        # TODO: test this code
+        yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]
