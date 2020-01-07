@@ -19,7 +19,7 @@ cfg = rnaseq_pipeline()
 This module contains all the logic to retrieve RNA-Seq data from SRA.
 """
 
-class PrefetchSraFastq(luigi.Task):
+class PrefetchSraRun(luigi.Task):
     """
     Prefetch a SRR sample using prefetch
 
@@ -39,14 +39,12 @@ class PrefetchSraFastq(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
 
-@requires(PrefetchSraFastq)
-class DumpSraFastq(luigi.Task):
+@requires(PrefetchSraRun)
+class DumpSraRun(luigi.Task):
     """
     Dump FASTQs from a SRR archive
 
     FASTQs are organized by :gsm: in a flattened layout.
-
-    :attr srr: SRA experiment accession used as a parent folder for the run
     """
     srx = luigi.Parameter()
 
@@ -92,7 +90,7 @@ class DownloadSraExperiment(DynamicWrapperTask):
 
         is_paired = latest_run.LibraryLayout == 'PAIRED'
 
-        yield DumpSraFastq(latest_run.Run, self.srx, paired_reads=is_paired)
+        yield DumpSraRun(latest_run.Run, self.srx, paired_reads=is_paired)
 
 class DownloadSraProjectRunInfo(luigi.Task):
     srp = luigi.Parameter()
