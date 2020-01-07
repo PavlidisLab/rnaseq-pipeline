@@ -102,12 +102,12 @@ class QualityControlExperiment(DynamicWrapperTask):
     Quality control all the samples in a given experiment.
     """
     def run(self):
-        # FIXME: have a more reliable way to determine the sample id
-        # It should be something like [sample.sample_id for sample in self.requires()]
+        # the amout of requires() here is ridiculous
+        download_sample_tasks = self.requires().requires().requires()
         yield [QualityControlSample(self.experiment_id,
-                                    os.path.basename(os.path.dirname(sample[0].path)),
+                                    dst.sample_id,
                                     source=self.source)
-               for sample in self.input() if len(sample) > 0]
+               for dst in download_sample_tasks if len(dst.output()) > 0]
 
 @no_retry
 class PrepareReference(ScheduledExternalProgramTask):
@@ -226,14 +226,13 @@ class AlignExperiment(DynamicWrapperTask):
     reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
 
     def run(self):
-        samples = self.input()
-        # FIXME: have a more reliable way to determine the sample id
+        download_sample_tasks = self.requires().requires().requires()
         yield [AlignSample(self.experiment_id,
-                           os.path.basename(os.path.dirname(sample[0].path)),
+                           dst.sample_id,
                            source=self.source,
                            taxon=self.taxon,
                            reference_id=self.reference_id)
-               for sample in samples if len(sample) > 0]
+               for dst in download_sample_tasks if len(dst.output()) > 0]
 
 @no_retry
 @requires(QualityControlExperiment, AlignExperiment)

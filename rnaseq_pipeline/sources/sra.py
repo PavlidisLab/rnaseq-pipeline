@@ -79,6 +79,11 @@ class DownloadSraExperimentRunInfo(luigi.Task):
 
 @requires(DownloadSraExperimentRunInfo)
 class DownloadSraExperiment(DynamicWrapperTask):
+
+    @property
+    def sample_id(self):
+        return self.srx
+
     def run(self):
         # this will raise an error of no FASTQs are related
         df = pd.read_csv(self.input().path)

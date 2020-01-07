@@ -46,7 +46,9 @@ class DownloadGeoSample(DynamicWrapperTask):
     Download a GEO Sample given a runinfo file and
     """
 
-    retry_count = 0
+    @property
+    def sample_id(self):
+        return self.gsm
 
     def run(self):
         samples_info = collect_geo_samples_info(self.input().path)
@@ -86,8 +88,6 @@ class DownloadGeoSeries(DynamicWrapperTask):
     """
     Download all GEO Samples related to a GEO Series.
     """
-
-    retry_count = 0
 
     def run(self):
         gsms = collect_geo_samples_with_rnaseq_data(self.input().path)
