@@ -103,22 +103,27 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
     """
 
     def run(self):
-        geo_series_metadata, samples = self.input()
-        sample_geo_metadata = collect_geo_samples_info(geo_series_metadata.path)
+        geo_series_metadata, samples = self.requires()
+        samples = next(samples.run())
+        sample_geo_metadata = collect_geo_samples_info(geo_series_metadata.output().path)
         with self.output().open('w') as info_out:
             for sample in samples:
-                if len(sample) == 0:
-                    # FIXME:
+                if len(sample.output()) == 0:
+                    logger.warning('GEO sample %s has no associated FASTQs from which batch information can be extracted.', sample.sample_id)
                     continue
-                fastq = sample[0]
-                sample_id = os.path.basename(os.path.dirname(fastq.path))
+
+                # TODO: find a cleaner way to obtain the SRA run accession
+                fastq = sample.output()[0]
                 fastq_name, _ = os.path.splitext(fastq.path)
                 fastq_name, _ = os.path.splitext(fastq_name)
                 fastq_id = os.path.basename(fastq_name).split('_')[0]
-                platform_id, srx_uri = sample_geo_metadata[sample_id]
+
+                platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
+
                 with gzip.open(fastq.path, 'rt') as f:
                     fastq_header = f.readline().rstrip()
-                info_out.write('\t'.join([sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
+
+                info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'fastq_headers', '{}.fastq-headers-table.txt'.format(self.gse)))
