@@ -70,7 +70,7 @@ class DownloadExperiment(WrapperTask):
             return DownloadGemmaExperiment(self.experiment_id)
         elif self.source == 'geo':
             return DownloadGeoSeries(self.experiment_id)
-        elif source == 'sra':
+        elif self.source == 'sra':
             return DownloadSraProject(self.experiment_id)
         elif self.source == 'arrayexpress':
             return DownloadArrayExpressExperiment(self.experiment_id)
