@@ -294,6 +294,17 @@ class SubmitBatchInfoToGemma(GemmaTask):
 
     subcommand = 'fillBatchInfo'
 
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
+
+    def on_success(self):
+        """
+        Notify curators that batch information are available in Gemma.
+        """
+        if cfg.SLACK_WEBHOOK_URL is not None:
+            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> batch information has been successfully submitted to Gemma.'.format(self.experiment_id)}
+            requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
+        return super(SubmitBatchInfoToGemma, self).on_success()
+
     def requires(self):
         dataset_info = self.get_dataset_info()
 
@@ -370,5 +381,5 @@ class SubmitExperimentsFromFileToGemma(WrapperTask):
     def requires(self):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
         return [[SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0)),
-                 SubmitBatchInfoToGemma(row.experiment_id)]
+                 SubmitBatchInfoToGemma(row.experiment_id, priority=row.get('priority', 0))]
                 for _, row in df.iterrows()]
