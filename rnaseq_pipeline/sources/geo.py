@@ -4,7 +4,7 @@ from subprocess import Popen, check_call, PIPE
 import os
 from os.path import join
 import urllib
-from urlparse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs
 import tarfile
 
 import luigi
