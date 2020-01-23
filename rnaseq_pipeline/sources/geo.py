@@ -5,6 +5,7 @@ import os
 from os.path import join
 import urllib
 from urllib.parse import urlparse, parse_qs
+from urllib.request import urlretrieve
 import tarfile
 
 import luigi
@@ -35,7 +36,7 @@ class DownloadGeoSampleMetadata(luigi.Task):
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
         res.raise_for_status()
         with self.output().open('w') as f:
-            f.write(res.content)
+            f.write(res.text)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)))
@@ -71,9 +72,9 @@ class DownloadGeoSeriesMetadata(luigi.Task):
 
         # download compressed metadata
         # FIXME: use Entrez Web API
-        urllib.urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
-                           reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                           filename=metadata_xml_tgz)
+        urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
+                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
+                    filename=metadata_xml_tgz)
 
         # extract metadata
         # FIXME: this is not atomic
