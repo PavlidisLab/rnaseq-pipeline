@@ -5,7 +5,6 @@ import os
 from os.path import join
 import urllib
 from urllib.parse import urlparse, parse_qs
-from urllib.request import urlretrieve
 import tarfile
 
 import luigi
@@ -31,6 +30,8 @@ class DownloadGeoSampleMetadata(luigi.Task):
     Download the MiNiML metadata for a given GEO Sample.
     """
     gsm = luigi.Parameter()
+
+    resources = {'geo_http_connections': 1}
 
     def run(self):
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
@@ -64,24 +65,16 @@ class DownloadGeoSeriesMetadata(luigi.Task):
     """
     gse = luigi.Parameter()
 
-    resources = {'geo_ftp_connections': 1}
+    resources = {'geo_http_connections': 1}
 
     def run(self):
-        destdir = os.path.dirname(self.output().path)
-        metadata_xml_tgz = join(destdir, '{}_family.xml.tgz'.format(self.gse))
-
-        # download compressed metadata
-        # FIXME: use Entrez Web API
-        urlretrieve('ftp://ftp.ncbi.nlm.nih.gov/geo/series/{0}/{1}/miniml/{1}_family.xml.tgz'.format(self.gse[:-3] + 'nnn', self.gse),
-                    reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                    filename=metadata_xml_tgz)
-
-        # extract metadata
-        # FIXME: this is not atomic
-        with tarfile.open(metadata_xml_tgz, 'r:gz') as tf:
-            tf.extract(os.path.basename(self.output().path), destdir)
+        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml'))
+        res.raise_for_status()
+        with self.output().open('w') as f:
+            f.write(res.text)
 
     def output(self):
+        # TODO: remove the _family suffix
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
 
 @requires(DownloadGeoSeriesMetadata)
