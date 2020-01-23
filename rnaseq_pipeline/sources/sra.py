@@ -21,13 +21,11 @@ This module contains all the logic to retrieve RNA-Seq data from SRA.
 
 class PrefetchSraRun(luigi.Task):
     """
-    Prefetch a SRR sample using prefetch
+    Prefetch a SRA run using prefetch from sratoolkit
 
-    Data is downloaded in a shared SRA cache.
-
-    :attr srr: A SRA run accession
+    SRA archives are stored in a shared cache.
     """
-    srr = luigi.Parameter()
+    srr = luigi.Parameter(description='SRA run identifier')
 
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
@@ -42,13 +40,11 @@ class PrefetchSraRun(luigi.Task):
 @requires(PrefetchSraRun)
 class DumpSraRun(luigi.Task):
     """
-    Dump FASTQs from a SRR archive
-
-    FASTQs are organized by :gsm: in a flattened layout.
+    Dump FASTQs from a SRA run archive
     """
-    srx = luigi.Parameter()
+    srx = luigi.Parameter(description='SRA experiment identifier')
 
-    paired_reads = luigi.BoolParameter(positional=False)
+    paired_reads = luigi.BoolParameter(positional=False, description='Indicate of reads have paired or single mates')
 
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,
@@ -77,6 +73,14 @@ class DownloadSraExperimentRunInfo(luigi.Task):
 
 @requires(DownloadSraExperimentRunInfo)
 class DownloadSraExperiment(DynamicWrapperTask):
+    """
+    Download a SRA experiment comprising one SRA run
+
+    It is possible for experiments to be reprocessed in SRA leading to multiple
+    associated runs. The default is to select the latest run based on the
+    lexicographic order of its identifier.
+    """
+    srr = luigi.OptionalParameter(default=None, description='Specific SRA run accession to use (defaults to latest)')
 
     @property
     def sample_id(self):
@@ -86,14 +90,20 @@ class DownloadSraExperiment(DynamicWrapperTask):
         # this will raise an error of no FASTQs are related
         df = pd.read_csv(self.input().path)
 
-        latest_run = df.sort_values('Run', ascending=False).iloc[0]
+        if self.srr is not None:
+            run = df[df.Run == self.srr].iloc[0]
+        else:
+            run = df.sort_values('Run', ascending=False).iloc[0]
 
-        is_paired = latest_run.LibraryLayout == 'PAIRED'
+        is_paired = run.LibraryLayout == 'PAIRED'
 
-        yield DumpSraRun(latest_run.Run, self.srx, paired_reads=is_paired)
+        yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired)
 
 class DownloadSraProjectRunInfo(luigi.Task):
-    srp = luigi.Parameter()
+    """
+    Download a SRA project
+    """
+    srp = luigi.Parameter(description='SRA project identifier')
 
     resources = {'edirect_http_connections': 1}
 
@@ -109,5 +119,4 @@ class DownloadSraProjectRunInfo(luigi.Task):
 class DownloadSraProject(DynamicWrapperTask):
     def run(self):
         df = pd.read_csv(self.input().path)
-        # TODO: test this code
         yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]
