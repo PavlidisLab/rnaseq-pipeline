@@ -103,7 +103,7 @@ class QualityControlExperiment(DynamicWrapperTask):
     """
     def run(self):
         # the amout of requires() here is ridiculous
-        download_sample_tasks = self.requires().requires().requires()
+        download_sample_tasks = next(self.requires().requires().run())
         yield [QualityControlSample(self.experiment_id,
                                     dst.sample_id,
                                     source=self.source)
@@ -226,7 +226,8 @@ class AlignExperiment(DynamicWrapperTask):
     reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
 
     def run(self):
-        download_sample_tasks = self.requires().requires().requires()
+        # the amout of requires() here is ridiculous
+        download_sample_tasks = next(self.requires().requires().run())
         yield [AlignSample(self.experiment_id,
                            dst.sample_id,
                            source=self.source,

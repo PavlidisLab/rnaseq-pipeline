@@ -34,7 +34,8 @@ class WrapperTask(luigi.WrapperTask):
 
 class DynamicWrapperTask(luigi.Task):
     """
-    Similar to WrapperTask but for dynamic dependencies.
+    Similar to WrapperTask but for dynamic dependencies yielded in the body of
+    the run() method.
     """
     def output(self):
         tasks = []
@@ -72,6 +73,8 @@ class GemmaTask(ExternalProgramTask):
         basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
         res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}'.format(self.experiment_id), auth=basic_auth)
         res.raise_for_status()
+        if not res.json()['data']:
+            raise RuntimeError('Could not retrieve Gemma dataset with short name {}.'.format(self.experiment_id))
         return res.json()['data'][0]
 
     def get_taxon(self):

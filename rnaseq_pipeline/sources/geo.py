@@ -54,6 +54,8 @@ class DownloadGeoSample(DynamicWrapperTask):
 
     def run(self):
         samples_info = collect_geo_samples_info(self.input().path)
+        if not self.gsm in samples_info:
+            raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
         platform, srx_url = samples_info[self.gsm]
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
         yield DownloadSraExperiment(srx)
@@ -107,17 +109,20 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession
-                fastq = sample.output()[0]
-                fastq_name, _ = os.path.splitext(fastq.path)
-                fastq_name, _ = os.path.splitext(fastq_name)
-                fastq_id = os.path.basename(fastq_name).split('_')[0]
+                for fastq in sample.output():
+                    # strip the two extensions (.fastq.gz)
+                    fastq_name, _ = os.path.splitext(fastq.path)
+                    fastq_name, _ = os.path.splitext(fastq_name)
 
-                platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
+                    # is this necessary?
+                    fastq_id = os.path.basename(fastq_name)
 
-                with gzip.open(fastq.path, 'rt') as f:
-                    fastq_header = f.readline().rstrip()
+                    platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
 
-                info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
+                    with gzip.open(fastq.path, 'rt') as f:
+                        fastq_header = f.readline().rstrip()
+
+                    info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'fastq_headers', '{}.fastq-headers-table.txt'.format(self.gse)))
