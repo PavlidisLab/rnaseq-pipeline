@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>DAVID</First><Last>MURPHY</Last></Person>
+    <Laboratory>Laboratories for Integrative Neuroscience and Endocrinolgy</Laboratory>
+    <Department>Medicine and Dentistry</Department>
+    <Organization>University of Bristol</Organization>
+    <Address>
+      <Line>Whitson Street</Line>
+      <City>Bristol</City>
+      <State>AVON</State>
+      <Postal-Code>BS1 3NY</Postal-Code>
+      <Country>United Kingdom</Country>
+    </Address>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL2757">
+    <Accession database="GEO">GPL2757</Accession>
+  </Platform>
+
+  <Sample iid="GSM69846">
+    <Status database="GEO">
+      <Submission-Date>2005-08-15</Submission-Date>
+      <Release-Date>2005-12-02</Release-Date>
+      <Last-Update-Date>2006-04-14</Last-Update-Date>
+    </Status>
+    <Title>SON-C-D_16r</Title>
+    <Accession database="GEO">GSM69846</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Supraoptic nucleus_control</Source>
+      <Organism taxid="10116">Rattus norvegicus</Organism>
+      <Characteristics tag="Strain">
+Sprague Dawley
+      </Characteristics>
+      <Characteristics tag="Gender">
+Male
+      </Characteristics>
+      <Characteristics tag="Age">
+10-12 weeks
+      </Characteristics>
+      <Characteristics tag="Tissue">
+Supraoptic nucleus
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+RNA isolation - Animals were killed by cervical dislocation and total cellular RNA was isolated from microdissected SON using TRIzol (Invitrogen, Paisley, Scotland). 
+      </Extract-Protocol>
+      <Label>[Alpha-33P] CTP radiolabel</Label>
+      <Label-Protocol>
+Radiolabelled target was generated from 3-10mg of total SON RNA (from either C or D rats) template. [±-33P] CTP was incorporated into cDNA using Superscript II reverse transcriptase (Invitrogen, Paisley, Scotland) and10-20-mer poly(dT) primer (Invitrogen, Paisley, Scotland). 
+      </Label-Protocol>
+    </Channel>
+    <Description>
+SON-C-D Clone array - control 
+    </Description>
+    <Data-Processing>
+ImageQuant software (Amersham Biosciences, Little Chalfont, UK)
+    </Data-Processing>
+    <Platform-Ref ref="GPL2757" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal intensity</Description>
+      </Column>
+    <Internal-Data rows="20">
+c413	16992.925
+c411	10570.43
+c409	11718.04
+c407	50662.895
+c405	5960.88
+c403	13364.435
+c317	103390.855
+c315	4715.705
+c313	8056.885
+c311	6704.225
+c309	11567.795
+c307	22207.935
+c437	11919.98
+c435	3533.5
+c433	16298.025
+c431	10606.515
+c429	37640.505
+c427	22590.6
+c341	5984.62
+c339	1597.535
+    </Internal-Data>
+    </Data-Table>
+  </Sample>
+
+</MINiML>
