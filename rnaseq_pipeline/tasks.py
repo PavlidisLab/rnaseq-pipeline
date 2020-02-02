@@ -16,9 +16,9 @@ import yaml
 
 from .config import rnaseq_pipeline
 from .cwl_utils import gen_workflow
-from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask
+from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, parse_illumina_fastq_header
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
-from .sources.sra import DownloadSraProject, DownloadSraExperiment
+from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
@@ -309,15 +309,35 @@ class SubmitBatchInfoToGemma(GemmaTask):
     def requires(self):
         dataset_info = self.get_dataset_info()
 
+        external_database = dataset_info['externalDatabase']
+        accession = dataset_info['accession']
+
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
-        if dataset_info['externalDatabase'] == 'GEO':
-            return ExtractGeoSeriesBatchInfo(dataset_info['accession'])
+        if external_database == 'GEO':
+            return ExtractGeoSeriesBatchInfo(accession)
+        elif external_database == 'SRA':
+            return ExtractSraProjectBatchInfo(accession)
         else:
             raise NotImplementedError('Extracting batch information from {} is not implemented.'.format(dataset_info['externalDatabase']))
 
     def subcommand_args(self):
         return ['--force', 'yes', '-f', self.input().path]
+
+    def run(self):
+        batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
+        batch = set()
+        for ix, row in batch_info_df.iterrows():
+            try:
+                illumina_header = parse_illumina_fastq_header(row.fastq_header)
+            except TypeError:
+                logger.warning('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
+                continue
+            batch.add((row.platform_id, illumina_header.device, illumina_header.flowcell, illumina_header.flowcell_lane))
+        # TODO: change this to < 1 when single lane/batch get support in Gemma
+        if len(batch) <= 1:
+            raise RuntimeError('No usable batch information for {}.'.format(self.experiment_id))
+        return super(SubmitBatchInfoToGemma, self).run()
 
     def output(self):
         return GemmaDatasetHasBatchInfo(self.experiment_id)

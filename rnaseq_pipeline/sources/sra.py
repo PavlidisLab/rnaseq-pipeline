@@ -120,3 +120,26 @@ class DownloadSraProject(DynamicWrapperTask):
     def run(self):
         df = pd.read_csv(self.input().path)
         yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]
+
+@requires(DownloadSraProjectRunInfo, DownloadSraProject)
+class ExtractSraProjectBatchInfo(luigi.Task):
+    """
+    Extract the batch information for a given SRA project.
+    """
+
+    def run(self):
+        run_info, samples = self.input()
+        with self.output().open('w') as info_out:
+            for (experiment_id, row), fastqs in zip(run_info.groupby('Experiment').first().items(), samples):
+                for fastq in fastqs:
+                    # strip the two extensions (.fastq.gz)
+                    fastq_name, _ = os.path.splitext(fastq.path)
+                    fastq_name, _ = os.path.splitext(fastq_name)
+                    fastq_id = os.path.basename(fastq_name)
+                    srx_uri = 'https://www.ncbi.nlm.nih.gov/sra?term={}'.format(row.Experiment)
+                    with gzip.open(fastq.path, 'rt') as f:
+                        fastq_header = f.readline().rstrip()
+                    info_out.write('\t'.join([experiment_id, fastq_id, row.Platform, srx_uri, fastq_header]) + '\n')
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.BATCHINFODIR, 'sra', '{}.fastq-headers-table'.format(self.srp)))

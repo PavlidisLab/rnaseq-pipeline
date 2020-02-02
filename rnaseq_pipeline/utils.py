@@ -1,3 +1,4 @@
+from collections import namedtuple
 import logging
 import os
 
@@ -11,6 +12,12 @@ from .config import rnaseq_pipeline
 
 cfg = rnaseq_pipeline()
 logger = logging.getLogger('luigi-interface')
+
+IlluminaFastqHeader = namedtuple('IlluminaFastqHeader', [
+    'device', 'run', 'flowcell', 'flowcell_lane', 'tile', 'x', 'y'])
+
+def parse_illumina_fastq_header(s):
+    return IlluminaFastqHeader(*s.split(':'))
 
 def max_retry(count):
     """

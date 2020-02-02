@@ -12,6 +12,7 @@ class rnaseq_pipeline(luigi.Config):
     ALIGNDIR = luigi.Parameter()
     ALIGNQCDIR = luigi.Parameter()
     QUANTDIR = luigi.Parameter()
+    BATCHINFODIR = luigi.Parameter()
 
     PREFETCH_ARGS = luigi.Parameter()
     SRA_PUBLIC_DIR = luigi.Parameter()

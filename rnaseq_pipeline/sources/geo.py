@@ -125,4 +125,5 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
                     info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'fastq_headers', '{}.fastq-headers-table.txt'.format(self.gse)))
+        # TODO: organize batch info per source
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.BATCHINFODIR, '{}.fastq-headers-table.txt'.format(self.gse)))
