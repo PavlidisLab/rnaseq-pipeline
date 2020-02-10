@@ -96,18 +96,19 @@ class QualityControlSample(luigi.Task):
         return [luigi.LocalTarget(join(destdir, fastqc.GenerateReport.gen_report_basename(t.path)))
                 for t in self.input()]
 
-@requires(DownloadExperiment)
 class QualityControlExperiment(DynamicWrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
+    experiment_id = luigi.Parameter()
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+
     def run(self):
-        # the amout of requires() here is ridiculous
-        download_sample_tasks = next(self.requires().requires().run())
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
         yield [QualityControlSample(self.experiment_id,
                                     dst.sample_id,
                                     source=self.source)
-               for dst in download_sample_tasks if len(dst.output()) > 0]
+               for dst in download_sample_tasks]
 
 @no_retry
 class PrepareReference(ScheduledExternalProgramTask):
@@ -214,7 +215,6 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
-@requires(DownloadExperiment)
 class AlignExperiment(DynamicWrapperTask):
     """
     Align all the samples in a given experiment.
@@ -222,18 +222,20 @@ class AlignExperiment(DynamicWrapperTask):
     The output is one sample alignment output per sample contained in the
     experiment.
     """
+    experiment_id = luigi.Parameter()
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
     taxon = luigi.Parameter(default='human', positional=False)
     reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
 
     def run(self):
-        # the amout of requires() here is ridiculous
-        download_sample_tasks = next(self.requires().requires().run())
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
+
         yield [AlignSample(self.experiment_id,
                            dst.sample_id,
                            source=self.source,
                            taxon=self.taxon,
                            reference_id=self.reference_id)
-               for dst in download_sample_tasks if len(dst.output()) > 0]
+               for dst in download_sample_tasks]
 
 @no_retry
 @requires(QualityControlExperiment, AlignExperiment)
