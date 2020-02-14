@@ -47,9 +47,15 @@ class DumpSraRun(luigi.Task):
     paired_reads = luigi.BoolParameter(positional=False, description='Indicate of reads have paired or single mates')
 
     def run(self):
-        yield sratoolkit.FastqDump(self.input().path,
-                                   os.path.dirname(self.output()[0].path),
-                                   paired_reads=self.paired_reads)
+        destdir = os.path.dirname(self.output()[0].path) + '.tmp'
+        output_fastqs = yield sratoolkit.FastqDump(self.input().path,
+                                                   destdir,
+                                                   paired_reads=self.paired_reads)
+        # move FASTQs to final directory
+        for f, final_dest in zip(output_fastqs, self.output()):
+            final_dest.makedirs()
+            os.rename(f.path, final_dest.path)
+        shutil.rmtree(destdir)
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)

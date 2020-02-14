@@ -153,6 +153,7 @@ class PrepareReference(ScheduledExternalProgramTask):
     def output(self):
         return RsemReference(join(cfg.REFERENCES, self.reference_id, '{}_0'.format(self.taxon)))
 
+@no_retry
 @requires(DownloadSample, QualityControlSample, PrepareReference)
 class AlignSample(ScheduledExternalProgramTask):
     """
@@ -170,21 +171,6 @@ class AlignSample(ScheduledExternalProgramTask):
     walltime = datetime.timedelta(days=1)
     cpus = 8
     memory = 32
-
-    retry_count = 2
-
-    def on_failure(self, exception):
-        """
-        On failure, it often occurs that the upstream FASTQs are truncated, so
-        we try re-extracting it once (see retry_count above) by removing it.
-        """
-        sample_run, sample_qc_report, _ = self.input()
-        logger.warning('%s failed, we will attempt to regenerate the input FASTQs and QC reports once more.', repr(self))
-        for fastq, report in zip(sample_run, sample_qc_report):
-            logger.warning('Removing %s and %s...', fastq.path, report.path)
-            fastq.remove()
-            report.remove()
-        return super(AlignSample, self).on_failure(exception)
 
     def run(self):
         self.output().makedirs()
