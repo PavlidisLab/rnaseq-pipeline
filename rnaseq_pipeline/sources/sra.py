@@ -50,7 +50,8 @@ class DumpSraRun(luigi.Task):
         destdir = os.path.dirname(self.output()[0].path) + '.tmp'
         output_fastqs = yield sratoolkit.FastqDump(self.input().path,
                                                    destdir,
-                                                   paired_reads=self.paired_reads)
+                                                   paired_reads=self.paired_reads,
+                                                   minimum_read_length=25)
         # move FASTQs to final directory
         for f, final_dest in zip(output_fastqs, self.output()):
             final_dest.makedirs()
