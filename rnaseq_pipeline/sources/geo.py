@@ -70,7 +70,7 @@ class DownloadGeoSeriesMetadata(luigi.Task):
     resources = {'geo_http_connections': 1}
 
     def run(self):
-        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml'))
+        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml', targ='gsm'))
         res.raise_for_status()
         with self.output().open('w') as f:
             f.write(res.text)

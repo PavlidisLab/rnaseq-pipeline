@@ -27,8 +27,9 @@ def collect_geo_samples_with_rnaseq_data(f):
     for x in root.findall('miniml:Sample', ns):
         gsm_id = x.find("miniml:Accession[@database='GEO']", ns)
         library_strategy = x.find('miniml:Library-Strategy', ns)
+        platform_id = x.find('miniml:Platform-Ref', ns)
         sra_relation = x.find("miniml:Relation[@type='SRA']", ns)
-        if gsm_id is None or library_strategy is None or sra_relation is None:
+        if gsm_id is None or platform_id is None or library_strategy is None or sra_relation is None:
             continue
         if library_strategy.text == 'RNA-Seq':
             gsm_identifiers.add(gsm_id.text)
