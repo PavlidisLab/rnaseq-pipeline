@@ -16,7 +16,7 @@ Utilities for querying various informations from MINiML metadata.
 
 ns = {'miniml': 'http://www.ncbi.nlm.nih.gov/geo/info/MINiML'}
 
-def collect_geo_samples_with_rnaseq_data(f):
+def collect_geo_samples(f):
     """
     Extract all GSM identifiers relating to RNA-Seq experiments.
     """

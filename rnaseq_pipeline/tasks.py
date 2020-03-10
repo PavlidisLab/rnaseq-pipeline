@@ -8,6 +8,7 @@ import pandas as pd
 import requests
 import luigi
 import luigi.task
+from luigi.task import flatten, flatten_output
 from luigi.contrib.external_program import ExternalProgramTask
 from luigi.util import requires
 from bioluigi.tasks import fastqc, multiqc
@@ -16,7 +17,7 @@ import yaml
 
 from .config import rnaseq_pipeline
 from .cwl_utils import gen_workflow
-from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, parse_illumina_fastq_header
+from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
@@ -81,20 +82,15 @@ class DownloadExperiment(WrapperTask):
 
 @no_retry
 @requires(DownloadSample)
-class QualityControlSample(luigi.Task):
+class QualityControlSample(DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
     """
-
     def run(self):
-        for fastq_in, report_out in zip(self.input(), self.output()):
-            report_out.makedirs()
-            yield fastqc.GenerateReport(fastq_in.path, os.path.dirname(report_out.path))
-
-    def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
-        return [luigi.LocalTarget(join(destdir, fastqc.GenerateReport.gen_report_basename(t.path)))
-                for t in self.input()]
+        os.makedirs(destdir, exist_ok=True)
+        for fastq_in in self.input():
+            yield fastqc.GenerateReport(fastq_in.path, destdir)
 
 class QualityControlExperiment(DynamicWrapperTask):
     """
@@ -174,7 +170,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     def run(self):
         self.output().makedirs()
-        return super(AlignSample, self).run()
+        return super().run()
 
     def program_args(self):
         args = [join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
@@ -268,6 +264,7 @@ class CountExperiment(luigi.Task):
 
     def run(self):
         # FIXME: find a better way to obtain the sample identifier
+        # Each DownloadSample-like tasks have a sample_id property! Use that!
         keys = [os.path.basename(gene.path).replace('.genes.results', '') for gene in self.input()]
         counts_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).expected_count for gene in self.input()], keys=keys, axis=1)
         fpkm_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).FPKM for gene in self.input()], keys=keys, axis=1)
@@ -290,23 +287,24 @@ class GenerateWorkflowMetadataForExperiment(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'workflow', '{}.cwl'.format(self.experiment_id)))
 
-class SubmitBatchInfoToGemma(GemmaTask):
+class SubmitExperimentBatchInfoToGemma(GemmaTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
 
     subcommand = 'fillBatchInfo'
 
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
-
-    def on_success(self):
-        """
-        Notify curators that batch information are available in Gemma.
-        """
-        if cfg.SLACK_WEBHOOK_URL is not None:
-            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> batch information has been successfully submitted to Gemma.'.format(self.experiment_id)}
-            requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
-        return super(SubmitBatchInfoToGemma, self).on_success()
+    def is_batch_info_usable(self):
+        batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
+        batch = set()
+        for ix, row in batch_info_df.iterrows():
+            try:
+                illumina_header = IlluminaFastqHeader.parse(row.fastq_header)
+            except TypeError:
+                logger.warning('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
+                continue
+            batch.add((row.platform_id, illumina_header.device, illumina_header.flowcell, illumina_header.flowcell_lane))
+        return len(batch) > 1
 
     def requires(self):
         dataset_info = self.get_dataset_info()
@@ -327,25 +325,22 @@ class SubmitBatchInfoToGemma(GemmaTask):
         return ['--force', 'yes', '-f', self.input().path]
 
     def run(self):
-        batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
-        batch = set()
-        for ix, row in batch_info_df.iterrows():
-            try:
-                illumina_header = parse_illumina_fastq_header(row.fastq_header)
-            except TypeError:
-                logger.warning('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
-                continue
-            batch.add((row.platform_id, illumina_header.device, illumina_header.flowcell, illumina_header.flowcell_lane))
-        # TODO: change this to < 1 when single lane/batch get support in Gemma
-        if len(batch) <= 1:
-            raise RuntimeError('No usable batch information for {}.'.format(self.experiment_id))
-        return super(SubmitBatchInfoToGemma, self).run()
+        if self.is_batch_info_usable():
+            return super().run()
+        else:
+            logger.warning('Batch info is unusable for %s.', self.experiment_id)
 
     def output(self):
         return GemmaDatasetHasBatchInfo(self.experiment_id)
 
+    def complete(self):
+        if all(req.complete() for req in flatten(self.requires())):
+            return not self.is_batch_info_usable() or super().complete()
+        else:
+            return super().complete()
+
 @no_retry
-class SubmitExperimentToGemma(GemmaTask):
+class SubmitExperimentDataToGemma(GemmaTask):
     """
     Submit an experiment to Gemma.
 
@@ -359,16 +354,6 @@ class SubmitExperimentToGemma(GemmaTask):
     subcommand = 'rnaseqDataAdd'
 
     resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
-
-    def on_success(self):
-        """
-        Notify curators that the dataset is now available on Gemma.
-        """
-        if cfg.SLACK_WEBHOOK_URL is not None:
-            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> RNA-Seq data has been successfully submitted to Gemma.'.format(self.experiment_id)}
-            requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
-        return super(SubmitExperimentToGemma, self).on_success()
 
     def requires(self):
         dataset_info = self.get_dataset_info()
@@ -397,12 +382,45 @@ class SubmitExperimentToGemma(GemmaTask):
         return GemmaDatasetHasPlatform(self.experiment_id, self.get_platform_short_name())
 
     def complete(self):
-        return (not self.resubmit) and super(SubmitExperimentToGemma, self).complete()
+        return (not self.resubmit) and super().complete()
+
+@requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
+class SubmitExperimentToGemma(luigi.Task):
+    """
+    Submit an experiment data, QC reports, and batch information to Gemma.
+
+    TODO: add QC report submission
+    """
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
+
+    def on_success(self):
+        # report success to curators
+        if cfg.SLACK_WEBHOOK_URL is not None:
+            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> data and batch information has been successfully submitted to Gemma.'.format(self.experiment_id)}
+            requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
+        return super().on_success()
+
+    def run(self):
+        # cleanup download data
+        download_task = DownloadGemmaExperiment(self.experiment_id)
+        logger.warning('Cleaning up %s...', self.experiment_id)
+        for out in flatten_output(download_task):
+            if out.exists():
+                logger.warning('Removing FASTQ %s for experiment %s...', out.path, self.experiment_id)
+                out.remove()
+
+    def complete(self):
+        """
+        We consider a submission completed when data and batch information have
+        been successfully submitted to Gemma and any remaining downloaded data
+        has been removed.
+        """
+        download_task = DownloadGemmaExperiment(self.experiment_id)
+        return all(req.complete() for req in flatten(self.requires())) and not any(out.exists() for out in flatten_output(download_task))
 
 class SubmitExperimentsFromFileToGemma(WrapperTask):
     input_file = luigi.Parameter()
     def requires(self):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
-        return [[SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0)),
-                 SubmitBatchInfoToGemma(row.experiment_id, priority=row.get('priority', 0))]
-                for _, row in df.iterrows()]
+        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
+                for _, row in df.iterrows() if row.get('priority', 0) > 0]

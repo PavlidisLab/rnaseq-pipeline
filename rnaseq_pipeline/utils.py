@@ -13,8 +13,20 @@ from .config import rnaseq_pipeline
 cfg = rnaseq_pipeline()
 logger = logging.getLogger('luigi-interface')
 
-IlluminaFastqHeader = namedtuple('IlluminaFastqHeader', [
-    'device', 'run', 'flowcell', 'flowcell_lane', 'tile', 'x', 'y'])
+
+class IlluminaFastqHeader():
+    @classmethod
+    def parse(cls, s):
+        return cls(*s.split(':'))
+
+    def __init__(self, device, run, flowcell, flowcell_lane, tile, x=None, y=None):
+        self.device = device
+        self.run = run
+        self.flowcell = flowcell
+        self.flowcell_lane =flowcell_lane
+        self.tile = tile
+        self.x = x
+        self.y = y
 
 def parse_illumina_fastq_header(s):
     return IlluminaFastqHeader(*s.split(':'))
@@ -50,7 +62,7 @@ class DynamicWrapperTask(luigi.Task):
             try:
                 tasks = list(self.run())
             except:
-                logger.exception('%s failed at run() step.', repr(self))
+                logger.exception('%s failed at run() step; the exception will not be raised because Luigi is still building the graph.', repr(self))
 
         # FIXME: conserve task structure: the generator actually create an
         # implicit array level even if a single task is yielded.
@@ -59,6 +71,11 @@ class DynamicWrapperTask(luigi.Task):
             tasks = tasks[0]
 
         return getpaths(tasks)
+
+    def complete(self):
+        if not all(req.complete() for req in flatten(self.requires())):
+            return False
+        return super().complete()
 
 class GemmaTask(ExternalProgramTask):
     """

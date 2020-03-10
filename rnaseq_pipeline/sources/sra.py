@@ -4,6 +4,7 @@ from os.path import join
 import shlex
 import shutil
 from subprocess import Popen, check_call, PIPE
+import logging
 
 from bioluigi.tasks import sratoolkit
 import luigi
@@ -14,6 +15,8 @@ from ..config import rnaseq_pipeline
 from ..utils import DynamicWrapperTask
 
 cfg = rnaseq_pipeline()
+
+logger = logging.getLogger('luigi-interface')
 
 """
 This module contains all the logic to retrieve RNA-Seq data from SRA.
@@ -45,6 +48,13 @@ class DumpSraRun(luigi.Task):
     srx = luigi.Parameter(description='SRA experiment identifier')
 
     paired_reads = luigi.BoolParameter(positional=False, description='Indicate of reads have paired or single mates')
+
+    def on_success(self):
+        # cleanup SRA archive once dumped if it's still hanging around
+        if self.input().exists():
+            logger.warning('Removing SRA archive %s for %s...', self.input().path, self.srx)
+            self.input().remove()
+        return super().on_success()
 
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,

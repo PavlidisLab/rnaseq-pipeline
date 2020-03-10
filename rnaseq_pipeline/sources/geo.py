@@ -13,7 +13,7 @@ import pandas as pd
 import requests
 
 from ..config import rnaseq_pipeline
-from ..miniml_utils import collect_geo_samples_with_rnaseq_data, collect_geo_samples_info
+from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..utils import DynamicWrapperTask
 from .sra import DownloadSraExperiment
 
@@ -86,7 +86,7 @@ class DownloadGeoSeries(DynamicWrapperTask):
     """
 
     def run(self):
-        gsms = collect_geo_samples_with_rnaseq_data(self.input().path)
+        gsms = collect_geo_samples(self.input().path)
         if not gsms:
             raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
         yield [DownloadGeoSample(gsm) for gsm in gsms]

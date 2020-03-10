@@ -33,7 +33,7 @@ class DownloadGemmaExperiment(DynamicWrapperTask):
             elif external_database == 'SRA':
                 download_sample_tasks.append(DownloadSraExperiment(accession))
             else:
-                logger.warning('Downloading {} from {} is not supported.'.format(accession, external_database))
+                logger.warning('Downloading %s from %s is not supported.', accession, external_database)
                 continue
         yield download_sample_tasks
 
@@ -43,7 +43,7 @@ class ExtractGemmaExperimentBatchInfo(luigi.Task):
         with self.output().open('w') as info_out:
             for sample in self.requires().requires():
                 if not isinstance(sample, DownloadGeoSample):
-                    logger.warning('Extracting batch info from {} is not supported.'.format(sample))
+                    logger.warning('Extracting batch info from %s is not supported.', sample)
                     continue
 
                 if len(sample.output()) == 0:
