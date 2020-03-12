@@ -301,9 +301,9 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
             try:
                 illumina_header = IlluminaFastqHeader.parse(row.fastq_header)
             except TypeError:
-                logger.warning('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
+                logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
                 continue
-            batch.add((row.platform_id, illumina_header.device, illumina_header.flowcell, illumina_header.flowcell_lane))
+            batch.add((row.platform_id,) + illumina_header.get_batch_factor())
         return len(batch) > 1
 
     def requires(self):
@@ -335,6 +335,7 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
 
     def complete(self):
         if all(req.complete() for req in flatten(self.requires())):
+            logger.warning('Batch info is unusable for %s.', self.experiment_id)
             return not self.is_batch_info_usable() or super().complete()
         else:
             return super().complete()

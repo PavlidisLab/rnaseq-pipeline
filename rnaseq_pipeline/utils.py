@@ -14,12 +14,19 @@ cfg = rnaseq_pipeline()
 logger = logging.getLogger('luigi-interface')
 
 
-class IlluminaFastqHeader():
+class IlluminaFastqHeader:
     @classmethod
     def parse(cls, s):
-        return cls(*s.split(':'))
+        pieces = s.split(':')
+        if len(pieces) == 5:
+            device, flowcell_lane, tile, x, y = pieces
+            return cls(device, flowcell_lane=flowcell_lane, tile=tile, x=x, y=y)
+        elif len(pieces) == 7:
+            return cls(*pieces)
+        else:
+            raise TypeError('Unsupported Illumina FASTQ header format {}.'.format(s))
 
-    def __init__(self, device, run, flowcell, flowcell_lane, tile, x=None, y=None):
+    def __init__(self, device, run=None, flowcell=None, flowcell_lane=None, tile=None, x=None, y=None):
         self.device = device
         self.run = run
         self.flowcell = flowcell
@@ -27,6 +34,11 @@ class IlluminaFastqHeader():
         self.tile = tile
         self.x = x
         self.y = y
+
+    def get_batch_factor(self):
+        if self.flowcell is None:
+            return self.device, self.flowcell_lane
+        return self.device, self.flowcell, self.flowcell_lane
 
 def parse_illumina_fastq_header(s):
     return IlluminaFastqHeader(*s.split(':'))
