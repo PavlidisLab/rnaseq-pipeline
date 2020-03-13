@@ -397,7 +397,7 @@ class SubmitExperimentToGemma(luigi.Task):
     def on_success(self):
         # report success to curators
         if cfg.SLACK_WEBHOOK_URL is not None:
-            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> data and batch information has been successfully submitted to Gemma.'.format(self.experiment_id)}
+            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> data and batch information have been successfully submitted to Gemma.'.format(self.experiment_id)}
             requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
         return super().on_success()
 
