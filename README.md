@@ -7,7 +7,7 @@ This documentation is principally written to support the Pavlidis Lab, and we're
  - source mechanism that support discovery of samples from GEO, SRA, ArrayExpress and Gemma (in-house curation database)
  - built with [STAR](https://github.com/alexdobin/STAR), [RSEM](https://github.com/deweylab/RSEM), [MultiQC](https://multiqc.info/), [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), and more
  - produces count and FPKM matrices suitable for analysis with R and Python
- - distributed via a workload manager
+ - distributed via a workload manager thanks to [Bioluigi](https://github.com/pavlidisLab/bioluigi)
  - notify collaborators via [Slack API](https://api.slack.com/)
 
 ## Downloading and installing
