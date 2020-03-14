@@ -8,6 +8,7 @@ This documentation is principally written to support the Pavlidis Lab, and we're
  - built with [STAR](https://github.com/alexdobin/STAR), [RSEM](https://github.com/deweylab/RSEM), [MultiQC](https://multiqc.info/), [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), and more
  - produces count and FPKM matrices suitable for analysis with R and Python
  - distributed via a workload manager
+ - notify collaborators via [Slack API](https://api.slack.com/)
 
 ## Downloading and installing
 
@@ -37,7 +38,7 @@ python setup.py install # use develop instead of install of you want to edit the
 ```
 
 Create a copy of `the example.luigi.cfg` file to `luigi.cfg`. It should work
-as-is, but you might want to change the output location.
+as-is, but you might want to change the output location and the resources.
 
 For convenience, we provide a `luigi-wrapper` script that sets the `--module`
 flag to `rnaseq_pipeline.tasks` for you.
