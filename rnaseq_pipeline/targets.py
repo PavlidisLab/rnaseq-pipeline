@@ -8,12 +8,13 @@ class RsemReference(luigi.Target):
     """
     Represents the target of rsem-prepare-reference script.
     """
-    def __init__(self, path):
+    def __init__(self, path, taxon):
         self.path = path
+        self.taxon = taxon
 
     def exists(self):
         exts = ['grp', 'ti', 'seq', 'chrlist']
-        return all(os.path.exists(self.path + '.' + ext) for ext in exts)
+        return all(os.path.exists(os.path.join(self.path, '{}_0.{}'.format(self.taxon, ext))) for ext in exts)
 
 class GemmaDatasetHasPlatform(luigi.Target):
     """
