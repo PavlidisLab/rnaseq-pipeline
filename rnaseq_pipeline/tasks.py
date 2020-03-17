@@ -142,12 +142,12 @@ class PrepareReference(ScheduledExternalProgramTask):
 
         args.extend([t.path for t in genome_fasta])
 
-        args.append(self.output().path)
+        args.append(join(self.output().path, '{}_0'.format(self.taxon)))
 
         return args
 
     def run(self):
-        os.makedirs(self.output().path)
+        os.makedirs(self.output().path, exist_ok=True)
         return super().run()
 
     def output(self):
