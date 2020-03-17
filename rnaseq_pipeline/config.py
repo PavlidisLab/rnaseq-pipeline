@@ -3,9 +3,9 @@ import luigi
 # see luigi.cfg for details
 class rnaseq_pipeline(luigi.Config):
     GENOMES = luigi.Parameter()
-    REFERENCES = luigi.Parameter()
 
     OUTPUT_DIR = luigi.Parameter()
+    REFERENCES = luigi.Parameter()
     METADATA = luigi.Parameter()
     DATA = luigi.Parameter()
     DATAQCDIR = luigi.Parameter()

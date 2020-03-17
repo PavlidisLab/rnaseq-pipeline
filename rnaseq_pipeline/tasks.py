@@ -151,7 +151,7 @@ class PrepareReference(ScheduledExternalProgramTask):
         return super().run()
 
     def output(self):
-        return RsemReference(join(cfg.REFERENCES, self.reference_id), self.taxon)
+        return RsemReference(join(cfg.OUTPUT_DIR, cfg.REFERENCES, self.reference_id), self.taxon)
 
 @no_retry
 @requires(DownloadSample, QualityControlSample, PrepareReference)
