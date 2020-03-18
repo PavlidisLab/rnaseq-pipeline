@@ -204,7 +204,7 @@ class AlignSample(ScheduledExternalProgramTask):
             raise NotImplementedError('More than two input FASTQs are not supported.')
 
         # reference for alignments and quantifications
-        args.append(join(reference.path))
+        args.append(join(reference.path, '{}_0'.format(self.taxon)))
 
         # output prefix
         args.append(join(os.path.dirname(self.output().path), self.sample_id))
