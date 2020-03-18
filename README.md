@@ -40,6 +40,13 @@ python setup.py install # use develop instead of install of you want to edit the
 Create a copy of `the example.luigi.cfg` file to `luigi.cfg`. It should work
 as-is, but you might want to change the output location and the resources.
 
+First, you need to start Luigi scheduler daemon. You can see the progress of your tasks
+at http://localhost:8082/.
+
+```bash
+luigid
+```
+
 For convenience, we provide a `luigi-wrapper` script that sets the `--module`
 flag to `rnaseq_pipeline.tasks` for you.
 
@@ -61,9 +68,20 @@ following files under `genomes/mm10_ensembl98`:
 
 ## Triggering tasks
 
+The top-level task you will likely want to use is `GenerateReportForExperiment`.
+
 ```bash
 ./luigi-wrapper GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
 ```
+
+The output is organized as follow:
+
+```
+pipeline-output/
+    data-qc/<experiment_id>                 # FastQC reports
+    aligned/<reference_id>/<experiment_id>/ # alignment and quantification results
+    report/<reference_id>/<experiment_id>/  # MultiQC reports for reads and alignments
+``` 
 
 ## Setting up distributed computation
 
