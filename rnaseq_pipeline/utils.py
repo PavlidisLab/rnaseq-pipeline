@@ -94,7 +94,6 @@ class GemmaTask(ExternalProgramTask):
     Base class for tasks that wraps Gemma CLI.
     """
     experiment_id = luigi.Parameter()
-    resources = {'gemma_connections': 1}
 
     subcommand = None
 

@@ -298,6 +298,8 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
 
     subcommand = 'fillBatchInfo'
 
+    resources = {'submit_batch_info_jobs': 1}
+
     def is_batch_info_usable(self):
         batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
         batch = set()
@@ -359,6 +361,8 @@ class SubmitExperimentDataToGemma(GemmaTask):
     subcommand = 'rnaseqDataAdd'
 
     resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
+
+    resources = {'submit_data_jobs': 1}
 
     def requires(self):
         dataset_info = self.get_dataset_info()
