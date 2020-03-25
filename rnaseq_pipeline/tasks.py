@@ -168,7 +168,7 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
-    walltime = datetime.timedelta(days=1)
+    walltime = datetime.timedelta(days=2)
     cpus = 8
     memory = 32
 
