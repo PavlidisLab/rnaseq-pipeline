@@ -305,9 +305,10 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
         batch = set()
         for ix, row in batch_info_df.iterrows():
             try:
-                illumina_header = IlluminaFastqHeader.parse(row.fastq_header)
+                _, fastq_header, _ = row.fastq_header.split()
+                illumina_header = IlluminaFastqHeader.parse(fastq_header)
             except TypeError:
-                logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, row.fastq_header)
+                logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, fastq_header)
                 continue
             batch.add((row.platform_id,) + illumina_header.get_batch_factor())
         return len(batch) > 1

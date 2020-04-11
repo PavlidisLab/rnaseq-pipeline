@@ -16,3 +16,11 @@ def test_parse_illumina_fastq_header():
 
     # make sure that we can combine it with a GEO platform id
     assert ('GPL1111',) + fastq_header.get_batch_factor() == ('GPL1111', 'NIRVANA', 'C08GPACXX', '4')
+
+    IlluminaFastqHeader.parse('HS19_09559:4:1101:1591:13817')
+
+def test_parse_sra_fastq_header():
+    _, fastq_header, _ = '@SRR8267714.1.2 HS19_09559:4:1101:1571:31744 length=100'.split()
+    fastq_header = IlluminaFastqHeader.parse(fastq_header)
+    assert fastq_header.device == 'HS19_09559'
+    assert fastq_header.flowcell_lane == '4'
