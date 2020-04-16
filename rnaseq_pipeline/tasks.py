@@ -246,6 +246,7 @@ class GenerateReportForExperiment(luigi.Task):
 
     The report include collected FastQC reports and RSEM/STAR outputs.
     """
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
 
     def run(self):
         search_dirs = [
