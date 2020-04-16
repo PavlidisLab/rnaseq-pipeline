@@ -16,7 +16,6 @@ from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 
 from .config import rnaseq_pipeline
-from .cwl_utils import gen_workflow
 from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
@@ -281,15 +280,6 @@ class CountExperiment(luigi.Task):
         destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, self.reference_id)
         return [luigi.LocalTarget(join(destdir, '{}_counts.genes'.format(self.experiment_id))),
                 luigi.LocalTarget(join(destdir, '{}_fpkm.genes'.format(self.experiment_id)))]
-
-@requires(CountExperiment)
-class GenerateWorkflowMetadataForExperiment(luigi.Task):
-    def run(self):
-        with self.output().open('w') as f:
-            yaml.dump(gen_workflow(self.requires()), f)
-
-    def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'workflow', '{}.cwl'.format(self.experiment_id)))
 
 class SubmitExperimentBatchInfoToGemma(GemmaTask):
     """
