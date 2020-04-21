@@ -98,8 +98,10 @@ class QualityControlExperiment(DynamicWrapperTask):
     experiment_id = luigi.Parameter()
     source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
 
+    def requires(self):
+        return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
+
     def run(self):
-        yield DownloadExperiment(self.experiment_id, source=self.source).requires()
         download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
         yield [QualityControlSample(self.experiment_id,
                                     dst.sample_id,
@@ -227,10 +229,11 @@ class AlignExperiment(DynamicWrapperTask):
     taxon = luigi.Parameter(default='human', positional=False)
     reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
 
-    def run(self):
-        yield DownloadExperiment(self.experiment_id, source=self.source).requires()
-        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
+    def requires(self):
+        return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
 
+    def run(self):
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
         yield [AlignSample(self.experiment_id,
                            dst.sample_id,
                            source=self.source,
