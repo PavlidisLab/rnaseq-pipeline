@@ -9,9 +9,8 @@ import requests
 import luigi
 import luigi.task
 from luigi.task import flatten, flatten_output
-from luigi.contrib.external_program import ExternalProgramTask
 from luigi.util import requires
-from bioluigi.tasks import fastqc, multiqc
+from bioluigi.tasks import fastqc, multiqc, cutadapt
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 
@@ -79,8 +78,51 @@ class DownloadExperiment(WrapperTask):
         else:
             raise ValueError('Unknown download source for experiment: {}.')
 
-@no_retry
 @requires(DownloadSample)
+class TrimSample(DynamicWrapperTask):
+    """
+    Trim Illumina Universal Adapter from single end and paired reads.
+    """
+
+    def run(self):
+        destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
+        os.makedirs(destdir, exist_ok=True)
+        if len(self.input()) == 1:
+            r1, = self.input()
+            yield cutadapt.TrimReads(
+                    r1.path,
+                    join(destdir, os.path.basename(r1.path)),
+                    adapter_3prime='AGATCGGAAGAGC',
+                    minimum_length=25)
+        elif len(self.input()) == 2:
+            r1, r2 = self.input()
+            yield cutadapt.TrimPairedReads(
+                    r1.path, r2.path,
+                    join(destdir, os.path.basename(r1.path)),
+                    join(destdir, os.path.basename(r2.path)),
+                    adapter_3prime='AGATCGGAAGAGC',
+                    minimum_length=25)
+        else:
+            raise NotImplementedError('Trimming more than two mates is not supported.')
+
+class TrimExperiment(DynamicWrapperTask):
+    """
+    Quality control all the samples in a given experiment.
+    """
+    experiment_id = luigi.Parameter()
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
+
+    def requires(self):
+        return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
+
+    def run(self):
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
+        yield [TrimSample(self.experiment_id, dst.sample_id)
+               for dst in download_sample_tasks]
+
+@no_retry
+@requires(TrimSample)
 class QualityControlSample(DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
@@ -156,7 +198,7 @@ class PrepareReference(ScheduledExternalProgramTask):
         return RsemReference(join(cfg.OUTPUT_DIR, cfg.REFERENCES, self.reference_id), self.taxon)
 
 @no_retry
-@requires(DownloadSample, QualityControlSample, PrepareReference)
+@requires(TrimSample, PrepareReference)
 class AlignSample(ScheduledExternalProgramTask):
     """
     The output of the task is a pair of isoform and gene quantification results
@@ -190,7 +232,7 @@ class AlignSample(ScheduledExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_run, _, reference = self.input()
+        sample_run, reference = self.input()
 
         fastqs = [mate.path for mate in sample_run]
 
@@ -217,6 +259,29 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
+@requires(QualityControlSample, AlignSample)
+class CleanupSample(luigi.Task):
+    """
+    Cleanup a sample leftovers when data has been aligned and controlled for
+    quality. If the source is non-local (i.e. GEO, SRA, and ArrayExpress), the
+    original FASTQ is also removed.
+
+    The task is considered completed when all the files have been successfully
+    removed.
+    """
+    def _targets_to_remove(self):
+        return flatten_output(TrimSample(self.experiment_id, self.sample_id, source=self.source))
+
+    def run(self):
+        # only remove source FASTQ for non-local
+        for out in self._targets_to_remove():
+            if out.exists():
+                logger.warning('Removing FASTQ %s for sample %s in experiment %s...', out.path, self.sample_id, self.experiment_id)
+                out.remove()
+
+    def complete(self):
+        return all(not out.exists() for out in self._targets_to_remove())
+
 class AlignExperiment(DynamicWrapperTask):
     """
     Align all the samples in a given experiment.
@@ -241,8 +306,19 @@ class AlignExperiment(DynamicWrapperTask):
                            reference_id=self.reference_id)
                for dst in download_sample_tasks]
 
-@no_retry
 @requires(QualityControlExperiment, AlignExperiment)
+class CleanupExperiment(luigi.Task):
+    """
+    Cleanup an experiment once alignment and quality control has been
+    performed.
+    """
+    def run(self):
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
+        yield [CleanupSample(self.experiment_id, dst.sample_id, source=self.source, reference_id=self.reference_id)
+               for dst in download_sample_tasks]
+
+@no_retry
+@requires(QualityControlExperiment, AlignExperiment, CleanupExperiment)
 class GenerateReportForExperiment(luigi.Task):
     """
     Generate a summary report for an experiment with MultiQC.
