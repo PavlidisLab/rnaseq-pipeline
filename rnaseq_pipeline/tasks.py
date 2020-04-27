@@ -93,7 +93,8 @@ class TrimSample(DynamicWrapperTask):
                     r1.path,
                     join(destdir, os.path.basename(r1.path)),
                     adapter_3prime='AGATCGGAAGAGC',
-                    minimum_length=25)
+                    minimum_length=25,
+                    cpus=4)
         elif len(self.input()) == 2:
             r1, r2 = self.input()
             yield cutadapt.TrimPairedReads(
@@ -101,7 +102,8 @@ class TrimSample(DynamicWrapperTask):
                     join(destdir, os.path.basename(r1.path)),
                     join(destdir, os.path.basename(r2.path)),
                     adapter_3prime='AGATCGGAAGAGC',
-                    minimum_length=25)
+                    minimum_length=25,
+                    cpus=4)
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
