@@ -8,9 +8,9 @@ from luigi.contrib.external_program import ExternalProgramTask
 import requests
 from requests.auth import HTTPBasicAuth
 
-from .config import rnaseq_pipeline
+from .config import core
 
-cfg = rnaseq_pipeline()
+cfg = core()
 logger = logging.getLogger('luigi-interface')
 
 

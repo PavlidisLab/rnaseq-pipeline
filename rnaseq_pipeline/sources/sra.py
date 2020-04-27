@@ -11,10 +11,10 @@ import luigi
 from luigi.util import requires
 import pandas as pd
 
-from ..config import rnaseq_pipeline
+from ..config import core
 from ..utils import DynamicWrapperTask
 
-cfg = rnaseq_pipeline()
+cfg = core()
 
 logger = logging.getLogger('luigi-interface')
 

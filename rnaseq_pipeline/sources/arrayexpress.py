@@ -1,14 +1,14 @@
-import urllib
+from urllib.request import urlretrieve
 import os
 from os.path import join
 
 import luigi
 import pandas as pd
 
-from ..config import rnaseq_pipeline
+from ..config import core
 from ..utils import WrapperTask
 
-cfg = rnaseq_pipeline()
+cfg = core()
 
 class DownloadArrayExpressFastq(luigi.Task):
     sample_id = luigi.Parameter()

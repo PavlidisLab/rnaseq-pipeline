@@ -12,16 +12,12 @@ from luigi.util import requires
 import pandas as pd
 import requests
 
-from ..config import rnaseq_pipeline
+from ..config import core
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..utils import DynamicWrapperTask
 from .sra import DownloadSraExperiment
 
-"""
-This module contains all the logic to retrieve RNA-Seq data from GEO.
-"""
-
-cfg = rnaseq_pipeline()
+cfg = core()
 
 logger = logging.getLogger('luigi-interface')
 

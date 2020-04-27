@@ -14,7 +14,7 @@ from bioluigi.tasks import fastqc, multiqc, cutadapt
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 
-from .config import rnaseq_pipeline
+from .config import core
 from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
@@ -25,7 +25,7 @@ from .targets import GemmaDatasetHasPlatform, GemmaDatasetHasBatchInfo, RsemRefe
 
 logger = logging.getLogger('luigi-interface')
 
-cfg = rnaseq_pipeline()
+cfg = core()
 
 class DownloadSample(WrapperTask):
     """

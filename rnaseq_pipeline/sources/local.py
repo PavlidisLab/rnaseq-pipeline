@@ -4,10 +4,10 @@ from os.path import join
 
 import luigi
 
-from ..config import rnaseq_pipeline
+from ..config import core
 from ..utils import DynamicWrapperTask
 
-cfg = rnaseq_pipeline()
+cfg = core()
 
 class DownloadLocalSample(luigi.Task):
     """
