@@ -32,9 +32,9 @@ class PrefetchSraRun(luigi.Task):
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
-                                  max_size=40,
+                                  max_size=50,
                                   extra_args=shlex.split(cfg.PREFETCH_ARGS),
-                                  scheduler_extra_args=['--partition', 'Wormhole'])
+                                  scheduler_partition='Wormhole')
 
     def output(self):
         return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))

@@ -15,7 +15,7 @@ from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 
 from .config import core
-from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader
+from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
@@ -51,7 +51,7 @@ class DownloadSample(WrapperTask):
         else:
             raise ValueError('Unknown source for sample: {}.'.format(self.source))
 
-class DownloadExperiment(WrapperTask):
+class DownloadExperiment(TaskWithPriorityMixin, WrapperTask):
     """
     This is a generic task that detects which kind of experiment is intended to
     be downloaded so that downstream tasks can process regardless of the data
@@ -107,20 +107,19 @@ class TrimSample(DynamicWrapperTask):
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
-class TrimExperiment(DynamicWrapperTask):
+class TrimExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
     experiment_id = luigi.Parameter()
     source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
 
     def run(self):
         download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
-        yield [TrimSample(self.experiment_id, dst.sample_id)
+        yield [TrimSample(self.experiment_id, dst.sample_id, source=self.source)
                for dst in download_sample_tasks]
 
 @no_retry
@@ -128,14 +127,16 @@ class TrimExperiment(DynamicWrapperTask):
 class QualityControlSample(DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
+
+    FIXME: this task triggers trimming of downloaded FASTQs even if the output
+    is already generated.
     """
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
-        for fastq_in in self.input():
-            yield fastqc.GenerateReport(fastq_in.path, destdir)
+        yield [fastqc.GenerateReport(fastq_in.path, destdir) for fastq_in in self.input()]
 
-class QualityControlExperiment(DynamicWrapperTask):
+class QualityControlExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
@@ -214,9 +215,12 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
-    walltime = datetime.timedelta(days=2)
+    walltime = datetime.timedelta(days=1)
     cpus = 8
     memory = 32
+
+    # cleanup unused shared memory objects
+    scheduler_extra_args = ["--task-prolog", join(os.path.dirname(__file__), "../scripts/clean-unused-shm-objects")]
 
     def run(self):
         self.output().makedirs()
@@ -261,30 +265,7 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
-@requires(QualityControlSample, AlignSample)
-class CleanupSample(luigi.Task):
-    """
-    Cleanup a sample leftovers when data has been aligned and controlled for
-    quality. If the source is non-local (i.e. GEO, SRA, and ArrayExpress), the
-    original FASTQ is also removed.
-
-    The task is considered completed when all the files have been successfully
-    removed.
-    """
-    def _targets_to_remove(self):
-        return flatten_output(TrimSample(self.experiment_id, self.sample_id, source=self.source))
-
-    def run(self):
-        # only remove source FASTQ for non-local
-        for out in self._targets_to_remove():
-            if out.exists():
-                logger.warning('Removing FASTQ %s for sample %s in experiment %s...', out.path, self.sample_id, self.experiment_id)
-                out.remove()
-
-    def complete(self):
-        return all(not out.exists() for out in self._targets_to_remove())
-
-class AlignExperiment(DynamicWrapperTask):
+class AlignExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
     """
     Align all the samples in a given experiment.
 
@@ -308,26 +289,23 @@ class AlignExperiment(DynamicWrapperTask):
                            reference_id=self.reference_id)
                for dst in download_sample_tasks]
 
-@requires(QualityControlExperiment, AlignExperiment)
-class CleanupExperiment(luigi.Task):
-    """
-    Cleanup an experiment once alignment and quality control has been
-    performed.
-    """
-    def run(self):
-        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
-        yield [CleanupSample(self.experiment_id, dst.sample_id, source=self.source, reference_id=self.reference_id)
-               for dst in download_sample_tasks]
-
 @no_retry
-@requires(QualityControlExperiment, AlignExperiment, CleanupExperiment)
-class GenerateReportForExperiment(luigi.Task):
+@requires(TrimExperiment, QualityControlExperiment, AlignExperiment)
+class GenerateReportForExperiment(TaskWithPriorityMixin, luigi.Task):
     """
     Generate a summary report for an experiment with MultiQC.
 
     The report include collected FastQC reports and RSEM/STAR outputs.
     """
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
+
+    def on_success(self):
+        trimmed_fastqs, _, _ = self.input()
+        logger.info('Cleaning trimmed reads from %s...', self.experiment_id)
+        for out in flatten(trimmed_fastqs):
+            if out.exists():
+                logger.info('Removing trimmed FASTQ %s...', out.path)
+                out.remove()
+        return super().on_success()
 
     def run(self):
         search_dirs = [
@@ -340,7 +318,7 @@ class GenerateReportForExperiment(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
 
 @requires(AlignExperiment)
-class CountExperiment(luigi.Task):
+class CountExperiment(TaskWithPriorityMixin, luigi.Task):
     """
     Combine the RSEM quantifications results from all the samples in a given
     experiment.
@@ -365,7 +343,7 @@ class CountExperiment(luigi.Task):
         return [luigi.LocalTarget(join(destdir, '{}_counts.genes'.format(self.experiment_id))),
                 luigi.LocalTarget(join(destdir, '{}_fpkm.genes'.format(self.experiment_id)))]
 
-class SubmitExperimentBatchInfoToGemma(GemmaTask):
+class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
@@ -377,15 +355,17 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
     def is_batch_info_usable(self):
         batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
         batch = set()
+        usable = True
         for ix, row in batch_info_df.iterrows():
             try:
                 _, fastq_header, _ = row.fastq_header.split()
                 illumina_header = IlluminaFastqHeader.parse(fastq_header)
+                batch.add((row.platform_id,) + illumina_header.get_batch_factor())
             except TypeError:
                 logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, fastq_header)
-                continue
-            batch.add((row.platform_id,) + illumina_header.get_batch_factor())
-        return len(batch) > 1
+                usable = False
+                batch.add(None)
+        return None not in batch and len(batch) > 1
 
     def requires(self):
         dataset_info = self.get_dataset_info()
@@ -422,7 +402,7 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
             return super().complete()
 
 @no_retry
-class SubmitExperimentDataToGemma(GemmaTask):
+class SubmitExperimentDataToGemma(TaskWithPriorityMixin, GemmaTask):
     """
     Submit an experiment to Gemma.
 
@@ -469,13 +449,23 @@ class SubmitExperimentDataToGemma(GemmaTask):
         return (not self.resubmit) and super().complete()
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
-class SubmitExperimentToGemma(luigi.Task):
+class SubmitExperimentToGemma(TaskWithPriorityMixin, WrapperTask):
     """
     Submit an experiment data, QC reports, and batch information to Gemma.
 
     TODO: add QC report submission
     """
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
+
+    def _targets_to_remove(self):
+        outs = []
+        # original data
+        # TODO: check if data is local, we don't want to delete that
+        download_task = DownloadExperiment(self.experiment_id, source='gemma')
+        outs.extend(flatten_output(download_task))
+        # any data resulting from trimming raw reads
+        trim_task = TrimExperiment(self.experiment_id, source='gemma')
+        outs.extend(flatten_output(trim_task))
+        return outs
 
     def on_success(self):
         # report success to curators
@@ -486,25 +476,27 @@ class SubmitExperimentToGemma(luigi.Task):
 
     def run(self):
         # cleanup download data
-        download_task = DownloadGemmaExperiment(self.experiment_id)
-        logger.warning('Cleaning up %s...', self.experiment_id)
-        for out in flatten_output(download_task):
+        logger.info('Cleaning up %s...', self.experiment_id)
+        for out in self._targets_to_remove():
             if out.exists():
-                logger.warning('Removing FASTQ %s for experiment %s...', out.path, self.experiment_id)
+                logger.info('Removing %s for experiment %s...', out.path, self.experiment_id)
                 out.remove()
 
     def complete(self):
         """
         We consider a submission completed when data and batch information have
-        been successfully submitted to Gemma and any remaining downloaded data
-        has been removed.
+        been successfully submitted to Gemma and any remaining downloaded and
+        trimmed data has been removed.
+
+        Ideally we would delete the data earlier, but it's necessary for both
+        quantification and batch info extraction.
         """
-        download_task = DownloadGemmaExperiment(self.experiment_id)
-        return all(req.complete() for req in flatten(self.requires())) and not any(out.exists() for out in flatten_output(download_task))
+        return super().complete() and all(not out.exists() for out in self._targets_to_remove())
 
 class SubmitExperimentsFromFileToGemma(WrapperTask):
     input_file = luigi.Parameter()
+    resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
     def requires(self):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
-        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
+        return [SubmitExperimentToGemma(row.experiment_id, resubmit=self.resubmit, priority=row.get('priority', 0))
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]

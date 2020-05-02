@@ -13,7 +13,6 @@ from .config import core
 cfg = core()
 logger = logging.getLogger('luigi-interface')
 
-
 class IlluminaFastqHeader:
     @classmethod
     def parse(cls, s):
@@ -85,9 +84,17 @@ class DynamicWrapperTask(luigi.Task):
         return getpaths(tasks)
 
     def complete(self):
+        # ensure that all static dependencies are satisfied
         if not all(req.complete() for req in flatten(self.requires())):
             return False
-        return super().complete()
+
+        # check that all yielded tasks are completed
+        return all(req.complete() for chunk in self.run()
+                   for req in flatten(chunk))
+
+class TaskWithPriorityMixin:
+    """Mixin that adds a --priority flag to a given task."""
+    priority = luigi.IntParameter(default=0, positional=False, significant=False)
 
 class GemmaTask(ExternalProgramTask):
     """
