@@ -1,10 +1,9 @@
-import datetime
+import gzip
+import logging
 import os
 from os.path import join
 import shlex
-import shutil
 from subprocess import Popen, check_call, PIPE
-import logging
 
 from bioluigi.tasks import sratoolkit
 import luigi

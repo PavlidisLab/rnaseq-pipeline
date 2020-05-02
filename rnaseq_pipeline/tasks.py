@@ -247,7 +247,7 @@ class AlignSample(ScheduledExternalProgramTask):
             args.append('--paired-end')
             args.extend(fastqs)
         else:
-            raise NotImplementedError('More than two input FASTQs are not supported.')
+            raise NotImplementedError('Alignment of more than two input FASTQs is not supported.')
 
         # reference for alignments and quantifications
         args.append(join(reference.path, '{}_0'.format(self.taxon)))
@@ -409,14 +409,14 @@ class SubmitExperimentBatchInfoToGemma(GemmaTask):
         if self.is_batch_info_usable():
             return super().run()
         else:
-            logger.warning('Batch info is unusable for %s.', self.experiment_id)
+            logger.info('Batch info is unusable for %s.', self.experiment_id)
 
     def output(self):
         return GemmaDatasetHasBatchInfo(self.experiment_id)
 
     def complete(self):
         if all(req.complete() for req in flatten(self.requires())):
-            logger.warning('Batch info is unusable for %s.', self.experiment_id)
+            logger.info('Batch info is unusable for %s.', self.experiment_id)
             return not self.is_batch_info_usable() or super().complete()
         else:
             return super().complete()

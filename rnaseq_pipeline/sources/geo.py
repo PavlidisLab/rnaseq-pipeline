@@ -1,15 +1,16 @@
+"""
+This module contains all the logic to retrieve RNA-Seq data from GEO.
+"""
+
 import gzip
 import logging
-from subprocess import Popen, check_call, PIPE
+from subprocess import Popen
 import os
 from os.path import join
-import urllib
 from urllib.parse import urlparse, parse_qs
-import tarfile
 
 import luigi
 from luigi.util import requires
-import pandas as pd
 import requests
 
 from ..config import core

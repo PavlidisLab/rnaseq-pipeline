@@ -30,7 +30,7 @@ class IlluminaFastqHeader:
         self.device = device
         self.run = run
         self.flowcell = flowcell
-        self.flowcell_lane =flowcell_lane
+        self.flowcell_lane = flowcell_lane
         self.tile = tile
         self.x = x
         self.y = y

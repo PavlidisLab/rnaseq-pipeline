@@ -18,9 +18,9 @@ class DownloadArrayExpressFastq(luigi.Task):
 
     def run(self):
         with self.output().temporary_path() as dest_filename:
-            urllib.urlretrieve(self.fastq_url,
-                               reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
-                               filename=dest_filename)
+            urlretrieve(self.fastq_url,
+                        reporthook=lambda numblocks, blocksize, totalsize: self.set_progress_percentage(100.0 * numblocks * blocksize / totalsize),
+                        filename=dest_filename)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'arrayexpress', self.sample_id, os.path.basename(self.fastq_url)))

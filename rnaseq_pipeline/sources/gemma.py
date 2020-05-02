@@ -1,5 +1,7 @@
+import gzip
 import logging
 import os
+from os.path import join
 
 import luigi
 from luigi.util import requires
