@@ -59,8 +59,7 @@ class DumpSraRun(luigi.Task):
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,
                                    join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx),
-                                   paired_reads=self.paired_reads,
-                                   minimum_read_length=25)
+                                   paired_reads=self.paired_reads)
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
