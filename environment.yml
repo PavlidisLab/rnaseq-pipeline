@@ -9,4 +9,3 @@ dependencies:
 - fastqc
 - star==2.7.3a
 - entrez-direct
-- multiqc
