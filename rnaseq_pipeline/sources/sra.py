@@ -57,15 +57,14 @@ class DumpSraRun(luigi.Task):
 
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,
-                                   join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx),
-                                   paired_reads=self.paired_reads)
+                                   join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx))
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
         if self.paired_reads:
             return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz')),
                     luigi.LocalTarget(join(output_dir, self.srr + '_2.fastq.gz'))]
-        return [luigi.LocalTarget(join(output_dir, self.srr + '_1.fastq.gz'))]
+        return [luigi.LocalTarget(join(output_dir, self.srr + '.fastq.gz'))]
 
 class DownloadSraExperimentRunInfo(luigi.Task):
     srx = luigi.Parameter()
