@@ -3,6 +3,7 @@ import logging
 import os
 from os.path import join
 
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 from luigi.util import requires
 import requests
@@ -10,11 +11,10 @@ from requests.auth import HTTPBasicAuth
 
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
-from ..utils import DynamicWrapperTask
 
 logger = logging.getLogger('luigi-interface')
 
-class DownloadGemmaExperiment(DynamicWrapperTask):
+class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download an experiment described by a Gemma dataset using the REST API.
 

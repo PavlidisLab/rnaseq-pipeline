@@ -9,13 +9,13 @@ import os
 from os.path import join
 from urllib.parse import urlparse, parse_qs
 
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 from luigi.util import requires
 import requests
 
 from ..config import core
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
-from ..utils import DynamicWrapperTask
 from .sra import DownloadSraExperiment
 
 cfg = core()
@@ -40,7 +40,7 @@ class DownloadGeoSampleMetadata(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)))
 
 @requires(DownloadGeoSampleMetadata)
-class DownloadGeoSample(DynamicWrapperTask):
+class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
@@ -77,7 +77,7 @@ class DownloadGeoSeriesMetadata(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
 
 @requires(DownloadGeoSeriesMetadata)
-class DownloadGeoSeries(DynamicWrapperTask):
+class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download all GEO Samples related to a GEO Series.
     """

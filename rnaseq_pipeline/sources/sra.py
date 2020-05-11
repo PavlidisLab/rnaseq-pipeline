@@ -6,12 +6,12 @@ import shlex
 from subprocess import Popen, check_call, PIPE
 
 from bioluigi.tasks import sratoolkit
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 from luigi.util import requires
 import pandas as pd
 
 from ..config import core
-from ..utils import DynamicWrapperTask
 
 cfg = core()
 
@@ -80,7 +80,7 @@ class DownloadSraExperimentRunInfo(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)))
 
 @requires(DownloadSraExperimentRunInfo)
-class DownloadSraExperiment(DynamicWrapperTask):
+class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a SRA experiment comprising one SRA run
 
@@ -124,7 +124,7 @@ class DownloadSraProjectRunInfo(luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)))
 
 @requires(DownloadSraProjectRunInfo)
-class DownloadSraProject(DynamicWrapperTask):
+class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
         df = pd.read_csv(self.input().path)
         yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]

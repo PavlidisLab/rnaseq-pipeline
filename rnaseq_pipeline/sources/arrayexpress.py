@@ -3,10 +3,11 @@ import os
 from os.path import join
 
 import luigi
+from luigi.task import WrapperTask
 import pandas as pd
+from bioluigi.tasks.utils import TaskWithOutputMixin
 
 from ..config import core
-from ..utils import WrapperTask
 
 cfg = core()
 
@@ -25,7 +26,7 @@ class DownloadArrayExpressFastq(luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'arrayexpress', self.sample_id, os.path.basename(self.fastq_url)))
 
-class DownloadArrayExpressSample(WrapperTask):
+class DownloadArrayExpressSample(TaskWithOutputMixin, WrapperTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
     fastq_urls = luigi.ListParameter()
@@ -33,7 +34,7 @@ class DownloadArrayExpressSample(WrapperTask):
     def requires(self):
         return [DownloadArrayExpressFastq(self.sample_id, fastq_url) for fastq_url in self.fastq_urls]
 
-class DownloadArrayExpressExperiment(WrapperTask):
+class DownloadArrayExpressExperiment(TaskWithOutputMixin, WrapperTask):
     """
     Download all the related ArrayExpress sample to this ArrayExpress experiment.
     """

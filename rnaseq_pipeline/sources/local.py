@@ -2,10 +2,10 @@ from glob import glob
 import os
 from os.path import join
 
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 
 from ..config import core
-from ..utils import DynamicWrapperTask
 
 cfg = core()
 
@@ -21,7 +21,7 @@ class DownloadLocalSample(luigi.Task):
         # we sort to make sure that pair ends are in correct order
         return [luigi.LocalTarget(f) for f in sorted(glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, self.sample_id, '*.fastq.gz')))]
 
-class DownloadLocalExperiment(DynamicWrapperTask):
+class DownloadLocalExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment_id = luigi.Parameter()
 
     def run(self):

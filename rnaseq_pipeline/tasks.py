@@ -13,9 +13,10 @@ from luigi.util import requires
 from bioluigi.tasks import fastqc, multiqc, cutadapt
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask, TaskWithOutputMixin
 
 from .config import core
-from .utils import WrapperTask, DynamicWrapperTask, no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
@@ -27,7 +28,7 @@ logger = logging.getLogger('luigi-interface')
 
 cfg = core()
 
-class DownloadSample(WrapperTask):
+class DownloadSample(TaskWithOutputMixin, WrapperTask):
     """
     This is a generic task for downloading an individual sample in an
     experiment.
@@ -51,7 +52,7 @@ class DownloadSample(WrapperTask):
         else:
             raise ValueError('Unknown source for sample: {}.'.format(self.source))
 
-class DownloadExperiment(TaskWithPriorityMixin, WrapperTask):
+class DownloadExperiment(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):
     """
     This is a generic task that detects which kind of experiment is intended to
     be downloaded so that downstream tasks can process regardless of the data
@@ -79,7 +80,7 @@ class DownloadExperiment(TaskWithPriorityMixin, WrapperTask):
             raise ValueError('Unknown download source for experiment: {}.')
 
 @requires(DownloadSample)
-class TrimSample(DynamicWrapperTask):
+class TrimSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
     """
     Trim Illumina Universal Adapter from single end and paired reads.
     """
@@ -107,7 +108,7 @@ class TrimSample(DynamicWrapperTask):
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
-class TrimExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
+class TrimExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
@@ -124,7 +125,7 @@ class TrimExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
 
 @no_retry
 @requires(TrimSample)
-class QualityControlSample(DynamicWrapperTask):
+class QualityControlSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
     """
     Perform post-download quality control on the FASTQs.
 
@@ -136,7 +137,7 @@ class QualityControlSample(DynamicWrapperTask):
         os.makedirs(destdir, exist_ok=True)
         yield [fastqc.GenerateReport(fastq_in.path, destdir) for fastq_in in self.input()]
 
-class QualityControlExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
+class QualityControlExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
@@ -265,7 +266,7 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
-class AlignExperiment(TaskWithPriorityMixin, DynamicWrapperTask):
+class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
     """
     Align all the samples in a given experiment.
 
@@ -449,7 +450,7 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, GemmaTask):
         return (not self.resubmit) and super().complete()
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
-class SubmitExperimentToGemma(TaskWithPriorityMixin, WrapperTask):
+class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):
     """
     Submit an experiment data, QC reports, and batch information to Gemma.
 
@@ -493,7 +494,7 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, WrapperTask):
         """
         return super().complete() and all(not out.exists() for out in self._targets_to_remove())
 
-class SubmitExperimentsFromFileToGemma(WrapperTask):
+class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
     resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
     def requires(self):

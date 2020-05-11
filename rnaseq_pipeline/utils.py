@@ -54,44 +54,6 @@ def max_retry(count):
 
 no_retry = max_retry(0)
 
-class WrapperTask(luigi.WrapperTask):
-    """
-    Extension to luigi.WrapperTask to inherit the dependencies outputs as well
-    as the completion condition.
-    """
-    def output(self):
-        return luigi.task.getpaths(self.requires())
-
-class DynamicWrapperTask(luigi.Task):
-    """
-    Similar to WrapperTask but for dynamic dependencies yielded in the body of
-    the run() method.
-    """
-    def output(self):
-        tasks = []
-        if all(req.complete() for req in flatten(self.requires())):
-            try:
-                tasks = list(self.run())
-            except:
-                logger.exception('%s failed at run() step; the exception will not be raised because Luigi is still building the graph.', repr(self))
-
-        # FIXME: conserve task structure: the generator actually create an
-        # implicit array level even if a single task is yielded.
-        # For now, we just handle the special singleton case.
-        if len(tasks) == 1:
-            tasks = tasks[0]
-
-        return getpaths(tasks)
-
-    def complete(self):
-        # ensure that all static dependencies are satisfied
-        if not all(req.complete() for req in flatten(self.requires())):
-            return False
-
-        # check that all yielded tasks are completed
-        return all(req.complete() for chunk in self.run()
-                   for req in flatten(chunk))
-
 class TaskWithPriorityMixin:
     """Mixin that adds a --priority flag to a given task."""
     priority = luigi.IntParameter(default=0, positional=False, significant=False)
