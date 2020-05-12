@@ -8,12 +8,12 @@ import pandas as pd
 import requests
 import luigi
 import luigi.task
-from luigi.task import flatten, flatten_output
+from luigi.task import flatten, flatten_output, WrapperTask
 from luigi.util import requires
 from bioluigi.tasks import fastqc, multiqc, cutadapt
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask, TaskWithOutputMixin
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 
 from .config import core
 from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin
@@ -80,7 +80,7 @@ class DownloadExperiment(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask
             raise ValueError('Unknown download source for experiment: {}.')
 
 @requires(DownloadSample)
-class TrimSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
+class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Trim Illumina Universal Adapter from single end and paired reads.
     """
@@ -108,7 +108,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, Wrapper
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
-class TrimExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
+class TrimExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
@@ -125,7 +125,7 @@ class TrimExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicT
 
 @no_retry
 @requires(TrimSample)
-class QualityControlSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
+class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
 
@@ -137,7 +137,7 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixi
         os.makedirs(destdir, exist_ok=True)
         yield [fastqc.GenerateReport(fastq_in.path, destdir) for fastq_in in self.input()]
 
-class QualityControlExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
+class QualityControlExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Quality control all the samples in a given experiment.
     """
@@ -266,7 +266,7 @@ class AlignSample(ScheduledExternalProgramTask):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
         return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
 
-class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicTaskWithOutputMixin, WrapperTask):
+class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Align all the samples in a given experiment.
 
