@@ -3,7 +3,9 @@ import logging
 import os
 from os.path import join
 import shlex
+import subprocess
 from subprocess import Popen, check_call, PIPE
+import xml.etree.ElementTree as ET
 
 from bioluigi.tasks import sratoolkit
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
@@ -29,6 +31,12 @@ class PrefetchSraRun(luigi.Task):
     """
     srr = luigi.Parameter(description='SRA run identifier')
 
+    @staticmethod
+    def _get_ncbi_public_dir():
+        ret = subprocess.run(['vdb-config', '-p'], stdout=subprocess.PIPE, universal_newlines=True)
+        config_xml = ET.fromstring(ret.stdout)
+        return config_xml.find('repository').find('user').find('main').find('public').find('root').text
+
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
@@ -37,7 +45,7 @@ class PrefetchSraRun(luigi.Task):
                                   scheduler_partition='Wormhole')
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.SRA_PUBLIC_DIR, '{}.sra'.format(self.srr)))
+        return luigi.LocalTarget(join(_get_ncbi_public_dir(), f'{self.srr}.sra'))
 
 @requires(PrefetchSraRun)
 class DumpSraRun(luigi.Task):

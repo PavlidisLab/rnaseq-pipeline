@@ -15,7 +15,6 @@ class core(luigi.Config):
     BATCHINFODIR = luigi.Parameter()
 
     PREFETCH_ARGS = luigi.Parameter()
-    SRA_PUBLIC_DIR = luigi.Parameter()
 
     RSEM_DIR = luigi.Parameter()
 
