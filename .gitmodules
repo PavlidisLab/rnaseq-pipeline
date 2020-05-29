@@ -1,15 +1,3 @@
 [submodule "Requirements/RSEM"]
 	path = Requirements/RSEM
 	url = https://github.com/PavlidisLab/RSEM.git
-[submodule "Requirements/STAR"]
-	path = Requirements/STAR
-	url = https://github.com/alexdobin/STAR.git
-[submodule "Requirements/FastQC"]
-	path = Requirements/FastQC
-	url = https://github.com/s-andrews/FastQC.git
-[submodule "Requirements/sra-tools"]
-	path = Requirements/sra-tools
-	url = https://github.com/ncbi/sra-tools.git
-[submodule "Requirements/ncbi-vdb"]
-	path = Requirements/ncbi-vdb
-	url = https://github.com/ncbi/ncbi-vdb.git
