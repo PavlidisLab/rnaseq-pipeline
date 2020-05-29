@@ -45,7 +45,7 @@ class PrefetchSraRun(luigi.Task):
                                   scheduler_partition='Wormhole')
 
     def output(self):
-        return luigi.LocalTarget(join(_get_ncbi_public_dir(), f'{self.srr}.sra'))
+        return luigi.LocalTarget(join(self._get_ncbi_public_dir(), f'{self.srr}.sra'))
 
 @requires(PrefetchSraRun)
 class DumpSraRun(luigi.Task):
