@@ -3,9 +3,10 @@ channels:
 - bioconda
 dependencies:
 - python=3
+- pip
 - cutadapt
 - pandas
 - sra-tools
 - fastqc
-- star=2.7.3a
+- star==2.7.3a
 - entrez-direct
