@@ -1,12 +1,15 @@
 name: rnaseq-pipeline
 channels:
+- conda-forge
 - bioconda
 dependencies:
 - python=3
 - pip
 - cutadapt
 - pandas
-- sra-tools
+- luigi==2.8.13
+- multiqc==1.9
+- sra-tools==2.10.7
 - fastqc
 - star==2.7.3a
 - entrez-direct
