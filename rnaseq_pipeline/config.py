@@ -14,8 +14,6 @@ class core(luigi.Config):
     QUANTDIR = luigi.Parameter()
     BATCHINFODIR = luigi.Parameter()
 
-    PREFETCH_ARGS = luigi.Parameter()
-
     RSEM_DIR = luigi.Parameter()
 
     GEMMACLI = luigi.Parameter()
