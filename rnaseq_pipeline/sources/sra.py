@@ -65,6 +65,8 @@ class DumpSraRun(luigi.Task):
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,
                                    join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx))
+        if not self.complete():
+            raise RuntimeError(f'{repr(self)} was not completed after successful run.')
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
@@ -110,7 +112,9 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         else:
             run = df.sort_values('Run', ascending=False).iloc[0]
 
-        is_paired = run.LibraryLayout == 'PAIRED'
+        # layout is very often not annotated correctly and it is best to rely
+        # on the number of mates per spot
+        is_paired = (run.spots_with_mates > 0)
 
         yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired)
 
