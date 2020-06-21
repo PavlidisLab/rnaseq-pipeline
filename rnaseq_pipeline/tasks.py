@@ -16,7 +16,7 @@ import yaml
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 
 from .config import core
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
@@ -404,7 +404,7 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
             return super().complete()
 
 @no_retry
-class SubmitExperimentDataToGemma(TaskWithPriorityMixin, GemmaTask):
+class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, GemmaTask):
     """
     Submit an experiment to Gemma.
 
@@ -416,8 +416,6 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, GemmaTask):
     """
 
     subcommand = 'rnaseqDataAdd'
-
-    resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
 
     resources = {'submit_data_jobs': 1}
 
@@ -446,9 +444,6 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, GemmaTask):
 
     def output(self):
         return GemmaDatasetHasPlatform(self.experiment_id, self.get_platform_short_name())
-
-    def complete(self):
-        return (not self.resubmit) and super().complete()
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
 class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):
@@ -497,8 +492,7 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, Wrappe
 
 class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
-    resubmit = luigi.BoolParameter(default=False, positional=False, significant=False)
     def requires(self):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
-        return [SubmitExperimentToGemma(row.experiment_id, resubmit=self.resubmit, priority=row.get('priority', 0))
+        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]

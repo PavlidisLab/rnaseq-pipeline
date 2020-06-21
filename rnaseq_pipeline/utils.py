@@ -58,6 +58,25 @@ class TaskWithPriorityMixin:
     """Mixin that adds a --priority flag to a given task."""
     priority = luigi.IntParameter(default=0, positional=False, significant=False)
 
+class RerunnableTaskMixin:
+    """
+    Mixin for a task that can be rerun regardless of its completion status.
+    """
+    rerun = luigi.BoolParameter(default=False, positional=False, significant=False)
+
+    def __init__(self, *kwargs, **kwds):
+        super().__init__(*kwargs, **kwds)
+        self._has_rerun = False
+
+    def run(self):
+        try:
+            super().run()
+        finally:
+            self._has_rerun = True
+
+    def complete(self):
+        return (not self.rerun or self._has_rerun) and super().complete()
+
 class GemmaTask(ExternalProgramTask):
     """
     Base class for tasks that wraps Gemma CLI.
