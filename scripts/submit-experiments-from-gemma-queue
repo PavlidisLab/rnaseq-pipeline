@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+
+import argparse
+import os
+import os.path
+import pickle
+import sys
+
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+import luigi
+import pandas as pd
+
+from rnaseq_pipeline.tasks import SubmitExperimentToGemma
+
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+
+def main(argv):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--spreadsheet-id')
+    parser.add_argument('--sheet-name')
+    args = parser.parse_args(argv)
+
+    # authentication
+    creds = None
+    # The file token.pickle stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.pickle'):
+        with open('token.pickle', 'rb') as token:
+            creds = pickle.load(token)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.pickle', 'wb') as token:
+            pickle.dump(creds, token)
+
+    service = build('sheets', 'v4', credentials=creds)
+
+    # Retrieve the documents contents from the Docs service.
+    rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=args.spreadsheet_id, range=args.sheet_name).execute()
+
+    # this will fail if people add new columns
+    df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0]+list(range(5)))
+
+    # type adjustment
+    df['priority'] = df.priority.replace('', '0').astype('int')
+
+    tasks = [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
+            for _, row in df.iterrows() if row.get('priority', 0) > 0]
+
+    results = luigi.build(tasks, workers=100, detailed_summary=True)
+    print(results.summary_text)
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
