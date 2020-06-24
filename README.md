@@ -78,6 +78,8 @@ The output is organized as follow:
 
 ```
 pipeline-output/
+    genomes/<reference_id>/                 # Genomic references
+    references/<reference_id>/              # RSEM/STAR indexes
     data/<source>                           # FASTQs (note that GEO source uses SRA)
     data-qc/<experiment_id>/<sample_id>/    # FastQC reports
     references/<reference_id>               # STAR/RSEM index for your reference genome
