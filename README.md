@@ -9,6 +9,7 @@ This documentation is principally written to support the Pavlidis Lab, and we're
  - produces count and FPKM matrices suitable for analysis with R and Python
  - distributed via a workload manager thanks to [Bioluigi](https://github.com/pavlidisLab/bioluigi)
  - notify collaborators via [Slack API](https://api.slack.com/)
+ - submit experiments defined in a Google Spreadsheet
 
 ## Downloading and installing
 
