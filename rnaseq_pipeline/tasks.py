@@ -170,7 +170,7 @@ class PrepareReference(ScheduledExternalProgramTask):
     memory = 32
 
     def input(self):
-        genome_dir = join(cfg.GENOMES, self.reference_id)
+        genome_dir = join(cfg.OUTPUT_DIR, cfg.GENOMES, self.reference_id)
         gtf_files = glob(join(genome_dir, '*.gtf'))
         fasta_files = glob(join(genome_dir, '*.fa'))
         if len(gtf_files) != 1:
