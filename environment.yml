@@ -9,7 +9,7 @@ dependencies:
 - pandas
 - luigi==2.8.13
 - multiqc==1.9
-- sra-tools==2.10.7
+- sra-tools
 - fastqc
 - star==2.7.3a
 - entrez-direct
