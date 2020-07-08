@@ -59,20 +59,20 @@ flag to `rnaseq_pipeline.tasks` for you.
 
 The pipeline automatically generate the RSEM/STAR index and all that is
 required is to drop the GTF annotations file and the primary assembly FASTA
-files under `genome/<reference_id>` subdirectory.
+files under `pipeline-output/genome/<reference_id>` subdirectory.
 
 For example, you can setup a mouse reference from Ensembl by downloading the
-following files under `genomes/mm10_ensembl98`:
+following files under `pipeline-output/genomes/mm10_ensembl98`:
 
  - ftp://ftp.ensembl.org/pub/release-98/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
  - ftp://ftp.ensembl.org/pub/release-98/gtf/mus_musculus/Mus_musculus.GRCm38.98.gtf.gz
 
 ## Triggering tasks
 
-The top-level task you will likely want to use is `GenerateReportForExperiment`.
+The top-level task you will likely want to use is `rnaseq_pipeline.GenerateReportForExperiment`.
 
 ```bash
-./luigi-wrapper GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
+./luigi-wrapper rnaseq_pipeline.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
 ```
 
 The output is organized as follow:
@@ -88,6 +88,9 @@ pipeline-output/
     quantified/<reference_id>               # quantification matrices for isoforms and genes
     report/<reference_id>/<experiment_id>/  # MultiQC reports for reads and alignments
 ``` 
+
+You can adjust the pipeline output directory by setting `rnaseq_pipeline.core.pipeline_output`
+in the configuration.
 
 ## Setting up distributed computation
 
