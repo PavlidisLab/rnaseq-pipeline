@@ -70,12 +70,20 @@ class RerunnableTaskMixin:
 
     def run(self):
         try:
-            super().run()
+            return super().run()
         finally:
             self._has_rerun = True
 
     def complete(self):
         return (not self.rerun or self._has_rerun) and super().complete()
+
+class CheckAfterCompleteMixin:
+    """Ensures that a task is completed after a successful run()."""
+    def run(self):
+        ret = super().run()
+        if not self.complete():
+            raise RuntimeError('{} is not completed after successful run().'.format(repr(self)))
+        return ret
 
 class GemmaTask(ExternalProgramTask):
     """
@@ -120,9 +128,3 @@ class GemmaTask(ExternalProgramTask):
 
     def subcommand_args(self):
         return []
-
-    def run(self):
-        ret = super(GemmaTask, self).run()
-        if not self.complete():
-            raise RuntimeError('{} is not completed after successful run().'.format(repr(self)))
-        return ret

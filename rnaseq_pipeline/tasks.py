@@ -16,13 +16,13 @@ import yaml
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 
 from .config import core
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
-from .targets import GemmaDatasetHasPlatform, GemmaDatasetHasBatchInfo, RsemReference
+from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
 
 logger = logging.getLogger('luigi-interface')
 
@@ -349,7 +349,7 @@ class CountExperiment(TaskWithPriorityMixin, luigi.Task):
         return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
                 luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
 
-class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
+class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterCompleteMixin, GemmaTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
@@ -398,7 +398,7 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
             logger.info('Batch info is unusable for %s.', self.experiment_id)
 
     def output(self):
-        return GemmaDatasetHasBatchInfo(self.experiment_id)
+        return GemmaDatasetFactor(self.experiment_id, 'batch')
 
     def complete(self):
         if all(req.complete() for req in flatten(self.requires())):
@@ -408,7 +408,7 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
             return super().complete()
 
 @no_retry
-class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, GemmaTask):
+class SubmitExperimentDataToGemma(TaskWithPriorityMixin, CheckAfterCompleteMixin, RerunnableTaskMixin, GemmaTask):
     """
     Submit an experiment to Gemma.
 
@@ -448,7 +448,7 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
                 '-rpkm', fpkm.path]
 
     def output(self):
-        return GemmaDatasetHasPlatform(self.experiment_id, self.get_platform_short_name())
+        return GemmaDatasetPlatform(self.experiment_id, self.get_platform_short_name())
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
 class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):
