@@ -51,7 +51,7 @@ def main(argv):
     df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0]+list(range(5)))
 
     # type adjustment
-    df['priority'] = df.priority.replace('', '0').astype('int')
+    df['priority'] = df.priority.fillna(0).replace('', '0').astype('int')
 
     tasks = [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row['data']=='resubmit')
             for _, row in df.iterrows() if row.get('priority', 0) > 0]
