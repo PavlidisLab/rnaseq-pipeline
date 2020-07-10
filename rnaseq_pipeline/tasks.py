@@ -359,7 +359,6 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterComplete
     def is_batch_info_usable(self):
         batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
         batch = set()
-        usable = True
         for ix, row in batch_info_df.iterrows():
             try:
                 _, fastq_header, _ = row.fastq_header.split()
@@ -367,9 +366,8 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterComplete
                 batch.add((row.platform_id,) + illumina_header.get_batch_factor())
             except TypeError:
                 logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, fastq_header)
-                usable = False
                 batch.add(None)
-        return None not in batch and len(batch) > 1
+        return len(batch) > 1
 
     def requires(self):
         dataset_info = self.get_dataset_info()
