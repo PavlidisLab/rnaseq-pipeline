@@ -53,7 +53,7 @@ def main(argv):
     # type adjustment
     df['priority'] = df.priority.replace('', '0').astype('int')
 
-    tasks = [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
+    tasks = [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row['data']=='resubmit')
             for _, row in df.iterrows() if row.get('priority', 0) > 0]
 
     results = luigi.build(tasks, workers=100, detailed_summary=True)

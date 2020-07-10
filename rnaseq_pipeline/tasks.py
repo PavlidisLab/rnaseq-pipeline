@@ -495,5 +495,5 @@ class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
     def requires(self):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
-        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0))
+        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row.get('data')=='resubmit')
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]
