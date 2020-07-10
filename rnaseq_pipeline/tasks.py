@@ -165,7 +165,6 @@ class PrepareReference(ScheduledExternalProgramTask):
     taxon = luigi.Parameter(default='human')
     reference_id = luigi.Parameter(default='hg38_ncbi')
 
-    walltime = datetime.timedelta(hours=12)
     cpus = 16
     memory = 32
 
@@ -218,7 +217,6 @@ class AlignSample(ScheduledExternalProgramTask):
 
     scope = luigi.Parameter(default='genes', positional=False)
 
-    walltime = datetime.timedelta(days=1)
     cpus = 8
     memory = 32
 
