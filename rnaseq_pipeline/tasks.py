@@ -216,6 +216,8 @@ class AlignSample(ScheduledExternalProgramTask):
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
+    scope = luigi.Parameter(default='genes', positional=False)
+
     walltime = datetime.timedelta(days=1)
     cpus = 8
     memory = 32
@@ -265,7 +267,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
-        return luigi.LocalTarget(join(destdir, '{}.genes.results'.format(self.sample_id)))
+        return luigi.LocalTarget(join(destdir, f'{self.sample_id}.{self.scope}.results'))
 
 class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
@@ -278,6 +280,7 @@ class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, Dynamic
     source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
     taxon = luigi.Parameter(default='human', positional=False)
     reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
+    scope = luigi.Parameter(default='genes', positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
@@ -288,7 +291,8 @@ class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, Dynamic
                            dst.sample_id,
                            source=self.source,
                            taxon=self.taxon,
-                           reference_id=self.reference_id)
+                           reference_id=self.reference_id,
+                           scope=self.scope)
                for dst in download_sample_tasks]
 
 @no_retry
@@ -332,9 +336,9 @@ class CountExperiment(TaskWithPriorityMixin, luigi.Task):
     def run(self):
         # FIXME: find a better way to obtain the sample identifier
         # Each DownloadSample-like tasks have a sample_id property! Use that!
-        keys = [os.path.basename(gene.path).replace('.genes.results', '') for gene in self.input()]
-        counts_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).expected_count for gene in self.input()], keys=keys, axis=1)
-        fpkm_df = pd.concat([pd.read_csv(gene.path, sep='\t', index_col=0).FPKM for gene in self.input()], keys=keys, axis=1)
+        keys = [os.path.basename(f.path).replace(f'.{self.scope}.results', '') for f in self.input()]
+        counts_df = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).expected_count for f in self.input()], keys=keys, axis=1)
+        fpkm_df = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).FPKM for f in self.input()], keys=keys, axis=1)
 
         with self.output()[0].open('w') as counts_out, self.output()[1].open('w') as fpkm_out:
             counts_df.to_csv(counts_out, sep='\t')
@@ -342,8 +346,8 @@ class CountExperiment(TaskWithPriorityMixin, luigi.Task):
 
     def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, self.reference_id)
-        return [luigi.LocalTarget(join(destdir, '{}_counts.genes'.format(self.experiment_id))),
-                luigi.LocalTarget(join(destdir, '{}_fpkm.genes'.format(self.experiment_id)))]
+        return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
+                luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
 
 class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
     """
@@ -427,7 +431,8 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
         yield CountExperiment(self.experiment_id,
                               taxon=taxon,
                               reference_id=self.get_reference_id_for_taxon(taxon),
-                              source='gemma')
+                              source='gemma',
+                              scope='genes')
 
         # FIXME: this does not always trigger the dependencies
         yield GenerateReportForExperiment(self.experiment_id,
