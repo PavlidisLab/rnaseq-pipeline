@@ -104,3 +104,15 @@ scheduler=slurm
 scheduler_extra_args=[]
 ```
 
+# Web viewer
+
+The pipeline comes with a Web viewer that provides convenient endpoints for
+consulting QC reports.
+
+```bash
+gunicorn rnaseq_pipeline.viewer:app
+```
+
+Endpoint                  Description
+--------                  -----------
+`/report/<experiment_id>` Expose the MultiQC report
