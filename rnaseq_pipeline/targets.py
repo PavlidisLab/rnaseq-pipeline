@@ -1,5 +1,5 @@
 import os
-from os.path import join
+from os.path import join, exists
 
 import luigi
 import requests
@@ -9,13 +9,14 @@ class RsemReference(luigi.Target):
     """
     Represents the target of rsem-prepare-reference script.
     """
-    def __init__(self, path, taxon):
-        self.path = path
+    def __init__(self, prefix, taxon):
+        self.prefix = prefix
         self.taxon = taxon
 
     def exists(self):
         exts = ['grp', 'ti', 'seq', 'chrlist']
-        return all(os.path.exists(os.path.join(self.path, '{}_0.{}'.format(self.taxon, ext))) for ext in exts)
+        return all(exists(join(self.prefix, '{}_0.{}'.format(self.taxon, ext)))
+                for ext in exts)
 
 def _query_gemma_api(endpoint):
     basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))

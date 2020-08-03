@@ -363,26 +363,21 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterComplete
             try:
                 _, fastq_header, _ = row.fastq_header.split()
                 illumina_header = IlluminaFastqHeader.parse(fastq_header)
-                batch.add((row.platform_id,) + illumina_header.get_batch_factor())
+                batch.add((row.platform_id,) + illumina_header.batch_factor)
             except TypeError:
                 logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, fastq_header)
                 batch.add(None)
         return len(batch) > 1
 
     def requires(self):
-        dataset_info = self.get_dataset_info()
-
-        external_database = dataset_info['externalDatabase']
-        accession = dataset_info['accession']
-
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
-        if external_database == 'GEO':
-            return ExtractGeoSeriesBatchInfo(accession)
-        elif external_database == 'SRA':
-            return ExtractSraProjectBatchInfo(accession)
+        if self.external_database == 'GEO':
+            return ExtractGeoSeriesBatchInfo(self.accession)
+        elif self.external_database == 'SRA':
+            return ExtractSraProjectBatchInfo(self.accession)
         else:
-            raise NotImplementedError('Extracting batch information from {} is not implemented.'.format(dataset_info['externalDatabase']))
+            raise NotImplementedError('Extracting batch information from {} is not implemented.'.format(self.external_database))
 
     def subcommand_args(self):
         return ['--force', 'yes', '-f', self.input().path]
@@ -420,31 +415,27 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, CheckAfterCompleteMixin
     resources = {'submit_data_jobs': 1}
 
     def requires(self):
-        dataset_info = self.get_dataset_info()
-
-        taxon = dataset_info['taxon']
-
         yield CountExperiment(self.experiment_id,
-                              taxon=taxon,
-                              reference_id=self.get_reference_id_for_taxon(taxon),
+                              taxon=self.taxon,
+                              reference_id=self.reference_id,
                               source='gemma',
                               scope='genes')
 
         # FIXME: this does not always trigger the dependencies
         yield GenerateReportForExperiment(self.experiment_id,
-                                          taxon=taxon,
-                                          reference_id=self.get_reference_id_for_taxon(taxon),
+                                          taxon=self.taxon,
+                                          reference_id=self.reference_id,
                                           source='gemma')
 
     def subcommand_args(self):
         (count, fpkm), _ = self.input()
         # TODO: submit the batch information and the MultiQC report
-        return ['-a', self.get_platform_short_name(),
+        return ['-a', self.platform_short_name,
                 '-count', count.path,
                 '-rpkm', fpkm.path]
 
     def output(self):
-        return GemmaDatasetPlatform(self.experiment_id, self.get_platform_short_name())
+        return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
 class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):

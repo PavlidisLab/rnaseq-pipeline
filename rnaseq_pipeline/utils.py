@@ -1,6 +1,7 @@
 from collections import namedtuple
 import logging
 import os
+from os.path import join
 
 import luigi
 from luigi.task import getpaths, flatten
@@ -34,7 +35,8 @@ class IlluminaFastqHeader:
         self.x = x
         self.y = y
 
-    def get_batch_factor(self):
+    @property
+    def batch_factor(self):
         if self.flowcell is None:
             return self.device, self.flowcell_lane
         return self.device, self.flowcell, self.flowcell_lane
@@ -93,26 +95,37 @@ class GemmaTask(ExternalProgramTask):
 
     subcommand = None
 
-    @staticmethod
-    def get_reference_id_for_taxon(taxon):
-        try:
-            return {'human': 'hg38_ncbi', 'mouse': 'mm10_ncbi', 'rat': 'm6_ncbi'}[taxon]
-        except KeyError:
-            raise ValueError('Unsupported Gemma taxon {}.'.format(taxon))
-
-    def get_dataset_info(self):
+    def __init__(self, *kwargs, **kwds):
+        super().__init__(*kwargs, **kwds)
         basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
-        res = requests.get('https://gemma.msl.ubc.ca/rest/v2/datasets/{}'.format(self.experiment_id), auth=basic_auth)
+        res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2/datasets', self.experiment_id), auth=basic_auth)
         res.raise_for_status()
         if not res.json()['data']:
             raise RuntimeError('Could not retrieve Gemma dataset with short name {}.'.format(self.experiment_id))
-        return res.json()['data'][0]
+        self._dataset_info = res.json()['data'][0]
 
-    def get_taxon(self):
-        return self.get_dataset_info()['taxon']
+    @property
+    def accession(self):
+        return self._dataset_info['accession']
 
-    def get_platform_short_name(self):
-        return 'Generic_{}_ncbiIds'.format(self.get_taxon())
+    @property
+    def external_database(self):
+        return self._dataset_info['externalDatabase']
+
+    @property
+    def taxon(self):
+        return self._dataset_info['taxon']
+
+    @property
+    def reference_id(self):
+        try:
+            return {'human': 'hg38_ncbi', 'mouse': 'mm10_ncbi', 'rat': 'm6_ncbi'}[self.taxon]
+        except KeyError:
+            raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
+
+    @property
+    def platform_short_name(self):
+        return f'Generic_{self.taxon}_ncbiIds'
 
     def program_environment(self):
         return cfg.asenv(['GEMMA_LIB', 'JAVA_HOME', 'JAVA_OPTS'])
