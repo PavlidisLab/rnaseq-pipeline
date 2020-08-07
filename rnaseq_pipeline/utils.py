@@ -105,6 +105,10 @@ class GemmaTask(ExternalProgramTask):
         self._dataset_info = res.json()['data'][0]
 
     @property
+    def dataset_short_name(self):
+        return self._dataset_info['shortName']
+
+    @property
     def accession(self):
         return self._dataset_info['accession']
 
