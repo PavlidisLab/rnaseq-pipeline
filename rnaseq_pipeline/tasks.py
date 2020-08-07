@@ -228,6 +228,9 @@ class AlignSample(ScheduledExternalProgramTask):
         self.output().makedirs()
         return super().run()
 
+    def _get_output_prefix(self):
+        return join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id, self.sample_id)
+
     def program_args(self):
         args = [join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
 
@@ -256,16 +259,15 @@ class AlignSample(ScheduledExternalProgramTask):
             raise NotImplementedError('Alignment of more than two input FASTQs is not supported.')
 
         # reference for alignments and quantifications
-        args.append(join(reference.path, '{}_0'.format(self.taxon)))
+        args.append(join(reference.prefix, '{}_0'.format(self.taxon)))
 
         # output prefix
-        args.append(join(os.path.dirname(self.output().path), self.sample_id))
+        args.append(self._get_output_prefix())
 
         return args
 
     def output(self):
-        destdir = join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)
-        return luigi.LocalTarget(join(destdir, f'{self.sample_id}.{self.scope}.results'))
+        return luigi.LocalTarget(self._get_output_prefix() + f'.{self.scope}.results')
 
 class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
