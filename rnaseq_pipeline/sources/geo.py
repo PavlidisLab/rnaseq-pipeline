@@ -14,11 +14,11 @@ import luigi
 from luigi.util import requires
 import requests
 
-from ..config import core
+from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from .sra import DownloadSraExperiment
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 logger = logging.getLogger('luigi-interface')
 

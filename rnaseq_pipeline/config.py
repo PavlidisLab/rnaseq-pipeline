@@ -1,7 +1,9 @@
 import luigi
 
 # see luigi.cfg for details
-class core(luigi.Config):
+class rnaseq_pipeline(luigi.Config):
+    task_namespace = ''
+
     GENOMES = luigi.Parameter()
 
     OUTPUT_DIR = luigi.Parameter()

@@ -1,3 +1,3 @@
 import luigi
 
-luigi.namespace('rnaseq_pipeline', scope=__name__)
+luigi.auto_namespace(scope=__name__)

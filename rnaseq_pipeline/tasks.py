@@ -15,8 +15,8 @@ from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 import yaml
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 
-from .config import core
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin
+from .config import rnaseq_pipeline
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin, remove_task_output
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
@@ -26,7 +26,7 @@ from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
 
 logger = logging.getLogger('luigi-interface')
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 class DownloadSample(TaskWithOutputMixin, WrapperTask):
     """
@@ -128,9 +128,6 @@ class TrimExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, DynamicW
 class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
-
-    FIXME: this task triggers trimming of downloaded FASTQs even if the output
-    is already generated.
     """
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
@@ -304,15 +301,6 @@ class GenerateReportForExperiment(TaskWithPriorityMixin, luigi.Task):
     The report include collected FastQC reports and RSEM/STAR outputs.
     """
 
-    def on_success(self):
-        trimmed_fastqs, _, _ = self.input()
-        logger.info('Cleaning trimmed reads from %s...', self.experiment_id)
-        for out in flatten(trimmed_fastqs):
-            if out.exists():
-                logger.info('Removing trimmed FASTQ %s...', out.path)
-                out.remove()
-        return super().on_success()
-
     def run(self):
         search_dirs = [
             join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
@@ -467,11 +455,8 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, Wrappe
 
     def run(self):
         # cleanup download data
-        logger.info('Cleaning up %s...', self.experiment_id)
-        for out in self._targets_to_remove():
-            if out.exists():
-                logger.info('Removing %s for experiment %s...', out.path, self.experiment_id)
-                out.remove()
+        remove_task_output(DownloadExperiment(self.experiment_id, source='gemma'))
+        remove_task_output(TrimExperiment(self.experiment_id, source='gemma'))
 
     def complete(self):
         """

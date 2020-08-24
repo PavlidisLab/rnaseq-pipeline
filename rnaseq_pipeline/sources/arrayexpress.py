@@ -7,9 +7,9 @@ from luigi.task import WrapperTask
 import pandas as pd
 from bioluigi.tasks.utils import TaskWithOutputMixin
 
-from ..config import core
+from ..config import rnaseq_pipeline
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 class DownloadArrayExpressFastq(luigi.Task):
     sample_id = luigi.Parameter()

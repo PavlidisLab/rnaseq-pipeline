@@ -4,14 +4,14 @@ import os
 from os.path import join
 
 import luigi
-from luigi.task import getpaths, flatten
+from luigi.task import getpaths, flatten, flatten_output
 from luigi.contrib.external_program import ExternalProgramTask
 import requests
 from requests.auth import HTTPBasicAuth
 
-from .config import core
+from .config import rnaseq_pipeline
 
-cfg = core()
+cfg = rnaseq_pipeline()
 logger = logging.getLogger('luigi-interface')
 
 class IlluminaFastqHeader:
@@ -145,3 +145,13 @@ class GemmaTask(ExternalProgramTask):
 
     def subcommand_args(self):
         return []
+
+def remove_task_output(task):
+    logger.info('Cleaning up %s...', repr(task))
+    for out in flatten_output(task):
+        if hasattr(out, 'remove') and out.exists():
+            try:
+                out.remove()
+                logger.info('Removed %s.', repr(out))
+            except:
+                logger.exception('Failed to remove %s.', repr(out))

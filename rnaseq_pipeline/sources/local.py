@@ -5,9 +5,9 @@ from os.path import join
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 
-from ..config import core
+from ..config import rnaseq_pipeline
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 class DownloadLocalSample(luigi.Task):
     """
