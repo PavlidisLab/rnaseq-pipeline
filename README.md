@@ -41,8 +41,8 @@ python setup.py install # use develop instead of install of you want to edit the
 Create a copy of `the example.luigi.cfg` file to `luigi.cfg`. It should work
 as-is, but you might want to change the output location and the resources.
 
-First, you need to start Luigi scheduler daemon. You can see the progress of your tasks
-at http://localhost:8082/.
+First, you need to start Luigi scheduler daemon. You can see the progress of
+your tasks at http://localhost:8082/.
 
 ```bash
 luigid
@@ -69,10 +69,10 @@ following files under `pipeline-output/genomes/mm10_ensembl98`:
 
 ## Triggering tasks
 
-The top-level task you will likely want to use is `rnaseq_pipeline.GenerateReportForExperiment`.
+The top-level task you will likely want to use is `rnaseq_pipeline.tasks.GenerateReportForExperiment`.
 
 ```bash
-./luigi-wrapper rnaseq_pipeline.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
+./luigi-wrapper rnaseq_pipeline.tasks.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
 ```
 
 The output is organized as follow:
@@ -83,11 +83,10 @@ pipeline-output/
     references/<reference_id>/              # RSEM/STAR indexes
     data/<source>                           # FASTQs (note that GEO source uses SRA)
     data-qc/<experiment_id>/<sample_id>/    # FastQC reports
-    references/<reference_id>               # STAR/RSEM index for your reference genome
     aligned/<reference_id>/<experiment_id>/ # alignments and quantification results
     quantified/<reference_id>               # quantification matrices for isoforms and genes
     report/<reference_id>/<experiment_id>/  # MultiQC reports for reads and alignments
-``` 
+```
 
 You can adjust the pipeline output directory by setting `rnaseq_pipeline.core.pipeline_output`
 in the configuration.
@@ -113,6 +112,3 @@ consulting QC reports.
 gunicorn rnaseq_pipeline.viewer:app
 ```
 
-Endpoint | Description
--------- | -----------
-`/report/<experiment_id>` | Expose the MultiQC report of `experiment_id`
