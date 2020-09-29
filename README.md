@@ -10,6 +10,7 @@ This documentation is principally written to support the Pavlidis Lab, and we're
  - distributed via a workload manager thanks to [Bioluigi](https://github.com/pavlidisLab/bioluigi)
  - notify collaborators via [Slack API](https://api.slack.com/)
  - submit experiments defined in a Google Spreadsheet
+ - web viewer to preview QC reports and download quantifications
 
 ## Downloading and installing
 

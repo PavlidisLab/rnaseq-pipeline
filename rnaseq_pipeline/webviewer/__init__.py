@@ -4,15 +4,19 @@ import luigi
 from flask import Flask, send_file, render_template, url_for, request, abort
 import pandas as pd
 
-from rnaseq_pipeline.config import core
+from rnaseq_pipeline.config import rnaseq_pipeline
 from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, ExtractGeoSeriesBatchInfo, SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma
 from rnaseq_pipeline.utils import GemmaTask
 
 app = Flask('rnaseq_pipeline.webviewer')
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 references = ['hg38_ncbi', 'mm10_ncbi', 'm6_ncbi']
+
+@app.errorhandler(400)
+def bad_request(e):
+    return render_template('400.html', e=e), 400
 
 @app.errorhandler(404)
 def not_found(e):
@@ -47,22 +51,30 @@ def experiment_batch_info(experiment_id):
     return send_file(batch_info_path, as_attachment=True, attachment_filename=basename(batch_info_path))
 
 @app.route('/experiment/<experiment_id>/quantifications/<mode>')
-def experiment_quantifications(experiment_id, mode):
-    scope = request.args['scope']
-    gemma_task = GemmaTask(experiment_id)
-    count_experiment_task = CountExperiment(experiment_id, reference_id=gemma_task.reference_id)
+@app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/quantifications/<mode>')
+def experiment_quantifications(experiment_id, mode, reference_id=None):
+    if reference_id is None:
+        gemma_task = GemmaTask(experiment_id, reference_id=None)
+        reference_id = gemma_task.reference_id
+    try:
+        mode_ix = ['counts', 'fpkm'].index(mode)
+    except ValueError:
+        abort(400, f'Unknown mode {mode} for quantifications, try either counts or fpkm.')
+    count_experiment_task = CountExperiment(experiment_id, reference_id=reference_id)
     if not count_experiment_task.complete():
-        abort(404, f'No quantifications available for {experiment_id}.')
-    mode_ix = ['counts', 'fpkm'].index(mode)
+        abort(404, f'No quantifications available for {experiment_id} in {reference_id}.')
     file_path = count_experiment_task.output()[mode_ix].path
     return send_file(file_path, as_attachment=True, attachment_filename=basename(file_path))
 
 @app.route('/experiment/<experiment_id>/report')
-def experiment_report(experiment_id):
-    gemma_task = GemmaTask(experiment_id)
-    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=gemma_task.reference_id)
+@app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/report')
+def experiment_report(experiment_id, reference_id=None):
+    if reference_id is None:
+        gemma_task = GemmaTask(experiment_id, reference_id=None)
+        reference_id = gemma_task.reference_id
+    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id)
     if not generate_report_task.complete():
-        abort(404, f'No report available for {experiment_id}.')
+        abort(404, f'No report available for {experiment_id} in {reference_id}.')
     return send_file(generate_report_task.output().path)
 
 if __name__ == '__main__':
