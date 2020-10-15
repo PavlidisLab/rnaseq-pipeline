@@ -33,6 +33,15 @@ conda env setup -f environment.yml
 conda activate rnaseq-pipeline
 ```
 
+Build the shared memory cleanup tool:
+
+```
+make -C scripts
+```
+
+**Note:** We remove unused shared memory objects allocated by STAR in Slurm task prolog and 
+epilog scripts.
+
 Install the pipeline Python package in the Conda environment:
 
 ```bash
