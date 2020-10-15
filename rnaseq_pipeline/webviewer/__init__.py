@@ -54,7 +54,7 @@ def experiment_batch_info(experiment_id):
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/quantifications/<mode>')
 def experiment_quantifications(experiment_id, mode, reference_id=None):
     if reference_id is None:
-        gemma_task = GemmaTask(experiment_id, reference_id=None)
+        gemma_task = GemmaTask(experiment_id)
         reference_id = gemma_task.reference_id
     try:
         mode_ix = ['counts', 'fpkm'].index(mode)
@@ -70,7 +70,7 @@ def experiment_quantifications(experiment_id, mode, reference_id=None):
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/report')
 def experiment_report(experiment_id, reference_id=None):
     if reference_id is None:
-        gemma_task = GemmaTask(experiment_id, reference_id=None)
+        gemma_task = GemmaTask(experiment_id)
         reference_id = gemma_task.reference_id
     generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id)
     if not generate_report_task.complete():
