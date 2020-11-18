@@ -23,6 +23,7 @@ from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
+from .platforms import BgiPlatform, IlluminaPlatform
 
 logger = logging.getLogger('luigi-interface')
 
@@ -85,24 +86,31 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Trim Illumina Universal Adapter from single end and paired reads.
     """
 
+    platform = luigi.Parameter(default='illumina', positional=False)
+    instrument = luigi.Parameter(default='generic', positional=False)
+
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
+        if self.platform == 'bgi':
+            platform = BgiPlatform(instrument=self.instrument)
+        elif self.platform == 'illumina':
+            platform = IlluminaPlatform(instrument=self.instrument)
+        else:
+            raise NotImplementedError(f'Platform {self.platform} is not supported')
         if len(self.input()) == 1:
             r1, = self.input()
-            yield cutadapt.TrimReads(
+            yield platform.get_trim_single_end_reads_task(
                     r1.path,
                     join(destdir, os.path.basename(r1.path)),
-                    adapter_3prime='AGATCGGAAGAGC',
                     minimum_length=25,
                     cpus=4)
         elif len(self.input()) == 2:
             r1, r2 = self.input()
-            yield cutadapt.TrimPairedReads(
+            yield platform.get_trim_paired_reads_task(
                     r1.path, r2.path,
                     join(destdir, os.path.basename(r1.path)),
                     join(destdir, os.path.basename(r2.path)),
-                    adapter_3prime='AGATCGGAAGAGC',
                     minimum_length=25,
                     cpus=4)
         else:
