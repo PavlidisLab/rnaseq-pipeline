@@ -1,4 +1,14 @@
-from rnaseq_pipeline.platforms import BgiPlatform, IlluminaPlatform
+import pytest
+
+from rnaseq_pipeline.platforms import Platform, BgiPlatform, IlluminaPlatform
+
+def test_platform_retrieval_by_name():
+    assert Platform.from_name('illumina') is IlluminaPlatform
+    assert Platform.from_name('bgi') is BgiPlatform
+
+def test_platform_retrieval_by_name_when_unknown():
+    with pytest.raises(KeyError):
+        Platform.from_name('unk')
 
 def test_bgi_platform_trim_single_end_reads():
     task = BgiPlatform('BGISEQ-500').get_trim_single_end_reads_task('r1', 'r1_dest')

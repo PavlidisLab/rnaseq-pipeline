@@ -2,6 +2,17 @@ from abc import abstractmethod
 from bioluigi.tasks import cutadapt
 
 class Platform:
+    """
+    :param name: Platform common name
+    :param instruments: Supported instruments by the platform
+    """
+    name = None
+    instruments = []
+
+    @classmethod
+    def from_name(cls, name):
+        return {c.name: c for c in cls.__subclasses__()}[name]
+
     def __init__(self, instrument):
         self.instrument = instrument
 
@@ -18,6 +29,8 @@ class BgiPlatform(Platform):
     # from BGI mentioning to the following sequences:
     FORWARD_FILTER = 'AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA'
     REVERSE_FILTER = 'AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG'
+
+    name = 'bgi'
 
     def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
         return cutadapt.TrimReads(
@@ -37,6 +50,8 @@ class BgiPlatform(Platform):
 
 class IlluminaPlatform(Platform):
     UNIVERSAL_ADAPTER = 'AGATCGGAAGAGC'
+
+    name = 'illumina'
 
     @staticmethod
     def get_trim_single_end_reads_task(r1, dest, **kwargs):

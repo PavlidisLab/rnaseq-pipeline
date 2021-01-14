@@ -92,11 +92,9 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
-        if self.platform == 'bgi':
-            platform = BgiPlatform(instrument=self.instrument)
-        elif self.platform == 'illumina':
-            platform = IlluminaPlatform(instrument=self.instrument)
-        else:
+        try:
+            platform = Platform.from_name(self.platform)
+        except KeyError:
             raise NotImplementedError(f'Platform {self.platform} is not supported')
         if len(self.input()) == 1:
             r1, = self.input()
