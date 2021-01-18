@@ -1,7 +1,7 @@
-from rnaseq_pipeline.config import core
+from rnaseq_pipeline.config import rnaseq_pipeline
 from rnaseq_pipeline.tasks import *
 
-cfg = core()
+cfg = rnaseq_pipeline()
 
 def test_align_sample_task():
     task = AlignSample('GSE', 'GSM', reference_id='hg38_ncbi', scope='genes')
