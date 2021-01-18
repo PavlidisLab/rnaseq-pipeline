@@ -47,7 +47,7 @@ class PrefetchSraRun(luigi.Task):
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
-                                  max_size=50,
+                                  max_size=60,
                                   scheduler_partition='Wormhole')
 
     def output(self):
