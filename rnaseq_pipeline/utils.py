@@ -117,6 +117,10 @@ class GemmaTask(ExternalProgramTask):
         return self._dataset_info['externalDatabase']
 
     @property
+    def external_uri(self):
+        return self._dataset_info['externalUri']
+
+    @property
     def taxon(self):
         return self._dataset_info['taxon']
 

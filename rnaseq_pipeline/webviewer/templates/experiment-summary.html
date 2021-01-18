@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ experiment_id }}">
+        <title>{{ experiment_id }}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2>{{ experiment_id }}</h2>
+            <p>
+            {% if submit_data_task.complete() %}
+            <span class="badge badge-success">data submitted</span>
+            {% endif %}
+            {% if submit_batch_info_task.complete() %}
+            <span class="badge badge-success">batch info submitted</span>
+            {% endif %}
+            </p>
+            <dl class="row">
+                <dt class="col-sm-2">Gemma Dataset:</dt>
+                <dd class="col-sm-10"><a href="https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={{ experiment_id }}">{{ submit_data_task.dataset_short_name }}</a></dd>
+
+                <dt class="col-sm-2">External Dataset:</dt>
+                <dd class="col-sm-10"><a href="{{ submit_data_task.external_uri }}">{{ submit_data_task.accession }} on {{ submit_data_task.external_database }}</a></dd>
+
+                <dt class="col-sm-2">Taxon:</dt>
+                <dd class="col-sm-10">{{ submit_data_task.taxon }}</dd>
+
+                <dt class="col-sm-2">Platform:</dt>
+                <dd class="col-sm-10"><a href="https://gemma.msl.ubc.ca/arrays/showArrayDesign.html?shortName={{ submit_data_task.platform_short_name }}">{{ submit_data_task.platform_short_name }}</a></dd>
+
+                <dt class="col-sm-2">Reference:</dt>
+                <dd class="col-sm-10">{{ submit_data_task.reference_id }}</dd>
+
+                <dt class="col-sm-2">Quality Report:</dt>
+                <dd class="col-sm-10"><a href="{{ url_for('experiment_report', experiment_id=experiment_id) }}">MultiQC Report</a></dd>
+            </dl>
+            <h3>Quantification Matrices</h3>
+            <dl class="row">
+                <dt class="col-sm-2">Genes</dt>
+                <dd class="col-sm-10">
+                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, mode='counts', scope='genes') }}">Counts</a>,
+                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, mode='fpkm', scope='genes') }}">FPKM</a>
+                </dd>
+                <dt class="col-sm-2">Isoforms</dt>
+                <dd class="col-sm-10">Nothing, yet.</dd>
+            </dl>
+            {% if batch_info is not none %}
+            <h3>Batch Info</h3>
+            <p>
+            <a href="{{ url_for('experiment_batch_info', experiment_id=experiment_id) }}">Download</a>
+            </p>
+            {{ batch_info.to_html(classes='table table-sm', justify='unset', border=0, index=False, render_links=True) | safe }}
+            {% endif %}
+        </div>
+    </body>
+</html>
