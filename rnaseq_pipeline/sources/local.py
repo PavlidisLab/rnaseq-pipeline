@@ -17,6 +17,10 @@ class DownloadLocalSample(luigi.Task):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
+    @property
+    def platform(self):
+        return IlluminaPlatform('HiSeq 2500')
+
     def output(self):
         # we sort to make sure that pair ends are in correct order
         return [luigi.LocalTarget(f) for f in sorted(glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, self.sample_id, '*.fastq.gz')))]

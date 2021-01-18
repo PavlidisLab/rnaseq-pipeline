@@ -8,6 +8,7 @@ import pandas as pd
 from bioluigi.tasks.utils import TaskWithOutputMixin
 
 from ..config import rnaseq_pipeline
+from ..platforms import IlluminaPlatform
 
 cfg = rnaseq_pipeline()
 
@@ -30,6 +31,10 @@ class DownloadArrayExpressSample(TaskWithOutputMixin, WrapperTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
     fastq_urls = luigi.ListParameter()
+
+    @property
+    def platform(self):
+        return IlluminaPlatform('HiSeq 2500')
 
     def requires(self):
         return [DownloadArrayExpressFastq(self.sample_id, fastq_url) for fastq_url in self.fastq_urls]

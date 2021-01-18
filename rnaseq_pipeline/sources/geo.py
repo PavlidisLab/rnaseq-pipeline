@@ -16,6 +16,7 @@ import requests
 
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
+from ..platforms import Platform
 from .sra import DownloadSraExperiment
 
 cfg = rnaseq_pipeline()
@@ -48,6 +49,14 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     @property
     def sample_id(self):
         return self.gsm
+
+    @property
+    def platform(self):
+        samples_info = collect_geo_samples_info(self.input().path)
+        if not self.gsm in samples_info:
+            raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
+        geo_platform, _ = samples_info[self.gsm]
+        return Platform.from_geo_platform(geo_platform)
 
     def run(self):
         samples_info = collect_geo_samples_info(self.input().path)

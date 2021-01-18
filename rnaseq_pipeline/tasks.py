@@ -23,7 +23,6 @@ from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
-from .platforms import BgiPlatform, IlluminaPlatform
 
 logger = logging.getLogger('luigi-interface')
 
@@ -86,16 +85,11 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Trim Illumina Universal Adapter from single end and paired reads.
     """
 
-    platform = luigi.Parameter(default='illumina', positional=False)
-    instrument = luigi.Parameter(default='generic', positional=False)
-
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
-        try:
-            platform = Platform.from_name(self.platform)
-        except KeyError:
-            raise NotImplementedError(f'Platform {self.platform} is not supported')
+        download_sample_task = self.requires()
+        platform = download_sample_task.requires().platform
         if len(self.input()) == 1:
             r1, = self.input()
             yield platform.get_trim_single_end_reads_task(

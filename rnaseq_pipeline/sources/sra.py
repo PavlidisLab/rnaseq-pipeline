@@ -109,6 +109,10 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def sample_id(self):
         return self.srx
 
+    @property
+    def platform(self):
+        return IlluminaPlatform('HiSeq 2500')
+
     def run(self):
         # this will raise an error of no FASTQs are related
         df = pd.read_csv(self.input().path)
