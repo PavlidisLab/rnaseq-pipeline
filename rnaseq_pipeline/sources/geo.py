@@ -8,6 +8,10 @@ from subprocess import Popen
 import os
 from os.path import join
 from urllib.parse import urlparse, parse_qs
+from functools import lru_cache
+import re
+import requests
+import xml.etree.ElementTree
 
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
@@ -16,12 +20,33 @@ import requests
 
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
-from ..platforms import Platform
+from ..platforms import Platform, BgiPlatform, IlluminaPlatform
 from .sra import DownloadSraExperiment
 
 cfg = rnaseq_pipeline()
 
 logger = logging.getLogger('luigi-interface')
+
+ns = {'miniml': 'http://www.ncbi.nlm.nih.gov/geo/info/MINiML'}
+
+@lru_cache()
+def retrieve_geo_platform_miniml(geo_platform):
+    """Retrieve a GEO platform MINiML metadata"""
+    res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=geo_platform, form='xml'))
+    res.raise_for_status()
+    return xml.etree.ElementTree.fromstring(res.text).find('miniml:Platform', ns)
+
+def match_geo_platform(geo_platform):
+    """Infer the type of platform given a GEO platform"""
+    root = retrieve_geo_platform_miniml(geo_platform)
+    geo_platform_title = root.find('miniml:Title', ns).text
+    illumina_match = re.match(r'Illumina (.+) \(.+\)', geo_platform_title)
+    if geo_platform_title.startswith('BGISEQ'):
+        return BgiPlatform(geo_platform_title.split(' ')[0])
+    elif illumina_match:
+        return IlluminaPlatform(illumina_match.group(1))
+    else:
+        raise NotImplementedError(f'Unsupported platform {geo_platform}.')
 
 class DownloadGeoSampleMetadata(luigi.Task):
     """
@@ -56,7 +81,7 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         if not self.gsm in samples_info:
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
         geo_platform, _ = samples_info[self.gsm]
-        return Platform.from_geo_platform(geo_platform)
+        return match_geo_platform(geo_platform)
 
     def run(self):
         samples_info = collect_geo_samples_info(self.input().path)
