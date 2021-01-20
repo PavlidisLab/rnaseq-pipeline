@@ -6,8 +6,6 @@ dependencies:
 - python=3
 - pip
 - cutadapt
-- pandas
-- luigi==2.8.13
 - multiqc==1.9
 - sra-tools
 - fastqc
