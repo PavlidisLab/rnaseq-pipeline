@@ -22,7 +22,7 @@ from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesB
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin, remove_task_output
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, remove_task_output
 
 logger = logging.getLogger('luigi-interface')
 
@@ -337,7 +337,7 @@ class CountExperiment(TaskWithPriorityMixin, luigi.Task):
         return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
                 luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
 
-class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterCompleteMixin, GemmaTask):
+class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
@@ -389,7 +389,7 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, CheckAfterComplete
             return super().complete()
 
 @no_retry
-class SubmitExperimentDataToGemma(TaskWithPriorityMixin, CheckAfterCompleteMixin, RerunnableTaskMixin, GemmaTask):
+class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, GemmaTask):
     """
     Submit an experiment to Gemma.
 
