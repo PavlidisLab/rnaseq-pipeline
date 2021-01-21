@@ -55,7 +55,7 @@ def match_geo_platform(geo_platform):
     if illumina_hiseq_x_match:
         return IlluminaPlatform(illumina_hiseq_x_match.group(1))
 
-    raise NotImplementedError(f'Unsupported platform {geo_platform}.')
+    raise NotImplementedError(f'Unsupported GEO platform: {geo_platform_title} ({geo_platform}).')
 
 class DownloadGeoSampleMetadata(luigi.Task):
     """
