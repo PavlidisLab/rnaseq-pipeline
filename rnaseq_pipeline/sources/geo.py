@@ -40,13 +40,22 @@ def match_geo_platform(geo_platform):
     """Infer the type of platform given a GEO platform"""
     root = retrieve_geo_platform_miniml(geo_platform)
     geo_platform_title = root.find('miniml:Title', ns).text
-    illumina_match = re.match(r'Illumina (.+) \(.+\)', geo_platform_title)
+
+    # BGI
     if geo_platform_title.startswith('BGISEQ'):
         return BgiPlatform(geo_platform_title.split(' ')[0])
-    elif illumina_match:
+
+    # Illumina
+    illumina_match = re.match(r'Illumina (.+) \(.+\)', geo_platform_title)
+    if illumina_match:
         return IlluminaPlatform(illumina_match.group(1))
-    else:
-        raise NotImplementedError(f'Unsupported platform {geo_platform}.')
+
+    # Illumina HiSeq X platforms are not prefixed with Illumina
+    illumina_hiseq_x_match = re.match(r'(HiSeq X .+) \(.+\)', geo_platform_title)
+    if illumina_hiseq_x_match:
+        return IlluminaPlatform(illumina_hiseq_x_match.group(1))
+
+    raise NotImplementedError(f'Unsupported platform {geo_platform}.')
 
 class DownloadGeoSampleMetadata(luigi.Task):
     """

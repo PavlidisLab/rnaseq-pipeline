@@ -12,6 +12,11 @@ def test_illumina_platform():
     assert plt.name == 'Illumina'
     assert plt.instrument == 'HiSeq 4000'
 
+def test_illumina_hiseq_x_platform():
+    plt = match_geo_platform('GPL20795')
+    assert plt.name == 'Illumina'
+    assert plt.instrument == 'HiSeq X Ten'
+
 def test_bgi_platform():
     plt = match_geo_platform('GPL29559')
     assert plt.name == 'BGI'
