@@ -1,28 +1,28 @@
 import datetime
-from glob import glob
-import os
-from os.path import join
 import logging
+import os
+from glob import glob
+from os.path import join
 
-import pandas as pd
-import requests
 import luigi
 import luigi.task
+import pandas as pd
+import requests
+import yaml
+from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
+from bioluigi.tasks import fastqc, multiqc, cutadapt
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 from luigi.task import flatten, flatten_output, WrapperTask
 from luigi.util import requires
-from bioluigi.tasks import fastqc, multiqc, cutadapt
-from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
-import yaml
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 
 from .config import rnaseq_pipeline
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin, remove_task_output
-from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
-from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
-from .sources.local import DownloadLocalSample, DownloadLocalExperiment
-from .sources.gemma import DownloadGemmaExperiment
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
+from .sources.gemma import DownloadGemmaExperiment
+from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
+from .sources.local import DownloadLocalSample, DownloadLocalExperiment
+from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
+from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, CheckAfterCompleteMixin, remove_task_output
 
 logger = logging.getLogger('luigi-interface')
 
