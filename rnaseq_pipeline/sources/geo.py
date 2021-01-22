@@ -45,15 +45,13 @@ def match_geo_platform(geo_platform):
     if geo_platform_title.startswith('BGISEQ'):
         return BgiPlatform(geo_platform_title.split(' ')[0])
 
-    # Illumina
-    illumina_match = re.match(r'Illumina (.+) \(.+\)', geo_platform_title)
-    if illumina_match:
-        return IlluminaPlatform(illumina_match.group(1))
+    # Illumina HiSeq X and NextSeq 550 platforms are not prefixed with Illumina
+    illumina_regex = [r'Illumina (.+) \(.+\)', r'(HiSeq X .+) \(.+\)', r'(NextSeq 550) \(.+\)']
 
-    # Illumina HiSeq X platforms are not prefixed with Illumina
-    illumina_hiseq_x_match = re.match(r'(HiSeq X .+) \(.+\)', geo_platform_title)
-    if illumina_hiseq_x_match:
-        return IlluminaPlatform(illumina_hiseq_x_match.group(1))
+    for r in illumina_regex:
+        illumina_match = re.match(r, geo_platform_title)
+        if illumina_match:
+            return IlluminaPlatform(illumina_match.group(1))
 
     raise NotImplementedError(f'Unsupported GEO platform: {geo_platform_title} ({geo_platform}).')
 
