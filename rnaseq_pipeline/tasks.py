@@ -475,3 +475,12 @@ class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
         df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
         return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row.get('data')=='resubmit')
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]
+
+class SubmitExperimentsFromGoogleSpreadsheetToGemma(luigi.Task):
+    spreadsheet_id = luigi.Parameter()
+    sheet_name = luigi.Parameter()
+    def requires(self):
+        from .gsheet import retrieve_spreadsheet
+        df = retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)
+        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row['data']=='resubmit')
+                for _, row in df.iterrows() if row.get('priority', 0) > 0]

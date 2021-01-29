@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import argparse
 import os
 import os.path
@@ -12,16 +10,9 @@ from google.auth.transport.requests import Request
 import luigi
 import pandas as pd
 
-from rnaseq_pipeline.tasks import SubmitExperimentToGemma
-
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
-def main(argv):
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--spreadsheet-id')
-    parser.add_argument('--sheet-name')
-    args = parser.parse_args(argv)
-
+def _authenticate():
     # authentication
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
@@ -41,11 +32,13 @@ def main(argv):
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
+    return creds
 
-    service = build('sheets', 'v4', credentials=creds)
+def retrieve_spreadsheet(spreadsheet_id, sheet_name):
+    service = build('sheets', 'v4', credentials=_authenticate())
 
     # Retrieve the documents contents from the Docs service.
-    rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=args.spreadsheet_id, range=args.sheet_name).execute()
+    rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=sheet_name).execute()
 
     # this will fail if people add new columns
     df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0]+list(range(5)))
@@ -53,11 +46,4 @@ def main(argv):
     # type adjustment
     df['priority'] = df.priority.fillna(0).replace('', '0').astype('int')
 
-    tasks = [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row['data']=='resubmit')
-            for _, row in df.iterrows() if row.get('priority', 0) > 0]
-
-    results = luigi.build(tasks, workers=100, detailed_summary=True)
-    print(results.summary_text)
-
-if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+    return df
