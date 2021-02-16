@@ -42,7 +42,7 @@ def _authenticate():
     return creds
 
 def retrieve_spreadsheet(spreadsheet_id, sheet_name):
-    service = build('sheets', 'v4', credentials=_authenticate())
+    service = build('sheets', 'v4', credentials=_authenticate(), cache_discovery=None)
 
     # Retrieve the documents contents from the Docs service.
     rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=sheet_name).execute()
