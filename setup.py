@@ -10,4 +10,5 @@ setup(name='rnaseq_pipeline',
       install_requires=['luigi', 'bioluigi', 'PyYAML', 'requests', 'pandas'],
       extras_require={
           'gsheet': ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg'],
-          'webviewer': ['Flask']})
+          'webviewer': ['Flask']},
+      scripts=['luigi-wrapper', 'scripts/submit-experiments-from-gsheet'])
