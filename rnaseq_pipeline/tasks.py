@@ -346,19 +346,6 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
 
     resources = {'submit_batch_info_jobs': 1}
 
-    def is_batch_info_usable(self):
-        batch_info_df = pd.read_csv(self.input().path, sep='\t', names=['sample_id', 'run_id', 'platform_id', 'srx_url', 'fastq_header'])
-        batch = set()
-        for ix, row in batch_info_df.iterrows():
-            try:
-                _, fastq_header, _ = row.fastq_header.split()
-                illumina_header = IlluminaFastqHeader.parse(fastq_header)
-                batch.add((row.platform_id,) + illumina_header.batch_factor)
-            except TypeError:
-                logger.debug('%s does not have Illumina-formatted FASTQ headers: %s', row.run_id, fastq_header)
-                batch.add(None)
-        return len(batch) > 1
-
     def requires(self):
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
@@ -367,26 +354,13 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
         elif self.external_database == 'SRA':
             return ExtractSraProjectBatchInfo(self.accession)
         else:
-            raise NotImplementedError('Extracting batch information from {} is not implemented.'.format(self.external_database))
+            raise NotImplementedError('Extracting batch information from {} is not supported.'.format(self.external_database))
 
     def subcommand_args(self):
-        return ['--force', 'yes', '-f', self.input().path]
-
-    def run(self):
-        if self.is_batch_info_usable():
-            return super().run()
-        else:
-            logger.info('Batch info is unusable for %s.', self.experiment_id)
+        return ['-f', self.input().path]
 
     def output(self):
         return GemmaDatasetFactor(self.experiment_id, 'batch')
-
-    def complete(self):
-        if all(req.complete() for req in flatten(self.requires())):
-            logger.info('Batch info is unusable for %s.', self.experiment_id)
-            return not self.is_batch_info_usable() or super().complete()
-        else:
-            return super().complete()
 
 @no_retry
 class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, GemmaTask):
