@@ -7,7 +7,7 @@ setup(name='rnaseq_pipeline',
       author='Guillaume Poirier-Morency',
       author_email='poirigui@msl.ubc.ca',
       packages=find_packages(),
-      install_requires=['luigi', 'bioluigi', 'PyYAML', 'requests', 'pandas'],
+      install_requires=['luigi', 'bioluigi', 'PyYAML', 'requests', 'pandas==1.1.4'],
       extras_require={
           'gsheet': ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg'],
           'webviewer': ['Flask']},
