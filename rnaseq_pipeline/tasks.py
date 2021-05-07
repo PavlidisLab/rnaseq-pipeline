@@ -83,7 +83,12 @@ class DownloadExperiment(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask
 class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Trim Illumina Universal Adapter from single end and paired reads.
+    :attr ignore_mate: Ignore either the forward or reverse mate in the case of
+                       paired reads, defaults to neither.
     """
+
+    ignore_mate = luigi.ChoiceParameter(choices=['forward', 'reverse', 'neither'], default='neither', positional=False)
+    minimum_length = luigi.IntParameter(default=25, positional=False)
 
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
@@ -95,16 +100,32 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             yield platform.get_trim_single_end_reads_task(
                     r1.path,
                     join(destdir, os.path.basename(r1.path)),
-                    minimum_length=25,
+                    minimum_length=self.minimum_length,
                     cpus=4)
         elif len(self.input()) == 2:
             r1, r2 = self.input()
-            yield platform.get_trim_paired_reads_task(
-                    r1.path, r2.path,
-                    join(destdir, os.path.basename(r1.path)),
-                    join(destdir, os.path.basename(r2.path)),
-                    minimum_length=25,
-                    cpus=4)
+            r1, r2 = self.input()
+            if self.ignore_mate == 'forward':
+                logger.info('Forward mate is ignored for %s.', repr(self))
+                yield platform.get_trim_single_end_reads_task(
+                        r2.path,
+                        join(destdir, os.path.basename(r1.path)),
+                        minimum_length=self.minimum_length,
+                        cpus=4)
+            elif self.ignore_mate == 'reverse':
+                logger.info('Reverse mate is ignored for %s.', repr(self))
+                yield platform.get_trim_single_end_reads_task(
+                        r1.path,
+                        join(destdir, os.path.basename(r1.path)),
+                        minimum_length=self.minimum_length,
+                        cpus=4)
+            else:
+                yield platform.get_trim_paired_reads_task(
+                        r1.path, r2.path,
+                        join(destdir, os.path.basename(r1.path)),
+                        join(destdir, os.path.basename(r2.path)),
+                        minimum_length=self.minimum_length,
+                        cpus=4)
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
@@ -204,12 +225,8 @@ class AlignSample(ScheduledExternalProgramTask):
     The output of the task is a pair of isoform and gene quantification results
     processed by STAR and RSEM.
 
-    :attr ignore_mate: Ignore either the forward or reverse mate in the case of
-                       paired reads, defaults to neither.
     :attr strand_specific: Indicate if the RNA-Seq data is stranded
     """
-    ignore_mate = luigi.ChoiceParameter(choices=['forward', 'reverse', 'neither'], default='neither', positional=False)
-
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
@@ -248,15 +265,8 @@ class AlignSample(ScheduledExternalProgramTask):
         if len(fastqs) == 1:
             args.append(fastqs[0])
         elif len(fastqs) == 2:
-            if self.ignore_mate == 'forward':
-                logger.info('Forward mate is ignored for %s.', repr(self))
-                args.append(fastqs[1])
-            elif self.ignore_mate == 'reverse':
-                logger.info('Reverse mate is ignored for %s.', repr(self))
-                args.append(fastqs[0])
-            else:
-                args.append('--paired-end')
-                args.extend(fastqs)
+            args.append('--paired-end')
+            args.extend(fastqs)
         else:
             raise NotImplementedError('Alignment of more than two input FASTQs is not supported.')
 
