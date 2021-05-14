@@ -236,8 +236,7 @@ class AlignSample(ScheduledExternalProgramTask):
     memory = 32
 
     # cleanup unused shared memory objects before and after the task is run
-    scheduler_extra_args = ["--task-prolog", join(os.path.dirname(__file__), "../scripts/clean-unused-shm-objects"),
-                            "--task-epilog", join(os.path.dirname(__file__), "../scripts/clean-unused-shm-objects")]
+    scheduler_extra_args = ['--task-prolog', cfg.STAR_CLEANUP_SCRIPT, '--task-epilog', cfg.STAR_CLEANUP_SCRIPT]
 
     def run(self):
         self.output().makedirs()

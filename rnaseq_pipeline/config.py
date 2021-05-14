@@ -16,6 +16,8 @@ class rnaseq_pipeline(luigi.Config):
     QUANTDIR = luigi.Parameter()
     BATCHINFODIR = luigi.Parameter()
 
+    STAR_CLEANUP_SCRIPT = luigi.Parameter()
+
     RSEM_DIR = luigi.Parameter()
 
     GEMMACLI = luigi.Parameter()
