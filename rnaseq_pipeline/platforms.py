@@ -71,3 +71,25 @@ class IlluminaPlatform(Platform):
                 adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
                 reverse_adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
                 **kwargs)
+
+class IlluminaNexteraPlatform(Platform):
+    """
+    Illumina Nextera platform
+    """
+    NEXTERA_ADAPTER = 'CTGTCTCTTATACACATCT'
+
+    name = 'Illumina Nextera'
+
+    def __init__(self, instrument):
+        self.instrument = instrument
+
+    def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
+        return cutadapt.TrimReads(
+                r1,
+                dest,
+                cut=12,
+                adapter_3prime=IlluminaNexteraPlatform.NEXTERA_ADAPTER,
+                **kwargs)
+
+    def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
+        raise NotImplementedError
