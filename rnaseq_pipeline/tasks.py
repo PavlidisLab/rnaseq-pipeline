@@ -308,7 +308,7 @@ class AlignExperiment(TaskWithPriorityMixin, DynamicTaskWithOutputMixin, Dynamic
 
 @no_retry
 @requires(TrimExperiment, QualityControlExperiment, AlignExperiment)
-class GenerateReportForExperiment(TaskWithPriorityMixin, luigi.Task):
+class GenerateReportForExperiment(TaskWithPriorityMixin, RerunnableTaskMixin, luigi.Task):
     """
     Generate a summary report for an experiment with MultiQC.
 
@@ -320,7 +320,7 @@ class GenerateReportForExperiment(TaskWithPriorityMixin, luigi.Task):
             join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
             join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)]
         self.output().makedirs()
-        yield multiqc.GenerateReport(search_dirs, os.path.dirname(self.output().path))
+        yield multiqc.GenerateReport(search_dirs, os.path.dirname(self.output().path), force=self.rerun)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
