@@ -2,17 +2,34 @@
 
 import argparse
 import sys
+import os
+from contextlib import contextmanager
 
 import luigi
 
 from rnaseq_pipeline.tasks import SubmitExperimentsFromGoogleSpreadsheetToGemma
 
+@contextmanager
+def umask(umask):
+    print(f'Setting umask to 0x{umask:03o}')
+    prev_umask = os.umask(umask)
+    try:
+        yield None
+    finally:
+        print(f'Restoring umask to 0x{prev_umask:03o}')
+        os.umask(prev_umask)
+
+def parse_octal(s):
+    return int(s, 8)
+
 def main(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument('--spreadsheet-id')
     parser.add_argument('--sheet-name')
+    parser.add_argument('--umask', type=parse_octal, default='002')
     args = parser.parse_args(argv)
-    results = luigi.build([SubmitExperimentsFromGoogleSpreadsheetToGemma(args.spreadsheet_id, args.sheet_name)], workers=100, detailed_summary=True)
+    with umask(args.umask):
+        results = luigi.build([SubmitExperimentsFromGoogleSpreadsheetToGemma(args.spreadsheet_id, args.sheet_name)], workers=100, detailed_summary=True)
     print(results.summary_text)
 
 if __name__ == '__main__':
