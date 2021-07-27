@@ -2,7 +2,7 @@ import datetime
 import logging
 import os
 from glob import glob
-from os.path import join
+from os.path import abspath, join
 
 import luigi
 import luigi.task
@@ -236,7 +236,7 @@ class AlignSample(ScheduledExternalProgramTask):
     memory = 32
 
     # cleanup unused shared memory objects before and after the task is run
-    scheduler_extra_args = ['--task-prolog', cfg.STAR_CLEANUP_SCRIPT, '--task-epilog', cfg.STAR_CLEANUP_SCRIPT]
+    scheduler_extra_args = ['--task-prolog', abspath(cfg.STAR_CLEANUP_SCRIPT), '--task-epilog', abspath(cfg.STAR_CLEANUP_SCRIPT)]
 
     def run(self):
         self.output().makedirs()
