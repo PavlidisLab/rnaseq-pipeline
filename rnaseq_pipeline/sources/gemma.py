@@ -6,11 +6,10 @@ from os.path import join
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
 from luigi.util import requires
-import requests
-from requests.auth import HTTPBasicAuth
 
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
+from ..utils import gemma_api
 
 logger = logging.getLogger('luigi-interface')
 
@@ -24,10 +23,9 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment_id = luigi.Parameter()
 
     def run(self):
-        res = requests.get('http://gemma.msl.ubc.ca/rest/v2/datasets/{}/samples'.format(self.experiment_id), auth=HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD')))
-        res.raise_for_status()
+        data = gemma_api.samples(self.experiment_id)
         download_sample_tasks = []
-        for sample in res.json()['data']:
+        for sample in data:
             accession = sample['accession']['accession']
             external_database = sample['accession']['externalDatabase']['name']
             if external_database == 'GEO':

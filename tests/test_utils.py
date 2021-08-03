@@ -24,3 +24,7 @@ def test_parse_sra_fastq_header():
     fastq_header = IlluminaFastqHeader.parse(fastq_header)
     assert fastq_header.device == 'HS19_09559'
     assert fastq_header.flowcell_lane == '4'
+
+def test_gemma_api():
+    gemma_api.datasets('GSE173137')
+    gemma_api.samples('GSE173137')

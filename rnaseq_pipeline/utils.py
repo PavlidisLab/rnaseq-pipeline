@@ -87,6 +87,26 @@ class CheckAfterCompleteMixin:
             raise RuntimeError('{} is not completed after successful run().'.format(repr(self)))
         return ret
 
+class GemmaApi:
+    _basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
+
+    def __init__(self, timeout=3):
+        self._session = requests.Session()
+        self._timeout = timeout
+
+    def _query_api(self, endpoint):
+        res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint), auth=self._basic_auth, timeout=self._timeout)
+        res.raise_for_status()
+        return res.json()['data']
+
+    def datasets(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id))
+
+    def samples(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id, 'samples'))
+
+gemma_api = GemmaApi()
+
 class GemmaTask(ExternalProgramTask):
     """
     Base class for tasks that wraps Gemma CLI.
@@ -97,12 +117,10 @@ class GemmaTask(ExternalProgramTask):
 
     def __init__(self, *kwargs, **kwds):
         super().__init__(*kwargs, **kwds)
-        basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
-        res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2/datasets', self.experiment_id), auth=basic_auth)
-        res.raise_for_status()
-        if not res.json()['data']:
+        data = gemma_api.datasets(self.experiment_id)
+        if not data:
             raise RuntimeError('Could not retrieve Gemma dataset with short name {}.'.format(self.experiment_id))
-        self._dataset_info = res.json()['data'][0]
+        self._dataset_info = data[0]
 
     @property
     def dataset_short_name(self):
