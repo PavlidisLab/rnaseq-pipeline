@@ -9,7 +9,7 @@ from luigi.util import requires
 
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
-from ..utils import gemma_api
+from ..gemma import GemmaApi
 
 logger = logging.getLogger('luigi-interface')
 
@@ -22,8 +22,12 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     experiment_id = luigi.Parameter()
 
+    def __init__(self, *kwargs, **kwds):
+        super().__init__(*kwargs, **kwds)
+        self._gemma_api = GemmaApi()
+
     def run(self):
-        data = gemma_api.samples(self.experiment_id)
+        data = self._gemma_api.samples(self.experiment_id)
         download_sample_tasks = []
         for sample in data:
             accession = sample['accession']['accession']

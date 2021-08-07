@@ -22,7 +22,8 @@ from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesB
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
-from .utils import no_retry, GemmaTask, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, remove_task_output
+from .utils import no_retry, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, remove_task_output
+from .gemma import GemmaTask
 
 logger = logging.getLogger('luigi-interface')
 
