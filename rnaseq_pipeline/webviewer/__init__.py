@@ -6,7 +6,7 @@ import pandas as pd
 
 from rnaseq_pipeline.config import rnaseq_pipeline
 from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, ExtractGeoSeriesBatchInfo, SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma
-from rnaseq_pipeline.utils import GemmaTask
+from rnaseq_pipeline.gemma import GemmaTask
 
 app = Flask('rnaseq_pipeline.webviewer')
 
@@ -48,7 +48,7 @@ def experiment_batch_info(experiment_id):
     batch_info_path = ebi_task.output().path
     if not ebi_task.complete():
         abort(404, f'No batch info available for {experiment_id}.')
-    return send_file(batch_info_path, as_attachment=True, attachment_filename=basename(batch_info_path))
+    return send_file(batch_info_path, as_attachment=True, download_name=basename(batch_info_path))
 
 @app.route('/experiment/<experiment_id>/quantifications/<mode>')
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/quantifications/<mode>')
@@ -64,7 +64,7 @@ def experiment_quantifications(experiment_id, mode, reference_id=None):
     if not count_experiment_task.complete():
         abort(404, f'No quantifications available for {experiment_id} in {reference_id}.')
     file_path = count_experiment_task.output()[mode_ix].path
-    return send_file(file_path, as_attachment=True, attachment_filename=basename(file_path))
+    return send_file(file_path, as_attachment=True, download_name=basename(file_path))
 
 @app.route('/experiment/<experiment_id>/report')
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/report')
