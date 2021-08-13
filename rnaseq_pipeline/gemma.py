@@ -13,12 +13,11 @@ cfg = rnaseq_pipeline()
 class GemmaApi:
     _basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
 
-    def __init__(self, timeout=10):
+    def __init__(self):
         self._session = requests.Session()
-        self._timeout = timeout
 
     def _query_api(self, endpoint):
-        res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint), auth=self._basic_auth, timeout=self._timeout)
+        res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint), auth=self._basic_auth)
         res.raise_for_status()
         return res.json()['data']
 
