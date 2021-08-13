@@ -29,6 +29,9 @@ class GemmaApi:
     def samples(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'samples'))
 
+    def platforms(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id, 'platforms'))
+
 class GemmaTask(ExternalProgramTask):
     """
     Base class for tasks that wraps Gemma CLI.
