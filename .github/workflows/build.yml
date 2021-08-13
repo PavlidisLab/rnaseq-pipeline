@@ -23,7 +23,7 @@ jobs:
         conda env update --file environment.yml --name base
     - name: Install package
       run: |
-        pip install .[webapp.gsheet]
+        pip install .[webapp,gsheet]
     - name: Test with pytest
       run: |
         conda install pytest
