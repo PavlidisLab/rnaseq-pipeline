@@ -4,6 +4,7 @@ from os.path import join, exists
 import luigi
 import requests
 from requests.auth import HTTPBasicAuth
+from .gemma import GemmaApi
 
 class RsemReference(luigi.Target):
     """
@@ -18,12 +19,6 @@ class RsemReference(luigi.Target):
         return all(exists(join(self.prefix, '{}_0.{}'.format(self.taxon, ext)))
                 for ext in exts)
 
-def _query_gemma_api(endpoint):
-    basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
-    res = requests.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint), auth=basic_auth) #/datasets/{}/platforms'.format(self.dataset_short_name), auth=basic_auth)
-    res.raise_for_status()
-    return res.json()
-
 class GemmaDatasetPlatform(luigi.Target):
     """
     Represents a platform associated to a Gemma dataset.
@@ -32,11 +27,12 @@ class GemmaDatasetPlatform(luigi.Target):
     def __init__(self, dataset_short_name, platform):
         self.dataset_short_name = dataset_short_name
         self.platform = platform
+        self._gemma_api = GemmaApi()
 
     def exists(self):
         # any platform associated must match
         return any(platform['shortName'] == self.platform
-                   for platform in _query_gemma_api(join('datasets', self.dataset_short_name, 'platforms'))['data'])
+                   for platform in self._gemma_api.platforms(self.dataset_short_name))
 
     def __repr__(self):
         return 'GemmaDatasetPlatform(dataset_short_name={}, platform={})'.format(self.dataset_short_name, self.platform)
@@ -48,8 +44,9 @@ class GemmaDatasetFactor(luigi.Target):
     def __init__(self, dataset_short_name, factor):
         self.dataset_short_name = dataset_short_name
         self.factor = factor
+        self._gemma_api = GemmaApi()
 
     def exists(self):
         # all samples must have a batch factor
         return all(self.factor in sample['sample']['factors'].values()
-            for sample in _query_gemma_api(join('datasets', self.dataset_short_name, 'samples'))['data'])
+            for sample in self._gemma_api.samples(self.dataset_short_name))
