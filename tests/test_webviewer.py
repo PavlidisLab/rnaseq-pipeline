@@ -8,9 +8,9 @@ def client():
         yield client
 
 def test_experiment_summary(client):
-    res = client.get('/experiment/GSE110256')
+    res = client.get('/experiment/GSE87750')
     assert res.status == '200 OK'
 
 def test_experiment_batch_info(client):
-    res = client.get('/experiment/GSE110256/batch-info')
+    res = client.get('/experiment/GSE87750/batch-info')
     assert res.status == '200 OK'
