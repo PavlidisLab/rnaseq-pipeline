@@ -24,6 +24,9 @@ jobs:
     - name: Install package
       run: |
         pip install .[webapp,gsheet]
+    - name: Setup configuration
+      run: |
+        cp example.luigi.cfg luigi.cfg
     - name: Test with pytest
       run: |
         conda install pytest
