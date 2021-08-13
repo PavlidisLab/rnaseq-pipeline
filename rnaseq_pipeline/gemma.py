@@ -11,7 +11,8 @@ from .config import rnaseq_pipeline
 cfg = rnaseq_pipeline()
 
 class GemmaApi:
-    _basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD'))
+    _basic_auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'),
+            os.getenv('GEMMAPASSWORD')) if os.getenv('GEMMAUSERNAME') else None
 
     def __init__(self):
         self._session = requests.Session()
