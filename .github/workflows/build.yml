@@ -27,6 +27,9 @@ jobs:
     - name: Setup configuration
       run: |
         cp example.luigi.cfg luigi.cfg
+    - name: Build shm cleanup script
+      run: |
+        make -C scripts
     - name: Test with pytest
       run: |
         conda install pytest
