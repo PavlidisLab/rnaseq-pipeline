@@ -23,7 +23,7 @@ jobs:
         conda env update --file environment.yml --name base
     - name: Install package
       run: |
-        pip install .[webapp,gsheet]
+        pip install .[gsheet,webviewer]
     - name: Setup configuration
       run: |
         cp example.luigi.cfg luigi.cfg
