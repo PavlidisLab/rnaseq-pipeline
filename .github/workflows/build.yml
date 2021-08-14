@@ -27,6 +27,7 @@ jobs:
     - name: Setup configuration
       run: |
         cp example.luigi.cfg luigi.cfg
+        sed -i "s/BATCHINFODIR=batch-info/BATCHINFODIR=$(pwd)\/tests\/data/g" luigi.cfg
     - name: Build shm cleanup script
       run: |
         make -C scripts

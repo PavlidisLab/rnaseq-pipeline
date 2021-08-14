@@ -1,0 +1,13 @@
+GSM2339852	SRR4381391_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229356	@SRR4381391.1.1 1 length=101
+GSM2429082	SRR5110644_1	GPL21290	https://www.ncbi.nlm.nih.gov/sra?term=SRX2423030	@SRR5110644.1.1 1 length=51
+GSM2429085	SRR5110647_1	GPL21290	https://www.ncbi.nlm.nih.gov/sra?term=SRX2423033	@SRR5110647.1.1 1 length=51
+GSM2339849	SRR4381388_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229353	@SRR4381388.1.1 1 length=101
+GSM2429083	SRR5110645_1	GPL21290	https://www.ncbi.nlm.nih.gov/sra?term=SRX2423031	@SRR5110645.1.1 1 length=51
+GSM2339853	SRR4381392_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229357	@SRR4381392.1.1 1 length=101
+GSM2429084	SRR5110646_1	GPL21290	https://www.ncbi.nlm.nih.gov/sra?term=SRX2423032	@SRR5110646.1.1 1 length=51
+GSM2339848	SRR4381387_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229352	@SRR4381387.1.1 1 length=101
+GSM2339851	SRR4381390_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229355	@SRR4381390.1.1 1 length=101
+GSM2429081	SRR5110643_1	GPL21290	https://www.ncbi.nlm.nih.gov/sra?term=SRX2423029	@SRR5110643.1.1 1 length=51
+GSM2339854	SRR4381393_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229358	@SRR4381393.1.1 1 length=101
+GSM2339855	SRR4381394_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229359	@SRR4381394.1.1 1 length=101
+GSM2339850	SRR4381389_1	GPL16791	https://www.ncbi.nlm.nih.gov/sra?term=SRX2229354	@SRR4381389.1.1 1 length=100
