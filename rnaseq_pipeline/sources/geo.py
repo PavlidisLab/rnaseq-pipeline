@@ -42,7 +42,7 @@ def match_geo_platform(geo_platform):
     geo_platform_title = root.find('miniml:Title', ns).text
 
     # BGI
-    if geo_platform_title.startswith('BGISEQ'):
+    if geo_platform_title.startswith('BGISEQ') or geo_platform_title.startswith('DNBSEQ'):
         return BgiPlatform(geo_platform_title.split(' ')[0])
 
     # Illumina HiSeq X and NextSeq 550 platforms are not prefixed with Illumina
