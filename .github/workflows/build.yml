@@ -24,14 +24,13 @@ jobs:
     - name: Install package
       run: |
         pip install .[gsheet,webviewer]
-    - name: Setup configuration
-      run: |
-        cp example.luigi.cfg luigi.cfg
-        sed -i "s/BATCHINFODIR=batch-info/BATCHINFODIR=$(pwd)\/tests\/data/g" luigi.cfg
     - name: Build shm cleanup script
       run: |
         make -C scripts
+    - name: Configure the pipeline
+      run: |
+        cp example.luigi.cfg luigi.cfg
     - name: Test with pytest
       run: |
         conda install pytest
-        pytest
+        pytest --ignore tests/test_webviewer.py
