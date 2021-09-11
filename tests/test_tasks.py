@@ -27,6 +27,11 @@ def test_bgi_platform():
     assert plt.name == 'BGI'
     assert plt.instrument == 'BGISEQ-500'
 
+def test_bgi_dnbseq_g400_platform():
+    plt = match_geo_platform('GPL28038')
+    assert plt.name == 'BGI'
+    assert plt.instrument == 'DNBSEQ-G400'
+
 def test_platform_retrieval_by_name_when_unknown_instrument():
     with pytest.raises(NotImplementedError):
         match_geo_platform('GPL29597')
