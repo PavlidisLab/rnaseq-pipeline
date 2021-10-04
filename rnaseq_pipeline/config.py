@@ -21,7 +21,6 @@ class rnaseq_pipeline(luigi.Config):
     RSEM_DIR = luigi.Parameter()
 
     GEMMACLI = luigi.Parameter()
-    GEMMA_LIB = luigi.Parameter()
     JAVA_HOME = luigi.Parameter()
     JAVA_OPTS = luigi.Parameter()
 

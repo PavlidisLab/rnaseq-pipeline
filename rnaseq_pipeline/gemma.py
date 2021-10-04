@@ -82,7 +82,7 @@ class GemmaTask(ExternalProgramTask):
         return f'Generic_{self.taxon}_ncbiIds'
 
     def program_environment(self):
-        return cfg.asenv(['GEMMA_LIB', 'JAVA_HOME', 'JAVA_OPTS'])
+        return cfg.asenv(['JAVA_HOME', 'JAVA_OPTS'])
 
     def program_args(self):
         args = [cfg.GEMMACLI,
