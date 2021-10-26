@@ -48,7 +48,7 @@ def retrieve_spreadsheet(spreadsheet_id, sheet_name):
     rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=sheet_name).execute()
 
     # this will fail if people add new columns
-    df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0]+list(range(2)))
+    df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0])
 
     # type adjustment
     df['priority'] = df.priority.fillna(0).replace('', '0').astype('int')
