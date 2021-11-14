@@ -235,6 +235,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     cpus = 8
     memory = 32
+    walltime = datetime.timedelta(days=1)
 
     # cleanup unused shared memory objects before and after the task is run
     scheduler_extra_args = ['--task-prolog', abspath(cfg.STAR_CLEANUP_SCRIPT), '--task-epilog', abspath(cfg.STAR_CLEANUP_SCRIPT)]
