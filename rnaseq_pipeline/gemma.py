@@ -1,5 +1,7 @@
+from getpass import getpass
 import os
 from os.path import join
+import subprocess
 
 import luigi
 from luigi.contrib.external_program import ExternalProgramTask
@@ -13,7 +15,16 @@ cfg = rnaseq_pipeline()
 class GemmaApi:
     def __init__(self):
         self._session = requests.Session()
-        self._session.auth = HTTPBasicAuth(os.getenv('GEMMAUSERNAME'), os.getenv('GEMMAPASSWORD')) if os.getenv('GEMMAUSERNAME') else None
+        self._session.auth = HTTPBasicAuth(os.getenv('GEMMA_USERNAME'), self._get_password()) if os.getenv('GEMMA_USERNAME') else None
+
+    def _get_password(self):
+        if 'GEMMA_PASSWORD' in os.environ:
+            return os.environ['GEMMA_PASSWORD']
+        elif 'GEMMA_PASSWORD_CMD' in os.environ:
+            proc = subprocess.run(os.environ['GEMMA_PASSWORD_CMD'], shell=True, check=True, text=True, stdout=subprocess.PIPE)
+            return proc.stdout
+        else:
+            return getpass()
 
     def _query_api(self, endpoint):
         res = self._session.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint))
@@ -87,8 +98,6 @@ class GemmaTask(ExternalProgramTask):
     def program_args(self):
         args = [cfg.GEMMACLI,
                 self.subcommand,
-                '-u', os.getenv('GEMMAUSERNAME'),
-                '-p', os.getenv('GEMMAPASSWORD'),
                 '-e', self.experiment_id]
         args.extend(self.subcommand_args())
         return args
