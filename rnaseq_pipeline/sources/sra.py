@@ -4,7 +4,7 @@ import os
 from os.path import join
 import shlex
 import subprocess
-from subprocess import Popen, check_call, PIPE
+from subprocess import Popen, check_output, PIPE
 import xml.etree.ElementTree as ET
 
 from bioluigi.tasks import sratoolkit
@@ -81,6 +81,17 @@ class DumpSraRun(luigi.Task):
                     luigi.LocalTarget(join(output_dir, self.srr + '_2.fastq.gz'))]
         return [luigi.LocalTarget(join(output_dir, self.srr + '.fastq.gz'))]
 
+class EmptyRunInfoError(Exception):
+    pass
+
+def retrieve_runinfo(sra_accession):
+    """Retrieve a SRA runinfo using search and efetch utilities"""
+    esearch_proc = Popen(['esearch', '-db', 'sra', '-query', sra_accession], stdout=PIPE)
+    runinfo_data = check_output(['efetch', '-format', 'runinfo'], text=True, stdin=esearch_proc.stdout)
+    if not runinfo_data.strip():
+        raise EmptyRunInfoError(f"Runinfo for {sra_accession} is empty.")
+    return runinfo_data
+
 class DownloadSraExperimentRunInfo(luigi.Task):
     srx = luigi.Parameter()
 
@@ -88,8 +99,7 @@ class DownloadSraExperimentRunInfo(luigi.Task):
 
     def run(self):
         with self.output().open('w') as f:
-            esearch_proc = Popen(['esearch', '-db', 'sra', '-query', self.srx], stdout=PIPE)
-            check_call(['efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
+            f.write(retrieve_runinfo(self.srx))
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)))
@@ -138,8 +148,7 @@ class DownloadSraProjectRunInfo(luigi.Task):
 
     def run(self):
         with self.output().open('w') as f:
-            esearch_proc = Popen(['esearch', '-db', 'sra', '-query', self.srp], stdout=PIPE)
-            check_call(['efetch', '-format', 'runinfo'], stdin=esearch_proc.stdout, stdout=f)
+            f.write(retrieve_runinfo(self.srp))
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)))
