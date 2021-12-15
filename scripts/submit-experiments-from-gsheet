@@ -27,9 +27,10 @@ def main(argv):
     parser.add_argument('--spreadsheet-id')
     parser.add_argument('--sheet-name')
     parser.add_argument('--umask', type=parse_octal, default='002')
+    parser.add_argument('--workers', type=int, default=100)
     args = parser.parse_args(argv)
     with umask(args.umask):
-        results = luigi.build([SubmitExperimentsFromGoogleSpreadsheetToGemma(args.spreadsheet_id, args.sheet_name)], workers=100, detailed_summary=True)
+        results = luigi.build([SubmitExperimentsFromGoogleSpreadsheetToGemma(args.spreadsheet_id, args.sheet_name)], workers=args.workers, detailed_summary=True)
     print(results.summary_text)
 
 if __name__ == '__main__':
