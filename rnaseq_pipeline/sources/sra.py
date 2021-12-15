@@ -97,6 +97,9 @@ class DownloadSraExperimentRunInfo(luigi.Task):
 
     resources = {'edirect_http_connections': 1}
 
+    # retry this task at least once (see https://github.com/PavlidisLab/rnaseq-pipeline/issues/66)
+    retry_count = 1
+
     def run(self):
         with self.output().open('w') as f:
             f.write(retrieve_runinfo(self.srx))
@@ -145,6 +148,9 @@ class DownloadSraProjectRunInfo(luigi.Task):
     srp = luigi.Parameter(description='SRA project identifier')
 
     resources = {'edirect_http_connections': 1}
+
+    # retry this task at least once (see https://github.com/PavlidisLab/rnaseq-pipeline/issues/66)
+    retry_count = 1
 
     def run(self):
         with self.output().open('w') as f:
