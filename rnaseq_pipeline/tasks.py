@@ -466,7 +466,7 @@ class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
         return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row.get('data')=='resubmit')
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]
 
-class SubmitExperimentsFromGoogleSpreadsheetToGemma(luigi.Task):
+class SubmitExperimentsFromGoogleSpreadsheetToGemma(WrapperTask):
     spreadsheet_id = luigi.Parameter()
     sheet_name = luigi.Parameter()
     def requires(self):
