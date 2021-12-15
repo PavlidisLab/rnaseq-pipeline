@@ -3,6 +3,7 @@ import logging
 import os
 from glob import glob
 from os.path import abspath, join
+import uuid
 
 import luigi
 import luigi.task
@@ -469,6 +470,11 @@ class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
 class SubmitExperimentsFromGoogleSpreadsheetToGemma(WrapperTask):
     spreadsheet_id = luigi.Parameter()
     sheet_name = luigi.Parameter()
+    # TODO: use the spreadsheet revision ID
+    # For now, all that does is distinguishing spreadsheet tasks which might
+    # refer to different revisions, which in turn allows newly added tasks to
+    # be executed
+    revision_id = luigi.Parameter(default=str(uuid.uuid4()))
     def requires(self):
         from .gsheet import retrieve_spreadsheet
         df = retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)
