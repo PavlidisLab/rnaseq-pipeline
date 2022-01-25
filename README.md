@@ -42,6 +42,12 @@ make -C scripts
 **Note:** We remove unused shared memory objects allocated by STAR in Slurm task prolog and 
 epilog scripts.
 
+Build RSEM:
+
+```
+make -C contrib/RSEM
+```
+
 Install the pipeline Python package in the Conda environment:
 
 ```bash
