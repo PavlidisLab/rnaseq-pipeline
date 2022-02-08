@@ -401,21 +401,14 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
     resources = {'submit_data_jobs': 1}
 
     def requires(self):
-        yield CountExperiment(self.experiment_id,
-                              taxon=self.taxon,
-                              reference_id=self.reference_id,
-                              source='gemma',
-                              scope='genes')
-
-        # FIXME: this does not always trigger the dependencies
-        yield GenerateReportForExperiment(self.experiment_id,
-                                          taxon=self.taxon,
-                                          reference_id=self.reference_id,
-                                          source='gemma')
+        return CountExperiment(self.experiment_id,
+                               taxon=self.taxon,
+                               reference_id=self.reference_id,
+                               source='gemma',
+                               scope='genes')
 
     def subcommand_args(self):
         (count, fpkm), _ = self.input()
-        # TODO: submit the batch information and the MultiQC report
         return ['-a', self.platform_short_name,
                 '-count', count.path,
                 '-rpkm', fpkm.path]
@@ -423,7 +416,19 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
     def output(self):
         return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
 
-@requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma)
+class SubmitExperimentReportToGemma(TaskWithPriorityMixin, WrapperTask, GemmaTask):
+    """
+    Submit an experiment QC report to Gemma.
+
+    TODO: This is not yet fully implemented, so only a report is being generated.
+    """
+    def requires(self):
+        return GenerateReportForExperiment(self.experiment_id,
+                                           taxon=self.taxon,
+                                           reference_id=self.reference_id,
+                                           source='gemma')
+
+@requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma, SubmitExperimentReportToGemma)
 class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, WrapperTask):
     """
     Submit an experiment data, QC reports, and batch information to Gemma.
