@@ -72,7 +72,7 @@ class DumpSraRun(luigi.Task):
         yield sratoolkit.FastqDump(self.input().path,
                                    join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx))
         if not self.complete():
-            raise RuntimeError(f'{repr(self)} was not completed after successful run.')
+            raise RuntimeError(f'{repr(self)} was not completed after successful fastq-dump execution. Is it possible the SRA run is mislabelled as single-end?')
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
