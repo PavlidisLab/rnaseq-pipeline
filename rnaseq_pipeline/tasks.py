@@ -111,7 +111,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                 logger.info('Forward mate is ignored for %s.', repr(self))
                 yield platform.get_trim_single_end_reads_task(
                         r2.path,
-                        join(destdir, os.path.basename(r1.path)),
+                        join(destdir, os.path.basename(r2.path)),
                         minimum_length=self.minimum_length,
                         cpus=4)
             elif self.ignore_mate == 'reverse':
