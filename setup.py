@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='rnaseq_pipeline',
-      version='2.1.3',
+      version='2.1.4',
       description='RNA-Seq pipeline for the Pavlidis Lab',
       license='Public Domain',
       long_description='file: README.md',
