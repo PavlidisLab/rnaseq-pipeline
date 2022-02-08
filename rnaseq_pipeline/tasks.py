@@ -324,6 +324,7 @@ class GenerateReportForExperiment(TaskWithPriorityMixin, RerunnableTaskMixin, lu
 
     def run(self):
         search_dirs = [
+            join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id),
             join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
             join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)]
         self.output().makedirs()
