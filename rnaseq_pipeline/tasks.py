@@ -11,7 +11,7 @@ import pandas as pd
 import requests
 import yaml
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
-from bioluigi.tasks import fastqc, multiqc, cutadapt
+from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 from luigi.task import flatten, flatten_output, WrapperTask
 from luigi.util import requires
