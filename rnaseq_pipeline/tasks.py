@@ -460,23 +460,26 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, Wrappe
         """
         return super().complete() and all(not out.exists() for out in self._targets_to_remove())
 
-class SubmitExperimentsFromFileToGemma(TaskWithOutputMixin, WrapperTask):
-    input_file = luigi.Parameter()
+class SubmitExperimentsFromDataFrameMixin:
+    ignore_priority = luigi.BoolParameter(positional=False, significant=False, description='Ignore the priority column and use 100 everywhere as priority')
     def requires(self):
-        df = pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
-        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row.get('data')=='resubmit')
+        df = self._retrieve_dataframe()
+        return [SubmitExperimentToGemma(row.experiment_id, priority=100 if self.ignore_priority else row.get('priority', 0), rerun=row['data']=='resubmit')
                 for _, row in df.iterrows() if row.get('priority', 0) > 0]
 
-class SubmitExperimentsFromGoogleSpreadsheetToGemma(WrapperTask):
-    spreadsheet_id = luigi.Parameter()
-    sheet_name = luigi.Parameter()
+class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, TaskWithOutputMixin, WrapperTask):
+    input_file = luigi.Parameter()
+    def _retrieve_dataframe(self):
+        return pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
+
+class SubmitExperimentsFromGoogleSpreadsheetToGemma(SubmitExperimentsFromDataFrameMixin, WrapperTask):
+    spreadsheet_id = luigi.Parameter(description='Spreadsheet ID in Google Sheets (lookup {spreadsheetId} in https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit)')
+    sheet_name = luigi.Parameter(description='Name of the spreadsheet in the document')
     # TODO: use the spreadsheet revision ID
     # For now, all that does is distinguishing spreadsheet tasks which might
     # refer to different revisions, which in turn allows newly added tasks to
     # be executed
-    revision_id = luigi.Parameter(default=str(uuid.uuid4()))
-    def requires(self):
+    revision_id = luigi.Parameter(default=str(uuid.uuid4()), description='Revision ID of the spreadsheet (not yet supported, but will default to the latest)')
+    def _retrieve_dataframe(self):
         from .gsheet import retrieve_spreadsheet
-        df = retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)
-        return [SubmitExperimentToGemma(row.experiment_id, priority=row.get('priority', 0), rerun=row['data']=='resubmit')
-                for _, row in df.iterrows() if row.get('priority', 0) > 0]
+        return retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)
