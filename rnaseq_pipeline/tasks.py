@@ -103,6 +103,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                     r1.path,
                     join(destdir, os.path.basename(r1.path)),
                     minimum_length=self.minimum_length,
+                    report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
                     cpus=4)
         elif len(self.input()) == 2:
             r1, r2 = self.input()
@@ -113,6 +114,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                         r2.path,
                         join(destdir, os.path.basename(r2.path)),
                         minimum_length=self.minimum_length,
+                        report_file=join(destdir, os.path.basename(r2.path) + '.cutadapt.json'),
                         cpus=4)
             elif self.ignore_mate == 'reverse':
                 logger.info('Reverse mate is ignored for %s.', repr(self))
@@ -120,6 +122,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                         r1.path,
                         join(destdir, os.path.basename(r1.path)),
                         minimum_length=self.minimum_length,
+                        report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
                         cpus=4)
             else:
                 yield platform.get_trim_paired_reads_task(
@@ -127,6 +130,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                         join(destdir, os.path.basename(r1.path)),
                         join(destdir, os.path.basename(r2.path)),
                         minimum_length=self.minimum_length,
+                        report_file=join(destdir, os.path.basename(r1.path) + '_' + os.path.basename(r2.path) + '.cutadapt.json'),
                         cpus=4)
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
