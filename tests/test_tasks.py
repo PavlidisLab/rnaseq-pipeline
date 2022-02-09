@@ -40,7 +40,10 @@ def test_platform_retrieval_by_name_when_unknown_instrument():
 def test_align_sample_task():
     task = AlignSample('GSE', 'GSM', reference_id='hg38_ncbi', scope='genes')
     assert task.output().path == join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, 'hg38_ncbi', 'GSE', 'GSM.genes.results')
-    assert task.walltime == datetime.timedelta(days=1)
+    yielded_calculate_expression_task = next(task.run())
+    assert yielded_calculate_expression_task.cpus == 8
+    assert yielded_calculate_expression_task.memory == 32
+    assert yielded_calculate_expression_task.walltime == datetime.timedelta(days=1)
 
 def test_gemma_task():
     gemma_task = GemmaTask('GSE110256')

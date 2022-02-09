@@ -6,19 +6,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 from .gemma import GemmaApi
 
-class RsemReference(luigi.Target):
-    """
-    Represents the target of rsem-prepare-reference script.
-    """
-    def __init__(self, prefix, taxon):
-        self.prefix = prefix
-        self.taxon = taxon
-
-    def exists(self):
-        exts = ['grp', 'ti', 'seq', 'chrlist']
-        return all(exists(join(self.prefix, '{}_0.{}'.format(self.taxon, ext)))
-                for ext in exts)
-
 class GemmaDatasetPlatform(luigi.Target):
     """
     Represents a platform associated to a Gemma dataset.
