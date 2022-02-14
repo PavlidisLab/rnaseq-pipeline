@@ -408,7 +408,7 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
                                scope='genes')
 
     def subcommand_args(self):
-        (count, fpkm), _ = self.input()
+        count, fpkm = self.input()
         return ['-a', self.platform_short_name,
                 '-count', count.path,
                 '-rpkm', fpkm.path]
