@@ -14,7 +14,7 @@ from luigi.util import requires
 import pandas as pd
 
 from ..config import rnaseq_pipeline
-from ..utils import remove_task_output
+from ..utils import remove_task_output, RerunnableTaskMixin
 
 class sra(luigi.Config):
     task_namespace = 'rnaseq_pipeline.sources'
@@ -92,7 +92,7 @@ def retrieve_runinfo(sra_accession):
         raise EmptyRunInfoError(f"Runinfo for {sra_accession} is empty.")
     return runinfo_data
 
-class DownloadSraExperimentRunInfo(luigi.Task):
+class DownloadSraExperimentRunInfo(RerunnableTaskMixin, luigi.Task):
     srx = luigi.Parameter()
 
     resources = {'edirect_http_connections': 1}
@@ -141,7 +141,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
 
         yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired)
 
-class DownloadSraProjectRunInfo(luigi.Task):
+class DownloadSraProjectRunInfo(RerunnableTaskMixin, luigi.Task):
     """
     Download a SRA project
     """

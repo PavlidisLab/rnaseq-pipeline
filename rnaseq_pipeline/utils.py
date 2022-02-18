@@ -1,7 +1,9 @@
 import logging
+import uuid
 
 import luigi
 from luigi.task import flatten_output
+from luigi.parameter import ParameterVisibility
 
 logger = logging.getLogger('luigi-interface')
 

@@ -21,6 +21,7 @@ import requests
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..platforms import Platform, BgiPlatform, IlluminaPlatform
+from ..utils import RerunnableTaskMixin
 from .sra import DownloadSraExperiment
 
 cfg = rnaseq_pipeline()
@@ -55,7 +56,7 @@ def match_geo_platform(geo_platform):
 
     raise NotImplementedError(f'Unsupported GEO platform: {geo_platform_title} ({geo_platform}).')
 
-class DownloadGeoSampleMetadata(luigi.Task):
+class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
     """
     Download the MiNiML metadata for a given GEO Sample.
     """
@@ -98,7 +99,7 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
         yield DownloadSraExperiment(srx)
 
-class DownloadGeoSeriesMetadata(luigi.Task):
+class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
     """
     Download a GEO Series metadata containg information about related GEO
     Samples.
