@@ -137,7 +137,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
 
         # layout is very often not annotated correctly and it is best to rely
         # on the number of mates per spot
-        is_paired = (self.sample_id in sra_cfg.paired_read_experiments) or (run.spots_with_mates > 0)
+        is_paired = (self.sample_id in sra_cfg.paired_read_experiments) or (run.spots_with_mates > 0) or (run.LibraryLayout == 'PAIRED')
 
         yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired)
 
