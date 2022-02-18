@@ -60,7 +60,7 @@ class DumpSraRun(luigi.Task):
     """
     srx = luigi.Parameter(description='SRA experiment identifier')
 
-    paired_reads = luigi.BoolParameter(positional=False, description='Indicate of reads have paired or single mates')
+    paired_reads = luigi.BoolParameter(positional=False, significant=False, description='Indicate of reads have paired or single mates')
 
     def on_success(self):
         # cleanup SRA archive once dumped if it's still hanging around
