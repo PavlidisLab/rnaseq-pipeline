@@ -9,7 +9,6 @@ import luigi
 import luigi.task
 import pandas as pd
 import requests
-import yaml
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
