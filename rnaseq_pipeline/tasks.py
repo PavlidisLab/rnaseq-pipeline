@@ -346,12 +346,13 @@ class CountExperiment(TaskWithPriorityMixin, luigi.Task):
         # FIXME: find a better way to obtain the sample identifier
         # Each DownloadSample-like tasks have a sample_id property! Use that!
         keys = [os.path.basename(f.path).replace(f'.{self.scope}.results', '') for f in self.input()]
-        counts_df = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).expected_count for f in self.input()], keys=keys, axis=1)
-        fpkm_df = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).FPKM for f in self.input()], keys=keys, axis=1)
+
+        counts_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).expected_count for f in self.input()], keys=keys, axis=1).to_csv(sep='\t')
+        fpkm_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).FPKM for f in self.input()], keys=keys, axis=1).to_csv(sep='\t')
 
         with self.output()[0].open('w') as counts_out, self.output()[1].open('w') as fpkm_out:
-            counts_df.to_csv(counts_out, sep='\t')
-            fpkm_df.to_csv(fpkm_out, sep='\t')
+            counts_out.write(counts_buffer)
+            fpkm_out.write(fpkm_buffer)
 
     def output(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, self.reference_id)
