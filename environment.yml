@@ -5,7 +5,7 @@ channels:
 dependencies:
 - python=3
 - pip
-- cutadapt>=3.5
+- cutadapt<4.0
 - multiqc==1.12
 - sra-tools
 - fastqc
