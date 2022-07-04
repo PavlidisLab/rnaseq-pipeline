@@ -194,7 +194,7 @@ class PrepareReference(ScheduledExternalProgramTask):
     def input(self):
         genome_dir = join(cfg.OUTPUT_DIR, cfg.GENOMES, self.reference_id)
         gtf_files = glob(join(genome_dir, '*.gtf'))
-        fasta_files = glob(join(genome_dir, '*.fa'))
+        fasta_files = glob(join(genome_dir, '*.fn?a'))
         if len(gtf_files) != 1:
             raise ValueError('Only one GTF file is expected in {}.'.format(genome_dir))
         return [luigi.LocalTarget(gtf_files[0]),
