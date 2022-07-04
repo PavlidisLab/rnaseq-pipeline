@@ -217,7 +217,7 @@ class PrepareReference(ScheduledExternalProgramTask):
         return args
 
     def run(self):
-        os.makedirs(os.path.dirname(self.output().prefix), exist_ok=True)
+        os.makedirs(self.output().prefix, exist_ok=True)
         return super().run()
 
     def output(self):
