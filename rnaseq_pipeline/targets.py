@@ -10,13 +10,17 @@ class RsemReference(luigi.Target):
     """
     Represents the target of rsem-prepare-reference script.
     """
-    def __init__(self, prefix, taxon):
-        self.prefix = prefix
+    def __init__(self, path, taxon):
+        self.path = path
         self.taxon = taxon
 
+    @property
+    def prefix(self):
+        return join(self.path, '{}_0'.format(self.taxon))
+
     def exists(self):
-        exts = ['grp', 'ti', 'seq', 'chrlist']
-        return all(exists(join(self.prefix, '{}_0.{}'.format(self.taxon, ext)))
+        exts = ['chrlist', 'grp', 'idx.fa', 'ng2.idx.fa', 'seq', 'ti', 'transcripts.fa']
+        return all(exists(self.prefix + '.' + ext)
                 for ext in exts)
 
 class GemmaDatasetPlatform(luigi.Target):

@@ -194,9 +194,11 @@ class PrepareReference(ScheduledExternalProgramTask):
     def input(self):
         genome_dir = join(cfg.OUTPUT_DIR, cfg.GENOMES, self.reference_id)
         gtf_files = glob(join(genome_dir, '*.gtf'))
-        fasta_files = glob(join(genome_dir, '*.fn?a'))
+        fasta_files = glob(join(genome_dir, '*.f*a')) # FIXME: this pattern is too broad
         if len(gtf_files) != 1:
-            raise ValueError('Only one GTF file is expected in {}.'.format(genome_dir))
+            raise ValueError('Exactly one GTF file is expected in {}.'.format(genome_dir))
+        if len(fasta_files) < 1:
+            raise ValueError('At least one FASTA (with .fa or .fna extension) file is expected in {}.'.format(genome_dir))
         return [luigi.LocalTarget(gtf_files[0]),
                 [luigi.LocalTarget(f) for f in fasta_files]]
 
@@ -212,12 +214,12 @@ class PrepareReference(ScheduledExternalProgramTask):
 
         args.extend([t.path for t in genome_fasta])
 
-        args.append(join(self.output().prefix))
+        args.append(self.output().prefix)
 
         return args
 
     def run(self):
-        os.makedirs(self.output().prefix, exist_ok=True)
+        os.makedirs(self.output().path, exist_ok=True)
         return super().run()
 
     def output(self):
