@@ -26,6 +26,15 @@ sra_cfg = sra()
 
 logger = logging.getLogger('luigi-interface')
 
+def read_runinfo(path):
+    SRA_RUNINFO_COLUMNS = 'Run,ReleaseDate,LoadDate,spots,bases,spots_with_mates,avgLength,size_MB,AssemblyName,download_path,Experiment,LibraryName,LibraryStrategy,LibrarySelection,LibrarySource,LibraryLayout,InsertSize,InsertDev,Platform,Model,SRAStudy,BioProject,Study_Pubmed_id,ProjectID,Sample,BioSample,SampleType,TaxID,ScientificName,SampleName,g1k_pop_code,source,g1k_analysis_group,Subject_ID,Sex,Disease,Tumor,Affection_Status,Analyte_Type,Histological_Type,Body_Site,CenterName,Submission,dbgap_study_accession,Consent,RunHash,ReadHash'.split(',')
+    df = pd.read_csv(path)
+    if df.columns[0] != 'Run':
+        logger.warning('Runinfo file %s is missing a header, a fallback will be used instead.', path)
+        # re-read with a list of known columns as a fallback
+        df = pd.read_csv(path, names=SRA_RUNINFO_COLUMNS[:len(df.columns)])
+    return df
+
 """
 This module contains all the logic to retrieve RNA-Seq data from SRA.
 """
@@ -128,7 +137,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
 
     def run(self):
         # this will raise an error of no FASTQs are related
-        df = pd.read_csv(self.input().path)
+        df = read_runinfo(self.input().path)
 
         if self.srr is not None:
             run = df[df.Run == self.srr].iloc[0]
@@ -162,7 +171,7 @@ class DownloadSraProjectRunInfo(RerunnableTaskMixin, luigi.Task):
 @requires(DownloadSraProjectRunInfo)
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
-        df = pd.read_csv(self.input().path)
+        df = read_runinfo(self.input().path)
         yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]
 
 @requires(DownloadSraProjectRunInfo, DownloadSraProject)
