@@ -19,7 +19,7 @@ class RsemReference(luigi.Target):
         return join(self.path, '{}_0'.format(self.taxon))
 
     def exists(self):
-        exts = ['chrlist', 'grp', 'idx.fa', 'ng2.idx.fa', 'seq', 'ti', 'transcripts.fa']
+        exts = ['chrlist', 'grp', 'idx.fa', 'n2g.idx.fa', 'seq', 'ti', 'transcripts.fa']
         return all(exists(self.prefix + '.' + ext)
                 for ext in exts)
 
