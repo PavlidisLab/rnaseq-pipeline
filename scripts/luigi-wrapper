@@ -2,4 +2,4 @@
 
 umask 002
 
-luigi --module rnaseq_pipeline.tasks $@
+exec luigi --module rnaseq_pipeline.tasks "$@"
