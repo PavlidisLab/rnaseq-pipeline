@@ -79,7 +79,7 @@ class GemmaTask(ExternalProgramTask):
 
     @property
     def taxon(self):
-        return self.dataset_info['taxon']
+        return self.dataset_info['taxon']['commonName']
 
     @property
     def reference_id(self):
