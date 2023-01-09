@@ -2,7 +2,7 @@
 
 [![Python Package using Conda](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml)
 
-This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact our [helpdesk](MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting assistance is needed.
+This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact our [helpdesk](mailto:MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting assistance is needed.
 
 ## Features
 
@@ -31,13 +31,13 @@ Create and activate a Conda environment with all the required software
 dependencies:
 
 ```bash
-conda env setup -f environment.yml
+conda env create -f environment.yml
 conda activate rnaseq-pipeline
 ```
 
 Build the shared memory cleanup tool:
 
-```
+```bash
 make -C scripts
 ```
 
@@ -46,14 +46,14 @@ epilog scripts.
 
 Build RSEM:
 
-```
+```bash
 make -C contrib/RSEM
 ```
 
 Install the pipeline Python package in the Conda environment:
 
 ```bash
-python setup.py install # use develop instead of install of you want to edit the pipeline
+pip install . # use -e if you want to edit the pipeline
 ```
 
 Create a copy of `the example.luigi.cfg` file to `luigi.cfg`. It should work
@@ -126,7 +126,38 @@ scheduler_extra_args=[]
 The pipeline comes with a Web viewer that provides convenient endpoints for
 consulting QC reports.
 
+When installing, add the `webviewer` extra require which will include [Flask]:
+
+```bash
+pip install .[webviewer]
+```
+
 ```bash
 gunicorn rnaseq_pipeline.viewer:app
 ```
 
+## Gemma integration
+
+The RNA-Seq pipeline is capable of communicating with Gemma using its [RESTful API](https://gemma.msl.ubc.ca/resources/restapidocs/).
+
+## External spreadsheet via Google Sheets API
+
+The RNA-Seq pipeline can pull experiment IDs from a collaborative spreadsheet through the Google Sheets API. This feature requires extra dependencies that are supplied by the `gsheet` extra require:
+
+```bash
+pip install .[gsheet]
+```
+
+The `rnaseq_pipelines.tasks.SubmitExperimentsFromGoogleSpreadsheetToGemma` task becomes available. We also have
+
+```bash
+submit-experiments-from-gsheet --spreadsheet-id <spreadsheet_id> --sheet-name <sheet_name>
+```
+
+The remote spreadsheet must be structured to have the following columns:
+
+ - `experiment_id`, the Gemma exeriment short name
+ - `priority`, the Luigi task priority, an integer
+ - `data`, the status of the data, allowed values: `ok`, `resubmit` (forces a rerun), `needs attention`, all other values are ignored
+ 
+Only experiments with strictly positive priority are scheduled.
