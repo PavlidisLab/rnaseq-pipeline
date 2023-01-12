@@ -418,7 +418,7 @@ class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, Ge
     def output(self):
         return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
 
-class SubmitExperimentReportToGemma(TaskWithPriorityMixin, WrapperTask, GemmaTask):
+class SubmitExperimentReportToGemma(TaskWithPriorityMixin, WrapperTask):
     """
     Submit an experiment QC report to Gemma.
 
