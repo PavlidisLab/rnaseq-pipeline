@@ -6,7 +6,7 @@ dependencies:
 - python=3
 - pip
 - cutadapt<4.0
-- multiqc==1.12
+- multiqc==1.13
 - sra-tools
 - fastqc
 - star==2.7.3a
