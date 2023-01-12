@@ -10,7 +10,15 @@ from requests.auth import HTTPBasicAuth
 
 from .config import rnaseq_pipeline
 
+class gemma(luigi.Config):
+    task_namespace = 'rnaseq_pipeline'
+    human_reference_id = luigi.Parameter()
+    mouse_reference_id = luigi.Parameter()
+    rat_reference_id = luigi.Parameter()
+
 cfg = rnaseq_pipeline()
+
+gemma_cfg = gemma()
 
 class GemmaApi:
     def __init__(self):
@@ -84,7 +92,7 @@ class GemmaTask(ExternalProgramTask):
     @property
     def reference_id(self):
         try:
-            return {'human': 'hg38_ncbi', 'mouse': 'mm10_ncbi', 'rat': 'm6_ncbi'}[self.taxon]
+            return {'human': gemma_cfg.human_reference_id, 'mouse': gemma_cfg.mouse_reference_id, 'rat': gemma_cfg.rat_reference_id}[self.taxon]
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
 
