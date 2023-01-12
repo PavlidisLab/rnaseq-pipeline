@@ -47,7 +47,7 @@ def match_geo_platform(geo_platform):
         return BgiPlatform(geo_platform_title.split(' ')[0])
 
     # Illumina HiSeq X and NextSeq 550 platforms are not prefixed with Illumina
-    illumina_regex = [r'Illumina (.+) \(.+\)', r'(HiSeq X .+) \(.+\)', r'(NextSeq 550) \(.+\)']
+    illumina_regex = [r'Illumina (.+) \(.+\)', r'(HiSeq X .+) \(.+\)', r'(NextSeq 550) \(.+\)', r'(NextSeq 2000) \(.+\)']
 
     for r in illumina_regex:
         illumina_match = re.match(r, geo_platform_title)
