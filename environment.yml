@@ -3,9 +3,9 @@ channels:
 - conda-forge
 - bioconda
 dependencies:
-- python=3
+- python=3.10
 - pip
-- cutadapt<4.0
+- cutadapt
 - multiqc==1.14
 - sra-tools
 - fastqc
