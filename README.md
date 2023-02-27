@@ -2,7 +2,12 @@
 
 [![Python Package using Conda](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/PavlidisLab/rnaseq-pipeline/actions/workflows/build.yml)
 
-This documentation is principally written to support the Pavlidis Lab, and we're still updating it. But this pipeline should be fairly easy to configure on any Linux servers using these instructions. External users interested in using this pipeline for RNASeq quantification should contact our [helpdesk](mailto:MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting assistance is needed.
+This documentation is principally written to support the Pavlidis Lab, and
+we're still updating it. But this pipeline should be fairly easy to configure
+on any Linux servers using these instructions. External users interested in
+using this pipeline for RNA-Seq quantification should contact our
+[helpdesk](mailto:MSL-PAVLAB-SUPPORT@LISTS.UBC.CA) if troubleshooting
+assistance is needed.
 
 ## Features
 
@@ -41,7 +46,7 @@ Build the shared memory cleanup tool:
 make -C scripts
 ```
 
-**Note:** We remove unused shared memory objects allocated by STAR in Slurm task prolog and 
+**Note:** We remove unused shared memory objects allocated by STAR in Slurm task prolog and
 epilog scripts.
 
 Build RSEM:
@@ -106,8 +111,13 @@ pipeline-output/
     report/<reference_id>/<experiment_id>/  # MultiQC reports for reads and alignments
 ```
 
-You can adjust the pipeline output directory by setting `rnaseq_pipeline.core.pipeline_output`
-in the configuration.
+You can adjust the pipeline output directory by setting `OUTPUT_DIR` under
+`[rnaseq_pipeline]` in the configuration.
+
+```ini
+[rnaseq_pipeline]
+OUTPUT_DIR=/scratch/rnaseq-pipeline
+```
 
 ## Setting up distributed computation
 
@@ -142,13 +152,16 @@ The RNA-Seq pipeline is capable of communicating with Gemma using its [RESTful A
 
 ## External spreadsheet via Google Sheets API
 
-The RNA-Seq pipeline can pull experiment IDs from a collaborative spreadsheet through the Google Sheets API. This feature requires extra dependencies that are supplied by the `gsheet` extra require:
+The RNA-Seq pipeline can pull experiment IDs from a collaborative spreadsheet
+through the Google Sheets API. This feature requires extra dependencies that
+are supplied by the `gsheet` extra require:
 
 ```bash
 pip install .[gsheet]
 ```
 
-The `rnaseq_pipelines.tasks.SubmitExperimentsFromGoogleSpreadsheetToGemma` task becomes available. We also have
+The `rnaseq_pipelines.tasks.SubmitExperimentsFromGoogleSpreadsheetToGemma` task
+becomes available. We also have
 
 ```bash
 submit-experiments-from-gsheet --spreadsheet-id <spreadsheet_id> --sheet-name <sheet_name>
@@ -159,5 +172,5 @@ The remote spreadsheet must be structured to have the following columns:
  - `experiment_id`, the Gemma exeriment short name
  - `priority`, the Luigi task priority, an integer
  - `data`, the status of the data, allowed values: `ok`, `resubmit` (forces a rerun), `needs attention`, all other values are ignored
- 
+
 Only experiments with strictly positive priority are scheduled.
