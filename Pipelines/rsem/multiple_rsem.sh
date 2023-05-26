@@ -19,7 +19,14 @@ fi
 MATES=""
 if [ $# -eq 3 ]
 then
-    MATES=" --paired-end "
+    if [ $3 == "--paired-end" ] || [ $3 == "--mixed" ] ||
+	[ $3 == "--paired-end-only" ]
+    then
+	MATES="$3"
+    else
+	echo "Error: Arg 3 should be --paired-end, --paired-end-only or --mixed."
+	exit -1
+    fi
 else
     if [ $# -gt 3 ]
     then
