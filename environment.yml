@@ -9,6 +9,6 @@ dependencies:
 - cutadapt==4.4
 - multiqc==1.15
 - sra-tools
-- fastqc
+- fastqc==0.12.1
 - star==2.7.3a
 - entrez-direct
