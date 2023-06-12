@@ -24,6 +24,8 @@ class rnaseq_pipeline(luigi.Config):
     JAVA_HOME = luigi.Parameter()
     JAVA_OPTS = luigi.Parameter()
 
+    GEMMA_BASEURL = luigi.Parameter()
+
     SLACK_WEBHOOK_URL = luigi.OptionalParameter(default=None)
 
     def asenv(self, attrs):

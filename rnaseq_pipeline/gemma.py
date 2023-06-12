@@ -35,7 +35,7 @@ class GemmaApi:
             return getpass()
 
     def _query_api(self, endpoint):
-        res = self._session.get(join('https://gemma.msl.ubc.ca/rest/v2', endpoint))
+        res = self._session.get(join(cfg.GEMMA_BASEURL, 'rest/v2', endpoint))
         res.raise_for_status()
         return res.json()['data']
 
