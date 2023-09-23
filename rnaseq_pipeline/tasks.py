@@ -482,12 +482,13 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, Wrappe
         """
         return super().complete() and all(not out.exists() for out in self._targets_to_remove())
 
-class SubmitExperimentsFromDataFrameMixin:
-    ignore_priority = luigi.BoolParameter(positional=False, significant=False, description='Ignore the priority column and use 100 everywhere as priority')
+class SubmitExperimentsFromDataFrameMixin(TaskWithPriorityMixin):
+    ignore_priority = luigi.BoolParameter(positional=False, significant=False, description='Ignore the priority column and inherit the priority of the this task. Rows with zero priority are nonetheless ignored.')
     def requires(self):
         df = self._retrieve_dataframe()
-        return [SubmitExperimentToGemma(row.experiment_id, priority=100 if self.ignore_priority else row.get('priority', 0), rerun=row['data']=='resubmit')
-                for _, row in df.iterrows() if row.get('priority', 0) > 0]
+        # using None, the worker will inherit the priority from this task for all its dependencies
+        return [SubmitExperimentToGemma(row.experiment_id, priority=None if self.ignore_priority else row.get('priority'), rerun=row.get('data')=='resubmit')
+            for _, row in df.iterrows() if row.get('priority', 1) > 0]
 
 class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
