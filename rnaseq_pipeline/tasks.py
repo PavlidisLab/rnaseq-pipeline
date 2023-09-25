@@ -441,6 +441,13 @@ class SubmitExperimentToGemma(TaskWithPriorityMixin, TaskWithOutputMixin, Wrappe
     TODO: add QC report submission
     """
 
+    # Makes it so that we recheck if the task is complete after 20 minutes.
+    # This is because Gemma Web API is caching reply for 1200 seconds, so the
+    # batch factor will not appear until until the query is evicted.
+    # See https://github.com/PavlidisLab/rnaseq-pipeline/issues/76 for details
+    retry_count = 1
+    retry_delay = 1200
+
     def _targets_to_remove(self):
         outs = []
         # original data
