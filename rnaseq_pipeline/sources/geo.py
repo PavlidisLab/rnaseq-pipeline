@@ -64,6 +64,8 @@ class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
 
     resources = {'geo_http_connections': 1}
 
+    retry_count = 3
+
     def run(self):
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
         res.raise_for_status()
@@ -107,6 +109,8 @@ class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
     gse = luigi.Parameter()
 
     resources = {'geo_http_connections': 1}
+
+    retry_count = 3
 
     def run(self):
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml', targ='gsm'))
