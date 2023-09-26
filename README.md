@@ -75,7 +75,7 @@ For convenience, we provide a `luigi-wrapper` script that sets the `--module`
 flag to `rnaseq_pipeline.tasks` for you.
 
 ```bash
-./luigi-wrapper <task> <task_args>
+luigi-wrapper <task> <task_args>
 ```
 
 ## Setting up a genomic reference
@@ -136,7 +136,7 @@ scheduler_extra_args=[]
 The pipeline comes with a Web viewer that provides convenient endpoints for
 consulting QC reports.
 
-When installing, add the `webviewer` extra require which will include [Flask]:
+When installing, add the `webviewer` extra require which will include [Flask](https://flask.palletsprojects.com/) and [gunicorn](https://gunicorn.org/):
 
 ```bash
 pip install .[webviewer]
