@@ -95,7 +95,7 @@ following files under `pipeline-output/genomes/mm10_ensembl98`:
 The top-level task you will likely want to use is `rnaseq_pipeline.tasks.GenerateReportForExperiment`.
 
 ```bash
-./luigi-wrapper rnaseq_pipeline.tasks.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
+luigi-wrapper rnaseq_pipeline.tasks.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
 ```
 
 The output is organized as follow:
