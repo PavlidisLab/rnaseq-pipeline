@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ experiment_id }}">
+        <title>Pavlidis Lab RNA-Seq Pipeline</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="container my-5">
+        <h2>Pavlidis Lab RNA-Seq Pipeline</h2>
+        <p>There isn't much at this time here, but you can take a look at the following links:</p>
+        <ul>
+          <li><a href="https://pavlab.msl.ubc.ca/">Pavlidis Lab Home</a></li>
+          <li><a href="https://github.com/PavlidisLab/rnaseq-pipeline">Source code on GitHub</a></li>
+        </ul>
+        <h3>Latest Reports</h3>
+        <ul>
+            {% for id, reference_id, t in latest_experiments %}
+            <li><a href="{{ url_for('experiment_report', experiment_id=id, reference_id=reference_id) }}">{{ id }}</a> {{ t }} ago</li>
+            {% endfor %}
+        </ul>
+        <h3>Endpoints</h3>
+        <dl>
+          <dt>/experiment/{experimentId}</dt>
+          <dd>
+            Summary
+            (<a href="{{ url_for('experiment_summary', experiment_id='GSE141028') }}">example</a>)
+          </dd>
+          <dt>/experiment/{experimentId}/batch-info</dt>
+          <dd>
+            Batch Information
+            (<a href="{{ url_for('experiment_batch_info', experiment_id='GSE141028') }}">example</a>)
+          </dd>
+          <dt>/experiment/{experimentId}/quantifications/counts</dt>
+          <dd>
+            Quantifications (counts)
+            (<a href="{{ url_for('experiment_quantifications', experiment_id='GSE141028', reference_id='hg38_ncbi', mode='counts') }}">example</a>)
+          </dd>
+          <dt>/experiment/{experimentId}/quantifications/fpkm</dt>
+          <dd>
+            Quantifications (FPKM)
+            (<a href="{{ url_for('experiment_quantifications', experiment_id='GSE141028', reference_id='hg38_ncbi', mode='fpkm') }}">example</a>)
+          </dd>
+          <dt>/experiment/{experimentId}/report</dt>
+          <dd>
+            MultiQC Report
+            (<a href="{{ url_for('experiment_report', experiment_id='GSE141028', reference_id='hg38_ncbi') }}">example</a>)
+          </dd>
+        </dl>
+      </div>
+    </body>
+</html>

@@ -1,4 +1,7 @@
-from os.path import basename
+from os import listdir
+from os.path import basename, getctime, join, dirname
+from glob import glob
+import datetime
 
 import luigi
 from flask import Flask, send_file, render_template, url_for, request, abort
@@ -21,6 +24,12 @@ def bad_request(e):
 @app.errorhandler(404)
 def not_found(e):
     return render_template('404.html', e=e), 404
+
+@app.route('/')
+def home():
+    report_dir = join(cfg.OUTPUT_DIR, 'report')
+    latest_experiments = [(basename(path), basename(dirname(path)), datetime.datetime.now() - datetime.datetime.fromtimestamp(getctime(path))) for path in sorted(glob(join(report_dir, '*', '*')), key=lambda path: -getctime(path))]
+    return render_template('index.html', latest_experiments=latest_experiments[:10])
 
 @app.route('/experiment/<experiment_id>')
 def experiment_summary(experiment_id):
