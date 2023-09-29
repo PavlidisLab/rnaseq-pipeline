@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Remove runinfo, prefetched SRA records and dumped FASTQs from failed SRA
+# experiments
+#
+# Preferably run this on carl, there's a lot of I/O operations involved.
+
+NCBI_CACHE_DIR=/cosmos/scratch/ncbi
+PIPELINE_DIR=/cosmos/data/pipeline-output/rnaseq
+
+for task_id in $(bioluigi list --status PENDING rnaseq_pipeline.sources.sra.DumpSraRun | cut -f 1); do
+    srx=$(echo $task_id | cut -f 4 -d _)
+    srr=$(echo $task_id | cut -f 3 -d _)
+    # at some point, we made paired_reads a significant parameter...
+    if [ "$srr" == True ] || [ "$srr" == False ]; then
+        srx=$(echo $task_id | cut -f 5 -d _)
+        srr=$(echo $task_id | cut -f 4 -d _)
+    fi
+    echo "Removing $NCBI_CACHE_DIR/public/sra/$srr.sra..."
+    rm -f "$NCBI_CACHE_DIR/public/sra/$srr.sra"
+    echo "Removing $PIPELINE_DIR/metadata/sra/$srx.runinfo..."
+    rm -f "$PIPELINE_DIR/metadata/sra/$srx.runinfo"
+    echo Removing $PIPELINE_DIR/data/sra/$srx/$srr*.fastq.gz
+    rm -f $PIPELINE_DIR/data/sra/$srx/$srr*.fastq.gz
+done
