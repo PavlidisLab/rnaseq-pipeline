@@ -21,7 +21,7 @@ from .sources.gemma import DownloadGemmaExperiment
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
-from .targets import GemmaDatasetPlatform, GemmaDatasetFactor, RsemReference
+from .targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, RsemReference
 from .utils import no_retry, IlluminaFastqHeader, TaskWithPriorityMixin, RerunnableTaskMixin, remove_task_output
 from .gemma import GemmaTask
 
@@ -385,7 +385,7 @@ class SubmitExperimentBatchInfoToGemma(TaskWithPriorityMixin, GemmaTask):
         return ['-f', self.input().path]
 
     def output(self):
-        return GemmaDatasetFactor(self.experiment_id, 'batch')
+        return GemmaDatasetHasBatch(self.experiment_id)
 
 @no_retry
 class SubmitExperimentDataToGemma(TaskWithPriorityMixin, RerunnableTaskMixin, GemmaTask):

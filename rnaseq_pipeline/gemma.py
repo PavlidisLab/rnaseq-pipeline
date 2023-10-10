@@ -42,6 +42,9 @@ class GemmaApi:
     def datasets(self, experiment_id):
         return self._query_api(join('datasets', experiment_id))
 
+    def dataset_has_batch(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id, 'hasbatch'))
+
     def samples(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'samples'))
 

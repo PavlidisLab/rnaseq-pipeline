@@ -41,16 +41,14 @@ class GemmaDatasetPlatform(luigi.Target):
     def __repr__(self):
         return 'GemmaDatasetPlatform(dataset_short_name={}, platform={})'.format(self.dataset_short_name, self.platform)
 
-class GemmaDatasetFactor(luigi.Target):
+class GemmaDatasetHasBatch(luigi.Target):
     """
-    Represents a batch info factor associated to a Gemma dataset.
+    Check if there is a BatchInformationFetchingEvent event attached
     """
-    def __init__(self, dataset_short_name, factor):
+
+    def __init__(self, dataset_short_name):
         self.dataset_short_name = dataset_short_name
-        self.factor = factor
         self._gemma_api = GemmaApi()
 
     def exists(self):
-        # all samples must have a batch factor
-        return all(self.factor in sample['sample']['factors'].values()
-            for sample in self._gemma_api.samples(self.dataset_short_name))
+        return self._gemma_api.dataset_has_batch(self.dataset_short_name)
