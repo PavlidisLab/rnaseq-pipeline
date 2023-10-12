@@ -49,10 +49,6 @@ def max_retry(count):
 
 no_retry = max_retry(0)
 
-class TaskWithPriorityMixin:
-    """Mixin that adds a --priority flag to a given task."""
-    priority = luigi.IntParameter(default=0, positional=False, significant=False)
-
 class RerunnableTaskMixin:
     """
     Mixin for a task that can be rerun regardless of its completion status.
