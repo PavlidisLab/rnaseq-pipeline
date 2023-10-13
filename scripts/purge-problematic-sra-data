@@ -8,7 +8,7 @@
 NCBI_CACHE_DIR=/cosmos/scratch/ncbi
 PIPELINE_DIR=/cosmos/data/pipeline-output/rnaseq
 
-for task_id in $(bioluigi list --status PENDING rnaseq_pipeline.sources.sra.DumpSraRun | cut -f 1); do
+for task_id in $(bioluigi list --status DISABLED rnaseq_pipeline.sources.sra.DumpSraRun | cut -f 1); do
     srx=$(echo $task_id | cut -f 4 -d _)
     srr=$(echo $task_id | cut -f 3 -d _)
     # at some point, we made paired_reads a significant parameter...
@@ -22,4 +22,8 @@ for task_id in $(bioluigi list --status PENDING rnaseq_pipeline.sources.sra.Dump
     rm -f "$PIPELINE_DIR/metadata/sra/$srx.runinfo"
     echo Removing $PIPELINE_DIR/data/sra/$srx/$srr*.fastq.gz
     rm -f $PIPELINE_DIR/data/sra/$srx/$srr*.fastq.gz
+    # refresh the task (dependencies that were previously done will be reverified and marked as pending)
+    luigi-wrapper rnaseq_pipeline.sources.sra.DumpSraRun --srx "$srx" --srr "$srr" --workers 0
+    # re-enable and forgive so it can be run immediatly
+    bioluigi reenable --forgive "$task_id"
 done
