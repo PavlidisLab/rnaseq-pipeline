@@ -362,7 +362,7 @@ class CountExperiment(luigi.Task):
         return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
                 luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
 
-class SubmitExperimentBatchInfoToGemma(GemmaTask):
+class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
