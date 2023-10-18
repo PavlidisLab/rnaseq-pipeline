@@ -7,7 +7,7 @@ from contextlib import contextmanager
 
 import luigi
 
-from rnaseq_pipeline.tasks import SubmitExperimentsFromGoogleSpreadsheetToGemma
+from rnaseq_pipeline.tasks import SubmitExperimentToGemma
 
 @contextmanager
 def umask(umask):
@@ -24,14 +24,17 @@ def parse_octal(s):
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--spreadsheet-id', required=True, help='Spreadsheet ID')
-    parser.add_argument('--sheet-name', required=True, help='Sheet name')
+    parser.add_argument('--experiment-id', required=True, help='Experiment ID to submit to Gemma')
+    parser.add_argument('--resubmit-batch-info', action='store_false', help='Only resubmit batch information')
     parser.add_argument('--umask', type=parse_octal, default='002', help='Set a umask (defaults to 002 to make created files group-writable)')
     parser.add_argument('--workers', type=int, default=100, help='Number of workers to use (defaults to 100)')
-    parser.add_argument('--ignore-priority', action='store_true', help='Ignore the priority column in the spreadsheet')
     args = parser.parse_args(argv)
     with umask(args.umask):
-        results = luigi.build([SubmitExperimentsFromGoogleSpreadsheetToGemma(args.spreadsheet_id, args.sheet_name, ignore_priority=args.ignore_priority)], workers=args.workers, detailed_summary=True)
+        if args.batch_info:
+            task = SubmitExperimentBatchInfoToGemma(experiment_id=args.experiment_id, rerun=True)
+        else:
+            task = SubmitExperimentToGemma(experiment_id=args.experiment_id)
+        results = luigi.build([task], workers=args.workers, detailed_summary=True)
     print(results.summary_text)
 
 if __name__ == '__main__':
