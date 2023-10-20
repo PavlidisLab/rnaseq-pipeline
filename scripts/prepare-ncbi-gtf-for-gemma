@@ -7,42 +7,32 @@ import re
 import gzip
 import urllib.request
 
-GENE_INFO_URL = 'https://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_info.gz'
-
 gene_id_pattern = re.compile('gene_id "(.+?)"')
+transcript_id_pattern = re.compile('transcript_id "(.+?)"')
+dbxref_ncbi_gene_id_pattern = re.compile('db_xref "GeneID:(.+?)"')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gtf', required=True)
 parser.add_argument('--output-gtf', required=True)
-parser.add_argument('--taxon-id', required=True)
-parser.add_argument('--gene-info-url', default=GENE_INFO_URL)
 args = parser.parse_args()
-
-print(f'Reading NCBI gene information from {args.gene_info_url}...')
-symbol_to_gene_id = {}
-with urllib.request.urlopen(args.gene_info_url) as i, gzip.open(i, 'rt') as k:
-    header = k.readline()
-    saw = False
-    for line in k:
-        tax_id, gene_id, symbol, *_ = line.split('\t')
-        if tax_id == args.taxon_id:
-            symbol_to_gene_id[symbol] = gene_id
-            saw = True
-        elif saw:
-            break # may stop, lines are grouped by taxon ID
 
 converted_lines = 0
 unknown_symbols = set()
-with open(args.gtf) as f, open(args.output_gtf, 'w') as fout:
+with gzip.open(args.gtf, 'rt') as f, open(args.output_gtf, 'w') as fout:
     for line in f:
         gene_id = gene_id_pattern.findall(line)
+        transcript_id = transcript_id_pattern.findall(line)
+        ncbi_id = dbxref_ncbi_gene_id_pattern.findall(line)
         if gene_id:
-            gene_id = gene_id[0]
-            if gene_id in symbol_to_gene_id:
-                ncbi_id = symbol_to_gene_id[gene_id]
-                line = gene_id_pattern.sub(f'gene_id "{ncbi_id}"', line)
+            if ncbi_id:
+                line = gene_id_pattern.sub(f'gene_id "{ncbi_id[0]}"', line, count=1)
                 converted_lines += 1
             else:
-                unknown_symbols.add(gene_id)
+                unknown_gene_id = gene_id[0]
+                if transcript_id:
+                    unknown_gene_id += ':' + transcript_id[0]
+                unknown_symbols.add(unknown_gene_id)
+                continue # ignore line
         fout.write(line)
-print('{} lines were converted and {} symbols were unknown.'.format(converted_lines, len(unknown_symbols)))
+
+print(f'{converted_lines} lines were converted and {len(unknown_symbols)} symbols were unmatched to NCBI gene IDs: ' + ', '.join(sorted(unknown_symbols)))
