@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+
+# This script remaps incorrect gene IDs from some of our references
+
+import gzip
+import re
+import sys
+
+gene_id_pattern = re.compile('gene_id "(.+?)"')
+dbxref_pattern = re.compile('db_xref "GeneID:(.+?)"')
+
+def main(args):
+    if len(args) != 2:
+        return 1
+    broken_gtf, gene_mapping = args
+    seen_broken_gene_ids = set()
+    broken_ids_without_fix = set()
+    with open(broken_gtf) as bo, open(gene_mapping, 'w') as gmo:
+        for line in bo:
+            if line[0] == '#':
+                continue
+            broken_gene_id = gene_id_pattern.findall(line)
+            fixed_gene_id = dbxref_pattern.findall(line)
+            if broken_gene_id and fixed_gene_id:
+                broken_gene_id = broken_gene_id[0]
+                fixed_gene_id = fixed_gene_id[0]
+                if broken_gene_id != fixed_gene_id:
+                    if broken_gene_id in seen_broken_gene_ids:
+                        continue
+                    seen_broken_gene_ids.add(broken_gene_id)
+                    gmo.write(broken_gene_id + '\t' + fixed_gene_id + '\n')
+            elif broken_gene_id: # but no fixed ID
+                broken_ids_without_fix.add(broken_gene_id[0])
+
+    print(f'Generated a mapping for {len(seen_broken_gene_ids)} broken IDs')
+    if broken_ids_without_fix:
+        print('The following broken IDs do not have fixed IDs:', ', '.join(sorted(broken_ids_without_fix)))
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
