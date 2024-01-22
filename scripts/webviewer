@@ -1,0 +1,4 @@
+#!/bin/fish
+
+conda activate rnaseq-pipeline
+exec gunicorn -e SCRIPT_NAME=/rnaseq-pipeline -b 0.0.0.0:8000 rnaseq_pipeline.webviewer:app --access-logfile pipeline-output/webviewer-logs/access.log --error-logfile pipeline-output/webviewer-logs/error.log
