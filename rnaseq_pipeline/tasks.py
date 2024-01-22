@@ -23,11 +23,12 @@ from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, RsemReference
 from .utils import no_retry, IlluminaFastqHeader, RerunnableTaskMixin, remove_task_output
-from .gemma import GemmaTask
+from .gemma import GemmaTask, gemma
 
 logger = logging.getLogger('luigi-interface')
 
 cfg = rnaseq_pipeline()
+gemma_cfg = gemma()
 
 class DownloadSample(TaskWithOutputMixin, WrapperTask):
     """
@@ -185,8 +186,8 @@ class PrepareReference(ScheduledExternalProgramTask):
     :param taxon: Taxon
     :param reference_id: Reference annotation build to use (i.e. ensembl98, hg38_ncbi)
     """
-    taxon = luigi.Parameter(default='human')
-    reference_id = luigi.Parameter(default='hg38_ncbi')
+    taxon = luigi.Parameter()
+    reference_id = luigi.Parameter()
 
     cpus = 16
     memory = 32
@@ -298,8 +299,8 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     experiment_id = luigi.Parameter()
     source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
-    taxon = luigi.Parameter(default='human', positional=False)
-    reference_id = luigi.Parameter(default='hg38_ncbi', positional=False)
+    taxon = luigi.Parameter(positional=False)
+    reference_id = luigi.Parameter(positional=False)
     scope = luigi.Parameter(default='genes', positional=False)
 
     def requires(self):
