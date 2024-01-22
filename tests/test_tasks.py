@@ -38,7 +38,7 @@ def test_platform_retrieval_by_name_when_unknown_instrument():
         match_geo_platform('GPL29597')
 
 def test_align_sample_task():
-    task = AlignSample('GSE', 'GSM', reference_id='hg38_ncbi', scope='genes')
+    task = AlignSample('GSE', 'GSM', reference_id='hg38_ncbi', taxon='human', scope='genes')
     assert task.output().path == join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, 'hg38_ncbi', 'GSE', 'GSM.genes.results')
     assert task.walltime == datetime.timedelta(days=1)
 
