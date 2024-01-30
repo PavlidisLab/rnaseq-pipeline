@@ -47,6 +47,8 @@ class PrefetchSraRun(luigi.Task):
     """
     srr = luigi.Parameter(description='SRA run identifier')
 
+    retry_count = 3
+
     @staticmethod
     def _get_ncbi_public_dir():
         ret = subprocess.run(['vdb-config', '-p'], stdout=subprocess.PIPE, universal_newlines=True)
