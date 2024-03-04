@@ -99,7 +99,7 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
         platform, srx_url = samples_info[self.gsm]
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
-        yield DownloadSraExperiment(srx)
+        yield DownloadSraExperiment(srx, metadata=dict(gsm=self.gsm))
 
 class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
     """

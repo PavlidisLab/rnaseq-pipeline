@@ -8,7 +8,7 @@ from subprocess import Popen, check_output, PIPE
 import xml.etree.ElementTree as ET
 
 from bioluigi.tasks import sratoolkit
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 import luigi
 from luigi.util import requires
 import pandas as pd
@@ -39,7 +39,7 @@ def read_runinfo(path):
 This module contains all the logic to retrieve RNA-Seq data from SRA.
 """
 
-class PrefetchSraRun(luigi.Task):
+class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
     """
     Prefetch a SRA run using prefetch from sratoolkit
 
@@ -59,7 +59,8 @@ class PrefetchSraRun(luigi.Task):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
                                   max_size=65,
-                                  scheduler_partition='Wormhole')
+                                  scheduler_partition='Wormhole',
+                                  metadata=self.metadata)
 
     def output(self):
         return luigi.LocalTarget(join(self._get_ncbi_public_dir(), 'sra', f'{self.srr}.sra'))
@@ -81,7 +82,8 @@ class DumpSraRun(luigi.Task):
 
     def run(self):
         yield sratoolkit.FastqDump(self.input().path,
-                                   join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx))
+                                   join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx),
+                                   metadata=self.metadata)
         if not self.complete():
             labelling = 'paired' if self.paired_reads else 'single-end'
             raise RuntimeError(f'{repr(self)} was not completed after successful fastq-dump execution. Is it possible the SRA run is mislabelled as {labelling}?')
@@ -104,8 +106,8 @@ def retrieve_runinfo(sra_accession):
         raise EmptyRunInfoError(f"Runinfo for {sra_accession} is empty.")
     return runinfo_data
 
-class DownloadSraExperimentRunInfo(RerunnableTaskMixin, luigi.Task):
-    srx = luigi.Parameter()
+class DownloadSraExperimentRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
+    srx = luigi.Parameter(description='SRX accession to use')
 
     resources = {'edirect_http_connections': 1}
 
@@ -151,9 +153,9 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         # on the number of mates per spot
         is_paired = (self.sample_id in sra_cfg.paired_read_experiments) or (run.spots_with_mates > 0) or (run.LibraryLayout == 'PAIRED')
 
-        yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired)
+        yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired, metadata=self.metadata)
 
-class DownloadSraProjectRunInfo(RerunnableTaskMixin, luigi.Task):
+class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """
     Download a SRA project
     """
@@ -175,7 +177,7 @@ class DownloadSraProjectRunInfo(RerunnableTaskMixin, luigi.Task):
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
         df = read_runinfo(self.input().path)
-        yield [DownloadSraExperiment(experiment) for experiment, runs in df.groupby('Experiment')]
+        yield [DownloadSraExperiment(experiment, metadata=self.metadata) for experiment, runs in df.groupby('Experiment')]
 
 @requires(DownloadSraProjectRunInfo, DownloadSraProject)
 class ExtractSraProjectBatchInfo(luigi.Task):
