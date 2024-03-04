@@ -27,7 +27,7 @@ def main(argv):
     parser.add_argument('--experiment-id', required=True, help='Experiment ID to submit to Gemma')
     parser.add_argument('--resubmit-batch-info', action='store_true', help='Only resubmit batch information')
     parser.add_argument('--umask', type=parse_octal, default='002', help='Set a umask (defaults to 002 to make created files group-writable)')
-    parser.add_argument('--workers', type=int, default=100, help='Number of workers to use (defaults to 100)')
+    parser.add_argument('--workers', type=int, default=30, help='Number of workers to use (defaults to 30)')
     parser.add_argument('--local-scheduler', action='store_true', default=False)
     args = parser.parse_args(argv)
     with umask(args.umask):

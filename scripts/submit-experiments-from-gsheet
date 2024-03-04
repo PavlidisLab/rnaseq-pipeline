@@ -27,7 +27,7 @@ def main(argv):
     parser.add_argument('--spreadsheet-id', required=True, help='Spreadsheet ID')
     parser.add_argument('--sheet-name', required=True, help='Sheet name')
     parser.add_argument('--umask', type=parse_octal, default='002', help='Set a umask (defaults to 002 to make created files group-writable)')
-    parser.add_argument('--workers', type=int, default=100, help='Number of workers to use (defaults to 100)')
+    parser.add_argument('--workers', type=int, default=200, help='Number of workers to use (defaults to 200)')
     parser.add_argument('--ignore-priority', action='store_true', help='Ignore the priority column in the spreadsheet')
     parser.add_argument('--local-scheduler', action='store_true', default=False)
     args = parser.parse_args(argv)
