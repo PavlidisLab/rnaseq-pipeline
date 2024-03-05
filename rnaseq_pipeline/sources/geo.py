@@ -2,6 +2,7 @@
 This module contains all the logic to retrieve RNA-Seq data from GEO.
 """
 
+from datetime import timedelta
 import gzip
 import logging
 from subprocess import Popen
@@ -21,6 +22,7 @@ import requests
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..platforms import Platform, BgiPlatform, IlluminaPlatform
+from ..targets import ExpirableLocalTarget
 from ..utils import RerunnableTaskMixin
 from .sra import DownloadSraExperiment
 
@@ -67,13 +69,15 @@ class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
     retry_count = 3
 
     def run(self):
+        if self.output().is_stale():
+            logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
         res.raise_for_status()
         with self.output().open('w') as f:
             f.write(res.text)
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)), ttl=timedelta(days=14))
 
 @requires(DownloadGeoSampleMetadata)
 class DownloadGeoSample(TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -113,6 +117,8 @@ class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
     retry_count = 3
 
     def run(self):
+        if self.output().is_stale():
+            logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml', targ='gsm'))
         res.raise_for_status()
         with self.output().open('w') as f:
@@ -120,7 +126,7 @@ class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
 
     def output(self):
         # TODO: remove the _family suffix
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)), ttl=timedelta(days=14))
 
 @requires(DownloadGeoSeriesMetadata)
 class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):

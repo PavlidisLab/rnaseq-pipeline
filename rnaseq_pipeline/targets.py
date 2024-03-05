@@ -1,5 +1,7 @@
 import os
-from os.path import join, exists
+from datetime import timedelta
+from os.path import join, exists, getctime, getmtime
+from time import time
 
 import luigi
 import requests
@@ -52,3 +54,33 @@ class GemmaDatasetHasBatch(luigi.Target):
 
     def exists(self):
         return self._gemma_api.dataset_has_batch(self.dataset_short_name)
+
+class ExpirableLocalTarget(luigi.LocalTarget):
+    """
+    A local target that can expire according to a TTL value
+
+    The TTL can either be a timedelta of a float representing the number of
+    seconds past the creation time of the target that it will be considered
+    fresh. Once that delay expired, the target will not be considered as
+    existing.
+
+    By default, creation time is used as per os.path.getctime. Use the
+    `use_mtime` parameter to use the modification time instead.
+    """
+    def __init__(self, path, ttl, use_mtime=False):
+        super().__init__(path)
+        if not isinstance(ttl, timedelta):
+            self._ttl = timedelta(seconds=ttl)
+        else:
+            self._ttl = ttl
+        self._use_mtime = use_mtime
+
+    def is_stale(self):
+        try:
+            creation_time = getmtime(self.path) if self._use_mtime else getctime(self.path)
+        except OSError:
+            return False # file is missing, assume non-stale
+        return creation_time + self._ttl.total_seconds() < time()
+
+    def exists(self):
+        return super().exists() and not self.is_stale()

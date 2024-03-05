@@ -1,3 +1,4 @@
+from datetime import timedelta
 import gzip
 import logging
 import os
@@ -14,6 +15,7 @@ from luigi.util import requires
 import pandas as pd
 
 from ..config import rnaseq_pipeline
+from ..targets import ExpirableLocalTarget
 from ..utils import remove_task_output, RerunnableTaskMixin
 
 class sra(luigi.Config):
@@ -115,11 +117,13 @@ class DownloadSraExperimentRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, l
     retry_count = 1
 
     def run(self):
+        if self.output().is_stale():
+            logger.info('%s is stale, redownloading...', self.output())
         with self.output().open('w') as f:
             f.write(retrieve_runinfo(self.srx))
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)), ttl=timedelta(days=14))
 
 @requires(DownloadSraExperimentRunInfo)
 class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -171,7 +175,7 @@ class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             f.write(retrieve_runinfo(self.srp))
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)))
+        return luigi.ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)), ttl=timedelta(days=14))
 
 @requires(DownloadSraProjectRunInfo)
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
