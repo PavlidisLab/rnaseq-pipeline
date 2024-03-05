@@ -13,7 +13,7 @@ import re
 import requests
 import xml.etree.ElementTree
 
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 import luigi
 from luigi.util import requires
 import requests
@@ -76,7 +76,7 @@ class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)))
 
 @requires(DownloadGeoSampleMetadata)
-class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
+class DownloadGeoSample(TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
@@ -99,7 +99,7 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
         platform, srx_url = samples_info[self.gsm]
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
-        yield DownloadSraExperiment(srx, metadata=dict(gsm=self.gsm))
+        yield DownloadSraExperiment(srx, metadata=self.metadata)
 
 class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
     """

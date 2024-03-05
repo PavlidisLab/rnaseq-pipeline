@@ -33,9 +33,9 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             accession = sample['accession']['accession']
             external_database = sample['accession']['externalDatabase']['name']
             if external_database == 'GEO':
-                download_sample_tasks.append(DownloadGeoSample(accession))
+                download_sample_tasks.append(DownloadGeoSample(accession, metadata=dict(experiment_id=self.experiment_id, sample_id=accession)))
             elif external_database == 'SRA':
-                download_sample_tasks.append(DownloadSraExperiment(accession))
+                download_sample_tasks.append(DownloadSraExperiment(accession, metadata=dict(experiment_id=self.experiment_id, sample_id=accession)))
             else:
                 logger.warning('Downloading %s from %s is not supported.', accession, external_database)
                 continue

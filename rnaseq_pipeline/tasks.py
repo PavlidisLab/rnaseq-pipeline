@@ -44,9 +44,9 @@ class DownloadSample(TaskWithOutputMixin, WrapperTask):
 
     def requires(self):
         if self.source in ['geo', 'gemma']:
-            return DownloadGeoSample(self.sample_id)
+            return DownloadGeoSample(self.sample_id, metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
         elif self.source == 'sra':
-            return DownloadSraExperiment(self.sample_id)
+            return DownloadSraExperiment(self.sample_id, metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
         elif self.source == 'arrayexpress':
             return DownloadArrayExpressSample(self.experiment_id, self.sample_id)
         elif self.source == 'local':
