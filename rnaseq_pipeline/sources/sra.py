@@ -175,7 +175,7 @@ class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             f.write(retrieve_runinfo(self.srp))
 
     def output(self):
-        return luigi.ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)), ttl=timedelta(days=14))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)), ttl=timedelta(days=14))
 
 @requires(DownloadSraProjectRunInfo)
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
