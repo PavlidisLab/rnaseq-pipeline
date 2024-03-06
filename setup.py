@@ -11,7 +11,7 @@ setup(name='rnaseq_pipeline',
       author_email='poirigui@msl.ubc.ca',
       classifiers=['License :: Public Domain'],
       packages=find_packages(),
-      install_requires=['luigi', 'python-daemon<3.0.0', 'bioluigi', 'requests', 'pandas'],
+      install_requires=['luigi', 'python-daemon<3.0.0', 'bioluigi>=0.1.3', 'requests', 'pandas'],
       extras_require={
           'gsheet': ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg'],
           'webviewer': ['Flask', 'gunicorn']},
