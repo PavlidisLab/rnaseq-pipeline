@@ -58,7 +58,7 @@ def match_geo_platform(geo_platform):
 
     raise NotImplementedError(f'Unsupported GEO platform: {geo_platform_title} ({geo_platform}).')
 
-class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
+class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """
     Download the MiNiML metadata for a given GEO Sample.
     """
@@ -80,7 +80,7 @@ class DownloadGeoSampleMetadata(RerunnableTaskMixin, luigi.Task):
         return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)), ttl=timedelta(days=14))
 
 @requires(DownloadGeoSampleMetadata)
-class DownloadGeoSample(TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask):
+class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
