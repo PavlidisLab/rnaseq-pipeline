@@ -246,7 +246,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     # cleanup unused shared memory objects before and after the task is run
     # FIXME: move this into the configuration
-    scheduler_extra_args = ['--task-prolog', abspath(cfg.STAR_CLEANUP_SCRIPT), '--task-epilog', abspath(cfg.STAR_CLEANUP_SCRIPT), '--gres=scratch:60G']
+    scheduler_extra_args = ['--gres=scratch:60G']
 
     def run(self):
         self.output().makedirs()
@@ -256,7 +256,7 @@ class AlignSample(ScheduledExternalProgramTask):
         return join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id, self.sample_id)
 
     def program_args(self):
-        args = [join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
+        args = ['scripts/rsem-calculate-expression-wrapper', join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
 
         args.extend([
             '--time',

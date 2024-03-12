@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+echo "Removing stale temporary directories..."
+find "$TMPDIR/rsem-*" -ctime +0 -delete || echo "No temporary directory were removed."
+echo "Removing unused shared memory objects..."
+scripts/clean-unused-shm-objects || echo "Failed to remove unused shared memory objects."
+
+exec "$@"
