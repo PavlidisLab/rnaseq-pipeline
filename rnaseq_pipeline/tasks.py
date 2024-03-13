@@ -376,9 +376,9 @@ class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaTask):
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
         if self.external_database == 'GEO':
-            return ExtractGeoSeriesBatchInfo(self.accession)
+            return ExtractGeoSeriesBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id))
         elif self.external_database == 'SRA':
-            return ExtractSraProjectBatchInfo(self.accession)
+            return ExtractSraProjectBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id))
         else:
             raise NotImplementedError('Extracting batch information from {} is not supported.'.format(self.external_database))
 

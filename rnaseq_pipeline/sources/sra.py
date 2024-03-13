@@ -157,7 +157,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         # on the number of mates per spot
         is_paired = (self.sample_id in sra_cfg.paired_read_experiments) or (run.spots_with_mates > 0) or (run.LibraryLayout == 'PAIRED')
 
-        yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired, metadata=self.metadata)
+        yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired, metadata=dict(**self.metadata, sample_id=self.sample_id))
 
 class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """

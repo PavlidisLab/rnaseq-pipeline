@@ -103,9 +103,9 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
         platform, srx_url = samples_info[self.gsm]
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
-        yield DownloadSraExperiment(srx, metadata=self.metadata)
+        yield DownloadSraExperiment(srx, metadata=dict(**self.metadata, sample_id=self.sample_id))
 
-class DownloadGeoSeriesMetadata(RerunnableTaskMixin, luigi.Task):
+class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """
     Download a GEO Series metadata containg information about related GEO
     Samples.
@@ -138,7 +138,7 @@ class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         gsms = collect_geo_samples(self.input().path)
         if not gsms:
             raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
-        yield [DownloadGeoSample(gsm) for gsm in gsms]
+        yield [DownloadGeoSample(gsm, metadata=self.metadata) for gsm in gsms]
 
 @requires(DownloadGeoSeriesMetadata, DownloadGeoSeries)
 class ExtractGeoSeriesBatchInfo(luigi.Task):
