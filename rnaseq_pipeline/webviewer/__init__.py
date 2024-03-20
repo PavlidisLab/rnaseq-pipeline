@@ -69,7 +69,7 @@ def experiment_quantifications(experiment_id, mode, reference_id=None):
         mode_ix = ['counts', 'fpkm'].index(mode)
     except ValueError:
         abort(400, f'Unknown mode {mode} for quantifications, try either counts or fpkm.')
-    count_experiment_task = CountExperiment(experiment_id, reference_id=reference_id)
+    count_experiment_task = CountExperiment(experiment_id, reference_id=reference_id, taxon=None)
     if not count_experiment_task.complete():
         abort(404, f'No quantifications available for {experiment_id} in {reference_id}.')
     file_path = count_experiment_task.output()[mode_ix].path
@@ -81,7 +81,7 @@ def experiment_report(experiment_id, reference_id=None):
     if reference_id is None:
         gemma_task = GemmaTask(experiment_id)
         reference_id = gemma_task.reference_id
-    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id)
+    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id, taxon=None)
     if not generate_report_task.complete():
         abort(404, f'No report available for {experiment_id} in {reference_id}.')
     return send_file(generate_report_task.output().path)

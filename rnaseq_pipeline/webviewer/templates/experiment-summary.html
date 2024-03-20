@@ -20,29 +20,29 @@
             </p>
             <dl class="row">
                 <dt class="col-sm-2">Gemma Dataset:</dt>
-                <dd class="col-sm-10"><a href="https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={{ experiment_id }}">{{ submit_data_task.dataset_short_name }}</a></dd>
+                <dd class="col-sm-10"><a target="_blank" href="https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={{ experiment_id }}">{{ submit_data_task.dataset_short_name }}</a></dd>
 
                 <dt class="col-sm-2">External Dataset:</dt>
-                <dd class="col-sm-10"><a href="{{ submit_data_task.external_uri }}">{{ submit_data_task.accession }} on {{ submit_data_task.external_database }}</a></dd>
+                <dd class="col-sm-10"><a target="_blank" rel="noopener noreferrer" href="{{ submit_data_task.external_uri }}">{{ submit_data_task.accession }} on {{ submit_data_task.external_database }}</a></dd>
 
                 <dt class="col-sm-2">Taxon:</dt>
                 <dd class="col-sm-10">{{ submit_data_task.taxon }}</dd>
 
                 <dt class="col-sm-2">Platform:</dt>
-                <dd class="col-sm-10"><a href="https://gemma.msl.ubc.ca/arrays/showArrayDesign.html?shortName={{ submit_data_task.platform_short_name }}">{{ submit_data_task.platform_short_name }}</a></dd>
+                <dd class="col-sm-10"><a href="https://gemma.msl.ubc.ca/arrays/showArrayDesign.html?name={{ submit_data_task.platform_short_name }}">{{ submit_data_task.platform_short_name }}</a></dd>
 
                 <dt class="col-sm-2">Reference:</dt>
                 <dd class="col-sm-10">{{ submit_data_task.reference_id }}</dd>
 
                 <dt class="col-sm-2">Quality Report:</dt>
-                <dd class="col-sm-10"><a href="{{ url_for('experiment_report', experiment_id=experiment_id) }}">MultiQC Report</a></dd>
+                <dd class="col-sm-10"><a href="{{ url_for('experiment_report', experiment_id=experiment_id, reference_id=submit_data_task.reference_id) }}">MultiQC Report</a></dd>
             </dl>
             <h3>Quantification Matrices</h3>
             <dl class="row">
                 <dt class="col-sm-2">Genes</dt>
                 <dd class="col-sm-10">
-                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, mode='counts', scope='genes') }}">Counts</a>,
-                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, mode='fpkm', scope='genes') }}">FPKM</a>
+                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, reference_id=submit_data_task.reference_id, mode='counts', scope='genes') }}">Counts</a>,
+                <a href="{{ url_for('experiment_quantifications', experiment_id=experiment_id, reference_id=submit_data_task.reference_id, mode='fpkm', scope='genes') }}">FPKM</a>
                 </dd>
                 <dt class="col-sm-2">Isoforms</dt>
                 <dd class="col-sm-10">Nothing, yet.</dd>
