@@ -490,17 +490,24 @@ class SubmitExperimentsFromDataFrameMixin:
     def requires(self):
         df = self._retrieve_dataframe()
         # using None, the worker will inherit the priority from this task for all its dependencies
-        return [SubmitExperimentToGemma(row.experiment_id, priority=100 if self.ignore_priority else row.get('priority', 100), rerun=row.get('data')=='resubmit')
-            for _, row in df.iterrows() if row.get('priority', 1) > 0]
+        try:
+            return [SubmitExperimentToGemma(row.experiment_id, priority=100 if self.ignore_priority else row.get('priority', 100), rerun=row.get('data')=='resubmit')
+                for _, row in df.iterrows() if row.get('priority', 1) > 0]
+        except AttributeError as e:
+            raise Exception(f'Failed to read experiments from {self._filename()}, is it valid?') from e
 
 class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
+    def _filename(self):
+        return self.input_file
     def _retrieve_dataframe(self):
         return pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
 
 class SubmitExperimentsFromGoogleSpreadsheetToGemma(SubmitExperimentsFromDataFrameMixin, WrapperTask):
     spreadsheet_id = luigi.Parameter(description='Spreadsheet ID in Google Sheets (lookup {spreadsheetId} in https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit)')
     sheet_name = luigi.Parameter(description='Name of the spreadsheet in the document')
+    def _filename(self):
+        return 'https://docs.google.com/spreadsheets/d/' + self.spreadsheet_id
     # TODO: use the spreadsheet revision ID
     # For now, all that does is distinguishing spreadsheet tasks which might
     # refer to different revisions, which in turn allows newly added tasks to
