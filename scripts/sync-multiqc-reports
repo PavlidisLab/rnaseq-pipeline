@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+PIPELINE_OUTPUT_DIR=/cosmos/data/pipeline-output/rnaseq
+GEMMA_DATA_DIR=/space/gemmaData
+
+human_reference_id=$(grep 'human_reference_id=' luigi.cfg | sed 's/human_reference_id=//')
+mouse_reference_id=$(grep 'mouse_reference_id=' luigi.cfg | sed 's/mouse_reference_id=//')
+rat_reference_id=$(grep 'rat_reference_id=' luigi.cfg | sed 's/rat_reference_id=//')
+
+echo $human_reference_id $mouse_reference_id $rat_reference_id
+
+echo "Copying MultiQC reports for the following references: $human_reference_id, $mouse_reference_id, $rat_reference_id"
+
+for f in $PIPELINE_OUTPUT_DIR/report/{$human_reference_id,$mouse_reference_id,$rat_reference_id}/*; do
+    experiment_id=$(basename $f)
+    destdir=$GEMMA_DATA_DIR/metadata/$experiment_id/MultiQCReports
+    echo "Copying MultiQC report for $experiment_id from $f to $destdir..."
+    mkdir -p "$destdir"
+    rsync -a "$f/" "$destdir/"
+done
