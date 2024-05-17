@@ -9,13 +9,16 @@ import pandas as pd
 
 from rnaseq_pipeline.config import rnaseq_pipeline
 from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, ExtractGeoSeriesBatchInfo, SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma
-from rnaseq_pipeline.gemma import GemmaTask
+from rnaseq_pipeline.gemma import GemmaTaskMixin
 
 app = Flask('rnaseq_pipeline.webviewer')
 
 cfg = rnaseq_pipeline()
 
 references = ['hg38_ncbi', 'mm10_ncbi', 'm6_ncbi']
+
+class FakeGemmaTask(GemmaTaskMixin, luigi.Task):
+    pass
 
 @app.errorhandler(400)
 def bad_request(e):
@@ -63,13 +66,18 @@ def experiment_batch_info(experiment_id):
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/quantifications/<mode>')
 def experiment_quantifications(experiment_id, mode, reference_id=None):
     if reference_id is None:
-        gemma_task = GemmaTask(experiment_id)
+        gemma_task = FakeGemmaTask(experiment_id)
         reference_id = gemma_task.reference_id
+        taxon = gemma_task.taxon
+        source = 'gemma'
+    else:
+        taxon = 'human'
+        source = 'local'
     try:
         mode_ix = ['counts', 'fpkm'].index(mode)
     except ValueError:
         abort(400, f'Unknown mode {mode} for quantifications, try either counts or fpkm.')
-    count_experiment_task = CountExperiment(experiment_id, reference_id=reference_id, taxon=None)
+    count_experiment_task = CountExperiment(experiment_id, reference_id=reference_id, taxon=taxon, source=source)
     if not count_experiment_task.complete():
         abort(404, f'No quantifications available for {experiment_id} in {reference_id}.')
     file_path = count_experiment_task.output()[mode_ix].path
@@ -79,9 +87,14 @@ def experiment_quantifications(experiment_id, mode, reference_id=None):
 @app.route('/experiment/<experiment_id>/by-reference-id/<reference_id>/report')
 def experiment_report(experiment_id, reference_id=None):
     if reference_id is None:
-        gemma_task = GemmaTask(experiment_id)
+        gemma_task = FakeGemmaTask(experiment_id)
         reference_id = gemma_task.reference_id
-    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id, taxon=None)
+        taxon = gemma_task.taxon
+        source = 'gemma'
+    else:
+        taxon = 'human'
+        source = 'local'
+    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id, taxon=taxon, source=source)
     if not generate_report_task.complete():
         abort(404, f'No report available for {experiment_id} in {reference_id}.')
     return send_file(generate_report_task.output().path)

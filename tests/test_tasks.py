@@ -1,6 +1,8 @@
 import datetime
 import pytest
 
+import luigi
+
 from rnaseq_pipeline.config import rnaseq_pipeline
 from rnaseq_pipeline.tasks import *
 
@@ -42,7 +44,9 @@ def test_align_sample_task():
     assert task.output().path == join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, 'hg38_ncbi', 'GSE', 'GSM.genes.results')
     assert task.walltime == datetime.timedelta(days=1)
 
-def test_gemma_task():
+def test_gemma_task_mixin():
+    class GemmaTask(GemmaTaskMixin, luigi.Task):
+        pass
     gemma_task = GemmaTask('GSE110256')
     assert gemma_task.taxon == 'mouse'
     assert gemma_task.accession == 'GSE110256'
