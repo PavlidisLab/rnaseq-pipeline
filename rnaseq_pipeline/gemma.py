@@ -12,14 +12,16 @@ from .config import rnaseq_pipeline
 
 class gemma(luigi.Config):
     task_namespace = 'rnaseq_pipeline'
+    baseurl = luigi.Parameter()
     appdata_dir = luigi.Parameter()
+    cli_bin = luigi.Parameter()
+    cli_JAVA_HOME = luigi.Parameter()
+    cli_JAVA_OPTS = luigi.Parameter()
     human_reference_id = luigi.Parameter()
     mouse_reference_id = luigi.Parameter()
     rat_reference_id = luigi.Parameter()
 
-cfg = rnaseq_pipeline()
-
-gemma_cfg = gemma()
+cfg = gemma()
 
 class GemmaApi:
     def __init__(self):
@@ -36,7 +38,7 @@ class GemmaApi:
             return getpass()
 
     def _query_api(self, endpoint):
-        res = self._session.get(join(cfg.GEMMA_BASEURL, 'rest/v2', endpoint))
+        res = self._session.get(join(cfg.baseurl, 'rest/v2', endpoint))
         res.raise_for_status()
         return res.json()['data']
 
@@ -91,7 +93,7 @@ class GemmaTaskMixin:
     @property
     def reference_id(self):
         try:
-            return {'human': gemma_cfg.human_reference_id, 'mouse': gemma_cfg.mouse_reference_id, 'rat': gemma_cfg.rat_reference_id}[self.taxon]
+            return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[self.taxon]
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
 
@@ -107,11 +109,12 @@ class GemmaCliTask(GemmaTaskMixin, ExternalProgramTask):
 
     def program_environment(self):
         env = super().program_environment()
-        env.update(cfg.asenv(['JAVA_HOME', 'JAVA_OPTS']))
+        env['JAVA_HOME'] = cfg.cli_JAVA_HOME
+        env['JAVA_OPTS'] = cfg.cli_JAVA_OPTS
         return env
 
     def program_args(self):
-        args = [cfg.GEMMACLI,
+        args = [cfg.cli_bin,
                 self.subcommand,
                 '-e', self.experiment_id]
         args.extend(self.subcommand_args())

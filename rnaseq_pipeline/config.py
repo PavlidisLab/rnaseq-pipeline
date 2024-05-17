@@ -18,13 +18,4 @@ class rnaseq_pipeline(luigi.Config):
 
     RSEM_DIR = luigi.Parameter()
 
-    GEMMACLI = luigi.Parameter()
-    JAVA_HOME = luigi.Parameter()
-    JAVA_OPTS = luigi.Parameter()
-
-    GEMMA_BASEURL = luigi.Parameter()
-
     SLACK_WEBHOOK_URL = luigi.OptionalParameter(default=None)
-
-    def asenv(self, attrs):
-        return {attr: getattr(self, attr) for attr in attrs}
