@@ -441,7 +441,7 @@ class SubmitExperimentReportToGemma(GemmaTaskMixin, luigi.Task):
         copytree(dirname(self.input().path), dirname(self.output().path), dirs_exist_ok=True)
 
     def output(self):
-       return luigi.LocalTarget(f'/space/gemmaData/metadata/{self.experiment_id}/MultiQCReports/multiqc_report.html')
+       return luigi.LocalTarget(join(gemma_cfg.appdata_dir, 'metadata', self.experiment_id, 'MultiQCReports/multiqc_report.html'))
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma, SubmitExperimentReportToGemma)
 class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):

@@ -12,6 +12,7 @@ from .config import rnaseq_pipeline
 
 class gemma(luigi.Config):
     task_namespace = 'rnaseq_pipeline'
+    appdata_dir = luigi.Parameter()
     human_reference_id = luigi.Parameter()
     mouse_reference_id = luigi.Parameter()
     rat_reference_id = luigi.Parameter()
