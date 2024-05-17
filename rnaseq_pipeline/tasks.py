@@ -2,8 +2,9 @@ import datetime
 import logging
 import os
 from glob import glob
-from os.path import abspath, join
+from os.path import abspath, join, dirname
 import uuid
+from shutil import copytree
 
 import luigi
 import luigi.task
@@ -12,6 +13,7 @@ import requests
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
+from luigi.contrib.external_program import ExternalProgramTask
 from luigi.task import flatten, flatten_output, WrapperTask
 from luigi.util import requires
 
@@ -23,7 +25,7 @@ from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, RsemReference
 from .utils import no_retry, IlluminaFastqHeader, RerunnableTaskMixin, remove_task_output
-from .gemma import GemmaTask, gemma
+from .gemma import GemmaTaskMixin, GemmaCliTask, gemma
 
 logger = logging.getLogger('luigi-interface')
 
@@ -331,7 +333,7 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
             join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
             join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)]
         self.output().makedirs()
-        yield multiqc.GenerateReport(search_dirs, os.path.dirname(self.output().path), force=self.rerun)
+        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), force=self.rerun)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
@@ -363,7 +365,7 @@ class CountExperiment(luigi.Task):
         return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
                 luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
 
-class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaTask):
+class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
     """
     Submit the batch information of an experiment to Gemma.
     """
@@ -389,7 +391,7 @@ class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaTask):
         return GemmaDatasetHasBatch(self.experiment_id)
 
 @no_retry
-class SubmitExperimentDataToGemma(RerunnableTaskMixin, GemmaTask):
+class SubmitExperimentDataToGemma(RerunnableTaskMixin, GemmaCliTask):
     """
     Submit an experiment to Gemma.
 
@@ -420,19 +422,26 @@ class SubmitExperimentDataToGemma(RerunnableTaskMixin, GemmaTask):
     def output(self):
         return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
 
-class SubmitExperimentReportToGemma(WrapperTask, GemmaTask):
+class SubmitExperimentReportToGemma(GemmaTaskMixin, luigi.Task):
     """
     Submit an experiment QC report to Gemma.
 
     TODO: This is not yet fully implemented, so only a report is being generated.
     """
+    experiment_id = luigi.Parameter()
+
     def requires(self):
         return GenerateReportForExperiment(self.experiment_id,
                                            taxon=self.taxon,
                                            reference_id=self.reference_id,
                                            source='gemma')
+
     def run(self):
-        pass # do nothing
+        self.output().makedirs()
+        copytree(dirname(self.input().path), dirname(self.output().path), dirs_exist_ok=True)
+
+    def output(self):
+       return luigi.LocalTarget(f'/space/gemmaData/metadata/{self.experiment_id}/MultiQCReports/multiqc_report.html')
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma, SubmitExperimentReportToGemma)
 class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):

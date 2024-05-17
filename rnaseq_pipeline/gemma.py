@@ -51,13 +51,8 @@ class GemmaApi:
     def platforms(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'platforms'))
 
-class GemmaTask(ExternalProgramTask):
-    """
-    Base class for tasks that wraps Gemma CLI.
-    """
+class GemmaTaskMixin:
     experiment_id = luigi.Parameter()
-
-    subcommand = None
 
     def __init__(self, *kwargs, **kwds):
         super().__init__(*kwargs, **kwds)
@@ -102,6 +97,12 @@ class GemmaTask(ExternalProgramTask):
     @property
     def platform_short_name(self):
         return f'Generic_{self.taxon}_ncbiIds'
+
+class GemmaCliTask(GemmaTaskMixin, ExternalProgramTask):
+    """
+    Base class for tasks that wraps Gemma CLI.
+    """
+    subcommand = None
 
     def program_environment(self):
         env = super().program_environment()
