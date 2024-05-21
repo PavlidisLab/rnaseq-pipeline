@@ -31,7 +31,7 @@ def collect_geo_samples(f):
         sra_relation = x.find("miniml:Relation[@type='SRA']", ns)
         if gsm_id is None or platform_id is None or library_strategy is None or sra_relation is None:
             continue
-        if library_strategy.text == 'RNA-Seq':
+        if library_strategy.text in ['RNA-Seq', 'ssRNA-seq']:
             gsm_identifiers.add(gsm_id.text)
 
     return gsm_identifiers
