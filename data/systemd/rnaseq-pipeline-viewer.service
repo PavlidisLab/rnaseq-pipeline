@@ -1,0 +1,13 @@
+[Unit]
+Description=PavLab RNA-Seq Pipeline Viewer
+Requires=luigid.service
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/space/grp/Pipelines/rnaseq-pipeline
+ExecStart=/space/grp/poirigui/miniconda3/condabin/conda run --no-capture-output -p /space/grp/Pipelines/rnaseq-pipeline/env gunicorn -e SCRIPT_NAME=/rnaseq-pipeline -b 0.0.0.0:8000 rnaseq_pipeline.webviewer:app --access-logfile pipeline-output/webviewer-logs/access.log --error-logfile pipeline-output/webviewer-logs/error.log
+User=poirigui
+
+[Install]
+WantedBy=multi-user.target
