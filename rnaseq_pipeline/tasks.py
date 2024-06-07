@@ -328,12 +328,34 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
     """
 
     def run(self):
+        fastqc_dir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id)
         search_dirs = [
             join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id),
-            join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id),
+            fastqc_dir,
             join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id)]
         self.output().makedirs()
-        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), force=self.rerun)
+
+        # generate sample mapping for FastQC files
+        fastqc_suffix = '_fastqc.zip'
+        sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'sample_names.tsv')
+        with open(sample_names_file, 'w') as out:
+            for root, dirs, files in os.walk(fastqc_dir):
+                for f in files:
+                    if f.endswith(fastqc_suffix):
+                        fastqc_sample_id = f[:-len(fastqc_suffix)]
+                        sample_id = os.path.basename(root)
+                        # To avoid sample name clashes for paired-read
+                        # sequencing, we need to add a suffix to the sample ID
+                        # In single-end sequencing, fastq-dump does not
+                        # produces _1, _2 suffixes, so the FastQC metrics will
+                        # appear in the same row
+                        if fastqc_sample_id.endswith('_1'):
+                            sample_id += '_1'
+                        elif fastqc_sample_id.endswith('_2'):
+                            sample_id += '_2'
+                        out.write(f'{fastqc_sample_id}\t{sample_id}\n')
+
+        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), replace_names=sample_names_file, force=self.rerun)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
