@@ -406,9 +406,6 @@ class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
         else:
             raise NotImplementedError('Extracting batch information from {} is not supported.'.format(self.external_database))
 
-    def subcommand_args(self):
-        return ['-f', self.input().path]
-
     def output(self):
         return GemmaDatasetHasBatch(self.experiment_id)
 
