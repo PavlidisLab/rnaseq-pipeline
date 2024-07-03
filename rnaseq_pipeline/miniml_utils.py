@@ -26,13 +26,20 @@ def collect_geo_samples(f):
 
     for x in root.findall('miniml:Sample', ns):
         gsm_id = x.find("miniml:Accession[@database='GEO']", ns)
-        library_strategy = x.find('miniml:Library-Strategy', ns)
         platform_id = x.find('miniml:Platform-Ref', ns)
         sra_relation = x.find("miniml:Relation[@type='SRA']", ns)
-        if gsm_id is None or platform_id is None or library_strategy is None or sra_relation is None:
+        if gsm_id is None or platform_id is None or sra_relation is None:
             continue
-        if library_strategy.text in ['RNA-Seq', 'ssRNA-seq']:
-            gsm_identifiers.add(gsm_id.text)
+        # this has to match the logic in Gemma for bulk RNA-Seq, see GeoConverterImpl.java
+        sample_type = x.find('miniml:Type', ns)
+        if sample_type is None:
+            continue
+        if sample_type.text == 'SRA':
+            library_source = x.find('miniml:Library-Source', ns)
+            if library_source is not None and library_source.text == 'transcriptomic':
+                library_strategy = x.find('miniml:Library-Strategy', ns)
+                if library_strategy is not None and library_strategy.text in ['RNA-Seq', 'ssRNA-seq', 'OTHER']:
+                    gsm_identifiers.add(gsm_id.text)
 
     return gsm_identifiers
 
