@@ -443,11 +443,9 @@ class SubmitExperimentDataToGemma(RerunnableTaskMixin, GemmaCliTask):
     def output(self):
         return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
 
-class SubmitExperimentReportToGemma(GemmaTaskMixin, luigi.Task):
+class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaTaskMixin, luigi.Task):
     """
     Submit an experiment QC report to Gemma.
-
-    TODO: This is not yet fully implemented, so only a report is being generated.
     """
     experiment_id = luigi.Parameter()
 
