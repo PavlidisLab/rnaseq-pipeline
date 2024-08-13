@@ -18,13 +18,7 @@ from ..config import rnaseq_pipeline
 from ..targets import ExpirableLocalTarget
 from ..utils import remove_task_output, RerunnableTaskMixin
 
-class sra(luigi.Config):
-    task_namespace = 'rnaseq_pipeline.sources'
-
-    paired_read_experiments = luigi.ListParameter(description='List of SRA experiments known to contain paired reads')
-
 cfg = rnaseq_pipeline()
-sra_cfg = sra()
 
 logger = logging.getLogger('luigi-interface')
 
@@ -154,9 +148,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         else:
             run = df.sort_values('Run', ascending=False).iloc[0]
 
-        # layout is very often not annotated correctly and it is best to rely
-        # on the number of mates per spot
-        is_paired = (self.sample_id in sra_cfg.paired_read_experiments) or (run.get('spots_with_mates', 0) > 0) or (run.LibraryLayout == 'PAIRED')
+        is_paired = run.LibraryLayout == 'PAIRED'
 
         metadata = dict(self.metadata)
         metadata['sample_id'] = self.sample_id
