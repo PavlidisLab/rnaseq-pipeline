@@ -151,7 +151,9 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         is_paired = run.LibraryLayout == 'PAIRED'
 
         metadata = dict(self.metadata)
-        metadata['sample_id'] = self.sample_id
+        # do not override the sample_id when invoked from DownloadGeoSample or DownloadGemmaExperiment
+        if 'sample_id' not in metadata:
+            metadata['sample_id'] = self.sample_id
         yield DumpSraRun(run.Run, self.srx, paired_reads=is_paired, metadata=metadata)
 
 class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):

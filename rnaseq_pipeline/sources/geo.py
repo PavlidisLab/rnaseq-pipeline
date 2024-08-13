@@ -104,7 +104,9 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         platform, srx_url = samples_info[self.gsm]
         srx = parse_qs(urlparse(srx_url).query)['term'][0]
         metadata = dict(self.metadata)
-        metadata['sample_id'] = self.sample_id
+        # do not override the sample_id when invoked from DownloadGemmaExperiment
+        if 'sample_id' not in metadata:
+            metadata['sample_id'] = self.sample_id
         yield DownloadSraExperiment(srx, metadata=metadata)
 
 class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
