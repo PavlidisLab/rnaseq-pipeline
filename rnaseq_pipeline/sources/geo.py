@@ -136,8 +136,11 @@ class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Download all GEO Samples related to a GEO Series.
     """
 
+    ignored_samples = luigi.ListParameter(default=[], description='Ignored GSM identifiers')
+
     def run(self):
         gsms = collect_geo_samples(self.input().path)
+        gsms = [gsm for gsm in gsms if gsm not in self.ignored_samples]
         if not gsms:
             raise ValueError('{} has no related GEO samples with RNA-Seq data.'.format(self.gse))
         yield [DownloadGeoSample(gsm, metadata=self.metadata) for gsm in gsms]

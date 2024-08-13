@@ -396,13 +396,15 @@ class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
 
     resources = {'submit_batch_info_jobs': 1}
 
+    ignored_samples = luigi.ListParameter(default=[])
+
     def requires(self):
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
         if self.external_database == 'GEO':
-            return ExtractGeoSeriesBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id))
+            return ExtractGeoSeriesBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id), ignored_samples=self.ignored_samples)
         elif self.external_database == 'SRA':
-            return ExtractSraProjectBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id))
+            return ExtractSraProjectBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id), ignored_samples=self.ignored_samples)
         else:
             raise NotImplementedError('Extracting batch information from {} is not supported.'.format(self.external_database))
 

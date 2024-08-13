@@ -182,9 +182,10 @@ class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luig
 
 @requires(DownloadSraProjectRunInfo)
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
+    ignored_samples = luigi.ListParameter(default=[], description='Ignored SRX identifiers')
     def run(self):
         df = read_runinfo(self.input().path)
-        yield [DownloadSraExperiment(experiment, metadata=self.metadata) for experiment, runs in df.groupby('Experiment')]
+        yield [DownloadSraExperiment(experiment, metadata=self.metadata) for experiment, runs in df.groupby('Experiment') if experiment not in self.ignored_samples]
 
 @requires(DownloadSraProjectRunInfo, DownloadSraProject)
 class ExtractSraProjectBatchInfo(luigi.Task):
