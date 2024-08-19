@@ -12,7 +12,7 @@ from urllib.parse import urlparse, parse_qs
 from functools import lru_cache
 import re
 import requests
-import xml.etree.ElementTree
+from xml.etree import ElementTree
 
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 import luigi
@@ -37,7 +37,7 @@ def retrieve_geo_platform_miniml(geo_platform):
     """Retrieve a GEO platform MINiML metadata"""
     res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=geo_platform, form='xml'))
     res.raise_for_status()
-    return xml.etree.ElementTree.fromstring(res.text).find('miniml:Platform', ns)
+    return ElementTree.fromstring(res.text).find('miniml:Platform', ns)
 
 def match_geo_platform(geo_platform):
     """Infer the type of platform given a GEO platform"""
@@ -73,6 +73,10 @@ class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
         res.raise_for_status()
+        try:
+            ElementTree.fromstring(res.text)
+        except ElementTree.ParseError as e:
+            raise Exception('Failed to parse XML from GEO sample metadata of ' + self.gsm) from e
         with self.output().open('w') as f:
             f.write(res.text)
 
@@ -125,6 +129,10 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml', targ='gsm'))
         res.raise_for_status()
+        try:
+            ElementTree.fromstring(res.text)
+        except ElementTree.ParseError as e:
+            raise Exception('Failed to parse XML from GEO series metadata of ' + self.gse) from e
         with self.output().open('w') as f:
             f.write(res.text)
 
