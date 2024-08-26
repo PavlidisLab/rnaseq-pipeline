@@ -12,3 +12,4 @@ dependencies:
 - fastqc==0.12.1
 - star==2.7.3a
 - entrez-direct
+- perl # rsem expects this
