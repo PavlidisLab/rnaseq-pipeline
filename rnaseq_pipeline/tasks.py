@@ -327,6 +327,8 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
     The report include collected FastQC reports and RSEM/STAR outputs.
     """
 
+    priority = luigi.IntParameter(default=100, positional=False, significant=False)
+
     def run(self):
         fastqc_dir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id)
         search_dirs = [
