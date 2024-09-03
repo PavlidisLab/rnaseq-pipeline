@@ -2,22 +2,26 @@
 This module contains all the logic to retrieve RNA-Seq data from GEO.
 """
 
-from datetime import timedelta
 import gzip
 import logging
-from subprocess import Popen
 import os
-from os.path import join
-from urllib.parse import urlparse, parse_qs
-from functools import lru_cache
 import re
 import requests
+import tarfile
+import tempfile
+
+from datetime import timedelta
+from functools import lru_cache
+from os.path import join
+from subprocess import Popen
+from urllib.parse import urlparse, parse_qs
 from xml.etree import ElementTree
 
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 import luigi
-from luigi.util import requires
 import requests
+
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
+from luigi.util import requires
 
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
@@ -127,14 +131,18 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     def run(self):
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
-        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gse, form='xml', targ='gsm'))
+        res = requests.get('https://ftp.ncbi.nlm.nih.gov/geo/series/'+ self.gse[:-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz', stream=True)
         res.raise_for_status()
-        try:
-            ElementTree.fromstring(res.text)
-        except ElementTree.ParseError as e:
-            raise Exception('Failed to parse XML from GEO series metadata of ' + self.gse) from e
-        with self.output().open('w') as f:
-            f.write(res.text)
+        # we need to use a temporary file because Response.raw does not allow seeking
+        with tempfile.TemporaryFile() as tmp:
+            for chunk in res.iter_content(chunk_size=1024):
+                tmp.write(chunk)
+            tmp.seek(0)
+            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().temporary_path() as fpath, open(fpath, 'wb') as f:
+                reader = fin.extractfile(self.gse + '_family.xml')
+                while chunk := reader.read(1024):
+                    f.write(chunk)
+
 
     def output(self):
         # TODO: remove the _family suffix
