@@ -453,7 +453,8 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaTaskMixin, luigi.T
         return GenerateReportForExperiment(self.experiment_id,
                                            taxon=self.taxon,
                                            reference_id=self.reference_id,
-                                           source='gemma')
+                                           source='gemma',
+                                           rerun=self.rerun)
 
     def run(self):
         self.output().makedirs()
