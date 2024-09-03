@@ -54,7 +54,7 @@ class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
     def run(self):
         yield sratoolkit.Prefetch(self.srr,
                                   self.output().path,
-                                  max_size=65,
+                                  max_size=100,
                                   scheduler_partition='Wormhole',
                                   metadata=self.metadata,
                                   walltime=timedelta(hours=2))
