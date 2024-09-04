@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+import subprocess
+from shlex import quote
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--executable', required=False, default='luigi')
+parser.add_argument('--module', required=False)
+args = parser.parse_args()
+
+luigi_executable = args.executable
+module = args.module
+
+# erase previous completion
+print('complete -c ' + quote(luigi_executable) + ' -e')
+print('complete -c ' + quote(luigi_executable) + ' -f')
+
+def generate_completion(lines, command=None):
+    opt = None
+    hasarg = False
+    desc = ''
+    def generate_option():
+        nonlocal opt, hasarg, desc
+        print('complete -c ' + quote(luigi_executable) + (' -n ' + quote('__fish_seen_subcommand_from ' + command) if command else '') + ' -f -l ' + quote(opt) + (' -r' if hasarg else '') + (' -d ' + quote(desc) if desc else ''))
+        opt = None
+        hasarg = False
+        desc = ''
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith('--'):
+            if opt:
+                generate_option()
+            pieces = line.split(maxsplit=2)
+            opt = pieces[0][2:]
+            if len(pieces) > 1:
+                # if it's all upper, it's an argument name
+                if pieces[1] == pieces[1].upper():
+                    hasarg = True
+                    if len(pieces) == 3:
+                        desc = pieces[2]
+                else:
+                    hasarg = False
+                    desc = ' '.join(pieces[1:])
+            else:
+                desc = ''
+                hasarg = False
+        elif opt:
+            if desc:
+                desc += ' ' + line
+            else:
+                desc = line
+    if opt:
+        generate_option()
+
+# basic help, no module
+proc = subprocess.run([luigi_executable, '--help-all'], capture_output=True, text=True)
+generate_completion(proc.stdout.splitlines())
+
+if module:
+    proc = subprocess.run([luigi_executable, '--module', module, 'dummy'], capture_output=True, text=True)
+    _, commands = proc.stderr.strip().split('Candidates are: ', maxsplit=2)
+    commands = commands.split(',')
+    commands = [c for c in commands if c.startswith(module)]
+    print('complete -c ' + quote(luigi_executable) + ' -n ' + quote('not __fish_seen_subcommand_from ' + ' '.join(commands)) + ' -a ' + quote(' '.join(commands)))
+    for command in commands:
+        proc = subprocess.run([luigi_executable, '--module', module, command, '--help'], capture_output=True, text=True)
+        print(proc.stdout.splitlines())
+        generate_completion(proc.stdout.splitlines(), command=command)

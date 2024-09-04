@@ -12,7 +12,11 @@ contrib/RSEM:
 scripts:
 	$(MAKE) -C $@
 
-install: install-python install-systemd-units install-RSEM install-scripts install-conda-env
+install: install-python install-systemd-units install-RSEM install-scripts install-conda-env install-fish-completion
+
+install-fish-completion:
+	mkdir -p "${DESTDIR}/etc/fish/completions"
+	install data/luigi.fish "${DESTDIR}/etc/fish/completions/"
 
 install-scripts:
 	$(MAKE) -C scripts install
