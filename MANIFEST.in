@@ -1,1 +1,2 @@
+include rnaseq_pipeline/credentials.json
 graft rnaseq_pipeline/webviewer/templates

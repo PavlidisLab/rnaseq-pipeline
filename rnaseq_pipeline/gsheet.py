@@ -5,6 +5,7 @@ import os.path
 import pickle
 import sys
 from os.path import dirname, expanduser, join
+from pkg_resources import resource_filename
 
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -14,6 +15,7 @@ import pandas as pd
 import xdg.BaseDirectory
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+CREDENTIALS_FILE = resource_filename('rnaseq_pipeline', 'credentials.json')
 
 logger = logging.getLogger('luigi-interface')
 
@@ -33,7 +35,7 @@ def _authenticate():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                CREDENTIALS_FILE, SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open(token_path, 'wb') as token:
