@@ -131,6 +131,9 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     srr = luigi.OptionalParameter(default=None, description='Specific SRA run accession to use (defaults to latest)')
 
+    force_single_end = luigi.BoolParameter(positional=False, significant=False, default=False, description='Force the library layout to be single-end')
+    force_paired_reads = luigi.BoolParameter(positional=False, significant=False, default=False, description='Force the library layout to be paired')
+
     @property
     def sample_id(self):
         return self.srx
@@ -148,7 +151,12 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         else:
             run = df.sort_values('Run', ascending=False).iloc[0]
 
-        is_paired = run.LibraryLayout == 'PAIRED'
+        if self.force_paired_reads:
+            is_paired = True
+        elif self.force_single_end:
+            is_paired = False
+        else:
+            run.LibraryLayout == 'PAIRED'
 
         metadata = dict(self.metadata)
         # do not override the sample_id when invoked from DownloadGeoSample or DownloadGemmaExperiment
