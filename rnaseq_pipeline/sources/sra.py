@@ -156,7 +156,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         elif self.force_single_end:
             is_paired = False
         else:
-            run.LibraryLayout == 'PAIRED'
+            is_paired = run.LibraryLayout == 'PAIRED'
 
         metadata = dict(self.metadata)
         # do not override the sample_id when invoked from DownloadGeoSample or DownloadGemmaExperiment
