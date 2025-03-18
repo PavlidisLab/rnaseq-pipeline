@@ -1,14 +1,12 @@
-from getpass import getpass
 import os
-from os.path import join
 import subprocess
+from getpass import getpass
+from os.path import join
 
 import luigi
-from luigi.contrib.external_program import ExternalProgramTask
 import requests
+from luigi.contrib.external_program import ExternalProgramTask
 from requests.auth import HTTPBasicAuth
-
-from .config import rnaseq_pipeline
 
 class gemma(luigi.Config):
     task_namespace = 'rnaseq_pipeline'
@@ -26,7 +24,8 @@ cfg = gemma()
 class GemmaApi:
     def __init__(self):
         self._session = requests.Session()
-        self._session.auth = HTTPBasicAuth(os.getenv('GEMMA_USERNAME'), self._get_password()) if os.getenv('GEMMA_USERNAME') else None
+        self._session.auth = HTTPBasicAuth(os.getenv('GEMMA_USERNAME'), self._get_password()) if os.getenv(
+            'GEMMA_USERNAME') else None
 
     def _get_password(self):
         if 'GEMMA_PASSWORD' in os.environ:
@@ -94,7 +93,8 @@ class GemmaTaskMixin:
     @property
     def reference_id(self):
         try:
-            return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[self.taxon]
+            return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[
+                self.taxon]
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
 
@@ -123,4 +123,3 @@ class GemmaCliTask(GemmaTaskMixin, ExternalProgramTask):
 
     def subcommand_args(self):
         return []
-

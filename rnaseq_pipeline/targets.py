@@ -1,17 +1,16 @@
-import os
 from datetime import timedelta
 from os.path import join, exists, getctime, getmtime
 from time import time
 
 import luigi
-import requests
-from requests.auth import HTTPBasicAuth
+
 from .gemma import GemmaApi
 
 class RsemReference(luigi.Target):
     """
     Represents the target of rsem-prepare-reference script.
     """
+
     def __init__(self, path, taxon):
         self.path = path
         self.taxon = taxon
@@ -23,7 +22,7 @@ class RsemReference(luigi.Target):
     def exists(self):
         exts = ['chrlist', 'grp', 'idx.fa', 'n2g.idx.fa', 'seq', 'ti', 'transcripts.fa']
         return all(exists(self.prefix + '.' + ext)
-                for ext in exts)
+                   for ext in exts)
 
 class GemmaDatasetPlatform(luigi.Target):
     """
@@ -67,6 +66,7 @@ class ExpirableLocalTarget(luigi.LocalTarget):
     By default, creation time is used as per os.path.getctime. Use the
     `use_mtime` parameter to use the modification time instead.
     """
+
     def __init__(self, path, ttl, use_mtime=False):
         super().__init__(path)
         if not isinstance(ttl, timedelta):
@@ -79,7 +79,7 @@ class ExpirableLocalTarget(luigi.LocalTarget):
         try:
             creation_time = getmtime(self.path) if self._use_mtime else getctime(self.path)
         except OSError:
-            return False # file is missing, assume non-stale
+            return False  # file is missing, assume non-stale
         return creation_time + self._ttl.total_seconds() < time()
 
     def exists(self):

@@ -1,9 +1,7 @@
 import logging
-import uuid
 
 import luigi
 from luigi.task import flatten_output
-from luigi.parameter import ParameterVisibility
 
 logger = logging.getLogger('luigi-interface')
 
@@ -42,9 +40,11 @@ def max_retry(count):
     Set the maximum number of time a task can be retried before being disabled
     as per Luigi retry policy.
     """
+
     def wrapper(cls):
         cls.retry_count = count
         return cls
+
     return wrapper
 
 no_retry = max_retry(0)
@@ -70,6 +70,7 @@ class RerunnableTaskMixin:
 
 class CheckAfterCompleteMixin:
     """Ensures that a task is completed after a successful run()."""
+
     def run(self):
         ret = super().run()
         if not self.complete():

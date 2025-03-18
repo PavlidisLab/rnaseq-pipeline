@@ -1,9 +1,9 @@
 import datetime
 import logging
 import os
-from glob import glob
-from os.path import abspath, join, dirname
 import uuid
+from glob import glob
+from os.path import join, dirname
 from shutil import copytree
 
 import luigi
@@ -13,19 +13,18 @@ import requests
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
-from luigi.contrib.external_program import ExternalProgramTask
-from luigi.task import flatten, flatten_output, WrapperTask
+from luigi.task import flatten_output, WrapperTask
 from luigi.util import requires
 
 from .config import rnaseq_pipeline
+from .gemma import GemmaTaskMixin, GemmaCliTask, gemma
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .sources.gemma import DownloadGemmaExperiment
 from .sources.geo import DownloadGeoSample, DownloadGeoSeries, ExtractGeoSeriesBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraProjectBatchInfo
 from .targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, RsemReference
-from .utils import no_retry, IlluminaFastqHeader, RerunnableTaskMixin, remove_task_output
-from .gemma import GemmaTaskMixin, GemmaCliTask, gemma
+from .utils import no_retry, RerunnableTaskMixin, remove_task_output
 
 logger = logging.getLogger('luigi-interface')
 
@@ -42,13 +41,16 @@ class DownloadSample(TaskWithOutputMixin, WrapperTask):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local', 'sra'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local', 'sra'],
+                                   positional=False)
 
     def requires(self):
         if self.source in ['geo', 'gemma']:
-            return DownloadGeoSample(self.sample_id, metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
+            return DownloadGeoSample(self.sample_id,
+                                     metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
         elif self.source == 'sra':
-            return DownloadSraExperiment(self.sample_id, metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
+            return DownloadSraExperiment(self.sample_id,
+                                         metadata=dict(experiment_id=self.experiment_id, sample_id=self.sample_id))
         elif self.source == 'arrayexpress':
             return DownloadArrayExpressSample(self.experiment_id, self.sample_id)
         elif self.source == 'local':
@@ -67,7 +69,8 @@ class DownloadExperiment(TaskWithOutputMixin, WrapperTask):
     """
     experiment_id = luigi.Parameter()
 
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                   positional=False)
 
     def requires(self):
         if self.source == 'gemma':
@@ -102,38 +105,39 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         if len(self.input()) == 1:
             r1, = self.input()
             yield platform.get_trim_single_end_reads_task(
-                    r1.path,
-                    join(destdir, os.path.basename(r1.path)),
-                    minimum_length=self.minimum_length,
-                    report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
-                    cpus=4)
+                r1.path,
+                join(destdir, os.path.basename(r1.path)),
+                minimum_length=self.minimum_length,
+                report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
+                cpus=4)
         elif len(self.input()) == 2:
             r1, r2 = self.input()
             r1, r2 = self.input()
             if self.ignore_mate == 'forward':
                 logger.info('Forward mate is ignored for %s.', repr(self))
                 yield platform.get_trim_single_end_reads_task(
-                        r2.path,
-                        join(destdir, os.path.basename(r2.path)),
-                        minimum_length=self.minimum_length,
-                        report_file=join(destdir, os.path.basename(r2.path) + '.cutadapt.json'),
-                        cpus=4)
+                    r2.path,
+                    join(destdir, os.path.basename(r2.path)),
+                    minimum_length=self.minimum_length,
+                    report_file=join(destdir, os.path.basename(r2.path) + '.cutadapt.json'),
+                    cpus=4)
             elif self.ignore_mate == 'reverse':
                 logger.info('Reverse mate is ignored for %s.', repr(self))
                 yield platform.get_trim_single_end_reads_task(
-                        r1.path,
-                        join(destdir, os.path.basename(r1.path)),
-                        minimum_length=self.minimum_length,
-                        report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
-                        cpus=4)
+                    r1.path,
+                    join(destdir, os.path.basename(r1.path)),
+                    minimum_length=self.minimum_length,
+                    report_file=join(destdir, os.path.basename(r1.path) + '.cutadapt.json'),
+                    cpus=4)
             else:
                 yield platform.get_trim_paired_reads_task(
-                        r1.path, r2.path,
-                        join(destdir, os.path.basename(r1.path)),
-                        join(destdir, os.path.basename(r2.path)),
-                        minimum_length=self.minimum_length,
-                        report_file=join(destdir, os.path.basename(r1.path) + '_' + os.path.basename(r2.path) + '.cutadapt.json'),
-                        cpus=4)
+                    r1.path, r2.path,
+                    join(destdir, os.path.basename(r1.path)),
+                    join(destdir, os.path.basename(r2.path)),
+                    minimum_length=self.minimum_length,
+                    report_file=join(destdir,
+                                     os.path.basename(r1.path) + '_' + os.path.basename(r2.path) + '.cutadapt.json'),
+                    cpus=4)
         else:
             raise NotImplementedError('Trimming more than two mates is not supported.')
 
@@ -142,7 +146,8 @@ class TrimExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Quality control all the samples in a given experiment.
     """
     experiment_id = luigi.Parameter()
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                   positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
@@ -158,6 +163,7 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
     """
+
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
@@ -168,7 +174,8 @@ class QualityControlExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Quality control all the samples in a given experiment.
     """
     experiment_id = luigi.Parameter()
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                   positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
@@ -197,11 +204,12 @@ class PrepareReference(ScheduledExternalProgramTask):
     def input(self):
         genome_dir = join(cfg.OUTPUT_DIR, cfg.GENOMES, self.reference_id)
         gtf_files = glob(join(genome_dir, '*.gtf'))
-        fasta_files = glob(join(genome_dir, '*.f*a')) # FIXME: this pattern is too broad
+        fasta_files = glob(join(genome_dir, '*.f*a'))  # FIXME: this pattern is too broad
         if len(gtf_files) != 1:
             raise ValueError('Exactly one GTF file is expected in {}.'.format(genome_dir))
         if len(fasta_files) < 1:
-            raise ValueError('At least one FASTA (with .fa or .fna extension) file is expected in {}.'.format(genome_dir))
+            raise ValueError(
+                'At least one FASTA (with .fa or .fna extension) file is expected in {}.'.format(genome_dir))
         return [luigi.LocalTarget(gtf_files[0]),
                 [luigi.LocalTarget(f) for f in fasta_files]]
 
@@ -258,7 +266,8 @@ class AlignSample(ScheduledExternalProgramTask):
         return join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id, self.sample_id)
 
     def program_args(self):
-        args = ['scripts/rsem-calculate-expression-wrapper', join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p', self.cpus]
+        args = ['scripts/rsem-calculate-expression-wrapper', join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p',
+                self.cpus]
 
         args.extend([
             '--time',
@@ -300,7 +309,8 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment.
     """
     experiment_id = luigi.Parameter()
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'], positional=False)
+    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                   positional=False)
     taxon = luigi.Parameter(positional=False)
     reference_id = luigi.Parameter(positional=False)
     scope = luigi.Parameter(default='genes', positional=False)
@@ -355,10 +365,12 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
                             sample_id += '_2'
                         out.write(f'{fastqc_sample_id}\t{sample_id}\n')
 
-        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), replace_names=sample_names_file, force=self.rerun)
+        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), replace_names=sample_names_file,
+                                     force=self.rerun)
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
+        return luigi.LocalTarget(
+            join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id, 'multiqc_report.html'))
 
 @requires(AlignExperiment)
 class CountExperiment(luigi.Task):
@@ -375,8 +387,10 @@ class CountExperiment(luigi.Task):
         # Each DownloadSample-like tasks have a sample_id property! Use that!
         keys = [os.path.basename(f.path).replace(f'.{self.scope}.results', '') for f in self.input()]
 
-        counts_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).expected_count for f in self.input()], keys=keys, axis=1).to_csv(sep='\t')
-        fpkm_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).FPKM for f in self.input()], keys=keys, axis=1).to_csv(sep='\t')
+        counts_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).expected_count for f in self.input()],
+                                  keys=keys, axis=1).to_csv(sep='\t')
+        fpkm_buffer = pd.concat([pd.read_csv(f.path, sep='\t', index_col=0).FPKM for f in self.input()], keys=keys,
+                                axis=1).to_csv(sep='\t')
 
         with self.output()[0].open('w') as counts_out, self.output()[1].open('w') as fpkm_out:
             counts_out.write(counts_buffer)
@@ -402,11 +416,14 @@ class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
         # TODO: Have a generic strategy for extracting batch info that would
         # work for all sources
         if self.external_database == 'GEO':
-            return ExtractGeoSeriesBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id), ignored_samples=self.ignored_samples)
+            return ExtractGeoSeriesBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id),
+                                             ignored_samples=self.ignored_samples)
         elif self.external_database == 'SRA':
-            return ExtractSraProjectBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id), ignored_samples=self.ignored_samples)
+            return ExtractSraProjectBatchInfo(self.accession, metadata=dict(experiment_id=self.experiment_id),
+                                              ignored_samples=self.ignored_samples)
         else:
-            raise NotImplementedError('Extracting batch information from {} is not supported.'.format(self.external_database))
+            raise NotImplementedError(
+                'Extracting batch information from {} is not supported.'.format(self.external_database))
 
     def output(self):
         return GemmaDatasetHasBatch(self.experiment_id)
@@ -461,7 +478,8 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaTaskMixin, luigi.T
         copytree(dirname(self.input().path), dirname(self.output().path), dirs_exist_ok=True)
 
     def output(self):
-       return luigi.LocalTarget(join(gemma_cfg.appdata_dir, 'metadata', self.experiment_id, 'MultiQCReports/multiqc_report.html'))
+        return luigi.LocalTarget(
+            join(gemma_cfg.appdata_dir, 'metadata', self.experiment_id, 'MultiQCReports/multiqc_report.html'))
 
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma, SubmitExperimentReportToGemma)
 class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
@@ -494,7 +512,9 @@ class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
     def on_success(self):
         # report success to curators
         if cfg.SLACK_WEBHOOK_URL is not None:
-            payload = {'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> data and batch information have been successfully submitted to Gemma.'.format(self.experiment_id)}
+            payload = {
+                'text': '<https://gemma.msl.ubc.ca/expressionExperiment/showExpressionExperiment.html?shortName={0}|{0}> data and batch information have been successfully submitted to Gemma.'.format(
+                    self.experiment_id)}
             requests.post(cfg.SLACK_WEBHOOK_URL, json=payload)
         return super().on_success()
 
@@ -515,33 +535,44 @@ class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
         return super().complete() and all(not out.exists() for out in self._targets_to_remove())
 
 class SubmitExperimentsFromDataFrameMixin:
-    ignore_priority = luigi.BoolParameter(positional=False, significant=False, description='Ignore the priority column and inherit the priority of the this task. Rows with zero priority are nonetheless ignored.')
+    ignore_priority = luigi.BoolParameter(positional=False, significant=False,
+                                          description='Ignore the priority column and inherit the priority of the this task. Rows with zero priority are nonetheless ignored.')
+
     def requires(self):
         df = self._retrieve_dataframe()
         # using None, the worker will inherit the priority from this task for all its dependencies
         try:
-            return [SubmitExperimentToGemma(row.experiment_id, priority=100 if self.ignore_priority else row.get('priority', 100), rerun=row.get('data')=='resubmit')
-                for _, row in df.iterrows() if row.get('priority', 1) > 0]
+            return [SubmitExperimentToGemma(row.experiment_id,
+                                            priority=100 if self.ignore_priority else row.get('priority', 100),
+                                            rerun=row.get('data') == 'resubmit')
+                    for _, row in df.iterrows() if row.get('priority', 1) > 0]
         except AttributeError as e:
             raise Exception(f'Failed to read experiments from {self._filename()}, is it valid?') from e
 
 class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, TaskWithOutputMixin, WrapperTask):
     input_file = luigi.Parameter()
+
     def _filename(self):
         return self.input_file
+
     def _retrieve_dataframe(self):
         return pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
 
 class SubmitExperimentsFromGoogleSpreadsheetToGemma(SubmitExperimentsFromDataFrameMixin, WrapperTask):
-    spreadsheet_id = luigi.Parameter(description='Spreadsheet ID in Google Sheets (lookup {spreadsheetId} in https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit)')
+    spreadsheet_id = luigi.Parameter(
+        description='Spreadsheet ID in Google Sheets (lookup {spreadsheetId} in https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit)')
     sheet_name = luigi.Parameter(description='Name of the spreadsheet in the document')
+
     def _filename(self):
         return 'https://docs.google.com/spreadsheets/d/' + self.spreadsheet_id
+
     # TODO: use the spreadsheet revision ID
     # For now, all that does is distinguishing spreadsheet tasks which might
     # refer to different revisions, which in turn allows newly added tasks to
     # be executed
-    revision_id = luigi.Parameter(default=str(uuid.uuid4()), description='Revision ID of the spreadsheet (not yet supported, but will default to the latest)')
+    revision_id = luigi.Parameter(default=str(uuid.uuid4()),
+                                  description='Revision ID of the spreadsheet (not yet supported, but will default to the latest)')
+
     def _retrieve_dataframe(self):
         from .gsheet import retrieve_spreadsheet
         return retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)

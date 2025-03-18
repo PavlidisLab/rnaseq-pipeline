@@ -1,5 +1,4 @@
 from rnaseq_pipeline.gemma import *
-import os
 
 def test_gemma_api():
     gemma_api = GemmaApi()

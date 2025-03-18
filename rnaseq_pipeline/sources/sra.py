@@ -1,20 +1,20 @@
-from datetime import timedelta
 import gzip
 import logging
 import os
-from os.path import join
-import shlex
 import subprocess
-from subprocess import Popen, check_output, PIPE
 import xml.etree.ElementTree as ET
+from datetime import timedelta
+from os.path import join
+from subprocess import Popen, check_output, PIPE
 
+import luigi
+import pandas as pd
 from bioluigi.tasks import sratoolkit
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
-import luigi
 from luigi.util import requires
-import pandas as pd
 
 from ..config import rnaseq_pipeline
+from ..platforms import IlluminaPlatform
 from ..targets import ExpirableLocalTarget
 from ..utils import remove_task_output, RerunnableTaskMixin
 
@@ -23,7 +23,8 @@ cfg = rnaseq_pipeline()
 logger = logging.getLogger('luigi-interface')
 
 def read_runinfo(path):
-    SRA_RUNINFO_COLUMNS = 'Run,ReleaseDate,LoadDate,spots,bases,spots_with_mates,avgLength,size_MB,AssemblyName,download_path,Experiment,LibraryName,LibraryStrategy,LibrarySelection,LibrarySource,LibraryLayout,InsertSize,InsertDev,Platform,Model,SRAStudy,BioProject,Study_Pubmed_id,ProjectID,Sample,BioSample,SampleType,TaxID,ScientificName,SampleName,g1k_pop_code,source,g1k_analysis_group,Subject_ID,Sex,Disease,Tumor,Affection_Status,Analyte_Type,Histological_Type,Body_Site,CenterName,Submission,dbgap_study_accession,Consent,RunHash,ReadHash'.split(',')
+    SRA_RUNINFO_COLUMNS = 'Run,ReleaseDate,LoadDate,spots,bases,spots_with_mates,avgLength,size_MB,AssemblyName,download_path,Experiment,LibraryName,LibraryStrategy,LibrarySelection,LibrarySource,LibraryLayout,InsertSize,InsertDev,Platform,Model,SRAStudy,BioProject,Study_Pubmed_id,ProjectID,Sample,BioSample,SampleType,TaxID,ScientificName,SampleName,g1k_pop_code,source,g1k_analysis_group,Subject_ID,Sex,Disease,Tumor,Affection_Status,Analyte_Type,Histological_Type,Body_Site,CenterName,Submission,dbgap_study_accession,Consent,RunHash,ReadHash'.split(
+        ',')
     df = pd.read_csv(path)
     if df.columns[0] != 'Run':
         logger.warning('Runinfo file %s is missing a header, a fallback will be used instead.', path)
@@ -83,7 +84,8 @@ class DumpSraRun(luigi.Task):
                                    metadata=self.metadata)
         if not self.complete():
             labelling = 'paired' if self.paired_reads else 'single-end'
-            raise RuntimeError(f'{repr(self)} was not completed after successful fastq-dump execution. Is it possible the SRA run is mislabelled as {labelling}?')
+            raise RuntimeError(
+                f'{repr(self)} was not completed after successful fastq-dump execution. Is it possible the SRA run is mislabelled as {labelling}?')
 
     def output(self):
         output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
@@ -118,7 +120,8 @@ class DownloadSraExperimentRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, l
             f.write(retrieve_runinfo(self.srx))
 
     def output(self):
-        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)), ttl=timedelta(days=14))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srx)),
+                                    ttl=timedelta(days=14))
 
 @requires(DownloadSraExperimentRunInfo)
 class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -131,8 +134,10 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     srr = luigi.OptionalParameter(default=None, description='Specific SRA run accession to use (defaults to latest)')
 
-    force_single_end = luigi.BoolParameter(positional=False, significant=False, default=False, description='Force the library layout to be single-end')
-    force_paired_reads = luigi.BoolParameter(positional=False, significant=False, default=False, description='Force the library layout to be paired')
+    force_single_end = luigi.BoolParameter(positional=False, significant=False, default=False,
+                                           description='Force the library layout to be single-end')
+    force_paired_reads = luigi.BoolParameter(positional=False, significant=False, default=False,
+                                             description='Force the library layout to be paired')
 
     @property
     def sample_id(self):
@@ -180,14 +185,17 @@ class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             f.write(retrieve_runinfo(self.srp))
 
     def output(self):
-        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)), ttl=timedelta(days=14))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.runinfo'.format(self.srp)),
+                                    ttl=timedelta(days=14))
 
 @requires(DownloadSraProjectRunInfo)
 class DownloadSraProject(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     ignored_samples = luigi.ListParameter(default=[], description='Ignored SRX identifiers')
+
     def run(self):
         df = read_runinfo(self.input().path)
-        yield [DownloadSraExperiment(experiment, metadata=self.metadata) for experiment, runs in df.groupby('Experiment') if experiment not in self.ignored_samples]
+        yield [DownloadSraExperiment(experiment, metadata=self.metadata) for experiment, runs in
+               df.groupby('Experiment') if experiment not in self.ignored_samples]
 
 @requires(DownloadSraProjectRunInfo, DownloadSraProject)
 class ExtractSraProjectBatchInfo(luigi.Task):
@@ -210,4 +218,5 @@ class ExtractSraProjectBatchInfo(luigi.Task):
                     info_out.write('\t'.join([experiment_id, fastq_id, row.Platform, srx_uri, fastq_header]) + '\n')
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.BATCHINFODIR, 'sra', '{}.fastq-headers-table'.format(self.srp)))
+        return luigi.LocalTarget(
+            join(cfg.OUTPUT_DIR, cfg.BATCHINFODIR, 'sra', '{}.fastq-headers-table'.format(self.srp)))
