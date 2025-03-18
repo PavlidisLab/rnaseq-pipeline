@@ -67,5 +67,4 @@ if module:
     print('complete -c ' + quote(luigi_executable) + ' -n ' + quote('not __fish_seen_subcommand_from ' + ' '.join(commands)) + ' -a ' + quote(' '.join(commands)))
     for command in commands:
         proc = subprocess.run([luigi_executable, '--module', module, command, '--help'], capture_output=True, text=True)
-        print(proc.stdout.splitlines())
         generate_completion(proc.stdout.splitlines(), command=command)
