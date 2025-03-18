@@ -32,8 +32,9 @@ class GemmaApi:
         if 'GEMMA_PASSWORD' in os.environ:
             return os.environ['GEMMA_PASSWORD']
         elif 'GEMMA_PASSWORD_CMD' in os.environ:
-            proc = subprocess.run(os.environ['GEMMA_PASSWORD_CMD'], shell=True, check=True, text=True, stdout=subprocess.PIPE)
-            return proc.stdout
+            proc = subprocess.run(os.environ['GEMMA_PASSWORD_CMD'], shell=True, check=True, text=True,
+                                  stdout=subprocess.PIPE)
+            return proc.stdout.splitlines()[0]
         else:
             return getpass()
 
