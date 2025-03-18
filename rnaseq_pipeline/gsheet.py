@@ -1,18 +1,16 @@
-import argparse
+import logging
 import logging
 import os
 import os.path
 import pickle
-import sys
-from os.path import dirname, expanduser, join
-from pkg_resources import resource_filename
+from os.path import join
 
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-import luigi
 import pandas as pd
 import xdg.BaseDirectory
+from google.auth.transport.requests import Request
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from pkg_resources import resource_filename
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 CREDENTIALS_FILE = resource_filename('rnaseq_pipeline', 'credentials.json')
@@ -47,7 +45,8 @@ def retrieve_spreadsheet(spreadsheet_id, sheet_name):
     service = build('sheets', 'v4', credentials=_authenticate(), cache_discovery=None)
 
     # Retrieve the documents contents from the Docs service.
-    rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=sheet_name).execute()
+    rnaseq_pipeline_queue = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id,
+                                                                range=sheet_name).execute()
 
     # this will fail if people add new columns
     df = pd.DataFrame(rnaseq_pipeline_queue['values'][1:], columns=rnaseq_pipeline_queue['values'][0])

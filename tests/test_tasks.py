@@ -1,12 +1,7 @@
-import datetime
 import pytest
 
-import luigi
-
-from rnaseq_pipeline.config import rnaseq_pipeline
-from rnaseq_pipeline.tasks import *
-
 from rnaseq_pipeline.sources.geo import match_geo_platform
+from rnaseq_pipeline.tasks import *
 
 cfg = rnaseq_pipeline()
 
@@ -47,6 +42,7 @@ def test_align_sample_task():
 def test_gemma_task_mixin():
     class GemmaTask(GemmaTaskMixin, luigi.Task):
         pass
+
     gemma_task = GemmaTask('GSE110256')
     assert gemma_task.taxon == 'mouse'
     assert gemma_task.accession == 'GSE110256'

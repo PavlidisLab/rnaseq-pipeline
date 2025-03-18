@@ -1,15 +1,16 @@
-from os import listdir
 from os.path import basename, getctime, join, dirname
-from glob import glob
 import datetime
+from glob import glob
+from os.path import basename, getctime, join, dirname
 
 import luigi
-from flask import Flask, send_file, render_template, url_for, request, abort
 import pandas as pd
+from flask import Flask, send_file, render_template, abort
 
 from rnaseq_pipeline.config import rnaseq_pipeline
-from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, ExtractGeoSeriesBatchInfo, SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma
 from rnaseq_pipeline.gemma import GemmaTaskMixin
+from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, SubmitExperimentDataToGemma, \
+    SubmitExperimentBatchInfoToGemma
 
 app = Flask('rnaseq_pipeline.webviewer')
 
@@ -31,7 +32,9 @@ def not_found(e):
 @app.route('/')
 def home():
     report_dir = join(cfg.OUTPUT_DIR, 'report')
-    latest_experiments = [(basename(path), basename(dirname(path)), datetime.datetime.now() - datetime.datetime.fromtimestamp(getctime(path))) for path in sorted(glob(join(report_dir, '*', '*')), key=lambda path: -getctime(path))]
+    latest_experiments = [(basename(path), basename(dirname(path)),
+                           datetime.datetime.now() - datetime.datetime.fromtimestamp(getctime(path))) for path in
+                          sorted(glob(join(report_dir, '*', '*')), key=lambda path: -getctime(path))]
     return render_template('index.html', latest_experiments=latest_experiments[:10])
 
 @app.route('/experiment/<experiment_id>')
@@ -44,14 +47,16 @@ def experiment_summary(experiment_id):
     submit_batch_info_task = SubmitExperimentBatchInfoToGemma(experiment_id)
     ebi_task = submit_batch_info_task.requires()
     if ebi_task.complete():
-        batch_info = pd.read_csv(ebi_task.output().path, sep='\t', names=['geo_sample_id', 'sra_run_id', 'geo_platform_id', 'sra_experiment_url', 'fastq_header'])
+        batch_info = pd.read_csv(ebi_task.output().path, sep='\t',
+                                 names=['geo_sample_id', 'sra_run_id', 'geo_platform_id', 'sra_experiment_url',
+                                        'fastq_header'])
     else:
         batch_info = None
 
     return render_template('experiment-summary.html',
-            experiment_id=experiment_id, batch_info=batch_info,
-            submit_data_task=submit_data_task,
-            submit_batch_info_task=submit_batch_info_task)
+                           experiment_id=experiment_id, batch_info=batch_info,
+                           submit_data_task=submit_data_task,
+                           submit_batch_info_task=submit_batch_info_task)
 
 @app.route('/experiment/<experiment_id>/batch-info')
 def experiment_batch_info(experiment_id):
@@ -94,7 +99,8 @@ def experiment_report(experiment_id, reference_id=None):
     else:
         taxon = 'human'
         source = 'local'
-    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id, taxon=taxon, source=source)
+    generate_report_task = GenerateReportForExperiment(experiment_id, reference_id=reference_id, taxon=taxon,
+                                                       source=source)
     if not generate_report_task.complete():
         abort(404, f'No report available for {experiment_id} in {reference_id}.')
     return send_file(generate_report_task.output().path)

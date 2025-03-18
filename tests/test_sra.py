@@ -1,11 +1,12 @@
+import os
+import shutil
+from os.path import dirname
+
 import luigi
 import pytest
-import shutil
 
-from os.path import dirname
-import os
-
-from rnaseq_pipeline.sources.sra import DownloadSraExperimentRunInfo, DownloadSraProjectRunInfo, EmptyRunInfoError, DownloadSraExperiment
+from rnaseq_pipeline.sources.sra import DownloadSraExperimentRunInfo, DownloadSraProjectRunInfo, EmptyRunInfoError, \
+    DownloadSraExperiment
 
 def test_download_sra_experiment_run_info():
     task = DownloadSraExperimentRunInfo(srx='SRX12752257')

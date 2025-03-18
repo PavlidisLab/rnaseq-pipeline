@@ -1,9 +1,9 @@
-from glob import glob
 import os
+from glob import glob
 from os.path import join
 
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 
 from ..config import rnaseq_pipeline
 
@@ -23,11 +23,12 @@ class DownloadLocalSample(luigi.Task):
 
     def output(self):
         # we sort to make sure that pair ends are in correct order
-        return [luigi.LocalTarget(f) for f in sorted(glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, self.sample_id, '*.fastq.gz')))]
+        return [luigi.LocalTarget(f) for f in
+                sorted(glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, self.sample_id, '*.fastq.gz')))]
 
 class DownloadLocalExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment_id = luigi.Parameter()
 
     def run(self):
         yield [DownloadLocalSample(self.experiment_id, os.path.basename(f))
-                for f in glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, '*'))]
+               for f in glob(join(cfg.OUTPUT_DIR, cfg.DATA, 'local', self.experiment_id, '*'))]

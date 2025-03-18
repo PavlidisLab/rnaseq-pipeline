@@ -1,4 +1,4 @@
-from rnaseq_pipeline.platforms import Platform, BgiPlatform, IlluminaPlatform, IlluminaNexteraPlatform
+from rnaseq_pipeline.platforms import BgiPlatform, IlluminaPlatform, IlluminaNexteraPlatform
 
 def test_bgi_platform_trim_single_end_reads():
     task = BgiPlatform('BGISEQ-500').get_trim_single_end_reads_task('r1', 'r1_dest')

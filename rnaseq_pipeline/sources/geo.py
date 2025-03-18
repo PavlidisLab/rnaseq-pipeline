@@ -6,29 +6,25 @@ import gzip
 import logging
 import os
 import re
-import requests
 import tarfile
 import tempfile
-
 from datetime import timedelta
 from functools import lru_cache
 from os.path import join
-from subprocess import Popen
 from urllib.parse import urlparse, parse_qs
 from xml.etree import ElementTree
 
 import luigi
 import requests
-
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 from luigi.util import requires
 
+from .sra import DownloadSraExperiment
 from ..config import rnaseq_pipeline
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
-from ..platforms import Platform, BgiPlatform, IlluminaPlatform
+from ..platforms import BgiPlatform, IlluminaPlatform
 from ..targets import ExpirableLocalTarget
 from ..utils import RerunnableTaskMixin
-from .sra import DownloadSraExperiment
 
 cfg = rnaseq_pipeline()
 
@@ -53,7 +49,8 @@ def match_geo_platform(geo_platform):
         return BgiPlatform(geo_platform_title.split(' ')[0])
 
     # Illumina HiSeq X and NextSeq 550 platforms are not prefixed with Illumina
-    illumina_regex = [r'Illumina (.+) \(.+\)', r'(HiSeq X .+) \(.+\)', r'(NextSeq 550) \(.+\)', r'(NextSeq 2000) \(.+\)']
+    illumina_regex = [r'Illumina (.+) \(.+\)', r'(HiSeq X .+) \(.+\)', r'(NextSeq 550) \(.+\)',
+                      r'(NextSeq 2000) \(.+\)']
 
     for r in illumina_regex:
         illumina_match = re.match(r, geo_platform_title)
@@ -85,7 +82,8 @@ class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             f.write(res.text)
 
     def output(self):
-        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)), ttl=timedelta(days=14))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)),
+                                    ttl=timedelta(days=14))
 
 @requires(DownloadGeoSampleMetadata)
 class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -131,22 +129,25 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     def run(self):
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
-        res = requests.get('https://ftp.ncbi.nlm.nih.gov/geo/series/'+ self.gse[:-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz', stream=True)
+        res = requests.get('https://ftp.ncbi.nlm.nih.gov/geo/series/' + self.gse[
+                                                                        :-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz',
+                           stream=True)
         res.raise_for_status()
         # we need to use a temporary file because Response.raw does not allow seeking
         with tempfile.TemporaryFile() as tmp:
             for chunk in res.iter_content(chunk_size=1024):
                 tmp.write(chunk)
             tmp.seek(0)
-            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().temporary_path() as fpath, open(fpath, 'wb') as f:
+            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().temporary_path() as fpath, open(fpath,
+                                                                                                              'wb') as f:
                 reader = fin.extractfile(self.gse + '_family.xml')
                 while chunk := reader.read(1024):
                     f.write(chunk)
 
-
     def output(self):
         # TODO: remove the _family suffix
-        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)), ttl=timedelta(days=14))
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)),
+                                    ttl=timedelta(days=14))
 
 @requires(DownloadGeoSeriesMetadata)
 class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -177,7 +178,9 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
         with self.output().open('w') as info_out:
             for sample in samples:
                 if len(sample.output()) == 0:
-                    logger.warning('GEO sample %s has no associated FASTQs from which batch information can be extracted.', sample.sample_id)
+                    logger.warning(
+                        'GEO sample %s has no associated FASTQs from which batch information can be extracted.',
+                        sample.sample_id)
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession

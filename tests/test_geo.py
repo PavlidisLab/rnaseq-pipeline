@@ -1,8 +1,9 @@
-from rnaseq_pipeline.sources.geo import match_geo_platform, retrieve_geo_platform_miniml, DownloadGeoSampleMetadata, DownloadGeoSeriesMetadata
-from rnaseq_pipeline.platforms import IlluminaPlatform
-from rnaseq_pipeline.utils import remove_task_output
-
 import luigi
+
+from rnaseq_pipeline.platforms import IlluminaPlatform
+from rnaseq_pipeline.sources.geo import match_geo_platform, DownloadGeoSampleMetadata, \
+    DownloadGeoSeriesMetadata
+from rnaseq_pipeline.utils import remove_task_output
 
 def test_parse_illumina_platform():
     platform = match_geo_platform('GPL30172')

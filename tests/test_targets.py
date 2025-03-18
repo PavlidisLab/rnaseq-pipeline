@@ -1,7 +1,7 @@
 import tempfile
-
 from datetime import timedelta
 from time import sleep
+
 from rnaseq_pipeline.targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, ExpirableLocalTarget
 
 def test_gemma_targets():

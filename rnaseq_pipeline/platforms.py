@@ -13,7 +13,7 @@ class Platform:
         pass
 
     @abstractmethod
-    def get_trim_paired_reads_task(r1,r2, r1_dest, r2_dest, **kwargs):
+    def get_trim_paired_reads_task(r1, r2, r1_dest, r2_dest, **kwargs):
         pass
 
 class BgiPlatform(Platform):
@@ -33,18 +33,18 @@ class BgiPlatform(Platform):
 
     def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
         return cutadapt.TrimReads(
-                r1,
-                dest,
-                adapter_3prime=BgiPlatform.FORWARD_FILTER,
-                **kwargs)
+            r1,
+            dest,
+            adapter_3prime=BgiPlatform.FORWARD_FILTER,
+            **kwargs)
 
     def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
         return cutadapt.TrimPairedReads(
-                r1, r2,
-                r1_dest, r2_dest,
-                adapter_3prime=BgiPlatform.FORWARD_FILTER,
-                reverse_adapter_3prime=BgiPlatform.REVERSE_FILTER,
-                **kwargs)
+            r1, r2,
+            r1_dest, r2_dest,
+            adapter_3prime=BgiPlatform.FORWARD_FILTER,
+            reverse_adapter_3prime=BgiPlatform.REVERSE_FILTER,
+            **kwargs)
 
 class IlluminaPlatform(Platform):
     """
@@ -59,18 +59,18 @@ class IlluminaPlatform(Platform):
 
     def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
         return cutadapt.TrimReads(
-                r1,
-                dest,
-                adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
-                **kwargs)
+            r1,
+            dest,
+            adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
+            **kwargs)
 
     def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
         return cutadapt.TrimPairedReads(
-                r1, r2,
-                r1_dest, r2_dest,
-                adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
-                reverse_adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
-                **kwargs)
+            r1, r2,
+            r1_dest, r2_dest,
+            adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
+            reverse_adapter_3prime=IlluminaPlatform.UNIVERSAL_ADAPTER,
+            **kwargs)
 
 class IlluminaNexteraPlatform(Platform):
     """
@@ -85,11 +85,11 @@ class IlluminaNexteraPlatform(Platform):
 
     def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
         return cutadapt.TrimReads(
-                r1,
-                dest,
-                cut=12,
-                adapter_3prime=IlluminaNexteraPlatform.NEXTERA_ADAPTER,
-                **kwargs)
+            r1,
+            dest,
+            cut=12,
+            adapter_3prime=IlluminaNexteraPlatform.NEXTERA_ADAPTER,
+            **kwargs)
 
     def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
         raise NotImplementedError

@@ -3,8 +3,8 @@ import logging
 import os
 from os.path import join
 
-from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 import luigi
+from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 from luigi.util import requires
 
 from .geo import DownloadGeoSample
@@ -33,9 +33,12 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             accession = sample['accession']['accession']
             external_database = sample['accession']['externalDatabase']['name']
             if external_database == 'GEO':
-                download_sample_tasks.append(DownloadGeoSample(accession, metadata=dict(experiment_id=self.experiment_id, sample_id=accession)))
+                download_sample_tasks.append(
+                    DownloadGeoSample(accession, metadata=dict(experiment_id=self.experiment_id, sample_id=accession)))
             elif external_database == 'SRA':
-                download_sample_tasks.append(DownloadSraExperiment(accession, metadata=dict(experiment_id=self.experiment_id, sample_id=accession)))
+                download_sample_tasks.append(DownloadSraExperiment(accession,
+                                                                   metadata=dict(experiment_id=self.experiment_id,
+                                                                                 sample_id=accession)))
             else:
                 logger.warning('Downloading %s from %s is not supported.', accession, external_database)
                 continue
@@ -51,7 +54,9 @@ class ExtractGemmaExperimentBatchInfo(luigi.Task):
                     continue
 
                 if len(sample.output()) == 0:
-                    logger.warning('GEO sample %s has no associated FASTQs from which batch information can be extracted.', sample.sample_id)
+                    logger.warning(
+                        'GEO sample %s has no associated FASTQs from which batch information can be extracted.',
+                        sample.sample_id)
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession
