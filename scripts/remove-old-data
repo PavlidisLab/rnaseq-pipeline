@@ -1,0 +1,6 @@
+#!/bin/sh
+
+output_dir=/cosmos/data/pipeline-output/rnaseq
+
+find "$output_dir/data/sra" -mtime +30 -delete -print
+find "$output_dir/data-trimmed" -mtime +30 -delete -print

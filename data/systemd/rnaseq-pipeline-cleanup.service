@@ -1,0 +1,6 @@
+[Unit]
+Description=PavLab RNA-Seq Pipeline Cleanup
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "./scripts/remove-old-data"

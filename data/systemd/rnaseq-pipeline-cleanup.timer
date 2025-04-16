@@ -1,0 +1,8 @@
+[Unit]
+Description=Cleanup the RNA-Seq Pipeline hourly
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target

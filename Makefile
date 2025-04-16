@@ -26,7 +26,7 @@ install-python:
 
 install-systemd-units:
 	mkdir -p "${DESTDIR}/etc/systemd/system/"
-	install data/systemd/rnaseq-pipeline-viewer.service data/systemd/rnaseq-pipeline-worker@.service "${DESTDIR}/etc/systemd/system/"
+	install data/systemd/*.{service,timer,target} "${DESTDIR}/etc/systemd/system/"
 	@echo "Remember to run 'systemctl override rnaseq-pipeline-viewer' and 'systemctl override rnaseq-pipeline-worker@' and set CONDA_BIN, CONDA_ENV, GEMMA_USERNAME and GEMMA_PASSWORD environment variables."
 
 install-RSEM:
