@@ -7,20 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
+    defaults:
+      run:
+        shell: bash -el {0}
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v5
+    - uses: conda-incubator/setup-miniconda@v3
       with:
-        python-version: '3.9'
-    - name: Add conda to system path
-      run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
-    - name: Setup Conda environment
-      run: |
-        conda env update --file environment.yml --name base
+        activate-environment: rnaseq-pipeline
+        environment-file: environment.yml
     - name: Install package
       run: |
         pip install .[gsheet,webviewer]
