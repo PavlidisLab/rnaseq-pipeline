@@ -99,8 +99,7 @@ class EmptyRunInfoError(Exception):
 
 def retrieve_runinfo(sra_accession):
     """Retrieve a SRA runinfo using search and efetch utilities"""
-    esearch_proc = Popen(['esearch', '-db', 'sra', '-query', sra_accession], stdout=PIPE)
-    runinfo_data = check_output(['efetch', '-format', 'runinfo'], universal_newlines=True, stdin=esearch_proc.stdout)
+    runinfo_data = check_output(['efetch', '-db', 'sra', '-id', sra_accession, '-format', 'runinfo'], universal_newlines=True)
     if not runinfo_data.strip() or (len(runinfo_data.splitlines()) == 1 and runinfo_data[:3] == 'Run'):
         raise EmptyRunInfoError(f"Runinfo for {sra_accession} is empty.")
     return runinfo_data
