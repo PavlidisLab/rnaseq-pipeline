@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870427" alias="GSM8996338_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870427</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996338_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996338: TRPM2 Mg KO+Bilirubin 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097764">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097764</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996338</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996338</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996338" accession="SRS25097764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097764</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625788</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996338</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>TRPM2 Mg KO+Bilirubin 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097764" sample_name="GSM8996338" sample_title="TRPM2 Mg KO+Bilirubin 2" spots="323630448" bases="97089134400" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097764</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625788</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996338</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="97089134400" spots="323630448" bytes="35602512221">
+      <RUN accession="SRR33642800" alias="GSM8996338_r1" total_spots="323630448" total_bases="97089134400" size="35602512221" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642800</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996338_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870427">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996338_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097764" sample_name="GSM8996338" sample_title="TRPM2 Mg KO+Bilirubin 2" spots="323630448" bases="97089134400" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097764</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625788</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996338</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021303_1.fq.gz" size="29289389665" date="2025-05-20 12:29:24" md5="678c5167494532d45dc0ce2a3c1fe837" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642800/MS25021303_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021303_2.fq.gz" size="21861725261" date="2025-05-20 12:28:12" md5="5569b41e9dcf4aab00c3ade7eb90fcf3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642800/MS25021303_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642800" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642800/SRR33642800" size="35602514735" date="2025-05-20 12:37:11" md5="c08c66877e1554685626d91cef3fa2a2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642800/SRR33642800" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642800.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642800/SRR33642800.lite.1" size="24688650087" date="2025-05-20 14:17:22" md5="1f0efecaf660af00b7b13dcbb12a7f9c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642800/SRR33642800.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642800/SRR33642800.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642800/SRR33642800.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="323630448">
+          <Read index="0" count="323630448" average="150" stdev="0"/>
+          <Read index="1" count="323630448" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="323630448"/>
+                <Elements count="97089134400"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="97089134400">
+          <Base value="A" count="25128398836"/>
+          <Base value="C" count="21581027918"/>
+          <Base value="G" count="19505302856"/>
+          <Base value="T" count="30850422765"/>
+          <Base value="N" count="23982025"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870426" alias="GSM8996337_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870426</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996337_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996337: TRPM2 Mg KO+Bilirubin 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097763">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097763</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996337</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996337</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996337" accession="SRS25097763">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097763</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625789</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996337</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>TRPM2 Mg KO+Bilirubin 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097763" sample_name="GSM8996337" sample_title="TRPM2 Mg KO+Bilirubin 1" spots="325790249" bases="97737074700" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097763</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625789</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996337</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="97737074700" spots="325790249" bytes="35788725531">
+      <RUN accession="SRR33642801" alias="GSM8996337_r1" total_spots="325790249" total_bases="97737074700" size="35788725531" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996337_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870426">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996337_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097763" sample_name="GSM8996337" sample_title="TRPM2 Mg KO+Bilirubin 1" spots="325790249" bases="97737074700" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097763</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625789</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996337</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021302_1.fq.gz" size="29573026250" date="2025-05-20 12:28:29" md5="f86648d2c64ae203e45088775b7b8194" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642801/MS25021302_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021302_2.fq.gz" size="21793574548" date="2025-05-20 12:27:18" md5="063ace05b2ce10ff729785ac31a975a3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642801/MS25021302_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642801" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642801/SRR33642801" size="35788728050" date="2025-05-20 12:34:53" md5="f77e39a83eeea663397ab77749cc3463" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642801/SRR33642801" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642801.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642801/SRR33642801.lite.1" size="24848110714" date="2025-05-20 14:20:54" md5="61c1d6d10a9cc81a4314c0583d8c5bef" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642801/SRR33642801.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642801/SRR33642801.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642801/SRR33642801.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="325790249">
+          <Read index="0" count="325790249" average="150" stdev="0"/>
+          <Read index="1" count="325790249" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="325790249"/>
+                <Elements count="97737074700"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="97737074700">
+          <Base value="A" count="24761730533"/>
+          <Base value="C" count="22372923655"/>
+          <Base value="G" count="20052826155"/>
+          <Base value="T" count="30525414251"/>
+          <Base value="N" count="24180106"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870425" alias="GSM8996336_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870425</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996336_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996336: WT+Bilirubin 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097762">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097762</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996336</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996336</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996336" accession="SRS25097762">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097762</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625790</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996336</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT+Bilirubin 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097762" sample_name="GSM8996336" sample_title="WT+Bilirubin 2" spots="317286414" bases="95185924200" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097762</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625790</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996336</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="95185924200" spots="317286414" bytes="35077333522">
+      <RUN accession="SRR33642802" alias="GSM8996336_r1" total_spots="317286414" total_bases="95185924200" size="35077333522" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642802</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996336_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870425">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996336_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097762" sample_name="GSM8996336" sample_title="WT+Bilirubin 2" spots="317286414" bases="95185924200" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097762</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625790</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996336</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021305_1.fq.gz" size="29137349174" date="2025-05-20 12:26:23" md5="d2d156ba58ef8f9e7a77d7e4fa6dda96" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642802/MS25021305_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021305_2.fq.gz" size="21031634027" date="2025-05-20 12:27:22" md5="35659a3dfb08cb20a5166d012f9bb07b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642802/MS25021305_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642802" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642802/SRR33642802" size="35077336037" date="2025-05-20 12:29:12" md5="b5a012369e4fe7264036cb8b46a305d0" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642802/SRR33642802" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642802.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642802/SRR33642802.lite.1" size="24173422981" date="2025-05-20 14:15:10" md5="7679cf77c4e0d4740aa176fb2a357cfc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642802/SRR33642802.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642802/SRR33642802.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642802/SRR33642802.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="317286414">
+          <Read index="0" count="317286414" average="150" stdev="0"/>
+          <Read index="1" count="317286414" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="317286414"/>
+                <Elements count="95185924200"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="95185924200">
+          <Base value="A" count="24538425807"/>
+          <Base value="C" count="21820664876"/>
+          <Base value="G" count="19993977174"/>
+          <Base value="T" count="28807724698"/>
+          <Base value="N" count="25131645"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870424" alias="GSM8996335_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870424</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996335_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996335: WT+Bilirubin 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097760">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097760</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996335</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996335</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996335" accession="SRS25097760">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097760</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625791</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996335</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT+Bilirubin 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097760" sample_name="GSM8996335" sample_title="WT+Bilirubin 1" spots="321686485" bases="96505945500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097760</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625791</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996335</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="96505945500" spots="321686485" bytes="35337504190">
+      <RUN accession="SRR33642803" alias="GSM8996335_r1" total_spots="321686485" total_bases="96505945500" size="35337504190" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642803</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996335_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870424">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996335_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097760" sample_name="GSM8996335" sample_title="WT+Bilirubin 1" spots="321686485" bases="96505945500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097760</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625791</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996335</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021304_1.fq.gz" size="29195731859" date="2025-05-20 12:26:46" md5="79d180664a9d48482b118295a37cf6f6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642803/MS25021304_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021304_2.fq.gz" size="21623649771" date="2025-05-20 12:25:39" md5="9eae0f1e8e152043184b661f5de24eae" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642803/MS25021304_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642803" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642803/SRR33642803" size="35337506706" date="2025-05-20 12:35:42" md5="d7bedeabdbdb0b218971a0f5c71a1094" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642803/SRR33642803" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642803.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642803/SRR33642803.lite.1" size="24537464906" date="2025-05-20 14:18:38" md5="2390f752d4f7e07cf4b354fafd37ab05" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642803/SRR33642803.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642803/SRR33642803.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642803/SRR33642803.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="321686485">
+          <Read index="0" count="321686485" average="150" stdev="0"/>
+          <Read index="1" count="321686485" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="321686485"/>
+                <Elements count="96505945500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="96505945500">
+          <Base value="A" count="24847956158"/>
+          <Base value="C" count="21636952485"/>
+          <Base value="G" count="19406094974"/>
+          <Base value="T" count="30591300946"/>
+          <Base value="N" count="23640937"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870423" alias="GSM8996334_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870423</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996334_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996334: WT+Vehicle 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097761">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097761</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996334</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996334</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996334" accession="SRS25097761">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097761</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625792</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996334</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT+Vehicle 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097761" sample_name="GSM8996334" sample_title="WT+Vehicle 2" spots="369644268" bases="110893280400" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097761</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625792</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996334</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="110893280400" spots="369644268" bytes="38308058825">
+      <RUN accession="SRR33642804" alias="GSM8996334_r1" total_spots="369644268" total_bases="110893280400" size="38308058825" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642804</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996334_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870423">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996334_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097761" sample_name="GSM8996334" sample_title="WT+Vehicle 2" spots="369644268" bases="110893280400" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097761</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625792</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996334</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021307_1.fq.gz" size="30537156101" date="2025-05-20 12:27:55" md5="270129aaa1aa1cc3bab679447bd01623" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642804/MS25021307_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021307_2.fq.gz" size="23445004043" date="2025-05-20 12:29:02" md5="df16daeb4d4d6e747d3a91853a138752" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642804/MS25021307_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642804" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642804/SRR33642804" size="38308061042" date="2025-05-20 12:47:51" md5="2d87d69d49450d603737ed28e076612d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642804/SRR33642804" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642804.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642804/SRR33642804.lite.1" size="28105332242" date="2025-05-20 14:21:36" md5="1f6442d8de273bf4882ef69d1ccb186a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642804/SRR33642804.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642804/SRR33642804.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642804/SRR33642804.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="369644268">
+          <Read index="0" count="369644268" average="150" stdev="0"/>
+          <Read index="1" count="369644268" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="369644268"/>
+                <Elements count="110893280400"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="110893280400">
+          <Base value="A" count="27673039986"/>
+          <Base value="C" count="24429543970"/>
+          <Base value="G" count="22267786564"/>
+          <Base value="T" count="36514870256"/>
+          <Base value="N" count="8039624"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28870422" alias="GSM8996333_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28870422</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996333_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8996333: WT+Vehicle 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP586600">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP586600</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS25097759">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS25097759</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8996333</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8996333</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Department of Anesthesiology,First Affiliated Hospital of USTC" accession="SRA2133271" alias="SUB15334111">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2133271</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Department of Anesthesiology,First Affiliated Hospital of USTC">SUB15334111</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Department of Anesthesiology,First Affiliated Hospital of USTC</Name>
+      <Contact email="shuaijiesun13@gmail.com">
+        <Address>
+          <Street>The First Affiliated Hospital of USTC</Street>
+          <City>Hefei</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Shuaijie</First>
+          <Last>Sun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE297666" accession="SRP586600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP586600</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1265653</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE297666</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Research on the role and mechanism of stress liver regulation of negative emotions</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-stress hepatic metabolic dysfunction is a critical factor in the development of negative emotional states after liver transplantation (NEALT), severely impairing postoperative patient recovery. However, its pathological mechanisms remain unclear. Microglia (Mg), as central immune cells, express numerous sensory receptors on their membranes and serve as a key link between peripheral organ stress and brain nucleus regulation. By constructing microglia-specific gene knockout mice, liver transplantation, and restraint stress models, combined with behavioral tests and multi-omics analysis, we found that transplanting a stressed donor liver into a non-stressed recipient mouse could mimic clinical NEALT symptoms. The anterior cingulate cortex (ACC) is a key brain region regulating emotional responses and sensory perception. Mechanistic studies revealed that stress-induced liver detoxification dysfunction leads to elevated bilirubin levels, which acts as a ligand to activate the TRPM2 receptor in ACC microglia, enhancing their impact on glutamatergic synapses and ultimately leading to decreased neuronal activity and NEALT development. We propose a hypothesis: stressed livers drive microglia to excessively engulf glutamatergic synapses via the liver-brain-Mg TRPM2 signaling axis. Evaluating interventions targeting this axis holds significant potential for NEALT prevention and treatment, providing significant insights into its mechanisms and therapeutic strategies. Overall design: Freshly dissociated single-cell suspensions were loaded to 10X Genome GenCode Single-cell instrument to generate GEMs (Gel Bead-In-EMlusion). ScRNA-seq libraries were subsequently prepared following the manufacturer's protocol of Chromium Next GEM Single Cell 3' Regent Kits v3.1. Libraries were then sequenced using the Novaseq 6000 platform with paired-end sequencing (PE150) mode.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE297666</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8996333" accession="SRS25097759">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS25097759</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48625793</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8996333</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT+Vehicle 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1265653</ID>
+            <LABEL>PRJNA1265653</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS25097759" sample_name="GSM8996333" sample_title="WT+Vehicle 1" spots="313876584" bases="94162975200" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS25097759</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48625793</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996333</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="94162975200" spots="313876584" bytes="32621145330">
+      <RUN accession="SRR33642805" alias="GSM8996333_r1" total_spots="313876584" total_bases="94162975200" size="32621145330" load_done="true" published="2025-05-28 00:02:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33642805</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8996333_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28870422">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8996333_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS25097759" sample_name="GSM8996333" sample_title="WT+Vehicle 1" spots="313876584" bases="94162975200" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS25097759</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48625793</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8996333</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="MS25021306_1.fq.gz" size="26097485055" date="2025-05-20 12:20:32" md5="cea8328f606cd12e6932141646b1c09d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642805/MS25021306_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="MS25021306_2.fq.gz" size="20046164093" date="2025-05-20 12:19:30" md5="dbbf74945ee8bbc7bd81f74c9a2e0774" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR33642805/MS25021306_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642805" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642805/SRR33642805" size="32621147550" date="2025-05-20 12:26:58" md5="386de8d9c1f31b2f4d767a0eb713388b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33642805/SRR33642805" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33642805.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642805/SRR33642805.lite.1" size="23876213194" date="2025-05-20 14:19:26" md5="87293635d903379c5a47aeb76006e55c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33642/SRR33642805/SRR33642805.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33642805/SRR33642805.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33642805/SRR33642805.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="313876584">
+          <Read index="0" count="313876584" average="150" stdev="0"/>
+          <Read index="1" count="313876584" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="313876584"/>
+                <Elements count="94162975200"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="94162975200">
+          <Base value="A" count="23358438440"/>
+          <Base value="C" count="20754907860"/>
+          <Base value="G" count="19193987079"/>
+          <Base value="T" count="30848997665"/>
+          <Base value="N" count="6644156"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

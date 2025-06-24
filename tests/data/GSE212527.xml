@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394931" alias="GSM6534013_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394931</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534013_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534013: SRC141; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953075">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953075</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534013</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534013</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1884888" alias="SUB14494661">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1884888</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB14494661</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534013" accession="SRS14953075">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953075</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631350</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534013</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC141</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953075" sample_name="GSM6534013" sample_title="SRC141" spots="296465598" bases="34982940564" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953075</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631350</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534013</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="34982940564" spots="296465598" bytes="10575614328">
+      <RUN accession="SRR21389614" alias="GSM6534013_r1" total_spots="148067750" total_bases="17471994500" size="5276833734" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389614</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534013_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394931">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534013_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14953075" sample_name="GSM6534013" sample_title="SRC141" spots="148067750" bases="17471994500" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953075</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631350</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534013</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR21389614.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389614/SRR21389614.lite.1" size="4256444630" date="2022-10-13 02:25:25" md5="608d9390cc84991210158986758d3031" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389614/SRR21389614.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389614/SRR21389614.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389614/SRR21389614.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389614" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389614/SRR21389614" size="5276834966" date="2022-09-01 15:47:50" md5="67d0d60d7ebe5ed0264b1257f3e2a34a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389614/SRR21389614" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC164_L001_R2.fastq.gz" size="6095994720" date="2022-09-01 15:46:01" md5="cc364239ec8992eea17a67888963cc8b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR21389614/SRC164_L001_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC164_L001_R1.fastq.gz" size="5428209018" date="2022-09-01 15:44:49" md5="75cae8a20933b1e22d7f0d5a1709af43" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389614/SRC164_L001_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="148067750">
+          <Read index="0" count="148067750" average="28" stdev="0"/>
+          <Read index="1" count="148067750" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="148067750"/>
+                <Elements count="17471994500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="17471994500">
+          <Base value="A" count="4842689065"/>
+          <Base value="C" count="4060952446"/>
+          <Base value="G" count="4154768712"/>
+          <Base value="T" count="4401866634"/>
+          <Base value="N" count="11717643"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389615" alias="GSM6534013_r2" total_spots="148397848" total_bases="17510946064" size="5298780594" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389615</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534013_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394931">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534013_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14953075" sample_name="GSM6534013" sample_title="SRC141" spots="148397848" bases="17510946064" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953075</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631350</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534013</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC164_L002_R1.fastq.gz" size="5452305185" date="2022-09-01 17:01:42" md5="488a4835041c26b10453c439b84942c7" version="2" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389615/SRC164_L002_R1.fastq.gz.2" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC164_L002_R2.fastq.gz" size="6126942545" date="2022-09-01 17:02:39" md5="3c7a2910249e592b408b92f58955beb2" version="2" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389615/SRC164_L002_R2.fastq.gz.2" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389615" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389615/SRR21389615" size="5298781826" date="2022-09-01 17:04:14" md5="e1cc1468b1c430e3552a4484ee2ae802" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389615/SRR21389615" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389615.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389615/SRR21389615.lite.1" size="4270761406" date="2022-10-13 02:22:35" md5="8ef6f389afa4e9459fee237749d87448" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389615/SRR21389615.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389615/SRR21389615.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389615/SRR21389615.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="148397848">
+          <Read index="0" count="148397848" average="28" stdev="0"/>
+          <Read index="1" count="148397848" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="148397848"/>
+                <Elements count="17510946064"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="17510946064">
+          <Base value="A" count="4858929858"/>
+          <Base value="C" count="4066511785"/>
+          <Base value="G" count="4158380669"/>
+          <Base value="T" count="4414220040"/>
+          <Base value="N" count="12903712"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394929" alias="GSM6534011_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394929</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534011_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534011: SRC164; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953073">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953073</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534011</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534011</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1884888" alias="SUB14494661">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1884888</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB14494661</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534011" accession="SRS14953073">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953073</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631352</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534011</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC164</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953073" sample_name="GSM6534011" sample_title="SRC164" spots="116022653" bases="16011126114" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953073</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631352</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534011</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="16011126114" spots="116022653" bytes="4879884629">
+      <RUN accession="SRR21389618" alias="GSM6534011_r1" total_spots="57185319" total_bases="7891574022" size="2405857245" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389618</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534011_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394929">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534011_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953073" sample_name="GSM6534011" sample_title="SRC164" spots="57185319" bases="7891574022" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953073</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631352</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534011</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC141_L001_I1_001.fastq.gz" size="330757184" date="2022-09-01 18:05:28" md5="840fb44b013243749d06bda35e36eae7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21389618/SRC141_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L001_I2_001.fastq.gz" size="382343120" date="2022-09-01 18:05:23" md5="1e637c3f98b0f44bfa138ceb5d263146" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21389618/SRC141_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L001_R1_001.fastq.gz" size="1178286016" date="2022-09-01 18:05:40" md5="de04d3940c063fd404130b4ba0870a1e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389618/SRC141_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L001_R2_001.fastq.gz" size="2715710174" date="2022-09-01 18:06:06" md5="874d6dadf9d0b93f0966abd9a491821b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389618/SRC141_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389618" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389618/SRR21389618" size="2405859762" date="2022-09-01 18:06:49" md5="64ffac6803e6ae14381ba841bfb434e4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389618/SRR21389618" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389618.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389618/SRR21389618.lite.1" size="2056108726" date="2023-05-11 20:44:38" md5="8913f650565513daa6ba07ed58730736" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389618/SRR21389618.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389618/SRR21389618.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389618/SRR21389618.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="57185319">
+          <Read index="0" count="57185319" average="10" stdev="0"/>
+          <Read index="1" count="57185319" average="10" stdev="0"/>
+          <Read index="2" count="57185319" average="28" stdev="0"/>
+          <Read index="3" count="57185319" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="57185319"/>
+                <Elements count="7891574022"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="5146678710">
+          <Base value="A" count="1424481899"/>
+          <Base value="C" count="1213378876"/>
+          <Base value="G" count="1266630245"/>
+          <Base value="T" count="1238737836"/>
+          <Base value="N" count="3449854"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389619" alias="GSM6534011_r2" total_spots="58837334" total_bases="8119552092" size="2474027384" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389619</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534011_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394929">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534011_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953073" sample_name="GSM6534011" sample_title="SRC164" spots="58837334" bases="8119552092" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953073</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631352</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534011</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC141_L002_I1_001.fastq.gz" size="340229706" date="2022-09-01 15:49:27" md5="424765a71c5a5e2cf18549fb95fc8563" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR21389619/SRC141_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L002_I2_001.fastq.gz" size="393632622" date="2022-09-01 15:49:24" md5="db535114dd89b594ce139c66b88768a0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR21389619/SRC141_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L002_R1_001.fastq.gz" size="1211815350" date="2022-09-01 15:49:31" md5="67aa1e8d85b4a6e2575883d5157f5a57" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21389619/SRC141_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC141_L002_R2_001.fastq.gz" size="2791317661" date="2022-09-01 15:49:41" md5="7e2f37ca9cddc230215536b50cd71fc3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21389619/SRC141_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389619" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389619/SRR21389619" size="2474029902" date="2022-09-01 15:50:06" md5="042a0c0856f9fa5a9713d2f492efc96d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389619/SRR21389619" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389619.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389619/SRR21389619.lite.1" size="2115051114" date="2023-05-11 20:44:37" md5="077459acd5e1439bf3e323d27b78251b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389619/SRR21389619.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389619/SRR21389619.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389619/SRR21389619.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="58837334">
+          <Read index="0" count="58837334" average="10" stdev="0"/>
+          <Read index="1" count="58837334" average="10" stdev="0"/>
+          <Read index="2" count="58837334" average="28" stdev="0"/>
+          <Read index="3" count="58837334" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="58837334"/>
+                <Elements count="8119552092"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="5295360060">
+          <Base value="A" count="1465514670"/>
+          <Base value="C" count="1249844839"/>
+          <Base value="G" count="1303674359"/>
+          <Base value="T" count="1274640325"/>
+          <Base value="N" count="1685867"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394935" alias="GSM6534017_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394935</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534017_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534017: SRC242_pectoralis; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953079">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953079</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534017</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534017</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1499884" alias="SUB12076764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499884</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB12076764</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534017" accession="SRS14953079">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953079</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631346</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534017</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC242_pectoralis</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953079" sample_name="GSM6534017" sample_title="SRC242_pectoralis" spots="363962441" bases="50226816858" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953079</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631346</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534017</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="50226816858" spots="363962441" bytes="15706710920">
+      <RUN accession="SRR21389606" alias="GSM6534017_r1" total_spots="181896197" total_bases="25101675186" size="7847172467" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389606</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534017_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394935">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534017_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953079" sample_name="GSM6534017" sample_title="SRC242_pectoralis" spots="181896197" bases="25101675186" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953079</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631346</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534017</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L001_I1_001.fastq.gz" size="1078413669" date="2022-09-01 21:33:19" md5="1eeaebeed69792fb41023046e82f799c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389606/SRC242_pectoralis_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L001_I2_001.fastq.gz" size="1012545278" date="2022-09-01 21:39:02" md5="78c953c0c704af6967b7d44a12ce7a7b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389606/SRC242_pectoralis_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L001_R1_001.fastq.gz" size="3696693474" date="2022-09-01 21:56:34" md5="f9c1020d25203abdbb85dca81b155963" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389606/SRC242_pectoralis_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L001_R2_001.fastq.gz" size="8652210269" date="2022-09-01 23:02:18" md5="6f4227e3bac22293f20a12ef6cd691c2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389606/SRC242_pectoralis_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389606" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389606/SRR21389606" size="7847174986" date="2022-09-01 23:08:20" md5="944924e6f139ebed3b556d88288600b6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389606/SRR21389606" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389606.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389606/SRR21389606.lite.1" size="6435968210" date="2023-05-10 22:09:37" md5="dfedf9a3a3e7bfb54639ec3e145d364d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389606/SRR21389606.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389606/SRR21389606.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389606/SRR21389606.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="181896197">
+          <Read index="0" count="181896197" average="10" stdev="0"/>
+          <Read index="1" count="181896197" average="10" stdev="0"/>
+          <Read index="2" count="181896197" average="28" stdev="0"/>
+          <Read index="3" count="181896197" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="181896197"/>
+                <Elements count="25101675186"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16370657730">
+          <Base value="A" count="4702800888"/>
+          <Base value="C" count="3732461898"/>
+          <Base value="G" count="3984229378"/>
+          <Base value="T" count="3937470644"/>
+          <Base value="N" count="13694922"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389607" alias="GSM6534017_r2" total_spots="182066244" total_bases="25125141672" size="7859538453" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389607</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534017_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394935">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534017_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953079" sample_name="GSM6534017" sample_title="SRC242_pectoralis" spots="182066244" bases="25125141672" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953079</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631346</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534017</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L002_I1_001.fastq.gz" size="1082132800" date="2022-09-04 12:19:54" md5="99de56df2725b21604c5f2f60450f903" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389607/SRC242_pectoralis_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L002_I2_001.fastq.gz" size="1010321622" date="2022-09-04 10:16:46" md5="ee0b8cce92bee306c5d97e197b633c03" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21389607/SRC242_pectoralis_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L002_R1_001.fastq.gz" size="3710059365" date="2022-09-04 17:38:43" md5="e7a871ebe731af93af7c355a3015560e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389607/SRC242_pectoralis_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_pectoralis_L002_R2_001.fastq.gz" size="8660287209" date="2022-09-05 02:12:19" md5="df0b8b2b008f17a66361d883c3e27e35" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389607/SRC242_pectoralis_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389607" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389607/SRR21389607" size="7859540973" date="2022-09-05 03:28:41" md5="7da3751cba0e230f59d6f23c3a4755fb" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389607/SRR21389607" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389607.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389607/SRR21389607.lite.1" size="6440811953" date="2023-05-10 23:38:08" md5="52dc97341d06940269d2adeced687fff" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389607/SRR21389607.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389607/SRR21389607.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389607/SRR21389607.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="182066244">
+          <Read index="0" count="182066244" average="10" stdev="0"/>
+          <Read index="1" count="182066244" average="10" stdev="0"/>
+          <Read index="2" count="182066244" average="28" stdev="0"/>
+          <Read index="3" count="182066244" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="182066244"/>
+                <Elements count="25125141672"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16385961960">
+          <Base value="A" count="4714159556"/>
+          <Base value="C" count="3731792535"/>
+          <Base value="G" count="3980218040"/>
+          <Base value="T" count="3944061444"/>
+          <Base value="N" count="15730385"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394934" alias="GSM6534016_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394934</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534016_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534016: SRC242_biceps; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953078">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953078</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534016</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534016</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1499884" alias="SUB12076764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499884</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB12076764</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534016" accession="SRS14953078">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953078</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631347</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534016</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC242_biceps</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953078" sample_name="GSM6534016" sample_title="SRC242_biceps" spots="318879721" bases="44005401498" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953078</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631347</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534016</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="44005401498" spots="318879721" bytes="13764114887">
+      <RUN accession="SRR21389608" alias="GSM6534016_r1" total_spots="159235824" total_bases="21974543712" size="6869074622" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534016_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394934">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534016_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953078" sample_name="GSM6534016" sample_title="SRC242_biceps" spots="159235824" bases="21974543712" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953078</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631347</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534016</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR21389608.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389608/SRR21389608.lite.1" size="5642301486" date="2023-05-10 23:26:57" md5="3a35df7a28a2f157e3ec12f6065316cf" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389608/SRR21389608.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389608/SRR21389608.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389608/SRR21389608.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389608" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389608/SRR21389608" size="6869077138" date="2022-09-04 12:35:40" md5="e3753fde7e67452cfaa27792bde9d30c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389608/SRR21389608" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="159235824">
+          <Read index="0" count="159235824" average="10" stdev="0"/>
+          <Read index="1" count="159235824" average="10" stdev="0"/>
+          <Read index="2" count="159235824" average="28" stdev="0"/>
+          <Read index="3" count="159235824" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="159235824"/>
+                <Elements count="21974543712"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="14331224160">
+          <Base value="A" count="4122992327"/>
+          <Base value="C" count="3298290852"/>
+          <Base value="G" count="3489383690"/>
+          <Base value="T" count="3408577612"/>
+          <Base value="N" count="11979679"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389609" alias="GSM6534016_r2" total_spots="159643897" total_bases="22030857786" size="6895040265" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389609</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534016_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394934">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534016_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953078" sample_name="GSM6534016" sample_title="SRC242_biceps" spots="159643897" bases="22030857786" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953078</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631347</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534016</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR21389609.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389609/SRR21389609.lite.1" size="5655740538" date="2023-05-10 23:25:17" md5="d71c2f893dc49176ca1329490e55cf42" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389609/SRR21389609.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389609/SRR21389609.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389609/SRR21389609.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389609" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389609/SRR21389609" size="6895042782" date="2022-09-04 18:30:55" md5="586204487821c8c7e6dd65cc7d8b361e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389609/SRR21389609" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_biceps_L002_R2_001.fastq.gz" size="7584961081" date="2022-09-04 17:21:49" md5="02fc07210f7f59d3c5c9084d4edc1a81" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389609/SRC242_biceps_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_biceps_L002_R1_001.fastq.gz" size="3257578714" date="2022-09-04 09:33:11" md5="29bf1b6d78095c33e30aff81bc31762d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389609/SRC242_biceps_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_biceps_L002_I2_001.fastq.gz" size="986502829" date="2022-09-04 04:33:20" md5="61b80577714a2343db728d7b4d36cdbe" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21389609/SRC242_biceps_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC242_biceps_L002_I1_001.fastq.gz" size="821652596" date="2022-09-04 03:23:25" md5="b59aa293774f93fc24b9c72ecdcf5630" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21389609/SRC242_biceps_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="159643897">
+          <Read index="0" count="159643897" average="10" stdev="0"/>
+          <Read index="1" count="159643897" average="10" stdev="0"/>
+          <Read index="2" count="159643897" average="28" stdev="0"/>
+          <Read index="3" count="159643897" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="159643897"/>
+                <Elements count="22030857786"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="14367950730">
+          <Base value="A" count="4139946493"/>
+          <Base value="C" count="3302914554"/>
+          <Base value="G" count="3491611256"/>
+          <Base value="T" count="3419712173"/>
+          <Base value="N" count="13766254"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394933" alias="GSM6534015_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394933</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534015_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534015: SRC241; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953077">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953077</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534015</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534015</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1499884" alias="SUB12076764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499884</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB12076764</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534015" accession="SRS14953077">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953077</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631348</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534015</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC241</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953077" sample_name="GSM6534015" sample_title="SRC241" spots="355990443" bases="49126681134" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953077</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631348</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534015</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="49126681134" spots="355990443" bytes="15301716798">
+      <RUN accession="SRR21389610" alias="GSM6534015_r1" total_spots="178197664" total_bases="24591277632" size="7655285362" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389610</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534015_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394933">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534015_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953077" sample_name="GSM6534015" sample_title="SRC241" spots="178197664" bases="24591277632" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953077</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631348</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534015</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC241_L001_I1_001.fastq.gz" size="930400944" date="2022-09-04 07:19:30" md5="99de039e3fcc087519895b8b3685113d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389610/SRC241_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L001_I2_001.fastq.gz" size="998186751" date="2022-09-04 06:22:34" md5="4ef70a110a895515fdb5f6def7438eb7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389610/SRC241_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L001_R1_001.fastq.gz" size="3610494932" date="2022-09-04 10:03:01" md5="23fa4949d3c7b46e960b834266b8e5dd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389610/SRC241_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L001_R2_001.fastq.gz" size="8486652340" date="2022-09-04 17:37:47" md5="3188757f6e80e08eba455dfdf89f86e8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389610/SRC241_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389610" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389610/SRR21389610" size="7655287882" date="2022-09-04 18:05:20" md5="faa409f6e68041166f1a5a6dfa4ebf4d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389610/SRR21389610" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389610.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389610/SRR21389610.lite.1" size="6303212214" date="2023-05-10 23:25:18" md5="af8130440a333e4400b4c15904c1dcab" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389610/SRR21389610.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389610/SRR21389610.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389610/SRR21389610.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="178197664">
+          <Read index="0" count="178197664" average="10" stdev="0"/>
+          <Read index="1" count="178197664" average="10" stdev="0"/>
+          <Read index="2" count="178197664" average="28" stdev="0"/>
+          <Read index="3" count="178197664" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="178197664"/>
+                <Elements count="24591277632"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16037789760">
+          <Base value="A" count="4730697159"/>
+          <Base value="C" count="3674008678"/>
+          <Base value="G" count="3773796764"/>
+          <Base value="T" count="3845827201"/>
+          <Base value="N" count="13459958"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389611" alias="GSM6534015_r2" total_spots="177792779" total_bases="24535403502" size="7646431436" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389611</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534015_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394933">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534015_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953077" sample_name="GSM6534015" sample_title="SRC241" spots="177792779" bases="24535403502" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953077</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631348</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534015</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC241_L002_I1_001.fastq.gz" size="931191521" date="2022-09-04 05:04:40" md5="10d1bd7ab44acc8de969345fb8bd0f0f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21389611/SRC241_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L002_I2_001.fastq.gz" size="995947133" date="2022-09-04 05:05:02" md5="286b317e2583fbb1f4f70d8e37276dea" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21389611/SRC241_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L002_R1_001.fastq.gz" size="3612301470" date="2022-09-04 05:05:57" md5="6857c4c0516a7acba5249e0c35548863" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389611/SRC241_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC241_L002_R2_001.fastq.gz" size="8472842586" date="2022-09-04 05:08:54" md5="12abcfadf2b6e95abe918133380c5122" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21389611/SRC241_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389611" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389611/SRR21389611" size="7646433952" date="2022-09-04 05:44:45" md5="a5129ee2df40d7129a97c2f175031125" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389611/SRR21389611" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389611.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389611/SRR21389611.lite.1" size="6288016708" date="2023-05-10 23:25:43" md5="4db1282aae2edd83419fc3f05368bcc8" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389611/SRR21389611.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389611/SRR21389611.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389611/SRR21389611.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="177792779">
+          <Read index="0" count="177792779" average="10" stdev="0"/>
+          <Read index="1" count="177792779" average="10" stdev="0"/>
+          <Read index="2" count="177792779" average="28" stdev="0"/>
+          <Read index="3" count="177792779" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="177792779"/>
+                <Elements count="24535403502"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16001350110">
+          <Base value="A" count="4726018089"/>
+          <Base value="C" count="3662258143"/>
+          <Base value="G" count="3758287397"/>
+          <Base value="T" count="3839425501"/>
+          <Base value="N" count="15360980"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394932" alias="GSM6534014_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394932</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534014_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534014: SRC171; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953076">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953076</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534014</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534014</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1499884" alias="SUB12076764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499884</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB12076764</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534014" accession="SRS14953076">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953076</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631349</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534014</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC171</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Undifferentiated pleomorphic sarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953076" sample_name="GSM6534014" sample_title="SRC171" spots="528799034" bases="72974266692" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953076</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631349</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534014</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="72974266692" spots="528799034" bytes="23367978441">
+      <RUN accession="SRR21389612" alias="GSM6534014_r1" total_spots="261655704" total_bases="36108487152" size="11629018356" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389612</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534014_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394932">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534014_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953076" sample_name="GSM6534014" sample_title="SRC171" spots="261655704" bases="36108487152" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953076</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631349</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534014</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC171_L001_I1_001.fastq.gz" size="1682745471" date="2022-09-02 00:57:45" md5="ece235032ee2335a876a06dfa3024f57" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR21389612/SRC171_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L001_I2_001.fastq.gz" size="1586874268" date="2022-09-02 00:43:51" md5="220e6fc9b5f55f74fe0195a799be63d6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR21389612/SRC171_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L001_R1_001.fastq.gz" size="5626006919" date="2022-09-02 01:34:57" md5="44934d72b2933dc2e3699edb8ddc0708" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR21389612/SRC171_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L001_R2_001.fastq.gz" size="12570336874" date="2022-09-02 03:32:55" md5="45ca3cfad0fc2d395f02635f4b74639c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR21389612/SRC171_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389612" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389612/SRR21389612" size="11629020875" date="2022-09-02 10:58:41" md5="2e7cb09b91e536900434488676a997a9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389612/SRR21389612" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389612.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389612/SRR21389612.lite.1" size="9301996215" date="2023-05-09 16:30:08" md5="5ab110e9f1ade1599aed81ec183c41ec" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389612/SRR21389612.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389612/SRR21389612.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389612/SRR21389612.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="261655704">
+          <Read index="0" count="261655704" average="10" stdev="0"/>
+          <Read index="1" count="261655704" average="10" stdev="0"/>
+          <Read index="2" count="261655704" average="28" stdev="0"/>
+          <Read index="3" count="261655704" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="261655704"/>
+                <Elements count="36108487152"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="23549013360">
+          <Base value="A" count="6979507106"/>
+          <Base value="C" count="5598935053"/>
+          <Base value="G" count="5335724857"/>
+          <Base value="T" count="5628388099"/>
+          <Base value="N" count="6458245"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389613" alias="GSM6534014_r2" total_spots="267143330" total_bases="36865779540" size="11738960085" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389613</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534014_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394932">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534014_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953076" sample_name="GSM6534014" sample_title="SRC171" spots="267143330" bases="36865779540" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953076</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631349</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534014</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC171_L002_I1_001.fastq.gz" size="1694587694" date="2022-09-02 00:31:57" md5="7497428d8b6760c06fcfff25c6e54b07" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389613/SRC171_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L002_I2_001.fastq.gz" size="1619523062" date="2022-09-02 00:33:10" md5="6c6390b83e4e55ab102c317c08634ea5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR21389613/SRC171_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L002_R1_001.fastq.gz" size="5719039198" date="2022-09-02 00:32:14" md5="bb3f2d9ac72b7957a0d1db356dcae80b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389613/SRC171_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC171_L002_R2_001.fastq.gz" size="12683562227" date="2022-09-02 00:32:54" md5="7f3d8c0ce607af53419fd1eee9b11975" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389613/SRC171_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389613" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389613/SRR21389613" size="11738962605" date="2022-09-02 06:30:50" md5="d24b298b006df2a0ff48f2490f55957d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389613/SRR21389613" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389613.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389613/SRR21389613.lite.1" size="9496334141" date="2023-05-09 16:03:42" md5="7fd02199ed26d8e989badc3ad6e42e01" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389613/SRR21389613.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389613/SRR21389613.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389613/SRR21389613.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="267143330">
+          <Read index="0" count="267143330" average="10" stdev="0"/>
+          <Read index="1" count="267143330" average="10" stdev="0"/>
+          <Read index="2" count="267143330" average="28" stdev="0"/>
+          <Read index="3" count="267143330" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="267143330"/>
+                <Elements count="36865779540"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24042899700">
+          <Base value="A" count="7106326137"/>
+          <Base value="C" count="5734483862"/>
+          <Base value="G" count="5451417680"/>
+          <Base value="T" count="5742709900"/>
+          <Base value="N" count="7962121"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17394930" alias="GSM6534012_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17394930</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534012_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6534012: SRC147; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395248">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395248</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14953074">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14953074</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6534012</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6534012</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Fresh tumors were minced and enzymatically dissociated using the Human Tumor Dissociation Kit (Miltenyi Biotec) using a GentleMACS Octo Dissociator with heaters (Miltenyi Biotec) following the manufacturer's instructions. Libraries were constructed using the Chromium 3' Gene Expression Solution v3.1 (10x Genomics) per the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Moding Lab, Radiation Oncology, Stanford University School of Medicine" accession="SRA1499884" alias="SUB12076764">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499884</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Moding Lab, Radiation Oncology, Stanford University School of Medicine">SUB12076764</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Moding Lab, Radiation Oncology, Stanford University School of Medicine</Name>
+      <Contact email="ajayss@stanford.edu">
+        <Address>
+          <Street>450 Serra Mall</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ajay</First>
+          <Last>Subramanian</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212527" accession="SRP395248">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395248</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212527</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single cell RNA-sequencing of undifferentiated pleomorphic sarcomas and leiomyosarcomas.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The tumor microenvironment plays a crucial role in soft tissue sarcoma development and response to therapy. We used single cell RNA sequencing to analyze the malignant, immune, and other stromal cells present within soft tissue sarcomas. Overall design: Single cell RNA-sequencing was performed on 7 soft tissue sarcomas from 6 patients. [UPDATE] 05-31-2024: For GSM6534011 and GSM6534013, the titles were swapped and the processed data files were renamed accordingly. The file associations did not change.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212527</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38429415</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6534012" accession="SRS14953074">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14953074</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30631351</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6534012</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>SRC147</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875907</ID>
+            <LABEL>PRJNA875907</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Leiomyosarcoma</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14953074" sample_name="GSM6534012" sample_title="SRC147" spots="237761577" bases="32811097626" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14953074</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30631351</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534012</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="32811097626" spots="237761577" bytes="10260296897">
+      <RUN accession="SRR21389616" alias="GSM6534012_r1" total_spots="118891154" total_bases="16406979252" size="5127769994" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389616</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534012_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394930">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534012_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953074" sample_name="GSM6534012" sample_title="SRC147" spots="118891154" bases="16406979252" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953074</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631351</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534012</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC147_L001_I1_001.fastq.gz" size="635376836" date="2022-09-01 20:07:36" md5="8ebda9a8d2b8b7d7d0670793390f7b27" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR21389616/SRC147_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L001_I2_001.fastq.gz" size="714499165" date="2022-09-01 20:07:23" md5="79417b385866c117690d9febeaf447da" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR21389616/SRC147_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L001_R1_001.fastq.gz" size="2432643769" date="2022-09-01 20:08:08" md5="dcb09166d830272ec7dbb9558c449273" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR21389616/SRC147_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L001_R2_001.fastq.gz" size="5720428643" date="2022-09-01 20:09:12" md5="8d1b450b253dda1a804e92568d57d156" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR21389616/SRC147_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389616" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389616/SRR21389616" size="5127772518" date="2022-09-01 20:10:33" md5="bd407299d11fb3080c1b91d068c41c48" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389616/SRR21389616" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389616.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389616/SRR21389616.lite.1" size="4224112534" date="2023-05-10 22:00:21" md5="8560ec7d9044d7774ffb7794f557b3de" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389616/SRR21389616.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389616/SRR21389616.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389616/SRR21389616.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="118891154">
+          <Read index="0" count="118891154" average="10" stdev="0"/>
+          <Read index="1" count="118891154" average="10" stdev="0"/>
+          <Read index="2" count="118891154" average="28" stdev="0"/>
+          <Read index="3" count="118891154" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="118891154"/>
+                <Elements count="16406979252"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10700203860">
+          <Base value="A" count="3010950245"/>
+          <Base value="C" count="2428813419"/>
+          <Base value="G" count="2593589614"/>
+          <Base value="T" count="2657875244"/>
+          <Base value="N" count="8975338"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21389617" alias="GSM6534012_r2" total_spots="118870423" total_bases="16404118374" size="5132526903" load_done="true" published="2023-12-12 22:46:35" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21389617</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6534012_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17394930">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6534012_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS14953074" sample_name="GSM6534012" sample_title="SRC147" spots="118870423" bases="16404118374" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14953074</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30631351</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6534012</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRC147_L002_I1_001.fastq.gz" size="639661240" date="2022-09-01 19:03:56" md5="3cc7961a27ca275c48f7e5d971ba9e78" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21389617/SRC147_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L002_I2_001.fastq.gz" size="714224062" date="2022-09-01 19:03:41" md5="9381ce5bba99a541172e2c869651433b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21389617/SRC147_L002_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L002_R1_001.fastq.gz" size="2439165956" date="2022-09-01 19:04:14" md5="0e629480855ce2037f0487175f6a4f00" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21389617/SRC147_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRC147_L002_R2_001.fastq.gz" size="5721899387" date="2022-09-01 19:04:57" md5="fb40db6c5e374de16b7181c61ad4b7db" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21389617/SRC147_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389617" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389617/SRR21389617" size="5132529418" date="2022-09-01 19:05:25" md5="33bfa82a7ad5db2b9ab67731f6e12e65" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21389617/SRR21389617" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21389617.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389617/SRR21389617.lite.1" size="4222769030" date="2023-05-11 20:45:52" md5="cf8237a7099df55992087832aa7534eb" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21389/SRR21389617/SRR21389617.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-3/SRR21389617/SRR21389617.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR21389617/SRR21389617.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="118870423">
+          <Read index="0" count="118870423" average="10" stdev="0"/>
+          <Read index="1" count="118870423" average="10" stdev="0"/>
+          <Read index="2" count="118870423" average="28" stdev="0"/>
+          <Read index="3" count="118870423" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="118870423"/>
+                <Elements count="16404118374"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10698338070">
+          <Base value="A" count="3014349664"/>
+          <Base value="C" count="2425647637"/>
+          <Base value="G" count="2588645280"/>
+          <Base value="T" count="2659414209"/>
+          <Base value="N" count="10281280"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

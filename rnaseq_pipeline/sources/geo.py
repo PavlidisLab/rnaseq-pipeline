@@ -29,7 +29,7 @@ from ..utils import RerunnableTaskMixin
 
 cfg = rnaseq_pipeline()
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
 
 ns = {'miniml': 'http://www.ncbi.nlm.nih.gov/geo/info/MINiML'}
 
@@ -64,7 +64,7 @@ class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     """
     Download the MiNiML metadata for a given GEO Sample.
     """
-    gsm = luigi.Parameter()
+    gsm: str = luigi.Parameter()
 
     resources = {'geo_http_connections': 1}
 
@@ -91,6 +91,8 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
+    gsm: str
+    metadata: dict
 
     @property
     def sample_id(self):
@@ -121,7 +123,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     Download a GEO Series metadata containg information about related GEO
     Samples.
     """
-    gse = luigi.Parameter()
+    gse: str = luigi.Parameter()
 
     resources = {'geo_http_connections': 1}
 
@@ -131,7 +133,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://ftp.ncbi.nlm.nih.gov/geo/series/' + self.gse[
-                                                                        :-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz',
+            :-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz',
                            stream=True)
         res.raise_for_status()
         # we need to use a temporary file because Response.raw does not allow seeking
@@ -154,6 +156,8 @@ class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download all GEO Samples related to a GEO Series.
     """
+    gse: str
+    metadata: dict
 
     ignored_samples = luigi.ListParameter(default=[], description='Ignored GSM identifiers')
 
@@ -170,6 +174,7 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
     Extract the GEO Series batch information by looking up the GEO Series
     metadata and some downloaded FASTQs headers.
     """
+    gse: str
 
     def run(self):
         geo_series_metadata, samples = self.requires()

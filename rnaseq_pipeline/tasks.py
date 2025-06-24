@@ -12,6 +12,7 @@ import pandas as pd
 import requests
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import fastqc, multiqc
+from bioluigi.tasks.cellranger import CellRangerCount
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, TaskWithOutputMixin, DynamicWrapperTask
 from luigi.task import flatten_output, WrapperTask
 from luigi.util import requires
@@ -26,7 +27,7 @@ from .sources.sra import DownloadSraProject, DownloadSraExperiment, ExtractSraPr
 from .targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, RsemReference
 from .utils import no_retry, RerunnableTaskMixin, remove_task_output
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
 
 cfg = rnaseq_pipeline()
 gemma_cfg = gemma()
@@ -37,9 +38,15 @@ class DownloadSample(TaskWithOutputMixin, WrapperTask):
     experiment.
 
     Note that the 'gemma' source does not provide individual samples.
+
+    The output of this task is a list of tuple of FASTQ files organized as follows:
+    - for single-end reads, [(R1)]
+    - for paired-end reads, [(R1, R2)]
+    - for paired-end reads with an index file, [(I1, R1, R2)]
+    - for paired-end reads with two index files, [(I1, I2, R1, R2)]
     """
-    experiment_id = luigi.Parameter()
-    sample_id = luigi.Parameter()
+    experiment_id: str = luigi.Parameter()
+    sample_id: str = luigi.Parameter()
 
     source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'arrayexpress', 'local', 'sra'],
                                    positional=False)
@@ -93,6 +100,8 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     :attr ignore_mate: Ignore either the forward or reverse mate in the case of
                        paired reads, defaults to neither.
     """
+    experiment_id: str
+    sample_id: str
 
     ignore_mate = luigi.ChoiceParameter(choices=['forward', 'reverse', 'neither'], default='neither', positional=False)
     minimum_length = luigi.IntParameter(default=25, positional=False)
@@ -163,11 +172,13 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Perform post-download quality control on the FASTQs.
     """
+    experiment_id: str
+    sample_id: str
 
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
-        yield [fastqc.GenerateReport(fastq_in.path, destdir, temp_dir=tempfile.gettempdir()) for fastq_in in
+        yield [fastqc.GenerateReport(fastq_in.path, output_dir=destdir, temp_dir=tempfile.gettempdir()) for fastq_in in
                self.input()]
 
 class QualityControlExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -196,8 +207,8 @@ class PrepareReference(ScheduledExternalProgramTask):
     :param taxon: Taxon
     :param reference_id: Reference annotation build to use (i.e. ensembl98, hg38_ncbi)
     """
-    taxon = luigi.Parameter()
-    reference_id = luigi.Parameter()
+    taxon: str = luigi.Parameter()
+    reference_id: str = luigi.Parameter()
 
     cpus = 16
     memory = 32
@@ -246,6 +257,10 @@ class AlignSample(ScheduledExternalProgramTask):
 
     :attr strand_specific: Indicate if the RNA-Seq data is stranded
     """
+    reference_id: str
+    experiment_id: str
+    sample_id: str
+
     # TODO: handle strand-specific reads
     strand_specific = luigi.BoolParameter(default=False, positional=False)
 
@@ -279,17 +294,32 @@ class AlignSample(ScheduledExternalProgramTask):
         if self.strand_specific:
             args.append('--strand-specific')
 
-        sample_run, reference = self.input()
+        runs, reference = self.input()
 
-        fastqs = [mate.path for mate in sample_run]
+        forward_reads = []
+        reverse_reads = []
+        for run in runs:
+            if 'R1' in run.layout and 'R2' in run.layout:
+                forward_reads.append(run.files[run.layout.index('R1')])
+                reverse_reads.append(run.files[run.layout.index('R2')])
+            elif 'R1' in run.layout:
+                forward_reads.append(run.files[run.layout.index('R1')])
+            elif 'R2' in run.layout:
+                logging.warning('Found an unpaired reverse read in run %s, will treat it as single-end.', run.run_id)
+                forward_reads.append(run.files[run.layout.index('R1')])
+            else:
+                logger.warning("Unsupported layout for run %s, it will be ignored.", run.run_id)
 
-        if len(fastqs) == 1:
-            args.append(fastqs[0])
-        elif len(fastqs) == 2:
+        if not forward_reads:
+            raise ValueError('No forward reads found in the input runs. Please check the input data.')
+
+        args.append(','.join(forward_reads))
+
+        if reverse_reads:
+            if len(forward_reads) != len(reverse_reads):
+                raise ValueError('If reverse reads are provided, they must match the number of forward reads.')
             args.append('--paired-end')
-            args.extend(fastqs)
-        else:
-            raise NotImplementedError('Alignment of more than two input FASTQs is not supported.')
+            args.append(','.join(reverse_reads))
 
         # reference for alignments and quantifications
         args.append(reference.prefix)
@@ -309,20 +339,20 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     The output is one sample alignment output per sample contained in the
     experiment.
     """
-    experiment_id = luigi.Parameter()
-    source = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
-                                   positional=False)
-    taxon = luigi.Parameter(positional=False)
-    reference_id = luigi.Parameter(positional=False)
-    scope = luigi.Parameter(default='genes', positional=False)
+    experiment_id: str = luigi.Parameter()
+    source: str = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                        positional=False)
+    taxon: str = luigi.Parameter(positional=False)
+    reference_id: str = luigi.Parameter(positional=False)
+    scope: str = luigi.Parameter(default='genes', positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
 
     def run(self):
         download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
-        yield [AlignSample(self.experiment_id,
-                           dst.sample_id,
+        yield [AlignSample(experiment_id=self.experiment_id,
+                           sample_id=dst.sample_id,
                            source=self.source,
                            taxon=self.taxon,
                            reference_id=self.reference_id,
@@ -337,6 +367,8 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
 
     The report include collected FastQC reports and RSEM/STAR outputs.
     """
+    experiment_id: str
+    reference_id: str
 
     def run(self):
         fastqc_dir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id)
@@ -366,7 +398,9 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
                             sample_id += '_2'
                         out.write(f'{fastqc_sample_id}\t{sample_id}\n')
 
-        yield multiqc.GenerateReport(search_dirs, dirname(self.output().path), replace_names=sample_names_file,
+        yield multiqc.GenerateReport(input_dirs=search_dirs,
+                                     output_dir=dirname(self.output().path),
+                                     replace_names=sample_names_file,
                                      force=self.rerun)
 
     def output(self):
@@ -381,6 +415,10 @@ class CountExperiment(luigi.Task):
 
     The output is constituted of two matrices: genes counts and FPKM.
     """
+    reference_id: str
+    experiment_id: str
+    scope: str
+
     resources = {'cpus': 1}
 
     def run(self):
@@ -401,6 +439,70 @@ class CountExperiment(luigi.Task):
         destdir = join(cfg.OUTPUT_DIR, cfg.QUANTDIR, self.reference_id)
         return [luigi.LocalTarget(join(destdir, f'{self.experiment_id}_counts.{self.scope}')),
                 luigi.LocalTarget(join(destdir, f'{self.experiment_id}_fpkm.{self.scope}'))]
+
+class PrepareSingleCellReference(luigi.Task):
+    reference_id = luigi.Parameter()
+
+    def output(self):
+        return luigi.LocalTarget(
+            join(str(cfg.OUTPUT_DIR), str(cfg.SINGLE_CELL_REFERENCES), str(self.reference_id)))
+
+@requires(DownloadSample)
+class OrganizeSingleCellSample(luigi.Task):
+    """Pre-populate a directory with FASTQs for a single-cell sample"""
+
+    experiment_id: str
+    sample_id: str
+
+    def run(self):
+        runs = self.input()
+        os.makedirs(self.output().path)
+        for lane, run in enumerate(runs):
+            for f, read_type in zip(run.files, run.layout):
+                dest = join(self.output().path, f'{self.sample_id}_S1_L{lane + 1:03}_{read_type}_001.fastq.gz')
+                if os.path.exists(dest):
+                    os.unlink(dest)
+                os.link(f, dest)
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'data-single-cell', self.experiment_id, self.sample_id))
+
+@requires(OrganizeSingleCellSample, PrepareSingleCellReference)
+class AlignSingleCellSample(DynamicWrapperTask):
+    experiment_id: str
+    sample_id: str
+
+    def run(self):
+        fastqs_dir, transcriptome_dir = self.input()
+        yield CellRangerCount(
+            id=self.sample_id,
+            transcriptome_dir=transcriptome_dir,
+            fastqs_dir=fastqs_dir,
+            output_dir=self.output().path,
+            # TODO: add an avx feature on slurm
+            scheduler_extra_args=['--constraint', 'thrd64']
+    )
+
+    def output(self):
+        return luigi.LocalTarget(
+            join(cfg.OUTPUT_DIR, 'quantified-single-cell', self.reference_id, self.experiment_id, self.sample_id))
+
+class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
+    experiment_id: str = luigi.Parameter()
+    source: str = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
+                                        positional=False)
+    reference_id: str = luigi.Parameter(positional=False)
+
+    def requires(self):
+        return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
+
+    def run(self):
+        download_sample_tasks = next(DownloadExperiment(self.experiment_id, source=self.source).requires().run())
+        yield [AlignSingleCellSample(experiment_id=self.experiment_id,
+                                     sample_id=dst.sample_id,
+                                     source=self.source,
+                                     reference_id=self.reference_id)
+               for dst in download_sample_tasks]
 
 class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
     """
@@ -465,7 +567,7 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
     """
     Submit an experiment QC report to Gemma.
     """
-    experiment_id = luigi.Parameter()
+    experiment_id: str = luigi.Parameter()
 
     subcommand = 'addMetadataFile'
 
@@ -484,6 +586,24 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
         return luigi.LocalTarget(
             join(gemma_cfg.appdata_dir, 'metadata', self.experiment_id, 'MultiQCReports/multiqc_report.html'))
 
+class SubmitSingleCellExperimentDataToGemma(RerunnableTaskMixin, GemmaCliTask):
+    experiment_id: str = luigi.Parameter()
+    subcommand = 'loadSingleCellData'
+
+    def requires(self):
+        return AlignSingleCellExperiment(experiment_id=self.experiment_id,
+                                         reference_id=self.single_cell_reference_id(),
+                                         source='gemma')
+
+    def subcommand_args(self):
+        return ['-e', self.experiment_id, '-a', self.platform_short_name,
+                '--data-path', self.input().path,
+                '--quantitation-type-recomputed-from-raw-data',
+                '--preferred-quantitation-type',
+                # TODO: add sequencing metadata
+                # FIXME: add --replace
+                ]
+
 @requires(SubmitExperimentDataToGemma, SubmitExperimentBatchInfoToGemma, SubmitExperimentReportToGemma)
 class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
     """
@@ -491,6 +611,7 @@ class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
 
     TODO: add QC report submission
     """
+    experiment_id: str
 
     # Makes it so that we recheck if the task is complete after 20 minutes.
     # This is because Gemma Web API is caching reply for 1200 seconds, so the
@@ -552,8 +673,14 @@ class SubmitExperimentsFromDataFrameMixin:
         except AttributeError as e:
             raise Exception(f'Failed to read experiments from {self._filename()}, is it valid?') from e
 
+    def _filename(self):
+        raise NotImplementedError
+
+    def _retrieve_dataframe(self):
+        raise NotImplementedError
+
 class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, TaskWithOutputMixin, WrapperTask):
-    input_file = luigi.Parameter()
+    input_file: str = luigi.Parameter()
 
     def _filename(self):
         return self.input_file
@@ -562,9 +689,9 @@ class SubmitExperimentsFromFileToGemma(SubmitExperimentsFromDataFrameMixin, Task
         return pd.read_csv(self.input_file, sep='\t', converters={'priority': lambda x: 0 if x == '' else int(x)})
 
 class SubmitExperimentsFromGoogleSpreadsheetToGemma(SubmitExperimentsFromDataFrameMixin, WrapperTask):
-    spreadsheet_id = luigi.Parameter(
+    spreadsheet_id: str = luigi.Parameter(
         description='Spreadsheet ID in Google Sheets (lookup {spreadsheetId} in https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit)')
-    sheet_name = luigi.Parameter(description='Name of the spreadsheet in the document')
+    sheet_name: str = luigi.Parameter(description='Name of the spreadsheet in the document')
 
     def _filename(self):
         return 'https://docs.google.com/spreadsheets/d/' + self.spreadsheet_id

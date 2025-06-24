@@ -1,0 +1,2164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312649" alias="GSM8217734_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312649</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217734_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217734: Mouse colon, ChronicColitis4; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074419">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074419</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217734</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217734</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217734" accession="SRS21074419">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074419</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019954</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217734</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, ChronicColitis4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Chronic Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074419" sample_name="GSM8217734" sample_title="Mouse colon, ChronicColitis4" spots="360686084" bases="49774679592" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074419</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019954</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217734</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="49774679592" spots="360686084" bytes="22154151016">
+      <RUN accession="SRR28746893" alias="GSM8217734_r1" total_spots="360686084" total_bases="49774679592" size="22154151016" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746893</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217734_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312649">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217734_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074419" sample_name="GSM8217734" sample_title="Mouse colon, ChronicColitis4" spots="360686084" bases="49774679592" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074419</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019954</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217734</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="ChronicColitis4_S1_L007_I1_001.fastq.gz" size="2272844236" date="2024-04-19 18:25:16" md5="eb021547146ab4b2deafa16ec799bfd6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746893/ChronicColitis4_S1_L007_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis4_S1_L007_I2_001.fastq.gz" size="2439365365" date="2024-04-19 18:25:04" md5="a83b3b546f22b3c2c7c0f2a5bb1f8958" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746893/ChronicColitis4_S1_L007_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis4_S1_L007_R1_001.fastq.gz" size="8034461989" date="2024-04-19 18:25:58" md5="585d82dc596f590d3e2644a394914815" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746893/ChronicColitis4_S1_L007_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis4_S1_L007_R2_001.fastq.gz" size="21735327850" date="2024-04-19 18:27:18" md5="4f06b3226251ec931ea996ccbd137dc1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746893/ChronicColitis4_S1_L007_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746893" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746893/SRR28746893" size="22154153241" date="2024-04-19 18:35:40" md5="fbac0b53bd1da72ddd6ff0f21df2e5df" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746893/SRR28746893" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746893.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746893/SRR28746893.lite.1" size="12642978125" date="2024-04-19 20:28:01" md5="5f9c63acc6c2677a9c6dea883e2efd10" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746893/SRR28746893.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746893/SRR28746893.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746893/SRR28746893.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="360686084">
+          <Read index="0" count="360686084" average="10" stdev="0"/>
+          <Read index="1" count="360686084" average="10" stdev="0"/>
+          <Read index="2" count="360686084" average="28" stdev="0"/>
+          <Read index="3" count="360686084" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="360686084"/>
+                <Elements count="49774679592"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="32461747560">
+          <Base value="A" count="8804740421"/>
+          <Base value="C" count="7598425492"/>
+          <Base value="G" count="8240350172"/>
+          <Base value="T" count="7809918054"/>
+          <Base value="N" count="8313421"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312648" alias="GSM8217733_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312648</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217733_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217733: Mouse colon, ChronicColitis3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074418">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074418</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217733</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217733</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217733" accession="SRS21074418">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074418</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019955</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217733</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, ChronicColitis3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Chronic Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074418" sample_name="GSM8217733" sample_title="Mouse colon, ChronicColitis3" spots="365373192" bases="50421500496" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074418</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019955</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217733</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50421500496" spots="365373192" bytes="22196012782">
+      <RUN accession="SRR28746891" alias="GSM8217733_r1" total_spots="365373192" total_bases="50421500496" size="22196012782" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746891</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217733_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312648">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217733_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074418" sample_name="GSM8217733" sample_title="Mouse colon, ChronicColitis3" spots="365373192" bases="50421500496" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074418</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019955</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217733</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="ChronicColitis3_S1_L006_I1_001.fastq.gz" size="2253895751" date="2024-04-19 18:17:43" md5="8d6b3cbbc7ac7030d3f03c2be276243b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746891/ChronicColitis3_S1_L006_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis3_S1_L006_I2_001.fastq.gz" size="2460899605" date="2024-04-19 18:17:50" md5="49079fcd8461922517e51041e018df2e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746891/ChronicColitis3_S1_L006_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis3_S1_L006_R1_001.fastq.gz" size="8139326989" date="2024-04-19 18:18:10" md5="224215ebd525edc9b9d3144ff775550f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746891/ChronicColitis3_S1_L006_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis3_S1_L006_R2_001.fastq.gz" size="21776839238" date="2024-04-19 18:19:11" md5="9554fb3cb252078dfcb01e19ecc593ff" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746891/ChronicColitis3_S1_L006_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746891" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746891/SRR28746891" size="22196015006" date="2024-04-19 18:24:36" md5="2c8423dca172dcb9295cf962328cde6a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746891/SRR28746891" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746891.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746891/SRR28746891.lite.1" size="12807662958" date="2024-04-19 20:13:46" md5="86b1f3de759656405f9d88cd3cb6fad7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746891/SRR28746891.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746891/SRR28746891.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746891/SRR28746891.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="365373192">
+          <Read index="0" count="365373192" average="10" stdev="0"/>
+          <Read index="1" count="365373192" average="10" stdev="0"/>
+          <Read index="2" count="365373192" average="28" stdev="0"/>
+          <Read index="3" count="365373192" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="365373192"/>
+                <Elements count="50421500496"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="32883587280">
+          <Base value="A" count="8853585375"/>
+          <Base value="C" count="7741817133"/>
+          <Base value="G" count="8339524411"/>
+          <Base value="T" count="7941408274"/>
+          <Base value="N" count="7252087"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312647" alias="GSM8217732_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312647</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217732_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217732: Mouse colon, ChronicColitis2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074417">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074417</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217732</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217732</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217732" accession="SRS21074417">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074417</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019956</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217732</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, ChronicColitis2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Chronic Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074417" sample_name="GSM8217732" sample_title="Mouse colon, ChronicColitis2" spots="368344764" bases="50831577432" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074417</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019956</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217732</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50831577432" spots="368344764" bytes="22505345826">
+      <RUN accession="SRR28746892" alias="GSM8217732_r1" total_spots="368344764" total_bases="50831577432" size="22505345826" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746892</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217732_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312647">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217732_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074417" sample_name="GSM8217732" sample_title="Mouse colon, ChronicColitis2" spots="368344764" bases="50831577432" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074417</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019956</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217732</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="ChronicColitis2_S1_L007_I1_001.fastq.gz" size="2354631378" date="2024-04-19 18:56:25" md5="da0fe2f9756b6448ade7ebc0c2836800" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746892/ChronicColitis2_S1_L007_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis2_S1_L007_I2_001.fastq.gz" size="2712041051" date="2024-04-19 18:55:55" md5="efcf9bc44ebccfed0aaae96832b99d61" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746892/ChronicColitis2_S1_L007_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis2_S1_L007_R1_001.fastq.gz" size="8194891607" date="2024-04-19 18:58:04" md5="c348c2a5dc2812ecadb5ec0050805ca2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746892/ChronicColitis2_S1_L007_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis2_S1_L007_R2_001.fastq.gz" size="22101912857" date="2024-04-19 19:03:23" md5="d4fad589a6ed133f4e2b611f542ce4e5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746892/ChronicColitis2_S1_L007_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746892" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746892/SRR28746892" size="22505348046" date="2024-04-19 19:17:09" md5="2ed35ac73708bd87723d113aa644cade" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746892/SRR28746892" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746892.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746892/SRR28746892.lite.1" size="12912902898" date="2024-04-19 20:16:30" md5="34c8846599b8bba5327581d271636cf7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746892/SRR28746892.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746892/SRR28746892.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746892/SRR28746892.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="368344764">
+          <Read index="0" count="368344764" average="10" stdev="0"/>
+          <Read index="1" count="368344764" average="10" stdev="0"/>
+          <Read index="2" count="368344764" average="28" stdev="0"/>
+          <Read index="3" count="368344764" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="368344764"/>
+                <Elements count="50831577432"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33151028760">
+          <Base value="A" count="8742467102"/>
+          <Base value="C" count="8126198663"/>
+          <Base value="G" count="8586818240"/>
+          <Base value="T" count="7685314433"/>
+          <Base value="N" count="10230322"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312646" alias="GSM8217731_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312646</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217731_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217731: Mouse colon, ChronicColitis1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074416">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074416</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217731</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217731</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217731" accession="SRS21074416">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074416</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019957</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217731</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, ChronicColitis1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Chronic Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074416" sample_name="GSM8217731" sample_title="Mouse colon, ChronicColitis1" spots="368997453" bases="50921648514" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074416</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019957</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217731</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50921648514" spots="368997453" bytes="22398065955">
+      <RUN accession="SRR28746894" alias="GSM8217731_r1" total_spots="368997453" total_bases="50921648514" size="22398065955" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746894</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217731_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312646">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217731_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074416" sample_name="GSM8217731" sample_title="Mouse colon, ChronicColitis1" spots="368997453" bases="50921648514" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074416</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019957</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217731</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="ChronicColitis1_S1_L006_I1_001.fastq.gz" size="2468662352" date="2024-04-19 19:04:29" md5="0b7a754f516a9051a66b96699b249f39" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746894/ChronicColitis1_S1_L006_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis1_S1_L006_I2_001.fastq.gz" size="2790277055" date="2024-04-19 19:05:25" md5="54077cd044d8d87f353fc6ed5b83be05" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746894/ChronicColitis1_S1_L006_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis1_S1_L006_R1_001.fastq.gz" size="8244630263" date="2024-04-19 19:07:40" md5="7329a26a1d132ed70f3ccf8f16192dc5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746894/ChronicColitis1_S1_L006_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="ChronicColitis1_S1_L006_R2_001.fastq.gz" size="22067118891" date="2024-04-19 19:13:12" md5="ae409ada0fe0845c691b187db17a07f6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746894/ChronicColitis1_S1_L006_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746894" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746894/SRR28746894" size="22398068177" date="2024-04-19 19:28:55" md5="e53f0739828c6241f1fb3c80bf5485cf" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746894/SRR28746894" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746894.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746894/SRR28746894.lite.1" size="12943680929" date="2024-04-19 20:21:16" md5="ae09f942a8122c062cede552527bcf71" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746894/SRR28746894.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746894/SRR28746894.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746894/SRR28746894.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="368997453">
+          <Read index="0" count="368997453" average="10" stdev="0"/>
+          <Read index="1" count="368997453" average="10" stdev="0"/>
+          <Read index="2" count="368997453" average="28" stdev="0"/>
+          <Read index="3" count="368997453" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="368997453"/>
+                <Elements count="50921648514"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33209770770">
+          <Base value="A" count="8954550786"/>
+          <Base value="C" count="7941785802"/>
+          <Base value="G" count="8423509321"/>
+          <Base value="T" count="7879724152"/>
+          <Base value="N" count="10200709"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312645" alias="GSM8217730_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312645</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217730_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217730: Mouse colon, AcuteColitis3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074415">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074415</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217730</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217730</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217730" accession="SRS21074415">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074415</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019958</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217730</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, AcuteColitis3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Acute Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074415" sample_name="GSM8217730" sample_title="Mouse colon, AcuteColitis3" spots="337870981" bases="46626195378" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074415</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019958</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217730</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="46626195378" spots="337870981" bytes="21298737198">
+      <RUN accession="SRR28746895" alias="GSM8217730_r1" total_spots="337870981" total_bases="46626195378" size="21298737198" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746895</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217730_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312645">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217730_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074415" sample_name="GSM8217730" sample_title="Mouse colon, AcuteColitis3" spots="337870981" bases="46626195378" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074415</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019958</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217730</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AcuteColitis3_S1_L005_I1_001.fastq.gz" size="2168469350" date="2024-04-19 18:39:36" md5="4ce7904738d520c595438a5ea7fb3c52" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746895/AcuteColitis3_S1_L005_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis3_S1_L005_I2_001.fastq.gz" size="2596671728" date="2024-04-19 18:39:48" md5="05bdcf6241a392ab42e4d7b906f9bf0a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746895/AcuteColitis3_S1_L005_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis3_S1_L005_R1_001.fastq.gz" size="7776032360" date="2024-04-19 18:40:17" md5="0f48da911b82fe97199b0a16a5a43c17" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746895/AcuteColitis3_S1_L005_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis3_S1_L005_R2_001.fastq.gz" size="20919841992" date="2024-04-19 18:41:36" md5="4291cb5f2a066b6a13f0c895f5b515e4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746895/AcuteColitis3_S1_L005_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746895" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746895/SRR28746895" size="21298739423" date="2024-04-19 18:45:45" md5="e688da47650cb1b518098b7f888a6c69" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746895/SRR28746895" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746895.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746895/SRR28746895.lite.1" size="11863919647" date="2024-04-19 20:20:02" md5="7c87ab92534c20b67525f5cbbcd99daa" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746895/SRR28746895.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746895/SRR28746895.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746895/SRR28746895.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="337870981">
+          <Read index="0" count="337870981" average="10" stdev="0"/>
+          <Read index="1" count="337870981" average="10" stdev="0"/>
+          <Read index="2" count="337870981" average="28" stdev="0"/>
+          <Read index="3" count="337870981" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="337870981"/>
+                <Elements count="46626195378"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30408388290">
+          <Base value="A" count="8128285534"/>
+          <Base value="C" count="7238988507"/>
+          <Base value="G" count="7928814615"/>
+          <Base value="T" count="7102416196"/>
+          <Base value="N" count="9883438"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312644" alias="GSM8217729_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312644</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217729_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217729: Mouse colon, AcuteColitis2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074413">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074413</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217729</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217729</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217729" accession="SRS21074413">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074413</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019959</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217729</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, AcuteColitis2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Acute Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074413" sample_name="GSM8217729" sample_title="Mouse colon, AcuteColitis2" spots="363048353" bases="50100672714" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074413</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019959</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217729</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50100672714" spots="363048353" bytes="22433008378">
+      <RUN accession="SRR28746898" alias="GSM8217729_r1" total_spots="363048353" total_bases="50100672714" size="22433008378" load_done="true" published="2024-05-08 00:38:08" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746898</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217729_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312644">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217729_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074413" sample_name="GSM8217729" sample_title="Mouse colon, AcuteColitis2" spots="363048353" bases="50100672714" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074413</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019959</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217729</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AcuteColitis2_S1_L004_I1_001.fastq.gz" size="2509889601" date="2024-04-19 18:40:57" md5="8bd986939dd419d1525c3dfc09dbeb47" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746898/AcuteColitis2_S1_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis2_S1_L004_I2_001.fastq.gz" size="2656574532" date="2024-04-19 18:41:31" md5="e508767bd4771be6b90beff0a92cb944" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746898/AcuteColitis2_S1_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis2_S1_L004_R1_001.fastq.gz" size="8224626862" date="2024-04-19 18:41:21" md5="9afb730e4e55a438f9b7b618ee4d200c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746898/AcuteColitis2_S1_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis2_S1_L004_R2_001.fastq.gz" size="21706368602" date="2024-04-19 18:42:23" md5="2edc017a12905297ac93dc83bacae3e8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746898/AcuteColitis2_S1_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746898" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746898/SRR28746898" size="22433010604" date="2024-04-19 18:49:09" md5="dc0c79ac60fa0a5dbc91f446314958e6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746898/SRR28746898" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746898.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746898/SRR28746898.lite.1" size="12731883592" date="2024-04-19 20:15:21" md5="88b463c177526c57192121b5ef7b8a4e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746898/SRR28746898.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746898/SRR28746898.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746898/SRR28746898.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="363048353">
+          <Read index="0" count="363048353" average="10" stdev="0"/>
+          <Read index="1" count="363048353" average="10" stdev="0"/>
+          <Read index="2" count="363048353" average="28" stdev="0"/>
+          <Read index="3" count="363048353" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="363048353"/>
+                <Elements count="50100672714"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="32674351770">
+          <Base value="A" count="8920892323"/>
+          <Base value="C" count="7543545716"/>
+          <Base value="G" count="8373769091"/>
+          <Base value="T" count="7825278210"/>
+          <Base value="N" count="10866430"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312643" alias="GSM8217728_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312643</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217728_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217728: Mouse colon, AcuteColitis1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074414">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074414</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217728</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217728</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217728" accession="SRS21074414">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074414</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019960</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217728</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, AcuteColitis1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Acute Colitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>dextran sodium sulfate dissolved in drinking water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074414" sample_name="GSM8217728" sample_title="Mouse colon, AcuteColitis1" spots="354285375" bases="48891381750" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074414</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019960</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217728</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="48891381750" spots="354285375" bytes="21946951519">
+      <RUN accession="SRR28746896" alias="GSM8217728_r1" total_spots="354285375" total_bases="48891381750" size="21946951519" load_done="true" published="2024-05-08 00:38:08" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746896</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217728_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312643">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217728_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074414" sample_name="GSM8217728" sample_title="Mouse colon, AcuteColitis1" spots="354285375" bases="48891381750" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074414</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019960</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217728</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AcuteColitis1_S1_L003_I1_001.fastq.gz" size="2363011315" date="2024-04-19 18:38:36" md5="f3025f4717d899491d4c709847335f78" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746896/AcuteColitis1_S1_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis1_S1_L003_I2_001.fastq.gz" size="2578998523" date="2024-04-19 18:38:45" md5="c0782e0c975a24f6be43b749c048d07b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746896/AcuteColitis1_S1_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis1_S1_L003_R1_001.fastq.gz" size="8026732707" date="2024-04-19 18:39:08" md5="586d304b7ccb2cd1f9a25e00198043f6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746896/AcuteColitis1_S1_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AcuteColitis1_S1_L003_R2_001.fastq.gz" size="21296989453" date="2024-04-19 18:41:08" md5="371aba9a38c5ee6934d4fde81638fb19" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746896/AcuteColitis1_S1_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746896" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746896/SRR28746896" size="21946953744" date="2024-04-19 18:43:51" md5="006a3cc53d5cdcb98a18e172993a38ab" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746896/SRR28746896" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746896.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746896/SRR28746896.lite.1" size="12428761608" date="2024-04-19 20:13:38" md5="2396fca37ac431136b826baf0e16803f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746896/SRR28746896.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746896/SRR28746896.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746896/SRR28746896.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="354285375">
+          <Read index="0" count="354285375" average="10" stdev="0"/>
+          <Read index="1" count="354285375" average="10" stdev="0"/>
+          <Read index="2" count="354285375" average="28" stdev="0"/>
+          <Read index="3" count="354285375" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="354285375"/>
+                <Elements count="48891381750"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="31885683750">
+          <Base value="A" count="8729812687"/>
+          <Base value="C" count="7364513730"/>
+          <Base value="G" count="8091993534"/>
+          <Base value="T" count="7688440140"/>
+          <Base value="N" count="10923659"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312642" alias="GSM8217727_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312642</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217727_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217727: Mouse colon, Healthy3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074412">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074412</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217727</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217727</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217727" accession="SRS21074412">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074412</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019961</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217727</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, Healthy3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>sterile distilled water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074412" sample_name="GSM8217727" sample_title="Mouse colon, Healthy3" spots="371942634" bases="51328083492" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074412</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019961</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217727</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="51328083492" spots="371942634" bytes="23883630984">
+      <RUN accession="SRR28746897" alias="GSM8217727_r1" total_spots="371942634" total_bases="51328083492" size="23883630984" load_done="true" published="2024-05-08 00:38:08" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746897</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217727_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312642">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217727_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074412" sample_name="GSM8217727" sample_title="Mouse colon, Healthy3" spots="371942634" bases="51328083492" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074412</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019961</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217727</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Normal3_S1_L007_I1_001.fastq.gz" size="2257852063" date="2024-04-19 18:39:13" md5="27e0f54175e7d573b8a0bb22277006f3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746897/Normal3_S1_L007_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal3_S1_L007_I2_001.fastq.gz" size="2690929298" date="2024-04-19 18:39:20" md5="47f9c7d4eb1916443f327aa8e6deb843" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746897/Normal3_S1_L007_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal3_S1_L007_R1_001.fastq.gz" size="8465279021" date="2024-04-19 18:39:37" md5="5569a035624d6bf22d5c5a713570f58a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746897/Normal3_S1_L007_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal3_S1_L007_R2_001.fastq.gz" size="23707999154" date="2024-04-19 18:40:48" md5="2114fb427297144b1bb3c2c6c23f731f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746897/Normal3_S1_L007_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746897" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746897/SRR28746897" size="23883633205" date="2024-04-19 18:44:34" md5="4e63db4e372d15ee027a63167e822429" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746897/SRR28746897" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746897.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746897/SRR28746897.lite.1" size="13035077605" date="2024-04-19 20:14:09" md5="7103b1369774fcf31e038e919ba8f77a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746897/SRR28746897.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746897/SRR28746897.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746897/SRR28746897.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="371942634">
+          <Read index="0" count="371942634" average="10" stdev="0"/>
+          <Read index="1" count="371942634" average="10" stdev="0"/>
+          <Read index="2" count="371942634" average="28" stdev="0"/>
+          <Read index="3" count="371942634" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="371942634"/>
+                <Elements count="51328083492"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33474837060">
+          <Base value="A" count="9319924714"/>
+          <Base value="C" count="7739768490"/>
+          <Base value="G" count="8293845479"/>
+          <Base value="T" count="8111464860"/>
+          <Base value="N" count="9833517"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312641" alias="GSM8217726_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312641</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217726_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217726: Mouse colon, Healthy2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074411">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074411</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217726</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217726</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217726" accession="SRS21074411">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074411</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019962</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217726</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, Healthy2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>sterile distilled water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074411" sample_name="GSM8217726" sample_title="Mouse colon, Healthy2" spots="372739193" bases="51438008634" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074411</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019962</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217726</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="51438008634" spots="372739193" bytes="23528152146">
+      <RUN accession="SRR28746899" alias="GSM8217726_r1" total_spots="372739193" total_bases="51438008634" size="23528152146" load_done="true" published="2024-05-08 00:38:08" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217726_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312641">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217726_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074411" sample_name="GSM8217726" sample_title="Mouse colon, Healthy2" spots="372739193" bases="51438008634" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074411</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019962</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217726</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Normal2_S1_L006_I1_001.fastq.gz" size="2218088535" date="2024-04-19 18:35:16" md5="518713add2c98dece2e3dc1b29ad6fbf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746899/Normal2_S1_L006_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal2_S1_L006_I2_001.fastq.gz" size="2467949966" date="2024-04-19 18:35:24" md5="88be727dee0ea321cf66742bd4fab777" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746899/Normal2_S1_L006_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal2_S1_L006_R1_001.fastq.gz" size="8397810294" date="2024-04-19 18:35:47" md5="b87cb5613f63e9797429302ab0d5726b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746899/Normal2_S1_L006_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal2_S1_L006_R2_001.fastq.gz" size="23306124376" date="2024-04-19 18:36:53" md5="4f1ecc3aa5005ba10f181f8beff76eb8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR28746899/Normal2_S1_L006_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746899" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746899/SRR28746899" size="23528154368" date="2024-04-19 18:39:37" md5="d75c084dbc2c9a36239d54b35f76b7ff" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746899/SRR28746899" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746899.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746899/SRR28746899.lite.1" size="13056394188" date="2024-04-19 20:14:37" md5="e584384a53db44be06d923163ceaeebf" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746899/SRR28746899.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746899/SRR28746899.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746899/SRR28746899.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="372739193">
+          <Read index="0" count="372739193" average="10" stdev="0"/>
+          <Read index="1" count="372739193" average="10" stdev="0"/>
+          <Read index="2" count="372739193" average="28" stdev="0"/>
+          <Read index="3" count="372739193" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="372739193"/>
+                <Elements count="51438008634"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33546527370">
+          <Base value="A" count="9265960403"/>
+          <Base value="C" count="7796761831"/>
+          <Base value="G" count="8445601189"/>
+          <Base value="T" count="8028901301"/>
+          <Base value="N" count="9302646"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24312640" alias="GSM8217725_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24312640</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217725_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8217725: Mouse colon, Healthy1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP502899">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP502899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1102362</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21074410">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21074410</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8217725</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8217725</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Intestinal tissues were prepared from C57BL/6 female mice after induction of the acute or chronic colitis model and homogenized for scRNA-seq analysis. We used Chromium Next GEM Single Cell 3p RNA library v3.1. After dissociation, single cells, reagents, and a single Gel Bead containing barcoded oligonucleotides were encapsulated into nanoliter-scale GEMs (Gel Bead in emulsion) using the Next GEM Technology. We then sampled a pool of about 3,500,000 10x Barcodes to separately index each cell's transcriptome and cell surface protein by partitioning thousands of cells into nanoliter-scale Gel Beads-in-emulsion (GEMs), where all generated DNA molecules share a common 10x Barcode. - The poly(dT) primer captures poly-adenylated mRNA and barcoded, full-length cDNA is produced. Single Cell 3' GEX and feature barcode libraries were sequenced on the Illumina sequencing system. For paired-end sequencing, two reads were sequenced from both ends of the fragment. Library preparation and sequencing were conducted by Macrogen (Seoul, Korea).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>HiSeq X Ten</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University" accession="SRA1849610" alias="SUB14390830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1849610</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University">SUB14390830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Machine Learning &amp; Bioinformatics Lab, Electronics and Electrical Eng., Dankook University</Name>
+      <Contact email="syoon@dku.edu">
+        <Address>
+          <Street>Dept of Electronics and Electrical Eng.,, 152 Jukjeon-ro, Suji-gu</Street>
+          <City>Yongin-si</City>
+          <Sub>Gyeonggi-do</Sub>
+          <Country>South Korea</Country>
+        </Address>
+        <Name>
+          <First>Seokhyun</First>
+          <Last>Yoon</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE264408" accession="SRP502899">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP502899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1102362</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE264408</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of healthy mouse colon and mouse colon with acute or chronic colitis induced by DSS</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In this study, we attempted to dissect the dynamic changes during inflammation using well-prepared scRNA-seq dataset. Specifically, we tried to characterize the pathology and the biological mechanism underlying the ulcerative colitis separately for the acute and chronic colitis. We observed a significant reduction in epithelial populations during acute colitis, indicating tissue damage, with a partial recovery observed in chronic inflammation. Analyses of cell-cell interactions demonstrated shifts in networking patterns among different cell types during disease progression. Notably, macrophage phenotypes exhibited diversity, with a pronounced polarization towards the pro-inflammatory M1 phenotype in chronic condition, suggesting the role of macrophage heterogeneity in disease progression. Analysis of the intestinal microbiome revealed significant alterations in composition and metabolism pathways, particularly the nicotinamide pathway. Additionally, dysbiosis was linked to dysregulation of NAD homeostasis through NAMPT, providing insights into potential therapeutic strategies. The study also highlighted the role of T cell differentiation in the context of dysbiosis and its implications in colitis progression, emphasizing the need for targeted interventions to modulate the inflammatory response and immune balance in colitis. Overall design: We conducted single-cell RNA sequencing (scRNA-Seq) using Chromium (10X Genomics) on samples from 3 healthy mouse colons, 3 mouse colons with acute colitis induced by DSS, and 4 mouse colons with chronic colitis induced by DSS.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE264408</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38879692</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8217725" accession="SRS21074410">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21074410</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41019963</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8217725</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mouse colon, Healthy1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1102362</ID>
+            <LABEL>PRJNA1102362</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>colon</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>sterile distilled water</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21074410" sample_name="GSM8217725" sample_title="Mouse colon, Healthy1" spots="359019595" bases="49544704110" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21074410</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41019963</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217725</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="49544704110" spots="359019595" bytes="22632634673">
+      <RUN accession="SRR28746900" alias="GSM8217725_r1" total_spots="359019595" total_bases="49544704110" size="22632634673" load_done="true" published="2024-05-08 00:38:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28746900</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8217725_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24312640">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8217725_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21074410" sample_name="GSM8217725" sample_title="Mouse colon, Healthy1" spots="359019595" bases="49544704110" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21074410</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41019963</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8217725</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Normal1_S1_L005_I1_001.fastq.gz" size="2192417642" date="2024-04-19 19:21:00" md5="e38eb31bc20feedcca7d169f2f3c1695" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR28746900/Normal1_S1_L005_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal1_S1_L005_I2_001.fastq.gz" size="2555065778" date="2024-04-19 19:21:34" md5="8d505b20d49d7fb897f895794859f2dc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR28746900/Normal1_S1_L005_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal1_S1_L005_R1_001.fastq.gz" size="8168548605" date="2024-04-19 19:23:23" md5="69ca52661cda0973035439df0377d5c9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR28746900/Normal1_S1_L005_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Normal1_S1_L005_R2_001.fastq.gz" size="22404392443" date="2024-04-19 19:29:39" md5="36ffa5c608841541e81434e12db27e3c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR28746900/Normal1_S1_L005_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746900" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746900/SRR28746900" size="22632636894" date="2024-04-19 19:40:07" md5="ee4e11d531ddfb24b09905ffce08d350" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28746900/SRR28746900" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28746900.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746900/SRR28746900.lite.1" size="12589724458" date="2024-04-19 20:17:38" md5="78706b37ee78c7d57bf4491ca8c69049" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR028/28746/SRR28746900/SRR28746900.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR28746900/SRR28746900.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR28746900/SRR28746900.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="359019595">
+          <Read index="0" count="359019595" average="10" stdev="0"/>
+          <Read index="1" count="359019595" average="10" stdev="0"/>
+          <Read index="2" count="359019595" average="28" stdev="0"/>
+          <Read index="3" count="359019595" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="359019595"/>
+                <Elements count="49544704110"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="32311763550">
+          <Base value="A" count="9034889011"/>
+          <Base value="C" count="7464410857"/>
+          <Base value="G" count="7962458475"/>
+          <Base value="T" count="7841920129"/>
+          <Base value="N" count="8085078"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

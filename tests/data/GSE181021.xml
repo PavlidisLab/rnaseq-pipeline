@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482109" accession="SRX11583664">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583664</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482109: NAc Setd1+/- scRNA-Seq Sample2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616885">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616885</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482109</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482109</ID>
+            <LABEL>GSM5482109</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482109</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482109" accession="SRS9616885">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616885</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457254</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482109</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NAc Setd1+/- scRNA-Seq Sample2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Setd1a CRISPR-Cas9</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616885" sample_name="GSM5482109" sample_title="NAc Setd1+/- scRNA-Seq Sample2" spots="126391622" bases="12386378956" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616885</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457254</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482109</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="12386378956" spots="126391622" bytes="7020969796">
+      <RUN alias="GSM5482109_r1" accession="SRR15278776" total_spots="126391622" total_bases="12386378956" size="7020969796" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278776</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482109_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583664" refname="GSM5482109"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616885" sample_name="GSM5482109" sample_title="NAc Setd1+/- scRNA-Seq Sample2" spots="126391622" bases="12386378956" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616885</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457254</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482109</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NAc_Setd1aHet_Rep2.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278776/NAc_Setd1aHet_Rep2.bam.1" size="15459806227" date="2021-08-06 12:31:20" md5="e13a3601e4a88588990af5296d057772" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278776/NAc_Setd1aHet_Rep2.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278776/NAc_Setd1aHet_Rep2.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278776" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278776/SRR15278776" size="7020984843" date="2021-08-06 12:59:30" md5="939c19dc7c4b6e0b1f96c81917695fa5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278776/SRR15278776" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278776.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR015/15278/SRR15278776/SRR15278776.lite.1" size="2458521317" date="2022-08-26 05:18:13" md5="0316edb2acb69a17fe711bcbb1d59d14" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR015/15278/SRR15278776/SRR15278776.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR15278776/SRR15278776.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR15278776/SRR15278776.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="126391622">
+          <Read index="0" count="126391622" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="119865972"/>
+                <Elements count="11746865256"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546194"/>
+                <Elements count="2730819242"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="25387012"/>
+                <Elements count="2487927176"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="126391622"/>
+                <Elements count="12386378956"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12386378956">
+          <Base value="A" count="3559687601"/>
+          <Base value="C" count="2746842132"/>
+          <Base value="G" count="2818283068"/>
+          <Base value="T" count="3229396703"/>
+          <Base value="N" count="32169452"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482108" accession="SRX11583663">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583663</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482108: NAc Setd1+/- scRNA-Seq Sample1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616886">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616886</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482108</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482108</ID>
+            <LABEL>GSM5482108</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482108</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482108" accession="SRS9616886">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616886</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457253</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482108</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NAc Setd1+/- scRNA-Seq Sample1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Setd1a CRISPR-Cas9</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616886" sample_name="GSM5482108" sample_title="NAc Setd1+/- scRNA-Seq Sample1" spots="108263955" bases="10609867590" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616886</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457253</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482108</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="10609867590" spots="108263955" bytes="5892693784">
+      <RUN alias="GSM5482108_r1" accession="SRR15278775" total_spots="108263955" total_bases="10609867590" size="5892693784" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278775</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482108_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583663" refname="GSM5482108"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616886" sample_name="GSM5482108" sample_title="NAc Setd1+/- scRNA-Seq Sample1" spots="108263955" bases="10609867590" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616886</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457253</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482108</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NAc_Setd1aHet_Rep1.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278775/NAc_Setd1aHet_Rep1.bam.1" size="12864193818" date="2021-08-06 06:23:22" md5="f0051c2b59c99c9a08b691304d45d848" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278775/NAc_Setd1aHet_Rep1.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278775/NAc_Setd1aHet_Rep1.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278775" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278775/SRR15278775" size="5892708844" date="2021-08-06 06:28:17" md5="7542bfc6f022e3e9e49c66613f80cdb7" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278775/SRR15278775" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278775.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278775/SRR15278775.lite.1" size="2130792660" date="2022-09-13 22:44:56" md5="68e3f7d705945b659bf30488209da3eb" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278775/SRR15278775.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR15278775/SRR15278775.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR15278775/SRR15278775.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="108263955">
+          <Read index="0" count="108263955" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="103030757"/>
+                <Elements count="10097014186"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546206"/>
+                <Elements count="2730871774"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="20148831"/>
+                <Elements count="1974585438"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="108263955"/>
+                <Elements count="10609867590"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10609867590">
+          <Base value="A" count="3013528155"/>
+          <Base value="C" count="2372820274"/>
+          <Base value="G" count="2546187528"/>
+          <Base value="T" count="2664506771"/>
+          <Base value="N" count="12824862"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482107" accession="SRX11583662">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583662</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482107: NAc WT scRNA-Seq Sample2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616884">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616884</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482107</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482107</ID>
+            <LABEL>GSM5482107</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482107</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482107" accession="SRS9616884">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616884</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457252</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482107</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NAc WT scRNA-Seq Sample2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>None</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616884" sample_name="GSM5482107" sample_title="NAc WT scRNA-Seq Sample2" spots="141325692" bases="13849917816" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616884</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457252</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482107</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="13849917816" spots="141325692" bytes="7880300119">
+      <RUN alias="GSM5482107_r1" accession="SRR15278774" total_spots="141325692" total_bases="13849917816" size="7880300119" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278774</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482107_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583662" refname="GSM5482107"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616884" sample_name="GSM5482107" sample_title="NAc WT scRNA-Seq Sample2" spots="141325692" bases="13849917816" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616884</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457252</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482107</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NAc_WT_Rep2.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278774/NAc_WT_Rep2.bam.1" size="17092642930" date="2021-08-06 12:15:39" md5="a7849481ab1c24bd426bd854b53094ce" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278774/NAc_WT_Rep2.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278774/NAc_WT_Rep2.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278774" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278774/SRR15278774" size="7880315167" date="2021-08-06 12:25:28" md5="3982bd03e4ec1d57d532ef5e5cd36cc6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278774/SRR15278774" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278774.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278774/SRR15278774.lite.1" size="2811377213" date="2022-09-13 22:42:00" md5="4580d88474b76661479867921d7985f4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278774/SRR15278774.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR15278774/SRR15278774.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR15278774/SRR15278774.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="141325692">
+          <Read index="0" count="141325692" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="133857550"/>
+                <Elements count="13118039900"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="26434672"/>
+                <Elements count="2590597856"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="141325692"/>
+                <Elements count="13849917816"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="13849917816">
+          <Base value="A" count="3988180812"/>
+          <Base value="C" count="3063613392"/>
+          <Base value="G" count="3200201160"/>
+          <Base value="T" count="3561769020"/>
+          <Base value="N" count="36153432"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482106" accession="SRX11583661">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583661</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482106: NAc WT scRNA-Seq Sample1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616611">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616611</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482106</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482106</ID>
+            <LABEL>GSM5482106</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482106</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482106" accession="SRS9616611">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616611</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457251</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482106</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NAc WT scRNA-Seq Sample1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>NAc</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>None</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616611" sample_name="GSM5482106" sample_title="NAc WT scRNA-Seq Sample1" spots="98602434" bases="9663038532" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616611</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457251</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482106</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="9663038532" spots="98602434" bytes="5412527750">
+      <RUN alias="GSM5482106_r1" accession="SRR15278773" total_spots="98602434" total_bases="9663038532" size="5412527750" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278773</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482106_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583661" refname="GSM5482106"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616611" sample_name="GSM5482106" sample_title="NAc WT scRNA-Seq Sample1" spots="98602434" bases="9663038532" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616611</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457251</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482106</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NAc_WT_Rep1.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278773/NAc_WT_Rep1.bam.1" size="11820225098" date="2021-08-06 06:17:23" md5="8692e4e5a11e1d78aef5aef171018024" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278773/NAc_WT_Rep1.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278773/NAc_WT_Rep1.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278773" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278773/SRR15278773" size="5412542795" date="2021-08-06 06:42:29" md5="546ec615ab458e655f108ca002e6dd4d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278773/SRR15278773" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278773.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR015/15278/SRR15278773/SRR15278773.lite.1" size="1988956837" date="2022-10-27 01:37:30" md5="fb1ca7925f9eaef6c14641a587172994" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR015/15278/SRR15278773/SRR15278773.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-5/SRR15278773/SRR15278773.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR15278773/SRR15278773.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="98602434">
+          <Read index="0" count="98602434" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="93586956"/>
+                <Elements count="9171521688"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546193"/>
+                <Elements count="2730807821"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="18174624"/>
+                <Elements count="1781113152"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="98602434"/>
+                <Elements count="9663038532"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="9663038532">
+          <Base value="A" count="2743105463"/>
+          <Base value="C" count="2165182997"/>
+          <Base value="G" count="2307100182"/>
+          <Base value="T" count="2435931352"/>
+          <Base value="N" count="11718538"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482105" accession="SRX11583660">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583660</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482105: PFC Setd1+/- scRNA-Seq Sample2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616609">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616609</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482105</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482105</ID>
+            <LABEL>GSM5482105</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482105</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482105" accession="SRS9616609">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616609</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457250</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482105</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PFC Setd1+/- scRNA-Seq Sample2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Setd1a CRISPR-Cas9</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616609" sample_name="GSM5482105" sample_title="PFC Setd1+/- scRNA-Seq Sample2" spots="106770385" bases="10463497730" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616609</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457250</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482105</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="10463497730" spots="106770385" bytes="5682974685">
+      <RUN alias="GSM5482105_r1" accession="SRR15278772" total_spots="106770385" total_bases="10463497730" size="5682974685" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278772</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482105_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583660" refname="GSM5482105"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616609" sample_name="GSM5482105" sample_title="PFC Setd1+/- scRNA-Seq Sample2" spots="106770385" bases="10463497730" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616609</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457250</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482105</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="PFC_Setd1aHet_Rep2.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278772/PFC_Setd1aHet_Rep2.bam.1" size="12612898528" date="2021-08-06 06:22:25" md5="b7b393a38deeb62b77b2fe4e32487c26" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278772/PFC_Setd1aHet_Rep2.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278772/PFC_Setd1aHet_Rep2.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278772" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278772/SRR15278772" size="5682989732" date="2021-08-06 06:43:49" md5="4aa8203cb797ba91875fb6431d0ec2c5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278772/SRR15278772" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278772.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278772/SRR15278772.lite.1" size="2074429507" date="2022-09-13 22:37:17" md5="44fb2a95d86bb9f34febfa8398875015" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278772/SRR15278772.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR15278772/SRR15278772.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR15278772/SRR15278772.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="106770385">
+          <Read index="0" count="106770385" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="101130173"/>
+                <Elements count="9910756954"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546190"/>
+                <Elements count="2730796895"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="21852329"/>
+                <Elements count="2141528242"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="106770385"/>
+                <Elements count="10463497730"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10463497730">
+          <Base value="A" count="3028896924"/>
+          <Base value="C" count="2302467713"/>
+          <Base value="G" count="2351038068"/>
+          <Base value="T" count="2740786076"/>
+          <Base value="N" count="40308949"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482104" accession="SRX11583659">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583659</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482104: PFC Setd1+/- scRNA-Seq Sample1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616610">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616610</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482104</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482104</ID>
+            <LABEL>GSM5482104</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482104</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482104" accession="SRS9616610">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616610</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457249</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482104</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PFC Setd1+/- scRNA-Seq Sample1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Setd1a CRISPR-Cas9</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616610" sample_name="GSM5482104" sample_title="PFC Setd1+/- scRNA-Seq Sample1" spots="90036802" bases="8823606596" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616610</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457249</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482104</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="8823606596" spots="90036802" bytes="6050921057">
+      <RUN alias="GSM5482104_r1" accession="SRR15278771" total_spots="90036802" total_bases="8823606596" size="6050921057" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278771</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482104_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583659" refname="GSM5482104"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616610" sample_name="GSM5482104" sample_title="PFC Setd1+/- scRNA-Seq Sample1" spots="90036802" bases="8823606596" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616610</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457249</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482104</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="PFC_Setd1aHet_Rep1.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278771/PFC_Setd1aHet_Rep1.bam.1" size="12575240257" date="2021-08-06 06:07:54" md5="9c0c9481639892a9aad18b56971c2e23" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278771/PFC_Setd1aHet_Rep1.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR15278771/PFC_Setd1aHet_Rep1.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278771" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278771/SRR15278771" size="6050936089" date="2021-08-06 06:26:02" md5="133cfbf4ba786c17368a6c95b6bc107a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278771/SRR15278771" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278771.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278771/SRR15278771.lite.1" size="2696983008" date="2022-09-13 22:37:26" md5="4580352d167e84b8d5e6b844df18b492" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278771/SRR15278771.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR15278771/SRR15278771.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR15278771/SRR15278771.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="90036802">
+          <Read index="0" count="90036802" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="53081199"/>
+                <Elements count="5201957502"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546202"/>
+                <Elements count="2730854853"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="12890622"/>
+                <Elements count="1263280956"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="90036802"/>
+                <Elements count="8823606596"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="8823606596">
+          <Base value="A" count="2799938011"/>
+          <Base value="C" count="1862822755"/>
+          <Base value="G" count="1870471193"/>
+          <Base value="T" count="2054959800"/>
+          <Base value="N" count="235414837"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482103" accession="SRX11583658">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583658</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482103: PFC WT scRNA-Seq Sample2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616607">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616607</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482103</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482103</ID>
+            <LABEL>GSM5482103</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482103</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482103" accession="SRS9616607">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616607</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457248</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482103</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PFC WT scRNA-Seq Sample2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>None</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616607" sample_name="GSM5482103" sample_title="PFC WT scRNA-Seq Sample2" spots="145169699" bases="14226630502" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616607</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457248</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482103</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="14226630502" spots="145169699" bytes="7821132990">
+      <RUN alias="GSM5482103_r1" accession="SRR15278770" total_spots="145169699" total_bases="14226630502" size="7821132990" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278770</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482103_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583658" refname="GSM5482103"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616607" sample_name="GSM5482103" sample_title="PFC WT scRNA-Seq Sample2" spots="145169699" bases="14226630502" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616607</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457248</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482103</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR15278770.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR015/15278/SRR15278770/SRR15278770.lite.1" size="2870206274" date="2022-08-31 18:24:19" md5="6dc3717cc2afa7071d92e91dc9a0e545" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR015/15278/SRR15278770/SRR15278770.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-5/SRR15278770/SRR15278770.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR15278770/SRR15278770.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278770" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278770/SRR15278770" size="7821148048" date="2021-08-06 07:08:35" md5="7d1cdf431f1e646f3392cdea19b1e828" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278770/SRR15278770" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PFC_WT_Rep2.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278770/PFC_WT_Rep2.bam.1" size="17027632584" date="2021-08-06 06:37:02" md5="fa1dad37dce181e6bf56d995af8dc140" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278770/PFC_WT_Rep2.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278770/PFC_WT_Rep2.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="145169699">
+          <Read index="0" count="145169699" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="136785185"/>
+                <Elements count="13404948130"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546194"/>
+                <Elements count="2730819604"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="25780208"/>
+                <Elements count="2526460384"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="145169699"/>
+                <Elements count="14226630502"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="14226630502">
+          <Base value="A" count="4116157724"/>
+          <Base value="C" count="3094721175"/>
+          <Base value="G" count="3275152917"/>
+          <Base value="T" count="3685675690"/>
+          <Base value="N" count="54922996"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5482102" accession="SRX11583657">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11583657</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5482102: PFC WT scRNA-Seq Sample1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP330232" refname="GSE181021">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9616608">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9616608</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5482102</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For single cell dissociation of Prefrontal cortex (PFC), the mice were anesthetized and the entire brain was quickly removed and transferred into ice-cold Hibernate A/B27 medium (60 ml Hibernate A medium with 1 ml B27 and 0.15 ml Glutamax). The coronal sections containing PFC were cut with brain matrix and further sliced into 0.5 mm slices in ice-cold Hibernate A/B27 medium. Then the PFC tissue was dissected from each slice under dissection microscope and subjected to tissue dissociation . The PFC tissues were further dissociated into single-cell suspension with a papain-based dissociation protocol (Brewer and Torricelli, 2007) with some modifications. Briefly, the tissues from two animals were cut into small pieces and incubated in dissociation medium (Hibernate A-Ca medium with 2 mg/ml papain and 2X Glutamax) at 300C for 35-40 min with constant agitation. After washing with 5 ml Hibernate A/B27 medium, the tissues were triturated with fire polished glass Pasteur pipettes for 10 times in 2 ml Hibernate A/B27 medium to generate single-cell suspension, which was repeated for three times. To remove debris, the 6 ml single-cell suspension was loaded on a 4-layer OptiPrep gradient (Brewer and Torricelli, 2007) and centrifuged at 800 g for 15 min at 40C. Fractions 2 – 4 were then collected and washed with 5 ml Hibernate A/B27 medium and 5 ml DPBS with 0.01% BSA. The cells were spun down at 200 g for 3 min and re-suspended in 0.2 ml DPBS with 0.01% BSA. A 10 μl cell suspension was stained with Trypan Blue and the live cells were counted. During the entire procedure, the tissues or cells were kept in ice-cold solutions except for the papain digestion. The cells suspension was diluted with DPBS containing 0.01% BSA to 300 - 330 cells/μl for single cell capture. Single cells and barcoded beads were captured into droplets with 10X Chromium platform (10X Genomics) according to the protocol from the manufacturer (Zheng et al., 2017). After cell capture, reverse transcription, cDNA amplification and sequencing library preparation were perform as described in the same protocol (Zheng et al., 2017). The libraries were sequenced on Illumina Hiseq 2500 sequencer with pair-end sequencing (Read1: 26bp, Index: 8bp, Read2: 98bp).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305482102</ID>
+            <LABEL>GSM5482102</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5482102</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE181021" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1266173">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1266173</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE181021</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE181021" accession="SRP330232">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP330232</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA750436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE181021</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis [single-cell RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Schizophrenia (SCZ) is a chronic, serious mental disorder with severe burden on patients' families and society. Although over 100 genes have been linked to SCZ pathogenies, the underlying molecular and cellular mechanisms remain largely unknown. Here, we generated a Setd1a haploinsufficiency mouse model to understand how this SCZ-associated epigenetic factor affects gene expression programs in cells of brain regions highly relevant to SCZ. By comparing single-cell RNA-seq results from wild type and Setd1a+/- mice, we found Setd1a heterozygosity causes highly diverse transcriptional adaptations across different cell types in prefrontal cortex and striatum, suggesting brain region- and cell type-specific mechanisms contribute to pathophysiology of SCZ. Interestingly, we found the Foxp2+ neurons exhibit the most prominent gene expression changes among the different neuron subtypes in PFC, which correlate with the H3K4me3 changes. Importantly, many of the genes dysregulated in heterozygous Setd1a mice are linked to neuron morphogenesis and synaptic function. Consistently, heterozygous Setd1a mice exhibit certain behavioral features of SCZ patients. Collectively, our study establishes Setd1a heterozygous mice as a model for understanding SCZ and uncovers a complex brain region- and cell type-specific changes that potentially underlying SCZ pathogenesis. Overall design: To mimic Setd1a loss-of-function mutations in a mouse model, we used CRISPR-Cas9 technique and targeted the 15th exon of Setd1a , which is right before the SET domain encoded by exons 16-18.  we dissected PFC tissues from acute coronal sections of Setd1a+/- and WT mouse brains and dissociated the tissues to single cells, which were processed with the 10x Chromium platform (10X Genomics, CA).  In additional to PFC, we performed similar scRNA-seq to analyze the transcriptional effect of Setd1a heterozygosity in striatum (including both dorsal and ventral striatum) of two WT and two Setd1a+/- mice.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE181021</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>35245111</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA750428</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5482102" accession="SRS9616608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9616608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN20457246</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5482102</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PFC WT scRNA-Seq Sample1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>750436</ID>
+            <LABEL>PRJNA750436</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6N</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>PFC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-10 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>None</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9616608" sample_name="GSM5482102" sample_title="PFC WT scRNA-Seq Sample1" spots="117627633" bases="11527508034" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9616608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN20457246</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5482102</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="11527508034" spots="117627633" bytes="7901616078">
+      <RUN alias="GSM5482102_r1" accession="SRR15278769" total_spots="117627633" total_bases="11527508034" size="7901616078" load_done="true" published="2022-01-14 08:43:44" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR15278769</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5482102_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11583657" refname="GSM5482102"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9616608" sample_name="GSM5482102" sample_title="PFC WT scRNA-Seq Sample1" spots="117627633" bases="11527508034" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9616608</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN20457246</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5482102</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR15278769.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278769/SRR15278769.lite.1" size="3410065961" date="2022-09-13 22:43:09" md5="dd76a7d7155ff7ce988555f28fbcd52e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR015/15278/SRR15278769/SRR15278769.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR15278769/SRR15278769.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR15278769/SRR15278769.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR15278769" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278769/SRR15278769" size="7901631126" date="2021-08-06 06:56:48" md5="ae6ce235d69c56a6f9942abec29e52d1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR15278769/SRR15278769" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PFC_WT_Rep1.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278769/PFC_WT_Rep1.bam.1" size="16469261231" date="2021-08-06 06:35:56" md5="918d9415a4ab96dcc8226ca02f3508cb" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR15278769/PFC_WT_Rep1.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR15278769/PFC_WT_Rep1.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="117627633">
+          <Read index="0" count="117627633" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="76113020"/>
+                <Elements count="7459075960"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546200"/>
+                <Elements count="2730845113"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="18889830"/>
+                <Elements count="1851203340"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="117627633"/>
+                <Elements count="11527508034"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11527508034">
+          <Base value="A" count="3627211066"/>
+          <Base value="C" count="2436704002"/>
+          <Base value="G" count="2494849022"/>
+          <Base value="T" count="2649047989"/>
+          <Base value="N" count="319695955"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

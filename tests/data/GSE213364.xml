@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577178" alias="GSM6581153_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577178</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581153_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581153: JLE33; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116895">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116895</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581153</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581153</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581153" accession="SRS15116895">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116895</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854433</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581153</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>JLE33</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>seizure-affected brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>Focal cortical dysplasia type I</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116895" sample_name="GSM6581153" sample_title="JLE33" spots="265073367" bases="33664317609" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116895</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854433</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581153</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="33664317609" spots="265073367" bytes="10739484355">
+      <RUN accession="SRR21575007" alias="GSM6581153_r1" total_spots="133270788" total_bases="16925390076" size="5387326465" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575007</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581153_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577178">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581153_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=JLE-33_S2_L001_R1_001.fastq.gz --read2PairFiles=JLE-33_S2_L001_R2_001.fastq.gz --read3PairFiles=JLE-33_S2_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116895" sample_name="GSM6581153" sample_title="JLE33" spots="133270788" bases="16925390076" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116895</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854433</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581153</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="JLE-33_S2_L001_I1_001.fastq.gz" size="845113382" date="2022-09-15 14:22:29" md5="103510799a3daf03e4af5040fd5eb215" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21575007/JLE-33_S2_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-33_S2_L001_R1_001.fastq.gz" size="2796491723" date="2022-09-15 14:36:15" md5="ce4d10d2b1ac5db83d70b2b7cc522495" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21575007/JLE-33_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-33_S2_L001_R2_001.fastq.gz" size="6098755357" date="2022-09-15 15:28:16" md5="245827c5584043273c843039f8a4e426" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21575007/JLE-33_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575007" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575007/SRR21575007" size="5387329281" date="2022-09-15 16:27:12" md5="584314e33a224a438c4c93156643bf68" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575007/SRR21575007" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575007.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575007/SRR21575007.lite.1" size="4425344569" date="2023-05-11 03:21:24" md5="3f6588043acadba7d977fc410d56cfa2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575007/SRR21575007.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575007/SRR21575007.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575007/SRR21575007.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="133270788">
+          <Read index="0" count="133270788" average="28" stdev="0"/>
+          <Read index="1" count="133270788" average="91" stdev="0"/>
+          <Read index="2" count="133270788" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="133270788"/>
+                <Elements count="16925390076"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12127641708">
+          <Base value="A" count="3487082972"/>
+          <Base value="C" count="2626559628"/>
+          <Base value="G" count="3077687368"/>
+          <Base value="T" count="2935503907"/>
+          <Base value="N" count="807833"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21575008" alias="GSM6581153_r2" total_spots="131802579" total_bases="16738927533" size="5352157890" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575008</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581153_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577178">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581153_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=JLE-33_S2_L002_R1_001.fastq.gz --read2PairFiles=JLE-33_S2_L002_R2_001.fastq.gz --read3PairFiles=JLE-33_S2_L002_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116895" sample_name="GSM6581153" sample_title="JLE33" spots="131802579" bases="16738927533" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116895</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854433</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581153</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="JLE-33_S2_L002_I1_001.fastq.gz" size="842595893" date="2022-09-15 14:22:51" md5="a37f68298fe3413e3776190d8f4d3790" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR21575008/JLE-33_S2_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-33_S2_L002_R1_001.fastq.gz" size="2776265542" date="2022-09-15 15:04:15" md5="35f3d0f8782437213e44f9e4ebd38c51" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR21575008/JLE-33_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-33_S2_L002_R2_001.fastq.gz" size="6056154133" date="2022-09-15 16:33:28" md5="702be4fdcf6082404fdfe217f3594246" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR21575008/JLE-33_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575008" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575008/SRR21575008" size="5352160707" date="2022-09-15 18:05:51" md5="4c199c0a7512ee9e84b830d1ea8409ff" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575008/SRR21575008" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575008.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575008/SRR21575008.lite.1" size="4377099467" date="2023-05-11 03:19:46" md5="7427fade814ed59445c7f9d86a09662a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575008/SRR21575008.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575008/SRR21575008.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575008/SRR21575008.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="131802579">
+          <Read index="0" count="131802579" average="28" stdev="0"/>
+          <Read index="1" count="131802579" average="91" stdev="0"/>
+          <Read index="2" count="131802579" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="131802579"/>
+                <Elements count="16738927533"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11994034689">
+          <Base value="A" count="3452228613"/>
+          <Base value="C" count="2595487537"/>
+          <Base value="G" count="3040595022"/>
+          <Base value="T" count="2904984699"/>
+          <Base value="N" count="738818"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577177" alias="GSM6581152_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577177</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581152_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581152: JLE18; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116894">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116894</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581152</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581152</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581152" accession="SRS15116894">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116894</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854434</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581152</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>JLE18</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>seizure-affected brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>Focal cortical dysplasia type I</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116894" sample_name="GSM6581152" sample_title="JLE18" spots="221560861" bases="28138229347" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116894</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854434</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581152</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="28138229347" spots="221560861" bytes="9128216001">
+      <RUN accession="SRR21575009" alias="GSM6581152_r1" total_spots="111568745" total_bases="14169230615" size="4586813566" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575009</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581152_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577177">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581152_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=JLE-18_S1_L001_R1_001.fastq.gz --read2PairFiles=JLE-18_S1_L001_R2_001.fastq.gz --read3PairFiles=JLE-18_S1_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116894" sample_name="GSM6581152" sample_title="JLE18" spots="111568745" bases="14169230615" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116894</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854434</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581152</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="JLE-18_S1_L001_I1_001.fastq.gz" size="705142622" date="2022-09-15 13:41:00" md5="5bcc7cc477b5d076976e1c6d189e45b6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR21575009/JLE-18_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-18_S1_L001_R1_001.fastq.gz" size="2352257290" date="2022-09-15 13:41:35" md5="214c8f752f36ebcc0e96a4d08003f389" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR21575009/JLE-18_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-18_S1_L001_R2_001.fastq.gz" size="5304185106" date="2022-09-15 13:43:00" md5="50cc31f829dfaf2e41d03ad6a05647a7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR21575009/JLE-18_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575009" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575009/SRR21575009" size="4586816378" date="2022-09-15 13:45:17" md5="7a017d0c4361b3fcdc642f70d72bc05d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575009/SRR21575009" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575009.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575009/SRR21575009.lite.1" size="3704952562" date="2023-05-11 22:34:55" md5="9a6b6a57db4c6ed22324b3465242dbfa" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575009/SRR21575009.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575009/SRR21575009.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575009/SRR21575009.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="111568745">
+          <Read index="0" count="111568745" average="28" stdev="0"/>
+          <Read index="1" count="111568745" average="91" stdev="0"/>
+          <Read index="2" count="111568745" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="111568745"/>
+                <Elements count="14169230615"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10152755795">
+          <Base value="A" count="2940215143"/>
+          <Base value="C" count="2126894991"/>
+          <Base value="G" count="2551990972"/>
+          <Base value="T" count="2532981539"/>
+          <Base value="N" count="673150"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21575010" alias="GSM6581152_r2" total_spots="109992116" total_bases="13968998732" size="4541402435" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575010</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581152_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577177">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581152_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=JLE-18_S1_L002_R1_001.fastq.gz --read2PairFiles=JLE-18_S1_L002_R2_001.fastq.gz --read3PairFiles=JLE-18_S1_L002_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116894" sample_name="GSM6581152" sample_title="JLE18" spots="109992116" bases="13968998732" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116894</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854434</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581152</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="JLE-18_S1_L002_I1_001.fastq.gz" size="702311275" date="2022-09-15 13:37:25" md5="5d9f678eca695714ff3dd24f6984d980" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21575010/JLE-18_S1_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-18_S1_L002_R1_001.fastq.gz" size="2327454583" date="2022-09-15 13:38:11" md5="64056d51d586c96fe8d2c3400251aee8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21575010/JLE-18_S1_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="JLE-18_S1_L002_R2_001.fastq.gz" size="5247387140" date="2022-09-15 13:40:26" md5="4f112afc072b3a1b6bf72c48dc151fe1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR21575010/JLE-18_S1_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575010" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575010/SRR21575010" size="4541405252" date="2022-09-15 13:42:18" md5="6f81478bacb61739dda0cdb5d49f503b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575010/SRR21575010" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575010.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575010/SRR21575010.lite.1" size="3653128684" date="2023-05-11 22:35:49" md5="0e46ed6599162d0078712815305a398a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575010/SRR21575010.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575010/SRR21575010.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575010/SRR21575010.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="109992116">
+          <Read index="0" count="109992116" average="28" stdev="0"/>
+          <Read index="1" count="109992116" average="91" stdev="0"/>
+          <Read index="2" count="109992116" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="109992116"/>
+                <Elements count="13968998732"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10009282556">
+          <Base value="A" count="2901311583"/>
+          <Base value="C" count="2095072020"/>
+          <Base value="G" count="2513597587"/>
+          <Base value="T" count="2498685122"/>
+          <Base value="N" count="616244"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577176" alias="GSM6581151_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577176</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581151_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581151: NB4327; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116893">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116893</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581151</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581151</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581151" accession="SRS15116893">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116893</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854435</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581151</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NB4327</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>autopsy control brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116893" sample_name="GSM6581151" sample_title="NB4327" spots="165305164" bases="20993755828" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116893</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854435</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="20993755828" spots="165305164" bytes="6752810978">
+      <RUN accession="SRR21575011" alias="GSM6581151_r1" total_spots="165305164" total_bases="20993755828" size="6752810978" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575011</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581151_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577176">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581151_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=NB4327_10x_S5_L001_R1_001.fastq.gz --read2PairFiles=NB4327_10x_S5_L001_R2_001.fastq.gz --read3PairFiles=NB4327_10x_S5_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116893" sample_name="GSM6581151" sample_title="NB4327" spots="165305164" bases="20993755828" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116893</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854435</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581151</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR21575011.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575011/SRR21575011.lite.1" size="5478104425" date="2023-05-11 03:24:01" md5="68018ed7b228b6ac0fd24e5781ee3535" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575011/SRR21575011.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575011/SRR21575011.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575011/SRR21575011.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575011" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575011/SRR21575011" size="6752813793" date="2022-09-15 18:46:33" md5="56a78738acbb5055a5b77fa235c3091b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575011/SRR21575011" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NB4327_10x_S5_L001_R2_001.fastq.gz" size="7436270501" date="2022-09-15 17:33:08" md5="1be850eb6a19ca9f0d1bd5fa9d7d10f7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21575011/NB4327_10x_S5_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NB4327_10x_S5_L001_R1_001.fastq.gz" size="3428104213" date="2022-09-15 16:02:46" md5="99bd79a8b4dc216c2ff62e8e23ca79fa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21575011/NB4327_10x_S5_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NB4327_10x_S5_L001_I1_001.fastq.gz" size="972980043" date="2022-09-15 15:08:11" md5="7e6d797dbfaf1345feed726adc573b93" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21575011/NB4327_10x_S5_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="165305164">
+          <Read index="0" count="165305164" average="28" stdev="0"/>
+          <Read index="1" count="165305164" average="91" stdev="0"/>
+          <Read index="2" count="165305164" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="165305164"/>
+                <Elements count="20993755828"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="15042769924">
+          <Base value="A" count="4494607922"/>
+          <Base value="C" count="3121888409"/>
+          <Base value="G" count="3971165905"/>
+          <Base value="T" count="3454679840"/>
+          <Base value="N" count="427848"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577175" alias="GSM6581150_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577175</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581150_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581150: NB1499; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116892">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116892</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581150</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581150</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581150" accession="SRS15116892">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116892</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854436</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581150</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NB1499</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>autopsy control brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116892" sample_name="GSM6581150" sample_title="NB1499" spots="179158167" bases="22753087209" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116892</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854436</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581150</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="22753087209" spots="179158167" bytes="7308054708">
+      <RUN accession="SRR21575012" alias="GSM6581150_r1" total_spots="179158167" total_bases="22753087209" size="7308054708" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575012</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581150_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577175">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581150_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=NB1499_10x_S4_L001_R1_001.fastq.gz --read2PairFiles=NB1499_10x_S4_L001_R2_001.fastq.gz --read3PairFiles=NB1499_10x_S4_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116892" sample_name="GSM6581150" sample_title="NB1499" spots="179158167" bases="22753087209" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116892</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854436</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581150</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NB1499_10x_S4_L001_I1_001.fastq.gz" size="1130125103" date="2022-09-15 14:53:35" md5="1c25b421034f03bb614879b60f4b2f40" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21575012/NB1499_10x_S4_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NB1499_10x_S4_L001_R1_001.fastq.gz" size="3710209720" date="2022-09-15 14:54:23" md5="23e4fa0a0667ae9754632e954de00eac" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR21575012/NB1499_10x_S4_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NB1499_10x_S4_L001_R2_001.fastq.gz" size="8782146653" date="2022-09-15 14:56:44" md5="f8b3ae07670ffb63a14d7e1b816332f5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR21575012/NB1499_10x_S4_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575012" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575012/SRR21575012" size="7308057526" date="2022-09-15 15:00:40" md5="84caac36868c5c0e20663a23dccb5061" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575012/SRR21575012" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575012.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575012/SRR21575012.lite.1" size="5933967998" date="2023-05-11 22:35:05" md5="135b4bbda2f08e8900a43b405b10cc5d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575012/SRR21575012.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575012/SRR21575012.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575012/SRR21575012.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="179158167">
+          <Read index="0" count="179158167" average="28" stdev="0"/>
+          <Read index="1" count="179158167" average="91" stdev="0"/>
+          <Read index="2" count="179158167" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="179158167"/>
+                <Elements count="22753087209"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16303393197">
+          <Base value="A" count="4931072355"/>
+          <Base value="C" count="3310728818"/>
+          <Base value="G" count="3769042526"/>
+          <Base value="T" count="4292085934"/>
+          <Base value="N" count="463564"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577174" alias="GSM6581149_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577174</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581149_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581149: JLE23; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116891">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116891</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581149</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581149</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581149" accession="SRS15116891">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116891</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854437</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581149</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>JLE23</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>seizure-affected brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>Rasmussen Encephalitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116891" sample_name="GSM6581149" sample_title="JLE23" spots="248976509" bases="77182717790" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116891</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854437</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581149</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="77182717790" spots="248976509" bytes="29371789305">
+      <RUN accession="SRR21575013" alias="GSM6581149_r1" total_spots="123513168" total_bases="38289082080" size="14591407215" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575013</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581149_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577174">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581149_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L001_R1_001.fastq.gz --read2PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L001_R2_001.fastq.gz --read3PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116891" sample_name="GSM6581149" sample_title="JLE23" spots="123513168" bases="38289082080" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116891</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854437</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581149</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L001_I1_001.fastq.gz" size="717545138" date="2022-09-15 14:29:16" md5="464f42909388f7bba1531d72ea468270" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR21575013/Y6377_WilsonR_23_V1G_1a_S3_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L001_R1_001.fastq.gz" size="10925664917" date="2022-09-15 14:30:29" md5="bcc198a9740862aae03e4e26cca40ad1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21575013/Y6377_WilsonR_23_V1G_1a_S3_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L001_R2_001.fastq.gz" size="9377805566" date="2022-09-15 14:29:49" md5="31d23ed6fcfbeb2f592b0a0ac8850df7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR21575013/Y6377_WilsonR_23_V1G_1a_S3_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575013" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575013/SRR21575013" size="14591410030" date="2022-09-15 14:32:37" md5="c3e82f6e364f23e47493816a9575ac5b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575013/SRR21575013" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575013.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575013/SRR21575013.lite.1" size="9732778346" date="2023-05-11 22:38:48" md5="0de309d4d6a2092097080711cf0225b3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575013/SRR21575013.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575013/SRR21575013.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575013/SRR21575013.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="123513168">
+          <Read index="0" count="123513168" average="151" stdev="0"/>
+          <Read index="1" count="123513168" average="151" stdev="0"/>
+          <Read index="2" count="123513168" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="123513168"/>
+                <Elements count="38289082080"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="18650488368">
+          <Base value="A" count="5543996590"/>
+          <Base value="C" count="3822065246"/>
+          <Base value="G" count="4574379860"/>
+          <Base value="T" count="4709497351"/>
+          <Base value="N" count="549321"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21575014" alias="GSM6581149_r2" total_spots="125463341" total_bases="38893635710" size="14780382090" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575014</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581149_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577174">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581149_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L002_R1_001.fastq.gz --read2PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L002_R2_001.fastq.gz --read3PairFiles=Y6377_WilsonR_23_V1G_1a_S3_L002_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116891" sample_name="GSM6581149" sample_title="JLE23" spots="125463341" bases="38893635710" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116891</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854437</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581149</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L002_I1_001.fastq.gz" size="725071074" date="2022-09-15 15:24:20" md5="c411143700f7354b91147e0e65bf6f03" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21575014/Y6377_WilsonR_23_V1G_1a_S3_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L002_R1_001.fastq.gz" size="11092256421" date="2022-09-15 15:25:18" md5="d4722a723942b5f428b6e16e006c4261" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR21575014/Y6377_WilsonR_23_V1G_1a_S3_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6377_WilsonR_23_V1G_1a_S3_L002_R2_001.fastq.gz" size="9496442963" date="2022-09-15 15:26:18" md5="dd3efb24703d6fbb635c2d09022a62d5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR21575014/Y6377_WilsonR_23_V1G_1a_S3_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575014" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575014/SRR21575014" size="14780384906" date="2022-09-15 15:34:55" md5="ab9cf11c40baed182aec8b1fca702759" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575014/SRR21575014" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575014.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575014/SRR21575014.lite.1" size="9885315246" date="2023-05-11 22:49:06" md5="7c79a67b2f516ecccb9c0fb4fd7f3594" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575014/SRR21575014.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575014/SRR21575014.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575014/SRR21575014.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="125463341">
+          <Read index="0" count="125463341" average="151" stdev="0"/>
+          <Read index="1" count="125463341" average="151" stdev="0"/>
+          <Read index="2" count="125463341" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="125463341"/>
+                <Elements count="38893635710"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="18944964491">
+          <Base value="A" count="5632517363"/>
+          <Base value="C" count="3881091229"/>
+          <Base value="G" count="4648042696"/>
+          <Base value="T" count="4782990168"/>
+          <Base value="N" count="323035"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17577173" alias="GSM6581148_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17577173</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581148_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6581148: JLE20; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP397145">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP397145</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA880601</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15116890">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15116890</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6581148</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6581148</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Surgically resected brain tissue was dissociated in a glass dounce homogenizer and then nuclei were washed and stained with Hoechst dye, as previously described [Koboldt et al., 2021]. Approximately 10,000 Hoechst-positive nuclei per sample were sorted on a BD Influx cell sorter directly into master mix from the 10x Genomics Next GEM Single-Cell 3' reagent kits. 10x Genomics Chromium Single Cell 3' v3.1 single-index kit was used according to the manufacturer's protocol. paired-end sequencing using the following read configuration: 28 (R1), 8 (i7), 0 (i5), 91 (R2) (3'v3.1)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Institute for Genomic Medicine, Nationwide Children's Hospital" accession="SRA1499044" alias="SUB12068532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1499044</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Genomic Medicine, Nationwide Children's Hospital">SUB12068532</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Institute for Genomic Medicine, Nationwide Children's Hospital</Name>
+      <Contact email="alessandrocanella@ymail.com">
+        <Address>
+          <Street>700 Children’s Drive</Street>
+          <City>Columbus</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Alessandro</First>
+          <Last>Canella</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE213364" accession="SRP397145">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP397145</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA880601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE213364</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Molecular and spatial heterogeneity of microglia in Rasmussen encephalitis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Rasmussen encephalitis (RE) is a rare childhood neurological disease characterized by progressive unilateral loss of function, hemispheric atrophy and drug-resistant epilepsy. Affected brain tissue shows signs of infiltrating cytotoxic T-cells, microglial activation, and neuronal  death, implicating an inflammatory disease process. Recent studies have identified molecular correlates of inflammation in RE, but cell-type-specific mechanisms remain unclear. We used single-nucleus RNA-sequencing (snRNA-seq) to assess gene expression across multiple cell types in brain tissue resected from two children with RE. We found transcriptionally distinct microglial populations enriched in RE compared to two age-matched individuals with unaffected brain tissue and two individuals with Type I focal cortical dysplasia (FCD). Specifically, microglia in RE tissues demonstrated upregulation of genes associated with cytokine signaling, interferon-mediated pathways, and T-cell activation. We extended these findings using spatial proteomic analysis of tissue from four surgical resections to examine expression profiles of microglia within their pathological context. Microglia that were spatially aggregated into nodules had increased expression of dynamic immune regulatory markers (PD-L1, CD14, CD11c), T-cell activation markers (CD40, CD80) and were physically located near distinct CD4+ and CD8+ lymphocyte populations. These findings help elucidate the complex immune microenvironment of RE. Overall design: We performed a comparitive analysis of single cell gene expression (10X Genomics 3' v3.1) between cortical tissue from patients with Rasmussen Encephalitis and from both non-diseased controls and a non-inflammatory epilepsy (Focal cortical dysplasia type I) samples. After QC and normalization, single cell gene expression datasets were integrated and cell types were determined using a combination of canonical markers and reference from Allen Barin Map [6] (Figure 1). We perfomed diffferential expression (DE) analysis via DESeq2 [28] and Gene Ontology (GO) Anotation enrichment analysis [13] of microglia across disease contitions (Figure 2). Louvain clustering was performed on the microglia and subsequent DE and GO annotation enrichment analysis were perfomed between the clusters (Figure 3).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE213364</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>36411471</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6581148" accession="SRS15116890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15116890</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30854438</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6581148</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>JLE20</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>880601</ID>
+            <LABEL>PRJNA880601</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>seizure-affected brain tissue</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>diagnosis</TAG>
+          <VALUE>Rasmussen Encephalitis</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15116890" sample_name="GSM6581148" sample_title="JLE20" spots="230784993" bases="71543347830" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15116890</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30854438</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581148</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="71543347830" spots="230784993" bytes="27253048793">
+      <RUN accession="SRR21575015" alias="GSM6581148_r1" total_spots="114511127" total_bases="35498449370" size="13541365104" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575015</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581148_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577173">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581148_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L001_R1_001.fastq.gz --read2PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L001_R2_001.fastq.gz --read3PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L001_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116890" sample_name="GSM6581148" sample_title="JLE20" spots="114511127" bases="35498449370" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116890</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854438</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581148</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L001_I1_001.fastq.gz" size="700363450" date="2022-09-15 14:41:56" md5="ea44109532cf7b4b3c9ad2d0fa57628f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21575015/Y6376_WilsonR_20_V1G_1a_S2_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L001_R1_001.fastq.gz" size="10101964478" date="2022-09-15 14:49:44" md5="4bfe30ebc6a24f0943dd11963cca1380" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21575015/Y6376_WilsonR_20_V1G_1a_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L001_R2_001.fastq.gz" size="8750096991" date="2022-09-15 14:43:27" md5="c635344e1c88df99aeebb473ce474fdf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR21575015/Y6376_WilsonR_20_V1G_1a_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575015" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575015/SRR21575015" size="13541367923" date="2022-09-15 14:56:40" md5="dfef509af70b817b3ff7a8714ba87420" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575015/SRR21575015" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575015.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575015/SRR21575015.lite.1" size="9026924895" date="2023-05-11 22:54:01" md5="b7ea2733f1c0c65ea6aa0c689f19d376" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575015/SRR21575015.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575015/SRR21575015.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575015/SRR21575015.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="114511127">
+          <Read index="0" count="114511127" average="151" stdev="0"/>
+          <Read index="1" count="114511127" average="151" stdev="0"/>
+          <Read index="2" count="114511127" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="114511127"/>
+                <Elements count="35498449370"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="17291180177">
+          <Base value="A" count="5275023518"/>
+          <Base value="C" count="3505171752"/>
+          <Base value="G" count="4129298555"/>
+          <Base value="T" count="4381172383"/>
+          <Base value="N" count="513969"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR21575016" alias="GSM6581148_r2" total_spots="116273866" total_bases="36044898460" size="13711683689" load_done="true" published="2022-12-21 15:12:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21575016</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6581148_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17577173">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6581148_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBT --read1PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L002_R1_001.fastq.gz --read2PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L002_R2_001.fastq.gz --read3PairFiles=Y6376_WilsonR_20_V1G_1a_S2_L002_I1_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15116890" sample_name="GSM6581148" sample_title="JLE20" spots="116273866" bases="36044898460" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15116890</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30854438</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6581148</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L002_I1_001.fastq.gz" size="708199092" date="2022-09-15 14:09:48" md5="91c0d739b3a113a5cce164f8b15ccab5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21575016/Y6376_WilsonR_20_V1G_1a_S2_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L002_R1_001.fastq.gz" size="10249869430" date="2022-09-15 14:11:02" md5="7195cc84307095a584e3ee094b98315e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR21575016/Y6376_WilsonR_20_V1G_1a_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Y6376_WilsonR_20_V1G_1a_S2_L002_R2_001.fastq.gz" size="8858233625" date="2022-09-15 14:10:21" md5="9a9b4c0f71420dbf86c260c51c8860f7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR21575016/Y6376_WilsonR_20_V1G_1a_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575016" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575016/SRR21575016" size="13711686504" date="2022-09-15 14:31:25" md5="1167a3f566f0f60882ae4693b0beab76" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21575016/SRR21575016" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21575016.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575016/SRR21575016.lite.1" size="9164795856" date="2023-05-11 22:36:32" md5="290e640322e419e2146c41326248074e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-3/SRR021/21575/SRR21575016/SRR21575016.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21575016/SRR21575016.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR21575016/SRR21575016.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="116273866">
+          <Read index="0" count="116273866" average="151" stdev="0"/>
+          <Read index="1" count="116273866" average="151" stdev="0"/>
+          <Read index="2" count="116273866" average="8" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="116273866"/>
+                <Elements count="36044898460"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="17557353766">
+          <Base value="A" count="5357645938"/>
+          <Base value="C" count="3557678569"/>
+          <Base value="G" count="4194050586"/>
+          <Base value="T" count="4447677343"/>
+          <Base value="N" count="301330"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

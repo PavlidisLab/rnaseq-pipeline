@@ -1,6 +1,6 @@
 import pytest
 
-from gemma import GemmaTaskMixin
+from rnaseq_pipeline.gemma import GemmaTaskMixin
 from rnaseq_pipeline.sources.geo import match_geo_platform
 from rnaseq_pipeline.tasks import *
 

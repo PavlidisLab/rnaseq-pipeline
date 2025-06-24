@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300906" alias="GSM7325163_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300906</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325163_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325163: Ovary, 9 months, 8; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626774">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626774</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325163</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325163</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325163" accession="SRS17626774">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626774</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051602</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325163</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 9 months, 8</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>9 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626774" sample_name="GSM7325163" sample_title="Ovary, 9 months, 8" spots="251740343" bases="32474504247" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626774</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051602</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325163</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="32474504247" spots="251740343" bytes="10121269450">
+      <RUN accession="SRR24516559" alias="GSM7325163_r1" total_spots="251740343" total_bases="32474504247" size="10121269450" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516559</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325163_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300906">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325163_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626774" sample_name="GSM7325163" sample_title="Ovary, 9 months, 8" spots="251740343" bases="32474504247" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626774</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051602</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325163</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="8_S8_L003_I1_001.fastq.gz" size="1274200648" date="2023-05-11 21:48:27" md5="ecec9e9ddebd87c1d4828bec25d21da3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516559/8_S8_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="8_S8_L003_R1_001.fastq.gz" size="4610913400" date="2023-05-11 21:49:15" md5="9433aac6f5ee00e78d7276afc8730bac" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516559/8_S8_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="8_S8_L003_R2_001.fastq.gz" size="10950104248" date="2023-05-11 21:48:53" md5="48fe7c677f3b7e39d92b2110bff75ef9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516559/8_S8_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516559" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516559/SRR24516559" size="10121271676" date="2023-05-11 21:50:09" md5="676bbf4f443651e8a73b411babdc032c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516559/SRR24516559" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516559.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516559/SRR24516559.lite.1" size="8392942360" date="2023-05-16 23:08:51" md5="1caaf67f4d7f2865f563134f07f916fa" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516559/SRR24516559.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516559/SRR24516559.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516559/SRR24516559.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="251740343">
+          <Read index="0" count="251740343" average="10" stdev="0"/>
+          <Read index="1" count="251740343" average="28" stdev="0"/>
+          <Read index="2" count="251740343" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="251740343"/>
+                <Elements count="32474504247"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="22908371213">
+          <Base value="A" count="6306330777"/>
+          <Base value="C" count="5385932272"/>
+          <Base value="G" count="5787881296"/>
+          <Base value="T" count="5426353290"/>
+          <Base value="N" count="1873578"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300905" alias="GSM7325162_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300905</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325162_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325162: Ovary, 9 months, 7; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626773">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626773</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325162</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325162</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325162" accession="SRS17626773">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626773</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051603</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325162</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 9 months, 7</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>9 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626773" sample_name="GSM7325162" sample_title="Ovary, 9 months, 7" spots="176739889" bases="22799445681" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626773</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051603</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325162</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="22799445681" spots="176739889" bytes="7220571156">
+      <RUN accession="SRR24516560" alias="GSM7325162_r1" total_spots="176739889" total_bases="22799445681" size="7220571156" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516560</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325162_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300905">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325162_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626773" sample_name="GSM7325162" sample_title="Ovary, 9 months, 7" spots="176739889" bases="22799445681" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626773</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051603</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325162</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="7_S7_L003_I1_001.fastq.gz" size="907687052" date="2023-05-11 21:19:01" md5="80a3010be4b98b2b73dc74bc2c343afc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516560/7_S7_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="7_S7_L003_R1_001.fastq.gz" size="3266960891" date="2023-05-11 21:19:11" md5="a1d39b1cfe9785e283b548e734836def" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516560/7_S7_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="7_S7_L003_R2_001.fastq.gz" size="7880007301" date="2023-05-11 21:19:31" md5="4a65015bc018df64a1e719d3cb7abafe" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516560/7_S7_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516560" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516560/SRR24516560" size="7220573382" date="2023-05-11 21:20:19" md5="63026e263037fcb679e54d552d950580" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516560/SRR24516560" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516560.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516560/SRR24516560.lite.1" size="5912686222" date="2023-05-16 23:00:57" md5="9aeef29841676eeefe959e44ffc9d07d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516560/SRR24516560.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516560/SRR24516560.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516560/SRR24516560.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="176739889">
+          <Read index="0" count="176739889" average="10" stdev="0"/>
+          <Read index="1" count="176739889" average="28" stdev="0"/>
+          <Read index="2" count="176739889" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="176739889"/>
+                <Elements count="22799445681"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16083329899">
+          <Base value="A" count="4422646539"/>
+          <Base value="C" count="3802485237"/>
+          <Base value="G" count="4066308806"/>
+          <Base value="T" count="3790582158"/>
+          <Base value="N" count="1307159"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300904" alias="GSM7325161_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300904</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325161_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325161: Ovary, 9 months, 6; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626772">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626772</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325161</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325161</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325161" accession="SRS17626772">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626772</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051604</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325161</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 9 months, 6</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>9 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626772" sample_name="GSM7325161" sample_title="Ovary, 9 months, 6" spots="223823682" bases="28873254978" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626772</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051604</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325161</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="28873254978" spots="223823682" bytes="9244022695">
+      <RUN accession="SRR24516561" alias="GSM7325161_r1" total_spots="223823682" total_bases="28873254978" size="9244022695" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516561</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325161_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300904">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325161_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626772" sample_name="GSM7325161" sample_title="Ovary, 9 months, 6" spots="223823682" bases="28873254978" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626772</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051604</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325161</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="6_S6_L003_I1_001.fastq.gz" size="1070631731" date="2023-05-11 21:51:43" md5="c206af281822e679f4a22bd0568b95ba" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516561/6_S6_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="6_S6_L003_R1_001.fastq.gz" size="4096338448" date="2023-05-11 21:51:24" md5="532900494a662a7d0ab5b50bf036e2c0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516561/6_S6_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="6_S6_L003_R2_001.fastq.gz" size="10086356040" date="2023-05-11 21:52:11" md5="cffae6e61f82463a6d46d0cbd4117773" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516561/6_S6_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516561" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516561/SRR24516561" size="9244024916" date="2023-05-11 21:53:43" md5="3078ae74dfba3468a482b6eeee2928f6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516561/SRR24516561" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516561.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516561/SRR24516561.lite.1" size="7470020524" date="2023-05-16 22:59:22" md5="904d6a6107c15433b97f59d7d8876a9a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516561/SRR24516561.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516561/SRR24516561.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516561/SRR24516561.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="223823682">
+          <Read index="0" count="223823682" average="10" stdev="0"/>
+          <Read index="1" count="223823682" average="28" stdev="0"/>
+          <Read index="2" count="223823682" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="223823682"/>
+                <Elements count="28873254978"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="20367955062">
+          <Base value="A" count="5576899976"/>
+          <Base value="C" count="4848912135"/>
+          <Base value="G" count="5142174972"/>
+          <Base value="T" count="4798329945"/>
+          <Base value="N" count="1638034"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300903" alias="GSM7325160_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300903</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325160_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325160: Ovary, 9 months, 5; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626771">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626771</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325160</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325160</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325160" accession="SRS17626771">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626771</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051605</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325160</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 9 months, 5</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>9 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626771" sample_name="GSM7325160" sample_title="Ovary, 9 months, 5" spots="265444334" bases="34242319086" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626771</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051605</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325160</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="34242319086" spots="265444334" bytes="10804372812">
+      <RUN accession="SRR24516562" alias="GSM7325160_r1" total_spots="265444334" total_bases="34242319086" size="10804372812" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516562</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325160_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300903">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325160_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626771" sample_name="GSM7325160" sample_title="Ovary, 9 months, 5" spots="265444334" bases="34242319086" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626771</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051605</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325160</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5_S5_L003_I1_001.fastq.gz" size="1226049718" date="2023-05-11 22:30:45" md5="bb593f194195c912675e5f3ad6668f91" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516562/5_S5_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5_S5_L003_R1_001.fastq.gz" size="4830323132" date="2023-05-11 22:31:38" md5="af519ec55324212330c7942bc908e6bd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516562/5_S5_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5_S5_L003_R2_001.fastq.gz" size="11868052944" date="2023-05-11 22:34:14" md5="f2903d551a316c3d92212e20c752a669" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516562/5_S5_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516562" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516562/SRR24516562" size="10804375037" date="2023-05-11 22:45:36" md5="7c65c4d359ed733d8ece9f0f4959a621" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516562/SRR24516562" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516562.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516562/SRR24516562.lite.1" size="8842929457" date="2023-05-16 23:09:55" md5="0b46cf866ecfb1648f90151d5761dfbc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516562/SRR24516562.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516562/SRR24516562.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516562/SRR24516562.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="265444334">
+          <Read index="0" count="265444334" average="10" stdev="0"/>
+          <Read index="1" count="265444334" average="28" stdev="0"/>
+          <Read index="2" count="265444334" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="265444334"/>
+                <Elements count="34242319086"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24155434394">
+          <Base value="A" count="6655780946"/>
+          <Base value="C" count="5702591104"/>
+          <Base value="G" count="6053838564"/>
+          <Base value="T" count="5741272915"/>
+          <Base value="N" count="1950865"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300902" alias="GSM7325159_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300902</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325159_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325159: Ovary, 3 months, 4; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626770">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626770</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325159</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325159</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325159" accession="SRS17626770">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626770</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051606</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325159</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 3 months, 4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>3 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626770" sample_name="GSM7325159" sample_title="Ovary, 3 months, 4" spots="227064739" bases="29291351331" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626770</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051606</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325159</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="29291351331" spots="227064739" bytes="9347536752">
+      <RUN accession="SRR24516563" alias="GSM7325159_r1" total_spots="227064739" total_bases="29291351331" size="9347536752" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516563</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325159_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300902">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325159_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626770" sample_name="GSM7325159" sample_title="Ovary, 3 months, 4" spots="227064739" bases="29291351331" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626770</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051606</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325159</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="4_S4_L003_I1_001.fastq.gz" size="1137559426" date="2023-05-11 21:43:13" md5="ae6ee5ca2d3c8470d75f178c533c7813" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516563/4_S4_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="4_S4_L003_R1_001.fastq.gz" size="4182691118" date="2023-05-11 21:43:23" md5="2cd526b17205215fb8bc92f7705e5308" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516563/4_S4_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="4_S4_L003_R2_001.fastq.gz" size="10254089160" date="2023-05-11 21:43:48" md5="e37644c3f843ff03bb85cafcc3549f5e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516563/4_S4_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516563" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516563/SRR24516563" size="9347538975" date="2023-05-11 21:44:39" md5="28418635e8f966d636bea409e65667e4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516563/SRR24516563" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516563.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516563/SRR24516563.lite.1" size="7578096483" date="2023-05-16 22:59:54" md5="8cc4524b2cb25e068eac21a256f85d7c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516563/SRR24516563.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516563/SRR24516563.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516563/SRR24516563.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="227064739">
+          <Read index="0" count="227064739" average="10" stdev="0"/>
+          <Read index="1" count="227064739" average="28" stdev="0"/>
+          <Read index="2" count="227064739" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="227064739"/>
+                <Elements count="29291351331"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="20662891249">
+          <Base value="A" count="5753255394"/>
+          <Base value="C" count="4819105239"/>
+          <Base value="G" count="5152413720"/>
+          <Base value="T" count="4936427037"/>
+          <Base value="N" count="1689859"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300901" alias="GSM7325158_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300901</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325158_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325158: Ovary, 3 months, 3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626769">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626769</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325158</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325158</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325158" accession="SRS17626769">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626769</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051607</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325158</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 3 months, 3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>3 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626769" sample_name="GSM7325158" sample_title="Ovary, 3 months, 3" spots="248231546" bases="32021869434" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626769</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051607</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325158</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="32021869434" spots="248231546" bytes="9942378345">
+      <RUN accession="SRR24516564" alias="GSM7325158_r1" total_spots="248231546" total_bases="32021869434" size="9942378345" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516564</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325158_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300901">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325158_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626769" sample_name="GSM7325158" sample_title="Ovary, 3 months, 3" spots="248231546" bases="32021869434" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626769</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051607</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325158</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3_S3_L003_I1_001.fastq.gz" size="1161291431" date="2023-05-11 21:29:39" md5="1143bbeea740218f69267df22bdfd4f7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516564/3_S3_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3_S3_L003_R1_001.fastq.gz" size="4556084319" date="2023-05-11 21:30:06" md5="a13d12d7094bf113efe1ec57b60a2deb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516564/3_S3_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3_S3_L003_R2_001.fastq.gz" size="10933457471" date="2023-05-11 21:31:02" md5="a7ceb8c7a43966551b222335f0ef3325" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516564/3_S3_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516564" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516564/SRR24516564" size="9942380570" date="2023-05-11 21:45:22" md5="c7e77e0d632ce2fedb5c52a9fd07a985" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516564/SRR24516564" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516564.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516564/SRR24516564.lite.1" size="8276802018" date="2023-05-16 22:59:29" md5="7584c3fe0a2539c30328b4d5f8a57973" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516564/SRR24516564.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516564/SRR24516564.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516564/SRR24516564.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="248231546">
+          <Read index="0" count="248231546" average="10" stdev="0"/>
+          <Read index="1" count="248231546" average="28" stdev="0"/>
+          <Read index="2" count="248231546" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="248231546"/>
+                <Elements count="32021869434"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="22589070686">
+          <Base value="A" count="6305462284"/>
+          <Base value="C" count="5252192644"/>
+          <Base value="G" count="5607820065"/>
+          <Base value="T" count="5421753240"/>
+          <Base value="N" count="1842453"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300900" alias="GSM7325157_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300900</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325157_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325157: Ovary, 3 months, 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626767">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626767</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325157</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325157</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325157" accession="SRS17626767">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626767</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051608</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325157</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 3 months, 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>3 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626767" sample_name="GSM7325157" sample_title="Ovary, 3 months, 2" spots="229744077" bases="29636985933" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626767</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051608</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325157</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="29636985933" spots="229744077" bytes="9304172086">
+      <RUN accession="SRR24516565" alias="GSM7325157_r1" total_spots="229744077" total_bases="29636985933" size="9304172086" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516565</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325157_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300900">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325157_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626767" sample_name="GSM7325157" sample_title="Ovary, 3 months, 2" spots="229744077" bases="29636985933" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626767</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051608</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325157</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2_S2_L003_I1_001.fastq.gz" size="1076565251" date="2023-05-11 21:15:40" md5="8cb4e36a0c2975e537a0b68226deaa20" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516565/2_S2_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2_S2_L003_R1_001.fastq.gz" size="4233621855" date="2023-05-11 21:15:50" md5="68126729fd2de813c5896645e995dad5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516565/2_S2_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2_S2_L003_R2_001.fastq.gz" size="10189402936" date="2023-05-11 21:16:12" md5="63f758ac8d51b399628b7ac4e9daf46c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516565/2_S2_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516565" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516565/SRR24516565" size="9304174306" date="2023-05-11 21:17:02" md5="df80b8bf6e83a41d26b616d5d7ddebec" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516565/SRR24516565" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516565.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516565/SRR24516565.lite.1" size="7666789658" date="2023-05-17 00:00:34" md5="ba84e8d986d85d163a89334b9006732b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516565/SRR24516565.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516565/SRR24516565.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516565/SRR24516565.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="229744077">
+          <Read index="0" count="229744077" average="10" stdev="0"/>
+          <Read index="1" count="229744077" average="28" stdev="0"/>
+          <Read index="2" count="229744077" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="229744077"/>
+                <Elements count="29636985933"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="20906711007">
+          <Base value="A" count="5796681857"/>
+          <Base value="C" count="4922076318"/>
+          <Base value="G" count="5212175872"/>
+          <Base value="T" count="4974051132"/>
+          <Base value="N" count="1725828"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20300899" alias="GSM7325156_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20300899</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325156_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7325156: Ovary, 3 months, 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP437267">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP437267</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA971592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17626768">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17626768</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7325156</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7325156</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>One ovary from each mouse was dissociated using a Multi Tissue Dissociation Kit 1 (cat#130110201, Miltenyi) scRNA-Seq libraries were constructed with the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (cat# 10000075, 10X Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Aging and Metabolism, Oklahoma Medical Research Foundation" accession="SRA1636969" alias="SUB13323229">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1636969</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Aging and Metabolism, Oklahoma Medical Research Foundation">SUB13323229</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Aging and Metabolism, Oklahoma Medical Research Foundation</Name>
+      <Contact email="michael-stout@omrf.org">
+        <Address>
+          <Street>825 N.E. 13th Street</Street>
+          <City>Oklahoma City</City>
+          <Sub>OK</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Michael</First>
+          <Last>Stout</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE232309" accession="SRP437267">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP437267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA971592</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE232309</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A single-cell atlas of the aging murine ovary</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Ovarian aging leads to diminished fertility, dysregulated endocrine signaling, and increased chronic disease burden. These effects begin to emerge long before follicular exhaustion. Around 35 years old, women experience a sharp decline in fertility, corresponding to declines in oocyte quality. However, the field lacks a cellular map of the transcriptomic changes in the aging ovary to identify drivers of ovarian decline. To fill this gap, we performed single-cell RNA sequencing on ovarian tissue from young (3-month-old) and reproductively aged (9-month-old) mice. Our analysis revealed a doubling of immune cells in the aged ovary, with T and B lymphocyte proportions increasing most. We also discovered an age-related upregulation of alternative macrophage and downregulation of collagenase pathways in stromal fibroblasts. Overall, follicular cells (especially granulosa and theca) display stress response, immunogenic, and fibrotic signaling pathway inductions with aging. These changes are more exaggerated in the atretic granulosa cells but are also observed in healthy antral and preantral granulosa cells. Moreover, we did not observe age-related changes in markers of cellular senescence in any cellular population with advancing age, despite specific immune cells expressing senescence-related genes across both timepoints. This report raises several new hypotheses that could be pursued to elucidate mechanisms responsible for ovarian aging phenotypes. Overall design: scRNA-Seq from dissociated ovaries from young (3 months old; n=4) and reproductively aged (9 months old; n=4) wild-type C57BL/6j mice</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE232309</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38200272</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7325156" accession="SRS17626768">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17626768</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35051609</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7325156</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Ovary, 3 months, 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>971592</ID>
+            <LABEL>PRJNA971592</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>ovary</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>3 months old</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>none</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17626768" sample_name="GSM7325156" sample_title="Ovary, 3 months, 1" spots="223534914" bases="28836003906" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17626768</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35051609</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325156</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="28836003906" spots="223534914" bytes="9128813456">
+      <RUN accession="SRR24516566" alias="GSM7325156_r1" total_spots="223534914" total_bases="28836003906" size="9128813456" load_done="true" published="2023-11-27 19:15:54" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24516566</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7325156_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20300899">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7325156_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17626768" sample_name="GSM7325156" sample_title="Ovary, 3 months, 1" spots="223534914" bases="28836003906" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17626768</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35051609</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7325156</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="1_S1_L003_I1_001.fastq.gz" size="1167981366" date="2023-05-11 22:08:27" md5="f1dd87830c8d46cbabce2fe1df2bde31" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516566/1_S1_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="1_S1_L003_R1_001.fastq.gz" size="4097472401" date="2023-05-11 22:09:17" md5="22508e846a37f32c78e0fdd29d23e5dd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516566/1_S1_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="1_S1_L003_R2_001.fastq.gz" size="9891874438" date="2023-05-11 22:11:36" md5="655b7d243a556ebc5493920c764e2912" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR24516566/1_S1_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516566" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516566/SRR24516566" size="9128815678" date="2023-05-11 22:15:39" md5="374e3bb6188ce736f5c0e1956f452c15" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24516566/SRR24516566" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24516566.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516566/SRR24516566.lite.1" size="7460843970" date="2023-05-16 23:12:09" md5="0b2760ebe7277dd3d0fc215f60069e8d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR024/24516/SRR24516566/SRR24516566.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR24516566/SRR24516566.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR24516566/SRR24516566.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="223534914">
+          <Read index="0" count="223534914" average="10" stdev="0"/>
+          <Read index="1" count="223534914" average="28" stdev="0"/>
+          <Read index="2" count="223534914" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="223534914"/>
+                <Elements count="28836003906"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="20341677174">
+          <Base value="A" count="5611781118"/>
+          <Base value="C" count="4801088873"/>
+          <Base value="G" count="5138601879"/>
+          <Base value="T" count="4788548618"/>
+          <Base value="N" count="1656686"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

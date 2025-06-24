@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741024" alias="GSM7503689_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741024</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503689_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503689: WT2, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030943">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030943</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503689</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503689</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503689" accession="SRS18030943">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030943</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820796</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503689</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT2, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030943" sample_name="GSM7503689" sample_title="WT2, snRNAseq" spots="331562140" bases="35145586840" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030943</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820796</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503689</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="35145586840" spots="331562140" bytes="10989896941">
+      <RUN accession="SRR24984345" alias="GSM7503689_r1" total_spots="331562140" total_bases="35145586840" size="10989896941" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984345</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503689_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741024">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503689_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030943" sample_name="GSM7503689" sample_title="WT2, snRNAseq" spots="331562140" bases="35145586840" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030943</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820796</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503689</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT2_S2_L003_I1_001.fastq.gz" size="1921840550" date="2023-06-21 21:29:16" md5="227b62b67c7c3eb9b60c96e268d354e6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984345/WT2_S2_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_S2_L003_I2_001.fastq.gz" size="2118280755" date="2023-06-21 21:29:10" md5="d0a57ec783010e95a57659d78939e9f4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984345/WT2_S2_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_S2_L003_R1_001.fastq.gz" size="6712574162" date="2023-06-21 21:29:35" md5="b499e217d97049b6404bcd4b51cfb7b6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984345/WT2_S2_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_S2_L003_R2_001.fastq.gz" size="11369338212" date="2023-06-21 21:30:06" md5="d26d96a74bfbb2976b9e2f155e2ec1b7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984345/WT2_S2_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984345" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984345/SRR24984345" size="10989899165" date="2023-06-21 21:31:02" md5="8d73ede36182ae19e620a8f3abda9362" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984345/SRR24984345" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984345.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984345/SRR24984345.lite.1" size="9142409993" date="2023-06-26 22:22:40" md5="9ca849a9d3b3e7ac75b978ae965d6a18" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984345/SRR24984345.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984345/SRR24984345.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984345/SRR24984345.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="331562140">
+          <Read index="0" count="331562140" average="10" stdev="0"/>
+          <Read index="1" count="331562140" average="10" stdev="0"/>
+          <Read index="2" count="331562140" average="28" stdev="0"/>
+          <Read index="3" count="331562140" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="331562140"/>
+                <Elements count="35145586840"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="19230604120">
+          <Base value="A" count="5698956023"/>
+          <Base value="C" count="3918489441"/>
+          <Base value="G" count="3981208308"/>
+          <Base value="T" count="5631906602"/>
+          <Base value="N" count="43746"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741023" alias="GSM7503690_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741023</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503690_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503690: WT3, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030942">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030942</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503690</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503690</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503690" accession="SRS18030942">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030942</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820795</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503690</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT3, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030942" sample_name="GSM7503690" sample_title="WT3, snRNAseq" spots="285186053" bases="30229721618" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030942</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820795</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503690</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="30229721618" spots="285186053" bytes="9277598162">
+      <RUN accession="SRR24984346" alias="GSM7503690_r1" total_spots="285186053" total_bases="30229721618" size="9277598162" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984346</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503690_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741023">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503690_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030942" sample_name="GSM7503690" sample_title="WT3, snRNAseq" spots="285186053" bases="30229721618" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030942</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820795</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503690</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT3_S5_L003_I1_001.fastq.gz" size="1669093684" date="2023-06-21 21:39:08" md5="d955b58e5fab8dc8ff1a6554b9f3e7b3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984346/WT3_S5_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_S5_L003_I2_001.fastq.gz" size="1689443894" date="2023-06-21 21:39:13" md5="bddf9141e59a216d630bd21eb13d534d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984346/WT3_S5_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_S5_L003_R1_001.fastq.gz" size="5790007028" date="2023-06-21 21:39:26" md5="0361775b4e677cc0b05d66ee22e52126" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984346/WT3_S5_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_S5_L003_R2_001.fastq.gz" size="9224747743" date="2023-06-21 21:39:50" md5="487ef52f360c7ee2efe1dc81d14ae09a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984346/WT3_S5_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984346" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984346/SRR24984346" size="9277600384" date="2023-06-21 21:40:42" md5="6f50853c42d83bc68e5ab95604eefa6d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984346/SRR24984346" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984346.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984346/SRR24984346.lite.1" size="7878225048" date="2023-06-26 22:25:57" md5="0eb97b951780a0ab7090361d0140f4a7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984346/SRR24984346.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984346/SRR24984346.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984346/SRR24984346.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="285186053">
+          <Read index="0" count="285186053" average="10" stdev="0"/>
+          <Read index="1" count="285186053" average="10" stdev="0"/>
+          <Read index="2" count="285186053" average="28" stdev="0"/>
+          <Read index="3" count="285186053" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="285186053"/>
+                <Elements count="30229721618"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16540791074">
+          <Base value="A" count="5011383741"/>
+          <Base value="C" count="3343015835"/>
+          <Base value="G" count="3987043220"/>
+          <Base value="T" count="4199311242"/>
+          <Base value="N" count="37036"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741022" alias="GSM7503691_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741022</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503691_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503691: WT4, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030941">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030941</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503691</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503691</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503691" accession="SRS18030941">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030941</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820794</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503691</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT4, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030941" sample_name="GSM7503691" sample_title="WT4, snRNAseq" spots="373413113" bases="39581789978" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030941</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820794</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503691</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="39581789978" spots="373413113" bytes="12313436000">
+      <RUN accession="SRR24984347" alias="GSM7503691_r1" total_spots="373413113" total_bases="39581789978" size="12313436000" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984347</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503691_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741022">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503691_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030941" sample_name="GSM7503691" sample_title="WT4, snRNAseq" spots="373413113" bases="39581789978" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030941</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820794</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503691</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT4_S6_L003_I1_001.fastq.gz" size="2106829434" date="2023-06-21 21:48:32" md5="c87a587dec4e9604b2d47c8ee7b98fa0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984347/WT4_S6_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT4_S6_L003_I2_001.fastq.gz" size="2359950177" date="2023-06-21 21:48:40" md5="1e84da018389849d1843d16e72156cae" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984347/WT4_S6_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT4_S6_L003_R1_001.fastq.gz" size="7548156059" date="2023-06-21 21:48:59" md5="0ce9e5f25e1f1c807a1a5e26b1de1dcf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984347/WT4_S6_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT4_S6_L003_R2_001.fastq.gz" size="11906047695" date="2023-06-21 21:49:33" md5="6c8fd7edffe40889ab6b49f53ea4f997" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984347/WT4_S6_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984347" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984347/SRR24984347" size="12313438224" date="2023-06-21 21:51:09" md5="6b7237fa5591b9963f5a30d5055cee36" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984347/SRR24984347" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984347.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984347/SRR24984347.lite.1" size="10286412920" date="2023-06-26 22:29:15" md5="fc117e1bb548e1adf74742b2b2b70a9f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984347/SRR24984347.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984347/SRR24984347.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984347/SRR24984347.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="373413113">
+          <Read index="0" count="373413113" average="10" stdev="0"/>
+          <Read index="1" count="373413113" average="10" stdev="0"/>
+          <Read index="2" count="373413113" average="28" stdev="0"/>
+          <Read index="3" count="373413113" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="373413113"/>
+                <Elements count="39581789978"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21657960554">
+          <Base value="A" count="6570061042"/>
+          <Base value="C" count="4363819066"/>
+          <Base value="G" count="5431677955"/>
+          <Base value="T" count="5292354545"/>
+          <Base value="N" count="47946"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741021" alias="GSM7503686_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741021</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503686_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503686: KO3, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030940">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030940</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503686</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503686</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503686" accession="SRS18030940">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030940</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820799</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503686</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KO3, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Kdm5a-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030940" sample_name="GSM7503686" sample_title="KO3, snRNAseq" spots="344341568" bases="36500206208" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030940</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820799</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503686</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="36500206208" spots="344341568" bytes="11150872466">
+      <RUN accession="SRR24984348" alias="GSM7503686_r1" total_spots="344341568" total_bases="36500206208" size="11150872466" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984348</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503686_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741021">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503686_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030940" sample_name="GSM7503686" sample_title="KO3, snRNAseq" spots="344341568" bases="36500206208" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030940</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820799</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503686</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO3_S7_L003_I1_001.fastq.gz" size="1997282944" date="2023-06-21 21:43:33" md5="9b6a45b7547419a61f3ce81cf8444a1c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984348/KO3_S7_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO3_S7_L003_I2_001.fastq.gz" size="2002049529" date="2023-06-21 21:43:27" md5="c32240c491ad06201d62c2147e1a6b6e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984348/KO3_S7_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO3_S7_L003_R1_001.fastq.gz" size="7012017787" date="2023-06-21 21:43:48" md5="972ed5b5dc733c1685b380c6f82b1d63" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984348/KO3_S7_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO3_S7_L003_R2_001.fastq.gz" size="10336787014" date="2023-06-21 21:44:14" md5="8f9362f5f59be605d278f85923548913" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984348/KO3_S7_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984348" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984348/SRR24984348" size="11150874690" date="2023-06-21 21:45:10" md5="46adcc1787beafc25bab11a5933190bd" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984348/SRR24984348" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984348.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984348/SRR24984348.lite.1" size="9495762254" date="2023-06-26 22:34:45" md5="ed12c133776ada5f75d6d40c5d48ad0d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984348/SRR24984348.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984348/SRR24984348.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984348/SRR24984348.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="344341568">
+          <Read index="0" count="344341568" average="10" stdev="0"/>
+          <Read index="1" count="344341568" average="10" stdev="0"/>
+          <Read index="2" count="344341568" average="28" stdev="0"/>
+          <Read index="3" count="344341568" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="344341568"/>
+                <Elements count="36500206208"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="19971810944">
+          <Base value="A" count="6031005284"/>
+          <Base value="C" count="3971343155"/>
+          <Base value="G" count="5295755715"/>
+          <Base value="T" count="4673661780"/>
+          <Base value="N" count="45010"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741020" alias="GSM7503687_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741020</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503687_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503687: KO4, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030939">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030939</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503687</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503687</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503687" accession="SRS18030939">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030939</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820798</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KO4, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Kdm5a-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030939" sample_name="GSM7503687" sample_title="KO4, snRNAseq" spots="364907035" bases="38680145710" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030939</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820798</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503687</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="38680145710" spots="364907035" bytes="11968185402">
+      <RUN accession="SRR24984349" alias="GSM7503687_r1" total_spots="364907035" total_bases="38680145710" size="11968185402" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984349</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503687_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741020">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503687_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030939" sample_name="GSM7503687" sample_title="KO4, snRNAseq" spots="364907035" bases="38680145710" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030939</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820798</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503687</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO4_S8_L003_I1_001.fastq.gz" size="2264323635" date="2023-06-21 21:46:18" md5="b22ca8f2d3dc4739671b2fa8a0f5b8f0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984349/KO4_S8_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO4_S8_L003_I2_001.fastq.gz" size="2085229588" date="2023-06-21 21:46:10" md5="360258cd8c1ed9eac72f8df19bb09a70" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984349/KO4_S8_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO4_S8_L003_R1_001.fastq.gz" size="7441378509" date="2023-06-21 21:46:39" md5="67702049ec92a1559406b87bdfca1326" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984349/KO4_S8_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO4_S8_L003_R2_001.fastq.gz" size="11024456600" date="2023-06-21 21:47:11" md5="fda2a006e18fddbd49f23bf5a63a8791" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984349/KO4_S8_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984349" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984349/SRR24984349" size="11968187625" date="2023-06-21 21:48:30" md5="9627288f6d16140d5ec1891193e8a814" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984349/SRR24984349" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984349.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984349/SRR24984349.lite.1" size="10056319533" date="2023-06-26 22:34:17" md5="5efcb188892bb5fa328d8fce138f8745" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984349/SRR24984349.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984349/SRR24984349.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984349/SRR24984349.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="364907035">
+          <Read index="0" count="364907035" average="10" stdev="0"/>
+          <Read index="1" count="364907035" average="10" stdev="0"/>
+          <Read index="2" count="364907035" average="28" stdev="0"/>
+          <Read index="3" count="364907035" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="364907035"/>
+                <Elements count="38680145710"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21164608030">
+          <Base value="A" count="6472101678"/>
+          <Base value="C" count="4164732929"/>
+          <Base value="G" count="5597077630"/>
+          <Base value="T" count="4930648347"/>
+          <Base value="N" count="47446"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741019" alias="GSM7503688_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741019</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503688_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503688: WT1, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030938">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030938</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503688</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503688</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503688" accession="SRS18030938">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030938</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820797</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503688</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT1, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030938" sample_name="GSM7503688" sample_title="WT1, snRNAseq" spots="362187730" bases="38391899380" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030938</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820797</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503688</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="38391899380" spots="362187730" bytes="12018127500">
+      <RUN accession="SRR24984350" alias="GSM7503688_r1" total_spots="362187730" total_bases="38391899380" size="12018127500" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984350</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503688_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741019">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503688_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030938" sample_name="GSM7503688" sample_title="WT1, snRNAseq" spots="362187730" bases="38391899380" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030938</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820797</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503688</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT1_S1_L003_I1_001.fastq.gz" size="2237962684" date="2023-06-21 21:52:21" md5="28bf46505a27874ca22824fccff56dde" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984350/WT1_S1_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_S1_L003_I2_001.fastq.gz" size="2307657954" date="2023-06-21 21:52:28" md5="ee33112e41d09b5c0c8b5146b6c9935f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984350/WT1_S1_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_S1_L003_R1_001.fastq.gz" size="7341637234" date="2023-06-21 21:52:46" md5="3b29502fe20a643c3664aed5073f2df2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984350/WT1_S1_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_S1_L003_R2_001.fastq.gz" size="11542663067" date="2023-06-21 21:53:17" md5="0ce0b38c09c5f2783bccd64e3c9afa0c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984350/WT1_S1_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984350" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984350/SRR24984350" size="12018129724" date="2023-06-21 21:54:27" md5="a4fec3ecf6a38ba6dae9143071003cd4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984350/SRR24984350" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984350.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984350/SRR24984350.lite.1" size="9987972456" date="2023-06-26 22:24:35" md5="bb72408b3a3947e2b0457b25a029443f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984350/SRR24984350.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984350/SRR24984350.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984350/SRR24984350.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="362187730">
+          <Read index="0" count="362187730" average="10" stdev="0"/>
+          <Read index="1" count="362187730" average="10" stdev="0"/>
+          <Read index="2" count="362187730" average="28" stdev="0"/>
+          <Read index="3" count="362187730" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="362187730"/>
+                <Elements count="38391899380"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21006888340">
+          <Base value="A" count="6348312248"/>
+          <Base value="C" count="4227190341"/>
+          <Base value="G" count="5189734418"/>
+          <Base value="T" count="5241604386"/>
+          <Base value="N" count="46947"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741018" alias="GSM7503685_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741018</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503685_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503685: KO2, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030937">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030937</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503685</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503685</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503685" accession="SRS18030937">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030937</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503685</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KO2, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Kdm5a-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030937" sample_name="GSM7503685" sample_title="KO2, snRNAseq" spots="401844276" bases="42595493256" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030937</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820800</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503685</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="42595493256" spots="401844276" bytes="13158623766">
+      <RUN accession="SRR24984351" alias="GSM7503685_r1" total_spots="401844276" total_bases="42595493256" size="13158623766" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984351</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503685_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741018">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503685_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030937" sample_name="GSM7503685" sample_title="KO2, snRNAseq" spots="401844276" bases="42595493256" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030937</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820800</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503685</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO2_S4_L003_I1_001.fastq.gz" size="2348785045" date="2023-06-21 21:37:04" md5="b8c45acc9f45b54381f51cbf966dbee5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984351/KO2_S4_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO2_S4_L003_I2_001.fastq.gz" size="2325713968" date="2023-06-21 21:37:09" md5="b22c35274fd33f965bbd2e6b262d1597" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984351/KO2_S4_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO2_S4_L003_R1_001.fastq.gz" size="8134744523" date="2023-06-21 21:37:21" md5="f4ce77fa357ca1aa6131ac32b93d3adb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984351/KO2_S4_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO2_S4_L003_R2_001.fastq.gz" size="12713800400" date="2023-06-21 21:37:41" md5="f1b3e3ad9dd16cd1db8bb8f2d350469d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984351/KO2_S4_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984351" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984351/SRR24984351" size="13158625987" date="2023-06-21 21:38:21" md5="a03870c028d0f31ff89a910af36425a5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984351/SRR24984351" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984351.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984351/SRR24984351.lite.1" size="11058183159" date="2023-06-26 22:32:49" md5="89512c24bbfb5cac62ecbb8d26fd0810" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984351/SRR24984351.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984351/SRR24984351.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984351/SRR24984351.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="401844276">
+          <Read index="0" count="401844276" average="10" stdev="0"/>
+          <Read index="1" count="401844276" average="10" stdev="0"/>
+          <Read index="2" count="401844276" average="28" stdev="0"/>
+          <Read index="3" count="401844276" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="401844276"/>
+                <Elements count="42595493256"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="23306968008">
+          <Base value="A" count="7128846834"/>
+          <Base value="C" count="4562777109"/>
+          <Base value="G" count="5736022341"/>
+          <Base value="T" count="5879269851"/>
+          <Base value="N" count="51873"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20741017" alias="GSM7503684_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20741017</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503684_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7503684: KO1, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP445217">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP445217</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA986143</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18030936">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18030936</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7503684</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7503684</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampi were isolated and, for each animal, a punch was collected from the middle of the hippocampus using a 1 mm diameter tissue punch. The punches were immediately stored at -80oC. For each animal, tissue punches from the right and left hippocampi were combined and homogenized using a glass Dounce homogenizer in 500 ml ice-cold Nuclei EZ lysis buffer (NLB) (NUC-101, Sigma) 25 times with pestle A and then 25 times with pestle B. The mixture was transferred to a pre-chilled Eppendorf tube and 1000 ml of NLB was added to the tube and incubated on ice for 5 minutes (min). The tubes were centrifuged at 800 x g for 5 min at 4o C. The nuclei were resuspended in 75 ml of nuclei suspension buffer (consisting of 1X PBS, 1% BSA (AM2618, Thermo Fisher Scientific), and 0.2 U/ml (1%) Rnase inhibitor (AM2694, Thermo Fisher Scientific)). The nuclei were then filtered through a 40 mm Flowmi Cell Strainer (H13680-0040, Bel-Art) to remove cellular debris. Concentration of nuclei for each sample was calculated using Trypan Blue (T8154, Sigma) on a hemocytometer, aiming for a final concentration of ~1000-2000 nuclei/ml. Single nuclei were processed using the 10X Genomics Next GEM Single Cell 3' Reagent Kit v3.1 following the manufacturer's user guide. All mRNA samples were examined for quantity and quality by NanoDrop and Bioanalyzer 2100 (Agilent). The libraries were constructed following TruSeq Stranded mRNA Sample preparation guide (Illumina) and paired end sequencing was performed on the Illumina NovaSeq 6000 platform at the McDermott Center Next Generation Sequencing Core at UTSW.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chahrour lab, UT Southwestern Medical Center" accession="SRA1659989" alias="SUB13566503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1659989</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chahrour lab, UT Southwestern Medical Center">SUB13566503</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chahrour lab, UT Southwestern Medical Center</Name>
+      <Contact email="maria.chahrour@utsouthwestern.edu">
+        <Address>
+          <Street>6000 Harry Hines Boulevard, NB10.104</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Maria</First>
+          <Last>Chahrour</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235490" accession="SRP445217">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP445217</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA986143</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-nuclei RNA-sequencing identifies a role for Kdm5a in regulating cell identity</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>KDM5A is a chromatin remodeler disrupted in neurodevelopmental disease. To investigate the effect of losing KDM5A on the development of the hippocampus, we profiled hippocampi from wild type (WT) and Kdm5a -/- mice using single-nuclei RNA sequencing (snRNA-seq). We found that KDM5A regulates the development of specific subtypes of excitatory (CA1, CA2, CA3) and inhibitory (SST+, PVALB+) neurons, that loss of KDM5A leads to a more mature cellular identity in the hippocampus, and that KDM5A functions early in development to specify proper CA1 cell identity. Overall design: Nuclei were isolated from hippocampal tissue of 20-week old WT and Kdm5a -/- (KO) mice and snRNA-seq data were generated by sequencing of 4 biological replicates per genotype using Illumina NovaSeq 6000.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235490</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37992166</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7503684" accession="SRS18030936">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18030936</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35820801</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7503684</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KO1, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>986143</ID>
+            <LABEL>PRJNA986143</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Kdm5a-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18030936" sample_name="GSM7503684" sample_title="KO1, snRNAseq" spots="419524811" bases="44469629966" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18030936</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35820801</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503684</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="44469629966" spots="419524811" bytes="13542038423">
+      <RUN accession="SRR24984352" alias="GSM7503684_r1" total_spots="419524811" total_bases="44469629966" size="13542038423" load_done="true" published="2023-09-01 00:13:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24984352</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7503684_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20741017">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7503684_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18030936" sample_name="GSM7503684" sample_title="KO1, snRNAseq" spots="419524811" bases="44469629966" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18030936</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35820801</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7503684</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO1_S3_L003_I1_001.fastq.gz" size="2224481136" date="2023-06-21 22:02:34" md5="99bee232d9b9140ef47ccca76411ccd8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984352/KO1_S3_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO1_S3_L003_I2_001.fastq.gz" size="2258497685" date="2023-06-21 22:02:42" md5="61e7fccbf1e60732cd01fbe358fe71fc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984352/KO1_S3_L003_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO1_S3_L003_R1_001.fastq.gz" size="8464217836" date="2023-06-21 22:03:00" md5="36d61896dad9a83f16df641a9cc1f3ba" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984352/KO1_S3_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO1_S3_L003_R2_001.fastq.gz" size="13085189499" date="2023-06-21 22:03:33" md5="bedd76ca5280fc863810b13f11385039" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR24984352/KO1_S3_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984352" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984352/SRR24984352" size="13542040640" date="2023-06-21 22:04:50" md5="499064fc12f7d6cbc0b9394066e3b642" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24984352/SRR24984352" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24984352.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984352/SRR24984352.lite.1" size="11531044068" date="2023-06-26 22:36:21" md5="f23120f57451fe606030eda94973fddf" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR024/24984/SRR24984352/SRR24984352.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24984352/SRR24984352.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR24984352/SRR24984352.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="419524811">
+          <Read index="0" count="419524811" average="10" stdev="0"/>
+          <Read index="1" count="419524811" average="10" stdev="0"/>
+          <Read index="2" count="419524811" average="28" stdev="0"/>
+          <Read index="3" count="419524811" average="58" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="419524811"/>
+                <Elements count="44469629966"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24332439038">
+          <Base value="A" count="7384528037"/>
+          <Base value="C" count="4735606659"/>
+          <Base value="G" count="5979373248"/>
+          <Base value="T" count="6232875980"/>
+          <Base value="N" count="55114"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

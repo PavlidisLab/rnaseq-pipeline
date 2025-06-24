@@ -84,3 +84,21 @@ class ExpirableLocalTarget(luigi.LocalTarget):
 
     def exists(self):
         return super().exists() and not self.is_stale()
+
+class DownloadRunTarget(luigi.Target):
+    run_id: str
+    files: list[str]
+    layout: list[str]
+
+    _targets: list[luigi.LocalTarget]
+
+    def __init__(self, run_id, files, layout):
+        if len(files) != len(layout):
+            raise ValueError('The number of files must match the layout.')
+        self.run_id = run_id
+        self.files = files
+        self.layout = layout
+        self._targets = [luigi.LocalTarget(f) for f in files]
+
+    def exists(self):
+        return all(t.exists() for t in self._targets)

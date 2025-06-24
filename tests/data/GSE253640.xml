@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306123" alias="GSM8024496_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306123</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024496_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024496: CTX_Ift88_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182812">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182812</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024496</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024496</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024496" accession="SRS20182812">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182812</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488029</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024496</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CTX_Ift88_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182812" sample_name="GSM8024496" sample_title="CTX_Ift88_cKO" spots="144991420" bases="13194219220" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182812</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488029</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024496</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="13194219220" spots="144991420" bytes="3717461552">
+      <RUN accession="SRR27637928" alias="GSM8024496_r1" total_spots="144991420" total_bases="13194219220" size="3717461552" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637928</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024496_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306123">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024496_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182812" sample_name="GSM8024496" sample_title="CTX_Ift88_cKO" spots="144991420" bases="13194219220" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182812</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488029</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024496</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ25_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637928/LZ25_possorted_genome_bam.bam.1" size="9112259238" date="2024-01-18 22:23:28" md5="a4b3a238a74f362da71849b2ceee0041" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637928/LZ25_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637928/LZ25_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637928" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637928/SRR27637928" size="3717472833" date="2024-01-18 22:24:47" md5="40f40c13e1a418c9e9f6a886df91161c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637928/SRR27637928" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637928.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637928/SRR27637928.lite.1" size="2721749793" date="2024-01-18 23:01:46" md5="47bc00bdae72739f7e91e6cb3586271b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637928/SRR27637928.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637928/SRR27637928.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637928/SRR27637928.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="144991420">
+          <Read index="0" count="144991420" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="131666100"/>
+                <Elements count="11981615100"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546179"/>
+                <Elements count="2730746710"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="144991420"/>
+                <Elements count="13194219220"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="13194219220">
+          <Base value="A" count="3930058381"/>
+          <Base value="C" count="2826531639"/>
+          <Base value="G" count="3284588001"/>
+          <Base value="T" count="3152732110"/>
+          <Base value="N" count="309089"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306122" alias="GSM8024495_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306122</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024495_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024495: CB_SmoM2-ARL13B_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182811">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182811</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024495</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024495</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024495" accession="SRS20182811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182811</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488030</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024495</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CB_SmoM2-ARL13B_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182811" sample_name="GSM8024495" sample_title="CB_SmoM2-ARL13B_cKO" spots="47984689" bases="4366606699" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182811</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488030</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024495</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="4366606699" spots="47984689" bytes="1151098275">
+      <RUN accession="SRR27637929" alias="GSM8024495_r1" total_spots="47984689" total_bases="4366606699" size="1151098275" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637929</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024495_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306122">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024495_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182811" sample_name="GSM8024495" sample_title="CB_SmoM2-ARL13B_cKO" spots="47984689" bases="4366606699" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182811</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488030</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024495</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ6_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637929/LZ6_possorted_genome_bam.bam.1" size="3244567744" date="2024-01-18 22:01:04" md5="15f0017eb876075ec851d6fdbc01cddb" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637929/LZ6_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637929/LZ6_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637929" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637929/SRR27637929" size="1151113326" date="2024-01-18 22:01:32" md5="4f13ba437144424f79bd94ba2e4d42eb" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637929/SRR27637929" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637929.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637929/SRR27637929.lite.1" size="884721678" date="2024-01-18 23:00:49" md5="d8f29767fc4b66236357b3719a7296ab" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637929/SRR27637929.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637929/SRR27637929.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637929/SRR27637929.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="47984689">
+          <Read index="0" count="47984689" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="43075168"/>
+                <Elements count="3919840288"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546190"/>
+                <Elements count="2730796895"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="10585505"/>
+                <Elements count="963280955"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="47984689"/>
+                <Elements count="4366606699"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="4366606699">
+          <Base value="A" count="1279694969"/>
+          <Base value="C" count="982586240"/>
+          <Base value="G" count="1055385406"/>
+          <Base value="T" count="1048864784"/>
+          <Base value="N" count="75300"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306121" alias="GSM8024494_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306121</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024494_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024494: CTX_SmoM2-ARL13B_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182810">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182810</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024494</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024494</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024494" accession="SRS20182810">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182810</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488031</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024494</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CTX_SmoM2-ARL13B_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182810" sample_name="GSM8024494" sample_title="CTX_SmoM2-ARL13B_cKO" spots="240061950" bases="21845637450" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182810</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488031</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024494</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="21845637450" spots="240061950" bytes="5716489254">
+      <RUN accession="SRR27637930" alias="GSM8024494_r1" total_spots="240061950" total_bases="21845637450" size="5716489254" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637930</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024494_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306121">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024494_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182810" sample_name="GSM8024494" sample_title="CTX_SmoM2-ARL13B_cKO" spots="240061950" bases="21845637450" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182810</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488031</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024494</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ5_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637930/LZ5_possorted_genome_bam.bam.1" size="15900146864" date="2024-01-18 22:35:48" md5="c74087c332d58d06a5b0cecc59de5420" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR27637930/LZ5_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637930/LZ5_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637930" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637930/SRR27637930" size="5716504321" date="2024-01-18 22:37:22" md5="b515b8890fa88ab1051a99251f82c108" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637930/SRR27637930" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637930.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637930/SRR27637930.lite.1" size="4350720957" date="2024-01-18 23:02:20" md5="f3e9d3c9ed4bd188ed825a957eec016b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637930/SRR27637930.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637930/SRR27637930.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637930/SRR27637930.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="240061950">
+          <Read index="0" count="240061950" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="222531587"/>
+                <Elements count="20250374417"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546187"/>
+                <Elements count="2730781950"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="45701395"/>
+                <Elements count="4158826945"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="240061950"/>
+                <Elements count="21845637450"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21845637450">
+          <Base value="A" count="6241142965"/>
+          <Base value="C" count="4905055301"/>
+          <Base value="G" count="5396996513"/>
+          <Base value="T" count="5301890951"/>
+          <Base value="N" count="551720"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306120" alias="GSM8024493_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306120</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024493_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024493: CB_Smo_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182809">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182809</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024493</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024493</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024493" accession="SRS20182809">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182809</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488032</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024493</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CB_Smo_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182809" sample_name="GSM8024493" sample_title="CB_Smo_cKO" spots="80999745" bases="7370976795" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182809</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488032</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024493</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="7370976795" spots="80999745" bytes="1850214781">
+      <RUN accession="SRR27637931" alias="GSM8024493_r1" total_spots="80999745" total_bases="7370976795" size="1850214781" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637931</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024493_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306120">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024493_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182809" sample_name="GSM8024493" sample_title="CB_Smo_cKO" spots="80999745" bases="7370976795" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182809</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488032</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024493</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ10_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637931/LZ10_possorted_genome_bam.bam.1" size="5516504142" date="2024-01-18 22:06:54" md5="e1df61b87bf66bcad7ba926b4032862e" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637931/LZ10_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637931/LZ10_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637931" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637931/SRR27637931" size="1850229853" date="2024-01-18 22:07:33" md5="aa5e1fb1d0dc79973bc1f3b07575c83f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637931/SRR27637931" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637931.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637931/SRR27637931.lite.1" size="1400890577" date="2024-01-18 23:01:23" md5="04ab72060cc00edc09a2accc6976bc47" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637931/SRR27637931.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637931/SRR27637931.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637931/SRR27637931.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="80999745">
+          <Read index="0" count="80999745" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="72116693"/>
+                <Elements count="6562619063"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546187"/>
+                <Elements count="2730781950"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="18039771"/>
+                <Elements count="1641619161"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="80999745"/>
+                <Elements count="7370976795"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="7370976795">
+          <Base value="A" count="2174775716"/>
+          <Base value="C" count="1642624945"/>
+          <Base value="G" count="1780908271"/>
+          <Base value="T" count="1772506011"/>
+          <Base value="N" count="161852"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306119" alias="GSM8024492_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306119</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024492_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024492: CTX_Smo_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182807">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182807</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024492</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024492</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024492" accession="SRS20182807">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182807</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488033</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024492</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CTX_Smo_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182807" sample_name="GSM8024492" sample_title="CTX_Smo_cKO" spots="168490584" bases="15332643144" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182807</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488033</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024492</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="15332643144" spots="168490584" bytes="3938867561">
+      <RUN accession="SRR27637932" alias="GSM8024492_r1" total_spots="168490584" total_bases="15332643144" size="3938867561" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637932</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024492_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306119">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024492_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182807" sample_name="GSM8024492" sample_title="CTX_Smo_cKO" spots="168490584" bases="15332643144" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182807</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488033</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024492</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR27637932.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637932/SRR27637932.lite.1" size="2964103730" date="2024-01-19 03:25:33" md5="f16f9964b222d28d6609c8675b058046" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637932/SRR27637932.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637932/SRR27637932.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637932/SRR27637932.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637932" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637932/SRR27637932" size="3938882622" date="2024-01-18 23:01:40" md5="91a45733351d2597cc9652a28152c493" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637932/SRR27637932" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LZ9_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637932/LZ9_possorted_genome_bam.bam.1" size="11288304383" date="2024-01-18 22:59:03" md5="be8e1356b7136b90f96ef81703f868ea" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR27637932/LZ9_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637932/LZ9_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="168490584">
+          <Read index="0" count="168490584" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="149306928"/>
+                <Elements count="13586930448"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546198"/>
+                <Elements count="2730832144"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="32121378"/>
+                <Elements count="2923045398"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="168490584"/>
+                <Elements count="15332643144"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="15332643144">
+          <Base value="A" count="4539548804"/>
+          <Base value="C" count="3325295251"/>
+          <Base value="G" count="3808219287"/>
+          <Base value="T" count="3659199844"/>
+          <Base value="N" count="379958"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306118" alias="GSM8024491_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306118</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024491_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024491: CB_Arl13b_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182808">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182808</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024491</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024491</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024491" accession="SRS20182808">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182808</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488034</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024491</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CB_Arl13b_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182808" sample_name="GSM8024491" sample_title="CB_Arl13b_cKO" spots="80398150" bases="7316231650" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182808</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488034</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024491</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="7316231650" spots="80398150" bytes="1900465184">
+      <RUN accession="SRR27637933" alias="GSM8024491_r1" total_spots="80398150" total_bases="7316231650" size="1900465184" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637933</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024491_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306118">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024491_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182808" sample_name="GSM8024491" sample_title="CB_Arl13b_cKO" spots="80398150" bases="7316231650" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182808</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488034</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024491</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR27637933.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637933/SRR27637933.lite.1" size="1435629446" date="2024-01-18 23:01:05" md5="e9bb28cf28b1a3ecfccce10fe7e2de44" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637933/SRR27637933.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637933/SRR27637933.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637933/SRR27637933.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637933" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637933/SRR27637933" size="1900480234" date="2024-01-18 22:13:34" md5="ff6c97fdebad2fe27973468c68fdbca3" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637933/SRR27637933" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LZ8_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637933/LZ8_possorted_genome_bam.bam.1" size="5524076249" date="2024-01-18 22:12:46" md5="6640f6d4b707134d2343adcb009a9cb6" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637933/LZ8_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637933/LZ8_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="80398150">
+          <Read index="0" count="80398150" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="69189157"/>
+                <Elements count="6296213287"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546174"/>
+                <Elements count="2730722042"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="16335958"/>
+                <Elements count="1486572178"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="80398150"/>
+                <Elements count="7316231650"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="7316231650">
+          <Base value="A" count="2168198598"/>
+          <Base value="C" count="1603349617"/>
+          <Base value="G" count="1834791612"/>
+          <Base value="T" count="1709729289"/>
+          <Base value="N" count="162534"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306117" alias="GSM8024490_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306117</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024490_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024490: CTX_Arl13b_cKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182806">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182806</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024490</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024490</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024490" accession="SRS20182806">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182806</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488035</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024490</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CTX_Arl13b_cKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182806" sample_name="GSM8024490" sample_title="CTX_Arl13b_cKO" spots="120964528" bases="11007772048" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182806</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488035</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024490</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="11007772048" spots="120964528" bytes="2962571783">
+      <RUN accession="SRR27637934" alias="GSM8024490_r1" total_spots="120964528" total_bases="11007772048" size="2962571783" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637934</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024490_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306117">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024490_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182806" sample_name="GSM8024490" sample_title="CTX_Arl13b_cKO" spots="120964528" bases="11007772048" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182806</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488035</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024490</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ7_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637934/LZ7_possorted_genome_bam.bam.1" size="8350867338" date="2024-01-18 22:35:51" md5="7c7474c85e729ff1a4e110ff1a375ccb" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR27637934/LZ7_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637934/LZ7_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637934" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637934/SRR27637934" size="2962586844" date="2024-01-18 22:38:04" md5="25d2a229bacc03da2c4bc9f39c8e2f7f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637934/SRR27637934" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637934.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637934/SRR27637934.lite.1" size="2238513316" date="2024-01-18 23:00:59" md5="cb3f0144fc9e329df52c9cf175f448ac" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637934/SRR27637934.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637934/SRR27637934.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637934/SRR27637934.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="120964528">
+          <Read index="0" count="120964528" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="106764049"/>
+                <Elements count="9715528459"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546193"/>
+                <Elements count="2730807821"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="23525257"/>
+                <Elements count="2140798387"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="120964528"/>
+                <Elements count="11007772048"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11007772048">
+          <Base value="A" count="3268632210"/>
+          <Base value="C" count="2385379532"/>
+          <Base value="G" count="2753402249"/>
+          <Base value="T" count="2600089824"/>
+          <Base value="N" count="268233"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306116" alias="GSM8024489_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306116</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024489_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024489: CB_Control2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182805">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182805</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024489</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024489</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024489" accession="SRS20182805">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182805</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488036</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024489</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CB_Control2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182805" sample_name="GSM8024489" sample_title="CB_Control2" spots="41693682" bases="3794125062" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182805</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488036</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024489</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="3794125062" spots="41693682" bytes="1041528665">
+      <RUN accession="SRR27637935" alias="GSM8024489_r1" total_spots="41693682" total_bases="3794125062" size="1041528665" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637935</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024489_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306116">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024489_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182805" sample_name="GSM8024489" sample_title="CB_Control2" spots="41693682" bases="3794125062" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182805</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488036</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024489</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR27637935.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637935/SRR27637935.lite.1" size="785805412" date="2024-01-18 23:00:55" md5="424cfd37a4aa9c955c9d0a1ac49d003b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637935/SRR27637935.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637935/SRR27637935.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637935/SRR27637935.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637935" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637935/SRR27637935" size="1041539948" date="2024-01-18 22:01:19" md5="3bc1ddd33269af7bc6460dfe62cdc0fd" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637935/SRR27637935" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LZ14_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637935/LZ14_possorted_genome_bam.bam.1" size="2581429429" date="2024-01-18 22:00:48" md5="129de2012b5ed66dcc835ac53e651feb" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637935/LZ14_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637935/LZ14_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="41693682">
+          <Read index="0" count="41693682" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="38400870"/>
+                <Elements count="3494479170"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546115"/>
+                <Elements count="2730432773"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="41693682"/>
+                <Elements count="3794125062"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="3794125062">
+          <Base value="A" count="1075093869"/>
+          <Base value="C" count="862906528"/>
+          <Base value="G" count="969717808"/>
+          <Base value="T" count="886243556"/>
+          <Base value="N" count="163301"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306115" alias="GSM8024488_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306115</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024488_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024488: CB_Control1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182804">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182804</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024488</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024488</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024488" accession="SRS20182804">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182804</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488037</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024488</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CB_Control1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cerebellum</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182804" sample_name="GSM8024488" sample_title="CB_Control1" spots="50938001" bases="4635358091" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182804</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488037</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="4635358091" spots="50938001" bytes="1262296404">
+      <RUN accession="SRR27637936" alias="GSM8024488_r1" total_spots="50938001" total_bases="4635358091" size="1262296404" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637936</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024488_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306115">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024488_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182804" sample_name="GSM8024488" sample_title="CB_Control1" spots="50938001" bases="4635358091" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182804</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488037</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024488</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ4_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637936/LZ4_possorted_genome_bam.bam.1" size="3468379753" date="2024-01-18 22:03:53" md5="bdd53a1d025e5608ac295692f0a324ab" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR27637936/LZ4_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637936/LZ4_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637936" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637936/SRR27637936" size="1262311458" date="2024-01-18 22:04:22" md5="f54df6d4bee88903208073ebaed65cae" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637936/SRR27637936" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637936.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637936/SRR27637936.lite.1" size="986929190" date="2024-01-18 23:00:48" md5="a2653a4d83b2f115dfca914422a44e12" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637936/SRR27637936.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637936/SRR27637936.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637936/SRR27637936.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="50938001">
+          <Read index="0" count="50938001" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="45013081"/>
+                <Elements count="4096190371"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546192"/>
+                <Elements count="2730806273"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="11376029"/>
+                <Elements count="1035218639"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="50938001"/>
+                <Elements count="4635358091"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="4635358091">
+          <Base value="A" count="1359244263"/>
+          <Base value="C" count="1039276895"/>
+          <Base value="G" count="1148388204"/>
+          <Base value="T" count="1088368521"/>
+          <Base value="N" count="80208"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23306114" alias="GSM8024487_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23306114</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024487_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8024487: CTX_Control; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP484584">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP484584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1066391</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20182803">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20182803</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8024487</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8024487</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen (20mg/mL) from P7 to P9. Cortices and the cerebellum were dissected at P52~55. Samples from two male mice of each genotype were combined. Tissue was cut into small pieces and digested in 5mL enzyme buffer (1 x EBSS media, 0.36% D(+) glucose, 26mM NaHCO3, 0.5mM EDTA) containing papain (~34 units/mL, Worthington), DNase I (20 units/ml, Sigma) for 30 min at 37 °C in a cell culture incubator (5% CO2, 95% air). Tissue pieces were then gently triturated into single cells after stopping the enzyme reaction by adding 10mL DMEM (Gibco) supplied with 10% FBS (Gibco). Cells were spun down and resuspended in 13mL of Percoll solution [23% Percoll (Sigma), 36mM NaCl in PBS], and carefully topped with 8mL of PBS. Cells were then centrifuged at 900g (accelerate: 4, break: 0), resuspended and washed once with FACS buffer (PBS supplied with 3% FBS). Blocked with FcBlock (Biorad) for 5 min at room temperature, cells were then stained with ACSA2-PE (Miltenyi Biotec) for 30min at 4 °C, followed by Viability Dye eFluor™ 780 (eBioscience) incubation for 5 min at room temperature. Cells were then washed with PBS solution supplied with 3% FBS (Gbico) once, and live ACSA2+ cells were sorted using flow cytometry. The RNase inhibitor (Sigma) was supplied in the solutions from the staining to the end of sorting. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. The PCR amplification steps were run 12x.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Guo Lab, Cell Biology and Anatomy, University of Calgary" accession="SRA1788104" alias="SUB14160901">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1788104</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Guo Lab, Cell Biology and Anatomy, University of Calgary">SUB14160901</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Guo Lab, Cell Biology and Anatomy, University of Calgary</Name>
+      <Contact email="jiami.guo@ucalgary.ca">
+        <Address>
+          <Street>2500 University Dr NW</Street>
+          <City>Calgary</City>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Jiami</First>
+          <Last>Guo</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE253640" accession="SRP484584">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP484584</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1066391</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE253640</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNAseq datasets supporting the role of primary cilia to drive region-specific diversification of astrocytes within the developing brain</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Astrocyte diversity is greatly influenced by local environmental modulation. In this study, we analyzed how primary ciliary signaling modulates astrocyte subtype-specific maturation and accessed the impact of ciliary deficient astrocytes on neuronal programs and behaviours. Comparative single-cell transcriptomics revealed that primary cilia mediate canonical Shh signaling to modulate astrocyte subtype-specific core features in synaptic regulation, intracellular transport, energy and metabolism. Our results uncover a critical role for primary cilia in transmitting local cues that drive the region-specific diversification of astrocytes within the developing brain. Overall design: Aldh1l1-CreERT2 (Control), Arl13blox/lox; Aldh1l1-CreERT2 (Arl13bcKO), Ift88lox/lox; Aldh1l1-CreERT2 (Ift88cKO), Smolox/lox; Aldh1l1-CreERT2 (SmocKO), and SmoM2lox/+; Arl13blox/lox; Aldh1l1-CreERT2 (SmoM2-Arl13bcKO) mice were administrated with tamoxifen from P7 to P9. Single cell suspension of Cortices and the cerebellum were obtained from two male mice of each genotype using papain-based protocol. Astrocytes were then labelled using ASCA2-PE antibody and live ASCA2+ cells were sorted using flow cytometry. A total of 15, 000 single cells of each sample were loaded for partitioning using 10x Genomics NextGEM Gel Bead emulsions (3' gene expression kit, version 3.1) and processed according to the manufacturer's protocol. Illumina Sequencing was performed on NovaSeq SP and Illumina NovaSeq S2 at the Centre for Health Informatics (CHGI) at University of Calgary. Alignment to the mouse reference genome was performed using the CellRanger 3.1.0 pipeline and the resulting gene-barcode matrix was further analyzed using different packages in R.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE253640</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39103557</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA1066386</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM8024487" accession="SRS20182803">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20182803</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39488038</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8024487</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>CTX_Control</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1066391</ID>
+            <LABEL>PRJNA1066391</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P52-P55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20182803" sample_name="GSM8024487" sample_title="CTX_Control" spots="238364980" bases="21691213180" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20182803</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39488038</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024487</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="21691213180" spots="238364980" bytes="5819863443">
+      <RUN accession="SRR27637937" alias="GSM8024487_r1" total_spots="238364980" total_bases="21691213180" size="5819863443" load_done="true" published="2024-01-24 00:31:07" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27637937</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8024487_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23306114">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8024487_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20182803" sample_name="GSM8024487" sample_title="CTX_Control" spots="238364980" bases="21691213180" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20182803</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39488038</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8024487</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LZ3_possorted_genome_bam.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637937/LZ3_possorted_genome_bam.bam.1" size="15909699862" date="2024-01-18 23:17:43" md5="00cdf327b55fe4e9670e1aa3fdc4645c" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR27637937/LZ3_possorted_genome_bam.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR27637937/LZ3_possorted_genome_bam.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637937" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637937/SRR27637937" size="5819878491" date="2024-01-18 23:20:23" md5="fe82b9c66bf77aa9e15821f8412c2035" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27637937/SRR27637937" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27637937.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637937/SRR27637937.lite.1" size="4462497295" date="2024-01-19 03:28:32" md5="758dcf5e5bdec6f295e11052c0133724" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR027/27637/SRR27637937/SRR27637937.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR27637937/SRR27637937.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR27637937/SRR27637937.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="238364980">
+          <Read index="0" count="238364980" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="212130129"/>
+                <Elements count="19303841739"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546198"/>
+                <Elements count="2730832144"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="41535032"/>
+                <Elements count="3779687912"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="238364980"/>
+                <Elements count="21691213180"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21691213180">
+          <Base value="A" count="6533681208"/>
+          <Base value="C" count="4634216846"/>
+          <Base value="G" count="5330117769"/>
+          <Base value="T" count="5192656458"/>
+          <Base value="N" count="540899"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

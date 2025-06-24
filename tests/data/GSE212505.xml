@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392592" alias="GSM6533799_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392592</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533799_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533799: Control Placenta Site Sample D7; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950990">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950990</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533799</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533799</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533799" accession="SRS14950990">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950990</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629401</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533799</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Control Placenta Site Sample D7</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950990" sample_name="GSM6533799" sample_title="Control Placenta Site Sample D7" spots="400035506" bases="47604225214" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950990</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629401</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533799</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="47604225214" spots="400035506" bytes="14820380854">
+      <RUN accession="SRR21387194" alias="GSM6533799_r1" total_spots="400035506" total_bases="47604225214" size="14820380854" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387194</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533799_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392592">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533799_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950990" sample_name="GSM6533799" sample_title="Control Placenta Site Sample D7" spots="400035506" bases="47604225214" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950990</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629401</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533799</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="C-D7_S1_L001_R1_001.fastq.gz" size="8326154910" date="2022-09-03 21:18:22" md5="b01c770ebd4ba0b4eeec765d0438bcdd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21387194/C-D7_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="C-D7_S1_L001_R2_001.fastq.gz" size="15042006903" date="2022-09-04 02:58:55" md5="916d28f57c358209c57fcddda466962f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21387194/C-D7_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387194" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387194/SRR21387194" size="14820382382" date="2022-09-04 03:33:38" md5="7841de08621411b550c1fa73f35613f5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387194/SRR21387194" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387194.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387194/SRR21387194.lite.1" size="11966002682" date="2022-10-25 19:04:13" md5="c6a6bf29a26a08174c080a1c07f2ea60" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387194/SRR21387194.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387194/SRR21387194.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387194/SRR21387194.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="400035506">
+          <Read index="0" count="400035506" average="28" stdev="0"/>
+          <Read index="1" count="400035506" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="400035506"/>
+                <Elements count="47604225214"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="47604225214">
+          <Base value="A" count="15043813318"/>
+          <Base value="C" count="9451361917"/>
+          <Base value="G" count="13074641298"/>
+          <Base value="T" count="10031940513"/>
+          <Base value="N" count="2468168"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392591" alias="GSM6533798_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392591</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533798_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533798: Control Placenta Site Sample D3; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950989">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950989</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533798</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533798</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533798" accession="SRS14950989">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950989</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629402</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533798</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Control Placenta Site Sample D3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950989" sample_name="GSM6533798" sample_title="Control Placenta Site Sample D3" spots="361643110" bases="43035530090" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950989</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629402</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533798</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="43035530090" spots="361643110" bytes="14684914697">
+      <RUN accession="SRR21387195" alias="GSM6533798_r1" total_spots="361643110" total_bases="43035530090" size="14684914697" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387195</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533798_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392591">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533798_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950989" sample_name="GSM6533798" sample_title="Control Placenta Site Sample D3" spots="361643110" bases="43035530090" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950989</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629402</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533798</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="C-D3_S1_L001_R1_001.fastq.gz" size="8201414223" date="2022-09-03 22:00:28" md5="648c56c3607c47c4f7be0e6c7ff9c203" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21387195/C-D3_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="C-D3_S1_L001_R2_001.fastq.gz" size="16347233194" date="2022-09-03 22:03:54" md5="d7e6344ef90e3a156df3d277a7c83325" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR21387195/C-D3_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387195" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387195/SRR21387195" size="14684916229" date="2022-09-04 04:26:19" md5="3375f86131d520b8784d57a73def297e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387195/SRR21387195" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387195.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387195/SRR21387195.lite.1" size="10819157193" date="2022-10-20 23:20:47" md5="3c60dc0f3f509300c3a624c2c63b0af7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387195/SRR21387195.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387195/SRR21387195.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387195/SRR21387195.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="361643110">
+          <Read index="0" count="361643110" average="28" stdev="0"/>
+          <Read index="1" count="361643110" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="361643110"/>
+                <Elements count="43035530090"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="43035530090">
+          <Base value="A" count="11103988635"/>
+          <Base value="C" count="10654524178"/>
+          <Base value="G" count="11566238318"/>
+          <Base value="T" count="9709090874"/>
+          <Base value="N" count="1688085"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392590" alias="GSM6533797_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392590</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533797_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533797: Control Placenta Site Sample D2; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950988">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950988</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533797</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533797</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533797" accession="SRS14950988">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950988</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629403</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533797</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Control Placenta Site Sample D2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950988" sample_name="GSM6533797" sample_title="Control Placenta Site Sample D2" spots="424052005" bases="50462188595" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950988</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629403</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533797</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50462188595" spots="424052005" bytes="16858710438">
+      <RUN accession="SRR21387196" alias="GSM6533797_r1" total_spots="424052005" total_bases="50462188595" size="16858710438" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387196</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533797_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392590">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533797_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950988" sample_name="GSM6533797" sample_title="Control Placenta Site Sample D2" spots="424052005" bases="50462188595" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950988</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629403</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533797</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="C-D2_S1_L001_R1_001.fastq.gz" size="9465060497" date="2022-09-10 20:25:46" md5="10cd9ee8105a3f509b41686fc93d8261" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387196/C-D2_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="C-D2_S1_L001_R2_001.fastq.gz" size="20092512785" date="2022-09-11 01:31:35" md5="02b6d130f0ed1a3d978a41fe07a504a7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387196/C-D2_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387196" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387196/SRR21387196" size="16858711969" date="2022-09-11 03:42:48" md5="e232542adec4fd98fa38fc5e1f3c06ae" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387196/SRR21387196" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387196.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387196/SRR21387196.lite.1" size="12706493485" date="2022-10-20 23:32:33" md5="2fb9ebc0d66dc9035a1a145303998f45" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387196/SRR21387196.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387196/SRR21387196.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387196/SRR21387196.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="424052005">
+          <Read index="0" count="424052005" average="28" stdev="0"/>
+          <Read index="1" count="424052005" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="424052005"/>
+                <Elements count="50462188595"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="50462188595">
+          <Base value="A" count="14144685136"/>
+          <Base value="C" count="12146278858"/>
+          <Base value="G" count="12583405681"/>
+          <Base value="T" count="11585811824"/>
+          <Base value="N" count="2007096"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392589" alias="GSM6533796_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392589</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533796_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533796: Accreta Opposite Site Sample D6; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950987">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950987</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533796</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533796</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533796" accession="SRS14950987">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950987</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629404</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533796</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Accreta Opposite Site Sample D6</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950987" sample_name="GSM6533796" sample_title="Accreta Opposite Site Sample D6" spots="419349423" bases="49902581337" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950987</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629404</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533796</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="49902581337" spots="419349423" bytes="15310996213">
+      <RUN accession="SRR21387197" alias="GSM6533796_r1" total_spots="419349423" total_bases="49902581337" size="15310996213" load_done="true" published="2024-02-05 17:27:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387197</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533796_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392589">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533796_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950987" sample_name="GSM6533796" sample_title="Accreta Opposite Site Sample D6" spots="419349423" bases="49902581337" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950987</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629404</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533796</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AO-D6_S1_L001_R1_001.fastq.gz" size="8726066633" date="2022-09-04 06:35:53" md5="b19a0c4f5fc7403bd564608b2cc13c6b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21387197/AO-D6_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AO-D6_S1_L001_R2_001.fastq.gz" size="18006414858" date="2022-09-04 16:25:33" md5="6f4f46e1e273b7cec4d181f66466cb14" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR21387197/AO-D6_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387197" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387197/SRR21387197" size="15310997739" date="2022-09-05 05:50:03" md5="0b1a1147f4707328bb9a5f286acbcf57" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387197/SRR21387197" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387197.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387197/SRR21387197.lite.1" size="12532862495" date="2022-11-09 18:11:26" md5="bee9c705f28d8c2dd7b4801c904367d3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387197/SRR21387197.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387197/SRR21387197.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387197/SRR21387197.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="419349423">
+          <Read index="0" count="419349423" average="28" stdev="0"/>
+          <Read index="1" count="419349423" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="419349423"/>
+                <Elements count="49902581337"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="49902581337">
+          <Base value="A" count="14487491045"/>
+          <Base value="C" count="11261130196"/>
+          <Base value="G" count="13139441950"/>
+          <Base value="T" count="11011927659"/>
+          <Base value="N" count="2590487"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392588" alias="GSM6533795_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392588</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533795_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533795: Accreta Opposite Site Sample D4; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950986">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950986</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533795</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533795</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533795" accession="SRS14950986">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950986</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629405</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533795</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Accreta Opposite Site Sample D4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950986" sample_name="GSM6533795" sample_title="Accreta Opposite Site Sample D4" spots="406321208" bases="48352223752" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950986</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629405</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533795</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="48352223752" spots="406321208" bytes="16215544159">
+      <RUN accession="SRR21387198" alias="GSM6533795_r1" total_spots="406321208" total_bases="48352223752" size="16215544159" load_done="true" published="2024-02-05 17:27:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387198</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533795_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392588">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533795_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950986" sample_name="GSM6533795" sample_title="Accreta Opposite Site Sample D4" spots="406321208" bases="48352223752" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950986</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629405</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533795</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AO-D4_S1_L001_R1_001.fastq.gz" size="9100727142" date="2022-09-01 15:18:40" md5="2417e2e6aa58d907bc4368fafd5af14d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387198/AO-D4_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AO-D4_S1_L001_R2_001.fastq.gz" size="19524895566" date="2022-09-01 15:24:25" md5="a1bc79c42f0e4d0f23022f1c740d9440" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387198/AO-D4_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387198" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387198/SRR21387198" size="16215545689" date="2022-09-01 15:34:23" md5="f950de6019ea176178c6bdffa64db0fe" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387198/SRR21387198" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387198.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387198/SRR21387198.lite.1" size="12156368761" date="2022-11-21 11:54:43" md5="322f23255332e457e131be0ff2e1a7c2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387198/SRR21387198.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387198/SRR21387198.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387198/SRR21387198.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="406321208">
+          <Read index="0" count="406321208" average="28" stdev="0"/>
+          <Read index="1" count="406321208" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="406321208"/>
+                <Elements count="48352223752"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="48352223752">
+          <Base value="A" count="13238551111"/>
+          <Base value="C" count="12014703277"/>
+          <Base value="G" count="12111180762"/>
+          <Base value="T" count="10985858747"/>
+          <Base value="N" count="1929855"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392587" alias="GSM6533794_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392587</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533794_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533794: Accreta Invasive Site Sample D6; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950985">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950985</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533794</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533794</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533794" accession="SRS14950985">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950985</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629406</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533794</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Accreta Invasive Site Sample D6</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950985" sample_name="GSM6533794" sample_title="Accreta Invasive Site Sample D6" spots="341339394" bases="40619387886" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950985</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629406</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533794</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="40619387886" spots="341339394" bytes="12925107457">
+      <RUN accession="SRR21387199" alias="GSM6533794_r1" total_spots="341339394" total_bases="40619387886" size="12925107457" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387199</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533794_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392587">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533794_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950985" sample_name="GSM6533794" sample_title="Accreta Invasive Site Sample D6" spots="341339394" bases="40619387886" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950985</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629406</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533794</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AI-D6_S1_L001_R1_001.fastq.gz" size="7031586773" date="2022-09-04 00:15:44" md5="d9d962d6a3ebc07abd32c11b38901b05" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR21387199/AI-D6_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AI-D6_S1_L001_R2_001.fastq.gz" size="10363105639" date="2022-09-04 03:09:32" md5="893bff8fd34ecff037248b33744b4272" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR21387199/AI-D6_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387199" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387199/SRR21387199" size="12925108991" date="2022-09-04 03:18:03" md5="a5bead0cc85b178f9395d54d2f483a73" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387199/SRR21387199" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387199.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387199/SRR21387199.lite.1" size="10216382675" date="2022-10-25 18:57:10" md5="d55a624f22848511601048ce5a34a5dd" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR021/21387/SRR21387199/SRR21387199.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387199/SRR21387199.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387199/SRR21387199.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="341339394">
+          <Read index="0" count="341339394" average="28" stdev="0"/>
+          <Read index="1" count="341339394" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="341339394"/>
+                <Elements count="40619387886"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="40619387886">
+          <Base value="A" count="13842389213"/>
+          <Base value="C" count="7252828775"/>
+          <Base value="G" count="11909881584"/>
+          <Base value="T" count="7612181764"/>
+          <Base value="N" count="2106550"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392586" alias="GSM6533793_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392586</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533793_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533793: Accreta Invasive Site Sample D5; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950984">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950984</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533793</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533793</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533793" accession="SRS14950984">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950984</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629407</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533793</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Accreta Invasive Site Sample D5</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950984" sample_name="GSM6533793" sample_title="Accreta Invasive Site Sample D5" spots="375837937" bases="44724714503" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950984</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629407</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533793</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="44724714503" spots="375837937" bytes="14028968548">
+      <RUN accession="SRR21387200" alias="GSM6533793_r1" total_spots="375837937" total_bases="44724714503" size="14028968548" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387200</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533793_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392586">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533793_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950984" sample_name="GSM6533793" sample_title="Accreta Invasive Site Sample D5" spots="375837937" bases="44724714503" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950984</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629407</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533793</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AI-D5_S1_L001_R1_001.fastq.gz" size="7812734458" date="2022-09-03 19:17:58" md5="380c7b2b6dac7fc0eadd48e8c27af40d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387200/AI-D5_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AI-D5_S1_L001_R2_001.fastq.gz" size="12551876988" date="2022-09-03 19:20:28" md5="84e92f27b91f3315b5ea9a618ff449c6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR21387200/AI-D5_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387200" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387200/SRR21387200" size="14028970078" date="2022-09-03 20:08:45" md5="90afa602ab86bcab8e5541301a581dd1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387200/SRR21387200" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387200.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387200/SRR21387200.lite.1" size="11246064522" date="2022-10-13 02:38:14" md5="c8115156ba5092bc255ef4db19ed89c4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-924/SRR021/21387/SRR21387200/SRR21387200.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387200/SRR21387200.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387200/SRR21387200.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="375837937">
+          <Read index="0" count="375837937" average="28" stdev="0"/>
+          <Read index="1" count="375837937" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="375837937"/>
+                <Elements count="44724714503"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="44724714503">
+          <Base value="A" count="14910635587"/>
+          <Base value="C" count="8305302015"/>
+          <Base value="G" count="12750976156"/>
+          <Base value="T" count="8755483545"/>
+          <Base value="N" count="2317200"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX17392585" alias="GSM6533792_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX17392585</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533792_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6533792: Accreta Invasive Site Sample D4; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP395208">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP395208</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA875647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS14950983">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS14950983</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6533792</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6533792</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The placenta biopsies was mechanically disassociated and enzymatically digested by incubating in digestion media of 2.5% trypsin, 300 U/mL collagenase, and 200 ug/mL DNAse in PBS for 90 minutes at 37oC in 5% CO2. Red blood cell lysis buffer was added to eliminate red blood cells. The cells were strained through a 100uM nylon mesh strainer. The cells were frozen for later use. At time of processing, the frozen cells were thawed and resuspended in an ideal cell concentration of 700-1200 cells/uL for single-cell sequencing. scRNA-seq libraries were generated using 10X Genomics Chromium Single Cell 3' Library &amp; Gel Bead Kit v3. Cells were loaded accordingly following the 10X Genomics protocol with an estimated targeted cell recovery of 6000 cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Pellegrini Lab, Molecular Biology Institute, UCLA" accession="SRA1494694" alias="SUB12049402">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1494694</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Pellegrini Lab, Molecular Biology Institute, UCLA">SUB12049402</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Pellegrini Lab, Molecular Biology Institute, UCLA</Name>
+      <Contact email="mafeiyang@ucla.edu">
+        <Address>
+          <Street>610, Charles Young Dr East, TLSB 3000C</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Feiyang</First>
+          <Last>Ma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE212505" accession="SRP395208">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP395208</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA875647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE212505</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-Cell Analysis of Placenta Accreta Spectrum: Novel Contribution of Endothelial Cells to the Pathogenesis of Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study utilizes advances in single-cell RNA-sequencing to generate transcriptomes from placenta accreta and control specimens. Overall design: For each of 3 accreta placentas, a biopsy was taken at the site of deepest invasion, AI (accreta invasive), and a site opposite of AI in the same placenta where it was attached normally, AO (accreta opposite). AI and AO from three accreta participants were compared to placental biopsies from three control (C) participants.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE212505</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38296740</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6533792" accession="SRS14950983">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS14950983</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN30629408</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6533792</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Accreta Invasive Site Sample D4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>875647</ID>
+            <LABEL>PRJNA875647</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>placenta/decidua/myometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>third trimester</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>mixed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>NA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS14950983" sample_name="GSM6533792" sample_title="Accreta Invasive Site Sample D4" spots="422951948" bases="50331281812" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS14950983</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN30629408</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533792</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50331281812" spots="422951948" bytes="16812956562">
+      <RUN accession="SRR21387201" alias="GSM6533792_r1" total_spots="422951948" total_bases="50331281812" size="16812956562" load_done="true" published="2024-02-05 17:27:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR21387201</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6533792_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX17392585">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6533792_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS14950983" sample_name="GSM6533792" sample_title="Accreta Invasive Site Sample D4" spots="422951948" bases="50331281812" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS14950983</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN30629408</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6533792</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AI-D4_S1_L001_R1_001.fastq.gz" size="9413583734" date="2022-09-10 18:19:11" md5="dc48775e6b1876de2fee727ccb5490e8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21387201/AI-D4_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AI-D4_S1_L001_R2_001.fastq.gz" size="20903424865" date="2022-09-11 00:29:21" md5="d7ac683b2ab77962aa8f90f64a4a3fd4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR21387201/AI-D4_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387201" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387201/SRR21387201" size="16812958093" date="2022-09-11 05:44:06" md5="850d63675d0b4c3eb18bc1b08f84db5f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21387201/SRR21387201" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR21387201.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21387/SRR21387201/SRR21387201.lite.1" size="12649246013" date="2022-10-20 23:39:40" md5="0ea99efd569b9d559ae43435ad54df1a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR021/21387/SRR21387201/SRR21387201.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR21387201/SRR21387201.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR21387201/SRR21387201.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="422951948">
+          <Read index="0" count="422951948" average="28" stdev="0"/>
+          <Read index="1" count="422951948" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="422951948"/>
+                <Elements count="50331281812"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="50331281812">
+          <Base value="A" count="14169164940"/>
+          <Base value="C" count="11678433720"/>
+          <Base value="G" count="12226505798"/>
+          <Base value="T" count="12255155549"/>
+          <Base value="N" count="2021805"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

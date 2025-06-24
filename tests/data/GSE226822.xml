@@ -1,0 +1,3473 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582452" alias="GSM7084230_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582452</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084230_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084230: VC,20Hz,1hr,08; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965335">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965335</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084230</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084230</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084230" accession="SRS16965335">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965335</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612911</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084230</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,20Hz,1hr,08</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>20Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965335" sample_name="GSM7084230" sample_title="VC,20Hz,1hr,08" spots="135420000" bases="40896840000" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965335</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612911</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084230</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="40896840000" spots="135420000" bytes="15563026870">
+      <RUN accession="SRR23721564" alias="GSM7084230_r1" total_spots="70987949" total_bases="21438360598" size="8190437644" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721564</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084230_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582452">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084230_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965335" sample_name="GSM7084230" sample_title="VC,20Hz,1hr,08" spots="70987949" bases="21438360598" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965335</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612911</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084230</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-08_S8_L001_R1_001.fastq.gz" size="5794473189" date="2023-03-08 02:56:45" md5="572757b660981a4bc5f8f4823ae90eef" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721564/22131-03-08_S8_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-08_S8_L001_R2_001.fastq.gz" size="5493358534" date="2023-03-08 02:57:02" md5="99266d63d0865ba008c33d09d8c7ac5c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721564/22131-03-08_S8_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721564" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721564/SRR23721564" size="8190440162" date="2023-03-08 02:57:43" md5="57deb0e33347ea806d9b24989d91abd6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721564/SRR23721564" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721564.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721564/SRR23721564.lite.1" size="5478415142" date="2023-06-16 07:49:14" md5="88e14692e6c425909cf8c8530a802212" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721564/SRR23721564.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721564/SRR23721564.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721564/SRR23721564.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="70987949">
+          <Read index="0" count="70987949" average="151" stdev="0"/>
+          <Read index="1" count="70987949" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="70987949"/>
+                <Elements count="21438360598"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21438360598">
+          <Base value="A" count="7390572161"/>
+          <Base value="C" count="3160580774"/>
+          <Base value="G" count="3513910934"/>
+          <Base value="T" count="7373140507"/>
+          <Base value="N" count="156222"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721566" alias="GSM7084230_r2" total_spots="64432051" total_bases="19458479402" size="7372589226" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721566</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084230_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582452">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084230_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965335" sample_name="GSM7084230" sample_title="VC,20Hz,1hr,08" spots="64432051" bases="19458479402" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965335</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612911</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084230</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-08_S8_L002_R1_001.fastq.gz" size="5260605471" date="2023-03-08 02:58:39" md5="2c44c421ca7e0f8ef1b8b8a0ce86babf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721566/22131-03-08_S8_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-08_S8_L002_R2_001.fastq.gz" size="4920330772" date="2023-03-08 02:57:41" md5="50cd16e8e07a4fc4943d25dfda4906fa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721566/22131-03-08_S8_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721566" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721566/SRR23721566" size="7372591746" date="2023-03-08 03:01:22" md5="dccae899a6531e51f37e9322cedd9018" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721566/SRR23721566" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721566.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721566/SRR23721566.lite.1" size="4974012182" date="2023-06-16 07:48:56" md5="1bc9909cceb76a897377750716d4eecc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721566/SRR23721566.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721566/SRR23721566.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721566/SRR23721566.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="64432051">
+          <Read index="0" count="64432051" average="151" stdev="0"/>
+          <Read index="1" count="64432051" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="64432051"/>
+                <Elements count="19458479402"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="19458479402">
+          <Base value="A" count="6721373490"/>
+          <Base value="C" count="2888887783"/>
+          <Base value="G" count="3208450599"/>
+          <Base value="T" count="6639688741"/>
+          <Base value="N" count="78789"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582451" alias="GSM7084231_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582451</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084231_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084231: VC,40Hz,1hr,09; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965334">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965334</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084231</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084231</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084231" accession="SRS16965334">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965334</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612910</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084231</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,40Hz,1hr,09</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>40Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965334" sample_name="GSM7084231" sample_title="VC,40Hz,1hr,09" spots="238056544" bases="71893076288" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965334</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612910</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084231</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="71893076288" spots="238056544" bytes="27301398460">
+      <RUN accession="SRR23721565" alias="GSM7084231_r1" total_spots="124075343" total_bases="37470753586" size="14289877806" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721565</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084231_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582451">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084231_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965334" sample_name="GSM7084231" sample_title="VC,40Hz,1hr,09" spots="124075343" bases="37470753586" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965334</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612910</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084231</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-09_S9_L001_R1_001.fastq.gz" size="10150615054" date="2023-03-08 03:22:40" md5="1245b07520f255bc50b9b7e2e1efd36c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721565/22131-03-09_S9_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-09_S9_L001_R2_001.fastq.gz" size="9778933283" date="2023-03-08 03:21:59" md5="8b35ec2d9f27b387ba5934de3f329d08" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721565/22131-03-09_S9_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721565" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721565/SRR23721565" size="14289880326" date="2023-03-08 03:24:34" md5="e218dae0b865b6c04416cdffa7e9e9a6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721565/SRR23721565" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721565.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721565/SRR23721565.lite.1" size="9552942890" date="2023-06-16 08:08:00" md5="afbf3c66adeb19c881f9faa34c37e2cc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721565/SRR23721565.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721565/SRR23721565.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721565/SRR23721565.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="124075343">
+          <Read index="0" count="124075343" average="151" stdev="0"/>
+          <Read index="1" count="124075343" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="124075343"/>
+                <Elements count="37470753586"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="37470753586">
+          <Base value="A" count="12886409459"/>
+          <Base value="C" count="5617546561"/>
+          <Base value="G" count="6008277324"/>
+          <Base value="T" count="12958242723"/>
+          <Base value="N" count="277519"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721568" alias="GSM7084231_r2" total_spots="113981201" total_bases="34422322702" size="13011520654" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721568</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084231_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582451">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084231_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965334" sample_name="GSM7084231" sample_title="VC,40Hz,1hr,09" spots="113981201" bases="34422322702" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965334</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612910</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084231</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-09_S9_L002_R1_001.fastq.gz" size="9323530215" date="2023-03-08 03:28:12" md5="370f187c1e4a4bc88703fa577a90b81c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721568/22131-03-09_S9_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-09_S9_L002_R2_001.fastq.gz" size="8860642017" date="2023-03-08 03:27:36" md5="88b289da5244d3343cf577551ab36eaf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721568/22131-03-09_S9_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721568" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721568/SRR23721568" size="13011523174" date="2023-03-08 03:32:06" md5="ee21003db66d9a78dd5d25a4e9b98649" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721568/SRR23721568" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721568.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721568/SRR23721568.lite.1" size="8778849754" date="2023-06-16 07:56:21" md5="35e5acc26b483318be4ac9ae634ce7c7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721568/SRR23721568.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721568/SRR23721568.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721568/SRR23721568.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="113981201">
+          <Read index="0" count="113981201" average="151" stdev="0"/>
+          <Read index="1" count="113981201" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="113981201"/>
+                <Elements count="34422322702"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34422322702">
+          <Base value="A" count="11855902283"/>
+          <Base value="C" count="5194043547"/>
+          <Base value="G" count="5550967458"/>
+          <Base value="T" count="11821265534"/>
+          <Base value="N" count="143880"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582450" alias="GSM7084232_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582450</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084232_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084232: VC,40Hz,1hr,10; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965332">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965332</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084232</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084232</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084232" accession="SRS16965332">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965332</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612909</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084232</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,40Hz,1hr,10</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>40Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965332" sample_name="GSM7084232" sample_title="VC,40Hz,1hr,10" spots="331500452" bases="100113136504" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965332</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612909</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084232</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="100113136504" spots="331500452" bytes="37940191866">
+      <RUN accession="SRR23721567" alias="GSM7084232_r1" total_spots="171973301" total_bases="51935936902" size="19766652229" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721567</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084232_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582450">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084232_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965332" sample_name="GSM7084232" sample_title="VC,40Hz,1hr,10" spots="171973301" bases="51935936902" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965332</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612909</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084232</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-10_S10_L001_R1_001.fastq.gz" size="13980889389" date="2023-03-08 04:01:29" md5="c59d7a21d3542144827bb3ce709e19d2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721567/22131-03-10_S10_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-10_S10_L001_R2_001.fastq.gz" size="13439407481" date="2023-03-08 03:59:03" md5="ccd7e3557202f5451f7830b3e9463092" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721567/22131-03-10_S10_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721567" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721567/SRR23721567" size="19766654746" date="2023-03-08 04:07:47" md5="575a3bece2cda3a9728350a4e4c250ab" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721567/SRR23721567" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721567.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721567/SRR23721567.lite.1" size="13226752758" date="2023-06-16 08:16:19" md5="be4a6b794c02548f58c01d5eb54568ce" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721567/SRR23721567.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721567/SRR23721567.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721567/SRR23721567.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="171973301">
+          <Read index="0" count="171973301" average="151" stdev="0"/>
+          <Read index="1" count="171973301" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="171973301"/>
+                <Elements count="51935936902"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="51935936902">
+          <Base value="A" count="17870760231"/>
+          <Base value="C" count="7636079770"/>
+          <Base value="G" count="8248129268"/>
+          <Base value="T" count="18180585659"/>
+          <Base value="N" count="381974"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721570" alias="GSM7084232_r2" total_spots="159527151" total_bases="48177199602" size="18173539637" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721570</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084232_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582450">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084232_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965332" sample_name="GSM7084232" sample_title="VC,40Hz,1hr,10" spots="159527151" bases="48177199602" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965332</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612909</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084232</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-10_S10_L002_R1_001.fastq.gz" size="12962617085" date="2023-03-08 03:50:31" md5="7b0ef2dd807a2c4cc99fc29b26d60249" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721570/22131-03-10_S10_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-10_S10_L002_R2_001.fastq.gz" size="12292612807" date="2023-03-08 03:48:26" md5="642c147449aa59f52d0e47d03bf670f2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721570/22131-03-10_S10_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721570" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721570/SRR23721570" size="18173542156" date="2023-03-08 03:57:05" md5="9411dc2cd9a5b2ddc19e74b4c7f309f6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721570/SRR23721570" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721570.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721570/SRR23721570.lite.1" size="12271459904" date="2023-06-16 08:05:26" md5="d3e926668e6d4d24857c65cf79c777cc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721570/SRR23721570.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721570/SRR23721570.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721570/SRR23721570.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="159527151">
+          <Read index="0" count="159527151" average="151" stdev="0"/>
+          <Read index="1" count="159527151" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="159527151"/>
+                <Elements count="48177199602"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="48177199602">
+          <Base value="A" count="16607830262"/>
+          <Base value="C" count="7129424427"/>
+          <Base value="G" count="7691122215"/>
+          <Base value="T" count="16748624721"/>
+          <Base value="N" count="197977"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582449" alias="GSM7084233_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582449</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084233_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084233: VC,40Hz,1hr,11; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965333">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965333</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084233</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084233</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084233" accession="SRS16965333">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965333</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612908</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084233</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,40Hz,1hr,11</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>40Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965333" sample_name="GSM7084233" sample_title="VC,40Hz,1hr,11" spots="193233946" bases="58356651692" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965333</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612908</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084233</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="58356651692" spots="193233946" bytes="22202005061">
+      <RUN accession="SRR23721569" alias="GSM7084233_r1" total_spots="100610806" total_bases="30384463412" size="11608079862" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721569</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084233_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582449">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084233_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965333" sample_name="GSM7084233" sample_title="VC,40Hz,1hr,11" spots="100610806" bases="30384463412" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965333</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612908</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084233</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-11_S11_L001_R1_001.fastq.gz" size="8224835810" date="2023-03-08 03:10:29" md5="793add33cec40566661b7b53d7267ea4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721569/22131-03-11_S11_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-11_S11_L001_R2_001.fastq.gz" size="7966418328" date="2023-03-08 03:10:02" md5="85baaed290f6dd6d11dd10b02c6d505f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721569/22131-03-11_S11_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721569" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721569/SRR23721569" size="11608082378" date="2023-03-08 03:11:53" md5="1e0bfd5235bc75f632f58ca84888f308" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721569/SRR23721569" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721569.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721569/SRR23721569.lite.1" size="7753380670" date="2023-06-16 07:50:06" md5="b4917f5da769a2ba61bcfc4f3e357671" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721569/SRR23721569.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721569/SRR23721569.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721569/SRR23721569.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="100610806">
+          <Read index="0" count="100610806" average="151" stdev="0"/>
+          <Read index="1" count="100610806" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="100610806"/>
+                <Elements count="30384463412"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30384463412">
+          <Base value="A" count="10499228965"/>
+          <Base value="C" count="4492700524"/>
+          <Base value="G" count="4824334883"/>
+          <Base value="T" count="10567974942"/>
+          <Base value="N" count="224098"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721572" alias="GSM7084233_r2" total_spots="92623140" total_bases="27972188280" size="10593925199" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721572</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084233_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582449">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084233_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965333" sample_name="GSM7084233" sample_title="VC,40Hz,1hr,11" spots="92623140" bases="27972188280" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965333</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612908</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084233</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-11_S11_L002_R1_001.fastq.gz" size="7570360542" date="2023-03-08 03:08:13" md5="16a17f72b6e7191013058c135913132d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721572/22131-03-11_S11_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-11_S11_L002_R2_001.fastq.gz" size="7236300800" date="2023-03-08 03:07:53" md5="9e82e76bc8340c46fda6e4f159661ec4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721572/22131-03-11_S11_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721572" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721572/SRR23721572" size="10593927715" date="2023-03-08 03:09:08" md5="ac25263dda9b2e7dd1bfeb6011b16bb2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721572/SRR23721572" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721572.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721572/SRR23721572.lite.1" size="7139624551" date="2023-06-16 07:52:58" md5="562ffd00079baa48ccfba1820b4517e1" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721572/SRR23721572.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721572/SRR23721572.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721572/SRR23721572.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="92623140">
+          <Read index="0" count="92623140" average="151" stdev="0"/>
+          <Read index="1" count="92623140" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="92623140"/>
+                <Elements count="27972188280"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27972188280">
+          <Base value="A" count="9681478834"/>
+          <Base value="C" count="4162842482"/>
+          <Base value="G" count="4467361382"/>
+          <Base value="T" count="9660390977"/>
+          <Base value="N" count="114605"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582448" alias="GSM7084234_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582448</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084234_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084234: VC,40Hz,1hr,12; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965331">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965331</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084234</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084234</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084234" accession="SRS16965331">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965331</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612907</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084234</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,40Hz,1hr,12</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>40Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965331" sample_name="GSM7084234" sample_title="VC,40Hz,1hr,12" spots="269812101" bases="81483254502" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965331</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612907</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084234</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="81483254502" spots="269812101" bytes="31004886541">
+      <RUN accession="SRR23721571" alias="GSM7084234_r1" total_spots="141021746" total_bases="42588567292" size="16274963479" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721571</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084234_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582448">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084234_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965331" sample_name="GSM7084234" sample_title="VC,40Hz,1hr,12" spots="141021746" bases="42588567292" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965331</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612907</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084234</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-12_S12_L001_R1_001.fastq.gz" size="11514669318" date="2023-03-08 03:23:42" md5="30e1682dfe6aea63355fb98f57b7adea" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721571/22131-03-12_S12_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-12_S12_L001_R2_001.fastq.gz" size="11174723672" date="2023-03-08 03:24:26" md5="de42fe53688f8fd244c456373fdf39c0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721571/22131-03-12_S12_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721571" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721571/SRR23721571" size="16274965994" date="2023-03-08 03:26:23" md5="2b03e6bb27560fb6fe4ba2524cfccf28" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721571/SRR23721571" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721571.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721571/SRR23721571.lite.1" size="10854425926" date="2023-06-16 08:10:00" md5="465587a1536855c68758bb3a93366ae4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721571/SRR23721571.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721571/SRR23721571.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721571/SRR23721571.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="141021746">
+          <Read index="0" count="141021746" average="151" stdev="0"/>
+          <Read index="1" count="141021746" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="141021746"/>
+                <Elements count="42588567292"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="42588567292">
+          <Base value="A" count="14716153318"/>
+          <Base value="C" count="6282815876"/>
+          <Base value="G" count="6782631514"/>
+          <Base value="T" count="14806651496"/>
+          <Base value="N" count="315088"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721575" alias="GSM7084234_r2" total_spots="128790355" total_bases="38894687210" size="14729923062" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721575</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084234_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582448">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084234_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965331" sample_name="GSM7084234" sample_title="VC,40Hz,1hr,12" spots="128790355" bases="38894687210" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965331</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612907</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084234</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-12_S12_L002_R1_001.fastq.gz" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-etc-1/SRR023/23721/SRR23721575/22131-03-12_S12_L002_R1_001.fastq.gz.1" size="10514002086" date="2023-03-08 03:26:12" md5="187e09b43e6c4e6a32f0cf79ddd2fa14" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR23721575/22131-03-12_S12_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-etc-1/SRR023/23721/SRR23721575/22131-03-12_S12_L002_R1_001.fastq.gz.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-12_S12_L002_R2_001.fastq.gz" size="10066832098" date="2023-03-08 03:28:31" md5="48b54980e7a643012bba67a463db2730" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721575/22131-03-12_S12_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721575" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721575/SRR23721575" size="14729925579" date="2023-03-08 03:33:36" md5="634f733157c8b2e78d1c9937462ea788" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721575/SRR23721575" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721575.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721575/SRR23721575.lite.1" size="9916037719" date="2023-06-16 07:52:09" md5="b7575b31b21a0e41356ba8a43b785c43" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721575/SRR23721575.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721575/SRR23721575.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721575/SRR23721575.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="128790355">
+          <Read index="0" count="128790355" average="151" stdev="0"/>
+          <Read index="1" count="128790355" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="128790355"/>
+                <Elements count="38894687210"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="38894687210">
+          <Base value="A" count="13464433525"/>
+          <Base value="C" count="5776131805"/>
+          <Base value="G" count="6227441960"/>
+          <Base value="T" count="13426522386"/>
+          <Base value="N" count="157534"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582447" alias="GSM7084229_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582447</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084229_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084229: VC,20Hz,1hr,07; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965328">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965328</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084229</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084229</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084229" accession="SRS16965328">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965328</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612912</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084229</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,20Hz,1hr,07</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>20Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965328" sample_name="GSM7084229" sample_title="VC,20Hz,1hr,07" spots="121628593" bases="36731835086" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965328</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612912</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084229</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="36731835086" spots="121628593" bytes="13949434555">
+      <RUN accession="SRR23721573" alias="GSM7084229_r1" total_spots="63855638" total_bases="19284402676" size="7353791319" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721573</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084229_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582447">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084229_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965328" sample_name="GSM7084229" sample_title="VC,20Hz,1hr,07" spots="63855638" bases="19284402676" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965328</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612912</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084229</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-07_S7_L001_R1_001.fastq.gz" size="5207299643" date="2023-03-08 02:52:10" md5="1c8f619bc48358468f19056a4898942a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721573/22131-03-07_S7_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-07_S7_L001_R2_001.fastq.gz" size="4963212098" date="2023-03-08 02:51:54" md5="fac7f0a9239c00738768699dbce2331e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721573/22131-03-07_S7_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721573" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721573/SRR23721573" size="7353793836" date="2023-03-08 02:53:04" md5="82868517e92db40fca10cc99130ba261" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721573/SRR23721573" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721573.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721573/SRR23721573.lite.1" size="4929813932" date="2023-06-16 07:48:55" md5="9f1c6e304bddcbeac63fdd36d207336d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721573/SRR23721573.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721573/SRR23721573.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721573/SRR23721573.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="63855638">
+          <Read index="0" count="63855638" average="151" stdev="0"/>
+          <Read index="1" count="63855638" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="63855638"/>
+                <Elements count="19284402676"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="19284402676">
+          <Base value="A" count="6669443947"/>
+          <Base value="C" count="2855234909"/>
+          <Base value="G" count="3148430594"/>
+          <Base value="T" count="6611148587"/>
+          <Base value="N" count="144639"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721574" alias="GSM7084229_r2" total_spots="57772955" total_bases="17447432410" size="6595643236" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721574</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084229_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582447">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084229_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965328" sample_name="GSM7084229" sample_title="VC,20Hz,1hr,07" spots="57772955" bases="17447432410" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965328</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612912</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084229</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-07_S7_L002_R1_001.fastq.gz" size="4712162023" date="2023-03-08 02:53:56" md5="07f80778fbd39b3461996f5c24e8ad3b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721574/22131-03-07_S7_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-07_S7_L002_R2_001.fastq.gz" size="4428419314" date="2023-03-08 02:54:15" md5="129bff0ca1ce02b87a217f278bc52821" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721574/22131-03-07_S7_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721574" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721574/SRR23721574" size="6595645755" date="2023-03-08 02:55:05" md5="2c46c9e17e1167e30ebb5df2c661e641" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721574/SRR23721574" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721574.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721574/SRR23721574.lite.1" size="4461461459" date="2023-06-16 07:50:11" md5="6a91f90ab36f470f40c556b0e92775f2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721574/SRR23721574.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721574/SRR23721574.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721574/SRR23721574.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="57772955">
+          <Read index="0" count="57772955" average="151" stdev="0"/>
+          <Read index="1" count="57772955" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="57772955"/>
+                <Elements count="17447432410"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="17447432410">
+          <Base value="A" count="6046816661"/>
+          <Base value="C" count="2601213228"/>
+          <Base value="G" count="2865799224"/>
+          <Base value="T" count="5933530842"/>
+          <Base value="N" count="72455"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582446" alias="GSM7084228_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582446</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084228_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084228: VC,20Hz,1hr,06; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965329">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965329</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084228</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084228</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084228" accession="SRS16965329">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965329</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612913</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084228</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,20Hz,1hr,06</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>20Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965329" sample_name="GSM7084228" sample_title="VC,20Hz,1hr,06" spots="137268585" bases="41455112670" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965329</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612913</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084228</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="41455112670" spots="137268585" bytes="15848999777">
+      <RUN accession="SRR23721576" alias="GSM7084228_r1" total_spots="71573013" total_bases="21615049926" size="8296672093" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721576</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084228_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582446">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084228_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965329" sample_name="GSM7084228" sample_title="VC,20Hz,1hr,06" spots="71573013" bases="21615049926" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965329</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612913</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084228</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-06_S6_L001_R1_001.fastq.gz" size="5865116055" date="2023-03-08 03:04:56" md5="a8812caf41a5d6022d97a959bf5bbebb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721576/22131-03-06_S6_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-06_S6_L001_R2_001.fastq.gz" size="5661990153" date="2023-03-08 03:03:25" md5="4328e7665acfc9908b14988ffe1007e8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721576/22131-03-06_S6_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721576" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721576/SRR23721576" size="8296674614" date="2023-03-08 03:12:05" md5="04d8ee57ae0ef64e34238e8c2d111c13" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721576/SRR23721576" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721576.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721576/SRR23721576.lite.1" size="5524838394" date="2023-06-16 07:59:17" md5="f57b46a1b4c054f9e4bd2a92493e3fa7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721576/SRR23721576.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721576/SRR23721576.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721576/SRR23721576.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="71573013">
+          <Read index="0" count="71573013" average="151" stdev="0"/>
+          <Read index="1" count="71573013" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="71573013"/>
+                <Elements count="21615049926"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21615049926">
+          <Base value="A" count="7460345442"/>
+          <Base value="C" count="3264301597"/>
+          <Base value="G" count="3547100647"/>
+          <Base value="T" count="7343144781"/>
+          <Base value="N" count="157459"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721577" alias="GSM7084228_r2" total_spots="65695572" total_bases="19840062744" size="7552327684" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721577</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084228_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582446">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084228_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965329" sample_name="GSM7084228" sample_title="VC,20Hz,1hr,06" spots="65695572" bases="19840062744" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965329</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612913</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084228</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-06_S6_L002_R1_001.fastq.gz" size="5384836223" date="2023-03-08 02:47:54" md5="7f3c6ed8f854a63083424716de448314" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721577/22131-03-06_S6_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-06_S6_L002_R2_001.fastq.gz" size="5129878399" date="2023-03-08 02:47:38" md5="20a5b9284d7494dd2b0a3ef773d86ecb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721577/22131-03-06_S6_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721577" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721577/SRR23721577" size="7552330198" date="2023-03-08 02:48:34" md5="80a592b0d8a861cebe146af5c667044d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721577/SRR23721577" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721577.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721577/SRR23721577.lite.1" size="5072729162" date="2023-06-16 07:50:55" md5="38e781320e616778903b6c674b1b5fba" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721577/SRR23721577.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721577/SRR23721577.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721577/SRR23721577.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="65695572">
+          <Read index="0" count="65695572" average="151" stdev="0"/>
+          <Read index="1" count="65695572" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="65695572"/>
+                <Elements count="19840062744"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="19840062744">
+          <Base value="A" count="6858817803"/>
+          <Base value="C" count="3016430962"/>
+          <Base value="G" count="3277873439"/>
+          <Base value="T" count="6686862235"/>
+          <Base value="N" count="78305"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582445" alias="GSM7084227_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582445</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084227_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084227: VC,20Hz,1hr,05; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965330">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965330</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084227</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084227</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084227" accession="SRS16965330">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965330</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612914</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084227</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,20Hz,1hr,05</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>20Hz AV flicker</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965330" sample_name="GSM7084227" sample_title="VC,20Hz,1hr,05" spots="211353542" bases="63828769684" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965330</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612914</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084227</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="63828769684" spots="211353542" bytes="24167971345">
+      <RUN accession="SRR23721578" alias="GSM7084227_r1" total_spots="109412339" total_bases="33042526378" size="12563354051" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721578</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084227_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582445">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084227_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965330" sample_name="GSM7084227" sample_title="VC,20Hz,1hr,05" spots="109412339" bases="33042526378" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965330</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612914</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084227</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-05_S5_L001_R1_001.fastq.gz" size="8950672366" date="2023-03-08 03:16:57" md5="2177f18ba8e9224406f03f1d44700ced" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721578/22131-03-05_S5_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-05_S5_L001_R2_001.fastq.gz" size="8554467506" date="2023-03-08 03:16:19" md5="6e4869e554ced656ff5341c0820a3851" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721578/22131-03-05_S5_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721578" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721578/SRR23721578" size="12563356569" date="2023-03-08 03:18:22" md5="899764c2b14141641458f130469fd867" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721578/SRR23721578" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721578.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721578/SRR23721578.lite.1" size="8426303721" date="2023-06-16 07:51:47" md5="255a5d86f960737f449064119d3b3d0c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721578/SRR23721578.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721578/SRR23721578.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721578/SRR23721578.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="109412339">
+          <Read index="0" count="109412339" average="151" stdev="0"/>
+          <Read index="1" count="109412339" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="109412339"/>
+                <Elements count="33042526378"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33042526378">
+          <Base value="A" count="11361662553"/>
+          <Base value="C" count="5022285890"/>
+          <Base value="G" count="5446262937"/>
+          <Base value="T" count="11212074181"/>
+          <Base value="N" count="240817"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721579" alias="GSM7084227_r2" total_spots="101941203" total_bases="30786243306" size="11604617294" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721579</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084227_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582445">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084227_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965330" sample_name="GSM7084227" sample_title="VC,20Hz,1hr,05" spots="101941203" bases="30786243306" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965330</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612914</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084227</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-05_S5_L002_R1_001.fastq.gz" size="8338428325" date="2023-03-08 03:14:58" md5="c641ae57f9fc7a972489aa471a815df7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721579/22131-03-05_S5_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-05_S5_L002_R2_001.fastq.gz" size="7864899465" date="2023-03-08 03:13:41" md5="13f7579012bf73aee6dc7c5efe9fe661" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721579/22131-03-05_S5_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721579" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721579/SRR23721579" size="11604619808" date="2023-03-08 03:18:05" md5="71df5bec7a5f05e271c7537d082b1c76" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721579/SRR23721579" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721579.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721579/SRR23721579.lite.1" size="7852254368" date="2023-06-16 07:50:02" md5="32afa415683338429eec5d8818c9cda0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721579/SRR23721579.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721579/SRR23721579.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721579/SRR23721579.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="101941203">
+          <Read index="0" count="101941203" average="151" stdev="0"/>
+          <Read index="1" count="101941203" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="101941203"/>
+                <Elements count="30786243306"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30786243306">
+          <Base value="A" count="10603461687"/>
+          <Base value="C" count="4710004062"/>
+          <Base value="G" count="5103980711"/>
+          <Base value="T" count="10368667849"/>
+          <Base value="N" count="128997"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582444" alias="GSM7084226_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582444</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084226_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084226: VC,Light,1hr,04; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965327">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965327</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084226</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084226</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084226" accession="SRS16965327">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965327</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612915</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084226</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,Light,1hr,04</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ambient light</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965327" sample_name="GSM7084226" sample_title="VC,Light,1hr,04" spots="265964808" bases="80321372016" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965327</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612915</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084226</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="80321372016" spots="265964808" bytes="30716583239">
+      <RUN accession="SRR23721580" alias="GSM7084226_r1" total_spots="138723519" total_bases="41894502738" size="16089653158" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721580</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084226_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582444">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084226_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965327" sample_name="GSM7084226" sample_title="VC,Light,1hr,04" spots="138723519" bases="41894502738" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965327</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612915</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084226</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-04_S4_L001_R1_001.fastq.gz" size="11350365970" date="2023-03-08 03:17:45" md5="9a98b84390c11763851265913df5ece5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721580/22131-03-04_S4_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-04_S4_L001_R2_001.fastq.gz" size="10972585750" date="2023-03-08 03:18:18" md5="def001ce5e1a8fc7df566622ccc36297" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721580/22131-03-04_S4_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721580" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721580/SRR23721580" size="16089655672" date="2023-03-08 03:19:39" md5="4998716274f614d9357fd2bfcee5ac15" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721580/SRR23721580" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721580.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721580/SRR23721580.lite.1" size="10677152316" date="2023-06-16 07:51:54" md5="c22195c900f4c3a35bd1766aab734ace" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721580/SRR23721580.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721580/SRR23721580.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721580/SRR23721580.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="138723519">
+          <Read index="0" count="138723519" average="151" stdev="0"/>
+          <Read index="1" count="138723519" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="138723519"/>
+                <Elements count="41894502738"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41894502738">
+          <Base value="A" count="14392799244"/>
+          <Base value="C" count="6328342273"/>
+          <Base value="G" count="6933397015"/>
+          <Base value="T" count="14239655182"/>
+          <Base value="N" count="309024"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721581" alias="GSM7084226_r2" total_spots="127241289" total_bases="38426869278" size="14626930081" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721581</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084226_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582444">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084226_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965327" sample_name="GSM7084226" sample_title="VC,Light,1hr,04" spots="127241289" bases="38426869278" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965327</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612915</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084226</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-04_S4_L002_R1_001.fastq.gz" size="10410895529" date="2023-03-08 03:37:13" md5="5fcf770916c0f4d8a9fef81859dc458e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721581/22131-03-04_S4_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-04_S4_L002_R2_001.fastq.gz" size="9925181729" date="2023-03-08 03:35:24" md5="b2a9c2b3c0924e666712a7f6498125d4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721581/22131-03-04_S4_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721581" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721581/SRR23721581" size="14626932596" date="2023-03-08 03:40:58" md5="df66dc9addab2e5823f56168a420cca4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721581/SRR23721581" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721581.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721581/SRR23721581.lite.1" size="9796337216" date="2023-06-16 07:52:49" md5="50e87b90e62404342c20b544936552e5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721581/SRR23721581.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721581/SRR23721581.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721581/SRR23721581.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="127241289">
+          <Read index="0" count="127241289" average="151" stdev="0"/>
+          <Read index="1" count="127241289" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="127241289"/>
+                <Elements count="38426869278"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="38426869278">
+          <Base value="A" count="13227617791"/>
+          <Base value="C" count="5843891134"/>
+          <Base value="G" count="6392233083"/>
+          <Base value="T" count="12962970034"/>
+          <Base value="N" count="157236"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582443" alias="GSM7084225_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582443</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084225_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084225: VC,Light,1hr,03; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965324">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965324</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084225</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084225</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084225" accession="SRS16965324">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965324</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612916</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084225</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,Light,1hr,03</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ambient light</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965324" sample_name="GSM7084225" sample_title="VC,Light,1hr,03" spots="356171140" bases="107563684280" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965324</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612916</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084225</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="107563684280" spots="356171140" bytes="40720859581">
+      <RUN accession="SRR23721582" alias="GSM7084225_r1" total_spots="185525148" total_bases="56028594696" size="21300620179" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721582</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084225_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582443">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084225_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965324" sample_name="GSM7084225" sample_title="VC,Light,1hr,03" spots="185525148" bases="56028594696" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965324</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612916</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084225</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-03_S3_L001_R1_001.fastq.gz" size="15120442449" date="2023-03-08 03:51:24" md5="be01023d9736619842d18c4e1b9225df" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721582/22131-03-03_S3_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-03_S3_L001_R2_001.fastq.gz" size="14418239852" date="2023-03-08 03:50:30" md5="56575e6f5625f1c3994b28fd6fc4a587" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR23721582/22131-03-03_S3_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721582" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721582/SRR23721582" size="21300622697" date="2023-03-08 03:53:32" md5="44f2a139c680ca7c387c2886b958af6b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721582/SRR23721582" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721582.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721582/SRR23721582.lite.1" size="14255391801" date="2023-06-16 08:01:00" md5="36a1737fc927cd95c8027cafa7fa4f22" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721582/SRR23721582.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721582/SRR23721582.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721582/SRR23721582.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="185525148">
+          <Read index="0" count="185525148" average="151" stdev="0"/>
+          <Read index="1" count="185525148" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="185525148"/>
+                <Elements count="56028594696"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="56028594696">
+          <Base value="A" count="19271321012"/>
+          <Base value="C" count="8451111613"/>
+          <Base value="G" count="9222369925"/>
+          <Base value="T" count="19083371828"/>
+          <Base value="N" count="420318"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721583" alias="GSM7084225_r2" total_spots="170645992" total_bases="51535089584" size="19420239402" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721583</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084225_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582443">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084225_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965324" sample_name="GSM7084225" sample_title="VC,Light,1hr,03" spots="170645992" bases="51535089584" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965324</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612916</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084225</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-03_S3_L002_R1_001.fastq.gz" size="13906948389" date="2023-03-08 03:29:15" md5="865cd31485753c4c6d6310e7a005eac9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721583/22131-03-03_S3_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-03_S3_L002_R2_001.fastq.gz" size="13080100836" date="2023-03-08 03:28:37" md5="c1f1cb6cfc9f738d2c145c6229cda385" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721583/22131-03-03_S3_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721583" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721583/SRR23721583" size="19420241919" date="2023-03-08 03:30:50" md5="2d8d611db5dea3cb46b9405daa9dc5c0" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721583/SRR23721583" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721583.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721583/SRR23721583.lite.1" size="13116609683" date="2023-06-16 07:56:32" md5="0262bf87ea17aa89fcd73c8eb636471d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721583/SRR23721583.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721583/SRR23721583.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721583/SRR23721583.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="170645992">
+          <Read index="0" count="170645992" average="151" stdev="0"/>
+          <Read index="1" count="170645992" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="170645992"/>
+                <Elements count="51535089584"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="51535089584">
+          <Base value="A" count="17758221243"/>
+          <Base value="C" count="7825462605"/>
+          <Base value="G" count="8530653907"/>
+          <Base value="T" count="17420538488"/>
+          <Base value="N" count="213341"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582442" alias="GSM7084224_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582442</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084224_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084224: VC,Light,1hr,02; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965325">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965325</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084224</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084224</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084224" accession="SRS16965325">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965325</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612917</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084224</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,Light,1hr,02</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ambient light</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965325" sample_name="GSM7084224" sample_title="VC,Light,1hr,02" spots="252183500" bases="76159417000" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965325</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612917</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084224</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="76159417000" spots="252183500" bytes="29019590390">
+      <RUN accession="SRR23721584" alias="GSM7084224_r1" total_spots="131177971" total_bases="39615747242" size="15154640788" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721584</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084224_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582442">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084224_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965325" sample_name="GSM7084224" sample_title="VC,Light,1hr,02" spots="131177971" bases="39615747242" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965325</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612917</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084224</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-02_S2_L001_R1_001.fastq.gz" size="10732978208" date="2023-03-08 03:26:01" md5="1945ececc22f0dba26ae5f3ead68e1f7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721584/22131-03-02_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-02_S2_L001_R2_001.fastq.gz" size="10334301817" date="2023-03-08 03:26:46" md5="a157576ae45e04b0c22eca2b386d0309" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721584/22131-03-02_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721584" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721584/SRR23721584" size="15154643300" date="2023-03-08 03:28:26" md5="4aadfd28fac36be2dcfc9207f12c0961" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721584/SRR23721584" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721584.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721584/SRR23721584.lite.1" size="10096545572" date="2023-06-16 08:04:34" md5="e0ff672b140a6b16fcd5f55557371b17" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721584/SRR23721584.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721584/SRR23721584.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721584/SRR23721584.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="131177971">
+          <Read index="0" count="131177971" average="151" stdev="0"/>
+          <Read index="1" count="131177971" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="131177971"/>
+                <Elements count="39615747242"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="39615747242">
+          <Base value="A" count="13527381174"/>
+          <Base value="C" count="6029500798"/>
+          <Base value="G" count="6564533476"/>
+          <Base value="T" count="13494044027"/>
+          <Base value="N" count="287767"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721585" alias="GSM7084224_r2" total_spots="121005529" total_bases="36543669758" size="13864949602" load_done="true" published="2023-06-16 06:29:05" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721585</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084224_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582442">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084224_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965325" sample_name="GSM7084224" sample_title="VC,Light,1hr,02" spots="121005529" bases="36543669758" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965325</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612917</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084224</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-02_S2_L002_R1_001.fastq.gz" size="9900996636" date="2023-03-08 02:53:30" md5="c0ac21e0754625d86a20a340b7da7288" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721585/22131-03-02_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-02_S2_L002_R2_001.fastq.gz" size="9414041612" date="2023-03-08 02:53:09" md5="a42246112373e656c89df137fb71eb41" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721585/22131-03-02_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721585" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721585/SRR23721585" size="13864952118" date="2023-03-08 02:54:19" md5="2073008489c693547393ccc505c1d570" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721585/SRR23721585" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721585.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721585/SRR23721585.lite.1" size="9316383870" date="2023-06-16 07:52:59" md5="ff22a736f4e9bf9f9309f8ac0532d2b3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721585/SRR23721585.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721585/SRR23721585.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721585/SRR23721585.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="121005529">
+          <Read index="0" count="121005529" average="151" stdev="0"/>
+          <Read index="1" count="121005529" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="121005529"/>
+                <Elements count="36543669758"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="36543669758">
+          <Base value="A" count="12500619227"/>
+          <Base value="C" count="5599429003"/>
+          <Base value="G" count="6089003084"/>
+          <Base value="T" count="12354470630"/>
+          <Base value="N" count="147814"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX19582441" alias="GSM7084223_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX19582441</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084223_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7084223: VC,Light,1hr,01; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP426001">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP426001</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA941839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS16965326">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS16965326</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7084223</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7084223</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Flash frozen right visual cortices were sent to Admera Health for tissue dissociation and extraction 10x Chromium Next GEM Single Cell 3' GEM v3.1 library preparation, 5000 cells</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Georgia Institute of Technology" accession="SRA1601712" alias="SUB12939830">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1601712</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Georgia Institute of Technology">SUB12939830</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Georgia Institute of Technology</Name>
+      <Contact email="levi.wood@me.gatech.edu">
+        <Address>
+          <Street>315 Ferst Dr NW Rm 3303</Street>
+          <City>Atlanta</City>
+          <Sub>GA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Levi</First>
+          <Last>Wood</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE226822" accession="SRP426001">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP426001</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA941839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE226822</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Brain rhythms control microglial response and cytokine expression via NFkB signaling</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Microglia, the brain's primary immune cells, transform in response to changes in sensory or neural activity, like sensory deprivation. However, little is known about how specific frequencies of neural activity, impact microglia, immune signaling, or other pathways within the brain. Here , we exposed mice to 1h of audio/visual noninvasive flickering sensory stimulation (flicker) to induce electrical neural activity at different frequencies: 40Hz within the gamma band and 20Hz within the beta band. We then isolated RNA from the visual cortices and used bulk RNAseq to quantify pathway changes. Overall design: Wild-type male mice, right visual cortices. Three experimental groups: ambient light control, 20Hz audiovisual flicker, and 40Hz audiovisual flicker (1hr, n=4)</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE226822</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37556553</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7084223" accession="SRS16965326">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16965326</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33612918</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7084223</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VC,Light,1hr,01</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>941839</ID>
+            <LABEL>PRJNA941839</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Visual Cortex, Right Hemisphere</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2mo</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ambient light</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>duration</TAG>
+          <VALUE>1hr</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS16965326" sample_name="GSM7084223" sample_title="VC,Light,1hr,01" spots="239583487" bases="72354213074" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS16965326</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN33612918</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084223</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="72354213074" spots="239583487" bytes="27521574741">
+      <RUN accession="SRR23721586" alias="GSM7084223_r1" total_spots="124588557" total_bases="37625744214" size="14372212505" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721586</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084223_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582441">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084223_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965326" sample_name="GSM7084223" sample_title="VC,Light,1hr,01" spots="124588557" bases="37625744214" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965326</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612918</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084223</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-01_S1_L001_R1_001.fastq.gz" size="10170461765" date="2023-03-08 03:12:02" md5="50ffa3e07b40a810e67ff1dc9a32c8bd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721586/22131-03-01_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-01_S1_L001_R2_001.fastq.gz" size="9779968811" date="2023-03-08 03:11:30" md5="c2136ea66aef3a7068736f16183a497c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721586/22131-03-01_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721586" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721586/SRR23721586" size="14372215025" date="2023-03-08 03:13:52" md5="b5ee9fa738e479eed6beac1e9fe81b06" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721586/SRR23721586" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721586.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721586/SRR23721586.lite.1" size="9597349749" date="2023-06-16 07:53:45" md5="6a23bb574de14a55d75bccca0e4d6e55" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721586/SRR23721586.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721586/SRR23721586.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721586/SRR23721586.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="124588557">
+          <Read index="0" count="124588557" average="151" stdev="0"/>
+          <Read index="1" count="124588557" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="124588557"/>
+                <Elements count="37625744214"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="37625744214">
+          <Base value="A" count="12982549438"/>
+          <Base value="C" count="5662654802"/>
+          <Base value="G" count="6203110109"/>
+          <Base value="T" count="12777152271"/>
+          <Base value="N" count="277594"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR23721587" alias="GSM7084223_r2" total_spots="114994930" total_bases="34728468860" size="13149362236" load_done="true" published="2023-06-16 06:29:04" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR23721587</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7084223_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX19582441">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7084223_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS16965326" sample_name="GSM7084223" sample_title="VC,Light,1hr,01" spots="114994930" bases="34728468860" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS16965326</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN33612918</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7084223</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="22131-03-01_S1_L002_R1_001.fastq.gz" size="9381217634" date="2023-03-08 03:28:31" md5="7e31f89175812fe85d0c8694b9ac76be" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721587/22131-03-01_S1_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="22131-03-01_S1_L002_R2_001.fastq.gz" size="8903817630" date="2023-03-08 03:27:55" md5="7055fe44610cb69433f55439d6af2a89" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-17/SRR23721587/22131-03-01_S1_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721587" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721587/SRR23721587" size="13149364751" date="2023-03-08 03:29:57" md5="e256c3e8e968ee142daa01bb1c1e46c4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23721587/SRR23721587" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR23721587.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721587/SRR23721587.lite.1" size="8857622679" date="2023-06-16 07:56:32" md5="77379ac18c86c5ac08405458fb7ec147" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR023/23721/SRR23721587/SRR23721587.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR23721587/SRR23721587.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR23721587/SRR23721587.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="114994930">
+          <Read index="0" count="114994930" average="151" stdev="0"/>
+          <Read index="1" count="114994930" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="114994930"/>
+                <Elements count="34728468860"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34728468860">
+          <Base value="A" count="12000591913"/>
+          <Base value="C" count="5262501941"/>
+          <Base value="G" count="5758121550"/>
+          <Base value="T" count="11707111202"/>
+          <Base value="N" count="142254"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

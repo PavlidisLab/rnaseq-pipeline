@@ -1,5 +1,4 @@
 import logging
-import logging
 import os
 import os.path
 import pickle
@@ -15,7 +14,7 @@ from pkg_resources import resource_filename
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 CREDENTIALS_FILE = resource_filename('rnaseq_pipeline', 'credentials.json')
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
 
 def _authenticate():
     # authentication
@@ -41,7 +40,7 @@ def _authenticate():
             logger.info(f'Created Google Sheets API token under {token_path}.')
     return creds
 
-def retrieve_spreadsheet(spreadsheet_id, sheet_name):
+def retrieve_spreadsheet(spreadsheet_id: str, sheet_name: str):
     service = build('sheets', 'v4', credentials=_authenticate(), cache_discovery=None)
 
     # Retrieve the documents contents from the Docs service.

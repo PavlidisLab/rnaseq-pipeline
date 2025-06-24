@@ -9,9 +9,12 @@ from luigi.util import requires
 
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
+from ..config import rnaseq_pipeline
 from ..gemma import GemmaApi
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
+
+cfg = rnaseq_pipeline()
 
 class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
@@ -20,7 +23,7 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     Gemma itself does not retain raw data, so this task delegates the work to
     other sources.
     """
-    experiment_id = luigi.Parameter()
+    experiment_id: str = luigi.Parameter()
 
     def __init__(self, *kwargs, **kwds):
         super().__init__(*kwargs, **kwds)
@@ -46,6 +49,8 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
 
 @requires(DownloadGemmaExperiment)
 class ExtractGemmaExperimentBatchInfo(luigi.Task):
+    experiment_id: str
+
     def run(self):
         with self.output().open('w') as info_out:
             for sample in self.requires().requires():
@@ -75,4 +80,4 @@ class ExtractGemmaExperimentBatchInfo(luigi.Task):
                     info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
-        return luigi.LocalTarget(join(cfg.output_dir, 'fastq_headers', '{}.fastq-header'.format(self.experiment_id)))
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'fastq_headers', '{}.fastq-header'.format(self.experiment_id)))

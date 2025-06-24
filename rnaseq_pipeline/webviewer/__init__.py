@@ -1,4 +1,3 @@
-from os.path import basename, getctime, join, dirname
 import datetime
 from glob import glob
 from os.path import basename, getctime, join, dirname

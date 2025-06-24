@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM3576734" accession="SRX5284012">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX5284012</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM3576734: ESC timecourse_0-72hours; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP181689">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP181689</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA516696</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS4283730">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+            <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>RNA was purified and proccessed for indrop according to the protocol from Klein et al (Cell, 2015, doi:10.1016/j.cell.2015.04.044) RNA libraries were prepared for sequencing by the indrop core facility at Harvard Medical School. We used library version v3 where R1 is the biological read. R2 carries the first half of the gel barcode, R3 carries the library index and R4 the second half of the gel barcode, the UMI and a fraction of the polyA tail. Library index for LIB1 (ESC 0hr) is:ATAGAGAG , LIB2 (ESC 24hr) is: AGAGGATA, LIB3 (ESC 48hr) is:CTCCTTAC and LIB4 (ESC 72hr) is TATGCAGT.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>303576734</ID>
+            <LABEL>GSM3576734</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM3576734</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE125536" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA838328">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA838328</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE125536</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE125536" accession="SRP181689">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP181689</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA516696</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE125536</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Generation of chemically induced totipotent cells through multi-parametric analysis of single-cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Other"/>
+        <STUDY_ABSTRACT>Pluripotent stem cells fluctuate among distinct functional cell states. Such heterogeneity undermines the potential applications of stem cells in regenerative medicine. The heterogeneity of pluripotent cell states and their molecular nature remain less understood. Here, we utilized mass cytometry to dissect pluripotent cell states by simultaneously profiling multiple proteins and their modifications in single cells. Results indicated the role of extensive signaling cross-talk among multiple pathways in regulating cell state heterogeneity. By systematically dissecting the signals and their combinations, we identify conditions through which large portions of pluripotent cells can be chemically reprogrammed into totipotent cells which can be cultured. Unlike pluripotent cells, these chemically induced totipotent cells (CiTC) give rise to both embryonic and extra-embryonic cell types. In addition, CiTCs are molecularly distinct from pluripotent cells. CiTCs provide an in-vitro model to understand the nature of totipotent cells and the plasticity of pluripotent cells. Our quantitative and integrative approach provides general method to understand similar heterogenous cell systems such as cancer. Overall design: Single-cell RNA-sequencing of a time-course of embryonic stem cells (ESC) under cell culture conditions to induce the totipotent-like cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE125536</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM3576734" accession="SRS4283730">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>ESC timecourse_0-72hours</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>516696</ID>
+            <LABEL>PRJNA516696</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Embryonic Stem Cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>ESC</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>totipotent culture conditions</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>mixed sample (non-demultiplexed) representing timepoints 0h, 24h, 48h, 72h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS4283730" sample_name="GSM3576734" sample_title="ESC timecourse_0-72hours" spots="472428975" bases="42783393895" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="4" bases="42783393895" spots="472428975" bytes="21088310076">
+      <RUN alias="GSM3576734_r1" accession="SRR8479162" total_spots="117127804" total_bases="10607339037" size="5246859560" load_done="true" published="2024-03-01 16:35:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR8479162</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM3576734_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX5284012" refname="GSM3576734"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--platform=Illumina --readTypes=BTTT --read1PairFiles=SUB05757_S1_L001_R1_001.fastq.gz --read2PairFiles=SUB05757_S1_L001_R2_001.fastq.gz --read3PairFiles=SUB05757_S1_L001_R3_001.fastq.gz --read4PairFiles=SUB05757_S1_L001_R4_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS4283730" sample_name="GSM3576734" sample_title="ESC timecourse_0-72hours" spots="117127804" bases="10607339037" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR8479162.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479162/SRR8479162.lite.1" size="2969625105" date="2023-02-04 15:09:05" md5="44d60b10a0bfb7b0e8f66a9dcced703b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479162/SRR8479162.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR8479162/SRR8479162.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR8479162/SRR8479162.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR8479162" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479162/SRR8479162" size="5246862065" date="2019-02-01 03:20:58" md5="32dc52ffb51c372d070ac40141d82d4d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479162/SRR8479162" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="117127804">
+          <Read index="0" count="117127679" average="60.56" stdev="0.60"/>
+          <Read index="1" count="117127804" average="8.00" stdev="0.01"/>
+          <Read index="2" count="117127804" average="8" stdev="0"/>
+          <Read index="3" count="117127804" average="14" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="117127804"/>
+                <Elements count="10607339037"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10607339037">
+          <Base value="A" count="2821723082"/>
+          <Base value="C" count="2550336403"/>
+          <Base value="G" count="2854626367"/>
+          <Base value="T" count="2379987805"/>
+          <Base value="N" count="665380"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM3576734_r2" accession="SRR8479163" total_spots="116855228" total_bases="10582390961" size="5220519590" load_done="true" published="2024-03-01 16:35:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR8479163</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM3576734_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX5284012" refname="GSM3576734"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--platform=Illumina --readTypes=BTTT --read1PairFiles=SUB05757_S1_L002_R1_001.fastq.gz --read2PairFiles=SUB05757_S1_L002_R2_001.fastq.gz --read3PairFiles=SUB05757_S1_L002_R3_001.fastq.gz --read4PairFiles=SUB05757_S1_L002_R4_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS4283730" sample_name="GSM3576734" sample_title="ESC timecourse_0-72hours" spots="116855228" bases="10582390961" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR8479163.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479163/SRR8479163.lite.1" size="2962853680" date="2023-02-04 15:12:37" md5="9d71357151b54737bd63c389d0ca4550" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479163/SRR8479163.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR8479163/SRR8479163.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR8479163/SRR8479163.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR8479163" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479163/SRR8479163" size="5220522088" date="2019-02-01 03:06:30" md5="9188774abda33898cb349e6e28c33e2d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479163/SRR8479163" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="116855228">
+          <Read index="0" count="116855179" average="60.56" stdev="0.61"/>
+          <Read index="1" count="116855228" average="8.00" stdev="0.01"/>
+          <Read index="2" count="116855228" average="8" stdev="0"/>
+          <Read index="3" count="116855228" average="14" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="116855228"/>
+                <Elements count="10582390961"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10582390961">
+          <Base value="A" count="2811942324"/>
+          <Base value="C" count="2518941824"/>
+          <Base value="G" count="2884321384"/>
+          <Base value="T" count="2366620662"/>
+          <Base value="N" count="564767"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM3576734_r3" accession="SRR8479164" total_spots="118836698" total_bases="10761879047" size="5283419602" load_done="true" published="2024-03-01 16:35:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR8479164</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM3576734_r3</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX5284012" refname="GSM3576734"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--platform=Illumina --readTypes=BTTT --read1PairFiles=SUB05757_S1_L003_R1_001.fastq.gz --read2PairFiles=SUB05757_S1_L003_R2_001.fastq.gz --read3PairFiles=SUB05757_S1_L003_R3_001.fastq.gz --read4PairFiles=SUB05757_S1_L003_R4_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS4283730" sample_name="GSM3576734" sample_title="ESC timecourse_0-72hours" spots="118836698" bases="10761879047" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR8479164.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479164/SRR8479164.lite.1" size="3013198831" date="2023-02-04 15:10:12" md5="8cd6f11f52ac9b616cdc09a41553e52a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479164/SRR8479164.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR8479164/SRR8479164.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR8479164/SRR8479164.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR8479164" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479164/SRR8479164" size="5283422107" date="2019-02-01 03:43:33" md5="00f906e88fcd200dc010607adc0db0af" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479164/SRR8479164" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="118836698">
+          <Read index="0" count="118836596" average="60.56" stdev="0.61"/>
+          <Read index="1" count="118836698" average="8.00" stdev="0.01"/>
+          <Read index="2" count="118836698" average="8" stdev="0"/>
+          <Read index="3" count="118836698" average="14" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="118836698"/>
+                <Elements count="10761879047"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10761879047">
+          <Base value="A" count="2879213440"/>
+          <Base value="C" count="2572908557"/>
+          <Base value="G" count="2891661539"/>
+          <Base value="T" count="2417728281"/>
+          <Base value="N" count="367230"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM3576734_r4" accession="SRR8479165" total_spots="119609245" total_bases="10831784850" size="5337511324" load_done="true" published="2024-03-01 16:35:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR8479165</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM3576734_r4</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX5284012" refname="GSM3576734"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--platform=Illumina --readTypes=BTTT --read1PairFiles=SUB05757_S1_L004_R1_001.fastq.gz --read2PairFiles=SUB05757_S1_L004_R2_001.fastq.gz --read3PairFiles=SUB05757_S1_L004_R3_001.fastq.gz --read4PairFiles=SUB05757_S1_L004_R4_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS4283730" sample_name="GSM3576734" sample_title="ESC timecourse_0-72hours" spots="119609245" bases="10831784850" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS4283730</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN10794338</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM3576734</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR8479165.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479165/SRR8479165.lite.1" size="3032699520" date="2023-02-04 15:11:05" md5="840a9c2a1b4af89318b6e5bb71590915" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR008/8479/SRR8479165/SRR8479165.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR8479165/SRR8479165.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-104/SRR8479165/SRR8479165.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR8479165" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479165/SRR8479165" size="5337513824" date="2019-02-01 05:10:29" md5="c6dcaa8be068f3956877fc652895edd6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8479165/SRR8479165" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="119609245">
+          <Read index="0" count="119609214" average="60.56" stdev="0.61"/>
+          <Read index="1" count="119609245" average="8.00" stdev="0.01"/>
+          <Read index="2" count="119609245" average="8" stdev="0"/>
+          <Read index="3" count="119609245" average="14" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="119609245"/>
+                <Elements count="10831784850"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10831784850">
+          <Base value="A" count="2880361828"/>
+          <Base value="C" count="2583016691"/>
+          <Base value="G" count="2947420137"/>
+          <Base value="T" count="2420621953"/>
+          <Base value="N" count="364241"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

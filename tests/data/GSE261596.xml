@@ -1,0 +1,2608 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952937" alias="GSM8147278_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952937</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147278_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147278: S12, Hippocampus, wild-type, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753432">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753432</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147278</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147278</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147278" accession="SRS20753432">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753432</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460212</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147278</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S12, Hippocampus, wild-type, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753432" sample_name="GSM8147278" sample_title="S12, Hippocampus, wild-type, 12m" spots="553784552" bases="65346577136" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753432</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460212</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147278</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="65346577136" spots="553784552" bytes="20558557471">
+      <RUN accession="SRR28346414" alias="GSM8147278_r1" total_spots="553784552" total_bases="65346577136" size="20558557471" load_done="true" published="2025-02-24 14:42:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346414</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147278_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952937">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147278_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753432" sample_name="GSM8147278" sample_title="S12, Hippocampus, wild-type, 12m" spots="553784552" bases="65346577136" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753432</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460212</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147278</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta12_S12_R1_001.fastq.gz" size="11337369543" date="2024-03-14 13:55:42" md5="a401685f32c4261dee8925f7fde7b7ce" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346414/Ta12_S12_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta12_S12_R2_001.fastq.gz" size="26800601062" date="2024-03-14 13:56:42" md5="d4004d014ca564eb748816efc9ba07fa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346414/Ta12_S12_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346414" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346414/SRR28346414" size="20558559690" date="2024-03-14 14:00:58" md5="9e69495c85b5588acceaeb73303fa2fc" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346414/SRR28346414" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346414.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346414/SRR28346414.lite.1" size="16944519078" date="2024-03-14 14:33:54" md5="096bd4e911d584a0ff45c6893d6c6da9" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346414/SRR28346414.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346414/SRR28346414.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346414/SRR28346414.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="553784552">
+          <Read index="0" count="553784552" average="28" stdev="0"/>
+          <Read index="1" count="553784552" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="553784552"/>
+                <Elements count="65346577136"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="65346577136">
+          <Base value="A" count="18536119125"/>
+          <Base value="C" count="14173662437"/>
+          <Base value="G" count="15044348889"/>
+          <Base value="T" count="17591356579"/>
+          <Base value="N" count="1090106"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952936" alias="GSM8147277_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952936</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147277_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147277: S11, Hippocampus, wild-type, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753431">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753431</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147277</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147277</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147277" accession="SRS20753431">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753431</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460213</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147277</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S11, Hippocampus, wild-type, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753431" sample_name="GSM8147277" sample_title="S11, Hippocampus, wild-type, 6m" spots="481512188" bases="56818438184" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753431</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460213</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147277</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="56818438184" spots="481512188" bytes="17692043246">
+      <RUN accession="SRR28346415" alias="GSM8147277_r1" total_spots="481512188" total_bases="56818438184" size="17692043246" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346415</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147277_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952936">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147277_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753431" sample_name="GSM8147277" sample_title="S11, Hippocampus, wild-type, 6m" spots="481512188" bases="56818438184" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753431</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460213</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147277</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR28346415.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346415/SRR28346415.lite.1" size="14761101052" date="2024-03-14 14:34:15" md5="220e4c589e3063340f7faece27c3ed74" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346415/SRR28346415.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346415/SRR28346415.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346415/SRR28346415.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346415" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346415/SRR28346415" size="17692045468" date="2024-03-14 13:59:28" md5="a8c2497fc9e9c38afca9dc25c55ea117" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346415/SRR28346415" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta11_S11_R2_001.fastq.gz" size="22993191456" date="2024-03-14 13:56:26" md5="34bf1d027c76bb24407c00a3dc2a6836" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346415/Ta11_S11_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta11_S11_R1_001.fastq.gz" size="9860010034" date="2024-03-14 13:55:35" md5="468e9a66097c4e1ff690585476b80f9b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346415/Ta11_S11_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="481512188">
+          <Read index="0" count="481512188" average="28" stdev="0"/>
+          <Read index="1" count="481512188" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="481512188"/>
+                <Elements count="56818438184"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="56818438184">
+          <Base value="A" count="16174315385"/>
+          <Base value="C" count="12271520167"/>
+          <Base value="G" count="13103903530"/>
+          <Base value="T" count="15267754905"/>
+          <Base value="N" count="944197"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952935" alias="GSM8147275_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952935</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147275_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147275: S10, Hippocampus, 3xTg-AD, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753430">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753430</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147275</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147275</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147275" accession="SRS20753430">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753430</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460214</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147275</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S10, Hippocampus, 3xTg-AD, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753430" sample_name="GSM8147275" sample_title="S10, Hippocampus, 3xTg-AD, 12m" spots="564529648" bases="66614498464" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753430</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460214</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147275</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="66614498464" spots="564529648" bytes="21184858286">
+      <RUN accession="SRR28346416" alias="GSM8147275_r1" total_spots="564529648" total_bases="66614498464" size="21184858286" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346416</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147275_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952935">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147275_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753430" sample_name="GSM8147275" sample_title="S10, Hippocampus, 3xTg-AD, 12m" spots="564529648" bases="66614498464" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753430</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460214</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147275</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta10_S10_R1_001.fastq.gz" size="11527940986" date="2024-03-14 14:23:22" md5="a28b6be52f5a69a017ff11814163afba" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346416/Ta10_S10_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta10_S10_R2_001.fastq.gz" size="27623186490" date="2024-03-14 14:24:13" md5="5224b3e42850055901e2f562f2fd818c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346416/Ta10_S10_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346416" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346416/SRR28346416" size="21184860507" date="2024-03-14 14:28:36" md5="5b08c78450484928a53fb2bc84f51df8" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346416/SRR28346416" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346416.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346416/SRR28346416.lite.1" size="17275752435" date="2024-03-14 17:05:14" md5="ffc7982f4b932ece6b3313a7108b07d7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346416/SRR28346416.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346416/SRR28346416.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346416/SRR28346416.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="564529648">
+          <Read index="0" count="564529648" average="28" stdev="0"/>
+          <Read index="1" count="564529648" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="564529648"/>
+                <Elements count="66614498464"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="66614498464">
+          <Base value="A" count="19104921652"/>
+          <Base value="C" count="14344461558"/>
+          <Base value="G" count="15167194555"/>
+          <Base value="T" count="17996812811"/>
+          <Base value="N" count="1107888"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952934" alias="GSM8147274_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952934</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147274_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147274: S9, Hippocampus, 3xTg-AD, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753429">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753429</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147274</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147274</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147274" accession="SRS20753429">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753429</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460215</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147274</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S9, Hippocampus, 3xTg-AD, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753429" sample_name="GSM8147274" sample_title="S9, Hippocampus, 3xTg-AD, 6m" spots="577038616" bases="68090556688" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753429</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460215</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147274</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="68090556688" spots="577038616" bytes="21385776627">
+      <RUN accession="SRR28346417" alias="GSM8147274_r1" total_spots="577038616" total_bases="68090556688" size="21385776627" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346417</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147274_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952934">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147274_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753429" sample_name="GSM8147274" sample_title="S9, Hippocampus, 3xTg-AD, 6m" spots="577038616" bases="68090556688" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753429</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460215</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147274</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta9_S9_R1_001.fastq.gz" size="11793827774" date="2024-03-14 14:04:56" md5="10c784cce2a9e5b7b7ba25c35e817f5a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346417/Ta9_S9_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta9_S9_R2_001.fastq.gz" size="27885622108" date="2024-03-14 14:06:34" md5="527b4e04efafa6ecec1ed0fdb93a35ab" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346417/Ta9_S9_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346417" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346417/SRR28346417" size="21385778851" date="2024-03-14 14:11:46" md5="3b4f624bf61be02c6cfefe54eb335a42" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346417/SRR28346417" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346417.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346417/SRR28346417.lite.1" size="17649135939" date="2024-03-14 14:35:37" md5="477c91783dd31f064f722f057540a85e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346417/SRR28346417.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346417/SRR28346417.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346417/SRR28346417.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="577038616">
+          <Read index="0" count="577038616" average="28" stdev="0"/>
+          <Read index="1" count="577038616" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="577038616"/>
+                <Elements count="68090556688"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="68090556688">
+          <Base value="A" count="19550650912"/>
+          <Base value="C" count="14654058116"/>
+          <Base value="G" count="15457952366"/>
+          <Base value="T" count="18426763835"/>
+          <Base value="N" count="1131459"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952933" alias="GSM8147273_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952933</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147273_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147273: S8, Hippocampus, wild-type, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753428">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753428</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147273</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147273</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147273" accession="SRS20753428">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753428</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460216</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147273</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S8, Hippocampus, wild-type, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753428" sample_name="GSM8147273" sample_title="S8, Hippocampus, wild-type, 12m" spots="399039308" bases="47086638344" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753428</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460216</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147273</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="47086638344" spots="399039308" bytes="14746125703">
+      <RUN accession="SRR28346418" alias="GSM8147273_r1" total_spots="399039308" total_bases="47086638344" size="14746125703" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346418</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147273_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952933">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147273_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753428" sample_name="GSM8147273" sample_title="S8, Hippocampus, wild-type, 12m" spots="399039308" bases="47086638344" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753428</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460216</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147273</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta8_S8_R1_001.fastq.gz" size="8182777632" date="2024-03-14 14:05:44" md5="11f180c04fe7adee9211bd7bab284848" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346418/Ta8_S8_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta8_S8_R2_001.fastq.gz" size="19267483392" date="2024-03-14 14:10:17" md5="96cb9ac55966e17af0f97e9f30b89fd7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346418/Ta8_S8_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346418" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346418/SRR28346418" size="14746127926" date="2024-03-14 14:14:43" md5="0f3e1ae28ad43323119f172feea9f534" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346418/SRR28346418" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346418.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346418/SRR28346418.lite.1" size="12251478274" date="2024-03-14 14:34:13" md5="649933e8ed35ecc1d3ffa5114c466ddb" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346418/SRR28346418.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346418/SRR28346418.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346418/SRR28346418.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="399039308">
+          <Read index="0" count="399039308" average="28" stdev="0"/>
+          <Read index="1" count="399039308" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="399039308"/>
+                <Elements count="47086638344"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="47086638344">
+          <Base value="A" count="13313463756"/>
+          <Base value="C" count="10258539097"/>
+          <Base value="G" count="10804088586"/>
+          <Base value="T" count="12709763231"/>
+          <Base value="N" count="783674"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952932" alias="GSM8147272_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952932</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147272_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147272: S7, Hippocampus, wild-type, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753426">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753426</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147272</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147272</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147272" accession="SRS20753426">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753426</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460217</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147272</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S7, Hippocampus, wild-type, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753426" sample_name="GSM8147272" sample_title="S7, Hippocampus, wild-type, 6m" spots="462556517" bases="54581669006" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753426</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460217</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147272</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="54581669006" spots="462556517" bytes="17335083364">
+      <RUN accession="SRR28346419" alias="GSM8147272_r1" total_spots="462556517" total_bases="54581669006" size="17335083364" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346419</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147272_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952932">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147272_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753426" sample_name="GSM8147272" sample_title="S7, Hippocampus, wild-type, 6m" spots="462556517" bases="54581669006" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753426</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460217</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147272</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta7_S7_R1_001.fastq.gz" size="9446447440" date="2024-03-14 14:12:02" md5="b2e075fec388175f6e2f14da2ac3e1ec" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346419/Ta7_S7_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta7_S7_R2_001.fastq.gz" size="22650496520" date="2024-03-14 14:13:19" md5="58f5fbe9a967cc63735ddbc218e93c3d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346419/Ta7_S7_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346419" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346419/SRR28346419" size="17335085582" date="2024-03-14 14:17:48" md5="b99b9d2b0b15ac132e73574b0eac4a98" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346419/SRR28346419" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346419.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346419/SRR28346419.lite.1" size="14178364594" date="2024-03-14 14:31:42" md5="5de851272ccc2c3948446f649c1fadcd" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346419/SRR28346419.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346419/SRR28346419.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346419/SRR28346419.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="462556517">
+          <Read index="0" count="462556517" average="28" stdev="0"/>
+          <Read index="1" count="462556517" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="462556517"/>
+                <Elements count="54581669006"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="54581669006">
+          <Base value="A" count="15671100549"/>
+          <Base value="C" count="11725257461"/>
+          <Base value="G" count="12421148822"/>
+          <Base value="T" count="14763253204"/>
+          <Base value="N" count="908970"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952931" alias="GSM8147271_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952931</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147271_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147271: S6, Hippocampus, 3xTg-AD, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753427">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753427</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147271</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147271</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147271" accession="SRS20753427">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753427</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460218</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147271</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S6, Hippocampus, 3xTg-AD, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753427" sample_name="GSM8147271" sample_title="S6, Hippocampus, 3xTg-AD, 12m" spots="484032045" bases="57115781310" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753427</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460218</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147271</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="57115781310" spots="484032045" bytes="17864854154">
+      <RUN accession="SRR28346420" alias="GSM8147271_r1" total_spots="484032045" total_bases="57115781310" size="17864854154" load_done="true" published="2025-02-24 14:42:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346420</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147271_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952931">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147271_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753427" sample_name="GSM8147271" sample_title="S6, Hippocampus, 3xTg-AD, 12m" spots="484032045" bases="57115781310" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753427</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460218</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147271</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR28346420.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346420/SRR28346420.lite.1" size="14839508063" date="2024-03-14 14:34:13" md5="7e55844d776c07c09f117a7437b9faaf" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346420/SRR28346420.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346420/SRR28346420.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346420/SRR28346420.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346420" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346420/SRR28346420" size="17864856379" date="2024-03-14 13:53:20" md5="6b6a5d4f8cf5e1bcf66e049192a58198" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346420/SRR28346420" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta6_S6_R2_001.fastq.gz" size="23239636644" date="2024-03-14 13:50:40" md5="95d1fb15020c6cb25d6c9483417f1909" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346420/Ta6_S6_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta6_S6_R1_001.fastq.gz" size="9889007325" date="2024-03-14 13:49:58" md5="8dc9fdd0cdc626d0125b0f10a8736a09" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346420/Ta6_S6_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="484032045">
+          <Read index="0" count="484032045" average="28" stdev="0"/>
+          <Read index="1" count="484032045" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="484032045"/>
+                <Elements count="57115781310"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="57115781310">
+          <Base value="A" count="16390399960"/>
+          <Base value="C" count="12289521017"/>
+          <Base value="G" count="13014569592"/>
+          <Base value="T" count="15420339396"/>
+          <Base value="N" count="951345"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952930" alias="GSM8147270_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952930</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147270_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147270: S5, Hippocampus, 3xTg-AD, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753425">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753425</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147270</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147270</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147270" accession="SRS20753425">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753425</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460219</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147270</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S5, Hippocampus, 3xTg-AD, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753425" sample_name="GSM8147270" sample_title="S5, Hippocampus, 3xTg-AD, 6m" spots="483903915" bases="57100661970" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753425</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460219</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147270</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="57100661970" spots="483903915" bytes="18165691597">
+      <RUN accession="SRR28346421" alias="GSM8147270_r1" total_spots="483903915" total_bases="57100661970" size="18165691597" load_done="true" published="2025-02-24 14:42:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346421</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147270_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952930">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147270_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753425" sample_name="GSM8147270" sample_title="S5, Hippocampus, 3xTg-AD, 6m" spots="483903915" bases="57100661970" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753425</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460219</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147270</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta5_S5_R1_001.fastq.gz" size="9944245513" date="2024-03-14 14:14:29" md5="0e1364e3fa5187640c8822b5346194cc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346421/Ta5_S5_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta5_S5_R2_001.fastq.gz" size="23602026063" date="2024-03-14 14:16:00" md5="4d7506e85b8de820117e8d5d29ec60c4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346421/Ta5_S5_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346421" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346421/SRR28346421" size="18165693816" date="2024-03-14 14:20:31" md5="8b354f4d618d7874d7d9e18a69530fe1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346421/SRR28346421" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346421.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346421/SRR28346421.lite.1" size="14851664132" date="2024-03-14 14:33:39" md5="90d9e972f16b742ded7c190b062b0c86" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346421/SRR28346421.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346421/SRR28346421.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346421/SRR28346421.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="483903915">
+          <Read index="0" count="483903915" average="28" stdev="0"/>
+          <Read index="1" count="483903915" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="483903915"/>
+                <Elements count="57100661970"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="57100661970">
+          <Base value="A" count="16234029784"/>
+          <Base value="C" count="12387006853"/>
+          <Base value="G" count="13084892715"/>
+          <Base value="T" count="15393790706"/>
+          <Base value="N" count="941912"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952929" alias="GSM8147269_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952929</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147269_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147269: S4, Hippocampus, wild-type, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753424">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753424</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147269</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147269</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147269" accession="SRS20753424">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753424</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460220</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147269</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S4, Hippocampus, wild-type, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753424" sample_name="GSM8147269" sample_title="S4, Hippocampus, wild-type, 12m" spots="497562111" bases="58712329098" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753424</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460220</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147269</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="58712329098" spots="497562111" bytes="18253865665">
+      <RUN accession="SRR28346422" alias="GSM8147269_r1" total_spots="497562111" total_bases="58712329098" size="18253865665" load_done="true" published="2025-02-24 14:42:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346422</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147269_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952929">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147269_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753424" sample_name="GSM8147269" sample_title="S4, Hippocampus, wild-type, 12m" spots="497562111" bases="58712329098" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753424</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460220</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147269</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta4_S4_R1_001.fastq.gz" size="10187966787" date="2024-03-14 14:36:34" md5="21d5410cc6a8aa8e6b77081e9c876a4b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346422/Ta4_S4_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta4_S4_R2_001.fastq.gz" size="23682000888" date="2024-03-14 14:42:13" md5="dc11e46b2fdcb6d8f0dce908f311cf22" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346422/Ta4_S4_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346422" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346422/SRR28346422" size="18253867890" date="2024-03-14 14:49:12" md5="9f7ad673ce9773d5a54bb038f33f6b47" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346422/SRR28346422" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346422.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346422/SRR28346422.lite.1" size="15254893086" date="2024-03-14 17:00:20" md5="f7ad9de44b750391a5468b0e8dd35177" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346422/SRR28346422.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346422/SRR28346422.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346422/SRR28346422.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="497562111">
+          <Read index="0" count="497562111" average="28" stdev="0"/>
+          <Read index="1" count="497562111" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="497562111"/>
+                <Elements count="58712329098"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="58712329098">
+          <Base value="A" count="16802024864"/>
+          <Base value="C" count="12609515715"/>
+          <Base value="G" count="13360751389"/>
+          <Base value="T" count="15939065244"/>
+          <Base value="N" count="971886"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952928" alias="GSM8147268_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952928</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147268_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147268: S3, Hippocampus, wild-type, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753423">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753423</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147268</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147268</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147268" accession="SRS20753423">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753423</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460221</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S3, Hippocampus, wild-type, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild-type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753423" sample_name="GSM8147268" sample_title="S3, Hippocampus, wild-type, 6m" spots="523238169" bases="61742103942" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753423</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460221</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="61742103942" spots="523238169" bytes="19128715523">
+      <RUN accession="SRR28346423" alias="GSM8147268_r1" total_spots="523238169" total_bases="61742103942" size="19128715523" load_done="true" published="2025-02-24 14:42:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346423</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147268_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952928">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147268_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753423" sample_name="GSM8147268" sample_title="S3, Hippocampus, wild-type, 6m" spots="523238169" bases="61742103942" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753423</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460221</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147268</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta3_S3_R1_001.fastq.gz" size="10855656359" date="2024-03-14 14:48:26" md5="47d145293526d82b190b1ebcd088649c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346423/Ta3_S3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta3_S3_R2_001.fastq.gz" size="24786996395" date="2024-03-14 14:55:53" md5="8cb72795388a92dbb0d46c61cdc12270" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346423/Ta3_S3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346423" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346423/SRR28346423" size="19128717745" date="2024-03-14 15:13:22" md5="be927ea72a79191bce0ddbae9aec0a53" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346423/SRR28346423" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346423.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346423/SRR28346423.lite.1" size="16031600169" date="2024-03-14 17:01:30" md5="fe23414399d9e8558b713d1144961b47" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346423/SRR28346423.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346423/SRR28346423.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346423/SRR28346423.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="523238169">
+          <Read index="0" count="523238169" average="28" stdev="0"/>
+          <Read index="1" count="523238169" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="523238169"/>
+                <Elements count="61742103942"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="61742103942">
+          <Base value="A" count="17753364776"/>
+          <Base value="C" count="13241252969"/>
+          <Base value="G" count="14024996546"/>
+          <Base value="T" count="16721466631"/>
+          <Base value="N" count="1023020"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952927" alias="GSM8147267_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952927</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147267_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147267: S2, Hippocampus, 3xTg-AD, 12m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753422">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753422</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147267</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147267</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147267" accession="SRS20753422">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753422</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460222</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147267</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S2, Hippocampus, 3xTg-AD, 12m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>12 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753422" sample_name="GSM8147267" sample_title="S2, Hippocampus, 3xTg-AD, 12m" spots="530435522" bases="62591391596" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753422</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460222</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147267</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="62591391596" spots="530435522" bytes="19599818015">
+      <RUN accession="SRR28346424" alias="GSM8147267_r1" total_spots="530435522" total_bases="62591391596" size="19599818015" load_done="true" published="2025-02-24 14:42:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346424</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147267_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952927">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147267_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753422" sample_name="GSM8147267" sample_title="S2, Hippocampus, 3xTg-AD, 12m" spots="530435522" bases="62591391596" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753422</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460222</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147267</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta2_S2_R1_001.fastq.gz" size="10868911389" date="2024-03-14 13:55:00" md5="b252365abbdc3f7d74811ec4d02ba4c7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346424/Ta2_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta2_S2_R2_001.fastq.gz" size="25474590213" date="2024-03-14 13:56:21" md5="faf3e66a5913596b844c3662cf71ed35" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346424/Ta2_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346424" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346424/SRR28346424" size="19599820235" date="2024-03-14 14:00:53" md5="8a94dc98fdd6ba397fb8b16e2df88a46" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346424/SRR28346424" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346424.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346424/SRR28346424.lite.1" size="16237278055" date="2024-03-14 14:34:51" md5="4af7820a22a76940aef4819ca95695d6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346424/SRR28346424.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346424/SRR28346424.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346424/SRR28346424.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="530435522">
+          <Read index="0" count="530435522" average="28" stdev="0"/>
+          <Read index="1" count="530435522" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="530435522"/>
+                <Elements count="62591391596"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62591391596">
+          <Base value="A" count="17960408939"/>
+          <Base value="C" count="13414556909"/>
+          <Base value="G" count="14130614349"/>
+          <Base value="T" count="17084770338"/>
+          <Base value="N" count="1041061"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23952926" alias="GSM8147266_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23952926</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147266_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8147266: S1, Hippocampus, 3xTg-AD, 6m; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP495269">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP495269</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1088080</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20753421">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20753421</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8147266</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8147266</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>We adapted our single nuclei isolation for mouse hippocampus samples from the previously described protocol for rats in Phillips et al. Cell Reports 2022 and sorted nuclei at the University of Alabama at Birmingham's (UAB) Comprehensive Flow Cytometry Core (CFCC) using fluorescence-activated cell sorting (FACS) on an Atlas BD ARIA II. Per the standard 10X protocol, the UAB CFCC used the 10X Chromium Controller to partition hippocampal nuclei into droplets with a barcoded gel bead where nuclei were lysed, and RNA was reverse transcribed, creating cDNA encapsulated in each droplet. After fragmenting and amplifying cDNA, they added Illumina adapters using the Chromium Single Cell 3ʹ GEM, Library &amp; Gel Bead Kit v3 (10X#: PN-1000121). The UAB Heflin Center for Genomic Sciences at the UAB Sequencing Core indexed and sequenced all samples on a NovaSeq 6000 (Illumina). For each sample, they loaded approximately 20,000 nuclei onto an S4 flow cell.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham" accession="SRA1824466" alias="SUB14313749">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1824466</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Cell, Developmental and Integrative Biology, University of Alabama at Birmingham">SUB14313749</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Cell, Developmental and Integrative Biology, University of Alabama at Birmingham</Name>
+      <Contact email="byoder@uab.edu">
+        <Address>
+          <Street>1900 University Blvd</Street>
+          <City>Birmingham</City>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Bradley</First>
+          <Last>Yoder</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE261596" accession="SRP495269">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP495269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1088080</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE261596</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Evaluation of altered cell-cell communication between glia and neurons in the hippocampus of 3xTg-AD mice at two time points</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most prevalent neurodegenerative disease and the most common form of dementia. AD is characterized by progressive memory loss and cognitive decline, affecting behavior, speech, and motor abilities. The neuropathology of AD includes the formation of extracellular amyloid-ß plaques and intracellular neurofibrillary tangles of phosphorylated tau, as well as neuronal loss. Although neuronal loss is a primary hallmark of AD, non-neuronal cell populations are known to maintain brain homeostasis and neuronal health through neuron-glia and glial cell crosstalk via chemical messengers. To investigate altered glia-neuron communication in the presence of amyloid-ß and tau pathology, we generated snRNA-seq data from the hippocampus of 3xTg-AD mice at 6 and 12 months and age-matched wild-type littermates. We predicted altered glia-neuron interactions between senders (astrocytes, microglia, oligodendrocytes, and OPCs) and receivers (excitatory and inhibitory neurons) across time points. We further investigated these interactions through pseudo-bulk differential expression, functional enrichment, and gene regulatory analyses. Overall design: We anesthetized and perfused 3xTg-AD mice (B6;129-Tg(APPSwe,tauP301L)1Lfa Psen1tm1Mpm/Mmjax: JAX MMRRC Stock# 034830) and wild-type littermates before dissecting brain regions to obtain hippocampal samples. We isolated nuclei from the left hippocampus of 12 female mice (6 3xTg-AD, 6 wild-type) from two time points (6 and 12 months; n = 6 per time point). The 3xTg-AD mouse model exhibits amyloid-ß and tau pathology occurring as early as 6 and 12 months, respectively.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE261596</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40026671</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>38826305</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8147266" accession="SRS20753421">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20753421</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN40460223</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8147266</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>S1, Hippocampus, 3xTg-AD, 6m</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1088080</ID>
+            <LABEL>PRJNA1088080</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>left hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg-AD</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20753421" sample_name="GSM8147266" sample_title="S1, Hippocampus, 3xTg-AD, 6m" spots="564379654" bases="66596799172" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20753421</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN40460223</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147266</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="66596799172" spots="564379654" bytes="20837634381">
+      <RUN accession="SRR28346425" alias="GSM8147266_r1" total_spots="564379654" total_bases="66596799172" size="20837634381" load_done="true" published="2025-02-24 14:42:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR28346425</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8147266_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23952926">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8147266_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20753421" sample_name="GSM8147266" sample_title="S1, Hippocampus, 3xTg-AD, 6m" spots="564379654" bases="66596799172" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20753421</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN40460223</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8147266</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Ta1_S1_R1_001.fastq.gz" size="11545532610" date="2024-03-14 13:59:03" md5="bb2d48d71aab09beed959ce1155d872e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346425/Ta1_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Ta1_S1_R2_001.fastq.gz" size="27201894010" date="2024-03-14 14:00:10" md5="4b22304a17d1261d30f3f6c87d9022f2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR28346425/Ta1_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346425" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346425/SRR28346425" size="20837636600" date="2024-03-14 14:04:58" md5="0c4b9905473499cf9a18e95b1f138c60" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28346425/SRR28346425" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR28346425.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346425/SRR28346425.lite.1" size="17274162768" date="2024-03-14 14:31:06" md5="f2b69a7148aa974657774653ea18c1c2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR028/28346/SRR28346425/SRR28346425.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR28346425/SRR28346425.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR28346425/SRR28346425.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="564379654">
+          <Read index="0" count="564379654" average="28" stdev="0"/>
+          <Read index="1" count="564379654" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="564379654"/>
+                <Elements count="66596799172"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="66596799172">
+          <Base value="A" count="18988363806"/>
+          <Base value="C" count="14316099225"/>
+          <Base value="G" count="15025100564"/>
+          <Base value="T" count="18266124530"/>
+          <Base value="N" count="1111047"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

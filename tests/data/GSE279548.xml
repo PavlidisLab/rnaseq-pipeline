@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26391770" alias="GSM8574964_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26391770</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574964_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8574964: in vivo Ago2 KO brain cells, replicate 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP538740">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP538740</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22914737">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22914737</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8574964</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8574964</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Snap frozen hemispheres of mice at age P14 were minced on ice into 1 mm x 1 mm pieces, dounced in 2 ml ice cold lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl2, 0.2 U/ul recombinant RNase inhibitor (Takara)) and lysed on ice for 5 minutes. Lysis was stopped by adding 10 ml of ice-cold PBS-BSA (1% BSA, 0.2 U/ul RNase inhibitor), the suspension was filtered through a 40 mm cell strainer and centrifuged at 4°C, 500g for 5 minutes. Nuclei were washed two times with PBS-BSA, counted and assessed for quality. Immediately before loading nuclei on the 10x Chromium, nuclei were washed and concentrated to remove potential ambient RNA. Post wash between 2000 and 5000 nuclei were loaded onto the 10X Chromium System for nuclei encapsulation as per the manufacturer's instructions in Chromium Single Cell 3' Reagents kit v3 user guide RevC. Libraries were prepared using Single Cell 3' v3 chemistry. Briefly, RNA was reverse transcribed in the gel bead emulsion and cDNA amplified adding three additional PCR cycles to compensate for low RNA content of nuclei as compared to cells. Subsequently, libraries were fragmented and indexed. Final libraries were quantified and assessed for fragments size using the Agilent 4200 Tapestation System. Libraries were pooled and sequenced on a NovaSeq 6000 (Illumina).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich" accession="SRA1992149" alias="SUB14793654">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1992149</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich">SUB14793654</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich</Name>
+      <Contact email="adhideb.ghosh@hest.ethz.ch">
+        <Address>
+          <Street>Schorenstrasse 16</Street>
+          <City>Schwerzenbach</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Adhideb</First>
+          <Last>Ghosh</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE279548" accession="SRP538740">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP538740</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1173227</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Glutamatergic argonaute2 promotes the formation of the neurovascular unit in mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Proper formation of the complex neurovascular unit (NVU) along with the blood-brain barrier is critical for building and sustaining a healthy, functioning central nervous system. The RNA binding protein argonaute2 (Ago2) mediates microRNA (miRNA)–mediated gene silencing, which is critical for many facets of brain development, including NVU development. Here, we found that Ago2 in glutamatergic neurons was critical for NVU formation in the developing cortices of mice. Glutamatergic neuron–specific loss of Ago2 diminished synaptic formation, neuronal-to-endothelial cell contacts, and morphogenesis of the brain vasculature, ultimately compromising the integrity of the blood-brain barrier. Ago2 facilitated miRNA targeting of phosphatase and tensin homolog (Pten) mRNA, which encodes a phosphatase that modulates reelin-dependent phosphatidylinositol 3-kinase (PI3K)–Akt signaling within the glutamatergic subpopulation. Conditionally deleting Pten in Ago2-deficient neurons restored Akt2 phosphorylation as well as postnatal development and survival. Several mutations in AGO2 impair small RNA silencing and are associated with Lessel-Kreienkamp syndrome, a neurodevelopmental disorder. When expressed in a neuronal cell line, these human AGO2 loss-of-function variants failed to suppress PTEN, resulting in attenuated PI3K-Akt signaling, further indicating that dysregulation of Ago2 function may contribute to both impaired development and neurological disorders. Together, these results identify Ago2 as central to the engagement of neurons with blood vessels in the developing brain. Overall design: To understand the role of endogenous Ago2 in the CNS, we generate a mutant mouse line where Ago2 expression was deleted in Vglut2-expressing excitatory neurons (by crossing the Slc17a6-Cre mouse line with an Ago2 conditional allele, Slc17a6-Cre, Ago2flox/flox mice). The cortical cells will be isolated from mice brain at P14 for scRNAseq analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE279548</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39999211</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8574964" accession="SRS22914737">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22914737</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN44296831</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574964</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>in vivo Ago2 KO brain cells, replicate 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1173227</ID>
+            <LABEL>PRJNA1173227</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Slc17a6-Cre, Ago2 flox/flox</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22914737" sample_name="GSM8574964" sample_title="in vivo Ago2 KO brain cells, replicate 2" spots="436881535" bases="131064460500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22914737</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN44296831</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574964</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="131064460500" spots="436881535" bytes="49685531999">
+      <RUN accession="SRR31004273" alias="GSM8574964_r1" total_spots="436881535" total_bases="131064460500" size="49685531999" load_done="true" published="2025-02-27 01:52:43" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31004273</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574964_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26391770">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8574964_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS22914737" sample_name="GSM8574964" sample_title="in vivo Ago2 KO brain cells, replicate 2" spots="436881535" bases="131064460500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22914737</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN44296831</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8574964</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SEQ00013_4_S1_L001_R1_001.fastq.gz" size="37647951597" date="2024-10-15 19:52:55" md5="4cd5345a3c31090a6b627da36d9238c2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004273/SEQ00013_4_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SEQ00013_4_S1_L001_R2_001.fastq.gz" size="30483167448" date="2024-10-15 19:51:50" md5="65adbbbc15c21f06f293d06f2134be88" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004273/SEQ00013_4_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004273" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004273/SRR31004273" size="49685534513" date="2024-10-15 20:00:00" md5="4ecb48909bfcf981e998846b99b7a56d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004273/SRR31004273" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004273.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004273/SRR31004273.lite.1" size="33450112873" date="2024-10-15 22:00:42" md5="c6748808c747cb6b3fe8cde1da54015b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004273/SRR31004273.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR31004273/SRR31004273.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR31004273/SRR31004273.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="436881535">
+          <Read index="0" count="436881535" average="150" stdev="0"/>
+          <Read index="1" count="436881535" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="436881535"/>
+                <Elements count="131064460500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="131064460500">
+          <Base value="A" count="40410828779"/>
+          <Base value="C" count="20655002812"/>
+          <Base value="G" count="23078006151"/>
+          <Base value="T" count="46917323925"/>
+          <Base value="N" count="3298833"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26391769" alias="GSM8574963_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26391769</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574963_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8574963: in vivo Ago2 KO brain cells, replicate 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP538740">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP538740</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22914736">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22914736</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8574963</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8574963</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Snap frozen hemispheres of mice at age P14 were minced on ice into 1 mm x 1 mm pieces, dounced in 2 ml ice cold lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl2, 0.2 U/ul recombinant RNase inhibitor (Takara)) and lysed on ice for 5 minutes. Lysis was stopped by adding 10 ml of ice-cold PBS-BSA (1% BSA, 0.2 U/ul RNase inhibitor), the suspension was filtered through a 40 mm cell strainer and centrifuged at 4°C, 500g for 5 minutes. Nuclei were washed two times with PBS-BSA, counted and assessed for quality. Immediately before loading nuclei on the 10x Chromium, nuclei were washed and concentrated to remove potential ambient RNA. Post wash between 2000 and 5000 nuclei were loaded onto the 10X Chromium System for nuclei encapsulation as per the manufacturer's instructions in Chromium Single Cell 3' Reagents kit v3 user guide RevC. Libraries were prepared using Single Cell 3' v3 chemistry. Briefly, RNA was reverse transcribed in the gel bead emulsion and cDNA amplified adding three additional PCR cycles to compensate for low RNA content of nuclei as compared to cells. Subsequently, libraries were fragmented and indexed. Final libraries were quantified and assessed for fragments size using the Agilent 4200 Tapestation System. Libraries were pooled and sequenced on a NovaSeq 6000 (Illumina).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich" accession="SRA1992149" alias="SUB14793654">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1992149</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich">SUB14793654</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich</Name>
+      <Contact email="adhideb.ghosh@hest.ethz.ch">
+        <Address>
+          <Street>Schorenstrasse 16</Street>
+          <City>Schwerzenbach</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Adhideb</First>
+          <Last>Ghosh</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE279548" accession="SRP538740">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP538740</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1173227</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Glutamatergic argonaute2 promotes the formation of the neurovascular unit in mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Proper formation of the complex neurovascular unit (NVU) along with the blood-brain barrier is critical for building and sustaining a healthy, functioning central nervous system. The RNA binding protein argonaute2 (Ago2) mediates microRNA (miRNA)–mediated gene silencing, which is critical for many facets of brain development, including NVU development. Here, we found that Ago2 in glutamatergic neurons was critical for NVU formation in the developing cortices of mice. Glutamatergic neuron–specific loss of Ago2 diminished synaptic formation, neuronal-to-endothelial cell contacts, and morphogenesis of the brain vasculature, ultimately compromising the integrity of the blood-brain barrier. Ago2 facilitated miRNA targeting of phosphatase and tensin homolog (Pten) mRNA, which encodes a phosphatase that modulates reelin-dependent phosphatidylinositol 3-kinase (PI3K)–Akt signaling within the glutamatergic subpopulation. Conditionally deleting Pten in Ago2-deficient neurons restored Akt2 phosphorylation as well as postnatal development and survival. Several mutations in AGO2 impair small RNA silencing and are associated with Lessel-Kreienkamp syndrome, a neurodevelopmental disorder. When expressed in a neuronal cell line, these human AGO2 loss-of-function variants failed to suppress PTEN, resulting in attenuated PI3K-Akt signaling, further indicating that dysregulation of Ago2 function may contribute to both impaired development and neurological disorders. Together, these results identify Ago2 as central to the engagement of neurons with blood vessels in the developing brain. Overall design: To understand the role of endogenous Ago2 in the CNS, we generate a mutant mouse line where Ago2 expression was deleted in Vglut2-expressing excitatory neurons (by crossing the Slc17a6-Cre mouse line with an Ago2 conditional allele, Slc17a6-Cre, Ago2flox/flox mice). The cortical cells will be isolated from mice brain at P14 for scRNAseq analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE279548</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39999211</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8574963" accession="SRS22914736">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22914736</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN44296832</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574963</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>in vivo Ago2 KO brain cells, replicate 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1173227</ID>
+            <LABEL>PRJNA1173227</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Slc17a6-Cre, Ago2 flox/flox</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22914736" sample_name="GSM8574963" sample_title="in vivo Ago2 KO brain cells, replicate 1" spots="429543930" bases="128863179000" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22914736</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN44296832</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574963</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="128863179000" spots="429543930" bytes="48844067268">
+      <RUN accession="SRR31004274" alias="GSM8574963_r1" total_spots="429543930" total_bases="128863179000" size="48844067268" load_done="true" published="2025-02-27 01:52:43" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31004274</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574963_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26391769">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8574963_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS22914736" sample_name="GSM8574963" sample_title="in vivo Ago2 KO brain cells, replicate 1" spots="429543930" bases="128863179000" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22914736</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN44296832</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8574963</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SEQ00013_3_S1_L001_R1_001.fastq.gz" size="36903803495" date="2024-10-15 19:55:19" md5="986d7b12614bacd9396df06b6d2ad300" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004274/SEQ00013_3_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SEQ00013_3_S1_L001_R2_001.fastq.gz" size="31435004177" date="2024-10-15 19:53:54" md5="ebbafee96db612edffb35754260e2503" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004274/SEQ00013_3_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004274" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004274/SRR31004274" size="48844069778" date="2024-10-15 20:03:32" md5="0d535d315525a94cef8ec5274009897f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004274/SRR31004274" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004274.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004274/SRR31004274.lite.1" size="32877925354" date="2024-10-15 21:32:50" md5="2c6ee06174afba733acf7f53cc78c755" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004274/SRR31004274.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR31004274/SRR31004274.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR31004274/SRR31004274.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="429543930">
+          <Read index="0" count="429543930" average="150" stdev="0"/>
+          <Read index="1" count="429543930" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="429543930"/>
+                <Elements count="128863179000"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="128863179000">
+          <Base value="A" count="40021823017"/>
+          <Base value="C" count="20269513701"/>
+          <Base value="G" count="21564048110"/>
+          <Base value="T" count="47004521099"/>
+          <Base value="N" count="3273073"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26391768" alias="GSM8574962_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26391768</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574962_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8574962: in vivo Ago2 WT brain cells, replicate 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP538740">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP538740</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22914735">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22914735</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8574962</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8574962</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Snap frozen hemispheres of mice at age P14 were minced on ice into 1 mm x 1 mm pieces, dounced in 2 ml ice cold lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl2, 0.2 U/ul recombinant RNase inhibitor (Takara)) and lysed on ice for 5 minutes. Lysis was stopped by adding 10 ml of ice-cold PBS-BSA (1% BSA, 0.2 U/ul RNase inhibitor), the suspension was filtered through a 40 mm cell strainer and centrifuged at 4°C, 500g for 5 minutes. Nuclei were washed two times with PBS-BSA, counted and assessed for quality. Immediately before loading nuclei on the 10x Chromium, nuclei were washed and concentrated to remove potential ambient RNA. Post wash between 2000 and 5000 nuclei were loaded onto the 10X Chromium System for nuclei encapsulation as per the manufacturer's instructions in Chromium Single Cell 3' Reagents kit v3 user guide RevC. Libraries were prepared using Single Cell 3' v3 chemistry. Briefly, RNA was reverse transcribed in the gel bead emulsion and cDNA amplified adding three additional PCR cycles to compensate for low RNA content of nuclei as compared to cells. Subsequently, libraries were fragmented and indexed. Final libraries were quantified and assessed for fragments size using the Agilent 4200 Tapestation System. Libraries were pooled and sequenced on a NovaSeq 6000 (Illumina).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich" accession="SRA1992149" alias="SUB14793654">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1992149</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich">SUB14793654</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich</Name>
+      <Contact email="adhideb.ghosh@hest.ethz.ch">
+        <Address>
+          <Street>Schorenstrasse 16</Street>
+          <City>Schwerzenbach</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Adhideb</First>
+          <Last>Ghosh</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE279548" accession="SRP538740">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP538740</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1173227</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Glutamatergic argonaute2 promotes the formation of the neurovascular unit in mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Proper formation of the complex neurovascular unit (NVU) along with the blood-brain barrier is critical for building and sustaining a healthy, functioning central nervous system. The RNA binding protein argonaute2 (Ago2) mediates microRNA (miRNA)–mediated gene silencing, which is critical for many facets of brain development, including NVU development. Here, we found that Ago2 in glutamatergic neurons was critical for NVU formation in the developing cortices of mice. Glutamatergic neuron–specific loss of Ago2 diminished synaptic formation, neuronal-to-endothelial cell contacts, and morphogenesis of the brain vasculature, ultimately compromising the integrity of the blood-brain barrier. Ago2 facilitated miRNA targeting of phosphatase and tensin homolog (Pten) mRNA, which encodes a phosphatase that modulates reelin-dependent phosphatidylinositol 3-kinase (PI3K)–Akt signaling within the glutamatergic subpopulation. Conditionally deleting Pten in Ago2-deficient neurons restored Akt2 phosphorylation as well as postnatal development and survival. Several mutations in AGO2 impair small RNA silencing and are associated with Lessel-Kreienkamp syndrome, a neurodevelopmental disorder. When expressed in a neuronal cell line, these human AGO2 loss-of-function variants failed to suppress PTEN, resulting in attenuated PI3K-Akt signaling, further indicating that dysregulation of Ago2 function may contribute to both impaired development and neurological disorders. Together, these results identify Ago2 as central to the engagement of neurons with blood vessels in the developing brain. Overall design: To understand the role of endogenous Ago2 in the CNS, we generate a mutant mouse line where Ago2 expression was deleted in Vglut2-expressing excitatory neurons (by crossing the Slc17a6-Cre mouse line with an Ago2 conditional allele, Slc17a6-Cre, Ago2flox/flox mice). The cortical cells will be isolated from mice brain at P14 for scRNAseq analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE279548</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39999211</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8574962" accession="SRS22914735">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22914735</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN44296833</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574962</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>in vivo Ago2 WT brain cells, replicate 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1173227</ID>
+            <LABEL>PRJNA1173227</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Slc17a6-Cre, Ago2 wt/wt</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22914735" sample_name="GSM8574962" sample_title="in vivo Ago2 WT brain cells, replicate 2" spots="407741507" bases="122322452100" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22914735</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN44296833</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574962</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="122322452100" spots="407741507" bytes="48163794844">
+      <RUN accession="SRR31004275" alias="GSM8574962_r1" total_spots="407741507" total_bases="122322452100" size="48163794844" load_done="true" published="2025-02-27 01:52:43" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31004275</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574962_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26391768">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8574962_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS22914735" sample_name="GSM8574962" sample_title="in vivo Ago2 WT brain cells, replicate 2" spots="407741507" bases="122322452100" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22914735</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN44296833</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8574962</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SEQ00013_2_S1_L001_R1_001.fastq.gz" size="38368720999" date="2024-10-15 20:10:10" md5="faedf120935181eaef4a52d09ea6067c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004275/SEQ00013_2_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SEQ00013_2_S1_L001_R2_001.fastq.gz" size="30703687111" date="2024-10-15 20:11:22" md5="27a0bdf9740cfea4bcc0ff87e79c43a1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004275/SEQ00013_2_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004275" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004275/SRR31004275" size="48163797359" date="2024-10-15 20:33:55" md5="ea21126de7880c3a8c25a72c1f597feb" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004275/SRR31004275" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004275.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004275/SRR31004275.lite.1" size="31215181411" date="2024-10-15 21:51:21" md5="c833624d6cc2fc9ce88562e99a9e2a1e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004275/SRR31004275.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR31004275/SRR31004275.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR31004275/SRR31004275.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="407741507">
+          <Read index="0" count="407741507" average="150" stdev="0"/>
+          <Read index="1" count="407741507" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="407741507"/>
+                <Elements count="122322452100"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="122322452100">
+          <Base value="A" count="35256495167"/>
+          <Base value="C" count="23097982883"/>
+          <Base value="G" count="24287610794"/>
+          <Base value="T" count="39668668598"/>
+          <Base value="N" count="11694658"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26391767" alias="GSM8574961_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26391767</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574961_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8574961: in vivo Ago2 WT brain cells, replicate 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP538740">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP538740</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22914734">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22914734</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8574961</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8574961</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Snap frozen hemispheres of mice at age P14 were minced on ice into 1 mm x 1 mm pieces, dounced in 2 ml ice cold lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl2, 0.2 U/ul recombinant RNase inhibitor (Takara)) and lysed on ice for 5 minutes. Lysis was stopped by adding 10 ml of ice-cold PBS-BSA (1% BSA, 0.2 U/ul RNase inhibitor), the suspension was filtered through a 40 mm cell strainer and centrifuged at 4°C, 500g for 5 minutes. Nuclei were washed two times with PBS-BSA, counted and assessed for quality. Immediately before loading nuclei on the 10x Chromium, nuclei were washed and concentrated to remove potential ambient RNA. Post wash between 2000 and 5000 nuclei were loaded onto the 10X Chromium System for nuclei encapsulation as per the manufacturer's instructions in Chromium Single Cell 3' Reagents kit v3 user guide RevC. Libraries were prepared using Single Cell 3' v3 chemistry. Briefly, RNA was reverse transcribed in the gel bead emulsion and cDNA amplified adding three additional PCR cycles to compensate for low RNA content of nuclei as compared to cells. Subsequently, libraries were fragmented and indexed. Final libraries were quantified and assessed for fragments size using the Agilent 4200 Tapestation System. Libraries were pooled and sequenced on a NovaSeq 6000 (Illumina).</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich" accession="SRA1992149" alias="SUB14793654">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1992149</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich">SUB14793654</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Translational Nutrition Biology, Health Sciences and Technology, ETH Zurich</Name>
+      <Contact email="adhideb.ghosh@hest.ethz.ch">
+        <Address>
+          <Street>Schorenstrasse 16</Street>
+          <City>Schwerzenbach</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Adhideb</First>
+          <Last>Ghosh</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE279548" accession="SRP538740">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP538740</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1173227</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE279548</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Glutamatergic argonaute2 promotes the formation of the neurovascular unit in mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Proper formation of the complex neurovascular unit (NVU) along with the blood-brain barrier is critical for building and sustaining a healthy, functioning central nervous system. The RNA binding protein argonaute2 (Ago2) mediates microRNA (miRNA)–mediated gene silencing, which is critical for many facets of brain development, including NVU development. Here, we found that Ago2 in glutamatergic neurons was critical for NVU formation in the developing cortices of mice. Glutamatergic neuron–specific loss of Ago2 diminished synaptic formation, neuronal-to-endothelial cell contacts, and morphogenesis of the brain vasculature, ultimately compromising the integrity of the blood-brain barrier. Ago2 facilitated miRNA targeting of phosphatase and tensin homolog (Pten) mRNA, which encodes a phosphatase that modulates reelin-dependent phosphatidylinositol 3-kinase (PI3K)–Akt signaling within the glutamatergic subpopulation. Conditionally deleting Pten in Ago2-deficient neurons restored Akt2 phosphorylation as well as postnatal development and survival. Several mutations in AGO2 impair small RNA silencing and are associated with Lessel-Kreienkamp syndrome, a neurodevelopmental disorder. When expressed in a neuronal cell line, these human AGO2 loss-of-function variants failed to suppress PTEN, resulting in attenuated PI3K-Akt signaling, further indicating that dysregulation of Ago2 function may contribute to both impaired development and neurological disorders. Together, these results identify Ago2 as central to the engagement of neurons with blood vessels in the developing brain. Overall design: To understand the role of endogenous Ago2 in the CNS, we generate a mutant mouse line where Ago2 expression was deleted in Vglut2-expressing excitatory neurons (by crossing the Slc17a6-Cre mouse line with an Ago2 conditional allele, Slc17a6-Cre, Ago2flox/flox mice). The cortical cells will be isolated from mice brain at P14 for scRNAseq analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE279548</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39999211</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8574961" accession="SRS22914734">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22914734</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN44296834</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8574961</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>in vivo Ago2 WT brain cells, replicate 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1173227</ID>
+            <LABEL>PRJNA1173227</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Slc17a6-Cre, Ago2 wt/wt</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22914734" sample_name="GSM8574961" sample_title="in vivo Ago2 WT brain cells, replicate 1" spots="419222930" bases="125766879000" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22914734</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN44296834</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574961</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="125766879000" spots="419222930" bytes="49295305462">
+      <RUN accession="SRR31004276" alias="GSM8574961_r1" total_spots="419222930" total_bases="125766879000" size="49295305462" load_done="true" published="2025-02-27 01:51:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31004276</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8574961_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26391767">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8574961_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS22914734" sample_name="GSM8574961" sample_title="in vivo Ago2 WT brain cells, replicate 1" spots="419222930" bases="125766879000" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22914734</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN44296834</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8574961</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SEQ00013_1_S1_L001_R1_001.fastq.gz" size="38999053150" date="2024-10-15 19:55:58" md5="e02ba03c65ecc6ed652eed7e574e99bf" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004276/SEQ00013_1_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SEQ00013_1_S1_L001_R2_001.fastq.gz" size="31577417235" date="2024-10-15 19:53:37" md5="d0f8e0182aba41b7fc8f83d3a6764cf2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR31004276/SEQ00013_1_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004276" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004276/SRR31004276" size="49295307978" date="2024-10-15 20:04:17" md5="e67304a359802d787bfa94a238f9d8d0" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31004276/SRR31004276" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31004276.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004276/SRR31004276.lite.1" size="32105516038" date="2024-10-15 21:29:54" md5="12385a6b3a46ead836573431354a438d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31004/SRR31004276/SRR31004276.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR31004276/SRR31004276.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR31004276/SRR31004276.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="419222930">
+          <Read index="0" count="419222930" average="150" stdev="0"/>
+          <Read index="1" count="419222930" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="419222930"/>
+                <Elements count="125766879000"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="125766879000">
+          <Base value="A" count="36576004281"/>
+          <Base value="C" count="23238334015"/>
+          <Base value="G" count="24411458512"/>
+          <Base value="T" count="41530081001"/>
+          <Base value="N" count="11001191"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>
