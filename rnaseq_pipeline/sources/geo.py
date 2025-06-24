@@ -15,6 +15,7 @@ from urllib.parse import urlparse, parse_qs
 from xml.etree import ElementTree
 
 import luigi
+import luigi.format
 import requests
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 from luigi.util import requires
@@ -138,7 +139,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             for chunk in res.iter_content(chunk_size=1024):
                 tmp.write(chunk)
             tmp.seek(0)
-            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().open('wb') as f:
+            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().open('w') as f:
                 reader = fin.extractfile(self.gse + '_family.xml')
                 while chunk := reader.read(1024):
                     f.write(chunk)
@@ -146,7 +147,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     def output(self):
         # TODO: remove the _family suffix
         return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}_family.xml'.format(self.gse)),
-                                    ttl=timedelta(days=14))
+                                    ttl=timedelta(days=14), format=luigi.format.Nop)
 
 @requires(DownloadGeoSeriesMetadata)
 class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):

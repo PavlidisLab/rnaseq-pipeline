@@ -67,8 +67,8 @@ class ExpirableLocalTarget(luigi.LocalTarget):
     `use_mtime` parameter to use the modification time instead.
     """
 
-    def __init__(self, path, ttl, use_mtime=False):
-        super().__init__(path)
+    def __init__(self, path, ttl, use_mtime=False, format=None):
+        super().__init__(path, format=format)
         if not isinstance(ttl, timedelta):
             self._ttl = timedelta(seconds=ttl)
         else:
