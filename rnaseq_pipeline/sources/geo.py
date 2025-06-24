@@ -138,8 +138,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
             for chunk in res.iter_content(chunk_size=1024):
                 tmp.write(chunk)
             tmp.seek(0)
-            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().temporary_path() as fpath, open(fpath,
-                                                                                                              'wb') as f:
+            with tarfile.open(fileobj=tmp, mode='r:gz') as fin, self.output().open('wb') as f:
                 reader = fin.extractfile(self.gse + '_family.xml')
                 while chunk := reader.read(1024):
                     f.write(chunk)
