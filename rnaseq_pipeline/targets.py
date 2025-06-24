@@ -63,7 +63,7 @@ class ExpirableLocalTarget(luigi.LocalTarget):
     fresh. Once that delay expired, the target will not be considered as
     existing.
 
-    By default, creation time is used as per os.path.getctime. Use the
+    By default, change time is used as per os.path.getctime. Use the
     `use_mtime` parameter to use the modification time instead.
     """
 
