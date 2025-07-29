@@ -8,6 +8,7 @@ dependencies:
 - pip
 - cutadapt==4.8
 - multiqc==1.29
+- polars-lts-cpu # for our older servers that lack support for AVX2
 - sra-tools
 - fastqc==0.12.1
 - star==2.7.3a
