@@ -1,6 +1,7 @@
 import datetime
 import logging
 import os
+import tempfile
 import uuid
 from glob import glob
 from os.path import join, dirname
@@ -166,7 +167,8 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
         destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
         os.makedirs(destdir, exist_ok=True)
-        yield [fastqc.GenerateReport(fastq_in.path, destdir) for fastq_in in self.input()]
+        yield [fastqc.GenerateReport(fastq_in.path, destdir, temp_dir=tempfile.gettempdir()) for fastq_in in
+               self.input()]
 
 class QualityControlExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
