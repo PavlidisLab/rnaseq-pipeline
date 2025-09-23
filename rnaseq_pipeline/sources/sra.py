@@ -80,6 +80,7 @@ class SraRunMetadata:
 
 def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
     """
+    Extract transcriptomic RNA-Seq runs from the given SRA XML metadata file.
     :param path: Path to the XML file containing SRA run metadata.
     :param include_invalid_runs: If True, include runs that do not have any suitable metadata that can be used to
     determine the layout.
@@ -92,6 +93,20 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
         srr = run.attrib['accession']
 
         srx = run.find('EXPERIMENT_REF').attrib['accession']
+
+        library_strategy = root.find(
+            'EXPERIMENT_PACKAGE/EXPERIMENT[@accession=\'' + srx + '\']/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY')
+        library_source = root.find(
+            'EXPERIMENT_PACKAGE/EXPERIMENT[@accession=\'' + srx + '\']/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE')
+
+        if library_strategy is not None and library_strategy.text not in ['RNA-Seq']:
+            logger.warning('%s Ignoring run with %s library strategy.', srr, library_strategy.text)
+            continue
+
+        if library_source is not None and library_source.text not in ['TRANSCRIPTOMIC', 'TRANSCRIPTOMIC SINGLE CELL']:
+            logger.warning('%s: Ignoring run with %s library source.', srr, library_source.text)
+            continue
+
         is_single_end = root.find(
             'EXPERIMENT_PACKAGE/EXPERIMENT[@accession=\'' + srx + '\']/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE') is not None
         is_paired = root.find(
@@ -389,7 +404,7 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
             meta = [r for r in meta if r.srr in self.srr]
 
         if not meta:
-            raise ValueError(f'No SRA runs found for {self.srx}.')
+            raise ValueError(f'No valid SRA runs found for {self.srx}. Valid runs must be transcriptomic RNA-Seq.')
 
         metadata = dict(self.metadata)
         # do not override the sample_id when invoked from DownloadGeoSample or DownloadGemmaExperiment
