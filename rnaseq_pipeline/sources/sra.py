@@ -402,8 +402,11 @@ class DownloadSraExperimentMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, 
     def run(self):
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
+        meta = retrieve_sra_metadata(self.srx, format='xml')
+        # basic validation
+        ET.fromstring(meta)
         with self.output().open('w') as f:
-            f.write(retrieve_sra_metadata(self.srx, format='xml'))
+            f.write(meta)
 
     def output(self):
         return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'sra', '{}.xml'.format(self.srx)),
