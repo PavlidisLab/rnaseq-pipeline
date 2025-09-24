@@ -36,17 +36,17 @@ def detect_layout(run_id: str, filenames: Optional[list[str]],
     if filenames:
         if layout := detect_bcl2fastq_name(run_id, filenames):
             logger.info('%s: Inferred file types: %s from file names conforming to bcl2fastq output: %s.', run_id,
-                        layout, filenames)
+                        '|'.join(l.name for l in layout), ', '.join(filenames))
             return layout
 
         if layout := detect_common_fastq_name(run_id, filenames):
-            logger.info('%s: Inferred file types: %s from file names conforming to a common output.', run_id,
-                        layout, filenames)
+            logger.info('%s: Inferred file types: %s from file names conforming to a common output: %s.', run_id,
+                        '|'.join(l.name for l in layout), ', '.join(filenames))
             return layout
 
         if layout := detect_fallback_fastq_name(run_id, filenames):
             logger.warning('%s: Inferred file types: %s from file names with fallback name patterns: %s. This is highly inaccurate.',
-                           run_id, layout, filenames)
+                           run_id, '|'.join(l.name for l in layout), ', '.join(filenames))
             return layout
 
         number_of_files = len(filenames)

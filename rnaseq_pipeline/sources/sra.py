@@ -63,6 +63,13 @@ class SraRunIssue(enum.IntFlag):
     MISMATCHED_READ_SIZES = enum.auto()
     INVALID_RUN = enum.auto()
 
+class SraReadType(enum.Enum):
+    """
+    Type of read in a spot.
+    """
+    TECHNICAL = 'T'
+    BIOLOGICAL = 'B'
+
 @dataclass
 class SraRunMetadata:
     """A digested SRA run metadata"""
@@ -72,7 +79,9 @@ class SraRunMetadata:
     is_paired: bool
     fastq_filenames: Optional[list[str]]
     fastq_file_sizes: Optional[list[int]]
-    fastq_file_types: Optional[list[str]]
+    # currently only available if --readTypes options were passed to the fastq-load.py loader, I'd like to know if this
+    # is stored elsewhere though, because I can see it in the UI.
+    read_types: Optional[list[SraReadType]]
     # only available if statistics were present in the XML metadata
     number_of_spots: Optional[int]
     average_read_lengths: Optional[list[float]]
@@ -140,7 +149,8 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
             fastq_load_files = []
             if options:
                 if '--readTypes' in options and options['--readTypes'] is not None:
-                    fastq_load_read_types = list(str(options['--readTypes']))
+                    fastq_load_read_types = [SraReadType.BIOLOGICAL if rt == 'B' else SraReadType.TECHNICAL for rt in
+                                             str(options['--readTypes'])]
                 opts = ['--read1PairFiles',
                         '--read2PairFiles',
                         '--read3PairFiles',
@@ -158,7 +168,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
             fastq_load_files = None
 
         statistics = run.find('Statistics')
-        if statistics:
+        if statistics is not None:
             number_of_spots = int(statistics.attrib['nreads'])
             reads = sorted(statistics.findall('Read'), key=lambda r: int(r.attrib['index']))
             spot_read_lengths = [float(r.attrib['average']) for r in reads]
@@ -179,70 +189,79 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 sra_files = sorted(sra_files, key=lambda f: fastq_load_files.index(f.attrib['filename']))
                 fastq_filenames = [sf.attrib['filename'] for sf in sra_files]
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_files]
-                fastq_file_types = fastq_load_read_types
+                read_types = fastq_load_read_types
 
             # try to add a .gz suffix to the SRA files
             elif set(fastq_load_files) == set([sf.attrib['filename'] + '.gz' for sf in sra_files]):
                 logger.warning(
                     '%s: The SRA files lack .gz extensions: %s, but still correspond to fastq-load.py options: %s, will use those to reorder the SRA files.',
-                    srx, [sf.attrib['filename'] for sf in sra_files], fastq_load_files)
+                    srx, ', '.join(sf.attrib['filename'] for sf in sra_files), ', '.join(fastq_load_files))
                 sra_files = sorted(sra_files,
                                    key=lambda f: fastq_load_files.index(f.attrib['filename'] + '.gz'))
                 fastq_filenames = [sf.attrib['filename'] for sf in sra_files]
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_files]
-                fastq_file_types = fastq_load_read_types
+                read_types = fastq_load_read_types
 
             elif sra_files:
                 logging.warning(
                     "%s: The SRA files: %s do not match arguments passed to fastq-load.py: %s. The filenames passed to fastq-load.py will be used instead: %s.",
                     srr,
-                    [sf.attrib['filename'] for sf in sra_files],
-                    options,
+                    ', '.join(sf.attrib['filename'] for sf in sra_files),
+                    ' '.join(k + '=' + v if v else 'k' for k, v in options.items()),
                     fastq_load_files)
                 fastq_filenames = fastq_load_files
                 fastq_file_sizes = None
-                fastq_file_types = fastq_load_read_types
+                read_types = fastq_load_read_types
                 issues |= SraRunIssue.MISMATCHED_FASTQ_LOAD_OPTIONS
 
             else:
                 logging.warning(
                     "%s: No SRA files found, but the arguments of fastq-load.py are present: %s. The filenames passed to fastq-load.py will be used: %s.",
-                    srr, options, fastq_load_files)
+                    srr, ' '.join(k + '=' + v if v else 'k' for k, v in options.items()), ', '.join(fastq_load_files))
                 fastq_filenames = fastq_load_files
                 fastq_file_sizes = None
-                fastq_file_types = fastq_load_read_types
+                read_types = fastq_load_read_types
 
         # use spot statistics to determine the order of the files by matching their sizes with the sizes of the files
         # this is less reliable than using the fastq-load.py options, but it is still better than nothing
         # we can only use this strategy if all the read sizes are different and can be related to the file sizes
-        elif statistics:
+        elif statistics is not None:
             # check if the sizes are unambiguous?
             read_sizes = [int(read.attrib['count']) * float(read.attrib['average']) for read in reads]
             if len(set(read_sizes)) == len(read_sizes):
-                # sort the files according to the layout
-                # sort the layout according to the average read size
-                reads_by_size = [e[0] for e in sorted(enumerate(reads),
-                                                      key=lambda e: int(e[1].attrib['count']) * float(
-                                                          e[1].attrib['average']))]
-                files_by_size = [e[0] for e in sorted(enumerate(sra_files), key=lambda e: int(e[1].attrib['size']))]
+                if sra_files:
+                    # sort the files according to the layout
+                    # sort the layout according to the average read size
+                    reads_by_size = [e[0] for e in sorted(enumerate(reads),
+                                                          key=lambda e: int(e[1].attrib['count']) * float(
+                                                              e[1].attrib['average']))]
+                    files_by_size = [e[0] for e in sorted(enumerate(sra_files), key=lambda e: int(e[1].attrib['size']))]
 
-                if len(reads_by_size) == len(files_by_size):
-                    if reads_by_size != files_by_size:
-                        logger.info('%s: Reordering SRA files to match the read sizes in the spot...', srr)
-                        sra_files = [sra_files[reads_by_size.index(files_by_size[i])] for i, sra_file in
-                                     enumerate(sra_files)]
-                    fastq_filenames = [sf.attrib['filename'] for sf in sra_files]
-                    fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_files]
-                    fastq_file_types = None
+                    if len(reads_by_size) == len(files_by_size):
+                        if reads_by_size != files_by_size:
+                            logger.info('%s: Reordering SRA files to match the read sizes in the spot...', srr)
+                            sra_files = [sra_files[reads_by_size.index(files_by_size[i])] for i, sra_file in
+                                         enumerate(sra_files)]
+                        fastq_filenames = [sf.attrib['filename'] for sf in sra_files]
+                        fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_files]
+                        read_types = None
+                    else:
+                        logger.warning(
+                            '%s: The number of reads: %d and files: %d do not correspond, cannot use them to order SRA files by filesize. Only the spot metadata will be used to determine the layout.',
+                            srr, len(reads_by_size), len(files_by_size))
+                        fastq_filenames = None
+                        fastq_file_sizes = None
+                        read_types = None
+                        issues |= SraRunIssue.MISMATCHED_READ_SIZES
                 else:
-                    # shot
-                    logger.warning(
-                        '%s: The number of reads: %d and files: %d do not correspond, cannot use them to order SRA files by filesize. Only the spot metadata will be used to determine the layout.',
-                        srr, len(reads_by_size), len(files_by_size))
+                    # this is extremely common, so it's not worth warning about it
+                    logger.info(
+                        '%s: No SRA file to order. Only the spot metadata will be used to determine the layout.',
+                        srr)
                     fastq_filenames = None
                     fastq_file_sizes = None
-                    fastq_file_types = None
-                    issues |= SraRunIssue.MISMATCHED_READ_SIZES
+                    read_types = None
+                    issues |= SraRunIssue.NO_SRA_FILES
             else:
                 # this is extremely common, so it's not worth warning about it
                 logger.info(
@@ -250,12 +269,12 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                     srr, read_sizes)
                 fastq_filenames = None
                 fastq_file_sizes = None
-                fastq_file_types = None
+                read_types = None
                 issues |= SraRunIssue.AMBIGUOUS_READ_SIZES
 
         else:
             issues |= SraRunIssue.INVALID_RUN
-            logger.warning(
+            logger.info(
                 '%s: No information found that can be used to order SRA files, ignoring that run.',
                 srr)
             if include_invalid_runs:
@@ -266,7 +285,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                                              is_paired=is_paired,
                                              fastq_filenames=fastq_filenames,
                                              fastq_file_sizes=fastq_file_sizes,
-                                             fastq_file_types=None,
+                                             read_types=None,
                                              number_of_spots=None,
                                              average_read_lengths=None,
                                              fastq_load_options=None,
@@ -289,7 +308,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                                      is_paired=is_paired,
                                      fastq_filenames=fastq_filenames,
                                      fastq_file_sizes=fastq_file_sizes,
-                                     fastq_file_types=fastq_file_types,
+                                     read_types=read_types,
                                      number_of_spots=number_of_spots,
                                      average_read_lengths=spot_read_lengths,
                                      fastq_load_options=options if loader == 'fastq-load.py' else None,
