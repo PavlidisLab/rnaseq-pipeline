@@ -33,7 +33,7 @@ def _authenticate():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
                 CREDENTIALS_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
+            creds = flow.run_local_server(open_browser=False, port=0)
         # Save the credentials for the next run
         with open(token_path, 'wb') as token:
             pickle.dump(creds, token)
