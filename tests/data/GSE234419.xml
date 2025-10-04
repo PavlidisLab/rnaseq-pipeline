@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20631942" alias="GSM7467236_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20631942</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467236_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7467236: Tmem119-creERT2-cGaswt/wt microglia mouse 3, scRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP441695">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP441695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA981208</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17930970">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17930970</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7467236</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7467236</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647. Sorted nuclei were then loaded into a Chromium Single Cell Controller. ChromiumSingle Cell 3' Library &amp; Gel Bead Kit v3.1</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ablasser, EPFL" accession="SRA1651019" alias="SUB13507739">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1651019</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ablasser, EPFL">SUB13507739</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ablasser, EPFL</Name>
+      <Contact email="andrea.ablasser@epfl.ch">
+        <Address>
+          <Street>route Cantonale</Street>
+          <City>Lausanne</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Andrea</First>
+          <Last>Ablasser</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE234419" accession="SRP441695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP441695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA981208</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE234419</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>cGAS/STING drives ageing-related inflammation and neurodegeneration II</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Low-grade inflammation is a hallmark of old age and a central driver of ageing-associated impairment and disease. Multiple factors can contribute to ageing-associated inflammation, however the molecular pathways transducing aberrant inflammatory signalling and their impact in natural ageing remain poorly understood. Here we show that the cGAS-STING signalling pathway, mediating immune sensing of DNA, is a critical driver of chronic inflammation and functional decline during ageing. Blockade of STING suppresses the inflammatory phenotypes of senescent human cells and tissues, attenuates ageing-related inflammation in multiple peripheral organs and the brain in mice, and leads to an improvement in tissue function. Focusing on the ageing brain, we reveal that activation of STING triggers reactive microglia transcriptional states, neurodegeneration and cognitive decline. Cytosolic DNA released from perturbed mitochondria elicits cGAS activity in old microglia defining a mechanism by which cGAS-STING signalling is engaged in the ageing brain. Single-nuclei RNA-sequencing (snRNA-seq) of microglia and hippocampi of a newly developed cGAS gain-of-function mouse model demonstrates that engagement of cGAS in microglia is sufficient to direct ageing-associated transcriptional microglia states leading to bystander cell inflammation, neurotoxicity and impaired memory capacity. Our findings establish the cGAS-STING pathway as a critical driver of ageing-related inflammation in peripheral organs and the brain, and reveal blockade of cGAS-STING signalling as a potential strategy to halt (neuro)degenerative processes during old age. Overall design: 20m old aged mice were treated for 16w with DMSO or H151 over 24w. Aged mice were injected intraperitoneally with 750 nmol H151 per mouse five days a week for 8 weeks. The mice were rested for 8 weeks, and 8 weeks of treatment were repeated one more time. Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE234419</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37532932</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA981203</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7467236" accession="SRS17930970">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17930970</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35667939</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467236</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Tmem119-creERT2-cGaswt/wt microglia mouse 3, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>981208</ID>
+            <LABEL>PRJNA981208</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17930970" sample_name="GSM7467236" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 3, scRNAseq" spots="179252785" bases="21151828630" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17930970</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35667939</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467236</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="21151828630" spots="179252785" bytes="6354537065">
+      <RUN accession="SRR24867996" alias="GSM7467236_r1" total_spots="179252785" total_bases="21151828630" size="6354537065" load_done="true" published="2023-08-20 13:21:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24867996</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467236_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20631942">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7467236_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17930970" sample_name="GSM7467236" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 3, scRNAseq" spots="179252785" bases="21151828630" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17930970</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35667939</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7467236</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24867996.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867996/SRR24867996.lite.1" size="5477246955" date="2023-06-12 20:04:53" md5="3d8a6ede1436df50095e8cdb89332241" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867996/SRR24867996.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR24867996/SRR24867996.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR24867996/SRR24867996.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24867996" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867996/SRR24867996" size="6354539587" date="2023-06-07 19:38:06" md5="54a3e3b58cbb30cc13e20495059c7250" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867996/SRR24867996" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT3_S5_R2_001.fastq.gz" size="9041353778" date="2023-06-07 19:35:29" md5="bf0bce7fb52b349252831cded9f606fa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867996/TMEM119cre_cGAS_WT3_S5_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT3_S5_R1_001.fastq.gz" size="3785867837" date="2023-06-07 19:34:55" md5="f784070c51800ff4e15023be1669086b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867996/TMEM119cre_cGAS_WT3_S5_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="179252785">
+          <Read index="0" count="179252785" average="28" stdev="0"/>
+          <Read index="1" count="179252785" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="179252785"/>
+                <Elements count="21151828630"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21151828630">
+          <Base value="A" count="6200999604"/>
+          <Base value="C" count="4587528641"/>
+          <Base value="G" count="4981452599"/>
+          <Base value="T" count="5381604335"/>
+          <Base value="N" count="243451"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20631941" alias="GSM7467235_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20631941</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467235_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7467235: Tmem119-creERT2-cGaswt/wt microglia mouse 2, scRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP441695">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP441695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA981208</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17930969">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17930969</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7467235</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7467235</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647. Sorted nuclei were then loaded into a Chromium Single Cell Controller. ChromiumSingle Cell 3' Library &amp; Gel Bead Kit v3.1</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ablasser, EPFL" accession="SRA1651019" alias="SUB13507739">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1651019</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ablasser, EPFL">SUB13507739</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ablasser, EPFL</Name>
+      <Contact email="andrea.ablasser@epfl.ch">
+        <Address>
+          <Street>route Cantonale</Street>
+          <City>Lausanne</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Andrea</First>
+          <Last>Ablasser</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE234419" accession="SRP441695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP441695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA981208</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE234419</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>cGAS/STING drives ageing-related inflammation and neurodegeneration II</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Low-grade inflammation is a hallmark of old age and a central driver of ageing-associated impairment and disease. Multiple factors can contribute to ageing-associated inflammation, however the molecular pathways transducing aberrant inflammatory signalling and their impact in natural ageing remain poorly understood. Here we show that the cGAS-STING signalling pathway, mediating immune sensing of DNA, is a critical driver of chronic inflammation and functional decline during ageing. Blockade of STING suppresses the inflammatory phenotypes of senescent human cells and tissues, attenuates ageing-related inflammation in multiple peripheral organs and the brain in mice, and leads to an improvement in tissue function. Focusing on the ageing brain, we reveal that activation of STING triggers reactive microglia transcriptional states, neurodegeneration and cognitive decline. Cytosolic DNA released from perturbed mitochondria elicits cGAS activity in old microglia defining a mechanism by which cGAS-STING signalling is engaged in the ageing brain. Single-nuclei RNA-sequencing (snRNA-seq) of microglia and hippocampi of a newly developed cGAS gain-of-function mouse model demonstrates that engagement of cGAS in microglia is sufficient to direct ageing-associated transcriptional microglia states leading to bystander cell inflammation, neurotoxicity and impaired memory capacity. Our findings establish the cGAS-STING pathway as a critical driver of ageing-related inflammation in peripheral organs and the brain, and reveal blockade of cGAS-STING signalling as a potential strategy to halt (neuro)degenerative processes during old age. Overall design: 20m old aged mice were treated for 16w with DMSO or H151 over 24w. Aged mice were injected intraperitoneally with 750 nmol H151 per mouse five days a week for 8 weeks. The mice were rested for 8 weeks, and 8 weeks of treatment were repeated one more time. Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE234419</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37532932</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA981203</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7467235" accession="SRS17930969">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17930969</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35667940</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467235</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Tmem119-creERT2-cGaswt/wt microglia mouse 2, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>981208</ID>
+            <LABEL>PRJNA981208</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17930969" sample_name="GSM7467235" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 2, scRNAseq" spots="229668118" bases="27100837924" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17930969</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35667940</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467235</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="27100837924" spots="229668118" bytes="8132990188">
+      <RUN accession="SRR24867997" alias="GSM7467235_r1" total_spots="229668118" total_bases="27100837924" size="8132990188" load_done="true" published="2023-08-20 13:21:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24867997</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467235_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20631941">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7467235_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17930969" sample_name="GSM7467235" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 2, scRNAseq" spots="229668118" bases="27100837924" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17930969</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35667940</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7467235</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24867997.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867997/SRR24867997.lite.1" size="6996745439" date="2023-06-12 20:07:14" md5="1280a32ece31d23e8d41d3366bd7a8e7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867997/SRR24867997.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR24867997/SRR24867997.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR24867997/SRR24867997.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24867997" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867997/SRR24867997" size="8132992707" date="2023-06-07 19:43:23" md5="cf5e641816bf357bed95333022fa1ef2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867997/SRR24867997" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT2_S2_R2_001.fastq.gz" size="11592643974" date="2023-06-07 19:42:23" md5="606c977c5c009508e5cb14c087987532" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867997/TMEM119cre_cGAS_WT2_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT2_S2_R1_001.fastq.gz" size="4823070616" date="2023-06-07 19:41:46" md5="e77e4c28a4e12959cd5e2b848b11d61b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867997/TMEM119cre_cGAS_WT2_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="229668118">
+          <Read index="0" count="229668118" average="28" stdev="0"/>
+          <Read index="1" count="229668118" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="229668118"/>
+                <Elements count="27100837924"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27100837924">
+          <Base value="A" count="7952325452"/>
+          <Base value="C" count="5840254895"/>
+          <Base value="G" count="6348134982"/>
+          <Base value="T" count="6959810219"/>
+          <Base value="N" count="312376"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20631940" alias="GSM7467234_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20631940</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467234_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7467234: Tmem119-creERT2-cGaswt/wt microglia mouse 1, scRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP441695">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP441695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA981208</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17930971">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17930971</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7467234</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7467234</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647. Sorted nuclei were then loaded into a Chromium Single Cell Controller. ChromiumSingle Cell 3' Library &amp; Gel Bead Kit v3.1</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ablasser, EPFL" accession="SRA1651019" alias="SUB13507739">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1651019</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ablasser, EPFL">SUB13507739</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ablasser, EPFL</Name>
+      <Contact email="andrea.ablasser@epfl.ch">
+        <Address>
+          <Street>route Cantonale</Street>
+          <City>Lausanne</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Andrea</First>
+          <Last>Ablasser</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE234419" accession="SRP441695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP441695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA981208</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE234419</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>cGAS/STING drives ageing-related inflammation and neurodegeneration II</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Low-grade inflammation is a hallmark of old age and a central driver of ageing-associated impairment and disease. Multiple factors can contribute to ageing-associated inflammation, however the molecular pathways transducing aberrant inflammatory signalling and their impact in natural ageing remain poorly understood. Here we show that the cGAS-STING signalling pathway, mediating immune sensing of DNA, is a critical driver of chronic inflammation and functional decline during ageing. Blockade of STING suppresses the inflammatory phenotypes of senescent human cells and tissues, attenuates ageing-related inflammation in multiple peripheral organs and the brain in mice, and leads to an improvement in tissue function. Focusing on the ageing brain, we reveal that activation of STING triggers reactive microglia transcriptional states, neurodegeneration and cognitive decline. Cytosolic DNA released from perturbed mitochondria elicits cGAS activity in old microglia defining a mechanism by which cGAS-STING signalling is engaged in the ageing brain. Single-nuclei RNA-sequencing (snRNA-seq) of microglia and hippocampi of a newly developed cGAS gain-of-function mouse model demonstrates that engagement of cGAS in microglia is sufficient to direct ageing-associated transcriptional microglia states leading to bystander cell inflammation, neurotoxicity and impaired memory capacity. Our findings establish the cGAS-STING pathway as a critical driver of ageing-related inflammation in peripheral organs and the brain, and reveal blockade of cGAS-STING signalling as a potential strategy to halt (neuro)degenerative processes during old age. Overall design: 20m old aged mice were treated for 16w with DMSO or H151 over 24w. Aged mice were injected intraperitoneally with 750 nmol H151 per mouse five days a week for 8 weeks. The mice were rested for 8 weeks, and 8 weeks of treatment were repeated one more time. Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE234419</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37532932</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA981203</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7467234" accession="SRS17930971">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17930971</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35667941</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467234</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Tmem119-creERT2-cGaswt/wt microglia mouse 1, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>981208</ID>
+            <LABEL>PRJNA981208</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17930971" sample_name="GSM7467234" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 1, scRNAseq" spots="141918276" bases="16746356568" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17930971</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35667941</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467234</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="16746356568" spots="141918276" bytes="5081926180">
+      <RUN accession="SRR24867998" alias="GSM7467234_r1" total_spots="141918276" total_bases="16746356568" size="5081926180" load_done="true" published="2023-08-20 13:21:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24867998</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467234_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20631940">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7467234_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17930971" sample_name="GSM7467234" sample_title="Tmem119-creERT2-cGaswt/wt microglia mouse 1, scRNAseq" spots="141918276" bases="16746356568" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17930971</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35667941</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7467234</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24867998.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867998/SRR24867998.lite.1" size="4350125165" date="2023-06-12 20:00:32" md5="5f6186660f1a85ef4f7ec6c86a4a86be" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867998/SRR24867998.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR24867998/SRR24867998.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR24867998/SRR24867998.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24867998" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867998/SRR24867998" size="5081928697" date="2023-06-07 19:17:22" md5="6c810651e7dd5779f46457a8daadb4f9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867998/SRR24867998" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT1_S1_R2_001.fastq.gz" size="7287339239" date="2023-06-07 19:16:47" md5="0d1bef0f3260541e1433b141b99b8140" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867998/TMEM119cre_cGAS_WT1_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_WT1_S1_R1_001.fastq.gz" size="3035775183" date="2023-06-07 19:16:30" md5="96ee9e2bcfb046f53c5550374f299900" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867998/TMEM119cre_cGAS_WT1_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="141918276">
+          <Read index="0" count="141918276" average="28" stdev="0"/>
+          <Read index="1" count="141918276" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="141918276"/>
+                <Elements count="16746356568"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="16746356568">
+          <Base value="A" count="4907528426"/>
+          <Base value="C" count="3616368277"/>
+          <Base value="G" count="3894900516"/>
+          <Base value="T" count="4327366987"/>
+          <Base value="N" count="192362"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20631939" alias="GSM7467233_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20631939</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467233_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7467233: Tmem119-creERT2-cGaswt/R241E microglia mouse 2, scRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP441695">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP441695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA981208</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17930968">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17930968</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7467233</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7467233</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647. Sorted nuclei were then loaded into a Chromium Single Cell Controller. ChromiumSingle Cell 3' Library &amp; Gel Bead Kit v3.1</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ablasser, EPFL" accession="SRA1651019" alias="SUB13507739">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1651019</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ablasser, EPFL">SUB13507739</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ablasser, EPFL</Name>
+      <Contact email="andrea.ablasser@epfl.ch">
+        <Address>
+          <Street>route Cantonale</Street>
+          <City>Lausanne</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Andrea</First>
+          <Last>Ablasser</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE234419" accession="SRP441695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP441695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA981208</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE234419</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>cGAS/STING drives ageing-related inflammation and neurodegeneration II</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Low-grade inflammation is a hallmark of old age and a central driver of ageing-associated impairment and disease. Multiple factors can contribute to ageing-associated inflammation, however the molecular pathways transducing aberrant inflammatory signalling and their impact in natural ageing remain poorly understood. Here we show that the cGAS-STING signalling pathway, mediating immune sensing of DNA, is a critical driver of chronic inflammation and functional decline during ageing. Blockade of STING suppresses the inflammatory phenotypes of senescent human cells and tissues, attenuates ageing-related inflammation in multiple peripheral organs and the brain in mice, and leads to an improvement in tissue function. Focusing on the ageing brain, we reveal that activation of STING triggers reactive microglia transcriptional states, neurodegeneration and cognitive decline. Cytosolic DNA released from perturbed mitochondria elicits cGAS activity in old microglia defining a mechanism by which cGAS-STING signalling is engaged in the ageing brain. Single-nuclei RNA-sequencing (snRNA-seq) of microglia and hippocampi of a newly developed cGAS gain-of-function mouse model demonstrates that engagement of cGAS in microglia is sufficient to direct ageing-associated transcriptional microglia states leading to bystander cell inflammation, neurotoxicity and impaired memory capacity. Our findings establish the cGAS-STING pathway as a critical driver of ageing-related inflammation in peripheral organs and the brain, and reveal blockade of cGAS-STING signalling as a potential strategy to halt (neuro)degenerative processes during old age. Overall design: 20m old aged mice were treated for 16w with DMSO or H151 over 24w. Aged mice were injected intraperitoneally with 750 nmol H151 per mouse five days a week for 8 weeks. The mice were rested for 8 weeks, and 8 weeks of treatment were repeated one more time. Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE234419</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37532932</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA981203</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7467233" accession="SRS17930968">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17930968</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35667942</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467233</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Tmem119-creERT2-cGaswt/R241E microglia mouse 2, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>981208</ID>
+            <LABEL>PRJNA981208</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>cGasR241E</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17930968" sample_name="GSM7467233" sample_title="Tmem119-creERT2-cGaswt/R241E microglia mouse 2, scRNAseq" spots="153421346" bases="18103718828" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17930968</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35667942</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467233</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="18103718828" spots="153421346" bytes="5453083062">
+      <RUN accession="SRR24867999" alias="GSM7467233_r1" total_spots="153421346" total_bases="18103718828" size="5453083062" load_done="true" published="2023-08-20 13:21:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24867999</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467233_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20631939">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7467233_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17930968" sample_name="GSM7467233" sample_title="Tmem119-creERT2-cGaswt/R241E microglia mouse 2, scRNAseq" spots="153421346" bases="18103718828" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17930968</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35667942</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7467233</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24867999.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867999/SRR24867999.lite.1" size="4695754846" date="2023-06-12 20:00:34" md5="87f9e4c9e6c1aabd07a7c5c8b8db9b00" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24867/SRR24867999/SRR24867999.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR24867999/SRR24867999.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR24867999/SRR24867999.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24867999" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867999/SRR24867999" size="5453085578" date="2023-06-07 19:06:36" md5="fccc7db64c6580d48e0f0cdc8654b093" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24867999/SRR24867999" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_lox2_S6_R2_001.fastq.gz" size="7722478894" date="2023-06-07 19:05:34" md5="73e7e4ac9b2d87c02116f70a43d74ccc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867999/TMEM119cre_cGAS_lox2_S6_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_lox2_S6_R1_001.fastq.gz" size="3255026904" date="2023-06-07 19:05:13" md5="2f5532f3ca2e6d0617ecc35dfa24fbef" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24867999/TMEM119cre_cGAS_lox2_S6_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="153421346">
+          <Read index="0" count="153421346" average="28" stdev="0"/>
+          <Read index="1" count="153421346" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="153421346"/>
+                <Elements count="18103718828"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="18103718828">
+          <Base value="A" count="5348783642"/>
+          <Base value="C" count="3903403230"/>
+          <Base value="G" count="4314134053"/>
+          <Base value="T" count="4537189144"/>
+          <Base value="N" count="208759"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20631938" alias="GSM7467232_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20631938</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467232_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7467232: Tmem119-creERT2-cGaswt/R241E microglia mouse 1, scRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP441695">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP441695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA981208</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17930967">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17930967</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7467232</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7467232</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647. Sorted nuclei were then loaded into a Chromium Single Cell Controller. ChromiumSingle Cell 3' Library &amp; Gel Bead Kit v3.1</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ablasser, EPFL" accession="SRA1651019" alias="SUB13507739">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1651019</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ablasser, EPFL">SUB13507739</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ablasser, EPFL</Name>
+      <Contact email="andrea.ablasser@epfl.ch">
+        <Address>
+          <Street>route Cantonale</Street>
+          <City>Lausanne</City>
+          <Country>Switzerland</Country>
+        </Address>
+        <Name>
+          <First>Andrea</First>
+          <Last>Ablasser</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE234419" accession="SRP441695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP441695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA981208</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE234419</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>cGAS/STING drives ageing-related inflammation and neurodegeneration II</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Low-grade inflammation is a hallmark of old age and a central driver of ageing-associated impairment and disease. Multiple factors can contribute to ageing-associated inflammation, however the molecular pathways transducing aberrant inflammatory signalling and their impact in natural ageing remain poorly understood. Here we show that the cGAS-STING signalling pathway, mediating immune sensing of DNA, is a critical driver of chronic inflammation and functional decline during ageing. Blockade of STING suppresses the inflammatory phenotypes of senescent human cells and tissues, attenuates ageing-related inflammation in multiple peripheral organs and the brain in mice, and leads to an improvement in tissue function. Focusing on the ageing brain, we reveal that activation of STING triggers reactive microglia transcriptional states, neurodegeneration and cognitive decline. Cytosolic DNA released from perturbed mitochondria elicits cGAS activity in old microglia defining a mechanism by which cGAS-STING signalling is engaged in the ageing brain. Single-nuclei RNA-sequencing (snRNA-seq) of microglia and hippocampi of a newly developed cGAS gain-of-function mouse model demonstrates that engagement of cGAS in microglia is sufficient to direct ageing-associated transcriptional microglia states leading to bystander cell inflammation, neurotoxicity and impaired memory capacity. Our findings establish the cGAS-STING pathway as a critical driver of ageing-related inflammation in peripheral organs and the brain, and reveal blockade of cGAS-STING signalling as a potential strategy to halt (neuro)degenerative processes during old age. Overall design: 20m old aged mice were treated for 16w with DMSO or H151 over 24w. Aged mice were injected intraperitoneally with 750 nmol H151 per mouse five days a week for 8 weeks. The mice were rested for 8 weeks, and 8 weeks of treatment were repeated one more time. Nuclei from mouse brain were extracted by homogenizing mouse brain tissues in Nuclei EZ Lysis Buffer using a douncer. Nuclei were labelled with DAPI and sorted for sequencing. To enrich microglial cells, in addition to DAPI staining, nuclei were stained with anti-RBFOX3/NeuN-647.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE234419</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37532932</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA981203</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7467232" accession="SRS17930967">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17930967</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35667943</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7467232</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Tmem119-creERT2-cGaswt/R241E microglia mouse 1, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>981208</ID>
+            <LABEL>PRJNA981208</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>cGasR241E</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17930967" sample_name="GSM7467232" sample_title="Tmem119-creERT2-cGaswt/R241E microglia mouse 1, scRNAseq" spots="262925809" bases="31025245462" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17930967</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35667943</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467232</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="31025245462" spots="262925809" bytes="9289943229">
+      <RUN accession="SRR24868000" alias="GSM7467232_r1" total_spots="262925809" total_bases="31025245462" size="9289943229" load_done="true" published="2023-08-20 13:21:26" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24868000</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7467232_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20631938">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7467232_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS17930967" sample_name="GSM7467232" sample_title="Tmem119-creERT2-cGaswt/R241E microglia mouse 1, scRNAseq" spots="262925809" bases="31025245462" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17930967</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35667943</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7467232</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24868000.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24868/SRR24868000/SRR24868000.lite.1" size="8000272784" date="2023-06-12 20:10:14" md5="6f8254ee3bacd23928843cc0e82a2370" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR024/24868/SRR24868000/SRR24868000.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR24868000/SRR24868000.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR24868000/SRR24868000.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24868000" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24868000/SRR24868000" size="9289945748" date="2023-06-07 19:57:36" md5="f662c620f1f5e0619a2b299edb0fa24a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24868000/SRR24868000" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_lox1_S3_R2_001.fastq.gz" size="13185203590" date="2023-06-07 19:56:29" md5="e38631f28348cd50577a3eff7ca1991e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24868000/TMEM119cre_cGAS_lox1_S3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="TMEM119cre_cGAS_lox1_S3_R1_001.fastq.gz" size="5497359238" date="2023-06-07 19:55:36" md5="98ab57ef661d7595c66e970e4ec905cc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-15/SRR24868000/TMEM119cre_cGAS_lox1_S3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="262925809">
+          <Read index="0" count="262925809" average="28" stdev="0"/>
+          <Read index="1" count="262925809" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="262925809"/>
+                <Elements count="31025245462"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="31025245462">
+          <Base value="A" count="9114838409"/>
+          <Base value="C" count="6682102240"/>
+          <Base value="G" count="7300891170"/>
+          <Base value="T" count="7927058216"/>
+          <Base value="N" count="355427"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

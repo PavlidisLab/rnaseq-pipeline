@@ -10,14 +10,17 @@ from requests.auth import HTTPBasicAuth
 
 class gemma(luigi.Config):
     task_namespace = 'rnaseq_pipeline'
-    baseurl = luigi.Parameter()
-    appdata_dir = luigi.Parameter()
-    cli_bin = luigi.Parameter()
-    cli_JAVA_HOME = luigi.Parameter()
-    cli_JAVA_OPTS = luigi.Parameter()
-    human_reference_id = luigi.Parameter()
-    mouse_reference_id = luigi.Parameter()
-    rat_reference_id = luigi.Parameter()
+    baseurl: str = luigi.Parameter()
+    appdata_dir: str = luigi.Parameter()
+    cli_bin: str = luigi.Parameter()
+    cli_JAVA_HOME: str = luigi.Parameter()
+    cli_JAVA_OPTS: str = luigi.Parameter()
+    human_reference_id: str = luigi.Parameter()
+    mouse_reference_id: str = luigi.Parameter()
+    rat_reference_id: str = luigi.Parameter()
+    human_single_cell_reference_id: str = luigi.Parameter()
+    mouse_single_cell_reference_id: str = luigi.Parameter()
+    rat_single_cell_reference_id: str = luigi.Parameter()
 
 cfg = gemma()
 
@@ -94,6 +97,13 @@ class GemmaTaskMixin:
     def reference_id(self):
         try:
             return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[
+                self.taxon]
+        except KeyError:
+            raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
+
+    def single_cell_reference_id(self):
+        try:
+            return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id, 'rat': cfg.rat_single_cell_reference_id}[
                 self.taxon]
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))

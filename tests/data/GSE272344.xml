@@ -1,0 +1,1876 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344180" alias="GSM8398841_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344180</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398841_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398841: Hippocampus, Li deficient, rep 5; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011389">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011389</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398841</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398841</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398841" accession="SRS22011389">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011389</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533718</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398841</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Li deficient, rep 5</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Li deficient diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011389" sample_name="GSM8398841" sample_title="Hippocampus, Li deficient, rep 5" spots="462098776" bases="63769631088" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011389</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533718</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398841</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="63769631088" spots="462098776" bytes="19212516058">
+      <RUN accession="SRR29846342" alias="GSM8398841_r1" total_spots="462098776" total_bases="63769631088" size="19212516058" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846342</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398841_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344180">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398841_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011389" sample_name="GSM8398841" sample_title="Hippocampus, Li deficient, rep 5" spots="462098776" bases="63769631088" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011389</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533718</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398841</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LiDef5_I1.fastq.gz" size="3067571889" date="2024-07-16 17:12:06" md5="6c5433e7a891d85cff0f6142af7ed359" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846342/LiDef5_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef5_I2.fastq.gz" size="2827501226" date="2024-07-16 17:12:14" md5="7ec2cce7c42d9c21eb4906703e0f9076" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846342/LiDef5_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef5_R1.fastq.gz" size="9437536269" date="2024-07-16 17:12:31" md5="7608661dee0ec67e3d06341bef47627e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846342/LiDef5_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef5_R2.fastq.gz" size="21164096904" date="2024-07-16 17:13:09" md5="4e2357c8dad3460e9720b75487cd7791" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846342/LiDef5_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846342" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846342/SRR29846342" size="19212518280" date="2024-07-16 17:16:51" md5="8a78a558a08f658e99bf90066bb2a411" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846342/SRR29846342" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846342.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846342/SRR29846342.lite.1" size="16587073928" date="2024-07-16 18:08:52" md5="9147c0db2d21bb1f30656f35195934d4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846342/SRR29846342.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846342/SRR29846342.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846342/SRR29846342.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="462098776">
+          <Read index="0" count="462098776" average="10" stdev="0"/>
+          <Read index="1" count="462098776" average="10" stdev="0"/>
+          <Read index="2" count="462098776" average="28" stdev="0"/>
+          <Read index="3" count="462098776" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="462098776"/>
+                <Elements count="63769631088"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41588889840">
+          <Base value="A" count="12894519731"/>
+          <Base value="C" count="8363810292"/>
+          <Base value="G" count="9753425580"/>
+          <Base value="T" count="10576327555"/>
+          <Base value="N" count="806682"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344179" alias="GSM8398840_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344179</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398840_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398840: Hippocampus, Li deficient, rep 4; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011388">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011388</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398840</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398840</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398840" accession="SRS22011388">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011388</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533719</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398840</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Li deficient, rep 4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Li deficient diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011388" sample_name="GSM8398840" sample_title="Hippocampus, Li deficient, rep 4" spots="457967497" bases="63199514586" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011388</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533719</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398840</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="63199514586" spots="457967497" bytes="19086382300">
+      <RUN accession="SRR29846343" alias="GSM8398840_r1" total_spots="457967497" total_bases="63199514586" size="19086382300" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846343</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398840_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344179">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398840_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011388" sample_name="GSM8398840" sample_title="Hippocampus, Li deficient, rep 4" spots="457967497" bases="63199514586" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011388</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533719</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398840</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LiDef4_I1.fastq.gz" size="2759709441" date="2024-07-16 17:24:33" md5="a761cd82fdeb01b17be0f71f1c461fc7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846343/LiDef4_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef4_I2.fastq.gz" size="2819424278" date="2024-07-16 17:25:09" md5="1e0f2be2f7f3935840ae8e92a6ce9b9f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846343/LiDef4_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef4_R1.fastq.gz" size="9318832183" date="2024-07-16 17:27:18" md5="8104be68f927f0195bccb41135124b9d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846343/LiDef4_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef4_R2.fastq.gz" size="21319173167" date="2024-07-16 17:32:16" md5="6690a1305571490bb2bde5b109424845" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846343/LiDef4_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846343" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846343/SRR29846343" size="19086384521" date="2024-07-16 17:41:43" md5="69ae765973a25f627aa50db81de75a48" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846343/SRR29846343" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846343.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846343/SRR29846343.lite.1" size="16429585953" date="2024-07-16 18:08:52" md5="526836e08c097f7ce1849d7b4051d4dc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846343/SRR29846343.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846343/SRR29846343.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846343/SRR29846343.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="457967497">
+          <Read index="0" count="457967497" average="10" stdev="0"/>
+          <Read index="1" count="457967497" average="10" stdev="0"/>
+          <Read index="2" count="457967497" average="28" stdev="0"/>
+          <Read index="3" count="457967497" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="457967497"/>
+                <Elements count="63199514586"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41217074730">
+          <Base value="A" count="12655274912"/>
+          <Base value="C" count="8381794970"/>
+          <Base value="G" count="9494799210"/>
+          <Base value="T" count="10684401864"/>
+          <Base value="N" count="803774"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344178" alias="GSM8398839_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344178</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398839_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398839: Hippocampus, Li deficient, rep 3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011387">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011387</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398839</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398839</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398839" accession="SRS22011387">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011387</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533720</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398839</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Li deficient, rep 3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Li deficient diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011387" sample_name="GSM8398839" sample_title="Hippocampus, Li deficient, rep 3" spots="544066569" bases="75081186522" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011387</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533720</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="75081186522" spots="544066569" bytes="23191244101">
+      <RUN accession="SRR29846344" alias="GSM8398839_r1" total_spots="544066569" total_bases="75081186522" size="23191244101" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846344</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398839_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344178">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398839_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011387" sample_name="GSM8398839" sample_title="Hippocampus, Li deficient, rep 3" spots="544066569" bases="75081186522" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011387</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533720</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398839</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LiDef3_I1.fastq.gz" size="3178106544" date="2024-07-16 17:25:50" md5="3ab209d59b21ab891f0c2d1f37892497" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846344/LiDef3_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef3_I2.fastq.gz" size="3769381016" date="2024-07-16 17:25:20" md5="d709daaad815cd09a157b4a4503f58f2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846344/LiDef3_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef3_R1.fastq.gz" size="11035754637" date="2024-07-16 17:27:24" md5="a8b81272b12ab1d34f8f3aea25bd5d01" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846344/LiDef3_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef3_R2.fastq.gz" size="25905145191" date="2024-07-16 17:30:59" md5="29f8c39b86c3957fd00d1dee6c502091" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846344/LiDef3_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846344" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846344/SRR29846344" size="23191246322" date="2024-07-16 17:35:02" md5="9dd2c3b2baea25f6c20b806485e6ba91" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846344/SRR29846344" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846344.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846344/SRR29846344.lite.1" size="19475633550" date="2024-07-16 18:14:54" md5="123b098673c2e7edec6cc041266edca6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846344/SRR29846344.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846344/SRR29846344.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846344/SRR29846344.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="544066569">
+          <Read index="0" count="544066569" average="10" stdev="0"/>
+          <Read index="1" count="544066569" average="10" stdev="0"/>
+          <Read index="2" count="544066569" average="28" stdev="0"/>
+          <Read index="3" count="544066569" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="544066569"/>
+                <Elements count="75081186522"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="48965991210">
+          <Base value="A" count="14934726015"/>
+          <Base value="C" count="9876019392"/>
+          <Base value="G" count="11158726289"/>
+          <Base value="T" count="12995565684"/>
+          <Base value="N" count="953830"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344177" alias="GSM8398838_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344177</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398838_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398838: Hippocampus, Li deficient, rep 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011385">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011385</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398838</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398838</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398838" accession="SRS22011385">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011385</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533721</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398838</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Li deficient, rep 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Li deficient diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011385" sample_name="GSM8398838" sample_title="Hippocampus, Li deficient, rep 2" spots="533708375" bases="73651755750" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011385</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533721</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398838</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="73651755750" spots="533708375" bytes="22519503512">
+      <RUN accession="SRR29846345" alias="GSM8398838_r1" total_spots="533708375" total_bases="73651755750" size="22519503512" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846345</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398838_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344177">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398838_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011385" sample_name="GSM8398838" sample_title="Hippocampus, Li deficient, rep 2" spots="533708375" bases="73651755750" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011385</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533721</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398838</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LiDef2_I1.fastq.gz" size="3182662708" date="2024-07-17 05:07:00" md5="145c1c68d4398a29f33088b20c843f86" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29846345/LiDef2_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef2_I2.fastq.gz" size="3503188685" date="2024-07-17 05:06:32" md5="6d8731a5b2eb861ac976c3c8058fe80d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29846345/LiDef2_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef2_R1.fastq.gz" size="10846524695" date="2024-07-17 05:08:32" md5="a328415436388c4efc9fd7a06a522c64" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29846345/LiDef2_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef2_R2.fastq.gz" size="24966290735" date="2024-07-17 05:12:02" md5="9ebf90abb097c76359c0f29df3754114" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29846345/LiDef2_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846345" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846345/SRR29846345" size="22519506030" date="2024-07-17 05:15:52" md5="45b336b3b1ff9e28a118e7f89d940f0e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846345/SRR29846345" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846345.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846345/SRR29846345.lite.1" size="19288503114" date="2024-07-17 07:10:26" md5="42e5f11aa6ede3e81fb75295834df6d5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846345/SRR29846345.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846345/SRR29846345.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846345/SRR29846345.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="533708375">
+          <Read index="0" count="533708375" average="10" stdev="0"/>
+          <Read index="1" count="533708375" average="10" stdev="0"/>
+          <Read index="2" count="533708375" average="28" stdev="0"/>
+          <Read index="3" count="533708375" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="533708375"/>
+                <Elements count="73651755750"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="48033753750">
+          <Base value="A" count="14627802024"/>
+          <Base value="C" count="9690574550"/>
+          <Base value="G" count="10921154433"/>
+          <Base value="T" count="12793283844"/>
+          <Base value="N" count="938899"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344176" alias="GSM8398837_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344176</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398837_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398837: Hippocampus, Li deficient, rep 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011386">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011386</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398837</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398837</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398837" accession="SRS22011386">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011386</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533722</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398837</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Li deficient, rep 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Li deficient diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011386" sample_name="GSM8398837" sample_title="Hippocampus, Li deficient, rep 1" spots="262718732" bases="36255185016" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011386</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533722</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398837</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="36255185016" spots="262718732" bytes="11239924707">
+      <RUN accession="SRR29846346" alias="GSM8398837_r1" total_spots="262718732" total_bases="36255185016" size="11239924707" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846346</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398837_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344176">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398837_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011386" sample_name="GSM8398837" sample_title="Hippocampus, Li deficient, rep 1" spots="262718732" bases="36255185016" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011386</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533722</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398837</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="LiDef1_I1.fastq.gz" size="1658228643" date="2024-07-16 16:50:51" md5="704ef2d4f777c4c95a5c88a15ab21079" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846346/LiDef1_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef1_I2.fastq.gz" size="1993473477" date="2024-07-16 16:50:34" md5="2cef1711db29bf8261e74abf0dbd26ee" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846346/LiDef1_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef1_R1.fastq.gz" size="5446545074" date="2024-07-16 16:51:39" md5="ef4a640713eb578191f8f2377b22d8e3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846346/LiDef1_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="LiDef1_R2.fastq.gz" size="11860624443" date="2024-07-16 16:53:20" md5="dc2e011b1e8c003ff8d8b6327f0fde9b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846346/LiDef1_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846346" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846346/SRR29846346" size="11239926930" date="2024-07-16 16:55:21" md5="3746db98a6e534a809456046e802933f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846346/SRR29846346" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846346.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846346/SRR29846346.lite.1" size="9472335594" date="2024-07-16 18:07:41" md5="df6cd6af8e28cd5a985733a215606a42" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846346/SRR29846346.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846346/SRR29846346.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846346/SRR29846346.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="262718732">
+          <Read index="0" count="262718732" average="10" stdev="0"/>
+          <Read index="1" count="262718732" average="10" stdev="0"/>
+          <Read index="2" count="262718732" average="28" stdev="0"/>
+          <Read index="3" count="262718732" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="262718732"/>
+                <Elements count="36255185016"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="23644685880">
+          <Base value="A" count="7277314103"/>
+          <Base value="C" count="4652984201"/>
+          <Base value="G" count="5809906239"/>
+          <Base value="T" count="5904036143"/>
+          <Base value="N" count="445194"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344175" alias="GSM8398836_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344175</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398836_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398836: Hippocampus, Control, rep 4; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011384">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011384</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398836</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398836</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398836" accession="SRS22011384">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011384</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533723</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398836</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Control, rep 4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011384" sample_name="GSM8398836" sample_title="Hippocampus, Control, rep 4" spots="475113007" bases="65565594966" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011384</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533723</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398836</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="65565594966" spots="475113007" bytes="20377346534">
+      <RUN accession="SRR29846347" alias="GSM8398836_r1" total_spots="475113007" total_bases="65565594966" size="20377346534" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846347</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398836_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344175">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398836_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011384" sample_name="GSM8398836" sample_title="Hippocampus, Control, rep 4" spots="475113007" bases="65565594966" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011384</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533723</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398836</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="CTRL4_I1.fastq.gz" size="3144467016" date="2024-07-16 16:38:22" md5="698a08ac39977d5332514cb5dbb40aae" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846347/CTRL4_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL4_I2.fastq.gz" size="3531668104" date="2024-07-16 16:38:17" md5="1f001c9750bfb3b856dd57b0d60d5f8f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846347/CTRL4_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL4_R1.fastq.gz" size="9706034655" date="2024-07-16 16:38:35" md5="bba7b2d0cf64d127978530f244ca2f7f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846347/CTRL4_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL4_R2.fastq.gz" size="22341040494" date="2024-07-16 16:39:00" md5="df1d915befdf65e9b1ac932f53ebe3da" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846347/CTRL4_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846347" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846347/SRR29846347" size="20377348754" date="2024-07-16 16:39:58" md5="51ef9981fbf43821f509129f82820add" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846347/SRR29846347" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846347.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846347/SRR29846347.lite.1" size="17046363058" date="2024-07-16 18:06:11" md5="c02475eafc098b069dcddfb90cdda850" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846347/SRR29846347.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846347/SRR29846347.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846347/SRR29846347.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="475113007">
+          <Read index="0" count="475113007" average="10" stdev="0"/>
+          <Read index="1" count="475113007" average="10" stdev="0"/>
+          <Read index="2" count="475113007" average="28" stdev="0"/>
+          <Read index="3" count="475113007" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="475113007"/>
+                <Elements count="65565594966"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="42760170630">
+          <Base value="A" count="13074510631"/>
+          <Base value="C" count="8730238788"/>
+          <Base value="G" count="9848940025"/>
+          <Base value="T" count="11105655528"/>
+          <Base value="N" count="825658"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344174" alias="GSM8398835_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344174</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398835_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398835: Hippocampus, Control, rep 3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011381">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011381</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398835</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398835</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398835" accession="SRS22011381">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011381</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398835</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Control, rep 3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011381" sample_name="GSM8398835" sample_title="Hippocampus, Control, rep 3" spots="495126913" bases="68327513994" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011381</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533724</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398835</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="68327513994" spots="495126913" bytes="21059752992">
+      <RUN accession="SRR29846348" alias="GSM8398835_r1" total_spots="495126913" total_bases="68327513994" size="21059752992" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846348</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398835_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344174">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398835_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011381" sample_name="GSM8398835" sample_title="Hippocampus, Control, rep 3" spots="495126913" bases="68327513994" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011381</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533724</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398835</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="CTRL3_I1.fastq.gz" size="3382620134" date="2024-07-16 16:49:45" md5="af93ce203c526057a40e0f2cde553cf8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846348/CTRL3_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL3_I2.fastq.gz" size="3364489936" date="2024-07-16 16:49:39" md5="722868db42f7a633f65aaeedfbaa4f8e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846348/CTRL3_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL3_R1.fastq.gz" size="10096658620" date="2024-07-16 16:50:02" md5="87dca90c118e030e43962ee507e4250c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846348/CTRL3_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL3_R2.fastq.gz" size="23306880515" date="2024-07-16 16:50:28" md5="48f43d8c0981e20cade468884aff2144" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846348/CTRL3_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846348" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846348/SRR29846348" size="21059755215" date="2024-07-16 16:52:22" md5="2e77ea3eb3f67796a9432ec3291e6e40" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846348/SRR29846348" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846348.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846348/SRR29846348.lite.1" size="17744152187" date="2024-07-16 18:06:59" md5="adac1c682f7b8e728bf008c1f7569d62" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846348/SRR29846348.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846348/SRR29846348.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846348/SRR29846348.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="495126913">
+          <Read index="0" count="495126913" average="10" stdev="0"/>
+          <Read index="1" count="495126913" average="10" stdev="0"/>
+          <Read index="2" count="495126913" average="28" stdev="0"/>
+          <Read index="3" count="495126913" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="495126913"/>
+                <Elements count="68327513994"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="44561422170">
+          <Base value="A" count="13847716590"/>
+          <Base value="C" count="8940450431"/>
+          <Base value="G" count="10107825184"/>
+          <Base value="T" count="11664561234"/>
+          <Base value="N" count="868731"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344173" alias="GSM8398834_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344173</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398834_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398834: Hippocampus, Control, rep 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011382">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011382</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398834</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398834</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398834" accession="SRS22011382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011382</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533725</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398834</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Control, rep 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011382" sample_name="GSM8398834" sample_title="Hippocampus, Control, rep 2" spots="520896727" bases="71883748326" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011382</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533725</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398834</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="71883748326" spots="520896727" bytes="21967296199">
+      <RUN accession="SRR29846349" alias="GSM8398834_r1" total_spots="520896727" total_bases="71883748326" size="21967296199" load_done="true" published="2025-06-09 22:22:32" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846349</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398834_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344173">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398834_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011382" sample_name="GSM8398834" sample_title="Hippocampus, Control, rep 2" spots="520896727" bases="71883748326" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011382</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533725</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398834</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="CTRL2_I1.fastq.gz" size="3258530701" date="2024-07-16 16:59:57" md5="ac2ef36385fb80e86e383659d23f6b4c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846349/CTRL2_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL2_I2.fastq.gz" size="3389215722" date="2024-07-16 17:00:03" md5="b996f682e5ae4e94088212cc0249fd33" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846349/CTRL2_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL2_R1.fastq.gz" size="10571538746" date="2024-07-16 17:00:16" md5="f1ede679a997080d2f17e61eba8947c2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846349/CTRL2_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL2_R2.fastq.gz" size="24558130421" date="2024-07-16 17:00:46" md5="e33ec561bb12c317e746e1a1897d8bf1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-11/SRR29846349/CTRL2_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846349" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846349/SRR29846349" size="21967298415" date="2024-07-16 17:01:52" md5="34bf4d93f8a56fe0cffa332c451c5606" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846349/SRR29846349" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846349.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846349/SRR29846349.lite.1" size="18666302275" date="2024-07-16 18:09:26" md5="c59d6d5f298eed3626e7e8665b25549e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846349/SRR29846349.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846349/SRR29846349.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846349/SRR29846349.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="520896727">
+          <Read index="0" count="520896727" average="10" stdev="0"/>
+          <Read index="1" count="520896727" average="10" stdev="0"/>
+          <Read index="2" count="520896727" average="28" stdev="0"/>
+          <Read index="3" count="520896727" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="520896727"/>
+                <Elements count="71883748326"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="46880705430">
+          <Base value="A" count="14369782020"/>
+          <Base value="C" count="9408066944"/>
+          <Base value="G" count="10675204341"/>
+          <Base value="T" count="12426740040"/>
+          <Base value="N" count="912085"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25344172" alias="GSM8398833_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25344172</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398833_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8398833: Hippocampus, Control, rep 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP520250">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP520250</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1136488</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22011383">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22011383</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8398833</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8398833</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were cardiac perfused with ice cold PBS and a cocktail of transcription inhibitors at a speed of 6mL/min for 8 mins to repress transcriptional response during the brain dissection and sample preparation. Hippocampal tissue was dissected on ice and flash frozen in liquid nitrogen. Both frozen hippocampal tissues were subsequently thawed together in 500µL of HB buffer (0.25M sucrose, 25mM KCl, 5mM MgCl2, 20mM Tricine-KOH, pH=7.8, 1mM DTT, 0.15mM spermine and 0.5mM spermidine) and homogenized with tight pestle of dounce homogenizer in the same HB buffer with additional 0.32% of IGEPAL (Sigma) (average of 25-30 times per sample) on ice. Subsequently, single nuclei were diluted to 9 mL in HB buffer, passed through the 40-μm filter and separated from debris and multinuclei by iodixanol gradient centrifugation. Specifically, we prepared 1 mL of 40% iodixanol in the bottom, 1 mL of 30% iodixanol in the middle layer and gently layered 9 mL of the diluted nuclei suspension on top of the 30% iodixanol layer for 18 minutes, 10,000g centrifugation. Single nuclei were recovered from the 30% iodixanol layer in between the 30% and 40% interface. An aliquot was taken for nuclei counting and visual inspection of nucleic morphology under the microscope. The rest of nucleic suspension was diluted for nuclei encapsulation and sequencing library preparation. The scRNA-seq libraries are prepared at the Harvard Single Cell Core, according to the 10X Genomics manual.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Harvard Medical School" accession="SRA1925976" alias="SUB14607704">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1925976</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Harvard Medical School">SUB14607704</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Harvard Medical School</Name>
+      <Contact email="danesh_moazed@hms.harvard.edu">
+        <Address>
+          <Street>240 Longwood Ave</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Danesh</First>
+          <Last>Moazed</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272344" accession="SRP520250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP520250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1136488</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272344</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lithium Deficiency and the Onset of Alzheimer's Disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The non-genetic causes of Alzheimer's disease (AD) are poorly understood1-4. Here, we show that endogenous lithium (Li) is a dynamically regulated metal in the brain.  Li uptake is the most significantly impaired of all metals analyzed in aged individuals with mild cognitive impairment (MCI) and AD, but not in aging individuals with normal cognitive function.  In addition, lithium is sequestered by aggregated amyloid ß-protein (Aß) in human AD and AD mouse models, significantly reducing Li bioavailability. The loss of Li observed in human AD was recapitulated in AD mouse models by feeding a lithium-deficient diet.  Loss of only 50% of endogenous brain Li resulted in markedly elevated Aß deposition through a predominant effect on Aß42, as well as elevated tau phosphorylation in neurofibrillary tangle-like structures.  Li deficiency also resulted in synapse loss, oligodendrocyte and myelin loss, and microglia with impaired Aß degradative capacity and a proinflammatory phenotype, as well as significantly accelerated memory loss.  Diet-induced Li deficiency in aging wild-type mice also gave rise to elevated Aß42 generation, synapse loss, proinflammatory astroglial and microglial responses, and accelerated memory loss.   A major consequence of endogenous Li deficiency is activation of the tau kinase GSK3ß. At the systems level, Li deficiency induced a state of neural hyperexcitation.  To explore a new therapeutic approach to AD, we screened lithium salts and identified lithium orotate as a salt with low amyloid binding and high brain uptake. LiO prevents and reverses AD pathology and memory loss in AD mouse models and wild-type mice, and is approximately 100-fold more potent than the clinical standard Li carbonate.  LiO did not show evidence of toxicity after treatment with a therapeutic dose for most of the adult mouse lifespan. Thus, Li deficiency may be an early molecular event in the ontogeny of AD with protean multisystem effects in the brain. Overall design: We performed snRNA-seq on the hippocampus of n=4 3xTg mice with regular diet and n=5 3xTg mice after 1 month of lithium deficient diet.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272344</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8398833" accession="SRS22011383">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22011383</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42533726</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8398833</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, Control, rep 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1136488</ID>
+            <LABEL>PRJNA1136488</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Mouse hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>3xTg</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control diet, 1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22011383" sample_name="GSM8398833" sample_title="Hippocampus, Control, rep 1" spots="459858297" bases="63460444986" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22011383</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42533726</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398833</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="63460444986" spots="459858297" bytes="19726937552">
+      <RUN accession="SRR29846350" alias="GSM8398833_r1" total_spots="459858297" total_bases="63460444986" size="19726937552" load_done="true" published="2025-06-09 22:22:31" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29846350</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8398833_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25344172">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8398833_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22011383" sample_name="GSM8398833" sample_title="Hippocampus, Control, rep 1" spots="459858297" bases="63460444986" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22011383</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42533726</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8398833</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="CTRL1_I1.fastq.gz" size="3470888679" date="2024-07-16 17:29:49" md5="79701872857d44567879fccf63a02523" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846350/CTRL1_I1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL1_I2.fastq.gz" size="3000861483" date="2024-07-16 17:30:30" md5="16c51abaa0e8d2b9897c3923a62143cb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846350/CTRL1_I2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL1_R1.fastq.gz" size="9379937221" date="2024-07-16 17:32:30" md5="23a96b8c46434f10838a4821d429472b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846350/CTRL1_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="CTRL1_R2.fastq.gz" size="21691791809" date="2024-07-16 17:37:47" md5="9a103767da7a88fcabc0dfd15ce1d12c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR29846350/CTRL1_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846350" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846350/SRR29846350" size="19726939775" date="2024-07-16 17:51:20" md5="fe8f3d189ecd664df308a5c401b41c7c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29846350/SRR29846350" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29846350.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846350/SRR29846350.lite.1" size="16498251723" date="2024-07-16 18:13:01" md5="d8db643ccdad9f773c30dea5c700032d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR029/29846/SRR29846350/SRR29846350.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29846350/SRR29846350.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-107/SRR29846350/SRR29846350.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="459858297">
+          <Read index="0" count="459858297" average="10" stdev="0"/>
+          <Read index="1" count="459858297" average="10" stdev="0"/>
+          <Read index="2" count="459858297" average="28" stdev="0"/>
+          <Read index="3" count="459858297" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="459858297"/>
+                <Elements count="63460444986"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41387246730">
+          <Base value="A" count="12605688485"/>
+          <Base value="C" count="8376870701"/>
+          <Base value="G" count="9550220180"/>
+          <Base value="T" count="10853669113"/>
+          <Base value="N" count="798251"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

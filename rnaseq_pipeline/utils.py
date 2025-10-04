@@ -3,7 +3,7 @@ import logging
 import luigi
 from luigi.task import flatten_output
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
 
 class IlluminaFastqHeader:
     @classmethod

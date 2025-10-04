@@ -1,0 +1,1692 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521087" alias="GSM7898992_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521087</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898992_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898992: P_421_4; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532534">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532534</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898992</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898992</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898992" accession="SRS19532534">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532534</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249595</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898992</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>P_421_4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>peritoneal lesions from ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532534" sample_name="GSM7898992" sample_title="P_421_4" spots="95265888" bases="30485084160" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532534</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249595</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898992</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="30485084160" spots="95265888" bytes="11656736330">
+      <RUN accession="SRR26824401" alias="GSM7898992_r1" total_spots="95265888" total_bases="30485084160" size="11656736330" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824401</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898992_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521087">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898992_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532534" sample_name="GSM7898992" sample_title="P_421_4" spots="95265888" bases="30485084160" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532534</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249595</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898992</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_I1_001.fastq.gz" size="751706285" date="2023-11-14 13:09:49" md5="a0196cf9361680b7c0a6a7cc25413ca7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824401/P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_I2_001.fastq.gz" size="646198843" date="2023-11-14 13:09:52" md5="8355057dcaafe3fd79f0f1cea35d6786" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824401/P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_R1_001.fastq.gz" size="7961120066" date="2023-11-14 13:10:05" md5="a127775965260d58df98bdc8e1d4f6f9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824401/P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_R2_001.fastq.gz" size="7550016628" date="2023-11-14 13:10:23" md5="03c4671aeed05383eaa54ae5dbacd995" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824401/P_421_4-SCI7T036-SCI5T036_HK2L7DSX3_S12_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824401" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824401/SRR26824401" size="11656738550" date="2023-11-14 13:11:20" md5="d1e0f56aa4a6e8a289058b10d5023e38" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824401/SRR26824401" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824401.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824401/SRR26824401.lite.1" size="7771140634" date="2023-11-19 13:43:00" md5="b7bd5a2d83cbefb658aa31235d6e17c5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824401/SRR26824401.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824401/SRR26824401.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824401/SRR26824401.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="95265888">
+          <Read index="0" count="95265888" average="10" stdev="0"/>
+          <Read index="1" count="95265888" average="10" stdev="0"/>
+          <Read index="2" count="95265888" average="150" stdev="0"/>
+          <Read index="3" count="95265888" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="95265888"/>
+                <Elements count="30485084160"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="28579766400">
+          <Base value="A" count="8688490136"/>
+          <Base value="C" count="4598783260"/>
+          <Base value="G" count="5052851338"/>
+          <Base value="T" count="10239326500"/>
+          <Base value="N" count="315166"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521086" alias="GSM7898991_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521086</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898991_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898991: P_398_4; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532533">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532533</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898991</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898991</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898991" accession="SRS19532533">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532533</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249596</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898991</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>P_398_4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>peritoneal lesions from ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532533" sample_name="GSM7898991" sample_title="P_398_4" spots="98423912" bases="31495651840" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532533</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249596</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898991</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="31495651840" spots="98423912" bytes="12020287341">
+      <RUN accession="SRR26824402" alias="GSM7898991_r1" total_spots="98423912" total_bases="31495651840" size="12020287341" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824402</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898991_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521086">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898991_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532533" sample_name="GSM7898991" sample_title="P_398_4" spots="98423912" bases="31495651840" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532533</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249596</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898991</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_I1_001.fastq.gz" size="673305165" date="2023-11-14 13:11:07" md5="8cd207285e03efc76702b1ddd3511a09" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824402/P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_I2_001.fastq.gz" size="740925973" date="2023-11-14 13:11:04" md5="6219f9619319ac35d4a2d8aaab621edb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824402/P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_R1_001.fastq.gz" size="8211312755" date="2023-11-14 13:11:25" md5="db38b18dd1738d412219c735b71d77f9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824402/P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_R2_001.fastq.gz" size="7785399193" date="2023-11-14 13:11:48" md5="cd31927a580ec91dce50e752c75663d6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824402/P_398_4-SCI7T030-SCI5T030_HK2L7DSX3_S6_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824402" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824402/SRR26824402" size="12020289561" date="2023-11-14 13:14:15" md5="faf7da1c672f52fecaf72201d5876229" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824402/SRR26824402" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824402.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824402/SRR26824402.lite.1" size="8027361589" date="2023-11-19 13:45:06" md5="ead415517512577c31db9a9e9e824003" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824402/SRR26824402.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824402/SRR26824402.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824402/SRR26824402.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="98423912">
+          <Read index="0" count="98423912" average="10" stdev="0"/>
+          <Read index="1" count="98423912" average="10" stdev="0"/>
+          <Read index="2" count="98423912" average="150" stdev="0"/>
+          <Read index="3" count="98423912" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="98423912"/>
+                <Elements count="31495651840"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="29527173600">
+          <Base value="A" count="9134315664"/>
+          <Base value="C" count="4722574072"/>
+          <Base value="G" count="5144531273"/>
+          <Base value="T" count="10525426699"/>
+          <Base value="N" count="325892"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521085" alias="GSM7898990_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521085</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898990_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898990: P_432_5; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532532">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532532</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898990</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898990</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898990" accession="SRS19532532">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532532</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249597</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898990</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>P_432_5</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>peritoneal lesions from ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532532" sample_name="GSM7898990" sample_title="P_432_5" spots="97593574" bases="31229943680" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532532</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249597</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898990</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="31229943680" spots="97593574" bytes="12025094458">
+      <RUN accession="SRR26824403" alias="GSM7898990_r1" total_spots="97593574" total_bases="31229943680" size="12025094458" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824403</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898990_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521085">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898990_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532532" sample_name="GSM7898990" sample_title="P_432_5" spots="97593574" bases="31229943680" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532532</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249597</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898990</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_I1_001.fastq.gz" size="622243204" date="2023-11-14 13:11:01" md5="411f74a32852a36a70b6178d63cab05d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824403/P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_I2_001.fastq.gz" size="734962283" date="2023-11-14 13:10:58" md5="062f55ba75e7465cf2dcece8ef33694f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824403/P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_R1_001.fastq.gz" size="8207113467" date="2023-11-14 13:11:27" md5="6fa17ae13ece7f3ae6989a5f77ef7c41" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824403/P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_R2_001.fastq.gz" size="7865217564" date="2023-11-14 13:11:11" md5="4e53595eff92c825a9d6af7e05668355" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824403/P_432_5-SCI7T032-SCI5T032_HK2L7DSX3_S8_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824403" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824403/SRR26824403" size="12025096681" date="2023-11-14 13:12:16" md5="51fb18c5576100febdc21a478c6754e4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824403/SRR26824403" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824403.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824403/SRR26824403.lite.1" size="7958305413" date="2023-11-19 13:46:32" md5="740f4fb3ae9b959cf49215ee51308b1f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824403/SRR26824403.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824403/SRR26824403.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824403/SRR26824403.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="97593574">
+          <Read index="0" count="97593574" average="10" stdev="0"/>
+          <Read index="1" count="97593574" average="10" stdev="0"/>
+          <Read index="2" count="97593574" average="150" stdev="0"/>
+          <Read index="3" count="97593574" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="97593574"/>
+                <Elements count="31229943680"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="29278072200">
+          <Base value="A" count="8745061142"/>
+          <Base value="C" count="4845817635"/>
+          <Base value="G" count="5292359515"/>
+          <Base value="T" count="10394514195"/>
+          <Base value="N" count="319713"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521084" alias="GSM7898989_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521084</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898989_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898989: P_002_4; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532529">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532529</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898989</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898989</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898989" accession="SRS19532529">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532529</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249598</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898989</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>P_002_4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>peritoneal lesions from ectopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532529" sample_name="GSM7898989" sample_title="P_002_4" spots="75514509" bases="24164642880" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532529</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249598</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898989</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="24164642880" spots="75514509" bytes="9226434424">
+      <RUN accession="SRR26824404" alias="GSM7898989_r1" total_spots="75514509" total_bases="24164642880" size="9226434424" load_done="true" published="2024-07-21 07:36:34" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824404</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898989_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521084">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898989_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532529" sample_name="GSM7898989" sample_title="P_002_4" spots="75514509" bases="24164642880" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532529</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249598</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898989</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR26824404.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824404/SRR26824404.lite.1" size="6163036414" date="2023-11-19 13:43:45" md5="04d25af6c879157ef9d88892f22bbcf0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824404/SRR26824404.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824404/SRR26824404.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824404/SRR26824404.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824404" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824404/SRR26824404" size="9226436638" date="2023-11-14 13:27:27" md5="8aba73e97e7d64712a452c7bf540f9ea" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824404/SRR26824404" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_R2_001.fastq.gz" size="6011793499" date="2023-11-14 13:07:56" md5="7fa63e574e82a6389c5de4db02ad6570" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824404/P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_R1_001.fastq.gz" size="6324126180" date="2023-11-14 13:07:41" md5="0dc17d503d36cbc6d8091f385b3b4c34" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824404/P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_I2_001.fastq.gz" size="515853462" date="2023-11-14 13:06:12" md5="446b596a50d0ec9d90ccc68281cb1e03" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824404/P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_I1_001.fastq.gz" size="582722231" date="2023-11-14 13:06:09" md5="1f9bb8e4be0fba64f06171a2b966db48" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824404/P_002_4-SCI7T034-SCI5T034_HK2L7DSX3_S10_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="75514509">
+          <Read index="0" count="75514509" average="10" stdev="0"/>
+          <Read index="1" count="75514509" average="10" stdev="0"/>
+          <Read index="2" count="75514509" average="150" stdev="0"/>
+          <Read index="3" count="75514509" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="75514509"/>
+                <Elements count="24164642880"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="22654352700">
+          <Base value="A" count="6957663315"/>
+          <Base value="C" count="3653507678"/>
+          <Base value="G" count="3962952016"/>
+          <Base value="T" count="8079979234"/>
+          <Base value="N" count="250457"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521083" alias="GSM7898988_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521083</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898988_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898988: E_432_1; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532528">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532528</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898988</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898988</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898988" accession="SRS19532528">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532528</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249599</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898988</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>E_432_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532528" sample_name="GSM7898988" sample_title="E_432_1" spots="87065149" bases="27860847680" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532528</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249599</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898988</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="27860847680" spots="87065149" bytes="10688277375">
+      <RUN accession="SRR26824405" alias="GSM7898988_r1" total_spots="87065149" total_bases="27860847680" size="10688277375" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824405</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898988_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521083">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898988_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532528" sample_name="GSM7898988" sample_title="E_432_1" spots="87065149" bases="27860847680" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532528</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249599</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898988</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_I1_001.fastq.gz" size="567015152" date="2023-11-14 13:09:27" md5="1d0816d2952ce2fc721796425e30ad0c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824405/E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_I2_001.fastq.gz" size="661674974" date="2023-11-14 13:09:29" md5="1e601cacdc0cf5b014b5aad75bdc1805" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824405/E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_R1_001.fastq.gz" size="7327238298" date="2023-11-14 13:09:42" md5="ffa3c78ac60f01e3e8b1715d9e7a40f3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824405/E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_R2_001.fastq.gz" size="6971152759" date="2023-11-14 13:10:02" md5="ee819eb9ce5cb22bcecedad4edb53e13" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824405/E_432_1-SCI7T031-SCI5T031_HK2L7DSX3_S7_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824405" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824405/SRR26824405" size="10688279594" date="2023-11-14 13:11:31" md5="5e711848115d61ef75e1786bdb06af20" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824405/SRR26824405" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824405.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824405/SRR26824405.lite.1" size="7101419806" date="2023-11-19 13:43:29" md5="8cfd175c60e4d86c13a62e8871a8823b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824405/SRR26824405.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824405/SRR26824405.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824405/SRR26824405.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="87065149">
+          <Read index="0" count="87065149" average="10" stdev="0"/>
+          <Read index="1" count="87065149" average="10" stdev="0"/>
+          <Read index="2" count="87065149" average="150" stdev="0"/>
+          <Read index="3" count="87065149" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="87065149"/>
+                <Elements count="27860847680"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="26119544700">
+          <Base value="A" count="7916810748"/>
+          <Base value="C" count="4286543615"/>
+          <Base value="G" count="4673794669"/>
+          <Base value="T" count="9242105403"/>
+          <Base value="N" count="290265"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521082" alias="GSM7898987_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521082</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898987_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898987: E_421_1; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532531">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532531</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898987</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898987</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898987" accession="SRS19532531">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532531</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249600</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898987</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>E_421_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532531" sample_name="GSM7898987" sample_title="E_421_1" spots="68069375" bases="21782200000" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532531</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249600</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898987</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="21782200000" spots="68069375" bytes="8453031278">
+      <RUN accession="SRR26824406" alias="GSM7898987_r1" total_spots="68069375" total_bases="21782200000" size="8453031278" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824406</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898987_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521082">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898987_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532531" sample_name="GSM7898987" sample_title="E_421_1" spots="68069375" bases="21782200000" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532531</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249600</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898987</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_I1_001.fastq.gz" size="508441579" date="2023-11-14 13:07:38" md5="6e927c67cb6cb1e46104c53418caad6d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824406/E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_I2_001.fastq.gz" size="518484644" date="2023-11-14 13:07:41" md5="98b8c40bf60dfd62f212b3dc7afd0c81" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824406/E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_R1_001.fastq.gz" size="5719906854" date="2023-11-14 13:07:52" md5="f81b92c051602dd19f24e82db1c8a133" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824406/E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_R2_001.fastq.gz" size="5547269731" date="2023-11-14 13:08:06" md5="a6f4c22e835c65f95041d3e1731260e4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824406/E_421_1-SCI7T035-SCI5T035_HK2L7DSX3_S11_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824406" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824406/SRR26824406" size="8453033500" date="2023-11-14 13:08:54" md5="1a579ae77bcb86dcf73af83a2a791f57" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824406/SRR26824406" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824406.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824406/SRR26824406.lite.1" size="5557883036" date="2023-11-19 13:41:09" md5="da6f816a82214a5d6dd37d83d2180132" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824406/SRR26824406.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824406/SRR26824406.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824406/SRR26824406.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="68069375">
+          <Read index="0" count="68069375" average="10" stdev="0"/>
+          <Read index="1" count="68069375" average="10" stdev="0"/>
+          <Read index="2" count="68069375" average="150" stdev="0"/>
+          <Read index="3" count="68069375" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="68069375"/>
+                <Elements count="21782200000"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="20420812500">
+          <Base value="A" count="6268545354"/>
+          <Base value="C" count="3275301329"/>
+          <Base value="G" count="3618593845"/>
+          <Base value="T" count="7258144525"/>
+          <Base value="N" count="227447"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521081" alias="GSM7898986_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521081</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898986_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898986: E_398_1; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532530">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532530</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898986</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898986</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898986" accession="SRS19532530">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532530</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249601</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898986</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>E_398_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532530" sample_name="GSM7898986" sample_title="E_398_1" spots="84314979" bases="26980793280" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532530</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249601</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898986</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="26980793280" spots="84314979" bytes="10355497773">
+      <RUN accession="SRR26824407" alias="GSM7898986_r1" total_spots="84314979" total_bases="26980793280" size="10355497773" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824407</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898986_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521081">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898986_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532530" sample_name="GSM7898986" sample_title="E_398_1" spots="84314979" bases="26980793280" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532530</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249601</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898986</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_I1_001.fastq.gz" size="570173522" date="2023-11-14 13:17:19" md5="c095bb84c38dad973f8f8b276787c7cd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824407/E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_I2_001.fastq.gz" size="620528754" date="2023-11-14 13:17:15" md5="2343ac025269dd16924b0245264275d7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824407/E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_R1_001.fastq.gz" size="7106562149" date="2023-11-14 13:17:36" md5="cbb99cc5d025b8438ca75fa626cb00f1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824407/E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_R2_001.fastq.gz" size="6766863926" date="2023-11-14 13:18:02" md5="74f5ab00560bfb0a52d88a937096c54a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824407/E_398_1-SCI7T029-SCI5T029_HK2L7DSX3_S5_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824407" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824407/SRR26824407" size="10355499992" date="2023-11-14 13:19:24" md5="273f38b9eedeea1593323de6a0230673" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824407/SRR26824407" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824407.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824407/SRR26824407.lite.1" size="6877892148" date="2023-11-19 13:43:22" md5="4efa170deab736d68372eab37adde2c7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824407/SRR26824407.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824407/SRR26824407.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824407/SRR26824407.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="84314979">
+          <Read index="0" count="84314979" average="10" stdev="0"/>
+          <Read index="1" count="84314979" average="10" stdev="0"/>
+          <Read index="2" count="84314979" average="150" stdev="0"/>
+          <Read index="3" count="84314979" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="84314979"/>
+                <Elements count="26980793280"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="25294493700">
+          <Base value="A" count="7691543957"/>
+          <Base value="C" count="4164164636"/>
+          <Base value="G" count="4536555534"/>
+          <Base value="T" count="8901949535"/>
+          <Base value="N" count="280038"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX22521080" alias="GSM7898985_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX22521080</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898985_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7898985: E_002_1; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP471781">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP471781</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1040179</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS19532527">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS19532527</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7898985</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7898985</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3′ reagent v3.1 kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Dept. of Obstetrics and gynecology, University of Tartu" accession="SRA1750836" alias="SUB13972577">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1750836</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Dept. of Obstetrics and gynecology, University of Tartu">SUB13972577</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Dept. of Obstetrics and gynecology, University of Tartu</Name>
+      <Contact email="maire.peters@ut.ee">
+        <Address>
+          <Street>puusepa8</Street>
+          <City>tartu</City>
+          <Country>Estonia</Country>
+        </Address>
+        <Name>
+          <First>Maire</First>
+          <Last>Peters</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE247695" accession="SRP471781">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP471781</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1040179</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE247695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Endometriotic lesions exert distinct metabolic activity compared to paired eutopic endometrium at a single-cell level</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Eutopic endometrium (EuE) and endometriotic peritoneal lesions (ectopic endometrium, EcE) are heterogenous tissues according to the recent scRNA studies. We aimed to explore metabolic profile of cell populations in paired samples of EuE and EcE from four women with endometriosis. We found changes in the regulation of progesterone and estradiol signaling pathways in perivascular, stromal and endothelial cells of EcE compared to EuE, which might have a direct effect on cellular metabolism and contribute to cell proliferation and angiogenesis. The metabolic pathways were differentially regulated in perivascular, stromal and endothelial clusters, and metabolic pathway activity change between EcE and EuE was the highest for AMPK, HIF-1, glutathione metabolism, OXPHOS, and glycolysis/ gluconeogenesis. Remarkably, we identified co-activation of glycolysis and OXPHOS in perivascular and stromal cells of EcE compared to EuE. Previous studies reported a Warburg-like effect in endometriosis with a high use of glycolysis pathway over oxidative metabolism. Our observations might suggest the employment of both OXPHOS and glycolysis to meet the energy demands of proliferating cells in endometriotic lesions. Overall design: Cryopreserved samples of EuE and EcE were enzymatically dissociated to obtain single-cell suspensions with viability &gt;90%. ScRNA libraries were constructed using 10X chromium Next GEM Single cell 3' reagent v3.1 kit. Barcoded full-length cDNAs were produced, and pair-end sequenced targeting 35000 reads per cell using Novaseq PE150.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE247695</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39169201</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7898985" accession="SRS19532527">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS19532527</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN38249602</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7898985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>E_002_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1040179</ID>
+            <LABEL>PRJNA1040179</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>condition</TAG>
+          <VALUE>eutopic endometrium</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS19532527" sample_name="GSM7898985" sample_title="E_002_1" spots="89366209" bases="28597186880" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS19532527</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN38249602</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898985</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="28597186880" spots="89366209" bytes="11057340380">
+      <RUN accession="SRR26824408" alias="GSM7898985_r1" total_spots="89366209" total_bases="28597186880" size="11057340380" load_done="true" published="2024-07-21 07:36:33" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR26824408</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7898985_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX22521080">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7898985_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS19532527" sample_name="GSM7898985" sample_title="E_002_1" spots="89366209" bases="28597186880" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS19532527</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN38249602</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7898985</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_I1_001.fastq.gz" size="596999336" date="2023-11-14 13:22:55" md5="87f6f667635d729521186780aa09ff21" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824408/E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_I2_001.fastq.gz" size="681513001" date="2023-11-14 13:22:46" md5="490de4660f34bb21c3a62881c82dc00b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824408/E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_R1_001.fastq.gz" size="7488554507" date="2023-11-14 13:24:12" md5="4e9550b4ab0834fae3666de07ad039d2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824408/E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_R2_001.fastq.gz" size="7219773680" date="2023-11-14 13:25:33" md5="c1416259bb26bcca73469bdf7ec2666b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR26824408/E_002_1-SCI7T033-SCI5T033_HK2L7DSX3_S9_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824408" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824408/SRR26824408" size="11057342603" date="2023-11-14 13:28:25" md5="d12e883afee4ef83803e11e2e5dda6a3" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26824408/SRR26824408" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR26824408.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824408/SRR26824408.lite.1" size="7287484735" date="2023-11-19 13:42:24" md5="8126950d449417fa139421c27672c9e3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR026/26824/SRR26824408/SRR26824408.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR26824408/SRR26824408.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR26824408/SRR26824408.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="89366209">
+          <Read index="0" count="89366209" average="10" stdev="0"/>
+          <Read index="1" count="89366209" average="10" stdev="0"/>
+          <Read index="2" count="89366209" average="150" stdev="0"/>
+          <Read index="3" count="89366209" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="89366209"/>
+                <Elements count="28597186880"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="26809862700">
+          <Base value="A" count="8075668758"/>
+          <Base value="C" count="4373284630"/>
+          <Base value="G" count="4797894461"/>
+          <Base value="T" count="9562719682"/>
+          <Base value="N" count="295169"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

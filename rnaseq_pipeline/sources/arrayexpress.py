@@ -1,5 +1,7 @@
 import os
+from functools import lru_cache
 from os.path import join
+from typing import List
 from urllib.request import urlretrieve
 
 import luigi
@@ -9,12 +11,22 @@ from luigi.task import WrapperTask
 
 from ..config import rnaseq_pipeline
 from ..platforms import IlluminaPlatform
+from ..rnaseq_utils import detect_layout
+from ..targets import DownloadRunTarget
 
 cfg = rnaseq_pipeline()
 
+@lru_cache()
+def retrieve_metadata(experiment_id):
+    # TODO: store metadata locally
+    metadata_url = f'https://www.ebi.ac.uk/arrayexpress/files/{experiment_id}/{experiment_id}.sdrf.txt'
+    ae_df = pd.read_csv(metadata_url, sep='\t')
+    ae_df = ae_df[ae_df['Comment[LIBRARY_STRATEGY]'] == 'RNA-Seq']
+    return ae_df
+
 class DownloadArrayExpressFastq(luigi.Task):
-    sample_id = luigi.Parameter()
-    fastq_url = luigi.Parameter()
+    sample_id: str = luigi.Parameter()
+    fastq_url: str = luigi.Parameter()
 
     resources = {'array_express_http_connections': 1}
 
@@ -29,17 +41,46 @@ class DownloadArrayExpressFastq(luigi.Task):
         return luigi.LocalTarget(
             join(cfg.OUTPUT_DIR, cfg.DATA, 'arrayexpress', self.sample_id, os.path.basename(self.fastq_url)))
 
-class DownloadArrayExpressSample(TaskWithOutputMixin, WrapperTask):
+class DownloadArrayExpressRun(luigi.Task):
+    experiment_id: str = luigi.Parameter()
+    sample_id: str = luigi.Parameter()
+    run_id: str = luigi.Parameter()
+    fastq_filenames: List[str] = luigi.ListParameter()
+    fastq_urls: List[str] = luigi.ListParameter()
+
+    @property
+    def platform(self):
+        # TODO: detect platforms from ArrayExpress metadata
+        return IlluminaPlatform('HiSeq 2500')
+
+    def run(self):
+        ae_df = retrieve_metadata(self.experiment_id)
+        run_metadata = ae_df[ae_df['ENA_RUN'] == self.run_id]
+
+        yield [DownloadArrayExpressRun(experiment_id=self.experiment_id, sample_id=self.sample_id, run_id=run_id,
+                                       fastq_filenames=s['SUBMITTED_FILE_NAME'], fastq_urls=s['FASTQ_URI'])
+               for run_id, s in ae_df.groupby('Comment[ENA_RUN')]
+
+    def requires(self):
+        return [DownloadArrayExpressFastq(self.sample_id, fastq_url) for fastq_url in self.fastq_urls]
+
+    def output(self):
+        return DownloadRunTarget(self.run_id, [i.path for i in self.input()],
+                                 detect_layout(self.run_id, self.fastq_filenames))
+
+class DownloadArrayExpressSample(luigi.Task):
     experiment_id = luigi.Parameter()
     sample_id = luigi.Parameter()
-    fastq_urls = luigi.ListParameter()
 
     @property
     def platform(self):
         return IlluminaPlatform('HiSeq 2500')
 
-    def requires(self):
-        return [DownloadArrayExpressFastq(self.sample_id, fastq_url) for fastq_url in self.fastq_urls]
+    def run(self):
+        ae_df = retrieve_metadata(self.experiment_id)
+        sample_metadata = ae_df[ae_df['ENA_SAMPLE'] == self.sample_id]
+        yield [DownloadArrayExpressRun(experiment_id=self.experiment_id, sample_id=self.sample_id, run_id=run_id)
+               for run_id, s in sample_metadata.groupby('Comment[ENA_RUN]')]
 
 class DownloadArrayExpressExperiment(TaskWithOutputMixin, WrapperTask):
     """
@@ -48,11 +89,7 @@ class DownloadArrayExpressExperiment(TaskWithOutputMixin, WrapperTask):
     experiment_id = luigi.Parameter()
 
     def run(self):
-        # store metadata locally under metadata/arrayexpress/<experiment_id>.sdrf.txt
-        ae_df = pd.read_csv('http://www.ebi.ac.uk/arrayexpress/files/{0}/{0}.sdrf.txt'.format(self.experiment_id),
-                            sep='\t')
-        ae_df = ae_df[ae_df['Comment[LIBRARY_STRATEGY]'] == 'RNA-Seq']
+        ae_df = retrieve_metadata(self.experiment_id)
         # FIXME: properly handle the order of paired FASTQs
-        yield [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=sample_id,
-                                          fastq_urls=s['Comment[FASTQ_URI]'].sort_values().tolist())
+        yield [DownloadArrayExpressSample(experiment_id=self.experiment_id, sample_id=sample_id)
                for sample_id, s in ae_df.groupby('Comment[ENA_SAMPLE]')]

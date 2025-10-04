@@ -1,4 +1,4 @@
-from abc import abstractmethod
+from typing import Optional
 
 from bioluigi.tasks import cutadapt
 
@@ -6,15 +6,13 @@ class Platform:
     """
     :param name: Platform common name
     """
-    name = None
+    name: Optional[str] = None
 
-    @abstractmethod
-    def get_trim_single_end_reads_task(r1, dest, **kwargs):
-        pass
+    def get_trim_single_end_reads_task(self, r1, dest, **kwargs):
+        raise NotImplementedError
 
-    @abstractmethod
-    def get_trim_paired_reads_task(r1, r2, r1_dest, r2_dest, **kwargs):
-        pass
+    def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
+        raise NotImplementedError
 
 class BgiPlatform(Platform):
     """

@@ -1,0 +1,1937 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213202" accession="SRX7341052">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341052</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213202: NOD.Rag; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801122">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801122</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213202</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213202</ID>
+            <LABEL>GSM4213202</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213202</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213202" accession="SRS5801122">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801122</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527342</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213202</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD.Rag</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD.129S7(B6)-Rag1tm1Mom/J (NOD.Rag1-/-)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8-16 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801122" sample_name="GSM4213202" sample_title="NOD.Rag" spots="668181691" bases="84190893066" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801122</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527342</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213202</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="84190893066" spots="668181691" bytes="26146846208">
+      <RUN alias="GSM4213202_r1" accession="SRR10662111" total_spots="668181691" total_bases="84190893066" size="26146846208" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662111</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213202_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341052" refname="GSM4213202"/>
+        <Pool>
+          <Member member_name="" accession="SRS5801122" sample_name="GSM4213202" sample_title="NOD.Rag" spots="668181691" bases="84190893066" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801122</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527342</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213202</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR10662111.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662111/SRR10662111.lite.1" size="21123594031" date="2022-07-10 03:02:48" md5="91f72a9cfd5ad642f222187e59652873" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662111/SRR10662111.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662111/SRR10662111.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662111/SRR10662111.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662111" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662111/SRR10662111" size="26146847739" date="2019-12-11 01:50:48" md5="3efb522028c83aec00e5ab12033f5e0b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662111/SRR10662111" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Rag_S5_L003_R2_001.fastq.gz" size="35134507699" date="2019-12-11 01:30:48" md5="8f3b5ceeed80da003b6e9c6b4e066ac0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662111/NOD.Rag_S5_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Rag_S5_L003_R1_001.fastq.gz" size="13644988075" date="2019-12-11 01:23:16" md5="97a5716db88d4169ace2e044b44b2684" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662111/NOD.Rag_S5_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="668181691">
+          <Read index="0" count="668181691" average="28" stdev="0"/>
+          <Read index="1" count="668181691" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="668181691"/>
+                <Elements count="84190893066"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="84190893066">
+          <Base value="A" count="21984717503"/>
+          <Base value="C" count="20265238694"/>
+          <Base value="G" count="20613911106"/>
+          <Base value="T" count="21325843336"/>
+          <Base value="N" count="1182427"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213201" accession="SRX7341051">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341051</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213201: NOD.Ifngr1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801121">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801121</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213201</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213201</ID>
+            <LABEL>GSM4213201</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213201</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213201" accession="SRS5801121">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801121</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527343</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213201</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD.Ifngr1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD.Ifngr1-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801121" sample_name="GSM4213201" sample_title="NOD.Ifngr1" spots="930213708" bases="116276713500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801121</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527343</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213201</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="116276713500" spots="930213708" bytes="44603941499">
+      <RUN alias="GSM4213201_r1" accession="SRR10662109" total_spots="464449059" total_bases="58056132375" size="26395210557" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662109</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213201_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341051" refname="GSM4213201"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD.Ifngr1_8w_S1_L001_I1_001.fastq.gz --read2PairFiles=NOD.Ifngr1_8w_S1_L001_R1_001.fastq.gz --read3PairFiles=NOD.Ifngr1_8w_S1_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801121" sample_name="GSM4213201" sample_title="NOD.Ifngr1" spots="464449059" bases="58056132375" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801121</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527343</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213201</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L001_I1_001.fastq.gz" size="2708332166" date="2019-12-16 11:59:54" md5="c2c340db235933d7267ab0f9c67d13d8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662109/NOD.Ifngr1_8w_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L001_R1_001.fastq.gz" size="8986911565" date="2019-12-16 12:01:16" md5="d85df615a7de22497f85a65587f7cf53" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662109/NOD.Ifngr1_8w_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L001_R2_001.fastq.gz" size="23016430186" date="2019-12-16 12:05:27" md5="6ff6eb9231340370b1a100e85f05b7f7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662109/NOD.Ifngr1_8w_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662109" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662109/SRR10662109" size="26395212192" date="2019-12-16 12:26:03" md5="1f0e29a440d21902caca34f616c8d8ca" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662109/SRR10662109" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662109.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662109/SRR10662109.lite.1" size="22789416132" date="2022-07-10 03:02:28" md5="276546c182b28ab8d4e01c22b675b6e2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662109/SRR10662109.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662109/SRR10662109.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662109/SRR10662109.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="464449059">
+          <Read index="0" count="464449059" average="8" stdev="0"/>
+          <Read index="1" count="464449059" average="26" stdev="0"/>
+          <Read index="2" count="464449059" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="464449059"/>
+                <Elements count="58056132375"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="58056132375">
+          <Base value="A" count="15541757431"/>
+          <Base value="C" count="14076177318"/>
+          <Base value="G" count="14135313440"/>
+          <Base value="T" count="14299641891"/>
+          <Base value="N" count="3242295"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213201_r2" accession="SRR10662110" total_spots="465764649" total_bases="58220581125" size="18208730942" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662110</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213201_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341051" refname="GSM4213201"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--useAndDiscardNames --readTypes=TTB --read1PairFiles=NOD.Ifngr1_8w_S1_L002_I1_001.fastq.gz --read2PairFiles=NOD.Ifngr1_8w_S1_L002_R1_001.fastq.gz --read3PairFiles=NOD.Ifngr1_8w_S1_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801121" sample_name="GSM4213201" sample_title="NOD.Ifngr1" spots="465764649" bases="58220581125" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801121</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527343</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213201</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L002_I1_001.fastq.gz" size="2717348485" date="2019-12-19 12:43:21" md5="aad9ae4d4bd3a00936a6d790a376978d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR10662110/NOD.Ifngr1_8w_S1_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L002_R1_001.fastq.gz" size="9010316186" date="2019-12-19 12:50:31" md5="ba294a65b232f53bcb8647d6eea640ec" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR10662110/NOD.Ifngr1_8w_S1_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD.Ifngr1_8w_S1_L002_R2_001.fastq.gz" size="23096757124" date="2019-12-19 13:30:24" md5="b251a7522ccc7306969b4fe88ac7dd1d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR10662110/NOD.Ifngr1_8w_S1_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662110" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662110/SRR10662110" size="18208732470" date="2019-12-19 15:41:58" md5="bed4b831eed915f4118dac13df8e1c39" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662110/SRR10662110" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662110.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662110/SRR10662110.lite.1" size="14575534262" date="2022-07-10 03:08:56" md5="7407344557cfe5c76263a0b6c4887207" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662110/SRR10662110.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662110/SRR10662110.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662110/SRR10662110.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="465764649">
+          <Read index="0" count="465764649" average="8" stdev="0"/>
+          <Read index="1" count="465764649" average="26" stdev="0"/>
+          <Read index="2" count="465764649" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="465764649"/>
+                <Elements count="58220581125"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="58220581125">
+          <Base value="A" count="15592125456"/>
+          <Base value="C" count="14112538704"/>
+          <Base value="G" count="14181421189"/>
+          <Base value="T" count="14331069724"/>
+          <Base value="N" count="3426052"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213200" accession="SRX7341050">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341050</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213200: NOD_8_wks_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801120">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801120</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213200</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213200</ID>
+            <LABEL>GSM4213200</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213200</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213200" accession="SRS5801120">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801120</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527344</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213200</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD_8_wks_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD/ShiLtJ (NOD)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801120" sample_name="GSM4213200" sample_title="NOD_8_wks_2" spots="896922362" bases="112115295250" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801120</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527344</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213200</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="112115295250" spots="896922362" bytes="50787303300">
+      <RUN alias="GSM4213200_r1" accession="SRR10662107" total_spots="447960132" total_bases="55995016500" size="25355261505" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662107</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213200_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341050" refname="GSM4213200"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_8w_2849_S2_L001_I1_001.fastq.gz --read2PairFiles=NOD_8w_2849_S2_L001_R1_001.fastq.gz --read3PairFiles=NOD_8w_2849_S2_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801120" sample_name="GSM4213200" sample_title="NOD_8_wks_2" spots="447960132" bases="55995016500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801120</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527344</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213200</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L001_I1_001.fastq.gz" size="2640395175" date="2019-12-16 11:43:20" md5="8db392be57f0fe8cb1f85da83aac77e5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662107/NOD_8w_2849_S2_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L001_R1_001.fastq.gz" size="8690265570" date="2019-12-16 11:43:58" md5="eb84df4ef5b2f6504bba5b3319b94f35" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662107/NOD_8w_2849_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L001_R2_001.fastq.gz" size="22187255707" date="2019-12-16 13:07:57" md5="4b9d5ce89ceae7451745e787bf85224d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662107/NOD_8w_2849_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662107" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662107/SRR10662107" size="25355263139" date="2019-12-16 13:31:10" md5="5c2d02063be0d03734f4af9181dfb17a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662107/SRR10662107" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662107.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/10662/SRR10662107/SRR10662107.lite.1" size="21974441019" date="2022-06-11 09:00:41" md5="e3445153b17ed3fd54e49da8c3cc7828" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/10662/SRR10662107/SRR10662107.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR10662107/SRR10662107.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR10662107/SRR10662107.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="447960132">
+          <Read index="0" count="447960132" average="8" stdev="0"/>
+          <Read index="1" count="447960132" average="26" stdev="0"/>
+          <Read index="2" count="447960132" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="447960132"/>
+                <Elements count="55995016500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="55995016500">
+          <Base value="A" count="15073305751"/>
+          <Base value="C" count="13426496313"/>
+          <Base value="G" count="13680441230"/>
+          <Base value="T" count="13811621825"/>
+          <Base value="N" count="3151381"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213200_r2" accession="SRR10662108" total_spots="448962230" total_bases="56120278750" size="25432041795" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662108</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213200_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341050" refname="GSM4213200"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_8w_2849_S2_L002_I1_001.fastq.gz --read2PairFiles=NOD_8w_2849_S2_L002_R1_001.fastq.gz --read3PairFiles=NOD_8w_2849_S2_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801120" sample_name="GSM4213200" sample_title="NOD_8_wks_2" spots="448962230" bases="56120278750" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801120</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527344</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213200</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR10662108.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662108/SRR10662108.lite.1" size="22025224167" date="2022-07-10 03:05:36" md5="8303b49a2c67948be86abf193818e5a0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662108/SRR10662108.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662108/SRR10662108.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662108/SRR10662108.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662108" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662108/SRR10662108" size="25432043431" date="2019-12-16 05:34:16" md5="cee2abf0f402d39de7d98428ee75b501" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662108/SRR10662108" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L002_R2_001.fastq.gz" size="22253206736" date="2019-12-16 05:20:00" md5="523a7c7b287837156d5e0221c53193f1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662108/NOD_8w_2849_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L002_R1_001.fastq.gz" size="8707908615" date="2019-12-16 05:16:56" md5="e42ea2480c51e58a1bcb90cb24bd49ac" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662108/NOD_8w_2849_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2849_S2_L002_I1_001.fastq.gz" size="2649086185" date="2019-12-16 05:16:19" md5="d3e44e33545383c00da57b60b9e16a4c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662108/NOD_8w_2849_S2_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="448962230">
+          <Read index="0" count="448962230" average="8" stdev="0"/>
+          <Read index="1" count="448962230" average="26" stdev="0"/>
+          <Read index="2" count="448962230" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="448962230"/>
+                <Elements count="56120278750"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="56120278750">
+          <Base value="A" count="15112925145"/>
+          <Base value="C" count="13453920620"/>
+          <Base value="G" count="13715738786"/>
+          <Base value="T" count="13834369201"/>
+          <Base value="N" count="3324998"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213199" accession="SRX7341049">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341049</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213199: NOD_4_wks_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801117">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801117</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213199</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213199</ID>
+            <LABEL>GSM4213199</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213199</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213199" accession="SRS5801117">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801117</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527345</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213199</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD_4_wks_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD/ShiLtJ (NOD)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>4 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801117" sample_name="GSM4213199" sample_title="NOD_4_wks_2" spots="924092621" bases="115511577625" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801117</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527345</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213199</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="115511577625" spots="924092621" bytes="52387960970">
+      <RUN alias="GSM4213199_r1" accession="SRR10662105" total_spots="461270095" total_bases="57658761875" size="26137162481" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662105</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213199_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341049" refname="GSM4213199"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_4w_2849_S5_L001_I1_001.fastq.gz --read2PairFiles=NOD_4w_2849_S5_L001_R1_001.fastq.gz --read3PairFiles=NOD_4w_2849_S5_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801117" sample_name="GSM4213199" sample_title="NOD_4_wks_2" spots="461270095" bases="57658761875" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801117</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527345</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213199</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L001_I1_001.fastq.gz" size="2697263543" date="2019-12-12 21:10:48" md5="a433bbbf4bd81d8e2ba7d5432fde9b01" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662105/NOD_4w_2849_S5_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L001_R1_001.fastq.gz" size="8971433379" date="2019-12-12 21:20:03" md5="fa4ba03e89f02c17583d8a37b86c98b2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662105/NOD_4w_2849_S5_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L001_R2_001.fastq.gz" size="22397948703" date="2019-12-12 22:15:22" md5="efded4e984cfb0c1cc17b6b239cab567" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662105/NOD_4w_2849_S5_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662105" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662105/SRR10662105" size="26137164117" date="2019-12-13 01:05:25" md5="5ceb021edc9a720bc1b9422f4d0e954f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662105/SRR10662105" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662105.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662105/SRR10662105.lite.1" size="22624554193" date="2022-07-10 03:21:59" md5="d0adbc5d440bc19a728f401158e56648" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662105/SRR10662105.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662105/SRR10662105.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662105/SRR10662105.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="461270095">
+          <Read index="0" count="461270095" average="8" stdev="0"/>
+          <Read index="1" count="461270095" average="26" stdev="0"/>
+          <Read index="2" count="461270095" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="461270095"/>
+                <Elements count="57658761875"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="57658761875">
+          <Base value="A" count="15360594986"/>
+          <Base value="C" count="13612068505"/>
+          <Base value="G" count="14723120523"/>
+          <Base value="T" count="13959730666"/>
+          <Base value="N" count="3247195"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213199_r2" accession="SRR10662106" total_spots="462822526" total_bases="57852815750" size="26250798489" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662106</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213199_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341049" refname="GSM4213199"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_4w_2849_S5_L002_I1_001.fastq.gz --read2PairFiles=NOD_4w_2849_S5_L002_R1_001.fastq.gz --read3PairFiles=NOD_4w_2849_S5_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801117" sample_name="GSM4213199" sample_title="NOD_4_wks_2" spots="462822526" bases="57852815750" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801117</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527345</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213199</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L002_I1_001.fastq.gz" size="2709431173" date="2019-12-12 15:31:48" md5="560bddf9fed1e8682e517938899a1ba2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662106/NOD_4w_2849_S5_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L002_R1_001.fastq.gz" size="9000176410" date="2019-12-12 15:32:27" md5="17b9bd8022d10d1d3d6492c20dcae196" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662106/NOD_4w_2849_S5_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2849_S5_L002_R2_001.fastq.gz" size="22497184078" date="2019-12-12 15:37:14" md5="97afaac97683ba26035b765dcf2b09e6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662106/NOD_4w_2849_S5_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662106" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662106/SRR10662106" size="26250800122" date="2019-12-12 16:06:14" md5="fa71403e850fd6f773cfbca84149034d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662106/SRR10662106" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662106.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/10662/SRR10662106/SRR10662106.lite.1" size="22702174714" date="2022-06-11 09:03:10" md5="72db6e13d105d1760215c035d98f057d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/10662/SRR10662106/SRR10662106.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR10662106/SRR10662106.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR10662106/SRR10662106.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="462822526">
+          <Read index="0" count="462822526" average="8" stdev="0"/>
+          <Read index="1" count="462822526" average="26" stdev="0"/>
+          <Read index="2" count="462822526" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="462822526"/>
+                <Elements count="57852815750"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="57852815750">
+          <Base value="A" count="15415335501"/>
+          <Base value="C" count="13656343847"/>
+          <Base value="G" count="14779130935"/>
+          <Base value="T" count="13998576001"/>
+          <Base value="N" count="3429466"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213198" accession="SRX7341048">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341048</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213198: NOD_15_wks; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801119">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801119</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213198</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213198</ID>
+            <LABEL>GSM4213198</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213198</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213198" accession="SRS5801119">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801119</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527346</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213198</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD_15_wks</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD/ShiLtJ (NOD)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>15 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801119" sample_name="GSM4213198" sample_title="NOD_15_wks" spots="480729882" bases="60091235250" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801119</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527346</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213198</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="60091235250" spots="480729882" bytes="26939318238">
+      <RUN alias="GSM4213198_r1" accession="SRR10662103" total_spots="240395925" total_bases="30049490625" size="13471946901" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662103</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213198_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341048" refname="GSM4213198"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD15w_2734_S2_L001_I1_001.fastq.gz --read2PairFiles=NOD15w_2734_S2_L001_R1_001.fastq.gz --read3PairFiles=NOD15w_2734_S2_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801119" sample_name="GSM4213198" sample_title="NOD_15_wks" spots="240395925" bases="30049490625" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801119</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527346</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213198</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L001_I1_001.fastq.gz" size="1364777415" date="2019-12-12 06:30:52" md5="bd55c8681b6839ae28e31394739f97d9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662103/NOD15w_2734_S2_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L001_R1_001.fastq.gz" size="4538999349" date="2019-12-12 06:33:01" md5="927393e426f0876d51b146f1f102fa69" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662103/NOD15w_2734_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L001_R2_001.fastq.gz" size="11680613759" date="2019-12-12 06:37:48" md5="aedc06ce368fa1a6879b04415496d85a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662103/NOD15w_2734_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662103" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662103/SRR10662103" size="13471948533" date="2019-12-12 06:49:28" md5="fd4577d3ee39305fa0f5ca3abf5bb58e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662103/SRR10662103" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662103.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662103/SRR10662103.lite.1" size="11773544457" date="2022-07-10 02:58:39" md5="8170f77ae707fb2259f99f3218100432" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662103/SRR10662103.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662103/SRR10662103.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662103/SRR10662103.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="240395925">
+          <Read index="0" count="240395925" average="8" stdev="0"/>
+          <Read index="1" count="240395925" average="26" stdev="0"/>
+          <Read index="2" count="240395925" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="240395925"/>
+                <Elements count="30049490625"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30049490625">
+          <Base value="A" count="8154676919"/>
+          <Base value="C" count="7167723828"/>
+          <Base value="G" count="7629779893"/>
+          <Base value="T" count="7096710309"/>
+          <Base value="N" count="599676"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213198_r2" accession="SRR10662104" total_spots="240333957" total_bases="30041744625" size="13467371337" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662104</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213198_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341048" refname="GSM4213198"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD15w_2734_S2_L002_I1_001.fastq.gz --read2PairFiles=NOD15w_2734_S2_L002_R1_001.fastq.gz --read3PairFiles=NOD15w_2734_S2_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801119" sample_name="GSM4213198" sample_title="NOD_15_wks" spots="240333957" bases="30041744625" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801119</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527346</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213198</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L002_I1_001.fastq.gz" size="1364997557" date="2019-12-12 03:22:38" md5="3795b6457bad98ee8653d4ae30f7016c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662104/NOD15w_2734_S2_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L002_R1_001.fastq.gz" size="4540996446" date="2019-12-12 03:22:53" md5="eec44f26d7a7224c546d173632433d50" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662104/NOD15w_2734_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD15w_2734_S2_L002_R2_001.fastq.gz" size="11674136417" date="2019-12-12 03:23:35" md5="5e4b18fcd6f593baecf8a39883b9b528" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662104/NOD15w_2734_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662104" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662104/SRR10662104" size="13467372970" date="2019-12-12 03:27:28" md5="98d5a3f71a4bf801a1054da6be8d8d8f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662104/SRR10662104" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662104.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR010/662/SRR10662104.sralite.1" size="11767100482" date="2020-06-20 06:43:47" md5="2c29ee5751145bd12a0860397b90a842" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR010/662/SRR10662104.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662104/SRR10662104.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR10662104/SRR10662104.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="240333957">
+          <Read index="0" count="240333957" average="8" stdev="0"/>
+          <Read index="1" count="240333957" average="26" stdev="0"/>
+          <Read index="2" count="240333957" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="240333957"/>
+                <Elements count="30041744625"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30041744625">
+          <Base value="A" count="8159316012"/>
+          <Base value="C" count="7160736008"/>
+          <Base value="G" count="7625480025"/>
+          <Base value="T" count="7095551365"/>
+          <Base value="N" count="661215"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213197" accession="SRX7341047">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341047</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213197: NOD_8_wks_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801118">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801118</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213197</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213197</ID>
+            <LABEL>GSM4213197</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213197</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213197" accession="SRS5801118">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801118</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527347</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213197</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NOD_8_wks_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>594724</ID>
+            <LABEL>PRJNA594724</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>NOD/ShiLtJ (NOD)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>8 weeks</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Pancreatic islet-infiltrating cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801118" sample_name="GSM4213197" sample_title="NOD_8_wks_1" spots="559132741" bases="69891592625" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801118</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527347</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213197</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="69891592625" spots="559132741" bytes="31034275569">
+      <RUN alias="GSM4213197_r1" accession="SRR10662101" total_spots="279361724" total_bases="34920215500" size="15508678552" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662101</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213197_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341047" refname="GSM4213197"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_8w_2734_S1_L001_I1_001.fastq.gz --read2PairFiles=NOD_8w_2734_S1_L001_R1_001.fastq.gz --read3PairFiles=NOD_8w_2734_S1_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801118" sample_name="GSM4213197" sample_title="NOD_8_wks_1" spots="279361724" bases="34920215500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801118</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527347</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213197</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR10662101.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662101/SRR10662101.lite.1" size="13642882365" date="2022-07-10 03:02:39" md5="4ae76db6dcfc64cf9df54b1a37262a5b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR010/662/SRR10662101/SRR10662101.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR10662101/SRR10662101.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR10662101/SRR10662101.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662101" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662101/SRR10662101" size="15508680185" date="2019-12-12 08:46:22" md5="852cbbc7767dc745d67aed33991fd3e9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662101/SRR10662101" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L001_R2_001.fastq.gz" size="13553654096" date="2019-12-12 08:29:20" md5="74a436dd3525c7730b0109d23197fd07" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662101/NOD_8w_2734_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L001_R1_001.fastq.gz" size="5256339270" date="2019-12-12 08:22:36" md5="44ab340af0fb6f5d8654fcb64897c642" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662101/NOD_8w_2734_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L001_I1_001.fastq.gz" size="1494375300" date="2019-12-12 08:22:13" md5="4e2d55716da821f81e8d334845c84738" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662101/NOD_8w_2734_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="279361724">
+          <Read index="0" count="279361724" average="8" stdev="0"/>
+          <Read index="1" count="279361724" average="26" stdev="0"/>
+          <Read index="2" count="279361724" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="279361724"/>
+                <Elements count="34920215500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34920215500">
+          <Base value="A" count="9278279254"/>
+          <Base value="C" count="8374837737"/>
+          <Base value="G" count="8777814693"/>
+          <Base value="T" count="8488588370"/>
+          <Base value="N" count="695446"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213197_r2" accession="SRR10662102" total_spots="279771017" total_bases="34971377125" size="15525597017" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662102</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213197_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341047" refname="GSM4213197"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_8w_2734_S1_L002_I1_001.fastq.gz --read2PairFiles=NOD_8w_2734_S1_L002_R1_001.fastq.gz --read3PairFiles=NOD_8w_2734_S1_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801118" sample_name="GSM4213197" sample_title="NOD_8_wks_1" spots="279771017" bases="34971377125" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801118</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527347</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213197</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR10662102.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR010/662/SRR10662102.sralite.1" size="13660136168" date="2020-06-20 23:57:30" md5="0d07be954c4cdc34de568286667ef1e0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR010/662/SRR10662102.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-5/SRR10662102/SRR10662102.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR10662102/SRR10662102.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662102" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662102/SRR10662102" size="15525598648" date="2019-12-15 05:22:11" md5="f8828cab92a351ff4486024323c0fc06" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662102/SRR10662102" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L002_R2_001.fastq.gz" size="13565340411" date="2019-12-15 05:12:40" md5="efa1fac45531aadc5c4cc751b2deeb29" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662102/NOD_8w_2734_S1_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L002_R1_001.fastq.gz" size="5267573265" date="2019-12-15 05:11:20" md5="79e6e3f96d1a024c108cc07ad83b60b8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662102/NOD_8w_2734_S1_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_8w_2734_S1_L002_I1_001.fastq.gz" size="1495672732" date="2019-12-15 05:10:52" md5="13669ce700ed59d181e34dad111b8db8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR10662102/NOD_8w_2734_S1_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="279771017">
+          <Read index="0" count="279771017" average="8" stdev="0"/>
+          <Read index="1" count="279771017" average="26" stdev="0"/>
+          <Read index="2" count="279771017" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="279771017"/>
+                <Elements count="34971377125"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34971377125">
+          <Base value="A" count="9299360761"/>
+          <Base value="C" count="8381141779"/>
+          <Base value="G" count="8787018002"/>
+          <Base value="T" count="8503085415"/>
+          <Base value="N" count="771168"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4213196" accession="SRX7341046">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX7341046</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4213196: NOD_4_wks_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP235598" refname="GSE141784">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5801116">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5801116</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4213196</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Pancreatic islets were isolated and dispersed into single-cell suspension using non-enzymatic Cell Dissociation Solution (Sigma-Aldrich) for 5 min at 37°C. Then to block Fc-receptors engaging, the cell suspensions were incubated at 4°C for 15 min in PBS (pH 7.4) supplemented with 1% BSA and 50% of FC-block (made in-house). For surface staining, cells were incubated with fluorescently labeled antibodies (1:200 v/v) supplemented with Fixable viability Dye eFuor780 (1:1000 v/v) at 4°C for 20 minutes. Cells were then washed and analyzed by flow cytometry or subjected to FACS. Live CD45+, CD31+, and CD45-CD90+ cells were sorted using islet cells from 4-12 mice per one sample. After sorting, cells were pelleted and resuspended in 10% FBS (HyClone) in PBS (pH 7.4) 1x10^3 cells/μl and loaded onto the Chromium Controller (10X Genomics). Samples were processed using the Chromium Single Cell 3' Library &amp; Gel Bead Kit following the manufacturer's protocol. 10X Single Cell 3' v2.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304213196</ID>
+            <LABEL>GSM4213196</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4213196</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE141784" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1009823">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1009823</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE141784</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE141784" accession="SRP235598">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP235598</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA594724</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE141784</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell RNA sequencing of murine islets shows high cellular complexity at all stages of autoimmune diabetes</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Tissue-specific autoimmune diseases are driven by activation of diverse immune cells in the target organs. However, the molecular signatures of the immune cell populations over time in an autoimmune process remain poorly defined. Using single-cell RNA sequencing, we performed unbiased examination of diverse islet-infiltrating cells during autoimmune diabetes in the non-obese diabetic mouse. The data revealed a landscape of transcriptional heterogeneity across the lymphoid and myeloid compartments. Memory CD4 and cytotoxic CD8 T cells appeared early in islets accompanied by regulatory cells with distinct phenotypes. Surprisingly, we observed a dramatic remodeling in the islet microenvironment, in which the resident macrophages underwent a stepwise activation program. This process resulted in polarization of the macrophage subpopulations into a terminal pro-inflammatory state. This study provides a single-cell atlas defining the staging of autoimmune diabetes and reveals that diabetic autoimmunity is driven by transcriptionally distinct cell populations specialized in divergent biological functions. Overall design: 10X Single-cell RNASeq</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE141784</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>32251514</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA594719</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM4213196" accession="SRS5801116">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5801116</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN13527348</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4213196</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GEO accession GSM4213196 is currently private and is scheduled to be released on Feb 01, 2021.</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5801116" sample_name="GSM4213196" sample_title="GEO accession GSM4213196 is currently private and is scheduled to be released on Feb 01, 2021." spots="562897143" bases="70362142875" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5801116</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN13527348</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4213196</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="70362142875" spots="562897143" bytes="31848762212">
+      <RUN alias="GSM4213196_r1" accession="SRR10662099" total_spots="282577251" total_bases="35322156375" size="15982602696" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662099</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213196_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341046" refname="GSM4213196"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_4w_2734_S3_L001_I1_001.fastq.gz --read2PairFiles=NOD_4w_2734_S3_L001_R1_001.fastq.gz --read3PairFiles=NOD_4w_2734_S3_L001_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801116" sample_name="GSM4213196" sample_title="GEO accession GSM4213196 is currently private and is scheduled to be released on Feb 01, 2021." spots="282577251" bases="35322156375" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801116</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527348</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213196</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR10662099.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/662/SRR10662099.sralite.1" size="13773758949" date="2020-06-24 05:25:36" md5="116ceeb8457ee935769c83494ce5a8b8" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-14/SRR010/662/SRR10662099.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR10662099/SRR10662099.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR10662099/SRR10662099.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662099" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662099/SRR10662099" size="15982604329" date="2019-12-12 11:33:16" md5="59a6389710190cdc7b8c46da1df50326" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662099/SRR10662099" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L001_R2_001.fastq.gz" size="13774909737" date="2019-12-12 11:08:28" md5="0898939e657c5f5a27d4511068a66372" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662099/NOD_4w_2734_S3_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L001_R1_001.fastq.gz" size="5358045496" date="2019-12-12 11:01:54" md5="9db3744091bc3d042b087c755d461e87" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662099/NOD_4w_2734_S3_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L001_I1_001.fastq.gz" size="1546510109" date="2019-12-12 11:01:19" md5="c20be9b79d10ec6be63e5255df692c82" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662099/NOD_4w_2734_S3_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="282577251">
+          <Read index="0" count="282577251" average="8" stdev="0"/>
+          <Read index="1" count="282577251" average="26" stdev="0"/>
+          <Read index="2" count="282577251" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="282577251"/>
+                <Elements count="35322156375"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="35322156375">
+          <Base value="A" count="9446172997"/>
+          <Base value="C" count="8421271520"/>
+          <Base value="G" count="9131820456"/>
+          <Base value="T" count="8322186819"/>
+          <Base value="N" count="704583"/>
+        </Bases>
+      </RUN>
+      <RUN alias="GSM4213196_r2" accession="SRR10662100" total_spots="280319892" total_bases="35039986500" size="15866159516" load_done="true" published="2020-03-27 15:55:06" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR10662100</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4213196_r2</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX7341046" refname="GSM4213196"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TTB --read1PairFiles=NOD_4w_2734_S3_L002_I1_001.fastq.gz --read2PairFiles=NOD_4w_2734_S3_L002_R1_001.fastq.gz --read3PairFiles=NOD_4w_2734_S3_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5801116" sample_name="GSM4213196" sample_title="GEO accession GSM4213196 is currently private and is scheduled to be released on Feb 01, 2021." spots="280319892" bases="35039986500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5801116</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN13527348</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4213196</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L002_I1_001.fastq.gz" size="1536107744" date="2019-12-12 09:59:22" md5="6545d64053e34c4d90907a8ed6101cab" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662100/NOD_4w_2734_S3_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L002_R1_001.fastq.gz" size="5325566997" date="2019-12-12 10:01:56" md5="4376135e9c50ae37ab4e779513de318c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662100/NOD_4w_2734_S3_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="NOD_4w_2734_S3_L002_R2_001.fastq.gz" size="13672601441" date="2019-12-12 10:07:33" md5="e3cbaa93b4e68efe46344ce8b736f113" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-4/SRR10662100/NOD_4w_2734_S3_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662100" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662100/SRR10662100" size="15866161149" date="2019-12-12 10:34:20" md5="701660e0625def017a8b28de6be962de" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR10662100/SRR10662100" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR10662100.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR010/662/SRR10662100.sralite.1" size="13678644009" date="2020-06-20 03:01:01" md5="4918a878dbbd1616a6531c012ee5a28e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos9/sra-pub-zq-922/SRR010/662/SRR10662100.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR10662100/SRR10662100.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR10662100/SRR10662100.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="280319892">
+          <Read index="0" count="280319892" average="8" stdev="0"/>
+          <Read index="1" count="280319892" average="26" stdev="0"/>
+          <Read index="2" count="280319892" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="280319892"/>
+                <Elements count="35039986500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="35039986500">
+          <Base value="A" count="9378675747"/>
+          <Base value="C" count="8347400791"/>
+          <Base value="G" count="9056001840"/>
+          <Base value="T" count="8257134892"/>
+          <Base value="N" count="773230"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

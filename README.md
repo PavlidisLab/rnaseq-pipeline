@@ -102,13 +102,15 @@ The output is organized as follow:
 
 ```
 pipeline-output/
-    genomes/<reference_id>/                 # Genomic references
-    references/<reference_id>/              # RSEM/STAR indexes
-    data/<source>                           # FASTQs (note that GEO source uses SRA)
-    data-qc/<experiment_id>/<sample_id>/    # FastQC reports
-    aligned/<reference_id>/<experiment_id>/ # alignments and quantification results
-    quantified/<reference_id>               # quantification matrices for isoforms and genes
-    report/<reference_id>/<experiment_id>/  # MultiQC reports for reads and alignments
+    genomes/<reference_id>/                       # Genomic references
+    references/<reference_id>/                    # RSEM/STAR indexes
+    data/<source>/                                # FASTQs (organization is source-specific; note that GEO source uses SRA)
+    data-qc/<experiment_id>/<sample_id>/          # FastQC reports
+    data-single-cell/<experiment_id>/<sample_id>/ # Single-cell data (hard links to files from data/)
+    aligned/<reference_id>/<experiment_id>/       # alignments and quantification results
+    quantified/<reference_id>                     # quantification matrices for isoforms and genes
+    quantified-single-cell/<reference_id>         # quantified single-cell data (Cell Ranger outputs)
+    report/<reference_id>/<experiment_id>/        # MultiQC reports for reads and alignments
 ```
 
 You can adjust the pipeline output directory by setting `OUTPUT_DIR` under

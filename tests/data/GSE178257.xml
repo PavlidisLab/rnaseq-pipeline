@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385965" accession="SRX11150190">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150190</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385965: VCPFF-CAMK2_1M-9: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211920">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211920</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385965</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385965</ID>
+            <LABEL>GSM5385965</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385965</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385965" accession="SRS9211920">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211920</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714116</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385965</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_1M-9: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211920" sample_name="GSM5385965" sample_title="VCPFF-CAMK2_1M-9: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="454394624" bases="44530673152" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211920</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714116</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385965</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="44530673152" spots="454394624" bytes="12781607701">
+      <RUN alias="GSM5385965_r1" accession="SRR14820255" total_spots="454394624" total_bases="44530673152" size="12781607701" load_done="true" published="2021-06-17 18:42:38" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820255</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385965_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150190" refname="GSM5385965"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211920" sample_name="GSM5385965" sample_title="VCPFF-CAMK2_1M-9: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="454394624" bases="44530673152" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211920</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714116</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385965</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_1M_9.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820255/VCPFF_CAMK2_1M_9.bam.1" size="34204990527" date="2021-06-16 05:10:17" md5="b2d00241434c78c7e5f222d857f25c94" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820255/VCPFF_CAMK2_1M_9.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820255/VCPFF_CAMK2_1M_9.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820255" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820255/SRR14820255" size="12781622455" date="2021-06-16 05:23:12" md5="f28aff299902c876fd2d9d5a69a150a1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820255/SRR14820255" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820255.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820255/SRR14820255.lite.1" size="7859277461" date="2022-08-14 03:03:51" md5="aad1e4b44675bb98106f2da2af894959" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820255/SRR14820255.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820255/SRR14820255.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820255/SRR14820255.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="454394624">
+          <Read index="0" count="454394624" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="425888573"/>
+                <Elements count="41737080154"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="30127138"/>
+                <Elements count="2952459524"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="454394624"/>
+                <Elements count="44530673152"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="44530673152">
+          <Base value="A" count="13562415593"/>
+          <Base value="C" count="9019188262"/>
+          <Base value="G" count="10181142914"/>
+          <Base value="T" count="11766860322"/>
+          <Base value="N" count="1066061"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385964" accession="SRX11150189">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150189</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385964: VCPFF-CAMK2_1M-8: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211919">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211919</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385964</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385964</ID>
+            <LABEL>GSM5385964</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385964</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385964" accession="SRS9211919">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211919</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714117</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385964</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_1M-8: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211919" sample_name="GSM5385964" sample_title="VCPFF-CAMK2_1M-8: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="461562112" bases="45233086976" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211919</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714117</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385964</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="45233086976" spots="461562112" bytes="12077245049">
+      <RUN alias="GSM5385964_r1" accession="SRR14820254" total_spots="461562112" total_bases="45233086976" size="12077245049" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820254</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385964_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150189" refname="GSM5385964"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211919" sample_name="GSM5385964" sample_title="VCPFF-CAMK2_1M-8: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="461562112" bases="45233086976" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211919</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714117</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385964</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_1M_8.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820254/VCPFF_CAMK2_1M_8.bam.1" size="33111089758" date="2021-06-16 05:31:28" md5="689b19bf1268751ca90f49ecb67b0678" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820254/VCPFF_CAMK2_1M_8.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820254/VCPFF_CAMK2_1M_8.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820254" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820254/SRR14820254" size="12077259806" date="2021-06-16 05:45:41" md5="35f0232d2a11018fc58e246f8566b026" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820254/SRR14820254" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820254.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820254/SRR14820254.lite.1" size="7429586596" date="2022-08-14 02:57:24" md5="c21bccabef23f465a50dad7ad94b7562" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820254/SRR14820254.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820254/SRR14820254.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820254/SRR14820254.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="461562112">
+          <Read index="0" count="461562112" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="436076811"/>
+                <Elements count="42735527478"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="34081232"/>
+                <Elements count="3339960736"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="461562112"/>
+                <Elements count="45233086976"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="45233086976">
+          <Base value="A" count="13775863346"/>
+          <Base value="C" count="9197005755"/>
+          <Base value="G" count="10236262681"/>
+          <Base value="T" count="12022811002"/>
+          <Base value="N" count="1144192"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385963" accession="SRX11150188">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150188</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385963: VCPFF-CAMK2_1M-7: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211918">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211918</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385963</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385963</ID>
+            <LABEL>GSM5385963</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385963</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385963" accession="SRS9211918">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211918</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714091</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385963</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_1M-7: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>1 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211918" sample_name="GSM5385963" sample_title="VCPFF-CAMK2_1M-7: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="436477937" bases="42774837826" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211918</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714091</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385963</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="42774837826" spots="436477937" bytes="12112401063">
+      <RUN alias="GSM5385963_r1" accession="SRR14820253" total_spots="436477937" total_bases="42774837826" size="12112401063" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820253</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385963_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150188" refname="GSM5385963"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211918" sample_name="GSM5385963" sample_title="VCPFF-CAMK2_1M-7: Isolated single nuclei from cortex of 1 month old VCPfl/fl;Camk2-Cre mice" spots="436477937" bases="42774837826" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211918</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714091</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385963</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_1M_7.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820253/VCPFF_CAMK2_1M_7.bam.1" size="32708997237" date="2021-06-16 05:35:06" md5="774081ae8b5b97f81bd97b4e54d57c48" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820253/VCPFF_CAMK2_1M_7.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820253/VCPFF_CAMK2_1M_7.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820253" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820253/SRR14820253" size="12112415811" date="2021-06-16 05:49:33" md5="08a268167d15c79a3a309c66f966beb6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820253/SRR14820253" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820253.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820253/SRR14820253.lite.1" size="7435474008" date="2022-08-14 03:31:20" md5="7a4975b7bb3838a7ecc0af2c8dce724f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820253/SRR14820253.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820253/SRR14820253.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820253/SRR14820253.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="436477937">
+          <Read index="0" count="436477937" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="409143391"/>
+                <Elements count="40096052318"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546206"/>
+                <Elements count="2730871774"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="29275856"/>
+                <Elements count="2869033888"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="436477937"/>
+                <Elements count="42774837826"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="42774837826">
+          <Base value="A" count="13054563685"/>
+          <Base value="C" count="8667487603"/>
+          <Base value="G" count="9758546023"/>
+          <Base value="T" count="11293224636"/>
+          <Base value="N" count="1015879"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385962" accession="SRX11150187">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150187</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385962: VCPFF-CAMK2_2M-6: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211917">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211917</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385962</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385962</ID>
+            <LABEL>GSM5385962</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385962</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385962" accession="SRS9211917">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211917</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714092</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385962</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_2M-6: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211917" sample_name="GSM5385962" sample_title="VCPFF-CAMK2_2M-6: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="512684679" bases="50243098542" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211917</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714092</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385962</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50243098542" spots="512684679" bytes="13956483632">
+      <RUN alias="GSM5385962_r1" accession="SRR14820252" total_spots="512684679" total_bases="50243098542" size="13956483632" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820252</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385962_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150187" refname="GSM5385962"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211917" sample_name="GSM5385962" sample_title="VCPFF-CAMK2_2M-6: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="512684679" bases="50243098542" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211917</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714092</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385962</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_2M_6.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820252/VCPFF_CAMK2_2M_6.bam.1" size="37645686987" date="2021-06-16 06:14:11" md5="16d7b10d533b86eaa59789829d728933" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820252/VCPFF_CAMK2_2M_6.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820252/VCPFF_CAMK2_2M_6.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820252" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820252/SRR14820252" size="13956498375" date="2021-06-16 06:30:07" md5="0a872d7fe5c0140ea62a1b3b94421e4f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820252/SRR14820252" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820252.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820252/SRR14820252.lite.1" size="8496631964" date="2022-08-14 03:12:57" md5="5eec6f98ee0d37507e5e58021f002a07" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820252/SRR14820252.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820252/SRR14820252.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820252/SRR14820252.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="512684679">
+          <Read index="0" count="512684679" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="481822274"/>
+                <Elements count="47218582852"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="34211108"/>
+                <Elements count="3352688584"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="512684679"/>
+                <Elements count="50243098542"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="50243098542">
+          <Base value="A" count="15399752881"/>
+          <Base value="C" count="10117958641"/>
+          <Base value="G" count="11339781466"/>
+          <Base value="T" count="13384407683"/>
+          <Base value="N" count="1197871"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385961" accession="SRX11150186">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150186</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385961: VCPFF-CAMK2_2M-5: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211916">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211916</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385961</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385961</ID>
+            <LABEL>GSM5385961</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385961</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385961" accession="SRS9211916">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211916</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714093</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385961</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_2M-5: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211916" sample_name="GSM5385961" sample_title="VCPFF-CAMK2_2M-5: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="444042468" bases="43516161864" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211916</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714093</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385961</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="43516161864" spots="444042468" bytes="11813453972">
+      <RUN alias="GSM5385961_r1" accession="SRR14820251" total_spots="444042468" total_bases="43516161864" size="11813453972" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820251</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385961_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150186" refname="GSM5385961"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211916" sample_name="GSM5385961" sample_title="VCPFF-CAMK2_2M-5: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="444042468" bases="43516161864" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211916</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714093</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385961</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_2M_5.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820251/VCPFF_CAMK2_2M_5.bam.1" size="32137916168" date="2021-06-16 04:52:36" md5="40e7ebbddd96f5abba30e41ab4ba7b98" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820251/VCPFF_CAMK2_2M_5.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820251/VCPFF_CAMK2_2M_5.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820251" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820251/SRR14820251" size="11813468722" date="2021-06-16 04:59:39" md5="b58907ab9f02fbf651071965b476d3d4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820251/SRR14820251" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820251.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820251/SRR14820251.lite.1" size="7362237570" date="2022-08-14 03:06:08" md5="6892514b7f323f991ee7fea549cdf046" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820251/SRR14820251.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820251/SRR14820251.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820251/SRR14820251.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="444042468">
+          <Read index="0" count="444042468" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="418073546"/>
+                <Elements count="40971207508"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546206"/>
+                <Elements count="2730871774"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="39792539"/>
+                <Elements count="3899668822"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="444042468"/>
+                <Elements count="43516161864"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="43516161864">
+          <Base value="A" count="13090560398"/>
+          <Base value="C" count="8925177829"/>
+          <Base value="G" count="9846103028"/>
+          <Base value="T" count="11653214088"/>
+          <Base value="N" count="1106521"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385960" accession="SRX11150185">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150185</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385960: VCPFF-CAMK2_2M-4: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211915">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211915</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385960</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385960</ID>
+            <LABEL>GSM5385960</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385960</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385960" accession="SRS9211915">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211915</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714094</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385960</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-CAMK2_2M-4: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl;Camk2-Cre</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211915" sample_name="GSM5385960" sample_title="VCPFF-CAMK2_2M-4: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="474105044" bases="46462294312" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211915</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714094</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385960</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="46462294312" spots="474105044" bytes="12536585327">
+      <RUN alias="GSM5385960_r1" accession="SRR14820250" total_spots="474105044" total_bases="46462294312" size="12536585327" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820250</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385960_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150185" refname="GSM5385960"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211915" sample_name="GSM5385960" sample_title="VCPFF-CAMK2_2M-4: Isolated single nuclei from cortex of 2 month old VCPfl/fl;Camk2-Cre mice" spots="474105044" bases="46462294312" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211915</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714094</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385960</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_CAMK2_2M_4.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820250/VCPFF_CAMK2_2M_4.bam.1" size="33962183436" date="2021-06-16 06:01:42" md5="286cff57c3f11e4196d132b53a0771a2" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820250/VCPFF_CAMK2_2M_4.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820250/VCPFF_CAMK2_2M_4.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820250" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820250/SRR14820250" size="12536600056" date="2021-06-16 06:16:54" md5="057cab34098c61b55e6a19109017f986" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820250/SRR14820250" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820250.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820250/SRR14820250.lite.1" size="7768153228" date="2022-08-14 02:58:28" md5="9c3e824733156192c7db916c2d1c61a5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820250/SRR14820250.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820250/SRR14820250.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820250/SRR14820250.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="474105044">
+          <Read index="0" count="474105044" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="445352603"/>
+                <Elements count="43644555094"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="36923804"/>
+                <Elements count="3618532792"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="474105044"/>
+                <Elements count="46462294312"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="46462294312">
+          <Base value="A" count="13942283809"/>
+          <Base value="C" count="9491271050"/>
+          <Base value="G" count="10653785689"/>
+          <Base value="T" count="12373781080"/>
+          <Base value="N" count="1172684"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385959" accession="SRX11150184">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150184</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385959: VCPFF-3: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211913">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211913</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385959</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385959</ID>
+            <LABEL>GSM5385959</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385959</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385959" accession="SRS9211913">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211913</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714097</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385959</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-3: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211913" sample_name="GSM5385959" sample_title="VCPFF-3: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="385917505" bases="37819915490" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211913</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714097</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385959</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="37819915490" spots="385917505" bytes="10326531302">
+      <RUN alias="GSM5385959_r1" accession="SRR14820249" total_spots="385917505" total_bases="37819915490" size="10326531302" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820249</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385959_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150184" refname="GSM5385959"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211913" sample_name="GSM5385959" sample_title="VCPFF-3: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="385917505" bases="37819915490" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211913</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714097</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385959</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_3.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820249/VCPFF_3.bam.1" size="28254640285" date="2021-06-16 05:10:31" md5="6c78f5c3f6852eedd2f4408660ca52ef" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820249/VCPFF_3.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820249/VCPFF_3.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820249" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820249/SRR14820249" size="10326546056" date="2021-06-16 05:23:37" md5="5bb6f30f23e0139b76fabf2d81e85539" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820249/SRR14820249" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820249.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820249/SRR14820249.lite.1" size="6284308871" date="2022-08-14 02:57:39" md5="99afe2f63e4a37d0e5dcb6a4821867fa" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820249/SRR14820249.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820249/SRR14820249.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820249/SRR14820249.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="385917505">
+          <Read index="0" count="385917505" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="364332464"/>
+                <Elements count="35704581472"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546201"/>
+                <Elements count="2730847089"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="30151724"/>
+                <Elements count="2954868952"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="385917505"/>
+                <Elements count="37819915490"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="37819915490">
+          <Base value="A" count="11675069035"/>
+          <Base value="C" count="7596965912"/>
+          <Base value="G" count="8458038133"/>
+          <Base value="T" count="10088940832"/>
+          <Base value="N" count="901578"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385958" accession="SRX11150183">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150183</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385958: VCPFF-2: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211912">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211912</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385958</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385958</ID>
+            <LABEL>GSM5385958</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385958</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385958" accession="SRS9211912">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211912</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714095</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385958</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-2: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211912" sample_name="GSM5385958" sample_title="VCPFF-2: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="442994928" bases="43413502944" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211912</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714095</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385958</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="43413502944" spots="442994928" bytes="11721592902">
+      <RUN alias="GSM5385958_r1" accession="SRR14820248" total_spots="442994928" total_bases="43413502944" size="11721592902" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820248</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385958_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150183" refname="GSM5385958"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211912" sample_name="GSM5385958" sample_title="VCPFF-2: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="442994928" bases="43413502944" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211912</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714095</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385958</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_2.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820248/VCPFF_2.bam.1" size="31629649202" date="2021-06-16 05:11:18" md5="60a1f75712fc755ac7c861f9795a6720" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820248/VCPFF_2.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820248/VCPFF_2.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820248" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820248/SRR14820248" size="11721607653" date="2021-06-16 05:22:23" md5="96648dd82abcf2026e0b409c0990693c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820248/SRR14820248" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820248.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820248/SRR14820248.lite.1" size="7192913133" date="2022-08-14 02:59:38" md5="52c9a2dfc2069124e8ad0e9eb52c2469" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820248/SRR14820248.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820248/SRR14820248.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820248/SRR14820248.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="442994928">
+          <Read index="0" count="442994928" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="417353061"/>
+                <Elements count="40900599978"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546206"/>
+                <Elements count="2730871774"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="29293959"/>
+                <Elements count="2870807982"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="442994928"/>
+                <Elements count="43413502944"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="43413502944">
+          <Base value="A" count="13269643008"/>
+          <Base value="C" count="8800562569"/>
+          <Base value="G" count="9873967868"/>
+          <Base value="T" count="11468224627"/>
+          <Base value="N" count="1104872"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5385957" accession="SRX11150182">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11150182</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5385957: VCPFF-1: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324150" refname="GSE178257">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9211914">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9211914</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5385957</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice were aged to 1 or 2 months of age. Upon tissue harvest, mice were euthanized and perfused with 1U/ml heparin in PBS. Left hemisphere of the brains were dissected out and flash frozen on dry ice. Flash frozen brain tissue was homogenized in a Dounce homogenizer in Lysis Buffer (10 mM Tris-HCl, pH 7.4, 10 mM NaCl, 3 mM MgCl2, and 0.025% NP-40), and incubated on ice 15 minutes. The suspension was filtered through a 30 um filter to remove debris and pelleted at 500 x g 5 min at 4o C. Nuclei were washed and filtered twice with Nuclei Wash (1% BSA in PBS with 0.2 U/uL RNasin (Promega)). Nuclei pellets were resuspended in 500 uL Nuclei Wash and 900 uL 1.8 M Sucrose. This 1400 uL mixture was carefully layered on top of 500 uL 1.8 M sucrose and centrifuged at 13,000 x g 45 min 4oC to separate the nuclei from myelin debris. The nuclei pellet was resuspended in Nuclei wash at 1200 nuclei/uL and filtered through a 40 um FlowMi Cell Strainer. Isolated single nuclei were subjected to droplet-based 3' end massively parallel single-cell RNA sequencing using Chromium Single Cell 5' Reagent Kits as per manufacturer's instructions (10x Genomics) The generated scRNAseq libraries were sequenced using an Illumina sequencer.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305385957</ID>
+            <LABEL>GSM5385957</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5385957</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178257" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245390">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245390</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178257</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178257" accession="SRP324150">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324150</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738150</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178257</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Neuronal VCP loss of function recapitulates FTLD-TDP pathology</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The pathogenic mechanism by which dominant mutations in VCP cause multisystem proteinopathy (MSP), a rare neurodegenerative disease that presents as fronto-temporal lobar degeneration with TDP-43 inclusions (FTLD-TDP), remains unclear.  To explore this, we inactivated VCP in murine postnatal forebrain neurons (VCP cKO).  VCP cKO mice have cortical brain atrophy, neuronal loss, autophago-lysosomal dysfunction and TDP-43 inclusions resembling FTLD-TDP pathology.  Conditional expression of a single disease-associated mutation, VCP-R155C, in a VCP null background similarly recapitulated features of VCP inactivation and FTLD-TDP, suggesting that this MSP mutation is hypomorphic.  Comparison of transcriptomic and proteomic datasets from genetically defined patients with FTLD-TDP reveal that progranulin deficiency and VCP insufficiency result in similar profiles.  These data identify a loss of VCP-dependent functions as a mediator of FTLD-TDP and reveal an unexpected biochemical similarity with progranulin deficiency. Overall design: Droplet-based 3' end massively parallel single-cell RNA sequencing was performed by isolating single nuclei from flash-frozen mouse brains through sucrose gradient and libraries were prepared using Chromium Single Cell 5' Reagent Kits according to manufacturer's protocol (10x Genomics). The generated scRNAseq libraries were sequenced using Illumina sequencers.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178257</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34289347</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM5385957" accession="SRS9211914">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9211914</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19714096</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5385957</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VCPFF-1: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738150</ID>
+            <LABEL>PRJNA738150</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Isolated single nuclei from cortex of 2 month old VCPfl/fl mice</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse genotype</TAG>
+          <VALUE>VCPfl/fl</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>B6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>nuclei of brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>2 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9211914" sample_name="GSM5385957" sample_title="VCPFF-1: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="462648501" bases="45339553098" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9211914</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19714096</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5385957</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="45339553098" spots="462648501" bytes="12644811330">
+      <RUN alias="GSM5385957_r1" accession="SRR14820247" total_spots="462648501" total_bases="45339553098" size="12644811330" load_done="true" published="2021-06-17 18:42:37" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14820247</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5385957_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11150182" refname="GSM5385957"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS9211914" sample_name="GSM5385957" sample_title="VCPFF-1: Isolated single nuclei from cortex of 2 month old VCPfl/fl mice" spots="462648501" bases="45339553098" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9211914</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19714096</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5385957</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VCPFF_1.bam" url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820247/VCPFF_1.bam.1" size="33740466953" date="2021-06-16 05:57:35" md5="83eb11edf78a9968844b9b6fc2939a99" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-7/SRR14820247/VCPFF_1.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-2.s3.amazonaws.com/SRR14820247/VCPFF_1.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820247" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820247/SRR14820247" size="12644826080" date="2021-06-16 06:47:36" md5="2071198b2fba037a4ceae3c60a307c5e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14820247/SRR14820247" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14820247.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820247/SRR14820247.lite.1" size="7736177059" date="2022-08-14 03:01:39" md5="67fcc8f63531dfcbaa507f8f6dbad25a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14820/SRR14820247/SRR14820247.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14820247/SRR14820247.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR14820247/SRR14820247.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="462648501">
+          <Read index="0" count="462648501" average="98" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="435315147"/>
+                <Elements count="42660884406"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546206"/>
+                <Elements count="2730871774"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="28305175"/>
+                <Elements count="2773907150"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="462648501"/>
+                <Elements count="45339553098"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="45339553098">
+          <Base value="A" count="13974874638"/>
+          <Base value="C" count="9119454574"/>
+          <Base value="G" count="10301082156"/>
+          <Base value="T" count="11943065533"/>
+          <Base value="N" count="1076197"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

@@ -1,21 +1,24 @@
+from typing import Optional
+
 import luigi
 
 # see luigi.cfg for details
 class rnaseq_pipeline(luigi.Config):
     task_namespace = ''
 
-    GENOMES = luigi.Parameter()
+    GENOMES: str = luigi.Parameter()
 
-    OUTPUT_DIR = luigi.Parameter()
-    REFERENCES = luigi.Parameter()
-    METADATA = luigi.Parameter()
-    DATA = luigi.Parameter()
-    DATAQCDIR = luigi.Parameter()
-    ALIGNDIR = luigi.Parameter()
-    ALIGNQCDIR = luigi.Parameter()
-    QUANTDIR = luigi.Parameter()
-    BATCHINFODIR = luigi.Parameter()
+    OUTPUT_DIR: str = luigi.Parameter()
+    REFERENCES: str = luigi.Parameter()
+    SINGLE_CELL_REFERENCES: str = luigi.Parameter()
+    METADATA: str = luigi.Parameter()
+    DATA: str = luigi.Parameter()
+    DATAQCDIR: str = luigi.Parameter()
+    ALIGNDIR: str = luigi.Parameter()
+    ALIGNQCDIR: str = luigi.Parameter()
+    QUANTDIR: str = luigi.Parameter()
+    BATCHINFODIR: str = luigi.Parameter()
 
-    RSEM_DIR = luigi.Parameter()
+    RSEM_DIR: str = luigi.Parameter()
 
-    SLACK_WEBHOOK_URL = luigi.OptionalParameter(default=None)
+    SLACK_WEBHOOK_URL: Optional[str] = luigi.OptionalParameter(default=None)

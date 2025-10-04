@@ -2,11 +2,16 @@ import tempfile
 from datetime import timedelta
 from time import sleep
 
+import pytest
+
 from rnaseq_pipeline.targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, ExpirableLocalTarget
 
 def test_gemma_targets():
-    assert GemmaDatasetHasBatch('GSE110256').exists()
     assert GemmaDatasetPlatform('GSE110256', 'Generic_mouse_ncbiIds').exists()
+
+@pytest.mark.skip('This test requires credentials.')
+def test_gemma_dataset_has_batch():
+    assert GemmaDatasetHasBatch('GSE110256').exists()
 
 def test_expirable_local_target():
     with tempfile.TemporaryDirectory() as tmp_dir:

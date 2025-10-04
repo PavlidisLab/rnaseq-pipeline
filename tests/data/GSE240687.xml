@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346828" alias="GSM7707563_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346828</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707563_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707563: 5XFAD.Cpa3Cre/+ (MC KO), bio rep 4, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591887">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591887</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707563</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707563</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707563" accession="SRS18591887">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591887</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953933</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707563</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3Cre/+ (MC KO), bio rep 4, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3Cre/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591887" sample_name="GSM7707563" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 4, scRNA-Seq" spots="81664605" bases="9636423390" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591887</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953933</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707563</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="9636423390" spots="81664605" bytes="3063296125">
+      <RUN accession="SRR25619896" alias="GSM7707563_r1" total_spots="81664605" total_bases="9636423390" size="3063296125" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619896</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707563_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346828">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707563_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591887" sample_name="GSM7707563" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 4, scRNA-Seq" spots="81664605" bases="9636423390" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591887</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953933</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707563</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO_rep4_R1_001.fastq.gz" size="1709587802" date="2023-08-12 02:12:54" md5="5c061188b718f6e2ecf26897e35fd702" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619896/KO_rep4_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO_rep4_R2_001.fastq.gz" size="3853160547" date="2023-08-12 02:13:58" md5="632f35c354efaf4acc6478861f2dc47a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619896/KO_rep4_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619896" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619896/SRR25619896" size="3063298939" date="2023-08-12 02:14:49" md5="6b4b2b7131a32d5a6b55a41d430adf82" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619896/SRR25619896" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619896.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619896/SRR25619896.lite.1" size="2541161231" date="2023-08-17 03:35:12" md5="379334bdd81e6e4fff621738d6122232" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619896/SRR25619896.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619896/SRR25619896.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619896/SRR25619896.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="81664605">
+          <Read index="0" count="81664605" average="28" stdev="0"/>
+          <Read index="1" count="81664605" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="81664605"/>
+                <Elements count="9636423390"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="9636423390">
+          <Base value="A" count="2789324997"/>
+          <Base value="C" count="2142128755"/>
+          <Base value="G" count="2274993549"/>
+          <Base value="T" count="2403434511"/>
+          <Base value="N" count="26541578"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346827" alias="GSM7707562_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346827</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707562_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707562: 5XFAD.Cpa3+/+ (MC WT), bio rep 4, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591888">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591888</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707562</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707562</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707562" accession="SRS18591888">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591888</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953934</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707562</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3+/+ (MC WT), bio rep 4, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591888" sample_name="GSM7707562" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 4, scRNA-Seq" spots="95108837" bases="11222842766" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591888</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953934</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707562</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="11222842766" spots="95108837" bytes="3587038223">
+      <RUN accession="SRR25619897" alias="GSM7707562_r1" total_spots="95108837" total_bases="11222842766" size="3587038223" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619897</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707562_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346827">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707562_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591888" sample_name="GSM7707562" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 4, scRNA-Seq" spots="95108837" bases="11222842766" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591888</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953934</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707562</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR25619897.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619897/SRR25619897.lite.1" size="2954657119" date="2023-08-17 03:35:29" md5="a93a76a9b1d8f132ace9725c443a748f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619897/SRR25619897.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619897/SRR25619897.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619897/SRR25619897.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619897" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619897/SRR25619897" size="3587041035" date="2023-08-12 02:06:57" md5="c31e333afff10b5f401de0af99f246f8" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619897/SRR25619897" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep4_R2_001.fastq.gz" size="4411347572" date="2023-08-12 02:06:37" md5="fb88f1741e4d11a61b2749d0d49657ab" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619897/WT_rep4_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep4_R1_001.fastq.gz" size="2076517069" date="2023-08-12 02:06:13" md5="b2ca92544fcbd5d539e044199b57eeb8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619897/WT_rep4_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="95108837">
+          <Read index="0" count="95108837" average="28" stdev="0"/>
+          <Read index="1" count="95108837" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="95108837"/>
+                <Elements count="11222842766"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11222842766">
+          <Base value="A" count="3382028886"/>
+          <Base value="C" count="2446993776"/>
+          <Base value="G" count="2558618929"/>
+          <Base value="T" count="2831216975"/>
+          <Base value="N" count="3984200"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346826" alias="GSM7707561_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346826</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707561_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707561: 5XFAD.Cpa3+/+ (MC WT), bio rep 3, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591886">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591886</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707561</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707561</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707561" accession="SRS18591886">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591886</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953935</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707561</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3+/+ (MC WT), bio rep 3, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591886" sample_name="GSM7707561" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 3, scRNA-Seq" spots="86907315" bases="10255063170" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591886</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953935</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707561</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="10255063170" spots="86907315" bytes="3274587068">
+      <RUN accession="SRR25619898" alias="GSM7707561_r1" total_spots="86907315" total_bases="10255063170" size="3274587068" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619898</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707561_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346826">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707561_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591886" sample_name="GSM7707561" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 3, scRNA-Seq" spots="86907315" bases="10255063170" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591886</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953935</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707561</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT_rep3_R1_001.fastq.gz" size="1896329050" date="2023-08-12 02:08:40" md5="bd2cd35a09c1798419c46e3682c5c69a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619898/WT_rep3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep3_R2_001.fastq.gz" size="4012916900" date="2023-08-12 02:08:52" md5="1c6277ba4806c4d97e3e1a3c82314b22" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619898/WT_rep3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619898" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619898/SRR25619898" size="3274589884" date="2023-08-12 02:09:19" md5="ff9d4866b97c727c178079a8383c1742" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619898/SRR25619898" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619898.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619898/SRR25619898.lite.1" size="2701578660" date="2023-08-17 03:35:25" md5="f3c50ee1a91ed5a8396f04a2ddea6bc9" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619898/SRR25619898.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619898/SRR25619898.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619898/SRR25619898.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="86907315">
+          <Read index="0" count="86907315" average="28" stdev="0"/>
+          <Read index="1" count="86907315" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="86907315"/>
+                <Elements count="10255063170"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10255063170">
+          <Base value="A" count="3090753595"/>
+          <Base value="C" count="2239641511"/>
+          <Base value="G" count="2338285973"/>
+          <Base value="T" count="2582749086"/>
+          <Base value="N" count="3633005"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346825" alias="GSM7707560_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346825</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707560_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707560: 5XFAD.Cpa3Cre/+ (MC KO), bio rep 3, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591885">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591885</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707560</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707560</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707560" accession="SRS18591885">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591885</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953936</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707560</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3Cre/+ (MC KO), bio rep 3, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3Cre/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591885" sample_name="GSM7707560" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 3, scRNA-Seq" spots="106702605" bases="12590907390" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591885</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953936</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707560</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="12590907390" spots="106702605" bytes="4027208520">
+      <RUN accession="SRR25619899" alias="GSM7707560_r1" total_spots="106702605" total_bases="12590907390" size="4027208520" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619899</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707560_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346825">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707560_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591885" sample_name="GSM7707560" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 3, scRNA-Seq" spots="106702605" bases="12590907390" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591885</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953936</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707560</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO_rep3_R1_001.fastq.gz" size="2323602409" date="2023-08-12 02:13:36" md5="27a54236131f6173968a8b1a8955e945" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619899/KO_rep3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO_rep3_R2_001.fastq.gz" size="4982722088" date="2023-08-12 02:14:24" md5="899f517f224f0f96a8a810c0b3d3fe0b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619899/KO_rep3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619899" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619899/SRR25619899" size="4027211329" date="2023-08-12 02:15:17" md5="f3b021dfa208b48e59558027632d1248" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619899/SRR25619899" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619899.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619899/SRR25619899.lite.1" size="3309240649" date="2023-08-17 03:35:31" md5="91db316f988423d0136019fd4d58a71c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619899/SRR25619899.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619899/SRR25619899.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619899/SRR25619899.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="106702605">
+          <Read index="0" count="106702605" average="28" stdev="0"/>
+          <Read index="1" count="106702605" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="106702605"/>
+                <Elements count="12590907390"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12590907390">
+          <Base value="A" count="3652372466"/>
+          <Base value="C" count="2815218049"/>
+          <Base value="G" count="2936940747"/>
+          <Base value="T" count="3181880702"/>
+          <Base value="N" count="4495426"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346824" alias="GSM7707559_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346824</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707559_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707559: 5XFAD.Cpa3Cre/+ (MC KO), bio rep 2, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591884">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591884</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707559</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707559</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707559" accession="SRS18591884">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591884</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953937</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707559</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3Cre/+ (MC KO), bio rep 2, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3Cre/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591884" sample_name="GSM7707559" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 2, scRNA-Seq" spots="91329230" bases="10776849140" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591884</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953937</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707559</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="10776849140" spots="91329230" bytes="3446364448">
+      <RUN accession="SRR25619900" alias="GSM7707559_r1" total_spots="91329230" total_bases="10776849140" size="3446364448" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619900</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707559_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346824">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707559_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591884" sample_name="GSM7707559" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 2, scRNA-Seq" spots="91329230" bases="10776849140" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591884</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953937</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707559</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO_rep2_R1_001.fastq.gz" size="1986398653" date="2023-08-12 02:14:43" md5="3b707384946207ae39c75c6bb7a3ef1a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619900/KO_rep2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO_rep2_R2_001.fastq.gz" size="4289154700" date="2023-08-12 02:15:31" md5="1f41ca2d5f094124d7f7f1a57c77c270" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619900/KO_rep2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619900" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619900/SRR25619900" size="3446367261" date="2023-08-12 02:16:46" md5="34fbba066a41b81fcedb048260db8de2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619900/SRR25619900" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619900.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619900/SRR25619900.lite.1" size="2836145057" date="2023-08-17 03:35:27" md5="8e9373fb9e63ed873d1148340d3fc9d8" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619900/SRR25619900.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619900/SRR25619900.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619900/SRR25619900.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="91329230">
+          <Read index="0" count="91329230" average="28" stdev="0"/>
+          <Read index="1" count="91329230" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="91329230"/>
+                <Elements count="10776849140"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10776849140">
+          <Base value="A" count="3016208227"/>
+          <Base value="C" count="2460989446"/>
+          <Base value="G" count="2570964562"/>
+          <Base value="T" count="2724846224"/>
+          <Base value="N" count="3840681"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346823" alias="GSM7707558_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346823</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707558_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707558: 5XFAD.Cpa3+/+ (MC WT), bio rep 2, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591883">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591883</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707558</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707558</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707558" accession="SRS18591883">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591883</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953938</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707558</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3+/+ (MC WT), bio rep 2, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591883" sample_name="GSM7707558" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 2, scRNA-Seq" spots="94682433" bases="11172527094" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591883</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953938</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707558</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="11172527094" spots="94682433" bytes="3564330620">
+      <RUN accession="SRR25619901" alias="GSM7707558_r1" total_spots="94682433" total_bases="11172527094" size="3564330620" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619901</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707558_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346823">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707558_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591883" sample_name="GSM7707558" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 2, scRNA-Seq" spots="94682433" bases="11172527094" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591883</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953938</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707558</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR25619901.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619901/SRR25619901.lite.1" size="2939709385" date="2023-08-17 03:35:40" md5="32647cc7761387781e0a0aef3f539a91" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619901/SRR25619901.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619901/SRR25619901.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619901/SRR25619901.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619901" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619901/SRR25619901" size="3564333433" date="2023-08-12 02:17:37" md5="32706dcee13a71674b341c8caa637436" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619901/SRR25619901" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep2_R2_001.fastq.gz" size="4434559467" date="2023-08-12 02:16:18" md5="4c4af4972c21f95998f18bfcf4f34175" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619901/WT_rep2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep2_R1_001.fastq.gz" size="2060199816" date="2023-08-12 02:15:29" md5="92eb70cb5c3b90edc7895882d792e9b2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619901/WT_rep2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="94682433">
+          <Read index="0" count="94682433" average="28" stdev="0"/>
+          <Read index="1" count="94682433" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="94682433"/>
+                <Elements count="11172527094"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11172527094">
+          <Base value="A" count="3137408749"/>
+          <Base value="C" count="2533881192"/>
+          <Base value="G" count="2662409022"/>
+          <Base value="T" count="2834840992"/>
+          <Base value="N" count="3987139"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346822" alias="GSM7707557_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346822</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707557_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707557: 5XFAD.Cpa3Cre/+ (MC KO), bio rep 1, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591882">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591882</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707557</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707557</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707557" accession="SRS18591882">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591882</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953939</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707557</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3Cre/+ (MC KO), bio rep 1, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3Cre/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591882" sample_name="GSM7707557" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 1, scRNA-Seq" spots="88000481" bases="10384056758" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591882</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953939</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707557</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="10384056758" spots="88000481" bytes="3320810867">
+      <RUN accession="SRR25619902" alias="GSM7707557_r1" total_spots="88000481" total_bases="10384056758" size="3320810867" load_done="true" published="2023-08-20 00:02:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619902</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707557_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346822">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707557_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591882" sample_name="GSM7707557" sample_title="5XFAD.Cpa3Cre/+ (MC KO), bio rep 1, scRNA-Seq" spots="88000481" bases="10384056758" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591882</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953939</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707557</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="KO_rep1_R1_001.fastq.gz" size="1910238827" date="2023-08-12 02:10:59" md5="18e45a4b547cf4c13c52124a20b69db8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619902/KO_rep1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="KO_rep1_R2_001.fastq.gz" size="4093655016" date="2023-08-12 02:11:09" md5="1113bf06a22b28d8cb2f09afca819a77" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619902/KO_rep1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619902" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619902/SRR25619902" size="3320813675" date="2023-08-12 02:11:41" md5="0daa503f891aece98be8f04381e04511" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619902/SRR25619902" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619902.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619902/SRR25619902.lite.1" size="2733027647" date="2023-08-17 03:38:07" md5="2f6bf1ad34f8524bf6a81bd2a11d46b0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619902/SRR25619902.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619902/SRR25619902.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619902/SRR25619902.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="88000481">
+          <Read index="0" count="88000481" average="28" stdev="0"/>
+          <Read index="1" count="88000481" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="88000481"/>
+                <Elements count="10384056758"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10384056758">
+          <Base value="A" count="2879149988"/>
+          <Base value="C" count="2364476396"/>
+          <Base value="G" count="2536245352"/>
+          <Base value="T" count="2600509388"/>
+          <Base value="N" count="3675634"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21346821" alias="GSM7707556_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21346821</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707556_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7707556: 5XFAD.Cpa3+/+ (MC WT), bio rep 1, scRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP454723">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP454723</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1004616</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18591881">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18591881</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7707556</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7707556</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The cortical brain tissue from both hemispheres was dissected and placed in 0.66 mg/ml pre-warmed papain/RPMI medium in C-tubes. The tissues were dissociated using a Gentle MACS dissociator for 37 seconds, followed by incubation at 37°C for 15 minutes under rotation. Next, 0.66 mg/ml pre-warmed collagenase D/RPMI medium was added, and the tissues were dissociated again for 31 seconds using the Gentle MACS dissociator. Next, DNase I (Worthington) was added to the final concentration of 125 U/ml, and the mixture was incubated for another 10 minutes at 37°C under rotation. The tissues were then dissociated for 61 seconds using the Gentle MACS dissociator. The cell suspensions were incubated for 15 min at 37°C under rotation. After the final incubation, we mixed the suspension with neutralization buffer (2% FCS and 1 mM EDTA in PBS) and broke down the tissues by pipetting. The cells were filtered and centrifuged at 400 x g for 8 minutes at 4°C. The supernatant was aspirated, and the cells were resuspended in 27% percoll. The cells were centrifuged again at 850 x g for 40 minutes at 4°C with a deceleration of 4, and then washed and lysed for red blood cells. The cell suspension was resuspended in cold FACS buffer without azide and the viable cells were counted before library preparation. Library was performed according to the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 2000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Molecular biology, MGH" accession="SRA1691332" alias="SUB13755921">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1691332</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Molecular biology, MGH">SUB13755921</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Molecular biology, MGH</Name>
+      <Contact email="kashish.chetal1@gmail.com">
+        <Address>
+          <Street>55 Fruit St</Street>
+          <City>Boston</City>
+          <Sub>MA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Kashish</First>
+          <Last>Chetal</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE240687" accession="SRP454723">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP454723</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1004616</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE240687</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profile at single cell level of mouse cortical brain cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used single cell RNA sequencing (scRNA-seq) to compare cortical brain cells from mast cell wild-type with mast cell knockout mice. Overall design: Total cotical brain cells of 8-month-old 5XFAD.Cpa3+/+ and 5XFAD.Cpa3Cre/+ mice were isolated by enzymatic digestion and analyzed using scRNA-Seq.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE240687</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37713312</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM7707556" accession="SRS18591881">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18591881</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36953940</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7707556</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>5XFAD.Cpa3+/+ (MC WT), bio rep 1, scRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1004616</ID>
+            <LABEL>PRJNA1004616</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>brain cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>5XFAD.Cpa3+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18591881" sample_name="GSM7707556" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 1, scRNA-Seq" spots="93426309" bases="11024304462" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18591881</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36953940</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707556</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="11024304462" spots="93426309" bytes="3541661854">
+      <RUN accession="SRR25619903" alias="GSM7707556_r1" total_spots="93426309" total_bases="11024304462" size="3541661854" load_done="true" published="2023-08-20 00:02:22" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25619903</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7707556_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21346821">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7707556_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS18591881" sample_name="GSM7707556" sample_title="5XFAD.Cpa3+/+ (MC WT), bio rep 1, scRNA-Seq" spots="93426309" bases="11024304462" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18591881</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36953940</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7707556</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT_rep1_R1_001.fastq.gz" size="2035035185" date="2023-08-12 02:10:02" md5="f11b244132137f64087252a9c9ff344e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619903/WT_rep1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT_rep1_R2_001.fastq.gz" size="4195441059" date="2023-08-12 02:10:15" md5="b40f5d2d796ce7692a5269cb6221b9b1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR25619903/WT_rep1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619903" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619903/SRR25619903" size="3541664669" date="2023-08-12 02:10:40" md5="f4d66351eb2236af23df8932140b5e97" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25619903/SRR25619903" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25619903.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619903/SRR25619903.lite.1" size="2900478841" date="2023-08-17 03:35:36" md5="325964e88246a4164d644de76dd21c43" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR025/25619/SRR25619903/SRR25619903.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR25619903/SRR25619903.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR25619903/SRR25619903.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="93426309">
+          <Read index="0" count="93426309" average="28" stdev="0"/>
+          <Read index="1" count="93426309" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="93426309"/>
+                <Elements count="11024304462"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="11024304462">
+          <Base value="A" count="3086361414"/>
+          <Base value="C" count="2553656144"/>
+          <Base value="G" count="2784383391"/>
+          <Base value="T" count="2595941660"/>
+          <Base value="N" count="3961853"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

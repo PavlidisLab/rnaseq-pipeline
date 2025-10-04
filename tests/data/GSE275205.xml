@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758979" alias="GSM8472699_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758979</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472699_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472699: Cohort 2-RSD-PLX; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398115">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398115</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472699</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472699</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472699" accession="SRS22398115">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398115</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259621</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472699</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 2-RSD-PLX</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>PLX Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398115" sample_name="GSM8472699" sample_title="Cohort 2-RSD-PLX" spots="102206653" bases="31479649124" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398115</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259621</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472699</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="31479649124" spots="102206653" bytes="15531705851">
+      <RUN accession="SRR30298488" alias="GSM8472699_r1" total_spots="102206653" total_bases="31479649124" size="15531705851" load_done="true" published="2024-10-02 13:49:40" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298488</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472699_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758979">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472699_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_I1_001.fastq.gz --read2PairFiles=PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R1_001.fastq.gz --read3PairFiles=PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398115" sample_name="GSM8472699" sample_title="Cohort 2-RSD-PLX" spots="102206653" bases="31479649124" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398115</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259621</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472699</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR30298488.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298488/SRR30298488.lite.1" size="8008201595" date="2024-08-19 18:51:57" md5="95dcbb1393dd42d00adc96f60f0a5b45" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298488/SRR30298488.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298488/SRR30298488.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298488/SRR30298488.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298488" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298488/SRR30298488" size="15531708371" date="2024-08-19 16:40:54" md5="b65d3409894256457d6a83620c3ed184" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298488/SRR30298488" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R2_001.fastq.gz" size="9650537625" date="2024-08-19 16:39:19" md5="a3dd6ae83bd3e78530cbd9cd23e6b33d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298488/PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R1_001.fastq.gz" size="10430945466" date="2024-08-19 16:39:43" md5="12fb613501370ca28f5c9085642cf7ff" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298488/PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_I1_001.fastq.gz" size="739199109" date="2024-08-19 16:39:06" md5="f78b9b333da4d9daa74efe98bc9a3c80" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298488/PLXRSD_CKDL200160959-1a-SI_GA_E4_HCJJKBBXX_S1_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="102206653">
+          <Read index="0" count="102206653" average="8" stdev="0"/>
+          <Read index="1" count="102206653" average="150" stdev="0"/>
+          <Read index="2" count="102206653" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="102206653"/>
+                <Elements count="31479649124"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30661995900">
+          <Base value="A" count="7421323879"/>
+          <Base value="C" count="6015142348"/>
+          <Base value="G" count="6370870379"/>
+          <Base value="T" count="10851254503"/>
+          <Base value="N" count="3404791"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758978" alias="GSM8472698_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758978</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472698_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472698: Cohort 2-Control-PLX; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398117">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398117</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472698</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472698</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472698" accession="SRS22398117">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398117</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259622</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472698</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 2-Control-PLX</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>PLX Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398117" sample_name="GSM8472698" sample_title="Cohort 2-Control-PLX" spots="138569538" bases="42679417704" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398117</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259622</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472698</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="42679417704" spots="138569538" bytes="21099809884">
+      <RUN accession="SRR30298489" alias="GSM8472698_r1" total_spots="138569538" total_bases="42679417704" size="21099809884" load_done="true" published="2024-10-02 13:49:39" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298489</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472698_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758978">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472698_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_I1_001.fastq.gz --read2PairFiles=PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R1_001.fastq.gz --read3PairFiles=PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398117" sample_name="GSM8472698" sample_title="Cohort 2-Control-PLX" spots="138569538" bases="42679417704" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398117</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259622</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472698</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_I1_001.fastq.gz" size="1019583034" date="2024-08-19 16:48:06" md5="b5f0f12b4c769de20162f1fc35306059" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298489/PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R1_001.fastq.gz" size="14182701872" date="2024-08-19 16:49:03" md5="9d311223b29e7b9d2aa46b1090b31b2e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298489/PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R2_001.fastq.gz" size="13045096347" date="2024-08-19 16:48:29" md5="d20f444b9d44eac9d2db04b20b8201c0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298489/PLXCon_CKDL200160957-1a-SI_GA_E2_HCJJKBBXX_S2_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298489" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298489/SRR30298489" size="21099812403" date="2024-08-19 16:53:43" md5="c737cc29b3f09e848f0673e601c9be95" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298489/SRR30298489" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298489.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298489/SRR30298489.lite.1" size="10845871407" date="2024-08-19 18:51:50" md5="36947cbbd8a62acf1e12cc69eab6d8e0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298489/SRR30298489.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298489/SRR30298489.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298489/SRR30298489.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="138569538">
+          <Read index="0" count="138569538" average="8" stdev="0"/>
+          <Read index="1" count="138569538" average="150" stdev="0"/>
+          <Read index="2" count="138569538" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="138569538"/>
+                <Elements count="42679417704"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41570861400">
+          <Base value="A" count="9965366651"/>
+          <Base value="C" count="8331379388"/>
+          <Base value="G" count="8726602586"/>
+          <Base value="T" count="14542900502"/>
+          <Base value="N" count="4612273"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758977" alias="GSM8472697_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758977</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472697_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472697: Cohort 2-RSD-Veh; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398116">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398116</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472697</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472697</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472697" accession="SRS22398116">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398116</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259623</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472697</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 2-RSD-Veh</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398116" sample_name="GSM8472697" sample_title="Cohort 2-RSD-Veh" spots="103322475" bases="31823322300" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398116</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259623</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472697</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="31823322300" spots="103322475" bytes="15791358373">
+      <RUN accession="SRR30298490" alias="GSM8472697_r1" total_spots="103322475" total_bases="31823322300" size="15791358373" load_done="true" published="2024-10-02 13:49:39" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298490</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472697_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758977">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472697_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_I1_001.fastq.gz --read2PairFiles=VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R1_001.fastq.gz --read3PairFiles=VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398116" sample_name="GSM8472697" sample_title="Cohort 2-RSD-Veh" spots="103322475" bases="31823322300" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398116</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259623</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472697</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_I1_001.fastq.gz" size="767277479" date="2024-08-19 16:50:16" md5="d0ac591eb798b6c6ce42eb6d7dd3648d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298490/VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R1_001.fastq.gz" size="10685846885" date="2024-08-19 16:54:06" md5="a22c2cc56db270667b47dcab64062484" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298490/VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R2_001.fastq.gz" size="10144260542" date="2024-08-19 16:59:57" md5="6f00182599df0ea5867fa7aa12dc87e5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298490/VehRSD_CKDL200160958-1a-SI_GA_E3_HCJJKBBXX_S3_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298490" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298490/SRR30298490" size="15791360891" date="2024-08-19 17:09:10" md5="e7b0b80740c8da157058064150efd8ba" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298490/SRR30298490" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298490.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298490/SRR30298490.lite.1" size="8097836147" date="2024-08-19 18:52:07" md5="b666788cc7f30c67ad0d3f72bc0a25a5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298490/SRR30298490.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298490/SRR30298490.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298490/SRR30298490.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="103322475">
+          <Read index="0" count="103322475" average="8" stdev="0"/>
+          <Read index="1" count="103322475" average="150" stdev="0"/>
+          <Read index="2" count="103322475" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="103322475"/>
+                <Elements count="31823322300"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30996742500">
+          <Base value="A" count="7469497396"/>
+          <Base value="C" count="6207923675"/>
+          <Base value="G" count="6628683574"/>
+          <Base value="T" count="10687197202"/>
+          <Base value="N" count="3440653"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758976" alias="GSM8472696_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758976</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472696_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472696: Cohort 2-Control-Veh; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398119">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398119</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472696</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472696</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472696" accession="SRS22398119">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398119</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259624</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472696</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 2-Control-Veh</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398119" sample_name="GSM8472696" sample_title="Cohort 2-Control-Veh" spots="113854095" bases="35067061260" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398119</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259624</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472696</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="35067061260" spots="113854095" bytes="17462485467">
+      <RUN accession="SRR30298491" alias="GSM8472696_r1" total_spots="113854095" total_bases="35067061260" size="17462485467" load_done="true" published="2024-10-02 13:49:40" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298491</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472696_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758976">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472696_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_I1_001.fastq.gz --read2PairFiles=VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R1_001.fastq.gz --read3PairFiles=VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398119" sample_name="GSM8472696" sample_title="Cohort 2-Control-Veh" spots="113854095" bases="35067061260" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398119</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259624</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472696</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_I1_001.fastq.gz" size="842086698" date="2024-08-19 16:55:01" md5="bb53e49d2213054ed386e0704ccb1d93" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298491/VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R1_001.fastq.gz" size="11709870453" date="2024-08-19 17:00:03" md5="3694bf50f9485539b1ff0b6b1c2b63ac" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298491/VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R2_001.fastq.gz" size="11190302162" date="2024-08-19 17:02:20" md5="efea0c407ae71561c4cca0b9f9fa435e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR30298491/VehCon_CKDL200160956-1a-SI_GA_E1_HCJJKBBXX_S4_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298491" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298491/SRR30298491" size="17462487981" date="2024-08-19 17:12:38" md5="830166a7b05bceed66fca3c0b624c0f6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298491/SRR30298491" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298491.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298491/SRR30298491.lite.1" size="8918773825" date="2024-08-19 18:59:51" md5="77296a072b910d81ac4ba3281caf0528" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298491/SRR30298491.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298491/SRR30298491.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298491/SRR30298491.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="113854095">
+          <Read index="0" count="113854095" average="8" stdev="0"/>
+          <Read index="1" count="113854095" average="150" stdev="0"/>
+          <Read index="2" count="113854095" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="113854095"/>
+                <Elements count="35067061260"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34156228500">
+          <Base value="A" count="8191255848"/>
+          <Base value="C" count="6750561143"/>
+          <Base value="G" count="7183744396"/>
+          <Base value="T" count="12026884824"/>
+          <Base value="N" count="3782289"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758975" alias="GSM8472695_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758975</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472695_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472695: Cohort 1-RSD-PLX; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398118">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398118</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472695</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472695</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472695" accession="SRS22398118">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398118</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259625</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472695</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 1-RSD-PLX</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>PLX Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398118" sample_name="GSM8472695" sample_title="Cohort 1-RSD-PLX" spots="123936363" bases="38172399804" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398118</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259625</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472695</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="38172399804" spots="123936363" bytes="17668315087">
+      <RUN accession="SRR30298492" alias="GSM8472695_r1" total_spots="123936363" total_bases="38172399804" size="17668315087" load_done="true" published="2024-10-02 13:49:40" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298492</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472695_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758975">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472695_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=PLXRSD_S4_L003_I1_001.fastq.gz --read2PairFiles=PLXRSD_S4_L003_R1_001.fastq.gz --read3PairFiles=PLXRSD_S4_L003_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398118" sample_name="GSM8472695" sample_title="Cohort 1-RSD-PLX" spots="123936363" bases="38172399804" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398118</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259625</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472695</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="PLXRSD_S4_L003_I1_001.fastq.gz" size="750204487" date="2024-08-19 16:32:26" md5="dfa3939f11fd64235ef1e5f348d96c85" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298492/PLXRSD_S4_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXRSD_S4_L003_R1_001.fastq.gz" size="12011050841" date="2024-08-19 16:32:59" md5="bb41300a16b60442798723334fa2f3a5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298492/PLXRSD_S4_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXRSD_S4_L003_R2_001.fastq.gz" size="10606504763" date="2024-08-19 16:32:43" md5="7ebd2edd72a5bec14b9ace05675ffbd9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298492/PLXRSD_S4_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298492" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298492/SRR30298492" size="17668317603" date="2024-08-19 16:33:47" md5="77f5057b86dbaf3a6ef81f5af17f386e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298492/SRR30298492" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298492.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298492/SRR30298492.lite.1" size="9712530943" date="2024-08-19 18:52:04" md5="9584693cf816a8f5bf5f9dbddb66a65a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298492/SRR30298492.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298492/SRR30298492.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298492/SRR30298492.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="123936363">
+          <Read index="0" count="123936363" average="8" stdev="0"/>
+          <Read index="1" count="123936363" average="150" stdev="0"/>
+          <Read index="2" count="123936363" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="123936363"/>
+                <Elements count="38172399804"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="37180908900">
+          <Base value="A" count="9188395755"/>
+          <Base value="C" count="7178321734"/>
+          <Base value="G" count="7199910273"/>
+          <Base value="T" count="13608082188"/>
+          <Base value="N" count="6198950"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758974" alias="GSM8472694_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758974</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472694_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472694: Cohort 1-Control-PLX; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398114">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398114</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472694</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472694</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472694" accession="SRS22398114">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398114</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259626</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472694</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 1-Control-PLX</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>PLX Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398114" sample_name="GSM8472694" sample_title="Cohort 1-Control-PLX" spots="106630545" bases="32842207860" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398114</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259626</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472694</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="32842207860" spots="106630545" bytes="15243596724">
+      <RUN accession="SRR30298493" alias="GSM8472694_r1" total_spots="106630545" total_bases="32842207860" size="15243596724" load_done="true" published="2024-10-02 13:49:40" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298493</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472694_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758974">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472694_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=PLXCon_S3_L003_I1_001.fastq.gz --read2PairFiles=PLXCon_S3_L003_R1_001.fastq.gz --read3PairFiles=PLXCon_S3_L003_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398114" sample_name="GSM8472694" sample_title="Cohort 1-Control-PLX" spots="106630545" bases="32842207860" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398114</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259626</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472694</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="PLXCon_S3_L003_I1_001.fastq.gz" size="690356339" date="2024-08-19 16:31:13" md5="4fd97b94a34e800a2a8d34a1ede0b1ee" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298493/PLXCon_S3_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXCon_S3_L003_R1_001.fastq.gz" size="10329662557" date="2024-08-19 16:31:42" md5="52425a5167cf2882296427334f08943b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298493/PLXCon_S3_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="PLXCon_S3_L003_R2_001.fastq.gz" size="9152793830" date="2024-08-19 16:31:57" md5="463a81de263b702708c2121a079e9fed" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298493/PLXCon_S3_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298493" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298493/SRR30298493" size="15243599239" date="2024-08-19 16:32:52" md5="7bde7f2db8b4009de93ba3a6391d0fb2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298493/SRR30298493" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298493.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298493/SRR30298493.lite.1" size="8361991771" date="2024-08-19 18:52:40" md5="f0d550b5c4bc75679205f878b567c601" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298493/SRR30298493.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298493/SRR30298493.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298493/SRR30298493.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="106630545">
+          <Read index="0" count="106630545" average="8" stdev="0"/>
+          <Read index="1" count="106630545" average="150" stdev="0"/>
+          <Read index="2" count="106630545" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="106630545"/>
+                <Elements count="32842207860"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="31989163500">
+          <Base value="A" count="7856161298"/>
+          <Base value="C" count="6185905091"/>
+          <Base value="G" count="6193016050"/>
+          <Base value="T" count="11748800917"/>
+          <Base value="N" count="5280144"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758973" alias="GSM8472693_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758973</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472693_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472693: Cohort 1-RSD-Veh; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398113">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398113</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472693</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472693</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472693" accession="SRS22398113">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398113</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259627</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472693</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 1-RSD-Veh</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398113" sample_name="GSM8472693" sample_title="Cohort 1-RSD-Veh" spots="164037629" bases="50523589732" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398113</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259627</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472693</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="50523589732" spots="164037629" bytes="23511716530">
+      <RUN accession="SRR30298494" alias="GSM8472693_r1" total_spots="164037629" total_bases="50523589732" size="23511716530" load_done="true" published="2024-10-02 13:49:40" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298494</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472693_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758973">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472693_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=VehRSD_S2_L003_I1_001.fastq.gz --read2PairFiles=VehRSD_S2_L003_R1_001.fastq.gz --read3PairFiles=VehRSD_S2_L003_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398113" sample_name="GSM8472693" sample_title="Cohort 1-RSD-Veh" spots="164037629" bases="50523589732" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398113</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259627</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472693</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VehRSD_S2_L003_I1_001.fastq.gz" size="989367523" date="2024-08-19 16:42:20" md5="bb4445cb40326ea57df838f22d2a35aa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298494/VehRSD_S2_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehRSD_S2_L003_R1_001.fastq.gz" size="15861146617" date="2024-08-19 16:42:42" md5="cfce870e9e8d064143fd5fa187747958" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298494/VehRSD_S2_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehRSD_S2_L003_R2_001.fastq.gz" size="13758005981" date="2024-08-19 16:43:02" md5="ab01f62078c4fbf720c9a172ed02d9b4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298494/VehRSD_S2_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298494" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298494/SRR30298494" size="23511719047" date="2024-08-19 16:45:17" md5="7f397261e4b3d954214c3cf2f67bd5f0" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298494/SRR30298494" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298494.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298494/SRR30298494.lite.1" size="12839192327" date="2024-08-19 18:57:49" md5="1b666458b94746332db4d8a03e2cb8dc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298494/SRR30298494.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298494/SRR30298494.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298494/SRR30298494.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="164037629">
+          <Read index="0" count="164037629" average="8" stdev="0"/>
+          <Read index="1" count="164037629" average="150" stdev="0"/>
+          <Read index="2" count="164037629" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="164037629"/>
+                <Elements count="50523589732"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="49211288700">
+          <Base value="A" count="12067819236"/>
+          <Base value="C" count="9549898990"/>
+          <Base value="G" count="9823043106"/>
+          <Base value="T" count="17762392270"/>
+          <Base value="N" count="8135098"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25758972" alias="GSM8472692_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25758972</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472692_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8472692: Cohort 1-Control-Veh; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP527371">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP527371</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22398120">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22398120</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8472692</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8472692</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice mice underwent CO2 asphyxiation and were perfused with phosphate buffered saline (PBS). The hippocampus was dissected and dissociated using the Miltenyi Adult Mouse Brain Dissociation Kit per manufacturer's instructions with minor modifications. Tissue was immediately placed into Enzyme P solution (37°C), Enzyme A solution was added, and tissue was dissociated in C-tubes using a gentleMACS dissociator. Density centrifugation was used to remove myelin debris, remaining red blood cells were lysed, and cell viability and concentration was determined using a hemocytometer. Hippocampi from three mice per group were pooled into each sample. This experiment was performed in two replicates, with six mice per group total, and approximately 3,000-5,000 cells were recovered from each sample. Single-cell suspension was loaded onto a 10X chip and run on a Chromium Controller to generate gel-bead emulsions. Protocols for UMI barcoding, cDNA amplification, and library construction followed the Chromium Next GEM Single Cell 3' GEM, Library &amp; Gel Bead Kit v3.1 kit protocol (10x Genomics; 1000121). Library quality was determined by Agilent High Sensitivity DNA BioAnalyzer chip and was sequenced using an Illumina HiSeq.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Ohio State University" accession="SRA1951096" alias="SUB14673744">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1951096</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Ohio State University">SUB14673744</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Ohio State University</Name>
+      <Contact email="zhou.4213@buckeyemail.osu.edu">
+        <Address>
+          <Street>Gateway Lofts Columbus, 2211 Dublin Rd</Street>
+          <City>COLUMBUS</City>
+          <Sub>OH</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Zhuoxin</First>
+          <Last>Zhou</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE275205" accession="SRP527371">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP527371</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1149800</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE275205</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single Cell RNAseq of the hippocampus after RSD following microglia depletion</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Chronic stress is associated with anxiety and cognitive impairment. Repeated social defeat (RSD) in mice induces anxiety-like behavior driven by microglia and the recruitment of inflammatory monocytes to the brain. Nonetheless, it is unclear how microglia communicate with other cells to modulate the physiological and behavioral responses to stress. Using single-cell (sc)RNAseq, novel stress-associated microglia were identified in the hippocampus and defined by RNA profiles of cytokine/chemokine signaling, cellular stress, and phagocytosis. Microglia depletion with a CSF1R antagonist (PLX5622) attenuated the stress-associated profile of leukocytes, endothelia, and astrocytes. Furthermore, RSD-induced social withdrawal and cognitive impairment were microglia dependent, but social avoidance was microglia independent. Furthermore, single-nuclei (sn)RNAseq showed robust responses to RSD in hippocampal neurons that were both microglia dependent and independent. Notably, stress-induced CREB, oxytocin, and glutamatergic signaling in neurons were microglia dependent. Collectively, these stress-associated microglia influenced transcriptional profiles in the hippocampus linked to social and cognitive deficits. Overall design: control-veh, control-plx, stress-veh, stress-plx, 3 hippocampi pooled, two separate cohorts with two separte 10x barcoding and sequencing</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE275205</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39341879</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8472692" accession="SRS22398120">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22398120</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43259628</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8472692</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Cohort 1-Control-Veh</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1149800</ID>
+            <LABEL>PRJNA1149800</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Control Diet</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22398120" sample_name="GSM8472692" sample_title="Cohort 1-Control-Veh" spots="121326122" bases="37368445576" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22398120</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43259628</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472692</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="37368445576" spots="121326122" bytes="17433144017">
+      <RUN accession="SRR30298495" alias="GSM8472692_r1" total_spots="121326122" total_bases="37368445576" size="17433144017" load_done="true" published="2024-10-02 13:49:39" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30298495</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8472692_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25758972">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8472692_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--readTypes=TBB --read1PairFiles=VehCon_S1_L003_I1_001.fastq.gz --read2PairFiles=VehCon_S1_L003_R1_001.fastq.gz --read3PairFiles=VehCon_S1_L003_R2_001.fastq.gz</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS22398120" sample_name="GSM8472692" sample_title="Cohort 1-Control-Veh" spots="121326122" bases="37368445576" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22398120</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43259628</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8472692</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="VehCon_S1_L003_I1_001.fastq.gz" size="749394030" date="2024-08-19 16:30:56" md5="828d07e4f16d5a4abfebd74134292a6d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298495/VehCon_S1_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehCon_S1_L003_R1_001.fastq.gz" size="11760734378" date="2024-08-19 16:31:58" md5="770cbb6cbfd25c5be1e2514a8315f0a9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298495/VehCon_S1_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="VehCon_S1_L003_R2_001.fastq.gz" size="10230811553" date="2024-08-19 16:31:23" md5="2a037ff724ace2f391a993794403f5bb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR30298495/VehCon_S1_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298495" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298495/SRR30298495" size="17433146539" date="2024-08-19 16:33:53" md5="538504499f8e694be4fbfb1e8081b38b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30298495/SRR30298495" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30298495.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298495/SRR30298495.lite.1" size="9509188635" date="2024-08-19 18:51:47" md5="47bf09046f4bcb6b13b758c859524cf5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-7/SRR030/30298/SRR30298495/SRR30298495.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR30298495/SRR30298495.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR30298495/SRR30298495.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="121326122">
+          <Read index="0" count="121326122" average="8" stdev="0"/>
+          <Read index="1" count="121326122" average="150" stdev="0"/>
+          <Read index="2" count="121326122" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="121326122"/>
+                <Elements count="37368445576"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="36397836600">
+          <Base value="A" count="8858072582"/>
+          <Base value="C" count="7121197271"/>
+          <Base value="G" count="7322167768"/>
+          <Base value="T" count="13090395397"/>
+          <Base value="N" count="6003582"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

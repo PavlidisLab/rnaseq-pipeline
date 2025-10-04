@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783653" accession="SRX9125399">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125399</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783653: AD_GKO; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368047">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368047</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783653</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783653</ID>
+            <LABEL>GSM4783653</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783653</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783653" accession="SRS7368047">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368047</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140337</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783653</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>AD_GKO</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>J20;GSAP -/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368047" sample_name="GSM4783653" sample_title="AD_GKO" spots="296008893" bases="36113084946" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368047</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140337</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783653</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="36113084946" spots="296008893" bytes="10933337013">
+      <RUN alias="GSM4783653_r1" accession="SRR12643480" total_spots="296008893" total_bases="36113084946" size="10933337013" load_done="true" published="2021-05-28 17:28:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643480</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783653_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125399" refname="GSM4783653"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368047" sample_name="GSM4783653" sample_title="AD_GKO" spots="296008893" bases="36113084946" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368047</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140337</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783653</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AD_GSAP_KO_11122019_R1.fastq.gz" size="5895045316" date="2020-09-15 18:51:19" md5="69b266108a42b4bf3e9b07e4862e8ff1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR12643480/AD_GSAP_KO_11122019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AD_GSAP_KO_11122019_R2.fastq.gz" size="14730878326" date="2020-09-15 18:55:48" md5="3f3a84d4ed159edc4fc0452a3f54b3db" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR12643480/AD_GSAP_KO_11122019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643480" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643480/SRR12643480" size="10933338544" date="2020-09-15 19:03:14" md5="009c9308b2917d351904be39027cabc4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643480/SRR12643480" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643480.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643480/SRR12643480.lite.1" size="9072733592" date="2022-08-09 13:52:20" md5="6d3138cfeeed0a24771ccd9995f17646" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643480/SRR12643480.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643480/SRR12643480.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643480/SRR12643480.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="296008893">
+          <Read index="0" count="296008893" average="28" stdev="0"/>
+          <Read index="1" count="296008893" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="296008893"/>
+                <Elements count="36113084946"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="36113084946">
+          <Base value="A" count="10215929466"/>
+          <Base value="C" count="8014684175"/>
+          <Base value="G" count="8430582922"/>
+          <Base value="T" count="9450564191"/>
+          <Base value="N" count="1324192"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783652" accession="SRX9125398">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125398</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783652: AD_WT; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368046">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368046</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783652</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783652</ID>
+            <LABEL>GSM4783652</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783652</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783652" accession="SRS7368046">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368046</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140339</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783652</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>AD_WT</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>J20;wild type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368046" sample_name="GSM4783652" sample_title="AD_WT" spots="331623292" bases="40458041624" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368046</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140339</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783652</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="40458041624" spots="331623292" bytes="12420725278">
+      <RUN alias="GSM4783652_r1" accession="SRR12643479" total_spots="331623292" total_bases="40458041624" size="12420725278" load_done="true" published="2021-05-28 17:28:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643479</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783652_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125398" refname="GSM4783652"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368046" sample_name="GSM4783652" sample_title="AD_WT" spots="331623292" bases="40458041624" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368046</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140339</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783652</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="AD_WT_01232020_R1.fastq.gz" size="6549908166" date="2020-09-15 18:33:21" md5="b0328cfcedabd1309f3ef615a4d7e747" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643479/AD_WT_01232020_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="AD_WT_01232020_R2.fastq.gz" size="16812739596" date="2020-09-15 18:39:40" md5="61b2c9a4a836b0a39cf50195e1e7e0a3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643479/AD_WT_01232020_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643479" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643479/SRR12643479" size="12420726807" date="2020-09-15 18:50:36" md5="9087ac87996877523579d0ff2e7fc096" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643479/SRR12643479" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643479.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643479/SRR12643479.lite.1" size="10169174979" date="2022-08-09 13:50:11" md5="27f401ca922cb6722ceae9d0fd1f0375" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643479/SRR12643479.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643479/SRR12643479.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643479/SRR12643479.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="331623292">
+          <Read index="0" count="331623292" average="28" stdev="0"/>
+          <Read index="1" count="331623292" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="331623292"/>
+                <Elements count="40458041624"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="40458041624">
+          <Base value="A" count="11490916220"/>
+          <Base value="C" count="8886957887"/>
+          <Base value="G" count="9332905871"/>
+          <Base value="T" count="10579498906"/>
+          <Base value="N" count="167762740"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783651" accession="SRX9125397">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125397</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783651: GKO_3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368043">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368043</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783651</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783651</ID>
+            <LABEL>GSM4783651</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783651</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783651" accession="SRS7368043">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368043</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140341</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783651</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GKO_3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>GSAP -/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368043" sample_name="GSM4783651" sample_title="GKO_3" spots="315178470" bases="38451773340" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368043</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140341</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783651</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="38451773340" spots="315178470" bytes="11728577551">
+      <RUN alias="GSM4783651_r1" accession="SRR12643478" total_spots="315178470" total_bases="38451773340" size="11728577551" load_done="true" published="2021-05-28 17:28:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643478</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783651_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125397" refname="GSM4783651"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368043" sample_name="GSM4783651" sample_title="GKO_3" spots="315178470" bases="38451773340" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368043</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140341</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783651</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR12643478.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643478/SRR12643478.lite.1" size="9657857370" date="2022-08-09 13:57:39" md5="7d721bae547af252efd7b4f6a955e4cf" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643478/SRR12643478.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643478/SRR12643478.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643478/SRR12643478.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643478" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643478/SRR12643478" size="11728579082" date="2020-09-15 18:50:06" md5="a5ddc8410baf502250dc551c4d240dc3" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643478/SRR12643478" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_KO3_11122019_R2.fastq.gz" size="15742968131" date="2020-09-15 18:46:24" md5="1bd009d1cd081d42b845baa7f27d05a0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643478/GSAP_KO3_11122019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_KO3_11122019_R1.fastq.gz" size="6277457064" date="2020-09-15 18:45:35" md5="3b7eb70694dfeeb5900f593219c28817" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643478/GSAP_KO3_11122019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="315178470">
+          <Read index="0" count="315178470" average="28" stdev="0"/>
+          <Read index="1" count="315178470" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="315178470"/>
+                <Elements count="38451773340"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="38451773340">
+          <Base value="A" count="10809245242"/>
+          <Base value="C" count="8521784710"/>
+          <Base value="G" count="9090434858"/>
+          <Base value="T" count="10028892000"/>
+          <Base value="N" count="1416530"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783650" accession="SRX9125396">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125396</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783650: GKO_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368042">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368042</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783650</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783650</ID>
+            <LABEL>GSM4783650</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783650</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783650" accession="SRS7368042">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368042</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140342</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783650</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GKO_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>GSAP -/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368042" sample_name="GSM4783650" sample_title="GKO_2" spots="390891318" bases="47688740796" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368042</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140342</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783650</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="47688740796" spots="390891318" bytes="14395049370">
+      <RUN alias="GSM4783650_r1" accession="SRR12643477" total_spots="390891318" total_bases="47688740796" size="14395049370" load_done="true" published="2021-05-28 17:28:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643477</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783650_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125396" refname="GSM4783650"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368042" sample_name="GSM4783650" sample_title="GKO_2" spots="390891318" bases="47688740796" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368042</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140342</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783650</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR12643477.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643477/SRR12643477.lite.1" size="11976989264" date="2022-08-09 14:06:06" md5="936e08b750456b28d7a0631e9dac225f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643477/SRR12643477.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643477/SRR12643477.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643477/SRR12643477.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643477" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643477/SRR12643477" size="14395050900" date="2020-09-15 19:17:26" md5="bafc3e8300025f4fed166880676784a6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643477/SRR12643477" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_KO2_11122019_R2.fastq.gz" size="19256106946" date="2020-09-15 18:56:26" md5="784424aad524ab8e0d3bef6a615e9c62" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643477/GSAP_KO2_11122019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_KO2_11122019_R1.fastq.gz" size="7731152206" date="2020-09-15 18:48:41" md5="85c3d46dc8fad7f60a4fc2546b522b87" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR12643477/GSAP_KO2_11122019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="390891318">
+          <Read index="0" count="390891318" average="28" stdev="0"/>
+          <Read index="1" count="390891318" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="390891318"/>
+                <Elements count="47688740796"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="47688740796">
+          <Base value="A" count="13485424268"/>
+          <Base value="C" count="10500787707"/>
+          <Base value="G" count="11291969406"/>
+          <Base value="T" count="12408791840"/>
+          <Base value="N" count="1767575"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783649" accession="SRX9125395">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125395</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783649: GKO_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368044">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368044</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783649</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783649</ID>
+            <LABEL>GSM4783649</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783649</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783649" accession="SRS7368044">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368044</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140344</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783649</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GKO_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>GSAP -/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368044" sample_name="GSM4783649" sample_title="GKO_1" spots="477179871" bases="58215944262" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368044</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140344</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783649</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="58215944262" spots="477179871" bytes="18448724412">
+      <RUN alias="GSM4783649_r1" accession="SRR12643476" total_spots="477179871" total_bases="58215944262" size="18448724412" load_done="true" published="2021-05-28 17:28:22" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643476</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783649_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125395" refname="GSM4783649"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368044" sample_name="GSM4783649" sample_title="GKO_1" spots="477179871" bases="58215944262" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368044</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140344</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783649</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="GSAP_KO1_08212019_R1.fastq.gz" size="9771376049" date="2020-09-15 19:07:53" md5="d182bfc98e6605673f02088722cb92ca" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR12643476/GSAP_KO1_08212019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_KO1_08212019_R2.fastq.gz" size="24154163937" date="2020-09-15 19:09:53" md5="fd80f863202439ec7fe5bace6d500ed8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR12643476/GSAP_KO1_08212019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643476" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643476/SRR12643476" size="18448725945" date="2020-09-15 19:14:39" md5="4fdef81f137b8986baed5d67f2694ec2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643476/SRR12643476" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643476.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643476/SRR12643476.lite.1" size="14621855537" date="2022-08-09 14:24:41" md5="292edba2aac232d640dfe01b2a164168" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643476/SRR12643476.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643476/SRR12643476.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643476/SRR12643476.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="477179871">
+          <Read index="0" count="477179871" average="28" stdev="0"/>
+          <Read index="1" count="477179871" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="477179871"/>
+                <Elements count="58215944262"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="58215944262">
+          <Base value="A" count="16406417327"/>
+          <Base value="C" count="12775371758"/>
+          <Base value="G" count="13854661922"/>
+          <Base value="T" count="15178340372"/>
+          <Base value="N" count="1152883"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783648" accession="SRX9125394">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125394</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783648: WT_3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368045">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368045</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783648</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783648</ID>
+            <LABEL>GSM4783648</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783648</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783648" accession="SRS7368045">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368045</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140345</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783648</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368045" sample_name="GSM4783648" sample_title="WT_3" spots="366700030" bases="44737403660" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368045</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140345</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783648</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="44737403660" spots="366700030" bytes="13516574506">
+      <RUN alias="GSM4783648_r1" accession="SRR12643475" total_spots="366700030" total_bases="44737403660" size="13516574506" load_done="true" published="2021-05-28 17:28:22" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643475</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783648_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125394" refname="GSM4783648"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368045" sample_name="GSM4783648" sample_title="WT_3" spots="366700030" bases="44737403660" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368045</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140345</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783648</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="GSAP_WT3_11122019_R1.fastq.gz" size="7265193595" date="2020-09-15 18:59:29" md5="4e5ff95d22ecae47d502d9599f7ca0b9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR12643475/GSAP_WT3_11122019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_WT3_11122019_R2.fastq.gz" size="18133842646" date="2020-09-15 19:05:09" md5="51f645ea0c6dca42717852f2f9111e20" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR12643475/GSAP_WT3_11122019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643475" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643475/SRR12643475" size="13516576036" date="2020-09-15 19:13:26" md5="eeaf6ac87c65674eb25bd20cfbe26ccd" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643475/SRR12643475" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643475.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643475/SRR12643475.lite.1" size="11239091068" date="2022-08-09 15:13:03" md5="1b013c8b56479c7d703a2f8590ad30c6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643475/SRR12643475.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR12643475/SRR12643475.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643475/SRR12643475.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="366700030">
+          <Read index="0" count="366700030" average="28" stdev="0"/>
+          <Read index="1" count="366700030" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="366700030"/>
+                <Elements count="44737403660"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="44737403660">
+          <Base value="A" count="12593660905"/>
+          <Base value="C" count="9854193557"/>
+          <Base value="G" count="10596725605"/>
+          <Base value="T" count="11691166103"/>
+          <Base value="N" count="1657490"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783647" accession="SRX9125393">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125393</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783647: WT_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368041">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368041</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783647</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783647</ID>
+            <LABEL>GSM4783647</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783647</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783647" accession="SRS7368041">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368041</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140306</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783647</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368041" sample_name="GSM4783647" sample_title="WT_2" spots="355667674" bases="43391456228" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368041</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140306</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783647</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="43391456228" spots="355667674" bytes="13171308264">
+      <RUN alias="GSM4783647_r1" accession="SRR12643474" total_spots="355667674" total_bases="43391456228" size="13171308264" load_done="true" published="2021-05-28 17:28:22" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643474</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783647_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125393" refname="GSM4783647"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368041" sample_name="GSM4783647" sample_title="WT_2" spots="355667674" bases="43391456228" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368041</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140306</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783647</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="GSAP_WT2_11122019_R1.fastq.gz" size="7057479514" date="2020-09-15 18:17:52" md5="6096e68b2e36e5361aa0780d162b8a3f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR12643474/GSAP_WT2_11122019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_WT2_11122019_R2.fastq.gz" size="17641744363" date="2020-09-15 18:20:56" md5="f3274afd970b91fdfded0b21e4f31b36" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR12643474/GSAP_WT2_11122019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643474" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643474/SRR12643474" size="13171309793" date="2020-09-15 18:27:57" md5="ad0efb34008f4b8537aa7e48dfbe7ff3" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643474/SRR12643474" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643474.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643474/SRR12643474.lite.1" size="10895710397" date="2022-08-09 14:08:03" md5="ef6f250a589de7b8a444df35280be02c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643474/SRR12643474.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643474/SRR12643474.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643474/SRR12643474.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="355667674">
+          <Read index="0" count="355667674" average="28" stdev="0"/>
+          <Read index="1" count="355667674" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="355667674"/>
+                <Elements count="43391456228"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="43391456228">
+          <Base value="A" count="12168571947"/>
+          <Base value="C" count="9636375363"/>
+          <Base value="G" count="10351718022"/>
+          <Base value="T" count="11233185670"/>
+          <Base value="N" count="1605226"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4783646" accession="SRX9125392">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX9125392</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4783646: WT_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP282467" refname="GSE157985">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS7368040">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS7368040</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4783646</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei were isolated based on the published protocol with modifications of Krishnaswami et al., 2016. After dissection, hippocampi were homogenized in a cold Dounce homogenizer after dissection. The homogenate was centrifuged at 1,000g for 8 min at 4 °C to pellet nuclei. Nuclei were resuspended in 1 ml 29% iodixanol buffer and centrifuged at 13,500 g for 20 min at 4°C. Supernatant and floating myelin were removed after centrifugation. Nuclei were resuspended in 100 µl nuclei storage buffer and filtered using a 40 µm cell strainer. Nuclei were stained with trypan blue to and counted using a hemocytometer. RNA libraries were prepared for sequencing using standard 10X Genomics protocols</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304783646</ID>
+            <LABEL>GSM4783646</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM4783646</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE157985" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1125811">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1125811</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE157985</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE157985" accession="SRP282467">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP282467</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA663585</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE157985</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>GSAP regulates mitochondrial function through Mitochondria-associated ER membrane in the pathogenesis of Alzheimer's disease</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Gamma-secretase activating protein (GSAP) plays an important role in regulating  gamma-secretase activity and specificity, which contributes to the pathogenesis of Alzheimer's disease (AD) and Down syndrome. GSAP is expressed in a variety of cell types in the bain. To elucidate the molecular function of GSAP across different cell types in the brain, we performed single nuclei RNA sequencing (sn-RNAseq) on hippocampal tissues obtained from wildtype (WT) and GSAP knockout (GKO) mice. To further investigate the pathogenic function of GSAP in the AD progression, we also determined effects of GSAP gene deletion in the J20 AD mouse model through sn-RNAseq on hippocampal tissues obtained from J20;WT and J20;GKO mice. Overall design: Single nuclei RNA sequencing was performed using hippocampal tissues from WT (7-month old; 3 mice), GKO (7-month old; 3 mice), J20;WT (6-month old; 1 mouse), and J20;GKO mice (6-month old; 1 mouse).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE157985</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34156424</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4783646" accession="SRS7368040">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS7368040</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN16140310</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4783646</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>663585</ID>
+            <LABEL>PRJNA663585</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>7 month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>wild type</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS7368040" sample_name="GSM4783646" sample_title="WT_1" spots="527694955" bases="64378784510" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS7368040</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN16140310</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4783646</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="64378784510" spots="527694955" bytes="20280694573">
+      <RUN alias="GSM4783646_r1" accession="SRR12643473" total_spots="527694955" total_bases="64378784510" size="20280694573" load_done="true" published="2021-05-28 17:28:22" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR12643473</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4783646_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX9125392" refname="GSM4783646"/>
+        <Pool>
+          <Member member_name="" accession="SRS7368040" sample_name="GSM4783646" sample_title="WT_1" spots="527694955" bases="64378784510" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS7368040</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN16140310</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4783646</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="GSAP_WT1_08212019_R1.fastq.gz" size="10767814603" date="2020-09-15 20:12:26" md5="cd5a69c34a20b54af07f9311c8001b26" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR12643473/GSAP_WT1_08212019_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="GSAP_WT1_08212019_R2.fastq.gz" size="26454685013" date="2020-09-15 20:21:24" md5="5f2304136f9e313d47259da9d4d9449a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR12643473/GSAP_WT1_08212019_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643473" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643473/SRR12643473" size="20280696103" date="2020-09-15 20:33:38" md5="c089b42e3eb840746b75a318b37c341c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12643473/SRR12643473" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR12643473.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643473/SRR12643473.lite.1" size="16168147791" date="2022-08-09 14:14:05" md5="ceb3c604ec96673bd86ab10b4f4d68d0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-1/SRR012/12643/SRR12643473/SRR12643473.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR12643473/SRR12643473.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR12643473/SRR12643473.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="527694955">
+          <Read index="0" count="527694955" average="28" stdev="0"/>
+          <Read index="1" count="527694955" average="94" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="527694955"/>
+                <Elements count="64378784510"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="64378784510">
+          <Base value="A" count="18135763662"/>
+          <Base value="C" count="14107228671"/>
+          <Base value="G" count="15399895592"/>
+          <Base value="T" count="16734624454"/>
+          <Base value="N" count="1272131"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

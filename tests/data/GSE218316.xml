@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX18307134" alias="GSM6740283_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX18307134</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740283_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6740283: Donor 3 - 72 hours treatment; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP408608">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP408608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA903151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15797788">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15797788</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6740283</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6740283</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>After treatment islets were dispersed into single cells by dynamic incubation with 0.025% trypsin (Gibco) supplemented with 10 mg/mL DNase (Pulmozyme, Genentech) for 6–7 min and filtered through a 40 μm cell-strainer to remove undigested material. Islets exposed to the different treatments were multiplexed per timepoint and donor using cell hashing. Briefly, each treated islet cell suspension was incubated with a pool of barcoded antibodies directed against B2M and CD298 (TotalSeq-A BioLegend). Labeled cell suspensions were pooled per donor and time point and processed for single-cell mRNA sequencing. Prior to loading the 10x Chromium controller, the pooled cell suspensions were counted to assess cell integrity and concentration. Cell suspensions were loaded, and the sequencing libraries were prepared following the standard 10x Genomics 3' V3 chemistry protocol.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Islet lab, Internal Medicine, Leiden University Medical Center" accession="SRA1543480" alias="SUB12298722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1543480</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Islet lab, Internal Medicine, Leiden University Medical Center">SUB12298722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Islet lab, Internal Medicine, Leiden University Medical Center</Name>
+      <Contact email="f.carlotti@lumc.nl">
+        <Address>
+          <Street>Albinusdreef 2</Street>
+          <City>Leiden</City>
+          <Sub>FN</Sub>
+          <Country>Netherlands</Country>
+        </Address>
+        <Name>
+          <First>Françoise</First>
+          <Last>Carlotti</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE218316" accession="SRP408608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP408608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA903151</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE218316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell transcriptomics of primary human pancreatic islet cells exposed to stress conditions associated with beta-cell failure.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Diabetes mellitus (DM) is a chronic disease associated with elevated blood glucose level and resulting from a loss of functional beta-cell mass. The goal of this study is to investigate the response of human pancreatic cells to pathophysiological conditions associated with beta-cell dysfunction, ultimately to identify molecular mechanisms contributing to the development of diabetes. Isolated primary human islets from three non-diabetic donors were exposed in vitro to pro-inflammatory, oxidative, metabolic and endoplasmic reticulum stress for up to 3 days. Subsequently the cells were processed for single-cell RNA sequencing (scRNA-seq). Analysis of the dataset revealed both common and specific molecular response of each pancreatic cell type to the various stress conditions. Overall design: Pancreatic islet cells from non-diabetic donors were treated with stressors (glucose (22 mM) and/or palmitate (0.5 mM), thapsigargin (0.1 µM), IL-1ß (1 ng/ml) and/or IFN? (1000 U/ml), IFNa (2000 U/ml), hydrogen peroxide (H2O2, 50 µM), FGF2 (100 ng/ml), hypoxia) and untreated as control for 24h and 72h</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE218316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37581620</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37924378</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39499224</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40471239</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6740283" accession="SRS15797788">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15797788</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN31785789</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740283</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Donor 3 - 72 hours treatment</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>903151</ID>
+            <LABEL>PRJNA903151</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy - non diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>gender</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>58</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>72h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15797788" sample_name="GSM6740283" sample_title="Donor 3 - 72 hours treatment" spots="32497412" bases="9814218424" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15797788</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN31785789</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740283</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="9814218424" spots="32497412" bytes="4137097104">
+      <RUN accession="SRR22334306" alias="GSM6740283_r1" total_spots="32497412" total_bases="9814218424" size="4137097104" load_done="true" published="2023-06-19 07:37:15" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR22334306</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740283_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX18307134">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6740283_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS15797788" sample_name="GSM6740283" sample_title="Donor 3 - 72 hours treatment" spots="32497412" bases="9814218424" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15797788</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN31785789</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6740283</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="D3_72h_R1.fastq.gz" size="2567333044" date="2022-11-18 14:00:52" md5="5da4260954c9baa47298a5e9e04df1aa" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR22334306/D3_72h_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="D3_72h_R2.fastq.gz" size="2493485645" date="2022-11-18 14:00:43" md5="a71e7aab57c7df5bddad7a6db6a25848" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-6/SRR22334306/D3_72h_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334306" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334306/SRR22334306" size="4137098330" date="2022-11-18 14:01:23" md5="b37047c0d38baceb82c9b8a7c0ca35a1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334306/SRR22334306" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334306.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334306/SRR22334306.lite.1" size="2459747638" date="2022-11-23 14:08:21" md5="3312de884212dd5a4fa5dd3de4b2db53" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334306/SRR22334306.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR22334306/SRR22334306.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR22334306/SRR22334306.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="32497412">
+          <Read index="0" count="32497412" average="151" stdev="0"/>
+          <Read index="1" count="32497412" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="32497412"/>
+                <Elements count="9814218424"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="9814218424">
+          <Base value="A" count="4269417710"/>
+          <Base value="C" count="785386988"/>
+          <Base value="G" count="2244536993"/>
+          <Base value="T" count="2514749214"/>
+          <Base value="N" count="127519"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX18307133" alias="GSM6740282_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX18307133</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740282_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6740282: Donor 3 - 24 hours treatment; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP408608">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP408608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA903151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15797787">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15797787</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6740282</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6740282</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>After treatment islets were dispersed into single cells by dynamic incubation with 0.025% trypsin (Gibco) supplemented with 10 mg/mL DNase (Pulmozyme, Genentech) for 6–7 min and filtered through a 40 μm cell-strainer to remove undigested material. Islets exposed to the different treatments were multiplexed per timepoint and donor using cell hashing. Briefly, each treated islet cell suspension was incubated with a pool of barcoded antibodies directed against B2M and CD298 (TotalSeq-A BioLegend). Labeled cell suspensions were pooled per donor and time point and processed for single-cell mRNA sequencing. Prior to loading the 10x Chromium controller, the pooled cell suspensions were counted to assess cell integrity and concentration. Cell suspensions were loaded, and the sequencing libraries were prepared following the standard 10x Genomics 3' V3 chemistry protocol.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Islet lab, Internal Medicine, Leiden University Medical Center" accession="SRA1543480" alias="SUB12298722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1543480</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Islet lab, Internal Medicine, Leiden University Medical Center">SUB12298722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Islet lab, Internal Medicine, Leiden University Medical Center</Name>
+      <Contact email="f.carlotti@lumc.nl">
+        <Address>
+          <Street>Albinusdreef 2</Street>
+          <City>Leiden</City>
+          <Sub>FN</Sub>
+          <Country>Netherlands</Country>
+        </Address>
+        <Name>
+          <First>Françoise</First>
+          <Last>Carlotti</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE218316" accession="SRP408608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP408608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA903151</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE218316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell transcriptomics of primary human pancreatic islet cells exposed to stress conditions associated with beta-cell failure.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Diabetes mellitus (DM) is a chronic disease associated with elevated blood glucose level and resulting from a loss of functional beta-cell mass. The goal of this study is to investigate the response of human pancreatic cells to pathophysiological conditions associated with beta-cell dysfunction, ultimately to identify molecular mechanisms contributing to the development of diabetes. Isolated primary human islets from three non-diabetic donors were exposed in vitro to pro-inflammatory, oxidative, metabolic and endoplasmic reticulum stress for up to 3 days. Subsequently the cells were processed for single-cell RNA sequencing (scRNA-seq). Analysis of the dataset revealed both common and specific molecular response of each pancreatic cell type to the various stress conditions. Overall design: Pancreatic islet cells from non-diabetic donors were treated with stressors (glucose (22 mM) and/or palmitate (0.5 mM), thapsigargin (0.1 µM), IL-1ß (1 ng/ml) and/or IFN? (1000 U/ml), IFNa (2000 U/ml), hydrogen peroxide (H2O2, 50 µM), FGF2 (100 ng/ml), hypoxia) and untreated as control for 24h and 72h</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE218316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37581620</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37924378</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39499224</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40471239</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6740282" accession="SRS15797787">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15797787</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN31785790</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740282</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Donor 3 - 24 hours treatment</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>903151</ID>
+            <LABEL>PRJNA903151</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy - non diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>gender</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>58</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>24h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15797787" sample_name="GSM6740282" sample_title="Donor 3 - 24 hours treatment" spots="19514932" bases="5893509464" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15797787</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN31785790</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740282</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="5893509464" spots="19514932" bytes="2488955119">
+      <RUN accession="SRR22334307" alias="GSM6740282_r1" total_spots="19514932" total_bases="5893509464" size="2488955119" load_done="true" published="2023-06-19 07:37:15" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR22334307</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740282_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX18307133">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6740282_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS15797787" sample_name="GSM6740282" sample_title="Donor 3 - 24 hours treatment" spots="19514932" bases="5893509464" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15797787</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN31785790</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6740282</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="D3_24h_R1.fastq.gz" size="1534354778" date="2022-11-18 13:55:25" md5="77b6f61372717199481692d54e380562" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR22334307/D3_24h_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="D3_24h_R2.fastq.gz" size="1499956020" date="2022-11-18 13:55:32" md5="3a1aafea8ef0f96c0c95e5c0eb5ac108" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR22334307/D3_24h_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334307" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334307/SRR22334307" size="2488956344" date="2022-11-18 13:56:05" md5="ccd968b3925bf4af68ba3fd6f1ebee2d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334307/SRR22334307" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334307.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334307/SRR22334307.lite.1" size="1477111844" date="2022-11-23 14:06:45" md5="c4bd19df0f8b905e11024fa41c260298" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334307/SRR22334307.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR22334307/SRR22334307.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR22334307/SRR22334307.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="19514932">
+          <Read index="0" count="19514932" average="151" stdev="0"/>
+          <Read index="1" count="19514932" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="19514932"/>
+                <Elements count="5893509464"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="5893509464">
+          <Base value="A" count="2529398934"/>
+          <Base value="C" count="480779385"/>
+          <Base value="G" count="1355198124"/>
+          <Base value="T" count="1528056888"/>
+          <Base value="N" count="76133"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX18307132" alias="GSM6740280_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX18307132</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740280_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6740280: Donor 2 - 72 hours treatment; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP408608">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP408608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA903151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15797785">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15797785</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6740280</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6740280</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>After treatment islets were dispersed into single cells by dynamic incubation with 0.025% trypsin (Gibco) supplemented with 10 mg/mL DNase (Pulmozyme, Genentech) for 6–7 min and filtered through a 40 μm cell-strainer to remove undigested material. Islets exposed to the different treatments were multiplexed per timepoint and donor using cell hashing. Briefly, each treated islet cell suspension was incubated with a pool of barcoded antibodies directed against B2M and CD298 (TotalSeq-A BioLegend). Labeled cell suspensions were pooled per donor and time point and processed for single-cell mRNA sequencing. Prior to loading the 10x Chromium controller, the pooled cell suspensions were counted to assess cell integrity and concentration. Cell suspensions were loaded, and the sequencing libraries were prepared following the standard 10x Genomics 3' V3 chemistry protocol.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Islet lab, Internal Medicine, Leiden University Medical Center" accession="SRA1543480" alias="SUB12298722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1543480</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Islet lab, Internal Medicine, Leiden University Medical Center">SUB12298722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Islet lab, Internal Medicine, Leiden University Medical Center</Name>
+      <Contact email="f.carlotti@lumc.nl">
+        <Address>
+          <Street>Albinusdreef 2</Street>
+          <City>Leiden</City>
+          <Sub>FN</Sub>
+          <Country>Netherlands</Country>
+        </Address>
+        <Name>
+          <First>Françoise</First>
+          <Last>Carlotti</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE218316" accession="SRP408608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP408608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA903151</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE218316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell transcriptomics of primary human pancreatic islet cells exposed to stress conditions associated with beta-cell failure.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Diabetes mellitus (DM) is a chronic disease associated with elevated blood glucose level and resulting from a loss of functional beta-cell mass. The goal of this study is to investigate the response of human pancreatic cells to pathophysiological conditions associated with beta-cell dysfunction, ultimately to identify molecular mechanisms contributing to the development of diabetes. Isolated primary human islets from three non-diabetic donors were exposed in vitro to pro-inflammatory, oxidative, metabolic and endoplasmic reticulum stress for up to 3 days. Subsequently the cells were processed for single-cell RNA sequencing (scRNA-seq). Analysis of the dataset revealed both common and specific molecular response of each pancreatic cell type to the various stress conditions. Overall design: Pancreatic islet cells from non-diabetic donors were treated with stressors (glucose (22 mM) and/or palmitate (0.5 mM), thapsigargin (0.1 µM), IL-1ß (1 ng/ml) and/or IFN? (1000 U/ml), IFNa (2000 U/ml), hydrogen peroxide (H2O2, 50 µM), FGF2 (100 ng/ml), hypoxia) and untreated as control for 24h and 72h</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE218316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37581620</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37924378</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39499224</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40471239</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6740280" accession="SRS15797785">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15797785</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN31785791</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740280</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Donor 2 - 72 hours treatment</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>903151</ID>
+            <LABEL>PRJNA903151</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy - non diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>gender</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>72h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15797785" sample_name="GSM6740280" sample_title="Donor 2 - 72 hours treatment" spots="132435647" bases="39995565394" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15797785</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN31785791</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740280</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="39995565394" spots="132435647" bytes="17108908881">
+      <RUN accession="SRR22334308" alias="GSM6740280_r1" total_spots="132435647" total_bases="39995565394" size="17108908881" load_done="true" published="2023-06-19 07:37:15" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR22334308</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740280_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX18307132">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6740280_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15797785" sample_name="GSM6740280" sample_title="Donor 2 - 72 hours treatment" spots="132435647" bases="39995565394" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15797785</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN31785791</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6740280</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="D2_72h_R1.fastq.gz" size="10198379609" date="2022-11-18 18:35:42" md5="8ab11630b946cee711d9389b44d60646" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR22334308/D2_72h_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="D2_72h_R2.fastq.gz" size="9524195350" date="2022-11-18 18:33:14" md5="359706827fe38b52fc23b2ba3d69a670" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR22334308/D2_72h_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334308" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334308/SRR22334308" size="17108911103" date="2022-11-18 18:45:15" md5="7f1292a234d8b775509b6fad7159e195" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334308/SRR22334308" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334308.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334308/SRR22334308.lite.1" size="10178276967" date="2023-05-08 02:18:18" md5="42ee919c41d4a8bf00621557499cbe2e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334308/SRR22334308.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR22334308/SRR22334308.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR22334308/SRR22334308.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="132435647">
+          <Read index="0" count="132435647" average="151" stdev="0"/>
+          <Read index="1" count="132435647" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="132435647"/>
+                <Elements count="39995565394"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="39995565394">
+          <Base value="A" count="15335998085"/>
+          <Base value="C" count="3092234165"/>
+          <Base value="G" count="11594067452"/>
+          <Base value="T" count="9972756314"/>
+          <Base value="N" count="509378"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX18307131" alias="GSM6740279_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX18307131</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740279_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6740279: Donor 2 - 24 hours treatment; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP408608">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP408608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA903151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15797786">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15797786</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6740279</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6740279</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>After treatment islets were dispersed into single cells by dynamic incubation with 0.025% trypsin (Gibco) supplemented with 10 mg/mL DNase (Pulmozyme, Genentech) for 6–7 min and filtered through a 40 μm cell-strainer to remove undigested material. Islets exposed to the different treatments were multiplexed per timepoint and donor using cell hashing. Briefly, each treated islet cell suspension was incubated with a pool of barcoded antibodies directed against B2M and CD298 (TotalSeq-A BioLegend). Labeled cell suspensions were pooled per donor and time point and processed for single-cell mRNA sequencing. Prior to loading the 10x Chromium controller, the pooled cell suspensions were counted to assess cell integrity and concentration. Cell suspensions were loaded, and the sequencing libraries were prepared following the standard 10x Genomics 3' V3 chemistry protocol.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Islet lab, Internal Medicine, Leiden University Medical Center" accession="SRA1543480" alias="SUB12298722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1543480</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Islet lab, Internal Medicine, Leiden University Medical Center">SUB12298722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Islet lab, Internal Medicine, Leiden University Medical Center</Name>
+      <Contact email="f.carlotti@lumc.nl">
+        <Address>
+          <Street>Albinusdreef 2</Street>
+          <City>Leiden</City>
+          <Sub>FN</Sub>
+          <Country>Netherlands</Country>
+        </Address>
+        <Name>
+          <First>Françoise</First>
+          <Last>Carlotti</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE218316" accession="SRP408608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP408608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA903151</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE218316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell transcriptomics of primary human pancreatic islet cells exposed to stress conditions associated with beta-cell failure.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Diabetes mellitus (DM) is a chronic disease associated with elevated blood glucose level and resulting from a loss of functional beta-cell mass. The goal of this study is to investigate the response of human pancreatic cells to pathophysiological conditions associated with beta-cell dysfunction, ultimately to identify molecular mechanisms contributing to the development of diabetes. Isolated primary human islets from three non-diabetic donors were exposed in vitro to pro-inflammatory, oxidative, metabolic and endoplasmic reticulum stress for up to 3 days. Subsequently the cells were processed for single-cell RNA sequencing (scRNA-seq). Analysis of the dataset revealed both common and specific molecular response of each pancreatic cell type to the various stress conditions. Overall design: Pancreatic islet cells from non-diabetic donors were treated with stressors (glucose (22 mM) and/or palmitate (0.5 mM), thapsigargin (0.1 µM), IL-1ß (1 ng/ml) and/or IFN? (1000 U/ml), IFNa (2000 U/ml), hydrogen peroxide (H2O2, 50 µM), FGF2 (100 ng/ml), hypoxia) and untreated as control for 24h and 72h</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE218316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37581620</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37924378</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39499224</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40471239</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6740279" accession="SRS15797786">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15797786</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN31785792</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740279</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Donor 2 - 24 hours treatment</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>903151</ID>
+            <LABEL>PRJNA903151</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy - non diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>gender</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>55</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>24h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15797786" sample_name="GSM6740279" sample_title="Donor 2 - 24 hours treatment" spots="115084227" bases="34755436554" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15797786</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN31785792</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740279</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="34755436554" spots="115084227" bytes="14851410107">
+      <RUN accession="SRR22334309" alias="GSM6740279_r1" total_spots="115084227" total_bases="34755436554" size="14851410107" load_done="true" published="2023-06-19 07:37:15" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR22334309</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740279_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX18307131">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6740279_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15797786" sample_name="GSM6740279" sample_title="Donor 2 - 24 hours treatment" spots="115084227" bases="34755436554" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15797786</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN31785792</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6740279</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="D2_24h_R1.fastq.gz" size="8814464357" date="2022-11-18 17:58:39" md5="e2778db51b340059dcbe2418706fdac5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR22334309/D2_24h_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="D2_24h_R2.fastq.gz" size="8216291196" date="2022-11-18 17:56:48" md5="bb96d78d07537a37e499d9c4547c7797" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR22334309/D2_24h_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334309" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334309/SRR22334309" size="14851412325" date="2022-11-18 18:04:53" md5="287198dbdba73cb28c1250042c63a665" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334309/SRR22334309" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334309.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334309/SRR22334309.lite.1" size="8848342281" date="2023-05-08 02:17:25" md5="838bb417b14acc1c37a67c42d409750e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334309/SRR22334309.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR22334309/SRR22334309.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR22334309/SRR22334309.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="115084227">
+          <Read index="0" count="115084227" average="151" stdev="0"/>
+          <Read index="1" count="115084227" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="115084227"/>
+                <Elements count="34755436554"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34755436554">
+          <Base value="A" count="13620426897"/>
+          <Base value="C" count="2569883275"/>
+          <Base value="G" count="9919100418"/>
+          <Base value="T" count="8645581845"/>
+          <Base value="N" count="444119"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX18307130" alias="GSM6740278_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX18307130</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740278_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM6740278: Donor 1 - 24 hours treatment; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP408608">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP408608</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA903151</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS15797784">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS15797784</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM6740278</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM6740278</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>After treatment islets were dispersed into single cells by dynamic incubation with 0.025% trypsin (Gibco) supplemented with 10 mg/mL DNase (Pulmozyme, Genentech) for 6–7 min and filtered through a 40 μm cell-strainer to remove undigested material. Islets exposed to the different treatments were multiplexed per timepoint and donor using cell hashing. Briefly, each treated islet cell suspension was incubated with a pool of barcoded antibodies directed against B2M and CD298 (TotalSeq-A BioLegend). Labeled cell suspensions were pooled per donor and time point and processed for single-cell mRNA sequencing. Prior to loading the 10x Chromium controller, the pooled cell suspensions were counted to assess cell integrity and concentration. Cell suspensions were loaded, and the sequencing libraries were prepared following the standard 10x Genomics 3' V3 chemistry protocol.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Islet lab, Internal Medicine, Leiden University Medical Center" accession="SRA1543480" alias="SUB12298722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1543480</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Islet lab, Internal Medicine, Leiden University Medical Center">SUB12298722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Islet lab, Internal Medicine, Leiden University Medical Center</Name>
+      <Contact email="f.carlotti@lumc.nl">
+        <Address>
+          <Street>Albinusdreef 2</Street>
+          <City>Leiden</City>
+          <Sub>FN</Sub>
+          <Country>Netherlands</Country>
+        </Address>
+        <Name>
+          <First>Françoise</First>
+          <Last>Carlotti</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE218316" accession="SRP408608">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP408608</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA903151</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE218316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single-cell transcriptomics of primary human pancreatic islet cells exposed to stress conditions associated with beta-cell failure.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Diabetes mellitus (DM) is a chronic disease associated with elevated blood glucose level and resulting from a loss of functional beta-cell mass. The goal of this study is to investigate the response of human pancreatic cells to pathophysiological conditions associated with beta-cell dysfunction, ultimately to identify molecular mechanisms contributing to the development of diabetes. Isolated primary human islets from three non-diabetic donors were exposed in vitro to pro-inflammatory, oxidative, metabolic and endoplasmic reticulum stress for up to 3 days. Subsequently the cells were processed for single-cell RNA sequencing (scRNA-seq). Analysis of the dataset revealed both common and specific molecular response of each pancreatic cell type to the various stress conditions. Overall design: Pancreatic islet cells from non-diabetic donors were treated with stressors (glucose (22 mM) and/or palmitate (0.5 mM), thapsigargin (0.1 µM), IL-1ß (1 ng/ml) and/or IFN? (1000 U/ml), IFNa (2000 U/ml), hydrogen peroxide (H2O2, 50 µM), FGF2 (100 ng/ml), hypoxia) and untreated as control for 24h and 72h</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE218316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37581620</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37924378</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39499224</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40471239</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM6740278" accession="SRS15797784">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS15797784</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN31785793</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM6740278</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Donor 1 - 24 hours treatment</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>903151</ID>
+            <LABEL>PRJNA903151</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Pancreatic islets</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Healthy - non diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>time</TAG>
+          <VALUE>24h</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS15797784" sample_name="GSM6740278" sample_title="Donor 1 - 24 hours treatment" spots="29758734" bases="8987137668" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS15797784</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN31785793</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740278</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="8987137668" spots="29758734" bytes="3709021543">
+      <RUN accession="SRR22334310" alias="GSM6740278_r1" total_spots="29758734" total_bases="8987137668" size="3709021543" load_done="true" published="2023-06-19 07:37:15" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR22334310</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM6740278_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX18307130">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM6740278_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS15797784" sample_name="GSM6740278" sample_title="Donor 1 - 24 hours treatment" spots="29758734" bases="8987137668" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS15797784</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN31785793</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM6740278</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="D1_24h_R1.fastq.gz" size="2324982601" date="2022-11-18 14:37:23" md5="b2ea143175066dd72c94bb7de793c0f4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR22334310/D1_24h_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="D1_24h_R2.fastq.gz" size="2081776522" date="2022-11-18 14:37:13" md5="f5c636885d297bec7b45ee6d934d4a8f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR22334310/D1_24h_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334310" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334310/SRR22334310" size="3709023763" date="2022-11-18 14:37:47" md5="64e3a2fd87852f41a811d9f5881767dd" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR22334310/SRR22334310" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR22334310.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334310/SRR22334310.lite.1" size="2299434435" date="2023-05-08 02:00:58" md5="147a3aa6f0f8ee493abe23a5ad668d09" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR022/22334/SRR22334310/SRR22334310.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR22334310/SRR22334310.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR22334310/SRR22334310.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="29758734">
+          <Read index="0" count="29758734" average="151" stdev="0"/>
+          <Read index="1" count="29758734" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="29758734"/>
+                <Elements count="8987137668"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="8987137668">
+          <Base value="A" count="3506766899"/>
+          <Base value="C" count="731714576"/>
+          <Base value="G" count="2795270443"/>
+          <Base value="T" count="1953316264"/>
+          <Base value="N" count="69486"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

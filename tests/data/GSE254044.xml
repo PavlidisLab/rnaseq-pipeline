@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371270" alias="GSM8032544_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371270</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032544_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032544: PF_MUT_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233505">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233505</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032544</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032544</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032544" accession="SRS20233505">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233505</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582618</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032544</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PF_MUT_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Tbx1+/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233505" sample_name="GSM8032544" sample_title="PF_MUT_rep2" spots="1001218277" bases="138168122226" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233505</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582618</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032544</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="138168122226" spots="1001218277" bytes="38565508037">
+      <RUN accession="SRR27704462" alias="GSM8032544_r1" total_spots="1001218277" total_bases="138168122226" size="38565508037" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704462</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032544_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371270">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032544_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233505" sample_name="GSM8032544" sample_title="PF_MUT_rep2" spots="1001218277" bases="138168122226" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233505</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582618</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032544</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2660480_PF_Mut_101623_S2_I1_001.fastq.gz" size="5140278482" date="2024-01-24 01:41:36" md5="ac199e9e94687664cee4a83c67d16d52" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704462/2660480_PF_Mut_101623_S2_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660480_PF_Mut_101623_S2_I2_001.fastq.gz" size="4900455336" date="2024-01-24 01:42:33" md5="a4a5d2068d16a5de011b11e48658ee0e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704462/2660480_PF_Mut_101623_S2_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660480_PF_Mut_101623_S2_R1_001.fastq.gz" size="20050609435" date="2024-01-24 01:53:21" md5="14ad910f1f0b49e90fb2f60bc7fc83e2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704462/2660480_PF_Mut_101623_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660480_PF_Mut_101623_S2_R2_001.fastq.gz" size="44748714562" date="2024-01-24 01:49:52" md5="d143222c92c5cb85cc3f9e5232239d50" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704462/2660480_PF_Mut_101623_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704462" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704462/SRR27704462" size="38565510262" date="2024-01-24 02:23:33" md5="8c69ce2b41ab916d52d0ec85b1c7ffb9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704462/SRR27704462" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704462.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704462/SRR27704462.lite.1" size="33178467738" date="2024-01-24 03:36:28" md5="0ff4ef512e3747cfa719f5e349ebfe84" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704462/SRR27704462.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704462/SRR27704462.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704462/SRR27704462.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="1001218277">
+          <Read index="0" count="1001218277" average="10" stdev="0"/>
+          <Read index="1" count="1001218277" average="10" stdev="0"/>
+          <Read index="2" count="1001218277" average="28" stdev="0"/>
+          <Read index="3" count="1001218277" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="1001218277"/>
+                <Elements count="138168122226"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="90109644930">
+          <Base value="A" count="26964950135"/>
+          <Base value="C" count="18503790651"/>
+          <Base value="G" count="21041406306"/>
+          <Base value="T" count="23595127565"/>
+          <Base value="N" count="4370273"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371269" alias="GSM8032543_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032543_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032543: PF_WT_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233503">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233503</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032543</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032543</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032543" accession="SRS20233503">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233503</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582619</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032543</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PF_WT_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233503" sample_name="GSM8032543" sample_title="PF_WT_rep2" spots="948189397" bases="130850136786" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233503</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582619</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032543</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="130850136786" spots="948189397" bytes="36578901266">
+      <RUN accession="SRR27704463" alias="GSM8032543_r1" total_spots="948189397" total_bases="130850136786" size="36578901266" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704463</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032543_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371269">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032543_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233503" sample_name="GSM8032543" sample_title="PF_WT_rep2" spots="948189397" bases="130850136786" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233503</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582619</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032543</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2660479_PF_WT_101623_S1_I1_001.fastq.gz" size="4572660443" date="2024-01-24 01:34:21" md5="217677b33fbe0b11db75d352ac760a2e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704463/2660479_PF_WT_101623_S1_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660479_PF_WT_101623_S1_I2_001.fastq.gz" size="4788702239" date="2024-01-24 01:35:15" md5="24a30ab2263d1f7e94f43d95fe6ab8fb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704463/2660479_PF_WT_101623_S1_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660479_PF_WT_101623_S1_R1_001.fastq.gz" size="19072965027" date="2024-01-24 01:38:21" md5="d9b7e27ceadd7dc74ce8ffd67f1c575c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704463/2660479_PF_WT_101623_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660479_PF_WT_101623_S1_R2_001.fastq.gz" size="42443993909" date="2024-01-24 01:45:16" md5="30ff68b0193e8e1db3f7d0fa6ea51dc8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704463/2660479_PF_WT_101623_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704463" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704463/SRR27704463" size="36578903484" date="2024-01-24 02:11:19" md5="9c2b7797790b8685f6129968c5586f37" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704463/SRR27704463" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704463.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704463/SRR27704463.lite.1" size="31837046688" date="2024-01-24 02:50:58" md5="3c6869f2e8dfee7ec833d41bd195d908" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704463/SRR27704463.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704463/SRR27704463.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704463/SRR27704463.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="948189397">
+          <Read index="0" count="948189397" average="10" stdev="0"/>
+          <Read index="1" count="948189397" average="10" stdev="0"/>
+          <Read index="2" count="948189397" average="28" stdev="0"/>
+          <Read index="3" count="948189397" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="948189397"/>
+                <Elements count="130850136786"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="85337045730">
+          <Base value="A" count="25504557904"/>
+          <Base value="C" count="17603556987"/>
+          <Base value="G" count="20024616152"/>
+          <Base value="T" count="22198151855"/>
+          <Base value="N" count="6162832"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371268" alias="GSM8032542_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371268</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032542_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032542: Bone_MUT_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233502">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233502</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032542</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032542</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032542" accession="SRS20233502">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233502</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582620</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032542</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Bone_MUT_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Tbx1+/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233502" sample_name="GSM8032542" sample_title="Bone_MUT_rep2" spots="817763933" bases="112851422754" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233502</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582620</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032542</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="112851422754" spots="817763933" bytes="36489939262">
+      <RUN accession="SRR27704464" alias="GSM8032542_r1" total_spots="817763933" total_bases="112851422754" size="36489939262" load_done="true" published="2024-09-19 21:42:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704464</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032542_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371268">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032542_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233502" sample_name="GSM8032542" sample_title="Bone_MUT_rep2" spots="817763933" bases="112851422754" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233502</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582620</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032542</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2660478_Bone_Mut_101623_S3_I1_001.fastq.gz" size="5231841749" date="2024-01-24 01:18:51" md5="32f5e44d06c2bf599e801646dcd0545f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704464/2660478_Bone_Mut_101623_S3_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660478_Bone_Mut_101623_S3_I2_001.fastq.gz" size="4696840540" date="2024-01-24 01:17:56" md5="8cef690f53cdf749b94977442f6fa379" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704464/2660478_Bone_Mut_101623_S3_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660478_Bone_Mut_101623_S3_R1_001.fastq.gz" size="17273547901" date="2024-01-24 01:21:52" md5="93a04a35fb7fb8cf3518d6dc55800680" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704464/2660478_Bone_Mut_101623_S3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660478_Bone_Mut_101623_S3_R2_001.fastq.gz" size="39886863724" date="2024-01-24 01:28:33" md5="a9a745663494d60e82f35ea84bb54713" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704464/2660478_Bone_Mut_101623_S3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704464" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704464/SRR27704464" size="36489941485" date="2024-01-24 01:48:14" md5="592b526b9d58908f9ad24e9471f17d9d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704464/SRR27704464" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704464.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704464/SRR27704464.lite.1" size="28951882361" date="2024-01-24 03:24:08" md5="066cc6f67d7ba56da8c087fbff7a5e5b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704464/SRR27704464.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704464/SRR27704464.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704464/SRR27704464.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="817763933">
+          <Read index="0" count="817763933" average="10" stdev="0"/>
+          <Read index="1" count="817763933" average="10" stdev="0"/>
+          <Read index="2" count="817763933" average="28" stdev="0"/>
+          <Read index="3" count="817763933" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="817763933"/>
+                <Elements count="112851422754"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="73598753970">
+          <Base value="A" count="21220089142"/>
+          <Base value="C" count="15930637104"/>
+          <Base value="G" count="18020801684"/>
+          <Base value="T" count="18426305329"/>
+          <Base value="N" count="920711"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371267" alias="GSM8032541_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032541_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032541: Bone_WT_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233501">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233501</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032541</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032541</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032541" accession="SRS20233501">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233501</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582621</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032541</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Bone_WT_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233501" sample_name="GSM8032541" sample_title="Bone_WT_rep2" spots="595793719" bases="82219533222" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233501</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582621</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032541</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="82219533222" spots="595793719" bytes="26645811776">
+      <RUN accession="SRR27704465" alias="GSM8032541_r1" total_spots="595793719" total_bases="82219533222" size="26645811776" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704465</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032541_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371267">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032541_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233501" sample_name="GSM8032541" sample_title="Bone_WT_rep2" spots="595793719" bases="82219533222" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233501</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582621</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032541</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR27704465.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704465/SRR27704465.lite.1" size="21171447087" date="2024-01-24 03:15:14" md5="9b1382718820278b820e7b46c75e36d1" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704465/SRR27704465.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704465/SRR27704465.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704465/SRR27704465.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704465" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704465/SRR27704465" size="26645813999" date="2024-01-23 23:38:56" md5="c7a5073b8df90e566a12012b3427a94a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704465/SRR27704465" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660477_Bone_WT_101623_S2_R2_001.fastq.gz" size="29086174899" date="2024-01-23 23:32:39" md5="39e9ad81296e9c8119a897825db24dad" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704465/2660477_Bone_WT_101623_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660477_Bone_WT_101623_S2_R1_001.fastq.gz" size="12755170771" date="2024-01-23 23:31:33" md5="aa2be1d65f07b822e659a61146ac1158" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704465/2660477_Bone_WT_101623_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660477_Bone_WT_101623_S2_I2_001.fastq.gz" size="3816790876" date="2024-01-23 23:30:58" md5="6d68b52ae728de0d94c1f7eacb832944" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704465/2660477_Bone_WT_101623_S2_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2660477_Bone_WT_101623_S2_I1_001.fastq.gz" size="3636731076" date="2024-01-23 23:31:07" md5="488d24dcb2d17a0b513697a55d613aed" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704465/2660477_Bone_WT_101623_S2_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="595793719">
+          <Read index="0" count="595793719" average="10" stdev="0"/>
+          <Read index="1" count="595793719" average="10" stdev="0"/>
+          <Read index="2" count="595793719" average="28" stdev="0"/>
+          <Read index="3" count="595793719" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="595793719"/>
+                <Elements count="82219533222"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="53621434710">
+          <Base value="A" count="15489324336"/>
+          <Base value="C" count="11556606060"/>
+          <Base value="G" count="13144969840"/>
+          <Base value="T" count="13429867826"/>
+          <Base value="N" count="666648"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371266" alias="GSM8032540_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371266</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032540_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032540: Bone_MUT_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233499">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233499</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032540</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032540</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032540" accession="SRS20233499">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233499</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582622</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032540</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Bone_MUT_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Tbx1+/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233499" sample_name="GSM8032540" sample_title="Bone_MUT_rep1" spots="337318526" bases="46549956588" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233499</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582622</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032540</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="46549956588" spots="337318526" bytes="15241306727">
+      <RUN accession="SRR27704466" alias="GSM8032540_r1" total_spots="337318526" total_bases="46549956588" size="15241306727" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704466</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032540_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371266">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032540_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233499" sample_name="GSM8032540" sample_title="Bone_MUT_rep1" spots="337318526" bases="46549956588" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233499</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582622</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032540</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2620382_Bone_Mut_072023_S5_I1_001.fastq.gz" size="2148103894" date="2024-01-23 23:25:31" md5="a238ae17c528fe8cfd008d39933bea7c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704466/2620382_Bone_Mut_072023_S5_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620382_Bone_Mut_072023_S5_I2_001.fastq.gz" size="2427636015" date="2024-01-23 23:25:38" md5="4cda351deece7bd43998539f546317a7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704466/2620382_Bone_Mut_072023_S5_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620382_Bone_Mut_072023_S5_R1_001.fastq.gz" size="7395295405" date="2024-01-23 23:26:00" md5="5d987ab2c41bc8d71e2b042ae1574a18" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704466/2620382_Bone_Mut_072023_S5_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620382_Bone_Mut_072023_S5_R2_001.fastq.gz" size="16005559783" date="2024-01-23 23:27:02" md5="5092d6e1be2fb160cff46e196cc2c14e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704466/2620382_Bone_Mut_072023_S5_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704466" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704466/SRR27704466" size="15241308950" date="2024-01-23 23:29:53" md5="dccf3906d4a8e84b609cd88ce41f5308" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704466/SRR27704466" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704466.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704466/SRR27704466.lite.1" size="12049240366" date="2024-01-24 02:59:08" md5="56b5187e1cb619e5d98762b97894c47a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704466/SRR27704466.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704466/SRR27704466.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704466/SRR27704466.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="337318526">
+          <Read index="0" count="337318526" average="10" stdev="0"/>
+          <Read index="1" count="337318526" average="10" stdev="0"/>
+          <Read index="2" count="337318526" average="28" stdev="0"/>
+          <Read index="3" count="337318526" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="337318526"/>
+                <Elements count="46549956588"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30358667340">
+          <Base value="A" count="9220476938"/>
+          <Base value="C" count="6292733191"/>
+          <Base value="G" count="7372019735"/>
+          <Base value="T" count="7473341531"/>
+          <Base value="N" count="95945"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371265" alias="GSM8032539_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371265</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032539_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032539: Bone_WT_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233500">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233500</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032539</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032539</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032539" accession="SRS20233500">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233500</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582623</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032539</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Bone_WT_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>petrous bone</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233500" sample_name="GSM8032539" sample_title="Bone_WT_rep1" spots="350882623" bases="48421801974" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233500</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582623</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032539</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="48421801974" spots="350882623" bytes="15533774758">
+      <RUN accession="SRR27704467" alias="GSM8032539_r1" total_spots="350882623" total_bases="48421801974" size="15533774758" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704467</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032539_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371265">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032539_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233500" sample_name="GSM8032539" sample_title="Bone_WT_rep1" spots="350882623" bases="48421801974" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233500</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582623</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032539</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2620381_Bone_WT_072023_S2_I1_001.fastq.gz" size="2371915406" date="2024-01-23 23:20:17" md5="3b85865da8f989c0b592104a7eef330d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704467/2620381_Bone_WT_072023_S2_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620381_Bone_WT_072023_S2_I2_001.fastq.gz" size="2301469911" date="2024-01-23 23:20:11" md5="134536e462282888c2c4b1c2b85f1f5f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704467/2620381_Bone_WT_072023_S2_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620381_Bone_WT_072023_S2_R1_001.fastq.gz" size="7659477012" date="2024-01-23 23:20:36" md5="fabb6a1ba1285b8fe79fe2df515976a4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704467/2620381_Bone_WT_072023_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2620381_Bone_WT_072023_S2_R2_001.fastq.gz" size="16546099679" date="2024-01-23 23:21:32" md5="22ef92a3fbccfa6172395d4cb37e31e3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704467/2620381_Bone_WT_072023_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704467" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704467/SRR27704467" size="15533776979" date="2024-01-23 23:24:10" md5="05d11ade5708cc4fbbd0bff620b12688" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704467/SRR27704467" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704467.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704467/SRR27704467.lite.1" size="12528472275" date="2024-01-24 02:48:37" md5="3028fde68694ceebda97ede69f1e4dab" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704467/SRR27704467.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704467/SRR27704467.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704467/SRR27704467.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="350882623">
+          <Read index="0" count="350882623" average="10" stdev="0"/>
+          <Read index="1" count="350882623" average="10" stdev="0"/>
+          <Read index="2" count="350882623" average="28" stdev="0"/>
+          <Read index="3" count="350882623" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="350882623"/>
+                <Elements count="48421801974"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="31579436070">
+          <Base value="A" count="9384310862"/>
+          <Base value="C" count="6637314037"/>
+          <Base value="G" count="7666597282"/>
+          <Base value="T" count="7891113966"/>
+          <Base value="N" count="99923"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371264" alias="GSM8032538_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371264</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032538_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032538: PF_MUT_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233504">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233504</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032538</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032538</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032538" accession="SRS20233504">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233504</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582624</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032538</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PF_MUT_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Tbx1+/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233504" sample_name="GSM8032538" sample_title="PF_MUT_rep1" spots="379143209" bases="52700906051" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233504</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582624</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032538</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="52700906051" spots="379143209" bytes="16948866088">
+      <RUN accession="SRR27704468" alias="GSM8032538_r1" total_spots="379143209" total_bases="52700906051" size="16948866088" load_done="true" published="2024-09-19 21:42:34" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704468</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032538_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371264">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032538_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233504" sample_name="GSM8032538" sample_title="PF_MUT_rep1" spots="379143209" bases="52700906051" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233504</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582624</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032538</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2606047_Paraflocculus_P5_mut_061323_S2_I1_001.fastq.gz" size="2263343282" date="2024-01-23 23:29:49" md5="52452c6009134bc7865b3fc94207d650" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704468/2606047_Paraflocculus_P5_mut_061323_S2_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606047_Paraflocculus_P5_mut_061323_S2_I2_001.fastq.gz" size="3021625224" date="2024-01-23 23:29:57" md5="6ba391f4a8179371c1e93882908b805f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704468/2606047_Paraflocculus_P5_mut_061323_S2_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606047_Paraflocculus_P5_mut_061323_S2_R1_001.fastq.gz" size="7888933712" date="2024-01-23 23:30:15" md5="6fffeca200791254a91b6318fbe20905" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704468/2606047_Paraflocculus_P5_mut_061323_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606047_Paraflocculus_P5_mut_061323_S2_R2_001.fastq.gz" size="18328953816" date="2024-01-23 23:30:53" md5="293b547d23b27bebb196b9ba7226fe3f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR27704468/2606047_Paraflocculus_P5_mut_061323_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704468" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704468/SRR27704468" size="16948868306" date="2024-01-23 23:33:18" md5="45372702e9dd69f6e8ab9a7e51cc3909" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704468/SRR27704468" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704468.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704468/SRR27704468.lite.1" size="13736532718" date="2024-01-24 02:49:21" md5="5a91f96172426cc79fe864dd503235b0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704468/SRR27704468.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704468/SRR27704468.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704468/SRR27704468.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="379143209">
+          <Read index="0" count="379143209" average="10" stdev="0"/>
+          <Read index="1" count="379143209" average="10" stdev="0"/>
+          <Read index="2" count="379143209" average="28" stdev="0"/>
+          <Read index="3" count="379143209" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="379143209"/>
+                <Elements count="52700906051"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34502032019">
+          <Base value="A" count="10344554641"/>
+          <Base value="C" count="7239817543"/>
+          <Base value="G" count="8412779717"/>
+          <Base value="T" count="8504529613"/>
+          <Base value="N" count="350505"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX23371263" alias="GSM8032537_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX23371263</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032537_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8032537: PF_WT_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP485524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP485524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1068192</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS20233498">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS20233498</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8032537</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8032537</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>The petrous bone and paraflocculus/flocculus (PF/F) were dissected from P5.5 Tbx1+/- mice and their matched littermates. Each sample was flash frozen and stored at -80°C until used. The frozen bones (5 mice per group) were placed into the prechilled tissue tubes (Covaris, cat. no. 520001) on dry ice and pulverized using a prechilled CP01 cryoPREP manual dry pulverizer (Covaris, cat. no. 500230). The coarsely powdered bone was placed into a well of 6 well plate with 1ml of CHAPS/salt-Tris solution (ST buffer) containing 980 µl of 1 % CHAPS (Millipore, cat. no. 220201) mixed with 1 ml of 2xST buffer (292 mM NaCl, 20 mM Tris-HCl pH 7.5, 2 mM CaCl2 and 42 mM MgCl2), 10 µl of 2 % BSA (New England Biolabs, cat. no. B9000S) and 10 µl of nuclease-free water, and gently chopped using Noyes spring scissors (Fine Science Tools, cat. no. 15514-12) for 2 minutes on ice. The nuclei suspension was filtered through a 40 µm strainer into a 15 ml tube (pre-blocked with 2.5% BSA). The filter was washed with 1ml of 1x ST buffer and the filtered volume was brought up to 5 ml by addition of 1x ST buffer. Following additional filtration through a 30 µm strainer, the solution was centrifuged at 300xg for 5 minutes. The pellet was resuspended in 1% BSA in PBS (250-500 µl based on pellet size) and filtered through a strainer cap FACS tube (Corning, cat. no. 352235). Nuclei were counted and checked for integrity under a microscope and the volume was adjusted to a concentration of 1x106 nuclei/ml. The frozen PF/F (5 mice/group) was placed directly into 1 ml of CHAPS/ST buffer (without pulverization) and chopped for 3 minutes on ice and processed further as described above. All solutions used for nuclei isolation were amended with 0.2U/µl of RNase Inhibitor (Roche, cat. no. 3335399001). Nuclei from developing mouse cerebellar tissue or petrous bone were isolated and processed using the 10x Chromium technology, specifically optimized for single nuclei RNA sequencing. The nuclei were processed using the Chromium Single Cell 3′ v3 or v3.1 Library &amp; Gel Bead Kit, which is designed for nuclei and includes adjustments to the standard single-cell protocol to accommodate the unique characteristics of nuclei. All procedures were carried out in accordance with the manufacturer's recommendations for single nuclei RNA-seq snRNA-seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Developmental Neurobiology, St. Jude Children's Research Hospital" accession="SRA1790865" alias="SUB14170618">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1790865</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Developmental Neurobiology, St. Jude Children's Research Hospital">SUB14170618</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Developmental Neurobiology, St. Jude Children's Research Hospital</Name>
+      <Contact email="stanislav.zakharenko@stjude.org">
+        <Address>
+          <Street>262 Danny Thomas Pl, M2426</Street>
+          <City>Memphis</City>
+          <Sub>Tennessee</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Stanislav</First>
+          <Last>Zakharenko</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE254044" accession="SRP485524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP485524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1068192</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE254044</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Tbx1 haploinsufficiency induces bone-to-cerebellar deformity in 22q11.2 deletion syndrome</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>22q11.2 deletion syndrome (22q11DS) substantially increases the risk of cognitive decline and psychiatric disease. However, neuroanatomic changes in 22q11DS are of a subtle-to-moderate degree and their connection to brain function is not clear. Here we report a severe (~70%) and specific reduction (dysplasia) of two cerebellar lobules, paraflocculus and flocculus (PF/F) and associated deficits in vestibulo-ocular reflex (VOR) in mouse models of 22q11DS (22q11DS mice). A specific but less severe PF/F dysplasia was confirmed in humans with 22q11DS. Tbx1 haploinsufficiency recapitulated the PF/F and VOR deficits in 22q11DS mice. The 22q11DS-associated PF/F dysplasia was not due to altered neural composition or neurogenesis. Rather, a part of temporal bone called subarcuate fossa (SF), which encapsulates the PF/F, and semicircular canals of the inner ear, which connects to the SF were malformed in 22q11DS and Tbx1-deficientmice. Our single-nuclei RNA Sequencing and immunohistochemistry data revealed that Tbx1 haploinsufficiency caused precocious differentiation of chondrocyte to osteoblasts in the petrous bone, but no changes in cell type compositions in the PF/F. These data suggest a novel structure-function pathogenic interrelationship in 22q11DS, where Tbx1 haploinsufficiency causes a skeletal deformity occluding cerebellar development and resulting in motor learning deficiency. Overall design: Transcriptome profiling by snRNA-seq in the developing petrous bone and paraflocculus/flocculus from the wild type and Tbx1+/- mouse at P5.5. The study included five mice in each group, with two replicates per group</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE254044</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39638997</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8032537" accession="SRS20233498">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS20233498</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN39582625</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8032537</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>PF_WT_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1068192</ID>
+            <LABEL>PRJNA1068192</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>paraflocculus/flocculus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS20233498" sample_name="GSM8032537" sample_title="PF_WT_rep1" spots="433274372" bases="60225137708" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS20233498</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN39582625</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032537</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="60225137708" spots="433274372" bytes="18717213733">
+      <RUN accession="SRR27704469" alias="GSM8032537_r1" total_spots="433274372" total_bases="60225137708" size="18717213733" load_done="true" published="2024-09-19 21:42:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR27704469</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8032537_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX23371263">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8032537_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS20233498" sample_name="GSM8032537" sample_title="PF_WT_rep1" spots="433274372" bases="60225137708" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS20233498</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN39582625</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8032537</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="2606046_Paraflocculus_P5_WT_061323_S1_I1_001.fastq.gz" size="2547056064" date="2024-01-23 23:15:12" md5="90ea07c7c613d03945967df8f4b55a8f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704469/2606046_Paraflocculus_P5_WT_061323_S1_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606046_Paraflocculus_P5_WT_061323_S1_I2_001.fastq.gz" size="2932783588" date="2024-01-23 23:15:19" md5="1d865b3893c2c847912db681a83c4a52" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704469/2606046_Paraflocculus_P5_WT_061323_S1_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606046_Paraflocculus_P5_WT_061323_S1_R1_001.fastq.gz" size="8969651374" date="2024-01-23 23:15:38" md5="47b7ba87486517b6e2d9ec71075149db" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704469/2606046_Paraflocculus_P5_WT_061323_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="2606046_Paraflocculus_P5_WT_061323_S1_R2_001.fastq.gz" size="20827740045" date="2024-01-23 23:16:04" md5="24e3e9235b6652e290a684ea9af93090" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR27704469/2606046_Paraflocculus_P5_WT_061323_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704469" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704469/SRR27704469" size="18717215954" date="2024-01-23 23:16:58" md5="8fa42bb58d8a3f0d020917acdf2aac07" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27704469/SRR27704469" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR27704469.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704469/SRR27704469.lite.1" size="15672946766" date="2024-01-24 02:46:53" md5="4593c119139c7d8378b473845bfa2557" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR027/27704/SRR27704469/SRR27704469.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR27704469/SRR27704469.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR27704469/SRR27704469.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="433274372">
+          <Read index="0" count="433274372" average="10" stdev="0"/>
+          <Read index="1" count="433274372" average="10" stdev="0"/>
+          <Read index="2" count="433274372" average="28" stdev="0"/>
+          <Read index="3" count="433274372" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="433274372"/>
+                <Elements count="60225137708"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="39427967852">
+          <Base value="A" count="11756156996"/>
+          <Base value="C" count="8328207935"/>
+          <Base value="G" count="9529152703"/>
+          <Base value="T" count="9814045968"/>
+          <Base value="N" count="404250"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537271" alias="GSM8950674_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537271</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950674_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950674: ABX treated APPPS1-21 cortex 4, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838449">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838449</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950674</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950674</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950674" accession="SRS24838449">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838449</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122920</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950674</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>ABX treated APPPS1-21 cortex 4, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ABX</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838449" sample_name="GSM8950674" sample_title="ABX treated APPPS1-21 cortex 4, snRNA-Seq" spots="586799052" bases="80978269176" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838449</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122920</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950674</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="80978269176" spots="586799052" bytes="23945085090">
+      <RUN accession="SRR33292111" alias="GSM8950674_r1" total_spots="243731143" total_bases="33634897734" size="10177369058" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292111</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950674_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537271">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950674_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838449" sample_name="GSM8950674" sample_title="ABX treated APPPS1-21 cortex 4, snRNA-Seq" spots="243731143" bases="33634897734" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838449</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122920</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950674</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3735_S4_L001_I1_001.fastq.gz" size="1471466871" date="2025-04-23 21:34:19" md5="72ee25e98db20330bf04b4a0ff00a638" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292111/3735_S4_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L001_I2_001.fastq.gz" size="1421781605" date="2025-04-23 21:34:13" md5="d3df326ed031976e80323a095a123fa9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292111/3735_S4_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L001_R1_001.fastq.gz" size="4970826207" date="2025-04-23 21:34:29" md5="39d4baa32ed32247852f80c1fd65e338" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292111/3735_S4_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L001_R2_001.fastq.gz" size="10199833395" date="2025-04-23 21:34:51" md5="602e4fa8622a15cf17d13adf7511799e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292111/3735_S4_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292111" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292111/SRR33292111" size="10177371278" date="2025-04-23 21:36:23" md5="54dc84e7157ea9082d09e2cece527510" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292111/SRR33292111" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292111.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292111/SRR33292111.lite.1" size="8657778526" date="2025-04-24 01:49:03" md5="9c79c875b211aa9c0726e655e22cdc49" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292111/SRR33292111.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292111/SRR33292111.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292111/SRR33292111.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="243731143">
+          <Read index="0" count="243731143" average="10" stdev="0"/>
+          <Read index="1" count="243731143" average="10" stdev="0"/>
+          <Read index="2" count="243731143" average="28" stdev="0"/>
+          <Read index="3" count="243731143" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="243731143"/>
+                <Elements count="33634897734"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="21935802870">
+          <Base value="A" count="6847888704"/>
+          <Base value="C" count="4266280985"/>
+          <Base value="G" count="5571002643"/>
+          <Base value="T" count="5250391675"/>
+          <Base value="N" count="238863"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292112" alias="GSM8950674_r2" total_spots="343067909" total_bases="47343371442" size="13767716032" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292112</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950674_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537271">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950674_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838449" sample_name="GSM8950674" sample_title="ABX treated APPPS1-21 cortex 4, snRNA-Seq" spots="343067909" bases="47343371442" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838449</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122920</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950674</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3735_S4_L004_I1_001.fastq.gz" size="1936633171" date="2025-04-23 20:08:08" md5="391b40334a5c371d956cef51a6236113" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292112/3735_S4_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L004_I2_001.fastq.gz" size="1868299456" date="2025-04-23 20:08:12" md5="5c3190b5caf60746abcbc02905fc2a53" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292112/3735_S4_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L004_R1_001.fastq.gz" size="6770049229" date="2025-04-23 20:08:27" md5="3d25b39f12fb47f31cc9815cf0336fd5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292112/3735_S4_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3735_S4_L004_R2_001.fastq.gz" size="13760163329" date="2025-04-23 20:08:47" md5="adcec10959b42b3df85146b76468bc3e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292112/3735_S4_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292112" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292112/SRR33292112" size="13767718252" date="2025-04-23 20:10:10" md5="8a88850c0b600d90fea38596d96a2c26" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292112/SRR33292112" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292112.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292112/SRR33292112.lite.1" size="12169562548" date="2025-04-24 01:50:40" md5="902d0bd84ae54b71fa08261ce911838a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292112/SRR33292112.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292112/SRR33292112.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292112/SRR33292112.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="343067909">
+          <Read index="0" count="343067909" average="10" stdev="0"/>
+          <Read index="1" count="343067909" average="10" stdev="0"/>
+          <Read index="2" count="343067909" average="28" stdev="0"/>
+          <Read index="3" count="343067909" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="343067909"/>
+                <Elements count="47343371442"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30876111810">
+          <Base value="A" count="9601492357"/>
+          <Base value="C" count="6023439635"/>
+          <Base value="G" count="7878380380"/>
+          <Base value="T" count="7372640260"/>
+          <Base value="N" count="159178"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537270" alias="GSM8950673_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537270</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950673_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950673: ABX treated APPPS1-21 cortex 3, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838448">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838448</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950673</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950673</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950673" accession="SRS24838448">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838448</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122921</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950673</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>ABX treated APPPS1-21 cortex 3, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ABX</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838448" sample_name="GSM8950673" sample_title="ABX treated APPPS1-21 cortex 3, snRNA-Seq" spots="660129666" bases="91097893908" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838448</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122921</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950673</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="91097893908" spots="660129666" bytes="27102811594">
+      <RUN accession="SRR33292113" alias="GSM8950673_r1" total_spots="271536918" total_bases="37472094684" size="11395439629" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292113</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950673_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537270">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950673_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838448" sample_name="GSM8950673" sample_title="ABX treated APPPS1-21 cortex 3, snRNA-Seq" spots="271536918" bases="37472094684" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838448</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122921</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950673</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3727_S3_L001_I1_001.fastq.gz" size="1499885541" date="2025-04-23 21:48:20" md5="e9cf095e8c23e111904a0d3954a25f34" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292113/3727_S3_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L001_I2_001.fastq.gz" size="1738454582" date="2025-04-23 21:48:14" md5="66305e475dd544d2c13130006597f7e0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292113/3727_S3_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L001_R1_001.fastq.gz" size="5508031096" date="2025-04-23 21:48:29" md5="abf52d7fe9d0f1fd72024174b3396e46" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292113/3727_S3_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L001_R2_001.fastq.gz" size="11056056839" date="2025-04-23 21:48:57" md5="3bd95cfc9b229dcf52bf98eb042d9fef" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292113/3727_S3_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292113" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292113/SRR33292113" size="11395441850" date="2025-04-23 21:49:49" md5="a254f7caef996ba439e4ed12179d1dc5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292113/SRR33292113" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292113.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292113/SRR33292113.lite.1" size="9640621226" date="2025-04-24 01:49:09" md5="5a8d5cd497b56ebf9d679d85bf988d9f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292113/SRR33292113.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292113/SRR33292113.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292113/SRR33292113.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="271536918">
+          <Read index="0" count="271536918" average="10" stdev="0"/>
+          <Read index="1" count="271536918" average="10" stdev="0"/>
+          <Read index="2" count="271536918" average="28" stdev="0"/>
+          <Read index="3" count="271536918" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="271536918"/>
+                <Elements count="37472094684"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24438322620">
+          <Base value="A" count="7612286666"/>
+          <Base value="C" count="4712887811"/>
+          <Base value="G" count="6401560741"/>
+          <Base value="T" count="5711319432"/>
+          <Base value="N" count="267970"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292114" alias="GSM8950673_r2" total_spots="388592748" total_bases="53625799224" size="15707371965" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292114</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950673_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537270">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950673_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838448" sample_name="GSM8950673" sample_title="ABX treated APPPS1-21 cortex 3, snRNA-Seq" spots="388592748" bases="53625799224" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838448</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122921</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950673</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3727_S3_L004_I1_001.fastq.gz" size="2010365374" date="2025-04-23 20:10:55" md5="d3313b973ea5160992833bea14f8b143" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292114/3727_S3_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L004_I2_001.fastq.gz" size="2339184098" date="2025-04-23 20:11:01" md5="9d77fe871635601ad90e71ec2770e211" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292114/3727_S3_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L004_R1_001.fastq.gz" size="7628204951" date="2025-04-23 20:11:15" md5="6379c9c1316b7b5e315527937e905cb9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292114/3727_S3_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3727_S3_L004_R2_001.fastq.gz" size="15200026650" date="2025-04-23 20:11:45" md5="8cce892ed368b1c8aa3f941f8c53cd80" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292114/3727_S3_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292114" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292114/SRR33292114" size="15707374185" date="2025-04-23 20:13:22" md5="010669f8855d1763b7bee591dadc8cb4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292114/SRR33292114" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292114.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292114/SRR33292114.lite.1" size="13769802537" date="2025-04-24 01:49:54" md5="450841882adcbc0527ac5360ea1e26a7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292114/SRR33292114.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292114/SRR33292114.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292114/SRR33292114.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="388592748">
+          <Read index="0" count="388592748" average="10" stdev="0"/>
+          <Read index="1" count="388592748" average="10" stdev="0"/>
+          <Read index="2" count="388592748" average="28" stdev="0"/>
+          <Read index="3" count="388592748" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="388592748"/>
+                <Elements count="53625799224"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34973347320">
+          <Base value="A" count="10853863330"/>
+          <Base value="C" count="6764380567"/>
+          <Base value="G" count="9201041691"/>
+          <Base value="T" count="8153881083"/>
+          <Base value="N" count="180649"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537269" alias="GSM8950672_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537269</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950672_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950672: ABX treated APPPS1-21 cortex 2, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838447">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838447</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950672</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950672</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950672" accession="SRS24838447">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838447</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122922</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950672</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>ABX treated APPPS1-21 cortex 2, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ABX</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838447" sample_name="GSM8950672" sample_title="ABX treated APPPS1-21 cortex 2, snRNA-Seq" spots="723682846" bases="99868232748" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838447</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122922</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950672</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="99868232748" spots="723682846" bytes="29700392381">
+      <RUN accession="SRR33292115" alias="GSM8950672_r1" total_spots="293500056" total_bases="40503007728" size="12303310290" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292115</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950672_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537269">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950672_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838447" sample_name="GSM8950672" sample_title="ABX treated APPPS1-21 cortex 2, snRNA-Seq" spots="293500056" bases="40503007728" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838447</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122922</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950672</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3455_S8_L001_I1_001.fastq.gz" size="1618952485" date="2025-04-23 20:03:49" md5="5c8c8e906211ae35da69e9b8616ce544" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292115/3455_S8_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L001_I2_001.fastq.gz" size="1692395288" date="2025-04-23 20:03:54" md5="806de17e30d3e1c9a7813aef205868fe" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292115/3455_S8_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L001_R1_001.fastq.gz" size="5973478578" date="2025-04-23 20:04:11" md5="6a33b5e416044dae72006a70fc8ba760" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292115/3455_S8_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L001_R2_001.fastq.gz" size="12342458350" date="2025-04-23 20:04:33" md5="55ccc223ce626fb183589684a5701192" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292115/3455_S8_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292115" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292115/SRR33292115" size="12303312513" date="2025-04-23 20:05:49" md5="7b09b95a47a4c947e4dcc80d043b1237" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292115/SRR33292115" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292115.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292115/SRR33292115.lite.1" size="10405701553" date="2025-04-24 01:49:44" md5="9ab3f537319f0efe93df67bae209bbb6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292115/SRR33292115.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292115/SRR33292115.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292115/SRR33292115.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="293500056">
+          <Read index="0" count="293500056" average="10" stdev="0"/>
+          <Read index="1" count="293500056" average="10" stdev="0"/>
+          <Read index="2" count="293500056" average="28" stdev="0"/>
+          <Read index="3" count="293500056" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="293500056"/>
+                <Elements count="40503007728"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="26415005040">
+          <Base value="A" count="8267982971"/>
+          <Base value="C" count="5107854328"/>
+          <Base value="G" count="6772337123"/>
+          <Base value="T" count="6266538930"/>
+          <Base value="N" count="291688"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292116" alias="GSM8950672_r2" total_spots="430182790" total_bases="59365225020" size="17397082091" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292116</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950672_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537269">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950672_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838447" sample_name="GSM8950672" sample_title="ABX treated APPPS1-21 cortex 2, snRNA-Seq" spots="430182790" bases="59365225020" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838447</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122922</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950672</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3455_S8_L004_I1_001.fastq.gz" size="2194946784" date="2025-04-23 20:11:17" md5="3a00bd1dcf4e2370070f57fa9d10b279" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292116/3455_S8_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L004_I2_001.fastq.gz" size="2371532994" date="2025-04-23 20:11:13" md5="d00f44464eadd4b9c80c4cb496d2e0b9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292116/3455_S8_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L004_R1_001.fastq.gz" size="8470238516" date="2025-04-23 20:11:31" md5="76709a52ecac23f769fee28dd2862805" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292116/3455_S8_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3455_S8_L004_R2_001.fastq.gz" size="17403328861" date="2025-04-23 20:12:05" md5="c0602263d1378d278f5e0ef84a31eb71" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292116/3455_S8_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292116" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292116/SRR33292116" size="17397084312" date="2025-04-23 20:13:59" md5="faad8e743a13e1b68b4ba1ad4d1c82f9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292116/SRR33292116" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292116.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292116/SRR33292116.lite.1" size="15228822788" date="2025-04-24 01:50:29" md5="74879affa9fba5b7191642a5ec6eceda" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292116/SRR33292116.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292116/SRR33292116.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292116/SRR33292116.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="430182790">
+          <Read index="0" count="430182790" average="10" stdev="0"/>
+          <Read index="1" count="430182790" average="10" stdev="0"/>
+          <Read index="2" count="430182790" average="28" stdev="0"/>
+          <Read index="3" count="430182790" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="430182790"/>
+                <Elements count="59365225020"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="38716451100">
+          <Base value="A" count="12074895038"/>
+          <Base value="C" count="7503152133"/>
+          <Base value="G" count="9981461790"/>
+          <Base value="T" count="9156744491"/>
+          <Base value="N" count="197648"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537268" alias="GSM8950671_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537268</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950671_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950671: ABX treated APPPS1-21 cortex 1, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838446">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838446</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950671</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950671</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950671" accession="SRS24838446">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838446</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122923</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950671</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>ABX treated APPPS1-21 cortex 1, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>ABX</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838446" sample_name="GSM8950671" sample_title="ABX treated APPPS1-21 cortex 1, snRNA-Seq" spots="817442642" bases="112807084596" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838446</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122923</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950671</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="112807084596" spots="817442642" bytes="33157116294">
+      <RUN accession="SRR33292117" alias="GSM8950671_r1" total_spots="339765590" total_bases="46887651420" size="14078590575" load_done="true" published="2025-05-01 15:36:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292117</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950671_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537268">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950671_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838446" sample_name="GSM8950671" sample_title="ABX treated APPPS1-21 cortex 1, snRNA-Seq" spots="339765590" bases="46887651420" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838446</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122923</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950671</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3431_S7_L001_I1_001.fastq.gz" size="1810152511" date="2025-04-23 20:08:58" md5="fff2b0bcdda33ce5e5ee58c1674d576f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292117/3431_S7_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L001_I2_001.fastq.gz" size="1878582952" date="2025-04-23 20:09:03" md5="a1b84c52d3aa5d6d6e11dd57943e5f49" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292117/3431_S7_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L001_R1_001.fastq.gz" size="6843569194" date="2025-04-23 20:09:14" md5="a83f9b5b1b0c50f377a3f88521ffaf54" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292117/3431_S7_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L001_R2_001.fastq.gz" size="14264826542" date="2025-04-23 20:09:35" md5="4236820f7bd8fbe59c9d9516a4fc33f5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292117/3431_S7_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292117" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292117/SRR33292117" size="14078592793" date="2025-04-23 20:10:59" md5="3c8c2f3ca331d0c3df24c1d95ba7809f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292117/SRR33292117" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292117.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292117/SRR33292117.lite.1" size="12025108157" date="2025-04-24 01:49:30" md5="353d86cb6ef3abdfac2ba873c94300dc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292117/SRR33292117.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292117/SRR33292117.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292117/SRR33292117.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="339765590">
+          <Read index="0" count="339765590" average="10" stdev="0"/>
+          <Read index="1" count="339765590" average="10" stdev="0"/>
+          <Read index="2" count="339765590" average="28" stdev="0"/>
+          <Read index="3" count="339765590" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="339765590"/>
+                <Elements count="46887651420"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="30578903100">
+          <Base value="A" count="9546644702"/>
+          <Base value="C" count="5911941833"/>
+          <Base value="G" count="7774184041"/>
+          <Base value="T" count="7345796738"/>
+          <Base value="N" count="335786"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292118" alias="GSM8950671_r2" total_spots="477677052" total_bases="65919433176" size="19078525719" load_done="true" published="2025-05-01 15:36:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292118</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950671_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537268">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950671_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838446" sample_name="GSM8950671" sample_title="ABX treated APPPS1-21 cortex 1, snRNA-Seq" spots="477677052" bases="65919433176" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838446</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122923</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950671</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3431_S7_L004_I1_001.fastq.gz" size="2371707771" date="2025-04-23 21:53:17" md5="dda6a36e6336b7f6e005e01cc7ca4b1c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292118/3431_S7_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L004_I2_001.fastq.gz" size="2535270853" date="2025-04-23 21:53:12" md5="33d31a276c6167484a76a3eaa118600a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292118/3431_S7_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L004_R1_001.fastq.gz" size="9306092070" date="2025-04-23 21:53:32" md5="3cf028969a0f6edcb2f58cb4c5ce5e23" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292118/3431_S7_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3431_S7_L004_R2_001.fastq.gz" size="19275926888" date="2025-04-23 21:54:04" md5="b404c3c870933d12e746854df28ed6f4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292118/3431_S7_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292118" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292118/SRR33292118" size="19078527943" date="2025-04-23 21:56:46" md5="a2a45b6e4334e8357842ecca0f5490b8" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292118/SRR33292118" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292118.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292118/SRR33292118.lite.1" size="16885850467" date="2025-04-24 01:50:55" md5="300f2b1b39a793c5f91022c6d59f6f67" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292118/SRR33292118.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292118/SRR33292118.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292118/SRR33292118.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="477677052">
+          <Read index="0" count="477677052" average="10" stdev="0"/>
+          <Read index="1" count="477677052" average="10" stdev="0"/>
+          <Read index="2" count="477677052" average="28" stdev="0"/>
+          <Read index="3" count="477677052" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="477677052"/>
+                <Elements count="65919433176"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="42990934680">
+          <Base value="A" count="13366352428"/>
+          <Base value="C" count="8336244452"/>
+          <Base value="G" count="10987026347"/>
+          <Base value="T" count="10301089681"/>
+          <Base value="N" count="221772"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537267" alias="GSM8950670_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537267</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950670_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950670: VHL treated APPPS1-21 cortex 4, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838445">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838445</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950670</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950670</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950670" accession="SRS24838445">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838445</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122924</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950670</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VHL treated APPPS1-21 cortex 4, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838445" sample_name="GSM8950670" sample_title="VHL treated APPPS1-21 cortex 4, snRNA-Seq" spots="516728814" bases="71308576332" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838445</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122924</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950670</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="71308576332" spots="516728814" bytes="21525945962">
+      <RUN accession="SRR33292119" alias="GSM8950670_r1" total_spots="206827337" total_bases="28542172506" size="8836468584" load_done="true" published="2025-05-01 15:36:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292119</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950670_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537267">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950670_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838445" sample_name="GSM8950670" sample_title="VHL treated APPPS1-21 cortex 4, snRNA-Seq" spots="206827337" bases="28542172506" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838445</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122924</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950670</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3448_S1_L001_I1_001.fastq.gz" size="1174247994" date="2025-04-23 21:13:58" md5="bcceb22bbb46fdaf39759478c9fe9e1d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292119/3448_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L001_I2_001.fastq.gz" size="1443877164" date="2025-04-23 21:14:01" md5="216f09a5f0c3e9ead2f10cc1a9738c49" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292119/3448_S1_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L001_R1_001.fastq.gz" size="4251968159" date="2025-04-23 21:14:09" md5="cdcfb10667e412c067c172a24bc994ef" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292119/3448_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L001_R2_001.fastq.gz" size="8879399818" date="2025-04-23 21:14:29" md5="31a41c357ed83df01d9337fb99a54aa7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-13/SRR33292119/3448_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292119" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292119/SRR33292119" size="8836470807" date="2025-04-23 21:15:45" md5="d261b223d72c2207fd97260630efa851" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292119/SRR33292119" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292119.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292119/SRR33292119.lite.1" size="7363601443" date="2025-04-24 01:49:11" md5="0c0b835533523933f641a47a922f9f4f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292119/SRR33292119.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292119/SRR33292119.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292119/SRR33292119.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="206827337">
+          <Read index="0" count="206827337" average="10" stdev="0"/>
+          <Read index="1" count="206827337" average="10" stdev="0"/>
+          <Read index="2" count="206827337" average="28" stdev="0"/>
+          <Read index="3" count="206827337" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="206827337"/>
+                <Elements count="28542172506"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="18614460330">
+          <Base value="A" count="5778974641"/>
+          <Base value="C" count="3637285443"/>
+          <Base value="G" count="4726437883"/>
+          <Base value="T" count="4471559320"/>
+          <Base value="N" count="203043"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292120" alias="GSM8950670_r2" total_spots="309901477" total_bases="42766403826" size="12689477378" load_done="true" published="2025-05-01 15:36:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292120</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950670_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537267">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950670_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838445" sample_name="GSM8950670" sample_title="VHL treated APPPS1-21 cortex 4, snRNA-Seq" spots="309901477" bases="42766403826" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838445</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122924</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950670</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3448_S1_L004_I1_001.fastq.gz" size="1618458061" date="2025-04-23 20:05:48" md5="f6f9249e5f0a528e82067f0aa8e45f48" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292120/3448_S1_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L004_I2_001.fastq.gz" size="1983311146" date="2025-04-23 20:06:04" md5="f90471eab38fd3470a41bc2f6c4f2ad2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292120/3448_S1_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L004_R1_001.fastq.gz" size="6161629733" date="2025-04-23 20:05:59" md5="6d69037ad50ec6f7d279bfd01a29a7b5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292120/3448_S1_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3448_S1_L004_R2_001.fastq.gz" size="12782898962" date="2025-04-23 20:06:20" md5="15ee095874d695ce5efac82d36b5dfd8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292120/3448_S1_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292120" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292120/SRR33292120" size="12689479601" date="2025-04-23 20:07:28" md5="c9785e3556f2c9b085a6cf6baef881d3" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292120/SRR33292120" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292120.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292120/SRR33292120.lite.1" size="11009977617" date="2025-04-24 01:49:35" md5="1d851800abf40678e004b93a374c63f7" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292120/SRR33292120.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292120/SRR33292120.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292120/SRR33292120.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="309901477">
+          <Read index="0" count="309901477" average="10" stdev="0"/>
+          <Read index="1" count="309901477" average="10" stdev="0"/>
+          <Read index="2" count="309901477" average="28" stdev="0"/>
+          <Read index="3" count="309901477" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="309901477"/>
+                <Elements count="42766403826"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27891132930">
+          <Base value="A" count="8627108200"/>
+          <Base value="C" count="5463472402"/>
+          <Base value="G" count="7121457769"/>
+          <Base value="T" count="6678951253"/>
+          <Base value="N" count="143306"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537266" alias="GSM8950669_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537266</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950669_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950669: VHL treated APPPS1-21 cortex 3, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838444">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838444</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950669</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950669</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950669" accession="SRS24838444">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838444</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122925</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950669</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VHL treated APPPS1-21 cortex 3, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838444" sample_name="GSM8950669" sample_title="VHL treated APPPS1-21 cortex 3, snRNA-Seq" spots="639212413" bases="88211312994" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838444</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122925</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950669</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="88211312994" spots="639212413" bytes="26329341012">
+      <RUN accession="SRR33292121" alias="GSM8950669_r1" total_spots="260507555" total_bases="35950042590" size="10963394899" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292121</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950669_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537266">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950669_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838444" sample_name="GSM8950669" sample_title="VHL treated APPPS1-21 cortex 3, snRNA-Seq" spots="260507555" bases="35950042590" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838444</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122925</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950669</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3411_S2_L001_I1_001.fastq.gz" size="1498330928" date="2025-04-23 20:07:22" md5="298278033a15538ffee59605d2caf2d6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292121/3411_S2_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L001_I2_001.fastq.gz" size="1570141859" date="2025-04-23 20:07:17" md5="97dbff4323a672cb453b02bf98399e89" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292121/3411_S2_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L001_R1_001.fastq.gz" size="5300695945" date="2025-04-23 20:07:31" md5="1bc65f25f1c1988e1852fdaeb311e454" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292121/3411_S2_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L001_R2_001.fastq.gz" size="10717571539" date="2025-04-23 20:07:47" md5="af4fbb16cfd1c400965f558b28563b84" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292121/3411_S2_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292121" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292121/SRR33292121" size="10963397120" date="2025-04-23 20:08:35" md5="905efbe16deef42adc44eb10ba0edcb6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292121/SRR33292121" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292121.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292121/SRR33292121.lite.1" size="9242287716" date="2025-04-24 01:49:15" md5="96bffbda697228e970f976d09f8898a3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292121/SRR33292121.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292121/SRR33292121.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292121/SRR33292121.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="260507555">
+          <Read index="0" count="260507555" average="10" stdev="0"/>
+          <Read index="1" count="260507555" average="10" stdev="0"/>
+          <Read index="2" count="260507555" average="28" stdev="0"/>
+          <Read index="3" count="260507555" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="260507555"/>
+                <Elements count="35950042590"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="23445679950">
+          <Base value="A" count="7289332749"/>
+          <Base value="C" count="4493517608"/>
+          <Base value="G" count="6166747370"/>
+          <Base value="T" count="5495821828"/>
+          <Base value="N" count="260395"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292122" alias="GSM8950669_r2" total_spots="378704858" total_bases="52261270404" size="15365946113" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292122</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950669_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537266">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950669_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838444" sample_name="GSM8950669" sample_title="VHL treated APPPS1-21 cortex 3, snRNA-Seq" spots="378704858" bases="52261270404" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838444</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122925</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950669</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3411_S2_L004_I1_001.fastq.gz" size="1979292323" date="2025-04-23 20:17:59" md5="e36729ebf6af139c58433a8ccc9a6d54" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292122/3411_S2_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L004_I2_001.fastq.gz" size="2154557265" date="2025-04-23 20:18:03" md5="977a8723677387be654b53528d5d2ec3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292122/3411_S2_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L004_R1_001.fastq.gz" size="7469799725" date="2025-04-23 20:18:23" md5="35c2bbe718e525723472549b7a8c6c61" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292122/3411_S2_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3411_S2_L004_R2_001.fastq.gz" size="14996728825" date="2025-04-23 20:18:42" md5="085eec4088012ea5b3c89472f78d5424" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292122/3411_S2_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292122" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292122/SRR33292122" size="15365948337" date="2025-04-23 20:19:52" md5="a9309ba0f07589f1ce58f23f44810853" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292122/SRR33292122" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292122.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292122/SRR33292122.lite.1" size="13411960261" date="2025-04-24 01:49:26" md5="9db37333f1cd022fd85d854d2e343a7c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292122/SRR33292122.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292122/SRR33292122.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292122/SRR33292122.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="378704858">
+          <Read index="0" count="378704858" average="10" stdev="0"/>
+          <Read index="1" count="378704858" average="10" stdev="0"/>
+          <Read index="2" count="378704858" average="28" stdev="0"/>
+          <Read index="3" count="378704858" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="378704858"/>
+                <Elements count="52261270404"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34083437220">
+          <Base value="A" count="10551664137"/>
+          <Base value="C" count="6550267796"/>
+          <Base value="G" count="9012921079"/>
+          <Base value="T" count="7968409622"/>
+          <Base value="N" count="174586"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537265" alias="GSM8950668_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537265</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950668_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950668: VHL treated APPPS1-21 cortex 2, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838443">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838443</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950668</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950668</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950668" accession="SRS24838443">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838443</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122926</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950668</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VHL treated APPPS1-21 cortex 2, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838443" sample_name="GSM8950668" sample_title="VHL treated APPPS1-21 cortex 2, snRNA-Seq" spots="620033369" bases="85564604922" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838443</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122926</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950668</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="85564604922" spots="620033369" bytes="25386349238">
+      <RUN accession="SRR33292123" alias="GSM8950668_r1" total_spots="251401189" total_bases="34693364082" size="10540284818" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292123</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950668_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537265">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950668_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838443" sample_name="GSM8950668" sample_title="VHL treated APPPS1-21 cortex 2, snRNA-Seq" spots="251401189" bases="34693364082" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838443</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122926</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950668</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3231_S5_L001_I1_001.fastq.gz" size="1393894553" date="2025-04-23 19:57:32" md5="d1b086b7cfd25a2ba3d40ef8db9ee30d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292123/3231_S5_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L001_I2_001.fastq.gz" size="1591724563" date="2025-04-23 19:57:28" md5="6d31543febf2e6f6dbe9bbaa7c7deb12" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292123/3231_S5_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L001_R1_001.fastq.gz" size="5111499491" date="2025-04-23 19:57:40" md5="087022f308b28cff922cdec9413481c1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292123/3231_S5_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L001_R2_001.fastq.gz" size="10397337647" date="2025-04-23 19:57:58" md5="c28a4526cf4654c4e181d68c780f04f6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292123/3231_S5_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292123" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292123/SRR33292123" size="10540287042" date="2025-04-23 19:59:08" md5="790f756dae95a249b3ded6d9ed27a236" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292123/SRR33292123" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292123.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292123/SRR33292123.lite.1" size="8929904162" date="2025-04-24 01:49:24" md5="efa238f7ad7bf327c8580a9273d216a5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292123/SRR33292123.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292123/SRR33292123.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292123/SRR33292123.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="251401189">
+          <Read index="0" count="251401189" average="10" stdev="0"/>
+          <Read index="1" count="251401189" average="10" stdev="0"/>
+          <Read index="2" count="251401189" average="28" stdev="0"/>
+          <Read index="3" count="251401189" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="251401189"/>
+                <Elements count="34693364082"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="22626107010">
+          <Base value="A" count="7123842774"/>
+          <Base value="C" count="4350067532"/>
+          <Base value="G" count="5833538147"/>
+          <Base value="T" count="5318408858"/>
+          <Base value="N" count="249699"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292124" alias="GSM8950668_r2" total_spots="368632180" total_bases="50871240840" size="14846064420" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292124</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950668_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537265">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950668_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838443" sample_name="GSM8950668" sample_title="VHL treated APPPS1-21 cortex 2, snRNA-Seq" spots="368632180" bases="50871240840" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838443</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122926</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950668</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3231_S5_L004_I1_001.fastq.gz" size="1887213037" date="2025-04-23 20:09:26" md5="fcbcb38fdfae76ef6c900291cae542ae" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292124/3231_S5_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L004_I2_001.fastq.gz" size="2117937010" date="2025-04-23 20:09:21" md5="0200f6bf86c7aa6b1e211137b350fc8e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292124/3231_S5_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L004_R1_001.fastq.gz" size="7244001359" date="2025-04-23 20:09:38" md5="340805d47a1b4d5ff3fc94cb0bef939b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292124/3231_S5_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3231_S5_L004_R2_001.fastq.gz" size="14642575774" date="2025-04-23 20:10:02" md5="0a612f17bef7eb29c7edbe2bc0561ae8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292124/3231_S5_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292124" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292124/SRR33292124" size="14846066644" date="2025-04-23 20:12:22" md5="e18853de7b5a257b20857b5349850e7d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292124/SRR33292124" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292124.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292124/SRR33292124.lite.1" size="13069349956" date="2025-04-24 01:50:11" md5="a540b1d32b2a6b21898b0e7418331965" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292124/SRR33292124.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292124/SRR33292124.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292124/SRR33292124.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="368632180">
+          <Read index="0" count="368632180" average="10" stdev="0"/>
+          <Read index="1" count="368632180" average="10" stdev="0"/>
+          <Read index="2" count="368632180" average="28" stdev="0"/>
+          <Read index="3" count="368632180" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="368632180"/>
+                <Elements count="50871240840"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="33176896200">
+          <Base value="A" count="10413038869"/>
+          <Base value="C" count="6391104206"/>
+          <Base value="G" count="8592810220"/>
+          <Base value="T" count="7779771598"/>
+          <Base value="N" count="171307"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28537264" alias="GSM8950667_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28537264</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950667_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8950667: VHL treated APPPS1-21 cortex 1, snRNA-Seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP580864">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP580864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1254715</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24838442">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24838442</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8950667</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8950667</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Single nuclei suspensions were generated from the cortices of vehicle and antibiotic treated APPPS1-21 male mice using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). Briefly, frozen brain cortex samples (approximately 40 mg per sample) were transferred to pre-chilled sample dissociation tubes and 500 uL of lysis buffer was used to dissociate tissue for 10 minutes. Dissociated tissue was pipetted onto nuclei isolation columns and centrifuged for 16,000 x g for 20 seconds at 4°C. Flowthrough from the columns were vortexed for 10 seconds to resuspend nuclei and centrifuged at 500 x g for 3 minutes at 4°C. Supernatant was removed and pellets were resuspended with 500 uL of debris removal buffer and centrifuged at 700 x g for 10 minutes at 4°C. The top myelin layer was taken off using a transfer pipette. The rest of the supernatant was then removed, and pellets were resuspended in 1 mL of wash and resuspension buffer and centrifuged at 500 x g for 5 minutes at 4°C. This process was then repeated once. Then samples were resuspended in wash and resuspension buffer and centrifuged at 300 x g for 8 minutes at 4°C Lastly, supernatant was removed, and nuclei pellets were resuspended in 150 uL of wash and resuspension buffer and vortexed for 3 seconds. Final nuclei concentration was determined using the Invitrogen Countess 3 automated cell counter. Further processing of nuclei was completed using 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow The single nucleus suspension was created using the 10x Genomics Chromium Nuclei Isolation Kit (#PN-1000494). After isolation, nuclei were loaded into the 10x Genomics Chromium Controller with a target of 10,000 nuclei per sample. Gel bead-in emulsions (GEM) generation and library preparation were performed according to the 10X Chromium Next GEM Single Cell 3ʹ Reagent Kits v3.1 chemistry workflow. Libraries were pooled and sequenced on an Illumina Novaseq 6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Northwestern University Feinberg School of Medicine" accession="SRA2117725" alias="SUB15277801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2117725</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Northwestern University Feinberg School of Medicine">SUB15277801</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Northwestern University Feinberg School of Medicine</Name>
+      <Contact email="sidhanth.chandra@northwestern.edu">
+        <Address>
+          <Street>Tarry Building Room 8-711 300 E Superior</Street>
+          <City>CHICAGO</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sidhanth</First>
+          <Last>Chandra</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE295459" accession="SRP580864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP580864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1254715</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE295459</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Single nucleus RNA sequencing of the cortex of antibiotic and vehicle treated APPPS1-21 mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Previously, we and others have shown that broad spectrum antibiotic treatment from postnatal day 14-21 reduces neuroinflammation in the APPPS1-21 model of AD-related amyloidosis. In the current study, we used single-nucleus RNA sequencing (snRNAseq) to assess cell-type specific transcriptional changes in antibiotic treated mice and controls. We also assessed changes in astrocyte subclusters in these groups. Overall design: We treated antibiotic and vehicle treated APPPS1-21 male mice (N=4/group) with broad spectrum antibiotics (4 mg/ml kanamycin, 0.35 mg/ml gentamicin, 8,500 U/ml colistin, 2.15mg/ml metronidazole, 0.45 mg/ml vancomycin in autoclaved water) or vehicle control from postnatal day 14-21. Mice were transcardially perfused at 3 months of age and following perfusion, the  the right cortex was sub-dissected and flash frozen in liquid nitrogen. The cortex was used to generate single nucleus suspensions for downstream sequencing and analysis</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE295459</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8950667" accession="SRS24838442">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24838442</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN48122927</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8950667</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>VHL treated APPPS1-21 cortex 1, snRNA-Seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1254715</ID>
+            <LABEL>PRJNA1254715</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>APPPS1-21</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24838442" sample_name="GSM8950667" sample_title="VHL treated APPPS1-21 cortex 1, snRNA-Seq" spots="784465869" bases="108256289922" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24838442</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN48122927</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950667</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="108256289922" spots="784465869" bytes="31969628692">
+      <RUN accession="SRR33292125" alias="GSM8950667_r1" total_spots="323816474" total_bases="44686673412" size="13502481026" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292125</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950667_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537264">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950667_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838442" sample_name="GSM8950667" sample_title="VHL treated APPPS1-21 cortex 1, snRNA-Seq" spots="323816474" bases="44686673412" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838442</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122927</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950667</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3227_S6_L001_I1_001.fastq.gz" size="1974967134" date="2025-04-23 20:13:21" md5="0c85630283ca7b7fd47cc02b4f518202" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292125/3227_S6_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L001_I2_001.fastq.gz" size="1773566515" date="2025-04-23 20:13:30" md5="1e88df69c4c848c43f12f5102b3b2c32" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292125/3227_S6_L001_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L001_R1_001.fastq.gz" size="6529933029" date="2025-04-23 20:13:40" md5="813262c6046183672903e4d80dae0b9a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292125/3227_S6_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L001_R2_001.fastq.gz" size="13451548554" date="2025-04-23 20:14:03" md5="544ff08ae702b1d741797a97fb767473" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292125/3227_S6_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292125" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292125/SRR33292125" size="13502483249" date="2025-04-23 20:14:58" md5="6d5e63f0e55c9eeb71eedbf116dfc9ce" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292125/SRR33292125" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292125.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292125/SRR33292125.lite.1" size="11472859417" date="2025-04-24 01:49:54" md5="4128b0204cf9c0a396aa13952293fd7f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292125/SRR33292125.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292125/SRR33292125.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292125/SRR33292125.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="323816474">
+          <Read index="0" count="323816474" average="10" stdev="0"/>
+          <Read index="1" count="323816474" average="10" stdev="0"/>
+          <Read index="2" count="323816474" average="28" stdev="0"/>
+          <Read index="3" count="323816474" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="323816474"/>
+                <Elements count="44686673412"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="29143482660">
+          <Base value="A" count="9102858957"/>
+          <Base value="C" count="5619722523"/>
+          <Base value="G" count="7491866888"/>
+          <Base value="T" count="6928716137"/>
+          <Base value="N" count="318155"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR33292126" alias="GSM8950667_r2" total_spots="460649395" total_bases="63569616510" size="18467147666" load_done="true" published="2025-05-01 15:36:29" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR33292126</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8950667_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28537264">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8950667_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24838442" sample_name="GSM8950667" sample_title="VHL treated APPPS1-21 cortex 1, snRNA-Seq" spots="460649395" bases="63569616510" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24838442</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN48122927</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8950667</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="3227_S6_L004_I1_001.fastq.gz" size="2555287429" date="2025-04-23 20:19:16" md5="8a0f8f76d1f282e3738304faf8b2d517" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292126/3227_S6_L004_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L004_I2_001.fastq.gz" size="2374340209" date="2025-04-23 20:19:12" md5="b36c083c476936a18de9ca5fa0989f0f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292126/3227_S6_L004_I2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L004_R1_001.fastq.gz" size="8987207628" date="2025-04-23 20:19:28" md5="2e45fbdda9037373962d10e397f66d98" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292126/3227_S6_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="3227_S6_L004_R2_001.fastq.gz" size="18363469290" date="2025-04-23 20:19:52" md5="5c2575ff34e5a4ba03db8476e286417e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR33292126/3227_S6_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292126" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292126/SRR33292126" size="18467149888" date="2025-04-23 20:21:16" md5="8b87416838f48489ee53ca3b053930c2" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR33292126/SRR33292126" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR33292126.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292126/SRR33292126.lite.1" size="16291413756" date="2025-04-24 01:50:01" md5="1c60186a2920f597d5e075cef2a47b7c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR033/33292/SRR33292126/SRR33292126.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR33292126/SRR33292126.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-109/SRR33292126/SRR33292126.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="4" nspots="460649395">
+          <Read index="0" count="460649395" average="10" stdev="0"/>
+          <Read index="1" count="460649395" average="10" stdev="0"/>
+          <Read index="2" count="460649395" average="28" stdev="0"/>
+          <Read index="3" count="460649395" average="90" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="460649395"/>
+                <Elements count="63569616510"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="41458445550">
+          <Base value="A" count="12897432240"/>
+          <Base value="C" count="8018199316"/>
+          <Base value="G" count="10709717586"/>
+          <Base value="T" count="9832881151"/>
+          <Base value="N" count="215257"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

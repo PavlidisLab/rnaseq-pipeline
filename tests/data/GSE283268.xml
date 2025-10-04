@@ -1,0 +1,3100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931808" alias="GSM8658910_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931808</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658910_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658910: UTX_wk13, replicate 3, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405283">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405283</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658910</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658910</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658910" accession="SRS23405283">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405283</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125779</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658910</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk13, replicate 3, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405283" sample_name="GSM8658910" sample_title="UTX_wk13, replicate 3, scRNA-seq" spots="414128882" bases="48453079194" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405283</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125779</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658910</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="48453079194" spots="414128882" bytes="17243969036">
+      <RUN accession="SRR31566180" alias="GSM8658910_r1" total_spots="207687791" total_bases="24299471547" size="8635524995" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566180</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658910_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931808">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658910_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405283" sample_name="GSM8658910" sample_title="UTX_wk13, replicate 3, scRNA-seq" spots="207687791" bases="24299471547" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405283</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125779</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658910</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX3_WK13_S1_L001_R1.fastq.gz" size="5352298523" date="2024-12-02 11:30:54" md5="2dd9b54dce89c92920bbf91dfa1414ac" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566180/UTX3_WK13_S1_L001_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX3_WK13_S1_L001_R2.fastq.gz" size="6284564237" date="2024-12-02 11:31:22" md5="80d09ad74ce03d3d54794bad15ecc258" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566180/UTX3_WK13_S1_L001_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566180" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566180/SRR31566180" size="8635527209" date="2024-12-02 11:33:05" md5="0df7e477ffc1bb025cad530fdb70c790" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566180/SRR31566180" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566180.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566180/SRR31566180.lite.1" size="7204800641" date="2024-12-02 14:41:35" md5="1a328c1d3c7b0775d7bc9f72b3ed2720" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566180/SRR31566180.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566180/SRR31566180.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566180/SRR31566180.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="207687791">
+          <Read index="0" count="207687791" average="26" stdev="0"/>
+          <Read index="1" count="207687791" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="207687791"/>
+                <Elements count="24299471547"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24299471547">
+          <Base value="A" count="5553575248"/>
+          <Base value="C" count="6373447489"/>
+          <Base value="G" count="6095884955"/>
+          <Base value="T" count="6275426057"/>
+          <Base value="N" count="1137798"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566181" alias="GSM8658910_r2" total_spots="206441091" total_bases="24153607647" size="8608444041" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566181</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658910_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931808">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658910_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405283" sample_name="GSM8658910" sample_title="UTX_wk13, replicate 3, scRNA-seq" spots="206441091" bases="24153607647" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405283</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125779</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658910</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX3_WK13_S1_L002_R1.fastq.gz" size="5345066432" date="2024-12-02 11:33:20" md5="36c72b2cc0d3bc8799889fb486c5532d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566181/UTX3_WK13_S1_L002_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX3_WK13_S1_L002_R2.fastq.gz" size="6268217084" date="2024-12-02 11:33:46" md5="8225f5146ef7168226704fa45ebae3cb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566181/UTX3_WK13_S1_L002_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566181" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566181/SRR31566181" size="8608446254" date="2024-12-02 11:34:31" md5="ac22a239ec4b5c4a283749150c4979ef" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566181/SRR31566181" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566181.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566181/SRR31566181.lite.1" size="7164653938" date="2024-12-02 14:36:32" md5="bb1cb806177976bdd2f43ce430453c82" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566181/SRR31566181.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566181/SRR31566181.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566181/SRR31566181.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="206441091">
+          <Read index="0" count="206441091" average="26" stdev="0"/>
+          <Read index="1" count="206441091" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="206441091"/>
+                <Elements count="24153607647"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24153607647">
+          <Base value="A" count="5524090691"/>
+          <Base value="C" count="6333485208"/>
+          <Base value="G" count="6057089232"/>
+          <Base value="T" count="6237910506"/>
+          <Base value="N" count="1032010"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931807" alias="GSM8658909_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931807</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658909_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658909: UTX_wk13, replicate 2, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405282">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405282</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658909</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658909</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658909" accession="SRS23405282">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405282</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125780</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658909</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk13, replicate 2, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405282" sample_name="GSM8658909" sample_title="UTX_wk13, replicate 2, scRNA-seq" spots="353577851" bases="44904387077" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405282</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125780</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658909</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="44904387077" spots="353577851" bytes="14827056401">
+      <RUN accession="SRR31566182" alias="GSM8658909_r1" total_spots="353577851" total_bases="44904387077" size="14827056401" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566182</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658909_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931807">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658909_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405282" sample_name="GSM8658909" sample_title="UTX_wk13, replicate 2, scRNA-seq" spots="353577851" bases="44904387077" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405282</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125780</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658909</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX2_WK13_S11_L002_I1_001.fastq.gz" size="2257355121" date="2024-12-02 11:38:38" md5="e4dc39757e099b3706f9d18d2b726d9a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566182/UTX2_WK13_S11_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK13_S11_L002_R1_001.fastq.gz" size="7523996748" date="2024-12-02 11:38:51" md5="b820dd29f604437a55e6351b02696f04" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566182/UTX2_WK13_S11_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK13_S11_L002_R2_001.fastq.gz" size="18004959197" date="2024-12-02 11:39:21" md5="4db38303561b8acfaa337ba78f216b01" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566182/UTX2_WK13_S11_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566182" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566182/SRR31566182" size="14827058918" date="2024-12-02 11:40:48" md5="d88685dd6f6f583feab14c6ef8bc35b9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566182/SRR31566182" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566182.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566182/SRR31566182.lite.1" size="11742237778" date="2024-12-02 16:26:19" md5="29cbc9eae827281ab526d23c68cbd47d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566182/SRR31566182.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566182/SRR31566182.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566182/SRR31566182.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="353577851">
+          <Read index="0" count="353577851" average="8" stdev="0"/>
+          <Read index="1" count="353577851" average="28" stdev="0"/>
+          <Read index="2" count="353577851" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="353577851"/>
+                <Elements count="44904387077"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="32175584441">
+          <Base value="A" count="9074603564"/>
+          <Base value="C" count="7313600657"/>
+          <Base value="G" count="7877464241"/>
+          <Base value="T" count="7886061358"/>
+          <Base value="N" count="23854621"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931806" alias="GSM8658908_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931806</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658908_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658908: UTX_wk13, replicate 1, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405281">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405281</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658908</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658908</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658908" accession="SRS23405281">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405281</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125781</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658908</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk13, replicate 1, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405281" sample_name="GSM8658908" sample_title="UTX_wk13, replicate 1, scRNA-seq" spots="390594200" bases="49605463400" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405281</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125781</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658908</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="49605463400" spots="390594200" bytes="16453205326">
+      <RUN accession="SRR31566183" alias="GSM8658908_r1" total_spots="390594200" total_bases="49605463400" size="16453205326" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566183</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658908_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931806">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658908_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405281" sample_name="GSM8658908" sample_title="UTX_wk13, replicate 1, scRNA-seq" spots="390594200" bases="49605463400" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405281</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125781</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658908</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX1_WK13_S9_L002_I1_001.fastq.gz" size="2559352601" date="2024-12-02 11:49:03" md5="0bb74d748e8c5b2368f0a1739d6082d7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566183/UTX1_WK13_S9_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK13_S9_L002_R1_001.fastq.gz" size="8320570890" date="2024-12-02 11:49:19" md5="2bf6acb44990a4d518e77030500b9718" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566183/UTX1_WK13_S9_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK13_S9_L002_R2_001.fastq.gz" size="19922553625" date="2024-12-02 11:50:32" md5="bbddb445c1c8c8fb19d6281a1fadc1b4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566183/UTX1_WK13_S9_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566183" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566183/SRR31566183" size="16453207846" date="2024-12-02 11:52:08" md5="d36420cc4f4241f3ca239892e6f0b2bc" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566183/SRR31566183" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566183.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566183/SRR31566183.lite.1" size="12959330958" date="2024-12-02 14:35:47" md5="280adea8bf0b49e44254d5c5c1792637" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566183/SRR31566183.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566183/SRR31566183.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566183/SRR31566183.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="390594200">
+          <Read index="0" count="390594200" average="8" stdev="0"/>
+          <Read index="1" count="390594200" average="28" stdev="0"/>
+          <Read index="2" count="390594200" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="390594200"/>
+                <Elements count="49605463400"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="35544072200">
+          <Base value="A" count="9996078107"/>
+          <Base value="C" count="8116146798"/>
+          <Base value="G" count="8702131597"/>
+          <Base value="T" count="8703474181"/>
+          <Base value="N" count="26241517"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931805" alias="GSM8658907_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931805</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658907_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658907: WT_wk13, replicate 3, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405280">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405280</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658907</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658907</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658907" accession="SRS23405280">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405280</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125782</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658907</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk13, replicate 3, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405280" sample_name="GSM8658907" sample_title="WT_wk13, replicate 3, scRNA-seq" spots="463512571" bases="54230970807" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405280</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125782</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658907</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="54230970807" spots="463512571" bytes="19038603526">
+      <RUN accession="SRR31566184" alias="GSM8658907_r1" total_spots="232498376" total_bases="27202309992" size="9537221198" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566184</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658907_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931805">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658907_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405280" sample_name="GSM8658907" sample_title="WT_wk13, replicate 3, scRNA-seq" spots="232498376" bases="27202309992" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405280</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125782</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658907</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT3_WK13_S1_L001_R1.fastq.gz" size="5966440553" date="2024-12-02 11:33:59" md5="431ca78b5cb5772930cd270c0130c821" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566184/WT3_WK13_S1_L001_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_WK13_S1_L001_R2.fastq.gz" size="6819786232" date="2024-12-02 11:34:28" md5="6abf999cfffb674ff7d3fc3c05fba16e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566184/WT3_WK13_S1_L001_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566184" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566184/SRR31566184" size="9537223416" date="2024-12-02 11:35:38" md5="66ac88619bbd52e87407e4a4074d8544" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566184/SRR31566184" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566184.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566184/SRR31566184.lite.1" size="8050230148" date="2024-12-02 16:24:12" md5="2f93573a8186bb6d80efdbfd684e6817" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566184/SRR31566184.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566184/SRR31566184.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566184/SRR31566184.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="232498376">
+          <Read index="0" count="232498376" average="26" stdev="0"/>
+          <Read index="1" count="232498376" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="232498376"/>
+                <Elements count="27202309992"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27202309992">
+          <Base value="A" count="6239735560"/>
+          <Base value="C" count="7139082208"/>
+          <Base value="G" count="6816105200"/>
+          <Base value="T" count="7006123149"/>
+          <Base value="N" count="1263875"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566185" alias="GSM8658907_r2" total_spots="231014195" total_bases="27028660815" size="9501382328" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566185</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658907_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931805">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658907_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405280" sample_name="GSM8658907" sample_title="WT_wk13, replicate 3, scRNA-seq" spots="231014195" bases="27028660815" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405280</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125782</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658907</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT3_WK13_S1_L002_R1.fastq.gz" size="5956491734" date="2024-12-02 11:33:30" md5="659a2d362555763cfbc6a297f6f0288f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566185/WT3_WK13_S1_L002_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_WK13_S1_L002_R2.fastq.gz" size="6793992465" date="2024-12-02 11:34:16" md5="1860199185e304cb4560907f9b6b3000" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566185/WT3_WK13_S1_L002_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566185" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566185/SRR31566185" size="9501384543" date="2024-12-02 11:34:59" md5="f4e46e37a58cc167de453b50b8325383" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566185/SRR31566185" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566185.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566185/SRR31566185.lite.1" size="8002619583" date="2024-12-02 14:41:12" md5="c7bf81c534dfd27e6cc4921fd0847c4d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566185/SRR31566185.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566185/SRR31566185.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566185/SRR31566185.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="231014195">
+          <Read index="0" count="231014195" average="26" stdev="0"/>
+          <Read index="1" count="231014195" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="231014195"/>
+                <Elements count="27028660815"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27028660815">
+          <Base value="A" count="6204184155"/>
+          <Base value="C" count="7091754261"/>
+          <Base value="G" count="6769907360"/>
+          <Base value="T" count="6961672408"/>
+          <Base value="N" count="1142631"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931804" alias="GSM8658906_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931804</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658906_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658906: WT_wk13, replicate 2, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405279">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405279</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658906</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658906</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658906" accession="SRS23405279">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405279</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125783</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658906</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk13, replicate 2, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405279" sample_name="GSM8658906" sample_title="WT_wk13, replicate 2, scRNA-seq" spots="379551125" bases="48202992875" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405279</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125783</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658906</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="48202992875" spots="379551125" bytes="15995011979">
+      <RUN accession="SRR31566186" alias="GSM8658906_r1" total_spots="379551125" total_bases="48202992875" size="15995011979" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566186</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658906_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931804">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658906_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405279" sample_name="GSM8658906" sample_title="WT_wk13, replicate 2, scRNA-seq" spots="379551125" bases="48202992875" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405279</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125783</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658906</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT2_WK13_S10_L002_I1_001.fastq.gz" size="2409368509" date="2024-12-02 11:43:49" md5="6082023a9fe2ce361eb5b1f7362471a2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566186/WT2_WK13_S10_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK13_S10_L002_R1_001.fastq.gz" size="8059134631" date="2024-12-02 11:44:06" md5="93202c47483709987bbe9cb4724f89d4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566186/WT2_WK13_S10_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK13_S10_L002_R2_001.fastq.gz" size="19382520741" date="2024-12-02 11:45:06" md5="523ccdacb109b1e483287b720f02bc06" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566186/WT2_WK13_S10_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566186" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566186/SRR31566186" size="15995014498" date="2024-12-02 11:48:19" md5="c5374c262effd9dd02bd8690cd05e7a5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566186/SRR31566186" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566186.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566186/SRR31566186.lite.1" size="12589940874" date="2024-12-02 14:38:48" md5="4080136ff4454905623f7947edd1226b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566186/SRR31566186.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566186/SRR31566186.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566186/SRR31566186.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="379551125">
+          <Read index="0" count="379551125" average="8" stdev="0"/>
+          <Read index="1" count="379551125" average="28" stdev="0"/>
+          <Read index="2" count="379551125" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="379551125"/>
+                <Elements count="48202992875"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34539152375">
+          <Base value="A" count="9740512130"/>
+          <Base value="C" count="7872417547"/>
+          <Base value="G" count="8488058525"/>
+          <Base value="T" count="8412582482"/>
+          <Base value="N" count="25581691"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931803" alias="GSM8658905_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931803</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658905_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658905: WT_wk13, replicate 1, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405278">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405278</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658905</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658905</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658905" accession="SRS23405278">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405278</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125784</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658905</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk13, replicate 1, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405278" sample_name="GSM8658905" sample_title="WT_wk13, replicate 1, scRNA-seq" spots="374003119" bases="47498396113" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405278</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125784</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658905</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="47498396113" spots="374003119" bytes="15740520667">
+      <RUN accession="SRR31566187" alias="GSM8658905_r1" total_spots="374003119" total_bases="47498396113" size="15740520667" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566187</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658905_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931803">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658905_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405278" sample_name="GSM8658905" sample_title="WT_wk13, replicate 1, scRNA-seq" spots="374003119" bases="47498396113" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405278</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125784</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658905</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR31566187.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566187/SRR31566187.lite.1" size="12417387632" date="2024-12-02 14:35:34" md5="2d41f5fe82dc6aeb1c31dbdc9c24df93" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566187/SRR31566187.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566187/SRR31566187.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566187/SRR31566187.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566187" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566187/SRR31566187" size="15740523188" date="2024-12-02 11:45:12" md5="b281b014a9aaee506b2b3e29f5660234" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566187/SRR31566187" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK13_S8_L002_R2_001.fastq.gz" size="19062189124" date="2024-12-02 11:42:43" md5="d72e78a7a081c6b0b675e74cb2e49a9a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566187/WT1_WK13_S8_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK13_S8_L002_R1_001.fastq.gz" size="7948700014" date="2024-12-02 11:42:08" md5="9576b88101ea39b5d648c9e89706c572" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566187/WT1_WK13_S8_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK13_S8_L002_I1_001.fastq.gz" size="2453210871" date="2024-12-02 11:41:51" md5="c1fd277a283f9e9339aecb1a1884d8a2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566187/WT1_WK13_S8_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="374003119">
+          <Read index="0" count="374003119" average="8" stdev="0"/>
+          <Read index="1" count="374003119" average="28" stdev="0"/>
+          <Read index="2" count="374003119" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="374003119"/>
+                <Elements count="47498396113"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="34034283829">
+          <Base value="A" count="9615194788"/>
+          <Base value="C" count="7751927448"/>
+          <Base value="G" count="8396185563"/>
+          <Base value="T" count="8245770342"/>
+          <Base value="N" count="25205688"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931802" alias="GSM8658904_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931802</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658904_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658904: UTX_wk8, replicate 3, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405277">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405277</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658904</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658904</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658904" accession="SRS23405277">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405277</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125785</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658904</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk8, replicate 3, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405277" sample_name="GSM8658904" sample_title="UTX_wk8, replicate 3, scRNA-seq" spots="427983146" bases="50074028082" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405277</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125785</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658904</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="50074028082" spots="427983146" bytes="17638228495">
+      <RUN accession="SRR31566188" alias="GSM8658904_r1" total_spots="214651060" total_bases="25114174020" size="8833510779" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566188</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658904_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931802">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658904_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405277" sample_name="GSM8658904" sample_title="UTX_wk8, replicate 3, scRNA-seq" spots="214651060" bases="25114174020" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405277</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125785</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658904</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX3_WK8_S1_L001_R1.fastq.gz" size="5500202249" date="2024-12-02 11:31:50" md5="6ba08e5a645eb2e20e6a8d56d7d02353" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566188/UTX3_WK8_S1_L001_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX3_WK8_S1_L001_R2.fastq.gz" size="6378209919" date="2024-12-02 11:32:19" md5="048c9a5948f06bd9300184bfee4a9367" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566188/UTX3_WK8_S1_L001_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566188" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566188/SRR31566188" size="8833512998" date="2024-12-02 11:33:56" md5="9cb041259aaef35feada5c08a014ec90" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566188/SRR31566188" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566188.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566188/SRR31566188.lite.1" size="7428888902" date="2024-12-02 16:24:28" md5="94ae1b67f21e4ca46818790926e4b6cc" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566188/SRR31566188.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566188/SRR31566188.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566188/SRR31566188.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="214651060">
+          <Read index="0" count="214651060" average="26" stdev="0"/>
+          <Read index="1" count="214651060" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="214651060"/>
+                <Elements count="25114174020"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="25114174020">
+          <Base value="A" count="5769717999"/>
+          <Base value="C" count="6602182104"/>
+          <Base value="G" count="6336667673"/>
+          <Base value="T" count="6404428774"/>
+          <Base value="N" count="1177470"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566189" alias="GSM8658904_r2" total_spots="213332086" total_bases="24959854062" size="8804717716" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566189</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658904_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931802">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658904_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405277" sample_name="GSM8658904" sample_title="UTX_wk8, replicate 3, scRNA-seq" spots="213332086" bases="24959854062" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405277</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125785</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658904</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX3_WK8_S1_L002_R1.fastq.gz" size="5492417286" date="2024-12-02 11:33:37" md5="b639182e8cb21f0c11cd3ce91b50e92b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566189/UTX3_WK8_S1_L002_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX3_WK8_S1_L002_R2.fastq.gz" size="6360205469" date="2024-12-02 11:34:24" md5="c1fa44cb6c0b83089a4e3c04baec5b08" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566189/UTX3_WK8_S1_L002_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566189" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566189/SRR31566189" size="8804719929" date="2024-12-02 11:35:47" md5="ba971bee28122bfc60f44c50bcaf9773" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566189/SRR31566189" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566189.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566189/SRR31566189.lite.1" size="7386760853" date="2024-12-02 16:26:02" md5="3cf3d89f4efc8252f119e9c9cc6b345b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566189/SRR31566189.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566189/SRR31566189.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566189/SRR31566189.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="213332086">
+          <Read index="0" count="213332086" average="26" stdev="0"/>
+          <Read index="1" count="213332086" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="213332086"/>
+                <Elements count="24959854062"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="24959854062">
+          <Base value="A" count="5738307522"/>
+          <Base value="C" count="6559932941"/>
+          <Base value="G" count="6295571983"/>
+          <Base value="T" count="6364980544"/>
+          <Base value="N" count="1061072"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931801" alias="GSM8658903_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658903_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658903: UTX_wk8, replicate 2, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405276">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405276</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658903</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658903</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658903" accession="SRS23405276">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405276</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125786</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658903</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk8, replicate 2, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405276" sample_name="GSM8658903" sample_title="UTX_wk8, replicate 2, scRNA-seq" spots="277852746" bases="35287298742" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405276</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125786</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658903</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="35287298742" spots="277852746" bytes="11396284362">
+      <RUN accession="SRR31566190" alias="GSM8658903_r1" total_spots="139844800" total_bases="17760289600" size="5715168205" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566190</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658903_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931801">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658903_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405276" sample_name="GSM8658903" sample_title="UTX_wk8, replicate 2, scRNA-seq" spots="139844800" bases="17760289600" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405276</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125786</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658903</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L001_I1_001.fastq.gz" size="866400010" date="2024-12-02 11:27:28" md5="c3903d9a0545b59cf43cfba202383305" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566190/UTX2_WK8_S8_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L001_R1_001.fastq.gz" size="2923207099" date="2024-12-02 11:27:34" md5="fc5a60cfed6d14f27ace8c7d04d45469" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566190/UTX2_WK8_S8_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L001_R2_001.fastq.gz" size="6916337478" date="2024-12-02 11:27:48" md5="6a06eaf9bfc15a53e3020fc50cc47756" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566190/UTX2_WK8_S8_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566190" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566190/SRR31566190" size="5715171015" date="2024-12-02 11:28:15" md5="e1b802f3e6b64d65ba3b405ce4880c57" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566190/SRR31566190" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566190.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566190/SRR31566190.lite.1" size="4633216999" date="2024-12-02 14:40:12" md5="bbc26b75256ddfee9d41162015dc795f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566190/SRR31566190.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566190/SRR31566190.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566190/SRR31566190.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="139844800">
+          <Read index="0" count="139844800" average="8" stdev="0"/>
+          <Read index="1" count="139844800" average="28" stdev="0"/>
+          <Read index="2" count="139844800" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="139844800"/>
+                <Elements count="17760289600"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12725876800">
+          <Base value="A" count="3744277054"/>
+          <Base value="C" count="2843005470"/>
+          <Base value="G" count="3056714187"/>
+          <Base value="T" count="3081637961"/>
+          <Base value="N" count="242128"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566191" alias="GSM8658903_r2" total_spots="138007946" total_bases="17527009142" size="5681116157" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566191</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658903_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931801">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658903_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405276" sample_name="GSM8658903" sample_title="UTX_wk8, replicate 2, scRNA-seq" spots="138007946" bases="17527009142" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405276</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125786</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658903</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L002_I1_001.fastq.gz" size="855808844" date="2024-12-02 11:26:17" md5="30270076b714e468e8a407df365e3c88" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566191/UTX2_WK8_S8_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L002_R1_001.fastq.gz" size="2901665641" date="2024-12-02 11:26:22" md5="342fcf3b3287301d77362256faa56f7d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566191/UTX2_WK8_S8_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX2_WK8_S8_L002_R2_001.fastq.gz" size="6863590259" date="2024-12-02 11:26:30" md5="51e66706ba4549fab876ef3c9a21488d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566191/UTX2_WK8_S8_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566191" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566191/SRR31566191" size="5681118973" date="2024-12-02 11:26:57" md5="41b4eaa5bacb9c24a65a15d2b1370b8d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566191/SRR31566191" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566191.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566191/SRR31566191.lite.1" size="4573804549" date="2024-12-02 16:25:00" md5="668af27ba43e4a1e32be9f0a515d8621" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566191/SRR31566191.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566191/SRR31566191.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566191/SRR31566191.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="138007946">
+          <Read index="0" count="138007946" average="8" stdev="0"/>
+          <Read index="1" count="138007946" average="28" stdev="0"/>
+          <Read index="2" count="138007946" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="138007946"/>
+                <Elements count="17527009142"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12558723086">
+          <Base value="A" count="3695839691"/>
+          <Base value="C" count="2806206171"/>
+          <Base value="G" count="3016021585"/>
+          <Base value="T" count="3040170851"/>
+          <Base value="N" count="484788"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931800" alias="GSM8658902_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931800</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658902_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658902: UTX_wk8, replicate 1, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405275">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405275</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658902</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658902</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658902" accession="SRS23405275">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405275</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125787</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658902</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>UTX_wk8, replicate 1, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.UTX-/-LckCre+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405275" sample_name="GSM8658902" sample_title="UTX_wk8, replicate 1, scRNA-seq" spots="285891036" bases="36308161572" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405275</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125787</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658902</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="36308161572" spots="285891036" bytes="11783510011">
+      <RUN accession="SRR31566192" alias="GSM8658902_r1" total_spots="143776907" total_bases="18259667189" size="5904163354" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566192</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658902_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931800">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658902_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405275" sample_name="GSM8658902" sample_title="UTX_wk8, replicate 1, scRNA-seq" spots="143776907" bases="18259667189" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405275</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125787</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658902</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L001_I1_001.fastq.gz" size="899394697" date="2024-12-02 11:31:49" md5="53b33bbe72279cb58feb9aaf6efb59f6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566192/UTX1_WK8_S7_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L001_R1_001.fastq.gz" size="3001965083" date="2024-12-02 11:32:29" md5="b49daa203c5a486d1017c7197751343e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566192/UTX1_WK8_S7_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L001_R2_001.fastq.gz" size="6699206311" date="2024-12-02 11:32:46" md5="262dd2e28a08a9fddcd5d8e0271ca191" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566192/UTX1_WK8_S7_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566192" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566192/SRR31566192" size="5904166171" date="2024-12-02 11:38:53" md5="e3f949b7cda5ffe31b224e3d20cfde61" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566192/SRR31566192" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566192.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566192/SRR31566192.lite.1" size="4763676563" date="2024-12-02 14:39:35" md5="c0fd6e1bebc224a8572d727c6dc541d6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566192/SRR31566192.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566192/SRR31566192.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566192/SRR31566192.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="143776907">
+          <Read index="0" count="143776907" average="8" stdev="0"/>
+          <Read index="1" count="143776907" average="28" stdev="0"/>
+          <Read index="2" count="143776907" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="143776907"/>
+                <Elements count="18259667189"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="13083698537">
+          <Base value="A" count="4334167155"/>
+          <Base value="C" count="2774192746"/>
+          <Base value="G" count="3109270362"/>
+          <Base value="T" count="2865817053"/>
+          <Base value="N" count="251221"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566193" alias="GSM8658902_r2" total_spots="142114129" total_bases="18048494383" size="5879346657" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566193</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658902_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931800">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658902_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405275" sample_name="GSM8658902" sample_title="UTX_wk8, replicate 1, scRNA-seq" spots="142114129" bases="18048494383" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405275</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125787</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658902</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L002_I1_001.fastq.gz" size="887208686" date="2024-12-02 11:33:16" md5="e4bd92e0ab9f1b7cbb75ba1bf4337a56" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566193/UTX1_WK8_S7_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L002_R1_001.fastq.gz" size="2984281391" date="2024-12-02 11:34:12" md5="5f89378cdf578bf4647705fc106f6e90" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566193/UTX1_WK8_S7_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="UTX1_WK8_S7_L002_R2_001.fastq.gz" size="6661538035" date="2024-12-02 11:34:49" md5="18f37c371f8580257cc2e7ea84d99f07" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566193/UTX1_WK8_S7_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566193" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566193/SRR31566193" size="5879349478" date="2024-12-02 11:36:15" md5="21bdfb7097a1099816d94bea30b64e06" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566193/SRR31566193" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566193.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566193/SRR31566193.lite.1" size="4709887414" date="2024-12-02 14:40:46" md5="14326e7b3f69f48349aeb17f15fb1fc5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566193/SRR31566193.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566193/SRR31566193.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566193/SRR31566193.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="142114129">
+          <Read index="0" count="142114129" average="8" stdev="0"/>
+          <Read index="1" count="142114129" average="28" stdev="0"/>
+          <Read index="2" count="142114129" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="142114129"/>
+                <Elements count="18048494383"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12932385739">
+          <Base value="A" count="4288334786"/>
+          <Base value="C" count="2740914817"/>
+          <Base value="G" count="3072874092"/>
+          <Base value="T" count="2829763903"/>
+          <Base value="N" count="498141"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931799" alias="GSM8658901_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931799</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658901_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658901: WT_wk8, replicate 3, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405274">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405274</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658901</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658901</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658901" accession="SRS23405274">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405274</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125788</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658901</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk8, replicate 3, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405274" sample_name="GSM8658901" sample_title="WT_wk8, replicate 3, scRNA-seq" spots="463812514" bases="54266064138" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405274</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125788</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658901</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="54266064138" spots="463812514" bytes="19059117602">
+      <RUN accession="SRR31566194" alias="GSM8658901_r1" total_spots="232532526" total_bases="27206305542" size="9541659958" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566194</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658901_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931799">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658901_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405274" sample_name="GSM8658901" sample_title="WT_wk8, replicate 3, scRNA-seq" spots="232532526" bases="27206305542" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405274</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125788</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658901</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT3_WK8_S1_L001_R1.fastq.gz" size="5936514292" date="2024-12-02 11:44:44" md5="1ccb661b294e6acc14a7e3d2d0856739" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566194/WT3_WK8_S1_L001_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_WK8_S1_L001_R2.fastq.gz" size="6943828306" date="2024-12-02 11:44:59" md5="0919de4431eb7f1da3bf40f21bdf22e9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566194/WT3_WK8_S1_L001_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566194" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566194/SRR31566194" size="9541662173" date="2024-12-02 11:45:59" md5="5e141f24f0ca589185dcf04f0e99c986" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566194/SRR31566194" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566194.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566194/SRR31566194.lite.1" size="8033976965" date="2024-12-02 14:42:14" md5="40d72076baa02f36726ee88ec08a1252" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566194/SRR31566194.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566194/SRR31566194.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566194/SRR31566194.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="232532526">
+          <Read index="0" count="232532526" average="26" stdev="0"/>
+          <Read index="1" count="232532526" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="232532526"/>
+                <Elements count="27206305542"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27206305542">
+          <Base value="A" count="6232746044"/>
+          <Base value="C" count="7106798681"/>
+          <Base value="G" count="6822465872"/>
+          <Base value="T" count="7043017923"/>
+          <Base value="N" count="1277022"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566195" alias="GSM8658901_r2" total_spots="231279988" total_bases="27059758596" size="9517457644" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566195</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658901_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931799">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658901_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405274" sample_name="GSM8658901" sample_title="WT_wk8, replicate 3, scRNA-seq" spots="231279988" bases="27059758596" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405274</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125788</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658901</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT3_WK8_S1_L002_R1.fastq.gz" size="5932300405" date="2024-12-02 11:50:50" md5="342deeffc0398181dab431e36e39dfb3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566195/WT3_WK8_S1_L002_R1.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT3_WK8_S1_L002_R2.fastq.gz" size="6927228522" date="2024-12-02 11:52:50" md5="faaa9f5942e4f5352835316dc87325d3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566195/WT3_WK8_S1_L002_R2.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566195" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566195/SRR31566195" size="9517459857" date="2024-12-02 11:57:24" md5="fdd7953b4c2855cff6442851d49c3a85" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566195/SRR31566195" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566195.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566195/SRR31566195.lite.1" size="7994620609" date="2024-12-02 14:37:08" md5="23f9b1efb8d4be959fbe0c93a0576a20" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566195/SRR31566195.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566195/SRR31566195.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566195/SRR31566195.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="231279988">
+          <Read index="0" count="231279988" average="26" stdev="0"/>
+          <Read index="1" count="231279988" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="231279988"/>
+                <Elements count="27059758596"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="27059758596">
+          <Base value="A" count="6203186099"/>
+          <Base value="C" count="7067120955"/>
+          <Base value="G" count="6783363806"/>
+          <Base value="T" count="7004939025"/>
+          <Base value="N" count="1148711"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931798" alias="GSM8658900_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931798</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658900_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658900: WT_wk8, replicate 2, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405273">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405273</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658900</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658900</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658900" accession="SRS23405273">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405273</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125789</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658900</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk8, replicate 2, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405273" sample_name="GSM8658900" sample_title="WT_wk8, replicate 2, scRNA-seq" spots="239784796" bases="30452669092" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405273</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125789</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658900</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="30452669092" spots="239784796" bytes="9882806334">
+      <RUN accession="SRR31566196" alias="GSM8658900_r1" total_spots="120713311" total_bases="15330590497" size="4957284817" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566196</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658900_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931798">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658900_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405273" sample_name="GSM8658900" sample_title="WT_wk8, replicate 2, scRNA-seq" spots="120713311" bases="15330590497" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405273</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125789</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658900</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L001_I1_001.fastq.gz" size="773209467" date="2024-12-02 11:34:04" md5="feab648df4b249c026f91cdec61b6e42" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566196/WT2_WK8_S6_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L001_R1_001.fastq.gz" size="2534189903" date="2024-12-02 11:35:11" md5="900aa28444fc70bf525221936159414e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566196/WT2_WK8_S6_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L001_R2_001.fastq.gz" size="6023545873" date="2024-12-02 11:36:36" md5="48989a9bd432cea564e032bd2b22c306" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566196/WT2_WK8_S6_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566196" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566196/SRR31566196" size="4957287636" date="2024-12-02 11:38:49" md5="8d0006762b9d9dfc621259f0ee8985ec" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566196/SRR31566196" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566196.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566196/SRR31566196.lite.1" size="4004419004" date="2024-12-02 14:42:02" md5="bd4bbc10a2a5684377eab858d40d4297" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566196/SRR31566196.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566196/SRR31566196.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566196/SRR31566196.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="120713311">
+          <Read index="0" count="120713311" average="8" stdev="0"/>
+          <Read index="1" count="120713311" average="28" stdev="0"/>
+          <Read index="2" count="120713311" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="120713311"/>
+                <Elements count="15330590497"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10984911301">
+          <Base value="A" count="3164988472"/>
+          <Base value="C" count="2483647615"/>
+          <Base value="G" count="2714045166"/>
+          <Base value="T" count="2622017354"/>
+          <Base value="N" count="212694"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566197" alias="GSM8658900_r2" total_spots="119071485" total_bases="15122078595" size="4925521517" load_done="true" published="2024-12-07 00:05:02" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566197</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658900_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931798">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658900_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405273" sample_name="GSM8658900" sample_title="WT_wk8, replicate 2, scRNA-seq" spots="119071485" bases="15122078595" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405273</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125789</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658900</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L002_I1_001.fastq.gz" size="762226214" date="2024-12-02 11:36:09" md5="008c822153121df31cfb3d434fea8dd3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566197/WT2_WK8_S6_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L002_R1_001.fastq.gz" size="2514511127" date="2024-12-02 11:36:38" md5="26448fe29c1d17ca69c74f456706e712" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566197/WT2_WK8_S6_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT2_WK8_S6_L002_R2_001.fastq.gz" size="5975276932" date="2024-12-02 11:37:43" md5="966e03753e598f29932c6aae3be0f658" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566197/WT2_WK8_S6_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566197" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566197/SRR31566197" size="4925524336" date="2024-12-02 11:39:24" md5="b575df48a42969206c78b540fba1e94f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566197/SRR31566197" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566197.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566197/SRR31566197.lite.1" size="3951138972" date="2024-12-02 14:40:41" md5="0afd353a69a5f70d970eb40d2c813f8e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566197/SRR31566197.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566197/SRR31566197.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566197/SRR31566197.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="119071485">
+          <Read index="0" count="119071485" average="8" stdev="0"/>
+          <Read index="1" count="119071485" average="28" stdev="0"/>
+          <Read index="2" count="119071485" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="119071485"/>
+                <Elements count="15122078595"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="10835505135">
+          <Base value="A" count="3122311037"/>
+          <Base value="C" count="2450633738"/>
+          <Base value="G" count="2676632783"/>
+          <Base value="T" count="2585501228"/>
+          <Base value="N" count="426349"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26931797" alias="GSM8658899_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26931797</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658899_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8658899: WT_wk8, replicate 1, scRNA-seq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP548652">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP548652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS23405272">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS23405272</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8658899</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8658899</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>pLNs were hand-picked from NOD mice and cells were labeled by anti-CD45 antibody. DAPI was used to exclude dead cells while sorting. Live CD45+ immune cells were sorted from the pLNs on the Aira sorter and resuspended at 1000 cells/ul in PBS with 2% FBS and 2mM EDTA (FACS buffer) Sequencing library was constructed per manufacturer's protocol (10x Genomics, 3' scRNAseq)</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Maureen Su, MIMG, University of California, Los Angeles" accession="SRA2025306" alias="SUB14901890">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2025306</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Maureen Su, MIMG, University of California, Los Angeles">SUB14901890</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Maureen Su, MIMG, University of California, Los Angeles</Name>
+      <Contact email="howardchen0810@ucla.edu">
+        <Address>
+          <Street>609 Charles E Young Dr E</Street>
+          <City>Los Angeles</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Ho Chung</First>
+          <Last>Chen</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE283268" accession="SRP548652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP548652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1192996</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE283268</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>The Epigenetic Regulator UTX Imposes An Effector Differentiation Trajectory in Autoimmune CD8+ T Cell Stem-like Progenitors</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Recent findings suggest that long-lived CD8+ progenitors can continuously replenish CD8+ mediators in pancreatic lymph node (pLN). The mechanism controlling this conversion is still unclear. T cell specific UTX-deficiency NOD mice harbor increased frequency of islet-specific progenitors population and decreased frequency of islet-specific mediators. Thus, we analyzed pLN CD8+ T cells of UTXTCD mice and WT mice in 8- and 13-week old NOD mice by scRNAseq. Overall design: We performed scRNAseq on T cells isolated from pancreatic islets of 8-week-old and 13-week-old NOD WT vs UTXTCD females to compare their transcriptome profile.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE283268</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8658899" accession="SRS23405272">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS23405272</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN45125790</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8658899</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_wk8, replicate 1, scRNA-seq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1192996</ID>
+            <LABEL>PRJNA1192996</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>pancreatic lymph node</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>immune cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>NOD.WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>pre-diabetic</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS23405272" sample_name="GSM8658899" sample_title="WT_wk8, replicate 1, scRNA-seq" spots="270481260" bases="34351120020" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS23405272</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN45125790</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658899</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="34351120020" spots="270481260" bytes="11099551358">
+      <RUN accession="SRR31566198" alias="GSM8658899_r1" total_spots="136152208" total_bases="17291330416" size="5567739165" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566198</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658899_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931797">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658899_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405272" sample_name="GSM8658899" sample_title="WT_wk8, replicate 1, scRNA-seq" spots="136152208" bases="17291330416" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405272</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125790</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658899</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L001_I1_001.fastq.gz" size="875145893" date="2024-12-02 11:25:01" md5="449668351355028d779dfe2844a1c2ea" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566198/WT1_WK8_S5_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L001_R1_001.fastq.gz" size="2852023719" date="2024-12-02 11:25:06" md5="df73f48c72643b2e4777e24a6cd59a9d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566198/WT1_WK8_S5_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L001_R2_001.fastq.gz" size="6751108700" date="2024-12-02 11:25:16" md5="6f70318d1c66d891fd9ceb232472a4a3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566198/WT1_WK8_S5_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566198" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566198/SRR31566198" size="5567741982" date="2024-12-02 11:25:39" md5="bb99226d4d2a05608655667cd81b7364" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566198/SRR31566198" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566198.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566198/SRR31566198.lite.1" size="4511163030" date="2024-12-02 14:40:04" md5="ebabb647cf0a2d7ec770992fccf1d546" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566198/SRR31566198.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566198/SRR31566198.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566198/SRR31566198.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="136152208">
+          <Read index="0" count="136152208" average="8" stdev="0"/>
+          <Read index="1" count="136152208" average="28" stdev="0"/>
+          <Read index="2" count="136152208" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="136152208"/>
+                <Elements count="17291330416"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12389850928">
+          <Base value="A" count="3550112540"/>
+          <Base value="C" count="2813819265"/>
+          <Base value="G" count="3063900863"/>
+          <Base value="T" count="2961785260"/>
+          <Base value="N" count="233000"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR31566199" alias="GSM8658899_r2" total_spots="134329052" total_bases="17059789604" size="5531812193" load_done="true" published="2024-12-07 00:05:01" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR31566199</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8658899_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26931797">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8658899_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS23405272" sample_name="GSM8658899" sample_title="WT_wk8, replicate 1, scRNA-seq" spots="134329052" bases="17059789604" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS23405272</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN45125790</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8658899</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L002_I1_001.fastq.gz" size="863748166" date="2024-12-02 11:32:48" md5="aed9d2eadb5d40b811f32b0c70a687c0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566199/WT1_WK8_S5_L002_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L002_R1_001.fastq.gz" size="2830583849" date="2024-12-02 11:33:12" md5="8b632bd665460cd9c1d296f4abc8b12e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566199/WT1_WK8_S5_L002_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="WT1_WK8_S5_L002_R2_001.fastq.gz" size="6696624236" date="2024-12-02 11:33:56" md5="656b4af804f7d6032524c43cb495f282" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR31566199/WT1_WK8_S5_L002_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566199" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566199/SRR31566199" size="5531815005" date="2024-12-02 11:35:03" md5="be1f2f457a9b6ae1a675643a433e8ebc" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR31566199/SRR31566199" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR31566199.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566199/SRR31566199.lite.1" size="4452186857" date="2024-12-02 16:23:33" md5="ffcb64d814bb1ccdb7dcdb0d9e026283" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR031/31566/SRR31566199/SRR31566199.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR31566199/SRR31566199.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR31566199/SRR31566199.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="134329052">
+          <Read index="0" count="134329052" average="8" stdev="0"/>
+          <Read index="1" count="134329052" average="28" stdev="0"/>
+          <Read index="2" count="134329052" average="91" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="134329052"/>
+                <Elements count="17059789604"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="12223943732">
+          <Base value="A" count="3502576324"/>
+          <Base value="C" count="2777258104"/>
+          <Base value="G" count="3022229266"/>
+          <Base value="T" count="2921413689"/>
+          <Base value="N" count="466349"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

@@ -1,0 +1,2236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494962" alias="GSM7421519_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494962</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421519_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421519: Post-RTX remission, donor 4, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804698">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804698</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421519</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421519</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421519" accession="SRS17804698">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804698</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342310</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421519</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX remission, donor 4, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Remission</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804698" sample_name="GSM7421519" sample_title="Post-RTX remission, donor 4, scRNAseq" spots="541263527" bases="109335232454" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804698</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342310</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421519</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="109335232454" spots="541263527" bytes="36103140516">
+      <RUN accession="SRR24716302" alias="GSM7421519_r1" total_spots="270916791" total_bases="54725191782" size="18080241124" load_done="true" published="2023-10-30 00:38:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716302</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421519_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494962">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421519_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804698" sample_name="GSM7421519" sample_title="Post-RTX remission, donor 4, scRNAseq" spots="270916791" bases="54725191782" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804698</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342310</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421519</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS18remission_2-954585_S49_L003_R1_001.fastq.gz" size="14784801952" date="2023-05-24 05:22:18" md5="c53c8b20ad7f3ebe27e794e0511fe2b7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716302/INS18remission_2-954585_S49_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS18remission_2-954585_S49_L003_R2_001.fastq.gz" size="15011958073" date="2023-05-24 05:26:01" md5="5cb6117968568b7a312fe4a28f1840bb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716302/INS18remission_2-954585_S49_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716302" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716302/SRR24716302" size="18080243944" date="2023-05-24 05:35:43" md5="297731c6f55e781e14c3a4a43bd7ac15" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716302/SRR24716302" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716302.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716302/SRR24716302.lite.1" size="14116316912" date="2023-05-29 08:23:34" md5="a33ddf952f372751a881c7a7cbf2d2a3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716302/SRR24716302.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716302/SRR24716302.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716302/SRR24716302.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="270916791">
+          <Read index="0" count="270916791" average="101" stdev="0"/>
+          <Read index="1" count="270916791" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="270916791"/>
+                <Elements count="54725191782"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="54725191782">
+          <Base value="A" count="12263317362"/>
+          <Base value="C" count="14016941972"/>
+          <Base value="G" count="14378661047"/>
+          <Base value="T" count="14065589806"/>
+          <Base value="N" count="681595"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716303" alias="GSM7421519_r2" total_spots="270346736" total_bases="54610040672" size="18022899392" load_done="true" published="2023-10-30 00:38:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716303</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421519_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494962">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421519_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804698" sample_name="GSM7421519" sample_title="Post-RTX remission, donor 4, scRNAseq" spots="270346736" bases="54610040672" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804698</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342310</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421519</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS18remission_2-954585_S49_L004_R1_001.fastq.gz" size="14720088645" date="2023-05-24 05:30:56" md5="0eeda5238958f00d8a44d78534407ab2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716303/INS18remission_2-954585_S49_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS18remission_2-954585_S49_L004_R2_001.fastq.gz" size="14984315904" date="2023-05-24 05:34:28" md5="426bebdfcbfc9c43469613563a88246a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716303/INS18remission_2-954585_S49_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716303" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716303/SRR24716303" size="18022902207" date="2023-05-24 05:45:59" md5="2dbf01a785834736091216a05a85dd57" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716303/SRR24716303" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716303.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716303/SRR24716303.lite.1" size="14086324239" date="2023-05-29 08:27:04" md5="8ec96f1b14694678a3b585a184f6bbd5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716303/SRR24716303.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716303/SRR24716303.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716303/SRR24716303.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="270346736">
+          <Read index="0" count="270346736" average="101" stdev="0"/>
+          <Read index="1" count="270346736" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="270346736"/>
+                <Elements count="54610040672"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="54610040672">
+          <Base value="A" count="12244387521"/>
+          <Base value="C" count="13985718371"/>
+          <Base value="G" count="14342083207"/>
+          <Base value="T" count="14037228068"/>
+          <Base value="N" count="623505"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494961" alias="GSM7421518_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494961</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421518_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421518: Post-RTX relapse, donor 4, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804697">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804697</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421518</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421518</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421518" accession="SRS17804697">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804697</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342311</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421518</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX relapse, donor 4, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Relapse</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804697" sample_name="GSM7421518" sample_title="Post-RTX relapse, donor 4, scRNAseq" spots="618096445" bases="124855481890" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804697</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342311</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421518</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="124855481890" spots="618096445" bytes="41424377847">
+      <RUN accession="SRR24716304" alias="GSM7421518_r1" total_spots="309491973" total_bases="62517378546" size="20753177902" load_done="true" published="2023-10-30 00:38:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716304</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421518_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494961">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421518_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804697" sample_name="GSM7421518" sample_title="Post-RTX relapse, donor 4, scRNAseq" spots="309491973" bases="62517378546" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804697</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342311</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421518</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24716304.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716304/SRR24716304.lite.1" size="16115937095" date="2023-05-29 08:24:44" md5="0e832a0bb32fd3747ae0f48ad525c82e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716304/SRR24716304.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716304/SRR24716304.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716304/SRR24716304.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716304" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716304/SRR24716304" size="20753180715" date="2023-05-24 06:10:33" md5="7ed15f4707ffe8d1723f0ffcde3c4037" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716304/SRR24716304" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS18relapse_2-954584_S45_L003_R2_001.fastq.gz" size="17245534694" date="2023-05-24 05:36:58" md5="8d440af5c8d91253092bfde804377bb3" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716304/INS18relapse_2-954584_S45_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS18relapse_2-954584_S45_L003_R1_001.fastq.gz" size="16834192929" date="2023-05-24 05:42:25" md5="2e03a9bcd18a506f9249a342af32eb27" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716304/INS18relapse_2-954584_S45_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="309491973">
+          <Read index="0" count="309491973" average="101" stdev="0"/>
+          <Read index="1" count="309491973" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="309491973"/>
+                <Elements count="62517378546"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62517378546">
+          <Base value="A" count="14103503853"/>
+          <Base value="C" count="15997085433"/>
+          <Base value="G" count="16334240346"/>
+          <Base value="T" count="16081766968"/>
+          <Base value="N" count="781946"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716305" alias="GSM7421518_r2" total_spots="308604472" total_bases="62338103344" size="20671199945" load_done="true" published="2023-10-30 00:38:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716305</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421518_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494961">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421518_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804697" sample_name="GSM7421518" sample_title="Post-RTX relapse, donor 4, scRNAseq" spots="308604472" bases="62338103344" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804697</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342311</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421518</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS18relapse_2-954584_S45_L004_R1_001.fastq.gz" size="16748211130" date="2023-05-24 05:49:45" md5="2fb7525e7ece693e4242a24228ac34ee" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716305/INS18relapse_2-954584_S45_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS18relapse_2-954584_S45_L004_R2_001.fastq.gz" size="17199446342" date="2023-05-24 05:46:20" md5="22cfa26183083ee6dbcb930617b8230c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716305/INS18relapse_2-954584_S45_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716305" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716305/SRR24716305" size="20671202765" date="2023-05-24 06:09:49" md5="0f3e10b4cc8cb8d7314a995a4627e32d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716305/SRR24716305" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716305.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716305/SRR24716305.lite.1" size="16069479985" date="2023-05-29 08:23:30" md5="973c2e07c84143350891225057c9c651" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716305/SRR24716305.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716305/SRR24716305.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716305/SRR24716305.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="308604472">
+          <Read index="0" count="308604472" average="101" stdev="0"/>
+          <Read index="1" count="308604472" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="308604472"/>
+                <Elements count="62338103344"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62338103344">
+          <Base value="A" count="14070911214"/>
+          <Base value="C" count="15949027676"/>
+          <Base value="G" count="16279494703"/>
+          <Base value="T" count="16037961309"/>
+          <Base value="N" count="708442"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494960" alias="GSM7421517_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494960</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421517_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421517: Post-RTX remission, donor 3, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804696">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804696</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421517</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421517</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421517" accession="SRS17804696">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804696</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342312</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421517</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX remission, donor 3, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Remission</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804696" sample_name="GSM7421517" sample_title="Post-RTX remission, donor 3, scRNAseq" spots="619319813" bases="125102602226" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804696</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342312</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421517</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="125102602226" spots="619319813" bytes="41968798419">
+      <RUN accession="SRR24716306" alias="GSM7421517_r1" total_spots="310577669" total_bases="62736689138" size="21054139548" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716306</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421517_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494960">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421517_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804696" sample_name="GSM7421517" sample_title="Post-RTX remission, donor 3, scRNAseq" spots="310577669" bases="62736689138" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804696</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342312</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421517</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS17remission_2-954586_S53_L003_R1_001.fastq.gz" size="17030442979" date="2023-05-24 05:43:29" md5="81f14928bf4c0fbb020aef621c3a67d9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716306/INS17remission_2-954586_S53_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS17remission_2-954586_S53_L003_R2_001.fastq.gz" size="17325257853" date="2023-05-24 05:39:36" md5="839e5de8149b78d99aa1828a36fb39bd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716306/INS17remission_2-954586_S53_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716306" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716306/SRR24716306" size="21054142370" date="2023-05-24 05:48:54" md5="8cc82e59222d854b4519955535e92df9" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716306/SRR24716306" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716306.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716306/SRR24716306.lite.1" size="16169687842" date="2023-05-29 08:20:08" md5="3b65d5a8846501ff5a0326994d0ef37e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716306/SRR24716306.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716306/SRR24716306.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716306/SRR24716306.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="310577669">
+          <Read index="0" count="310577669" average="101" stdev="0"/>
+          <Read index="1" count="310577669" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="310577669"/>
+                <Elements count="62736689138"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62736689138">
+          <Base value="A" count="14259159685"/>
+          <Base value="C" count="15560094866"/>
+          <Base value="G" count="16224726841"/>
+          <Base value="T" count="16691929646"/>
+          <Base value="N" count="778100"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716307" alias="GSM7421517_r2" total_spots="308742144" total_bases="62365913088" size="20914658871" load_done="true" published="2023-10-30 00:38:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716307</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421517_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494960">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421517_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804696" sample_name="GSM7421517" sample_title="Post-RTX remission, donor 3, scRNAseq" spots="308742144" bases="62365913088" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804696</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342312</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421517</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS17remission_2-954586_S53_L004_R1_001.fastq.gz" size="16896229171" date="2023-05-24 05:08:05" md5="00d88bb64c326ce88d876c06bc158c57" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716307/INS17remission_2-954586_S53_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS17remission_2-954586_S53_L004_R2_001.fastq.gz" size="17233632465" date="2023-05-24 05:10:29" md5="a7e91ca092d1cc92098b55a6122f15fd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716307/INS17remission_2-954586_S53_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716307" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716307/SRR24716307" size="20914661683" date="2023-05-24 05:17:30" md5="625dda963680271191ab852ae370ed26" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716307/SRR24716307" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716307.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716307/SRR24716307.lite.1" size="16074225743" date="2023-05-29 08:41:13" md5="bbc2416df15d2805f9b56ff22660b840" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716307/SRR24716307.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716307/SRR24716307.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716307/SRR24716307.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="308742144">
+          <Read index="0" count="308742144" average="101" stdev="0"/>
+          <Read index="1" count="308742144" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="308742144"/>
+                <Elements count="62365913088"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62365913088">
+          <Base value="A" count="14183912010"/>
+          <Base value="C" count="15468497489"/>
+          <Base value="G" count="16119068045"/>
+          <Base value="T" count="16593725054"/>
+          <Base value="N" count="710490"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494959" alias="GSM7421516_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494959</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421516_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421516: Post-RTX relapse, donor 3, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804694">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804694</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421516</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421516</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421516" accession="SRS17804694">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804694</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342313</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421516</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX relapse, donor 3, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Relapse</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804694" sample_name="GSM7421516" sample_title="Post-RTX relapse, donor 3, scRNAseq" spots="809048435" bases="163427783870" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804694</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342313</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421516</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="163427783870" spots="809048435" bytes="54294407083">
+      <RUN accession="SRR24716308" alias="GSM7421516_r1" total_spots="405550560" total_bases="81921213120" size="27225828926" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716308</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421516_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494959">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421516_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804694" sample_name="GSM7421516" sample_title="Post-RTX relapse, donor 3, scRNAseq" spots="405550560" bases="81921213120" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804694</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342313</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421516</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS17relapse_2-759831_S5_L003_R1_001.fastq.gz" size="22117723895" date="2023-05-24 06:34:22" md5="8b80faaac6a949d41df238dec2bd40ef" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716308/INS17relapse_2-759831_S5_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS17relapse_2-759831_S5_L003_R2_001.fastq.gz" size="22662420104" date="2023-05-24 06:28:51" md5="b6413919870d342fe7e4f33da467cc3f" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716308/INS17relapse_2-759831_S5_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716308" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716308/SRR24716308" size="27225831739" date="2023-05-24 06:47:56" md5="db4826d40d0a0e0747ddbcc6fa451474" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716308/SRR24716308" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716308.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716308/SRR24716308.lite.1" size="21080694771" date="2023-05-29 08:46:24" md5="9456342726a4311baa57f62bdc7050b1" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716308/SRR24716308.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716308/SRR24716308.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716308/SRR24716308.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="405550560">
+          <Read index="0" count="405550560" average="101" stdev="0"/>
+          <Read index="1" count="405550560" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="405550560"/>
+                <Elements count="81921213120"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="81921213120">
+          <Base value="A" count="18511179518"/>
+          <Base value="C" count="20827558646"/>
+          <Base value="G" count="21784576621"/>
+          <Base value="T" count="20796878535"/>
+          <Base value="N" count="1019800"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716309" alias="GSM7421516_r2" total_spots="403497875" total_bases="81506570750" size="27068578157" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716309</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421516_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494959">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421516_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804694" sample_name="GSM7421516" sample_title="Post-RTX relapse, donor 3, scRNAseq" spots="403497875" bases="81506570750" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804694</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342313</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421516</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS17relapse_2-759831_S5_L004_R1_001.fastq.gz" size="21961385256" date="2023-05-24 06:03:27" md5="b843586f8c529e3f23b5538804b435d7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716309/INS17relapse_2-759831_S5_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS17relapse_2-759831_S5_L004_R2_001.fastq.gz" size="22558000075" date="2023-05-24 06:01:44" md5="d963d89ab15da617aa3073f96daf757a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716309/INS17relapse_2-759831_S5_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716309" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716309/SRR24716309" size="27068580978" date="2023-05-24 06:11:26" md5="c695fc9d164c6b56c5da6e1ea72fae1a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716309/SRR24716309" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716309.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716309/SRR24716309.lite.1" size="20974073566" date="2023-05-29 08:24:42" md5="4660ed3605a0f393bd6c677e8a4a943e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716309/SRR24716309.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716309/SRR24716309.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716309/SRR24716309.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="403497875">
+          <Read index="0" count="403497875" average="101" stdev="0"/>
+          <Read index="1" count="403497875" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="403497875"/>
+                <Elements count="81506570750"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="81506570750">
+          <Base value="A" count="18431752470"/>
+          <Base value="C" count="20715826976"/>
+          <Base value="G" count="21658849070"/>
+          <Base value="T" count="20699214726"/>
+          <Base value="N" count="927508"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494958" alias="GSM7421515_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494958</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421515_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421515: Post-RTX remission, donor 2, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804695">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804695</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421515</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421515</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421515" accession="SRS17804695">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804695</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342314</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421515</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX remission, donor 2, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Remission</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804695" sample_name="GSM7421515" sample_title="Post-RTX remission, donor 2, scRNAseq" spots="674079821" bases="136164123842" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804695</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342314</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421515</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="136164123842" spots="674079821" bytes="45246416554">
+      <RUN accession="SRR24716310" alias="GSM7421515_r1" total_spots="337627337" total_bases="68200722074" size="22675133350" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716310</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421515_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494958">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421515_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804695" sample_name="GSM7421515" sample_title="Post-RTX remission, donor 2, scRNAseq" spots="337627337" bases="68200722074" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804695</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342314</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421515</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24716310.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716310/SRR24716310.lite.1" size="17570373085" date="2023-05-29 08:30:29" md5="47c2afcb4476f7f5c7847c9a19f02af6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716310/SRR24716310.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716310/SRR24716310.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716310/SRR24716310.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716310" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716310/SRR24716310" size="22675136161" date="2023-05-24 05:50:43" md5="72b0f27072514b429a180029b5ebde98" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716310/SRR24716310" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS16remission_2-954583_S41_L003_R2_001.fastq.gz" size="18783970830" date="2023-05-24 05:42:11" md5="fca152defbd1104e7b96ea9586fcc67b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716310/INS16remission_2-954583_S41_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS16remission_2-954583_S41_L003_R1_001.fastq.gz" size="18353398068" date="2023-05-24 05:37:40" md5="c47aa3d91a428f6feb79ced60da8b26a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716310/INS16remission_2-954583_S41_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="337627337">
+          <Read index="0" count="337627337" average="101" stdev="0"/>
+          <Read index="1" count="337627337" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="337627337"/>
+                <Elements count="68200722074"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="68200722074">
+          <Base value="A" count="15537018570"/>
+          <Base value="C" count="17166279640"/>
+          <Base value="G" count="17609859560"/>
+          <Base value="T" count="17886711001"/>
+          <Base value="N" count="853303"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716311" alias="GSM7421515_r2" total_spots="336452484" total_bases="67963401768" size="22571283204" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716311</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421515_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494958">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421515_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804695" sample_name="GSM7421515" sample_title="Post-RTX remission, donor 2, scRNAseq" spots="336452484" bases="67963401768" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804695</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342314</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421515</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS16remission_2-954583_S41_L004_R1_001.fastq.gz" size="18248836257" date="2023-05-24 05:54:37" md5="cd35ef217d23ac47ca51af347060245a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716311/INS16remission_2-954583_S41_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS16remission_2-954583_S41_L004_R2_001.fastq.gz" size="18722720711" date="2023-05-24 05:58:50" md5="b4ac6500ba12c3199170f9c35095490d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716311/INS16remission_2-954583_S41_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716311" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716311/SRR24716311" size="22571286023" date="2023-05-24 06:08:58" md5="d9b20a37af897e52ed9a32da45952d94" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716311/SRR24716311" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716311.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716311/SRR24716311.lite.1" size="17508967719" date="2023-05-29 08:26:47" md5="79d6c38014944440a58721aeb2d6b756" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716311/SRR24716311.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716311/SRR24716311.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716311/SRR24716311.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="336452484">
+          <Read index="0" count="336452484" average="101" stdev="0"/>
+          <Read index="1" count="336452484" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="336452484"/>
+                <Elements count="67963401768"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="67963401768">
+          <Base value="A" count="15490405092"/>
+          <Base value="C" count="17106151965"/>
+          <Base value="G" count="17542210876"/>
+          <Base value="T" count="17823857296"/>
+          <Base value="N" count="776539"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494957" alias="GSM7421514_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494957</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421514_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421514: Post-RTX relapse, donor 2, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804693">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804693</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421514</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421514</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421514" accession="SRS17804693">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804693</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342315</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421514</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX relapse, donor 2, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>male</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Relapse</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804693" sample_name="GSM7421514" sample_title="Post-RTX relapse, donor 2, scRNAseq" spots="613679784" bases="123963316368" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804693</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342315</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421514</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="123963316368" spots="613679784" bytes="41435528080">
+      <RUN accession="SRR24716312" alias="GSM7421514_r1" total_spots="307697028" total_bases="62154799656" size="20785236182" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716312</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421514_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494957">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421514_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804693" sample_name="GSM7421514" sample_title="Post-RTX relapse, donor 2, scRNAseq" spots="307697028" bases="62154799656" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804693</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342315</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421514</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS16relapse_2-954582_S37_L003_R1_001.fastq.gz" size="16828320879" date="2023-05-24 04:45:37" md5="8a2d767ecae17e3df6191e464f5a6ec7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716312/INS16relapse_2-954582_S37_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS16relapse_2-954582_S37_L003_R2_001.fastq.gz" size="17255429856" date="2023-05-24 04:44:28" md5="431b832bad3e30d36d6ee958a8d7e689" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716312/INS16relapse_2-954582_S37_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716312" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716312/SRR24716312" size="20785238998" date="2023-05-24 04:58:42" md5="c9818cbf6b4961257f8ba0a76267a8c0" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716312/SRR24716312" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716312.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716312/SRR24716312.lite.1" size="16021057886" date="2023-05-29 08:33:59" md5="523d3fba9ccd493aaed2716fd073455d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716312/SRR24716312.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716312/SRR24716312.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716312/SRR24716312.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="307697028">
+          <Read index="0" count="307697028" average="101" stdev="0"/>
+          <Read index="1" count="307697028" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="307697028"/>
+                <Elements count="62154799656"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62154799656">
+          <Base value="A" count="14177290603"/>
+          <Base value="C" count="15604913462"/>
+          <Base value="G" count="16082395837"/>
+          <Base value="T" count="16289424131"/>
+          <Base value="N" count="775623"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716313" alias="GSM7421514_r2" total_spots="305982756" total_bases="61808516712" size="20650291898" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716313</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421514_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494957">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421514_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804693" sample_name="GSM7421514" sample_title="Post-RTX relapse, donor 2, scRNAseq" spots="305982756" bases="61808516712" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804693</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342315</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421514</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS16relapse_2-954582_S37_L004_R1_001.fastq.gz" size="16699367815" date="2023-05-24 05:45:57" md5="aeefbce021dced56567ef3287b66b5d5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716313/INS16relapse_2-954582_S37_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS16relapse_2-954582_S37_L004_R2_001.fastq.gz" size="17166305349" date="2023-05-24 05:42:42" md5="2bf6068bdf2af8fcc393ec2f86c4687a" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716313/INS16relapse_2-954582_S37_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716313" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716313/SRR24716313" size="20650294711" date="2023-05-24 05:56:07" md5="0ac10accca265ff62bbbb001ee13c72a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716313/SRR24716313" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716313.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716313/SRR24716313.lite.1" size="15931765575" date="2023-05-29 08:30:01" md5="4102296fbd9e18ef33404b12c83b8023" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716313/SRR24716313.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716313/SRR24716313.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716313/SRR24716313.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="305982756">
+          <Read index="0" count="305982756" average="101" stdev="0"/>
+          <Read index="1" count="305982756" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="305982756"/>
+                <Elements count="61808516712"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="61808516712">
+          <Base value="A" count="14104907248"/>
+          <Base value="C" count="15518348599"/>
+          <Base value="G" count="15985296734"/>
+          <Base value="T" count="16199257495"/>
+          <Base value="N" count="706636"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494956" alias="GSM7421513_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494956</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421513_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421513: Post-RTX remission, donor 1, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804692">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804692</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421513</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421513</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421513" accession="SRS17804692">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804692</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342316</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421513</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX remission, donor 1, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Remission</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804692" sample_name="GSM7421513" sample_title="Post-RTX remission, donor 1, scRNAseq" spots="613224781" bases="123871405762" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804692</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342316</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421513</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="123871405762" spots="613224781" bytes="41259838012">
+      <RUN accession="SRR24716314" alias="GSM7421513_r1" total_spots="307546994" total_bases="62124492788" size="20700558555" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716314</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421513_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494956">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421513_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804692" sample_name="GSM7421513" sample_title="Post-RTX remission, donor 1, scRNAseq" spots="307546994" bases="62124492788" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804692</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342316</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421513</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24716314.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716314/SRR24716314.lite.1" size="16010766652" date="2023-05-29 08:30:25" md5="97451fc609601cf549ec7e2c15ef0ad6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716314/SRR24716314.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716314/SRR24716314.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716314/SRR24716314.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716314" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716314/SRR24716314" size="20700561368" date="2023-05-24 06:17:38" md5="abd3d04656bb2b66e6fcaa7b6af319a6" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716314/SRR24716314" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15remission_2-954587_S57_L003_R2_001.fastq.gz" size="17162469393" date="2023-05-24 05:47:56" md5="85073518fafde69987c1c1a2d070c68d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716314/INS15remission_2-954587_S57_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15remission_2-954587_S57_L003_R1_001.fastq.gz" size="16833118485" date="2023-05-24 05:51:17" md5="7cca05f3330ab416fbae8c3a61b1ba6c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716314/INS15remission_2-954587_S57_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="307546994">
+          <Read index="0" count="307546994" average="101" stdev="0"/>
+          <Read index="1" count="307546994" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="307546994"/>
+                <Elements count="62124492788"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="62124492788">
+          <Base value="A" count="13970558162"/>
+          <Base value="C" count="15626707388"/>
+          <Base value="G" count="16205767184"/>
+          <Base value="T" count="16320689538"/>
+          <Base value="N" count="770516"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716315" alias="GSM7421513_r2" total_spots="305677787" total_bases="61746912974" size="20559279457" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716315</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421513_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494956">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421513_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804692" sample_name="GSM7421513" sample_title="Post-RTX remission, donor 1, scRNAseq" spots="305677787" bases="61746912974" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804692</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342316</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421513</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR24716315.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716315/SRR24716315.lite.1" size="15913529527" date="2023-05-29 08:24:47" md5="c2c917d7b506eb42bad5cca12e0028a0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716315/SRR24716315.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716315/SRR24716315.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716315/SRR24716315.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716315" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716315/SRR24716315" size="20559282271" date="2023-05-24 05:28:58" md5="c72582543df6dde8a28675681c02f6ba" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716315/SRR24716315" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15remission_2-954587_S57_L004_R2_001.fastq.gz" size="17068863679" date="2023-05-24 05:25:30" md5="4a1b2352c904557d77edfc16e7063be1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716315/INS15remission_2-954587_S57_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15remission_2-954587_S57_L004_R1_001.fastq.gz" size="16696793044" date="2023-05-24 05:26:33" md5="0f646fa7bdbabd3a1826ed59716150e5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716315/INS15remission_2-954587_S57_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="305677787">
+          <Read index="0" count="305677787" average="101" stdev="0"/>
+          <Read index="1" count="305677787" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="305677787"/>
+                <Elements count="61746912974"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="61746912974">
+          <Base value="A" count="13894240581"/>
+          <Base value="C" count="15531485569"/>
+          <Base value="G" count="16098388677"/>
+          <Base value="T" count="16222097391"/>
+          <Base value="N" count="700756"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20494955" alias="GSM7421512_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20494955</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421512_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7421512: Post-RTX relapse, donor 1, scRNAseq; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP439226">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP439226</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA975613</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS17804691">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS17804691</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7421512</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7421512</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>PBMC were isolated from fresh blood by Ficoll-paque density centrifugation and cryopreserved in FBS supplemented with 10% of DMSO. When all samples had been collected, PBMC were thawed at 37°C, treated with DNase I for 15 minutes, washed with RPMI containing 5% FBS and rested for 2 hours in a 37°C 5% CO2 incubator. Following rest, cells were washed twice with ice-cold PBS containing 2% FBS and stained with anti-human CD19 PerCp-Cy5.5 (BD Biosciences), anti-human CD4 Alexa Fluor 700 (BD Biosciences), and anti-human CD8α V500 (BD Biosciences) for 15 minutes on ice. Cell were washed again with ice-cold PBS containing 2% FBS, filtered through a 40 µm mesh, and a maximum of 50,000 live B cells were FACS isolated as CD19+ CD4- CD8- cells and on the basis of size and granularity. Sorted cells were then washed twice with ice-cold PBS containing 0.04% BSA (0.22 µm filtered) and brought to a concentration of 1,000 cells/µl. Samples were subsequently processed according to the 10x Genomics Single Cell 5' v1.1 user guide to target 10,000 events. Briefly, single cell PBMC suspensions were loaded onto the 10x Single Cell Chip G along with 10x Genomics NextGem scRNA 5' V1.1 reagents. Complementary DNA (cDNA) and 5' gene expression libraries were generated using the standard 10x Genomics protocol. 5' gene expression libraries were constructed with 10X Genomics Chromium Single Cell 5' v1.1 Reagent Kits following the manufacturer's standard protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="McGill University" accession="SRA1643504" alias="SUB13455054">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1643504</PRIMARY_ID>
+        <SUBMITTER_ID namespace="McGill University">SUB13455054</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>McGill University</Name>
+      <Contact email="tho-alfakar.al-aubodah@mail.mcgill.ca">
+        <Address>
+          <Street>1001 boulevard Decarie</Street>
+          <City>Montreal</City>
+          <Sub>Quebec</Sub>
+          <Country>Canada</Country>
+        </Address>
+        <Name>
+          <First>Tho-Alfakar</First>
+          <Last>Al-Aubodah</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE233276" accession="SRP439226">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP439226</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA975613</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE233276</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Gene expression profiles of peripheral blood mononuclear cells (PBMC) from children with active idiopathic nephrotic syndrome (INS) and healthy controls (HC) [RTXrel_vs_RTXrem]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>An autoimmune B cell origin for childhood idiopathic nephrotic syndrome (INS) is predicted based on the efficacy of rituximab (RTX) at maintaining long-term remission from proteinuria. Knowledge regarding the nature of the culprit B cell response is very limited. In particular, no transcriptomics work has been performed to evaluate the B cell response in INS. Here, we performed single-cell RNA-sequencing (scRNAseq) on B cells isolated from peripheral blood mononuclear cells (PBMC) collected from four children with INS during the B cell recovery phase of a previous RTX treamtent while in remission or relapse (paired relapse-remisison samples). We show that the post-RTX B cell landscape is overwhelmingly antigen-inexperienced with minimal transcriptomic differences between relapse and remission. However, post-RTX relapses were associated with an early resurgence of an extrafollicular B cell population expressing genes associated with marginal zone B cells (MZB1, CD24, IGHM, CD1C, TNFRSF13B, GPR183). Together, our study provides evidence for an extrafollicular origin for humoral immunity in active INS. Overall design: PBMC were isolated from the blood of four children with INS during the B cell recovery phase of previous RTX treatments during relapse and remission. Live B cells were sorted by fluorescence-activated cell sorting (FACS) and analyzed by single-cell RNA-sequencing (scRNAseq).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE233276</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37996443</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA975612</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM7421512" accession="SRS17804691">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS17804691</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35342317</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7421512</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Post-RTX relapse, donor 1, scRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>975613</ID>
+            <LABEL>PRJNA975613</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Blood</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>B cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>Pediatric</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>disease state</TAG>
+          <VALUE>Relapse</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS17804691" sample_name="GSM7421512" sample_title="Post-RTX relapse, donor 1, scRNAseq" spots="584002743" bases="117968554086" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS17804691</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35342317</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421512</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="2" bases="117968554086" spots="584002743" bytes="39874268409">
+      <RUN accession="SRR24716316" alias="GSM7421512_r1" total_spots="293091449" total_bases="59204472698" size="20019832621" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716316</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421512_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494955">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421512_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804691" sample_name="GSM7421512" sample_title="Post-RTX relapse, donor 1, scRNAseq" spots="293091449" bases="59204472698" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804691</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342317</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421512</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS15relapse_2-954588_S61_L003_R1_001.fastq.gz" size="16099434769" date="2023-05-24 04:43:04" md5="5ba1544d44d75c6dd13fb9d5dfaf141b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716316/INS15relapse_2-954588_S61_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15relapse_2-954588_S61_L003_R2_001.fastq.gz" size="16545532012" date="2023-05-24 04:44:22" md5="a1884ef1afbc6d1650ac476d5e317030" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716316/INS15relapse_2-954588_S61_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716316" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716316/SRR24716316" size="20019835436" date="2023-05-24 04:57:26" md5="176e66d7732a27dd5b5f7cf8b2a9054a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716316/SRR24716316" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716316.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716316/SRR24716316.lite.1" size="15264774048" date="2023-05-29 08:26:20" md5="ceba08cec150e0a4a72fdd433de55853" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716316/SRR24716316.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716316/SRR24716316.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716316/SRR24716316.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="293091449">
+          <Read index="0" count="293091449" average="101" stdev="0"/>
+          <Read index="1" count="293091449" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="293091449"/>
+                <Elements count="59204472698"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="59204472698">
+          <Base value="A" count="13334621397"/>
+          <Base value="C" count="14764262010"/>
+          <Base value="G" count="15367014574"/>
+          <Base value="T" count="15737843092"/>
+          <Base value="N" count="731625"/>
+        </Bases>
+      </RUN>
+      <RUN accession="SRR24716317" alias="GSM7421512_r2" total_spots="290911294" total_bases="58764081388" size="19854435788" load_done="true" published="2023-10-30 00:38:30" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24716317</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7421512_r2</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20494955">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7421512_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS17804691" sample_name="GSM7421512" sample_title="Post-RTX relapse, donor 1, scRNAseq" spots="290911294" bases="58764081388" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS17804691</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35342317</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7421512</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="INS15relapse_2-954588_S61_L004_R1_001.fastq.gz" size="15948733187" date="2023-05-24 05:23:06" md5="4e5cfd91de19665a3ac7c2df3cfc5fed" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716317/INS15relapse_2-954588_S61_L004_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="INS15relapse_2-954588_S61_L004_R2_001.fastq.gz" size="16430100935" date="2023-05-24 05:26:37" md5="b6d99d04489dd0f1fa7dcc9038ad9944" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-8/SRR24716317/INS15relapse_2-954588_S61_L004_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716317" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716317/SRR24716317" size="19854438601" date="2023-05-24 05:38:33" md5="7c454d2462642f9a8545f2dd29e94006" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24716317/SRR24716317" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24716317.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716317/SRR24716317.lite.1" size="15151496621" date="2023-05-29 08:20:53" md5="57cf171641ec0981e5844dc66ecf704b" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR024/24716/SRR24716317/SRR24716317.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR24716317/SRR24716317.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR24716317/SRR24716317.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="290911294">
+          <Read index="0" count="290911294" average="101" stdev="0"/>
+          <Read index="1" count="290911294" average="101" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="290911294"/>
+                <Elements count="58764081388"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="58764081388">
+          <Base value="A" count="13242602052"/>
+          <Base value="C" count="14656151369"/>
+          <Base value="G" count="15244965722"/>
+          <Base value="T" count="15619698717"/>
+          <Base value="N" count="663528"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>
