@@ -158,21 +158,19 @@ def test_read_xml_metadata_GSE274763():
         if run.srx in ('SRX25689947', 'SRX25689948', 'SRX25689949', 'SRX25689950', 'SRX25689951', 'SRX25689952',
                        'SRX25689953', 'SRX25689954'):
             continue
-        if not run.layout == [R1, R2, I1, I2]:
-            print(run.srx)
+        assert run.layout == [R1, R2, I1, I2]
 
 def test_read_xml_metadata_GSE181021():
     """This dataset is identified as paired-end, but only has one read file (which is a BAM)."""
     # TODO: also GSE267933 GSE217511, GSE178257 and GSE253640
     meta = read_xml_metadata(join(test_data_dir, 'GSE181021.xml'))
     for run in meta:
-        assert run.layout == [R1]
+        assert run.layout == [I1, R1, R2]
 
 def test_read_xml_metadata_GSE283187():
     """This dataset has a sample with 3 reads (R1, R2, R3) and an index (I1)."""
     meta = read_xml_metadata(join(test_data_dir, 'GSE283187.xml'))
     for run in meta:
-        print(run.srr)
         if run.srr == 'SRR31555331':
             assert run.layout == [I1, R1, I2, R2]
         else:
@@ -182,7 +180,6 @@ def test_read_xml_metadata_GSE174332():
     """In this dataset, the files passed to fastq-load.py were compressed."""
     meta = read_xml_metadata(join(test_data_dir, 'GSE174332.xml'))
     for run in meta:
-        print(run.srr)
         if run.srr == 'SRR14511669':
             assert run.layout == [I1, R1, R2]
         else:
@@ -192,7 +189,6 @@ def test_read_xml_metadata_GSE104493():
     """This dataset has I1 reads with zero length"""
     meta = read_xml_metadata(join(test_data_dir, 'GSE104493.xml'))
     for run in meta:
-        print(run.srr)
         assert run.layout == [I1, R1]
         assert run.average_read_lengths[0] == 0.0
 
@@ -206,7 +202,6 @@ def test_read_xml_metadata_GSE128117():
     """This dataset has a sample with 3 reads (R1, R2, R3) and an index (I1)."""
     meta = read_xml_metadata(join(test_data_dir, 'GSE128117.xml'))
     for run in meta:
-        print(run.srr)
         assert run.layout == [R1, I1]
 
 def test_read_xml_metadata_SRX26261721():
@@ -231,6 +226,55 @@ def test_read_xml_metadata_SRX26261721():
                                        'S1_L002_R2_001.fastq.gz']
     assert meta[1].layout == [SequencingFileType.I1, SequencingFileType.I2, SequencingFileType.R1,
                               SequencingFileType.R2]
+
+def test_SRX18986686():
+    """This dataset has been submitted as BAMs, so we must use bamtofastq to extract FASTQs."""
+    meta = read_xml_metadata(join(test_data_dir, 'SRX18986686.xml'))
+    assert len(meta) == 1
+    for run in meta:
+        assert run.layout == [I1, R1, R2]
+        assert run.use_bamtofastq
+        assert run.fastq_filenames == [
+            'bamtofastq_S1_L001_I1_001.fastq.gz',
+            'bamtofastq_S1_L001_R1_001.fastq.gz',
+            'bamtofastq_S1_L001_R2_001.fastq.gz']
+        assert (run.bam_fastq_filenames == [
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L001_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L001_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L001_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L002_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L002_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L002_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L003_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L003_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L003_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L004_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L004_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HG3T5BGX2/bamtofastq_S1_L004_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L001_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L001_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L001_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L002_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L002_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L002_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L003_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L003_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L003_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L004_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L004_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HHJT3BGX2/bamtofastq_S1_L004_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L001_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L001_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L001_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L002_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L002_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L002_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L003_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L003_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L003_R2_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L004_I1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L004_R1_001.fastq.gz',
+            's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L004_R2_001.fastq.gz'])
 
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))

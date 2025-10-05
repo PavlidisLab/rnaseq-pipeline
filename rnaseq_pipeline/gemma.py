@@ -1,3 +1,5 @@
+import enum
+import logging
 import os
 import subprocess
 from getpass import getpass
@@ -7,6 +9,8 @@ import luigi
 import requests
 from luigi.contrib.external_program import ExternalProgramTask
 from requests.auth import HTTPBasicAuth
+
+logger = logging.getLogger(__name__)
 
 class gemma(luigi.Config):
     task_namespace = 'rnaseq_pipeline'
@@ -48,6 +52,9 @@ class GemmaApi:
     def datasets(self, experiment_id):
         return self._query_api(join('datasets', experiment_id))
 
+    def dataset_annotations(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id, 'annotations'))
+
     def dataset_has_batch(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'hasbatch'))
 
@@ -57,7 +64,7 @@ class GemmaApi:
     def platforms(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'platforms'))
 
-class GemmaTaskMixin:
+class GemmaTaskMixin(luigi.Task):
     experiment_id = luigi.Parameter()
 
     def __init__(self, *kwargs, **kwds):
@@ -101,9 +108,11 @@ class GemmaTaskMixin:
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
 
+    @property
     def single_cell_reference_id(self):
         try:
-            return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id, 'rat': cfg.rat_single_cell_reference_id}[
+            return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id,
+                    'rat': cfg.rat_single_cell_reference_id}[
                 self.taxon]
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
@@ -111,6 +120,57 @@ class GemmaTaskMixin:
     @property
     def platform_short_name(self):
         return f'Generic_{self.taxon}_ncbiIds'
+
+    @property
+    def assay_type(self):
+        # Possible values:
+        # bulk RNA-seq assay	http://purl.obolibrary.org/obo/OBI_0003090	11345
+        # transcription profiling by array assay	http://purl.obolibrary.org/obo/OBI_0001463	10788
+        # transcription profiling by high throughput sequencing	http://www.ebi.ac.uk/efo/EFO_0002770	262
+        # single-cell RNA sequencing assay	http://purl.obolibrary.org/obo/OBI_0002631	248
+        # single-nucleus RNA sequencing assay	http://purl.obolibrary.org/obo/OBI_0003109	150
+        # transcription profiling by array	http://www.ebi.ac.uk/efo/EFO_0002768	79
+        # single-cell RNA sequencing	http://www.ebi.ac.uk/efo/EFO_0008913	5
+        # single nucleus RNA sequencing	http://www.ebi.ac.uk/efo/EFO_0009809	4
+        # fluorescence-activated cell sorting	http://www.ebi.ac.uk/efo/EFO_0009108	2
+        # RIP-seq	http://www.ebi.ac.uk/efo/EFO_0005310	1
+        # These were pulled from Gemma on October 1st, 2025
+
+        assay_type_class_uri = 'http://purl.obolibrary.org/obo/OBI_0000070'
+        microarray_uris = ['http://purl.obolibrary.org/obo/OBI_0001463', 'http://www.ebi.ac.uk/efo/EFO_0002768']
+        bulk_rnaseq_uris = ['http://purl.obolibrary.org/obo/OBI_0003090']
+        sc_rnaseq_uris = ['http://purl.obolibrary.org/obo/OBI_0002631', 'http://www.ebi.ac.uk/efo/EFO_0008913',
+                          'http://www.ebi.ac.uk/efo/EFO_0009809', 'http://purl.obolibrary.org/obo/OBI_0003109']
+        fac_sorted_uri = 'http://www.ebi.ac.uk/efo/EFO_0009108'
+
+        annotations = self._gemma_api.dataset_annotations(self.experiment_id)
+        fac_sorted = any(annotation['classUri'] == assay_type_class_uri and annotation['termUri'] == fac_sorted_uri
+                         for annotation in annotations)
+        for annotation in annotations:
+            if annotation['classUri'] == assay_type_class_uri:
+                value_uri = annotation['termUri']
+                if value_uri in microarray_uris:
+                    return GemmaAssayType.MICROARRAY
+                elif value_uri in bulk_rnaseq_uris:
+                    return GemmaAssayType.BULK_RNA_SEQ
+                elif value_uri in sc_rnaseq_uris:
+                    if fac_sorted:
+                        # fac-sorted scRNA-Seq is treated as bulk
+                        logger.info('%s: Dataset is a FAC-sorted single-cell RNA-Seq, will treat as bulk RNA-Seq.',
+                                    self.dataset_short_name)
+                        return GemmaAssayType.BULK_RNA_SEQ
+                    else:
+                        return GemmaAssayType.SINGLE_CELL_RNA_SEQ
+
+        # assume bulk
+        logger.warning('%s: No suitable experiment tag to determine the assay type, will assume bulk RNA-Seq.',
+                       self.dataset_short_name)
+        return GemmaAssayType.BULK_RNA_SEQ
+
+class GemmaAssayType(enum.Enum):
+    MICROARRAY = 0
+    BULK_RNA_SEQ = 1
+    SINGLE_CELL_RNA_SEQ = 2
 
 class GemmaCliTask(GemmaTaskMixin, ExternalProgramTask):
     """

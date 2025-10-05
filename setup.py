@@ -12,7 +12,7 @@ setup(name='rnaseq_pipeline',
       classifiers=['License :: Public Domain'],
       packages=find_packages(),
       include_package_data=True,
-      install_requires=['luigi', 'python-daemon<3.0.0', 'bioluigi>=0.2.1', 'requests', 'pandas'],
+      install_requires=['luigi', 'python-daemon<3.0.0', 'bioluigi@git+https://github.com/PavlidisLab/bioluigi@feature-improved-sratools-support', 'requests', 'pandas'],
       extras_require={
           'gsheet': ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg'],
           'webviewer': ['Flask', 'gunicorn']},

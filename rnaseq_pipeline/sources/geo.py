@@ -189,20 +189,21 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession
-                for fastq in sample.output():
-                    # strip the two extensions (.fastq.gz)
-                    fastq_name, _ = os.path.splitext(fastq.path)
-                    fastq_name, _ = os.path.splitext(fastq_name)
+                for run in sample.output():
+                    for fastq in run.files:
+                        # strip the two extensions (.fastq.gz)
+                        fastq_name, _ = os.path.splitext(fastq)
+                        fastq_name, _ = os.path.splitext(fastq_name)
 
-                    # is this necessary?
-                    fastq_id = os.path.basename(fastq_name)
+                        # is this necessary?
+                        fastq_id = os.path.basename(fastq_name)
 
-                    platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
+                        platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
 
-                    with gzip.open(fastq.path, 'rt') as f:
-                        fastq_header = f.readline().rstrip()
+                        with gzip.open(fastq, 'rt') as f:
+                            fastq_header = f.readline().rstrip()
 
-                    info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
+                        info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
         # TODO: organize batch info per source

@@ -20,6 +20,7 @@ class SequencingFileType(enum.Enum):
 def detect_layout(run_id: str, filenames: Optional[list[str]],
                   file_sizes: Optional[list[int]] = None,
                   average_read_lengths: Optional[list[float]] = None,
+                  read_types: Optional[list[SequencingFileType]] = None,
                   is_single_end: bool = False, is_paired: bool = False):
     """Detects the layout of the sequencing run files based on their names and various additional information.
 
@@ -50,8 +51,10 @@ def detect_layout(run_id: str, filenames: Optional[list[str]],
             return layout
 
         number_of_files = len(filenames)
-    else:
+    elif average_read_lengths:
         number_of_files = len(average_read_lengths)
+    else:
+        number_of_files = len(read_types)
 
     # assume single-end read if only one file is present
     if number_of_files == 1:
