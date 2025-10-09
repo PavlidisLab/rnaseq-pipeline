@@ -25,8 +25,7 @@ def parse_octal(s):
 
 def run_luigi_task(task, args):
     with umask(args.umask):
-        results = luigi.build([task], workers=args.workers, detailed_summary=True, local_scheduler=args.local_scheduler)
-    print(results.summary_text)
+        luigi.build([task], workers=args.workers, detailed_summary=True, local_scheduler=args.local_scheduler)
 
 def submit_experiment(argv):
     parser = argparse.ArgumentParser()
