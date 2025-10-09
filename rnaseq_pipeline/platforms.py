@@ -1,6 +1,7 @@
 from abc import abstractmethod, ABC
 from typing import Optional
 
+import luigi
 from bioluigi.tasks import cutadapt
 
 class Platform(ABC):
@@ -94,3 +95,9 @@ class IlluminaNexteraPlatform(Platform):
 
     def get_trim_paired_reads_task(self, r1, r2, r1_dest, r2_dest, **kwargs):
         raise NotImplementedError
+
+class TaskWithPlatformMixin(luigi.Task):
+    """Mixin for tasks that allow to specify sequencing platform."""
+    platform_name: str = luigi.ChoiceParameter(default='ILLUMINA', choices=['ILLUMINA', 'BGI', 'NEXTERA'],
+                                               description='Sequencing platform used.', positional=False)
+    platform_instrument: str = luigi.Parameter(default='HiSeq 2500', description='Instrument model', positional=False)
