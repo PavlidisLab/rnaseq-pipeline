@@ -1,3 +1,4 @@
+import logging
 from datetime import timedelta
 from os.path import join, exists, getctime, getmtime
 from time import time
@@ -5,6 +6,8 @@ from time import time
 import luigi
 
 from .gemma import GemmaApi
+
+logger = logging.getLogger(__name__)
 
 class RsemReference(luigi.Target):
     """
@@ -102,3 +105,12 @@ class DownloadRunTarget(luigi.Target):
 
     def exists(self):
         return all(t.exists() for t in self._targets)
+
+    def remove(self):
+        for t in self._targets:
+            if t.exists():
+                try:
+                    t.remove()
+                    logger.info('Removed %s.', repr(t))
+                except:
+                    logger.exception('Failed to remove %s.', repr(t))

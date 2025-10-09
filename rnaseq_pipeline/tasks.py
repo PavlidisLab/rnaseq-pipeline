@@ -492,6 +492,13 @@ class AlignSingleCellSample(DynamicWrapperTask):
         return luigi.LocalTarget(
             join(cfg.OUTPUT_DIR, 'quantified-single-cell', self.reference_id, self.experiment_id, self.sample_id))
 
+@requires(DownloadExperiment)
+class OrganizeSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
+    def run(self):
+        download_sample_tasks = next(self.requires().run())
+        yield [OrganizeSingleCellSample(experiment_id=experiment_id, sample_id=task.sample_id)
+               for task in download_sample_tasks]
+
 class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment_id: str = luigi.Parameter()
     source: str = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
@@ -695,6 +702,9 @@ class SubmitExperimentToGemma(TaskWithOutputMixin, WrapperTask):
         # any data resulting from trimming raw reads
         trim_task = TrimExperiment(self.experiment_id, source='gemma')
         outs.extend(flatten_output(trim_task))
+        # reorganized data for the scRNA-Seq pipeline
+        organize_task = OrganizeSingleCellExperiment(self.experiment_id, source='gemma')
+        outs.extend(flatten_output(organize_task))
         return outs
 
     def on_success(self):
