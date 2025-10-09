@@ -35,6 +35,7 @@ class sra(luigi.Config):
     ncbi_public_dir: str = luigi.Parameter()
     samtools_bin: str = luigi.Parameter()
     bamtofastq_bin: str = luigi.Parameter()
+    bam_headers_cache_dir: str = luigi.Parameter()
 
 sra_config = sra()
 
@@ -258,34 +259,46 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 logger.warning('%s: Multiple 10x BAM files found, will only use the first one.', srr)
             bam_file = sra_10x_bam_files[0]
 
-            logging.info('%s: Reading 10x BAM file %s from %s...', srr, bam_file.attrib['filename'],
-                         bam_file.attrib['url'])
-            # FIXME: use requests
-            # res = requests.get(bam_file.attrib['url'], stream=True)
-            curl_proc = subprocess.Popen(['curl', bam_file.attrib['url']], stdout=subprocess.PIPE,
-                                         stderr=subprocess.DEVNULL)
-            proc = subprocess.run([sra_config.samtools_bin, 'head'],
-                                  stdin=curl_proc.stdout, stdout=subprocess.PIPE, text=True, check=True)
+            # cache the header of the BAM file
+            bam_header_file = join(cfg.OUTPUT_DIR, sra_config.bam_headers_cache_dir, srr + '.bam-header.txt')
+            if os.path.exists(bam_header_file):
+                logging.info('%s: Using cached 10x BAM header from %s...', srr, bam_header_file)
+            else:
+                logging.info('%s: Reading header from 10x BAM file %s from %s to %s...', srr, bam_file.attrib['filename'],
+                             bam_file.attrib['url'], bam_header_file)
+                os.makedirs(os.path.dirname(bam_header_file), exist_ok=True)
+                with open(bam_header_file, 'w') as f:
+                    # FIXME: use requests
+                    # res = requests.get(bam_file.attrib['url'], stream=True)
+                    curl_proc = subprocess.Popen(['curl', bam_file.attrib['url']], stdout=subprocess.PIPE,
+                                                 stderr=subprocess.DEVNULL)
+                    try:
+                        proc = subprocess.run([sra_config.samtools_bin, 'head'],
+                                              stdin=curl_proc.stdout, stdout=f, text=True, check=True)
+                    finally:
+                        curl_proc.terminate()
 
             # BAM may contain multiple flowcells and lanes for a given sample
             flowcells = {}
             bam_read_types = []
-            for line in proc.stdout.splitlines():
-                tag_name, tag_value = line.split("\t", maxsplit=1)
-                if tag_name == '@RG':
-                    tag_value_dict = {k: v for (k, v) in [t.split(':', maxsplit=1) for t in tag_value.split('\t')]}
-                    if 'PU' in tag_value_dict:
-                        *flowcell_id, lane_id = tag_value_dict['PU'].split(':')
-                        flowcell_id = '_'.join(flowcell_id)
-                        if flowcell_id not in flowcells:
-                            flowcells[flowcell_id] = []
-                        flowcells[flowcell_id].append(int(lane_id))
-                elif tag_name == '@CO' and tag_value.startswith('user command line:'):
-                    bam_read_types = []
-                elif tag_name == '@CO' and (m := bam2fastq_pattern.match(tag_value)):
-                    assert bam_read_types is not None
-                    read_type = SequencingFileType[m.group(1)]
-                    bam_read_types.append(read_type)
+            with open(bam_header_file, 'r') as f:
+                for line in f:
+                    line = line.rstrip()
+                    tag_name, tag_value = line.split("\t", maxsplit=1)
+                    if tag_name == '@RG':
+                        tag_value_dict = {k: v for (k, v) in [t.split(':', maxsplit=1) for t in tag_value.split('\t')]}
+                        if 'PU' in tag_value_dict:
+                            *flowcell_id, lane_id = tag_value_dict['PU'].split(':')
+                            flowcell_id = '_'.join(flowcell_id)
+                            if flowcell_id not in flowcells:
+                                flowcells[flowcell_id] = []
+                            flowcells[flowcell_id].append(int(lane_id))
+                    elif tag_name == '@CO' and tag_value.startswith('user command line:'):
+                        bam_read_types = []
+                    elif tag_name == '@CO' and (m := bam2fastq_pattern.match(tag_value)):
+                        assert bam_read_types is not None
+                        read_type = SequencingFileType[m.group(1)]
+                        bam_read_types.append(read_type)
 
             # map lanes to layouts
             flowcells = {fc: {lane_id: bam_read_types for lane_id in lanes} for fc, lanes in flowcells.items()}
@@ -404,7 +417,6 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
-                bam_fastq_filenames = None
                 result.append(SraRunMetadata(srx, srr,
                                              is_single_end=is_single_end,
                                              is_paired=is_paired,
