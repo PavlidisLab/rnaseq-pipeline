@@ -16,4 +16,4 @@ setup(name='rnaseq_pipeline',
       extras_require={
           'gsheet': ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg'],
           'webviewer': ['Flask', 'gunicorn']},
-      scripts=['scripts/luigi-wrapper', 'scripts/submit-experiments-from-gsheet', 'scripts/submit-experiment'])
+      entry_points={'console_scripts': ['rnaseq-pipeline-cli = rnaseq_pipeline.cli:main']})
