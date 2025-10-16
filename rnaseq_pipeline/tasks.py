@@ -5,7 +5,7 @@ import tempfile
 import uuid
 from glob import glob
 from os import unlink, makedirs, link, symlink
-from os.path import dirname, join, basename
+from os.path import dirname, join, basename, splitext
 
 import luigi
 import luigi.task
@@ -48,11 +48,7 @@ class DownloadSample(TaskWithOutputMixin, luigi.WrapperTask):
 
     Note that the 'gemma' source does not provide individual samples.
 
-    The output of this task is a list of tuple of FASTQ files organized as follows:
-    - for single-end reads, [(R1)]
-    - for paired-end reads, [(R1, R2)]
-    - for paired-end reads with an index file, [(I1, R1, R2)]
-    - for paired-end reads with two index files, [(I1, I2, R1, R2)]
+    The output of this task is a list (or nested list) of DownloadRunTarget.
     """
     experiment_id: str = luigi.Parameter()
     sample_id: str = luigi.Parameter()
@@ -116,12 +112,11 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     minimum_length = luigi.IntParameter(default=25, positional=False)
 
     def run(self):
-        destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id)
-        makedirs(destdir, exist_ok=True)
         download_sample_task = self.requires()
         platform = download_sample_task.requires().platform
         tasks = []
-        for lane in self.input():
+        for lane in flatten(self.input()):
+            destdir = join(cfg.OUTPUT_DIR, 'data-trimmed', self.experiment_id, self.sample_id, lane.run_id)
             if 'R3' in lane.layout or 'R4' in lane.layout:
                 raise NotImplementedError('Trimming more than two mates is not supported.')
             elif 'R1' in lane.layout and 'R2' in lane.layout:
@@ -197,10 +192,18 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     sample_id: str
 
     def run(self):
-        destdir = join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id)
-        makedirs(destdir, exist_ok=True)
-        yield [fastqc.GenerateReport(fastq_in.path, output_dir=destdir, temp_dir=tempfile.gettempdir())
+        yield [fastqc.GenerateReport(fastq_in.path,
+                                     # for bamtofastq output, include the directory name to avoid lane collisions
+                                     output_dir=self._get_destdir(fastq_in),
+                                     temp_dir=tempfile.gettempdir())
                for lane in self.input() for fastq_in in lane]
+
+    def _get_destdir(self, fastq_in: luigi.LocalTarget):
+        # TODO: make the run_id part of the output of TrimSample
+        run_id = basename(dirname(fastq_in.path))
+        # fastqc output is a directory, so to make this atomic, we need a sub-directory for each file being QCed
+        filename = basename(fastq_in.path).removesuffix('.fastq.gz')
+        return join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id, run_id, filename)
 
 class QualityControlExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
@@ -303,8 +306,9 @@ class AlignSample(ScheduledExternalProgramTask):
         return join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, self.reference_id, self.experiment_id, self.sample_id)
 
     def program_args(self):
-        args = ['scripts/rsem-calculate-expression-wrapper', join(cfg.RSEM_DIR, 'rsem-calculate-expression'), '-p',
-                self.cpus]
+        args = [cfg.rsem_calculate_expression_bin]
+
+        args.extend(['-p', self.cpus])
 
         args.extend([
             '--time',
@@ -458,14 +462,16 @@ class OrganizeSingleCellSample(luigi.Task):
     sample_id: str
 
     def run(self):
-        runs = self.input()
-        makedirs(self.output().path)
-        for lane, run in enumerate(runs):
-            for f, read_type in zip(run.files, run.layout):
-                dest = join(self.output().path, f'{self.sample_id}_S1_L{lane + 1:03}_{read_type}_001.fastq.gz')
-                if os.path.exists(dest):
-                    unlink(dest)
-                link(f, dest)
+        runs = flatten(self.input())
+        with self.output().temporary_path() as output_dir:
+            os.makedirs(output_dir)
+            for lane, run in enumerate(runs):
+                print(run)
+                for f, read_type in zip(run.files, run.layout):
+                    dest = join(output_dir, f'{self.sample_id}_S1_L{lane + 1:03}_{read_type}_001.fastq.gz')
+                    if os.path.exists(dest):
+                        unlink(dest)
+                    link(f, dest)
 
     def output(self):
         return luigi.LocalTarget(join(cfg.OUTPUT_DIR, 'data-single-cell', self.experiment_id, self.sample_id))
@@ -484,7 +490,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
             fastqs_dir=fastqs_dir,
             output_dir=self.output().path,
             # TODO: add an avx feature on slurm
-            scheduler_extra_args=['--constraint', 'thrd64'],
+            scheduler_extra_args=['--constraint', 'thrd64', '--gres=scratch=300G'],
             walltime=datetime.timedelta(days=1)
         )
 
@@ -496,7 +502,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
 class OrganizeSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     def run(self):
         download_sample_tasks = next(self.requires().run())
-        yield [OrganizeSingleCellSample(experiment_id=experiment_id, sample_id=task.sample_id)
+        yield [OrganizeSingleCellSample(experiment_id=self.experiment_id, sample_id=task.sample_id)
                for task in download_sample_tasks]
 
 class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -533,13 +539,17 @@ class GenerateReportForSingleCellExperiment(RerunnableTaskMixin, luigi.Task):
         search_dirs.update(dirname(out.path) for out in flatten(align_sample_dirs))
         search_dirs.update(dirname(out.path) for out in flatten(trim_sample_dirs))
         search_dirs.update(dirname(out.path) for out in flatten(qc_sample_dirs))
-        self.output().makedirs()
-        sample_names_file = join(dirname(self.output().path), 'sample_names.tsv')
+
+        # we used to write the sample_names.tsv file inside the directory, but that is not working anymore since writing
+        # MultiQC report now uses atomic write
+        sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id + '.sample_names.tsv')
+        os.makedirs(dirname(sample_names_file), exist_ok=True)
         with open(sample_names_file, 'w') as out:
             for lane_qc in flatten(qc_sample_dirs):
                 run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
                 sample_id = basename(dirname(lane_qc.path))
                 out.write(f'{run_id}\t{sample_id}_{run_id}\n')
+
         yield multiqc.GenerateReport(input_dirs=search_dirs,
                                      output_dir=dirname(self.output().path),
                                      replace_names=sample_names_file,
@@ -597,6 +607,8 @@ class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
                 '--data-type', 'MEX',
                 '--quantitation-type-recomputed-from-raw-data',
                 '--preferred-quantitation-type',
+                # never filter 10x MEX data (this prevents detection of unfiltered data)
+                '--mex-no-10x-filter',
                 # TODO: add sequencing metadata
                 # FIXME: add --replace
                 ]

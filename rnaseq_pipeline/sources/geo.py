@@ -19,6 +19,7 @@ import luigi.format
 import requests
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 from luigi.util import requires
+from luigi.task import flatten
 
 from .sra import DownloadSraExperiment
 from ..config import rnaseq_pipeline
@@ -189,7 +190,7 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession
-                for run in sample.output():
+                for run in flatten(sample.output()):
                     for fastq in run.files:
                         # strip the two extensions (.fastq.gz)
                         fastq_name, _ = os.path.splitext(fastq)

@@ -1,5 +1,7 @@
 """
-Utilities for inferring layouts of RNA-Seq data based on original filenames
+Utilities for dealing with RNA-Seq data.
+
+This aim at being somewhat vendor-agnostic. Platform-specific logic should be organized in separate modules.
 """
 import enum
 import logging
@@ -46,8 +48,9 @@ def detect_layout(run_id: str, filenames: Optional[list[str]],
             return layout
 
         if layout := detect_fallback_fastq_name(run_id, filenames):
-            logger.warning('%s: Inferred file types: %s from file names with fallback name patterns: %s. This is highly inaccurate.',
-                           run_id, '|'.join(l.name for l in layout), ', '.join(filenames))
+            logger.warning(
+                '%s: Inferred file types: %s from file names with fallback name patterns: %s. This is highly inaccurate.',
+                run_id, '|'.join(l.name for l in layout), ', '.join(filenames))
             return layout
 
         number_of_files = len(filenames)

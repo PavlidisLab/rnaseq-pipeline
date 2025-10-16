@@ -49,7 +49,7 @@ def max_retry(count):
 
 no_retry = max_retry(0)
 
-class RerunnableTaskMixin:
+class RerunnableTaskMixin(luigi.Task):
     """
     Mixin for a task that can be rerun regardless of its completion status.
     """
@@ -68,7 +68,7 @@ class RerunnableTaskMixin:
     def complete(self):
         return (not self.rerun or self._has_rerun) and super().complete()
 
-class CheckAfterCompleteMixin:
+class CheckAfterCompleteMixin(luigi.Task):
     """Ensures that a task is completed after a successful run()."""
 
     def run(self):

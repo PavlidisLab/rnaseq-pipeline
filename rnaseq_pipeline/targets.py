@@ -114,3 +114,6 @@ class DownloadRunTarget(luigi.Target):
                     logger.info('Removed %s.', repr(t))
                 except:
                     logger.exception('Failed to remove %s.', repr(t))
+
+    def __repr__(self):
+        return f"DownloadRunTarget(run_id={self.run_id}, files={self.files}, layout={'|'.join(self.layout)})"

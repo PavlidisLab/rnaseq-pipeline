@@ -134,13 +134,15 @@ class GemmaTaskMixin(luigi.Task):
         # single nucleus RNA sequencing	http://www.ebi.ac.uk/efo/EFO_0009809	4
         # fluorescence-activated cell sorting	http://www.ebi.ac.uk/efo/EFO_0009108	2
         # RIP-seq	http://www.ebi.ac.uk/efo/EFO_0005310	1
+        # RNA-seq of coding RNA from single cells	http://www.ebi.ac.uk/efo/EFO_0005684	0
         # These were pulled from Gemma on October 1st, 2025
 
         assay_type_class_uri = 'http://purl.obolibrary.org/obo/OBI_0000070'
         microarray_uris = ['http://purl.obolibrary.org/obo/OBI_0001463', 'http://www.ebi.ac.uk/efo/EFO_0002768']
         bulk_rnaseq_uris = ['http://purl.obolibrary.org/obo/OBI_0003090']
         sc_rnaseq_uris = ['http://purl.obolibrary.org/obo/OBI_0002631', 'http://www.ebi.ac.uk/efo/EFO_0008913',
-                          'http://www.ebi.ac.uk/efo/EFO_0009809', 'http://purl.obolibrary.org/obo/OBI_0003109']
+                          'http://www.ebi.ac.uk/efo/EFO_0009809', 'http://purl.obolibrary.org/obo/OBI_0003109',
+                          'http://www.ebi.ac.uk/efo/EFO_0005684']
         fac_sorted_uri = 'http://www.ebi.ac.uk/efo/EFO_0009108'
 
         annotations = self._gemma_api.dataset_annotations(self.experiment_id)
@@ -162,10 +164,7 @@ class GemmaTaskMixin(luigi.Task):
                     else:
                         return GemmaAssayType.SINGLE_CELL_RNA_SEQ
 
-        # assume bulk
-        logger.warning('%s: No suitable experiment tag to determine the assay type, will assume bulk RNA-Seq.',
-                       self.dataset_short_name)
-        return GemmaAssayType.BULK_RNA_SEQ
+        raise ValueError('No suitable experiment tag to determine the assay type .')
 
 class GemmaAssayType(enum.Enum):
     MICROARRAY = 0

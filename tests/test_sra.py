@@ -276,6 +276,26 @@ def test_SRX18986686():
             's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L004_R1_001.fastq.gz',
             's10_MissingLibrary_1_HYHJ7BGXY/bamtofastq_S1_L004_R2_001.fastq.gz'])
 
+@pytest.mark.skip('This run lacks statistics, reach out to SRA curators?')
+def test_SRX17676975():
+    runs = read_xml_metadata(join(test_data_dir, 'SRX17676975.xml'))
+    assert len(runs) == 9
+
+def test_GSE271769():
+    runs = read_xml_metadata(join(test_data_dir, 'GSE271769.xml'))
+    assert len(runs) == 9
+
+    task = DownloadSraExperiment(srx='SRX25247848')
+    task.run()
+
+def test_SRX25247847():
+    runs = read_xml_metadata(join(test_data_dir, 'SRX25247847.xml'))
+    assert len(runs) == 1
+
+def test_SRX26528278():
+    runs = read_xml_metadata(join(test_data_dir, 'SRX26528278.xml'))
+    assert len(runs) == 1
+
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
     assert len(meta) == 2

@@ -71,8 +71,7 @@ your tasks at http://localhost:8082/.
 luigid
 ```
 
-For convenience, we provide a `luigi-wrapper` script that sets the `--module`
-flag to `rnaseq_pipeline.tasks` for you.
+For convenience, we provide a `rnaseq-pipeline-cli` tool to run high-level tasks:
 
 ```bash
 luigi-wrapper <task> <task_args>
@@ -104,6 +103,7 @@ The output is organized as follow:
 pipeline-output/
     genomes/<reference_id>/                       # Genomic references
     references/<reference_id>/                    # RSEM/STAR indexes
+    references-single-cell/<reference_id>/        # Cell Ranger references
     data/<source>/                                # FASTQs (organization is source-specific; note that GEO source uses SRA)
     data-qc/<experiment_id>/<sample_id>/          # FastQC reports
     data-single-cell/<experiment_id>/<sample_id>/ # Single-cell data (hard links to files from data/)
@@ -146,6 +146,26 @@ pip install .[webviewer]
 
 ```bash
 gunicorn rnaseq_pipeline.viewer:app
+```
+
+## Tools Wrappers
+
+A few wrappers are provided to make some tools run more efficiently. For this to work, you have to configure Bioluigi to
+use the wrappers instead of the actual tools.
+
+Examples of behaviors:
+
+ - copy the reference directory to a local scratch directory (Cell Ranger & RSEM)
+ - preload genome reference in shared memory and release unused ones (RSEM only)
+
+```ini
+[bioluigi]
+cellranger_bin=rnaseq-pipeline-cellranger
+rsem_calculate_expression_bin=rnaseq-pipeline-rsem-calculate-expression
+
+[rnaseq_pipeline.wrapped_tools]
+cellranger_bin=/absolute/path/to/cell/ranger/bin
+rsem_calculate_expression_bin=/absolute/path/to/rsem
 ```
 
 ## Gemma integration

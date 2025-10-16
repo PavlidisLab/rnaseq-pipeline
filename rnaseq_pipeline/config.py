@@ -21,4 +21,6 @@ class rnaseq_pipeline(luigi.Config):
 
     RSEM_DIR: str = luigi.Parameter()
 
+    rsem_calculate_expression_bin: str = luigi.Parameter()
+
     SLACK_WEBHOOK_URL: Optional[str] = luigi.OptionalParameter(default=None)

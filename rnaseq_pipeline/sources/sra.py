@@ -5,25 +5,26 @@ import enum
 import gzip
 import logging
 import os
-import re
 import subprocess
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import timedelta
-from os.path import join
+from os.path import join, basename
 from typing import Optional, List
 
 import luigi
 import pandas as pd
+from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
+from bioluigi.tasks import sratoolkit, cellranger
+from bioluigi.tasks.utils import TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask
 from luigi.util import requires
 
-from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
-from bioluigi.tasks import sratoolkit
-from bioluigi.tasks.utils import TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask
 from ..config import rnaseq_pipeline
 from ..platforms import IlluminaPlatform
 from ..rnaseq_utils import SequencingFileType, detect_layout
 from ..targets import ExpirableLocalTarget, DownloadRunTarget
+from ..tenx_utils import read_sequencing_layout_from_10x_bam_header, get_fastq_filenames_for_10x_sequencing_layout, \
+    get_fastq_filename
 from ..utils import remove_task_output, RerunnableTaskMixin
 
 cfg = rnaseq_pipeline()
@@ -88,6 +89,7 @@ class SraRunMetadata:
     use_bamtofastq: bool
     # BAM file(s) to extract FASTQs from
     bam_filenames: Optional[list[str]]
+    bam_file_urls: Optional[list[str]]
     # Expected FASTQ filenames resulting from bamtofastq on the BAM file(s)
     bam_fastq_filenames: Optional[list[str]]
     # currently only available if --readTypes options were passed to the fastq-load.py loader, I'd like to know if this
@@ -205,6 +207,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                 bam_fastq_filenames = None
                 read_types = fastq_load_read_types
 
@@ -219,6 +222,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                 bam_fastq_filenames = None
                 read_types = fastq_load_read_types
 
@@ -233,6 +237,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = None
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                 bam_fastq_filenames = None
                 read_types = fastq_load_read_types
                 issues |= SraRunIssue.MISMATCHED_FASTQ_LOAD_OPTIONS
@@ -245,6 +250,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = None
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                 bam_fastq_filenames = None
                 read_types = fastq_load_read_types
 
@@ -252,7 +258,6 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
         elif sra_10x_bam_files:
             logging.info('%s: Using 10x Genomics BAM files do determine read layout.', srr)
             # we have to read the file(s), unfortunately
-            bam2fastq_pattern = re.compile('10x_bam_to_fastq:(.+)\(.+\)')
 
             if len(sra_10x_bam_files) > 1:
                 # TODO: support multiple BAM files, they must share the same read layout
@@ -260,48 +265,19 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
             bam_file = sra_10x_bam_files[0]
 
             # cache the header of the BAM file
-            bam_header_file = join(cfg.OUTPUT_DIR, sra_config.bam_headers_cache_dir, srr + '.bam-header.txt')
-            if os.path.exists(bam_header_file):
-                logging.info('%s: Using cached 10x BAM header from %s...', srr, bam_header_file)
-            else:
-                logging.info('%s: Reading header from 10x BAM file %s from %s to %s...', srr, bam_file.attrib['filename'],
-                             bam_file.attrib['url'], bam_header_file)
-                os.makedirs(os.path.dirname(bam_header_file), exist_ok=True)
-                with open(bam_header_file, 'w') as f:
-                    # FIXME: use requests
-                    # res = requests.get(bam_file.attrib['url'], stream=True)
-                    curl_proc = subprocess.Popen(['curl', bam_file.attrib['url']], stdout=subprocess.PIPE,
-                                                 stderr=subprocess.DEVNULL)
-                    try:
-                        proc = subprocess.run([sra_config.samtools_bin, 'head'],
-                                              stdin=curl_proc.stdout, stdout=f, text=True, check=True)
-                    finally:
-                        curl_proc.terminate()
+            bam_header_file = read_bam_header(srr, bam_file.attrib['filename'], bam_file.attrib['url'])
 
             # BAM may contain multiple flowcells and lanes for a given sample
-            flowcells = {}
-            bam_read_types = []
             with open(bam_header_file, 'r') as f:
-                for line in f:
-                    line = line.rstrip()
-                    tag_name, tag_value = line.split("\t", maxsplit=1)
-                    if tag_name == '@RG':
-                        tag_value_dict = {k: v for (k, v) in [t.split(':', maxsplit=1) for t in tag_value.split('\t')]}
-                        if 'PU' in tag_value_dict:
-                            *flowcell_id, lane_id = tag_value_dict['PU'].split(':')
-                            flowcell_id = '_'.join(flowcell_id)
-                            if flowcell_id not in flowcells:
-                                flowcells[flowcell_id] = []
-                            flowcells[flowcell_id].append(int(lane_id))
-                    elif tag_name == '@CO' and tag_value.startswith('user command line:'):
-                        bam_read_types = []
-                    elif tag_name == '@CO' and (m := bam2fastq_pattern.match(tag_value)):
-                        assert bam_read_types is not None
-                        read_type = SequencingFileType[m.group(1)]
-                        bam_read_types.append(read_type)
-
-            # map lanes to layouts
-            flowcells = {fc: {lane_id: bam_read_types for lane_id in lanes} for fc, lanes in flowcells.items()}
+                flowcells = read_sequencing_layout_from_10x_bam_header(f)
+                bam_read_types = None
+                for flowcell in flowcells.values():
+                    for rt in flowcell.values():
+                        if bam_read_types is None:
+                            bam_read_types = rt
+                        elif bam_read_types != rt:
+                            raise NotImplementedError(
+                                'Mixture of sequencing layouts in a single 10x BAM file are not supported.')
 
             if flowcells:
                 logging.info('%s: Detected read types from BAM file %s: %s', srr, bam_file.attrib['filename'],
@@ -320,10 +296,8 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 is_paired = False
                 use_bamtofastq = True
                 bam_filenames = [bam_file.attrib['filename']]
-                bam_fastq_filenames = [f'{flowcell}/bamtofastq_S1_L{lane:03}_{rt.name}_001.fastq.gz'
-                                       for flowcell, lanes in flowcells.items()
-                                       for lane, read_types in lanes.items()
-                                       for rt in read_types]
+                bam_file_urls = [bam_file.attrib['url']]
+                bam_fastq_filenames = get_fastq_filenames_for_10x_sequencing_layout(flowcells)
             else:
                 logging.warning('%s: Failed to detect read types from BAM file, ignoring that run.', srr)
                 issues |= SraRunIssue.INVALID_RUN
@@ -339,6 +313,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                                                  fastq_load_options=None,
                                                  use_bamtofastq=False,
                                                  bam_filenames=None,
+                                                 bam_file_urls=None,
                                                  bam_fastq_filenames=None,
                                                  layout=[],
                                                  issues=issues))
@@ -369,6 +344,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                         fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
                         use_bamtofastq = False
                         bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                        bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                         bam_fastq_filenames = None
                         read_types = None
                     else:
@@ -379,6 +355,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                         fastq_file_sizes = None
                         use_bamtofastq = False
                         bam_filenames = None
+                        bam_file_urls = None
                         bam_fastq_filenames = None
                         read_types = None
                         issues |= SraRunIssue.MISMATCHED_READ_SIZES
@@ -391,6 +368,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                     fastq_file_sizes = None
                     use_bamtofastq = False
                     bam_filenames = None
+                    bam_file_urls = None
                     bam_fastq_filenames = None
                     read_types = None
                     issues |= SraRunIssue.NO_SRA_FILES
@@ -403,6 +381,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = None
                 use_bamtofastq = False
                 bam_filenames = None
+                bam_file_urls = None
                 bam_fastq_filenames = None
                 read_types = None
                 issues |= SraRunIssue.AMBIGUOUS_READ_SIZES
@@ -417,6 +396,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
                 use_bamtofastq = False
                 bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+                bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
                 result.append(SraRunMetadata(srx, srr,
                                              is_single_end=is_single_end,
                                              is_paired=is_paired,
@@ -428,6 +408,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                                              fastq_load_options=None,
                                              use_bamtofastq=use_bamtofastq,
                                              bam_filenames=bam_filenames,
+                                             bam_file_urls=bam_file_urls,
                                              bam_fastq_filenames=None,
                                              layout=[],
                                              issues=issues))
@@ -455,10 +436,32 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                                      fastq_load_options=options if loader == 'fastq-load.py' else None,
                                      use_bamtofastq=use_bamtofastq,
                                      bam_filenames=bam_filenames,
+                                     bam_file_urls=bam_file_urls,
                                      bam_fastq_filenames=bam_fastq_filenames,
                                      layout=layout,
                                      issues=issues))
     return result
+
+def read_bam_header(srr, filename, url):
+    """Read and cache the header of a SRA BAM file."""
+    bam_header_file = join(cfg.OUTPUT_DIR, sra_config.bam_headers_cache_dir, srr + '.bam-header.txt')
+    if os.path.exists(bam_header_file):
+        logging.info('%s: Using cached 10x BAM header from %s...', srr, bam_header_file)
+    else:
+        logging.info('%s: Reading header from 10x BAM file %s from %s to %s...', srr,
+                     filename, url, bam_header_file)
+        os.makedirs(os.path.dirname(bam_header_file), exist_ok=True)
+        with open(bam_header_file, 'w') as f:
+            # FIXME: use requests
+            # res = requests.get(bam_file.attrib['url'], stream=True)
+            with subprocess.Popen(['curl', url], stdout=subprocess.PIPE,
+                                  stderr=subprocess.DEVNULL) as curl_proc:
+                try:
+                    subprocess.run([sra_config.samtools_bin, 'head'],
+                                   stdin=curl_proc.stdout, stdout=f, text=True, check=True)
+                finally:
+                    curl_proc.terminate()
+    return bam_header_file
 
 class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
     """
@@ -481,23 +484,6 @@ class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
     def output(self):
         return luigi.LocalTarget(join(sra_config.ncbi_public_dir, 'sra', f'{self.srr}.sra'))
 
-class DownloadSraFile(ScheduledExternalProgramTask):
-    """Download a SRA file."""
-    srr: str = luigi.Parameter(description='SRA run identifier')
-    filename = luigi.Parameter(description='SRA filename')
-    pass
-
-class BamToFastq(ScheduledExternalProgramTask):
-    bam_file: str = luigi.Parameter()
-    output_dir: str = luigi.Parameter()
-    layout: list[str] = luigi.ListParameter()
-
-    def program_args(self):
-        return [sra_config.bamtofastq_bin, '--nthreads', self.cpus, self.bam_file, self.output_dir]
-
-    def output(self):
-        return [luigi.LocalTarget(join(self.output_dir, ft)) for ft in self.layout]
-
 @requires(PrefetchSraRun)
 class DumpSraRun(luigi.Task):
     """
@@ -509,45 +495,101 @@ class DumpSraRun(luigi.Task):
     layout: list[str] = luigi.ListParameter(positional=False,
                                             description='Indicate the type of each output file from the run. Possible values are I1, I2, R1 and R2.')
 
-    use_bamtofastq: bool = luigi.BoolParameter(positional=False, default=False,
-                                               description='Use bamtofastq to extract FASTQs from 10x BAM files.')
-
     metadata: dict
+
+    @property
+    def output_dir(self):
+        return join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx, self.srr)
 
     def on_success(self):
         # cleanup SRA archive once dumped if it's still hanging around
-        dump_sra_run_task = self.requires()
-        remove_task_output(dump_sra_run_task)
+        prefetch_task = self.requires()
+        remove_task_output(prefetch_task)
         return super().on_success()
 
     def run(self):
-        if self.use_bamtofastq:
-            download_sra_file_task = DownloadSraFile()
-            yield download_sra_file_task
-            bamtofastq_task = BamToFastq(input_file=download_sra_file_task.output().path,
-                                         output_dir=join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx),
-                                         layout=self.layout)
-            yield bamtofastq_task
-            # rename output files to match fastq-dump output
-            for i, p in enumerate(bamtofastq_task.output()):
-                p.move(join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx), self.srr + '_' + str(i + 1) + '.fastq.gz')
-        else:
-            yield sratoolkit.FastqDump(input_file=self.input().path,
-                                       output_dir=join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx),
-                                       split='files',
-                                       number_of_reads_per_spot=len(self.layout),
-                                       metadata=self.metadata)
+        yield sratoolkit.FastqDump(input_file=self.input().path,
+                                   output_dir=self.output_dir,
+                                   split='files',
+                                   number_of_reads_per_spot=len(self.layout),
+                                   metadata=self.metadata)
         if not self.complete():
             raise RuntimeError(
                 f'{repr(self)} was not completed after successful fastq-dump execution; are the output files respecting the following layout: {self.layout}?')
 
     def output(self):
-        output_dir = join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
-        return DownloadRunTarget(self.srr, [join(output_dir, self.srr + '_' + str(i + 1) + '.fastq.gz') for i in
+        return DownloadRunTarget(self.srr, [join(self.output_dir, self.srr + '_' + str(i + 1) + '.fastq.gz') for i in
                                             range(len(self.layout))], self.layout)
 
 class EmptyRunInfoError(Exception):
     pass
+
+class DownloadSraFile(ScheduledExternalProgramTask):
+    """Download an SRA file."""
+    srr: str = luigi.Parameter(description='SRA run identifier')
+    filename: str = luigi.Parameter(description='SRA filename')
+    file_url: str = luigi.Parameter(description='SRA file URL')
+
+    scheduler_partition = 'Wormhole'
+
+    _tmp_filename: str = None
+
+    @property
+    def resources(self):
+        r = super().resources
+        r.update({'prefetch_jobs': 1})
+        return r
+
+    def run(self):
+        with self.output().temporary_path() as self._tmp_filename:
+            super().run()
+
+    def program_args(self):
+        return ['curl', self.file_url, '-o', self._tmp_filename]
+
+    def output(self):
+        return luigi.LocalTarget(join(cfg.OUTPUT_DIR, cfg.DATA, 'sra-files', self.srr, self.filename))
+
+@requires(DownloadSraFile)
+class DumpBamRun(TaskWithMetadataMixin, luigi.Task):
+    srx: str = luigi.Parameter()
+    layout: list[str] = luigi.ListParameter()
+
+    # inherited
+    srr: str
+    filename: str
+    file_url: str
+
+    _sequencing_layout = None
+
+    @property
+    def sequencing_layout(self) ->  dict[str, dict[int, list[SequencingFileType]]]:
+        if self._sequencing_layout is None:
+            with open(read_bam_header(self.srr, self.filename, self.file_url), 'r') as f:
+                self._sequencing_layout = read_sequencing_layout_from_10x_bam_header(f)
+        return self._sequencing_layout
+
+    @property
+    def output_dir(self):
+        # TODO: include the SRR identifier in the directory structure
+        return join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
+
+    def run(self):
+        yield cellranger.BamToFastq(input_file=self.input().path,
+                                    output_dir=self.output_dir,
+                                    cpus=4,
+                                    scheduler_extra_args=['--constraint', 'thrd64'])
+        if not self.complete():
+            raise RuntimeError('Expected output files from bamtofastq were not produced:\n\t' + '\n\t'.join(
+                f for rt in self.output() for f in rt.files))
+
+    def output(self):
+        return [DownloadRunTarget(run_id=f'{self.srr}_{flowcell_id}_L{lane_id:03}',
+                                  files=[join(self.output_dir, get_fastq_filename(flowcell_id, lane_id, read_type))
+                                         for read_type in lane],
+                                  layout=self.layout)
+                for flowcell_id, flowcell in self.sequencing_layout.items()
+                for lane_id, lane in flowcell.items()]
 
 def retrieve_sra_metadata(sra_accession, format='runinfo'):
     """Retrieve a SRA runinfo using search and efetch utilities"""
@@ -620,8 +662,18 @@ class DownloadSraExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         if 'sample_id' not in metadata:
             metadata['sample_id'] = self.sample_id
 
-        yield [DumpSraRun(srr=row.srr, srx=self.srx, layout=[ft.name for ft in row.layout], metadata=metadata)
-               for row in meta]
+        runs = []
+
+        for row in meta:
+            if row.use_bamtofastq:
+                for bam_file, bam_url in zip(row.bam_filenames, row.bam_file_urls):
+                    runs.append(DumpBamRun(srx=self.srx, srr=row.srr, filename=bam_file, file_url=bam_url,
+                                           layout=[ft.name for ft in row.layout], metadata=metadata))
+            else:
+                runs.append(
+                    DumpSraRun(srr=row.srr, srx=self.srx, layout=[ft.name for ft in row.layout], metadata=metadata))
+
+        yield runs
 
 class DownloadSraProjectRunInfo(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """
