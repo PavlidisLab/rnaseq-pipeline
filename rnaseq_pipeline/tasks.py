@@ -1,9 +1,10 @@
 import datetime
 import logging
 import os.path
+import shutil
 import tempfile
 import uuid
-from glob import glob
+from glob import glob, iglob
 from os import unlink, makedirs, link, symlink
 from os.path import dirname, join, basename, splitext
 
@@ -792,3 +793,29 @@ class SubmitExperimentsFromGoogleSpreadsheetToGemma(SubmitExperimentsFromDataFra
     def _retrieve_dataframe(self):
         from .gsheet import retrieve_spreadsheet
         return retrieve_spreadsheet(self.spreadsheet_id, self.sheet_name)
+
+class ReorganizeSplitExperiment(GemmaTaskMixin):
+    """Reorganize a Gemma dataset that was split."""
+
+    num_splits: int = luigi.IntParameter()
+
+    def run(self):
+        dirs_to_relocate = [
+            join(cfg.OUTPUT_DIR, 'data-trimmed'),
+            join(cfg.OUTPUT_DIR, cfg.DATAQCDIR),
+            join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, '*'),
+            join(cfg.OUTPUT_DIR, cfg.QUANTDIR, '*'),
+            join(cfg.OUTPUT_DIR, 'quantified-single-cell', '*')
+        ]
+
+        for split_id in range(self.num_splits):
+            split_id = self.experiment_id + '.' + str(split_id + 1)
+            logger.info('Reorganizing data for %s.', split_id)
+            for sample in self._gemma_api.samples(split_id):
+                sample_id = sample['accession']['accession']
+                for d in dirs_to_relocate:
+                    for sample_file in iglob(join(d, self.experiment_id, sample_id)):
+                        new_sample_file = join(dirname(dirname(sample_file)), split_id, sample_id)
+                        logger.info('Moving %s to %s.', sample_file,new_sample_file)
+                        os.makedirs(dirname(new_sample_file), exist_ok=True)
+                        shutil.move(sample_file, new_sample_file)
