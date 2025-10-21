@@ -56,8 +56,10 @@ def detect_layout(run_id: str, filenames: Optional[list[str]],
         number_of_files = len(filenames)
     elif average_read_lengths:
         number_of_files = len(average_read_lengths)
-    else:
+    elif read_types:
         number_of_files = len(read_types)
+    else:
+        raise ValueError(f'No metadata is present to infer layout for {run_id}.')
 
     # assume single-end read if only one file is present
     if number_of_files == 1:
