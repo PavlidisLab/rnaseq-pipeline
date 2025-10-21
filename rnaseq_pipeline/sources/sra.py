@@ -9,6 +9,7 @@ import subprocess
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import timedelta
+from glob import glob
 from os.path import join, basename
 from typing import Optional, List
 
@@ -579,6 +580,15 @@ class DumpBamRun(TaskWithMetadataMixin, luigi.Task):
                                     output_dir=self.output_dir,
                                     cpus=4,
                                     scheduler_extra_args=['--constraint', 'thrd64'])
+
+        # The BAM header does not indicate the last digits in the filename
+        # rename _XXX.fastq.gz to _001.fastq.gz
+        for fastq_file in glob(join(self.output_dir, '*/*.fastq.gz')):
+            if not fastq_file.endswith('_001.fastq.gz'):
+                new_name = fastq_file.rsplit('_', maxsplit=1)[0] + '_001.fastq.gz'
+                logger.info('Renaming %s to %s.', fastq_file, new_name)
+                os.rename(fastq_file, new_name)
+
         if not self.complete():
             raise RuntimeError('Expected output files from bamtofastq were not produced:\n\t' + '\n\t'.join(
                 f for rt in self.output() for f in rt.files))
