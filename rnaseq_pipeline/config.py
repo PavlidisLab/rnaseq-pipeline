@@ -15,7 +15,6 @@ class rnaseq_pipeline(luigi.Config):
     DATA: str = luigi.Parameter()
     DATAQCDIR: str = luigi.Parameter()
     ALIGNDIR: str = luigi.Parameter()
-    ALIGNQCDIR: str = luigi.Parameter()
     QUANTDIR: str = luigi.Parameter()
     BATCHINFODIR: str = luigi.Parameter()
 
