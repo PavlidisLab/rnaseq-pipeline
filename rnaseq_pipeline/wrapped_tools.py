@@ -19,6 +19,10 @@ import luigi
 from luigi.contrib.external_program import ExternalProgramRunContext
 
 class WrappedToolsConfig(luigi.Config):
+    @classmethod
+    def get_task_family(cls):
+        return 'rnaseq_pipeline.wrapped_tools'
+
     cellranger_bin: str = luigi.Parameter()
     rsem_calculate_expression_bin: str = luigi.Parameter()
 
