@@ -22,13 +22,13 @@ from luigi.util import requires
 from luigi.task import flatten
 
 from .sra import DownloadSraExperiment
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..platforms import BgiPlatform, IlluminaPlatform
 from ..targets import ExpirableLocalTarget
 from ..utils import RerunnableTaskMixin
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 logger = logging.getLogger(__name__)
 

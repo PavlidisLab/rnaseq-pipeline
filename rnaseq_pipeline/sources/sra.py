@@ -20,7 +20,7 @@ from bioluigi.tasks import sratoolkit, cellranger
 from bioluigi.tasks.utils import TaskWithMetadataMixin, DynamicTaskWithOutputMixin, DynamicWrapperTask
 from luigi.util import requires
 
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..platforms import IlluminaPlatform
 from ..rnaseq_utils import SequencingFileType, detect_layout
 from ..targets import ExpirableLocalTarget, DownloadRunTarget
@@ -28,18 +28,23 @@ from ..tenx_utils import read_sequencing_layout_from_10x_bam_header, get_fastq_f
     get_fastq_filename
 from ..utils import remove_task_output, RerunnableTaskMixin
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 logger = logging.getLogger(__name__)
 
-class sra(luigi.Config):
-    task_namespace = 'rnaseq_pipeline.sources'
-    ncbi_public_dir: str = luigi.Parameter()
-    samtools_bin: str = luigi.Parameter()
-    bamtofastq_bin: str = luigi.Parameter()
-    bam_headers_cache_dir: str = luigi.Parameter()
+class SraConfig(luigi.Config):
+    @classmethod
+    def get_task_family(cls):
+        return 'rnaseq_pipeline.sources.sra'
 
-sra_config = sra()
+    ncbi_public_dir: str = luigi.Parameter(description='Path to the NCBI public directory.')
+    curl_bin: str = luigi.Parameter(default='curl')
+    samtools_bin: str = luigi.Parameter(default='samtools')
+    bamtofastq_bin: str = luigi.Parameter(default='bamtofastq')
+    bam_headers_cache_dir: str = luigi.Parameter(default='bam_headers',
+                                                 description='Directory where to store BAM file headers downloaded from SRA files.')
+
+sra_config = SraConfig()
 
 # columns to use when a runinfo file lacks a header
 SRA_RUNINFO_COLUMNS = ['Run', 'ReleaseDate', 'LoadDate', 'spots', 'bases', 'spots_with_mates', 'avgLength', 'size_MB',
@@ -189,6 +194,13 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
             number_of_spots = int(statistics.attrib['nreads']) if statistics.attrib['nreads'] != 'variable' else None
             reads = sorted(statistics.findall('Read'), key=lambda r: int(r.attrib['index']))
             spot_read_lengths = [float(r.attrib['average']) for r in reads]
+            # check for zero-length reads, perform traversal in reverse order to preserve indices
+            for i, srl in reversed(list(enumerate(spot_read_lengths))):
+                if srl == 0:
+                    logger.warning('%s: Empty read for position %d in spot, will ignore it.', srr, i + 1)
+                    number_of_spots -= 1
+                    reads.pop(i)
+                    spot_read_lengths.pop(i)
         else:
             logger.warning(
                 '%s: No spot statistics found, cannot use the average read lengths to determine the order of the FASTQ files.',
@@ -455,7 +467,7 @@ def read_bam_header(srr, filename, url):
         with open(bam_header_file, 'w') as f:
             # FIXME: use requests
             # res = requests.get(bam_file.attrib['url'], stream=True)
-            with subprocess.Popen(['curl', url], stdout=subprocess.PIPE,
+            with subprocess.Popen([sra_config.curl_bin, url], stdout=subprocess.PIPE,
                                   stderr=subprocess.DEVNULL) as curl_proc:
                 try:
                     subprocess.run([sra_config.samtools_bin, 'head'],
@@ -512,7 +524,6 @@ class DumpSraRun(luigi.Task):
         yield sratoolkit.FastqDump(input_file=self.input().path,
                                    output_dir=self.output_dir,
                                    split='files',
-                                   number_of_reads_per_spot=len(self.layout),
                                    metadata=self.metadata)
         if not self.complete():
             raise RuntimeError(
@@ -564,7 +575,7 @@ class DumpBamRun(TaskWithMetadataMixin, luigi.Task):
     _sequencing_layout = None
 
     @property
-    def sequencing_layout(self) ->  dict[str, dict[int, list[SequencingFileType]]]:
+    def sequencing_layout(self) -> dict[str, dict[int, list[SequencingFileType]]]:
         if self._sequencing_layout is None:
             with open(read_bam_header(self.srr, self.filename, self.file_url), 'r') as f:
                 self._sequencing_layout = read_sequencing_layout_from_10x_bam_header(f)

@@ -9,12 +9,12 @@ import pandas as pd
 from bioluigi.tasks.utils import TaskWithOutputMixin
 from luigi.task import WrapperTask
 
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..platforms import IlluminaPlatform
 from ..rnaseq_utils import detect_layout
 from ..targets import DownloadRunTarget
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 @lru_cache()
 def retrieve_metadata(experiment_id):

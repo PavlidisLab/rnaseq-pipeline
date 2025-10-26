@@ -189,8 +189,7 @@ def test_read_xml_metadata_GSE104493():
     """This dataset has I1 reads with zero length"""
     meta = read_xml_metadata(join(test_data_dir, 'GSE104493.xml'))
     for run in meta:
-        assert run.layout == [I1, R1]
-        assert run.average_read_lengths[0] == 0.0
+        assert run.layout == [R1]
 
 def test_read_xml_metadata_GSE125536():
     """This dataset does not have SRAFile entries, but it has fastq-load.py inputs which can be used as a fallback."""
@@ -202,7 +201,7 @@ def test_read_xml_metadata_GSE128117():
     """This dataset has a sample with 3 reads (R1, R2, R3) and an index (I1)."""
     meta = read_xml_metadata(join(test_data_dir, 'GSE128117.xml'))
     for run in meta:
-        assert run.layout == [R1, I1]
+        assert run.layout == [R1]
 
 def test_read_xml_metadata_SRX26261721():
     meta = read_xml_metadata(join(test_data_dir, 'SRX26261721.xml'))
@@ -283,7 +282,7 @@ def test_SRX17676975():
 
 def test_GSE271769():
     runs = read_xml_metadata(join(test_data_dir, 'GSE271769.xml'))
-    assert len(runs) == 9
+    assert len(runs) == 16
 
     task = DownloadSraExperiment(srx='SRX25247848')
     task.run()
@@ -295,6 +294,11 @@ def test_SRX25247847():
 def test_SRX26528278():
     runs = read_xml_metadata(join(test_data_dir, 'SRX26528278.xml'))
     assert len(runs) == 1
+
+def test_SRR14827398():
+    runs = read_xml_metadata(join(test_data_dir, 'SRR14827398.xml'))
+    for run in runs:
+        assert run.layout == [R1]
 
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))

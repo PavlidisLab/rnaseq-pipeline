@@ -4,10 +4,10 @@ from os.path import join, basename
 import luigi
 from bioluigi.tasks.utils import TaskWithOutputMixin
 
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..platforms import IlluminaPlatform, BgiPlatform, IlluminaNexteraPlatform, TaskWithPlatformMixin
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 class DownloadLocalSample(TaskWithPlatformMixin, luigi.Task):
     """

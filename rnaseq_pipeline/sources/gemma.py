@@ -5,12 +5,12 @@ import luigi
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..gemma import GemmaApi
 
 logger = logging.getLogger(__name__)
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """

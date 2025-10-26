@@ -6,14 +6,14 @@ import luigi
 import pandas as pd
 from flask import Flask, send_file, render_template, abort
 
-from rnaseq_pipeline.config import rnaseq_pipeline
+from rnaseq_pipeline.config import Config
 from rnaseq_pipeline.gemma import GemmaTaskMixin
 from rnaseq_pipeline.tasks import GenerateReportForExperiment, CountExperiment, SubmitExperimentDataToGemma, \
     SubmitExperimentBatchInfoToGemma
 
 app = Flask('rnaseq_pipeline.webviewer')
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 references = ['hg38_ncbi', 'mm10_ncbi', 'm6_ncbi']
 

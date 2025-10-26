@@ -4,6 +4,7 @@ import os
 import subprocess
 from getpass import getpass
 from os.path import join
+from typing import Optional
 
 import luigi
 import requests
@@ -12,13 +13,16 @@ from requests.auth import HTTPBasicAuth
 
 logger = logging.getLogger(__name__)
 
-class gemma(luigi.Config):
-    task_namespace = 'rnaseq_pipeline'
-    baseurl: str = luigi.Parameter()
-    appdata_dir: str = luigi.Parameter()
-    cli_bin: str = luigi.Parameter()
-    cli_JAVA_HOME: str = luigi.Parameter()
-    cli_JAVA_OPTS: str = luigi.Parameter()
+class GemmaConfig(luigi.Config):
+    @classmethod
+    def get_task_family(cls):
+        return 'rnaseq_pipeline.gemma'
+
+    baseurl: str = luigi.Parameter(default='https://gemma.msl.ubc.ca', description='Base URL for Gemma')
+    appdata_dir: str = luigi.Parameter(description='Directory where Gemma data is stored')
+    cli_bin: str = luigi.Parameter(default='gemma-cli', description='Gemma CLI tool name')
+    cli_JAVA_HOME: Optional[str] = luigi.Parameter(default=None, description='Override $JAVA_HOME for the Gemma CLI')
+    cli_JAVA_OPTS: Optional[str] = luigi.Parameter(default=None, description='Override $JAVA_OPTS for the Gemma CLI')
     human_reference_id: str = luigi.Parameter()
     mouse_reference_id: str = luigi.Parameter()
     rat_reference_id: str = luigi.Parameter()
@@ -26,7 +30,7 @@ class gemma(luigi.Config):
     mouse_single_cell_reference_id: str = luigi.Parameter()
     rat_single_cell_reference_id: str = luigi.Parameter()
 
-cfg = gemma()
+cfg = GemmaConfig()
 
 class GemmaApi:
     def __init__(self):
@@ -103,17 +107,15 @@ class GemmaTaskMixin(luigi.Task):
     @property
     def reference_id(self):
         try:
-            return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[
+            if self.assay_type == GemmaAssayType.BULK_RNA_SEQ:
+                return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[
                 self.taxon]
-        except KeyError:
-            raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
-
-    @property
-    def single_cell_reference_id(self):
-        try:
-            return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id,
-                    'rat': cfg.rat_single_cell_reference_id}[
-                self.taxon]
+            elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
+                return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id,
+                        'rat': cfg.rat_single_cell_reference_id}[
+                    self.taxon]
+            else:
+                raise NotImplementedError
         except KeyError:
             raise ValueError('Unsupported Gemma taxon {}.'.format(self.taxon))
 
@@ -179,8 +181,10 @@ class GemmaCliTask(GemmaTaskMixin, ExternalProgramTask):
 
     def program_environment(self):
         env = super().program_environment()
-        env['JAVA_HOME'] = cfg.cli_JAVA_HOME
-        env['JAVA_OPTS'] = cfg.cli_JAVA_OPTS
+        if cfg.cli_JAVA_HOME:
+            env['JAVA_HOME'] = cfg.cli_JAVA_HOME
+        if cfg.cli_JAVA_OPTS:
+            env['JAVA_OPTS'] = cfg.cli_JAVA_OPTS
         return env
 
     def program_args(self):

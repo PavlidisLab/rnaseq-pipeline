@@ -74,19 +74,20 @@ def subprocess_run(args, **kwargs):
 def rsem_calculate_expression_wrapper():
     """Wrapper script for RSEM that copies the reference to a local temporary directory."""
     args = sys.argv.copy()
-    args[0] = cfg.rsem_calculate_expression_bin
+    # execv expects an absolute path
+    args[0] = shutil.which(cfg.rsem_calculate_expression_bin)
     if len(args) > 2 and os.path.isdir(args[-2]):
         # copy the reference to local scratch
         ref_dir = args[-2]
         new_dir, lockfile = copy_directory_to_local_scratch(ref_dir)
         args[-2] = new_dir
         with lockf(lockfile) as f:
-            print('Final command: ' + ' '.join(args))
+            print('Final command: ' + ' '.join(args), flush=True)
             os.set_inheritable(f.fileno(), True)
-            os.execv(args[0], args[1:])
+            os.execv(args[0], args)
     else:
-        print('Final command: ' + ' '.join(args))
-        os.execv(args[0], args[1:])
+        print('Final command: ' + ' '.join(args), flush=True)
+        os.execv(args[0], args)
 
 def cellranger_wrapper():
     args = sys.argv.copy()

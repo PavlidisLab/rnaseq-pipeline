@@ -21,8 +21,8 @@ from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.cellranger import CellRangerCount
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 from bioluigi.tasks.utils import TaskWithOutputMixin
-from rnaseq_pipeline.config import rnaseq_pipeline
-from .gemma import GemmaAssayType, GemmaTaskMixin, gemma
+from rnaseq_pipeline.config import Config
+from .gemma import GemmaAssayType, GemmaTaskMixin, GemmaConfig
 from .gemma import GemmaCliTask
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .sources.gemma import DownloadGemmaExperiment
@@ -39,8 +39,8 @@ from .utils import remove_task_output
 
 logger = logging.getLogger(__name__)
 
-cfg = rnaseq_pipeline()
-gemma_cfg = gemma()
+cfg = Config()
+gemma_cfg = GemmaConfig()
 
 class DownloadSample(TaskWithOutputMixin, luigi.WrapperTask):
     """
@@ -326,10 +326,10 @@ class AlignSample(ScheduledExternalProgramTask):
         reverse_reads = []
         for run in runs:
             if len(run) == 2:
-                forward_reads.append(run[0])
-                reverse_reads.append(run[1])
+                forward_reads.append(run[0].path)
+                reverse_reads.append(run[1].path)
             elif len(run) == 1:
-                forward_reads.append(run[0])
+                forward_reads.append(run[0].path)
             else:
                 raise NotImplementedError("Only single or paired-end sequencing is supported.")
 
@@ -400,11 +400,19 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
         search_dirs.update(dirname(out.path) for out in flatten(qc_sample_dirs)),
         search_dirs.update(dirname(out.path) for out in flatten(align_sample_dirs))
         self.output().makedirs()
-        sample_names_file = join(dirname(self.output().path), 'sample_names.tsv')
+        # we used to write the sample_names.tsv file inside the directory, but that is not working anymore since writing
+        # MultiQC report now uses atomic write
+        sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id + '.sample_names.tsv')
         with open(sample_names_file, 'w') as out:
+            for sample_trim_dirs in trim_sample_dirs:
+                for lane_trim in sample_trim_dirs:
+                    run_id = '___'.join(basename(lt.path).removesuffix('.fastq.gz')
+                                        for lt in lane_trim)
+                    sample_id = basename(dirname(dirname(lane_trim[0].path)))
+                    out.write(f'{run_id}\t{sample_id}_{run_id}\n')
             for lane_qc in flatten(qc_sample_dirs):
                 run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
-                sample_id = basename(dirname(lane_qc.path))
+                sample_id = basename(dirname(dirname(dirname(lane_qc.path))))
                 out.write(f'{run_id}\t{sample_id}_{run_id}\n')
         yield multiqc.GenerateReport(input_dirs=search_dirs,
                                      output_dir=dirname(self.output().path),
@@ -546,9 +554,15 @@ class GenerateReportForSingleCellExperiment(RerunnableTaskMixin, luigi.Task):
         sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id + '.sample_names.tsv')
         os.makedirs(dirname(sample_names_file), exist_ok=True)
         with open(sample_names_file, 'w') as out:
+            for sample_trim_dirs in trim_sample_dirs:
+                for lane_trim in sample_trim_dirs:
+                    run_id = '___'.join(basename(lt.path).removesuffix('.fastq.gz')
+                                        for lt in lane_trim)
+                    sample_id = basename(dirname(dirname(lane_trim[0].path)))
+                    out.write(f'{run_id}\t{sample_id}_{run_id}\n')
             for lane_qc in flatten(qc_sample_dirs):
                 run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
-                sample_id = basename(dirname(lane_qc.path))
+                sample_id = basename(dirname(dirname(dirname(lane_qc.path))))
                 out.write(f'{run_id}\t{sample_id}_{run_id}\n')
 
         yield multiqc.GenerateReport(input_dirs=search_dirs,
@@ -599,7 +613,7 @@ class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
 
     def requires(self):
         return AlignSingleCellExperiment(experiment_id=self.experiment_id,
-                                         reference_id=self.single_cell_reference_id,
+                                         reference_id=self.reference_id,
                                          source='gemma')
 
     def subcommand_args(self):
@@ -683,7 +697,7 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
                                                rerun=self.rerun)
         elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
             return GenerateReportForSingleCellExperiment(self.experiment_id,
-                                                         reference_id=self.single_cell_reference_id,
+                                                         reference_id=self.reference_id,
                                                          source='gemma',
                                                          rerun=self.rerun)
         else:
@@ -816,6 +830,6 @@ class ReorganizeSplitExperiment(GemmaTaskMixin):
                 for d in dirs_to_relocate:
                     for sample_file in iglob(join(d, self.experiment_id, sample_id)):
                         new_sample_file = join(dirname(dirname(sample_file)), split_id, sample_id)
-                        logger.info('Moving %s to %s.', sample_file,new_sample_file)
+                        logger.info('Moving %s to %s.', sample_file, new_sample_file)
                         os.makedirs(dirname(new_sample_file), exist_ok=True)
                         shutil.move(sample_file, new_sample_file)

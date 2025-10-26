@@ -4,7 +4,7 @@ from rnaseq_pipeline.gemma import GemmaTaskMixin
 from rnaseq_pipeline.sources.geo import match_geo_platform
 from rnaseq_pipeline.tasks import *
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
 def test_illumina_platform():
     plt = match_geo_platform('GPL29601')
