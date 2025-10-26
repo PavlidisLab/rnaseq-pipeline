@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM5387188" accession="SRX11156992">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX11156992</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM5387188: WT_4_bulkRNA; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP324250" refname="GSE178296">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP324250</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS9218497">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS9218497</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM5387188</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <SINGLE/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice brain hemispheres (without cerebellum and olfactory bulb) were enzymatically and mechanically dissociated using Miltenyi adult brain dissociation kit under 37 °C for 30 min. Dissociated tissue suspensions were purified with Miltenyi RBC lysis and debris removal reagents. The acquired single-cell suspensions were stained by CD11b beads and passed through the Miltenyi magnetic field for microglia cell enrichment. Further, total RNA was extracted from sorted microglia cells using the RNeasy Micro kit (Qiagen). mRNA libraries were prepared using illumina TruSeq protocol and sequenced by illumina HiSeq 4000</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>305387188</ID>
+            <LABEL>GSM5387188</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM5387188</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE178296" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA1245604">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1245604</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE178296</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE178296" accession="SRP324250">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP324250</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA738380</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE178296</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Transcriptome profiling of mouse brain microglia in Cnp null mice with 5xFAD background</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Alzheimer's disease (AD) is the most common form of dementia and neurodegenerative disease with increasing prevalence due to longer lifespan in the human population. Why aging constitutes the greatest risk factor for development of AD, however, remains poorly understood. Aging markedly affects oligodendrocytes and the structural integrity of their myelin sheaths which also causes secondary tissue inflammation. We propose a mechanistic link between aging-associated myelin dysfunction and the deposition of Amyloid-ß (Aß) as primary neuropathological hallmark of early AD and hypothesized that breakdown of myelin - especially in cortical regions – is an upstream driver of amyloid deposition in AD. Here, we show that in transgenic mouse models of AD, genetically induced myelin defects by Cnp or Plp1 depletion, as well as direct demyelination are potent drivers of amyloid deposition in vivo as shown by light sheet microscopy imaging. At transcriptomic level, bulk and single-cell RNA sequencing revealed successfully induced disease-associated-microglia (DAM)-like phenotypes in Cnp-/- animals. These activated microglia, however, are primarily engaged with myelin seemingly preventing the protective reactions of the microglia pool to Aß plaques. Our work, therefore, identifies myelin aging as a previously overlooked risk factor for AD and makes the case for myelin health-directed therapies in AD. Overall design: Microglia cells from 6-month-old mouse brain hemispheres were isolated using the MACS sorting system and subjected to 50 bp single-end mRNA sequencing. Each genotype has n=4 replicates, in total 4 genotypes were included for experiment (WT, Cnp-/-, 5xFAD, Cnp-/-x5xFAD).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE178296</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>37258678</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+      <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+          <TAG>parent_bioproject</TAG>
+          <VALUE>PRJNA738456</VALUE>
+        </STUDY_ATTRIBUTE>
+      </STUDY_ATTRIBUTES>
+    </STUDY>
+    <SAMPLE alias="GSM5387188" accession="SRS9218497">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS9218497</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN19728218</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM5387188</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT_4_bulkRNA</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>738380</ID>
+            <LABEL>PRJNA738380</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL6/J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>6-month</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>Microglia</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>mouse model</TAG>
+          <VALUE>Alzheimer's disease (AD)</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS9218497" sample_name="GSM5387188" sample_title="WT_4_bulkRNA" spots="28912162" bases="1457850109" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS9218497</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN19728218</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM5387188</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="1457850109" spots="28912162" bytes="571337137">
+      <RUN alias="GSM5387188_r1" accession="SRR14827398" total_spots="28912162" total_bases="1457850109" size="571337137" load_done="true" published="2023-03-20 16:02:58" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR14827398</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM5387188_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX11156992" refname="GSM5387188"/>
+        <Pool>
+          <Member member_name="" accession="SRS9218497" sample_name="GSM5387188" sample_title="WT_4_bulkRNA" spots="28912162" bases="1457850109" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS9218497</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN19728218</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM5387188</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="p833s4_Nave_S45_L005_R1_001.fastq.gz" size="950887003" date="2021-06-16 13:11:45" md5="b54bcf8723bd1c03628facd11ca967b4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR14827398/p833s4_Nave_S45_L005_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14827398" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14827398/SRR14827398" size="571339257" date="2021-06-16 13:12:10" md5="f6c81931c2dce9c198b8ac6be461689c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR14827398/SRR14827398" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR14827398.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14827/SRR14827398/SRR14827398.lite.1" size="397384629" date="2022-10-15 12:31:14" md5="7df3922a1bbcf11fa41a4294dda9ad3f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR014/14827/SRR14827398/SRR14827398.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-4/SRR14827398/SRR14827398.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-108/SRR14827398/SRR14827398.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="28912162">
+          <Read index="0" count="28912162" average="50.42" stdev="1.55"/>
+          <Read index="1" count="0" average="0" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="28912162"/>
+                <Elements count="1457850109"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="1457850109">
+          <Base value="A" count="338284112"/>
+          <Base value="C" count="381992877"/>
+          <Base value="G" count="374606374"/>
+          <Base value="T" count="355293632"/>
+          <Base value="N" count="7673114"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>
