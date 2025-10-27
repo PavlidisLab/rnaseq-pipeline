@@ -31,9 +31,8 @@ from .sources.geo import ExtractGeoSeriesBatchInfo
 from .sources.local import DownloadLocalSample, DownloadLocalExperiment
 from .sources.sra import DownloadSraProject, DownloadSraExperiment
 from .sources.sra import ExtractSraProjectBatchInfo
-from .targets import GemmaDatasetHasBatch
-from .targets import GemmaDatasetPlatform
-from .targets import RsemReference
+from .targets import GemmaDatasetHasBatch, GemmaDatasetQuantitationType, GemmaDataVectorType, \
+    RsemReference
 from .utils import RerunnableTaskMixin, no_retry
 from .utils import remove_task_output
 
@@ -604,7 +603,9 @@ class SubmitBulkExperimentDataToGemma(RerunnableTaskMixin, GemmaCliTask):
                 '-rpkm', fpkm.path]
 
     def output(self):
-        return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
+        # there is also a log2cpm, but it is computed by Gemma
+        return [GemmaDatasetQuantitationType(self.experiment_id, 'Counts', vector_type=GemmaDataVectorType.RAW),
+                GemmaDatasetQuantitationType(self.experiment_id, 'RPKM', vector_type=GemmaDataVectorType.RAW)]
 
 class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
     subcommand = 'loadSingleCellData'
@@ -642,7 +643,7 @@ class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
             super().run()
 
     def output(self):
-        return GemmaDatasetPlatform(self.experiment_id, self.platform_short_name)
+        return GemmaDatasetQuantitationType(self.experiment_id, '10x MEX', vector_type=GemmaDataVectorType.SINGLE_CELL)
 
 class SubmitExperimentDataToGemma(GemmaTaskMixin, WrapperTask):
     def requires(self):

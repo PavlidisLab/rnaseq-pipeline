@@ -1,3 +1,4 @@
+import enum
 import logging
 import shutil
 from datetime import timedelta
@@ -29,23 +30,39 @@ class RsemReference(luigi.Target):
         return all(exists(self.prefix + '.' + ext)
                    for ext in exts)
 
-class GemmaDatasetPlatform(luigi.Target):
-    """
-    Represents a platform associated to a Gemma dataset.
-    """
+class GemmaDataVectorType(enum.StrEnum):
+    """Data vector types in Gemma"""
+    RAW = 'ubic.gemma.model.expression.bioAssayData.RawExpressionDataVector'
+    SINGLE_CELL = 'ubic.gemma.model.expression.bioAssayData.SingleCellExpressionDataVector'
+    PROCESSED = 'ubic.gemma.model.expression.bioAssayData.ProcessedExpressionDataVector'
 
-    def __init__(self, dataset_short_name, platform):
-        self.dataset_short_name = dataset_short_name
-        self.platform = platform
+class GemmaDatasetQuantitationType(luigi.Target):
+    """Represents a quantitation type associated to a Gemma dataset."""
+
+    def __init__(self,
+                 dataset: int | str,
+                 quantitation_type: Optional[int | str] = None,
+                 vector_type: Optional[GemmaDataVectorType] = None):
+        """
+        :param dataset: The dataset identifier to lookup (either ID or short name)
+        :param quantitation_type: The identifier of the quantitation type (either name or ID) or the preferred one of
+        set to None.
+        :param vector_type: The type of vector to consider, or any if set to None.
+        """
+        self.dataset = dataset
+        self.quantitation_type = quantitation_type
+        self.vector_type = vector_type
         self._gemma_api = GemmaApi()
 
     def exists(self):
-        # any platform associated must match
-        return any(platform['shortName'] == self.platform
-                   for platform in self._gemma_api.platforms(self.dataset_short_name))
+        return any(
+            (quantitation_type['id'] == self.quantitation_type or quantitation_type['name'] == self.quantitation_type
+             if self.quantitation_type else quantitation_type['isPreferred'])
+            and (quantitation_type['vectorType'] == self.vector_type.value if self.vector_type else True)
+            for quantitation_type in self._gemma_api.quantitation_types(self.dataset))
 
     def __repr__(self):
-        return f'GemmaDatasetPlatform(dataset_short_name={self.dataset_short_name}, platform={self.platform})'
+        return f'GemmaDatasetQuantitationType(dataset={self.dataset}, quantitation_type={self.quantitation_type}, vector_type={self.vector_type})'
 
 class GemmaDatasetHasBatch(luigi.Target):
     """

@@ -68,6 +68,9 @@ class GemmaApi:
     def platforms(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'platforms'))
 
+    def quantitation_types(self, experiment_id):
+        return self._query_api(join('datasets', experiment_id, 'quantitationTypes'))
+
 class GemmaTaskMixin(luigi.Task):
     experiment_id = luigi.Parameter()
 
