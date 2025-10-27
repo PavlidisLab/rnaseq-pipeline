@@ -587,8 +587,7 @@ class DumpBamRun(TaskWithMetadataMixin, luigi.Task):
 
     @property
     def output_dir(self):
-        # TODO: include the SRR identifier in the directory structure
-        return join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx)
+        return join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx, self.srr)
 
     def run(self):
         yield cellranger.BamToFastq(input_file=self.input().path,
