@@ -1,7 +1,9 @@
 import logging
+import shutil
 from datetime import timedelta
 from os.path import join, exists, getctime, getmtime
 from time import time
+from typing import Optional
 
 import luigi
 
@@ -92,28 +94,45 @@ class DownloadRunTarget(luigi.Target):
     run_id: str
     files: list[str]
     layout: list[str]
+    output_dir: Optional[str]
 
     _targets: list[luigi.LocalTarget]
 
-    def __init__(self, run_id, files, layout):
+    def __init__(self, run_id, files, layout, output_dir=None):
+        """
+        :param run_id: A run identifier
+        :param files:  The output files of a run (e.g. R1.fastq.gz, R2.fastq.gz)
+        :param layout: The layout of the files (e.g. R1, R2, L1, L2, but also R3, R4, etc.)
+        :param output_dir: Directory in which all the files from the run are organized. If this is specified, remove()
+        will remove the directory instead of removing each target individually.
+        """
         if len(files) != len(layout):
             raise ValueError('The number of files must match the layout.')
         self.run_id = run_id
         self.files = files
         self.layout = layout
+        self.output_dir = output_dir
         self._targets = [luigi.LocalTarget(f) for f in files]
 
     def exists(self):
         return all(t.exists() for t in self._targets)
 
     def remove(self):
-        for t in self._targets:
-            if t.exists():
+        if self.output_dir:
+            if os.path.exists(self.output_dir):
                 try:
-                    t.remove()
-                    logger.info('Removed %s.', repr(t))
-                except:
-                    logger.exception('Failed to remove %s.', repr(t))
+                    shutil.rmtree(self.output_dir)
+                    logger.info('Removed %s.', self.output_dir)
+                except OSError:
+                    logger.exception('Failed to remove %s.', self.output_dir)
+        else:
+            for t in self._targets:
+                if t.exists():
+                    try:
+                        t.remove()
+                        logger.info('Removed %s.', repr(t))
+                    except OSError:
+                        logger.exception('Failed to remove %s.', repr(t))
 
     def __repr__(self):
         return f"DownloadRunTarget(run_id={self.run_id}, files={self.files}, layout={'|'.join(self.layout)})"

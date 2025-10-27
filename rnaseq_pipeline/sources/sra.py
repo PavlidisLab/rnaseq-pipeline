@@ -526,12 +526,16 @@ class DumpSraRun(luigi.Task):
                                    split='files',
                                    metadata=self.metadata)
         if not self.complete():
+            files = '\n\t'.join(glob(join(self.output_dir, '*.fastq.gz')))
             raise RuntimeError(
-                f'{repr(self)} was not completed after successful fastq-dump execution; are the output files respecting the following layout: {self.layout}?')
+                f'{repr(self)} was not completed after successful fastq-dump execution; are the output files respecting the following layout: {self.layout}?\n\t{files}')
 
     def output(self):
-        return DownloadRunTarget(self.srr, [join(self.output_dir, self.srr + '_' + str(i + 1) + '.fastq.gz') for i in
-                                            range(len(self.layout))], self.layout)
+        return DownloadRunTarget(run_id=self.srr,
+                                 files=[join(self.output_dir, self.srr + '_' + str(i + 1) + '.fastq.gz') for i in
+                                            range(len(self.layout))],
+                                 layout=self.layout,
+                                 output_dir=self.output_dir)
 
 class EmptyRunInfoError(Exception):
     pass
@@ -608,7 +612,8 @@ class DumpBamRun(TaskWithMetadataMixin, luigi.Task):
         return [DownloadRunTarget(run_id=f'{self.srr}_{flowcell_id}_L{lane_id:03}',
                                   files=[join(self.output_dir, get_fastq_filename(flowcell_id, lane_id, read_type))
                                          for read_type in lane],
-                                  layout=self.layout)
+                                  layout=self.layout,
+                                  output_dir=self.output_dir)
                 for flowcell_id, flowcell in self.sequencing_layout.items()
                 for lane_id, lane in flowcell.items()]
 
