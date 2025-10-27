@@ -505,7 +505,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
 
     def output(self):
         return luigi.LocalTarget(
-            join(cfg.OUTPUT_DIR, 'quantified-single-cell', self.reference_id, self.experiment_id, self.sample_id))
+            join(cfg.OUTPUT_DIR, cfg.QUANT_SINGLE_CELL_DIR, self.reference_id, self.experiment_id, self.sample_id))
 
 @requires(DownloadExperiment)
 class OrganizeSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -819,7 +819,7 @@ class ReorganizeSplitExperiment(GemmaTaskMixin):
             join(cfg.OUTPUT_DIR, cfg.DATAQCDIR),
             join(cfg.OUTPUT_DIR, cfg.ALIGNDIR, '*'),
             join(cfg.OUTPUT_DIR, cfg.QUANTDIR, '*'),
-            join(cfg.OUTPUT_DIR, 'quantified-single-cell', '*')
+            join(cfg.OUTPUT_DIR, cfg.QUANT_SINGLE_CELL_DIR, '*')
         ]
 
         for split_id in range(self.num_splits):

@@ -25,7 +25,7 @@ jobs:
         make -C scripts
     - name: Configure the pipeline
       run: |
-        cp example.luigi.cfg luigi.cfg
+        cp tests/luigi.cfg ./
     - name: Test with pytest
       run: |
         conda install pytest

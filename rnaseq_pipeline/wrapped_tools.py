@@ -23,8 +23,8 @@ class WrappedToolsConfig(luigi.Config):
     def get_task_family(cls):
         return 'rnaseq_pipeline.wrapped_tools'
 
-    cellranger_bin: str = luigi.Parameter()
-    rsem_calculate_expression_bin: str = luigi.Parameter()
+    cellranger_bin: str = luigi.Parameter(default='cellranger')
+    rsem_calculate_expression_bin: str = luigi.Parameter(default='contrib/RSEM/rsem-calculate-expression')
 
 cfg = WrappedToolsConfig()
 

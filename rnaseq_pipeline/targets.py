@@ -45,7 +45,7 @@ class GemmaDatasetPlatform(luigi.Target):
                    for platform in self._gemma_api.platforms(self.dataset_short_name))
 
     def __repr__(self):
-        return 'GemmaDatasetPlatform(dataset_short_name={}, platform={})'.format(self.dataset_short_name, self.platform)
+        return f'GemmaDatasetPlatform(dataset_short_name={self.dataset_short_name}, platform={self.platform})'
 
 class GemmaDatasetHasBatch(luigi.Target):
     """
@@ -72,23 +72,29 @@ class ExpirableLocalTarget(luigi.LocalTarget):
     `use_mtime` parameter to use the modification time instead.
     """
 
-    def __init__(self, path, ttl, use_mtime=False, format=None):
-        super().__init__(path, format=format)
+    ttl: timedelta
+    use_mtime: bool
+
+    def __init__(self, path, ttl, use_mtime=False, **kwargs):
+        super().__init__(path, **kwargs)
         if not isinstance(ttl, timedelta):
-            self._ttl = timedelta(seconds=ttl)
+            self.ttl = timedelta(seconds=ttl)
         else:
-            self._ttl = ttl
-        self._use_mtime = use_mtime
+            self.ttl = ttl
+        self.use_mtime = use_mtime
 
     def is_stale(self):
         try:
-            creation_time = getmtime(self.path) if self._use_mtime else getctime(self.path)
+            creation_time = getmtime(self.path) if self.use_mtime else getctime(self.path)
         except OSError:
             return False  # file is missing, assume non-stale
-        return creation_time + self._ttl.total_seconds() < time()
+        return creation_time + self.ttl.total_seconds() < time()
 
     def exists(self):
         return super().exists() and not self.is_stale()
+
+    def __repr__(self):
+        return f'ExpirableLocalTarget(path={self.path}, format={self.format}, fs={self.fs}, ttl={self.ttl}, use_mtime={self.use_mtime})'
 
 class DownloadRunTarget(luigi.Target):
     run_id: str
@@ -119,7 +125,7 @@ class DownloadRunTarget(luigi.Target):
 
     def remove(self):
         if self.output_dir:
-            if os.path.exists(self.output_dir):
+            if exists(self.output_dir):
                 try:
                     shutil.rmtree(self.output_dir)
                     logger.info('Removed %s.', self.output_dir)

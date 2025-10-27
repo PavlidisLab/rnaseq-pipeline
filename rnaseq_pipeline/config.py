@@ -8,9 +8,9 @@ class Config(luigi.Config):
     def get_task_family(cls):
         return 'rnaseq_pipeline'
 
-    GENOMES: str = luigi.Parameter()
+    OUTPUT_DIR: str = luigi.Parameter(default='pipeline-output')
 
-    OUTPUT_DIR: str = luigi.Parameter(default='genomes')
+    GENOMES: str = luigi.Parameter(default='genomes')
     REFERENCES: str = luigi.Parameter(default='references')
     SINGLE_CELL_REFERENCES: str = luigi.Parameter(default='references-single-cell')
     METADATA: str = luigi.Parameter(default='metadata')
@@ -18,6 +18,7 @@ class Config(luigi.Config):
     DATAQCDIR: str = luigi.Parameter(default='data-qc')
     ALIGNDIR: str = luigi.Parameter(default='aligned')
     QUANTDIR: str = luigi.Parameter(default='quantified')
+    QUANT_SINGLE_CELL_DIR: str = luigi.Parameter(default='quantified-single-cell')
     BATCHINFODIR: str = luigi.Parameter(default='batch-info')
 
     RSEM_DIR: str = luigi.Parameter(default='contrib/RSEM')
