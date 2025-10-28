@@ -530,11 +530,6 @@ class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                                      reference_id=self.reference_id)
                for dst in download_sample_tasks]
 
-class SubmitExperimentBatchInfoToGemma(RerunnableTaskMixin, GemmaCliTask):
-    """
-    Submit the batch information of an experiment to Gemma.
-    """
-
 @requires(AlignSingleCellExperiment, TrimExperiment, QualityControlExperiment)
 class GenerateReportForSingleCellExperiment(RerunnableTaskMixin, luigi.Task):
     """Generate a report for single-cell"""
@@ -691,13 +686,13 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
 
     def requires(self):
         if self.assay_type == GemmaAssayType.BULK_RNA_SEQ:
-            return GenerateReportForExperiment(self.experiment_id,
+            return GenerateReportForExperiment(experiment_id=self.experiment_id,
                                                taxon=self.taxon,
                                                reference_id=self.reference_id,
                                                source='gemma',
                                                rerun=self.rerun)
         elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
-            return GenerateReportForSingleCellExperiment(self.experiment_id,
+            return GenerateReportForSingleCellExperiment(experiment_id=self.experiment_id,
                                                          reference_id=self.reference_id,
                                                          source='gemma',
                                                          rerun=self.rerun)
