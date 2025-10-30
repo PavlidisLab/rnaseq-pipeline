@@ -490,6 +490,8 @@ class AlignSingleCellSample(DynamicWrapperTask):
     experiment_id: str
     sample_id: str
 
+    chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
+
     def run(self):
         fastqs_dir, transcriptome_dir = self.input()
         yield CellRangerCount(
@@ -497,6 +499,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
             transcriptome_dir=transcriptome_dir,
             fastqs_dir=fastqs_dir,
             output_dir=self.output().path,
+            chemistry=self.chemistry,
             # TODO: add an avx feature on slurm
             scheduler_extra_args=['--constraint', 'thrd64', '--gres=scratch=300G'],
             walltime=datetime.timedelta(days=1)
@@ -518,6 +521,7 @@ class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     source: str = luigi.ChoiceParameter(default='local', choices=['gemma', 'geo', 'sra', 'arrayexpress', 'local'],
                                         positional=False)
     reference_id: str = luigi.Parameter(positional=False)
+    chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
@@ -527,7 +531,8 @@ class AlignSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         yield [AlignSingleCellSample(experiment_id=self.experiment_id,
                                      sample_id=dst.sample_id,
                                      source=self.source,
-                                     reference_id=self.reference_id)
+                                     reference_id=self.reference_id,
+                                     chemistry=self.chemistry)
                for dst in download_sample_tasks]
 
 @requires(AlignSingleCellExperiment, TrimExperiment, QualityControlExperiment)
