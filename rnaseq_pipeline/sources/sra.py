@@ -180,7 +180,8 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                     if o in options:
                         fastq_load_files.append(options[o])
             else:
-                logger.warning('%s: The fastq-load.py loader does not have any option.', srr)
+                # this is excessively common, so does not warrant a warning
+                logger.info('%s: The fastq-load.py loader does not have any option.', srr)
                 fastq_load_files = None
                 issues |= SraRunIssue.NO_FASTQ_LOAD_OPTIONS
         else:
