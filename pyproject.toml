@@ -17,10 +17,12 @@ dependencies = ['luigi', 'python-daemon<3.0.0',
              'bioluigi@git+https://github.com/PavlidisLab/bioluigi@master',
              'requests', 'pandas']
 
-[dependency-groups]
-dev = []
+[project.optional-dependencies]
 gsheet = ['google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'pyxdg']
 webviewer =  ['Flask', 'gunicorn']
+
+[dependency-groups]
+dev = ["pytest", "mypy"]
 
 [project.scripts]
 rnaseq-pipeline-cli = "rnaseq_pipeline.cli:main"
