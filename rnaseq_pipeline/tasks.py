@@ -6,21 +6,22 @@ import tempfile
 import uuid
 from glob import glob, iglob
 from os import unlink, makedirs, link, symlink
-from os.path import dirname, join, basename, splitext
+from os.path import dirname, join, basename
+from typing import Optional
 
 import luigi
 import luigi.task
 import pandas as pd
 import requests
-from luigi import WrapperTask
-from luigi.task import flatten, flatten_output
-from luigi.util import requires
-
 from bioluigi.scheduled_external_program import ScheduledExternalProgramTask
 from bioluigi.tasks import fastqc, multiqc
 from bioluigi.tasks.cellranger import CellRangerCount
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
 from bioluigi.tasks.utils import TaskWithOutputMixin
+from luigi import WrapperTask
+from luigi.task import flatten, flatten_output
+from luigi.util import requires
+
 from rnaseq_pipeline.config import Config
 from .gemma import GemmaAssayType, GemmaTaskMixin, GemmaConfig
 from .gemma import GemmaCliTask
@@ -86,15 +87,15 @@ class DownloadExperiment(TaskWithOutputMixin, luigi.WrapperTask):
 
     def requires(self):
         if self.source == 'gemma':
-            return DownloadGemmaExperiment(self.experiment_id)
+            return DownloadGemmaExperiment(experiment_id=self.experiment_id)
         elif self.source == 'geo':
-            return DownloadGeoSeries(self.experiment_id)
+            return DownloadGeoSeries(experiment_id=self.experiment_id)
         elif self.source == 'sra':
-            return DownloadSraProject(self.experiment_id)
+            return DownloadSraProject(experiment_id=self.experiment_id)
         elif self.source == 'arrayexpress':
-            return DownloadArrayExpressExperiment(self.experiment_id)
+            return DownloadArrayExpressExperiment(experiment_id=self.experiment_id)
         elif self.source == 'local':
-            return DownloadLocalExperiment(self.experiment_id)
+            return DownloadLocalExperiment(experiment_id=self.experiment_id)
         else:
             raise ValueError('Unknown download source for experiment: {}.')
 
@@ -202,7 +203,7 @@ class QualityControlSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
         # TODO: make the run_id part of the output of TrimSample
         run_id = basename(dirname(fastq_in.path))
         # fastqc output is a directory, so to make this atomic, we need a sub-directory for each file being QCed
-        filename = basename(fastq_in.path).removesuffix('.fastq.gz')
+        filename = str(basename(fastq_in.path).removesuffix('.fastq.gz'))
         return join(cfg.OUTPUT_DIR, cfg.DATAQCDIR, self.experiment_id, self.sample_id, run_id, filename)
 
 class QualityControlExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -405,7 +406,7 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
         with open(sample_names_file, 'w') as out:
             for sample_trim_dirs in trim_sample_dirs:
                 for lane_trim in sample_trim_dirs:
-                    run_id = '___'.join(basename(lt.path).removesuffix('.fastq.gz')
+                    run_id = '___'.join(str(basename(lt.path).removesuffix('.fastq.gz'))
                                         for lt in lane_trim)
                     sample_id = basename(dirname(dirname(lane_trim[0].path)))
                     out.write(f'{run_id}\t{sample_id}_{run_id}\n')
@@ -511,6 +512,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
 
 @requires(DownloadExperiment)
 class OrganizeSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
+    experiment_id: str
     def run(self):
         download_sample_tasks = next(self.requires().run())
         yield [OrganizeSingleCellSample(experiment_id=self.experiment_id, sample_id=task.sample_id)
@@ -555,7 +557,7 @@ class GenerateReportForSingleCellExperiment(RerunnableTaskMixin, luigi.Task):
         with open(sample_names_file, 'w') as out:
             for sample_trim_dirs in trim_sample_dirs:
                 for lane_trim in sample_trim_dirs:
-                    run_id = '___'.join(basename(lt.path).removesuffix('.fastq.gz')
+                    run_id = '___'.join(str(basename(lt.path).removesuffix('.fastq.gz'))
                                         for lt in lane_trim)
                     sample_id = basename(dirname(dirname(lane_trim[0].path)))
                     out.write(f'{run_id}\t{sample_id}_{run_id}\n')
