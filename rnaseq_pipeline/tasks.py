@@ -502,8 +502,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
             output_dir=self.output().path,
             chemistry=self.chemistry,
             # TODO: add an avx feature on slurm
-            scheduler_extra_args=['--constraint', 'thrd64', '--gres=scratch=300G'],
-            walltime=datetime.timedelta(days=1)
+            scheduler_extra_args=['--constraint', 'thrd64', '--gres=scratch=300G']
         )
 
     def output(self):
