@@ -2,11 +2,24 @@ import tempfile
 from datetime import timedelta
 from time import sleep
 
-from rnaseq_pipeline.targets import GemmaDatasetPlatform, GemmaDatasetHasBatch, ExpirableLocalTarget
+import pytest
 
-def test_gemma_targets():
+from rnaseq_pipeline.targets import GemmaDatasetHasBatch, GemmaDataVectorType, ExpirableLocalTarget, \
+    GemmaDatasetQuantitationType
+
+@pytest.mark.skip('This test requires credentials.')
+def test_gemma_dataset_has_batch():
     assert GemmaDatasetHasBatch('GSE110256').exists()
-    assert GemmaDatasetPlatform('GSE110256', 'Generic_mouse_ncbiIds').exists()
+
+def test_gemma_dataset_quantitation_type():
+    assert GemmaDatasetQuantitationType('GSE2018', vector_type=GemmaDataVectorType.RAW).exists()
+    assert GemmaDatasetQuantitationType('GSE2018', 'rma value').exists()
+    assert not GemmaDatasetQuantitationType('GSE2018', 'rma value 2').exists()
+
+    assert GemmaDatasetQuantitationType('GSE2018', vector_type=GemmaDataVectorType.PROCESSED).exists()
+    assert GemmaDatasetQuantitationType('GSE2018', 'rma value - Processed version').exists()
+
+    assert not GemmaDatasetQuantitationType('GSE2018', vector_type=GemmaDataVectorType.SINGLE_CELL).exists()
 
 def test_expirable_local_target():
     with tempfile.TemporaryDirectory() as tmp_dir:

@@ -1,21 +1,28 @@
+from typing import Optional
+
 import luigi
 
 # see luigi.cfg for details
-class rnaseq_pipeline(luigi.Config):
-    task_namespace = ''
+class Config(luigi.Config):
+    @classmethod
+    def get_task_family(cls):
+        return 'rnaseq_pipeline'
 
-    GENOMES = luigi.Parameter()
+    OUTPUT_DIR: str = luigi.Parameter(default='pipeline-output')
 
-    OUTPUT_DIR = luigi.Parameter()
-    REFERENCES = luigi.Parameter()
-    METADATA = luigi.Parameter()
-    DATA = luigi.Parameter()
-    DATAQCDIR = luigi.Parameter()
-    ALIGNDIR = luigi.Parameter()
-    ALIGNQCDIR = luigi.Parameter()
-    QUANTDIR = luigi.Parameter()
-    BATCHINFODIR = luigi.Parameter()
+    GENOMES: str = luigi.Parameter(default='genomes')
+    REFERENCES: str = luigi.Parameter(default='references')
+    SINGLE_CELL_REFERENCES: str = luigi.Parameter(default='references-single-cell')
+    METADATA: str = luigi.Parameter(default='metadata')
+    DATA: str = luigi.Parameter(default='data')
+    DATAQCDIR: str = luigi.Parameter(default='data-qc')
+    ALIGNDIR: str = luigi.Parameter(default='aligned')
+    QUANTDIR: str = luigi.Parameter(default='quantified')
+    QUANT_SINGLE_CELL_DIR: str = luigi.Parameter(default='quantified-single-cell')
+    BATCHINFODIR: str = luigi.Parameter(default='batch-info')
 
-    RSEM_DIR = luigi.Parameter()
+    RSEM_DIR: str = luigi.Parameter(default='contrib/RSEM')
 
-    SLACK_WEBHOOK_URL = luigi.OptionalParameter(default=None)
+    rsem_calculate_expression_bin: str = luigi.Parameter(default='contrib/RSEM/rsem-calculate-expression')
+
+    SLACK_WEBHOOK_URL: Optional[str] = luigi.OptionalParameter(default=None)

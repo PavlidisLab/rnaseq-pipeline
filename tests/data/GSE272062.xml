@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286971" alias="GSM8392294_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286971</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392294_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392294: NeuN- cells from vehicle-treated brain, rep 3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965721">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965721</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392294</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392294</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392294" accession="SRS21965721">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965721</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436319</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392294</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from vehicle-treated brain, rep 3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965721" sample_name="GSM8392294" sample_title="NeuN- cells from vehicle-treated brain, rep 3" spots="265912125" bases="81900934500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965721</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436319</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392294</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="81900934500" spots="265912125" bytes="32697169981">
+      <RUN accession="SRR29787081" alias="GSM8392294_r1" total_spots="265912125" total_bases="81900934500" size="32697169981" load_done="true" published="2025-05-22 00:01:18" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787081</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392294_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286971">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392294_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965721" sample_name="GSM8392294" sample_title="NeuN- cells from vehicle-treated brain, rep 3" spots="265912125" bases="81900934500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965721</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436319</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392294</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-Veh-6_S1_L001_I1_001.fastq.gz" size="1924456125" date="2024-07-11 17:39:40" md5="7a3c0ea87bff70294376a189b88fe1d9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787081/Brain-Veh-6_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-6_S1_L001_R1_001.fastq.gz" size="25586904051" date="2024-07-11 17:41:56" md5="aa20eeeb65fbaab94705b98148e752c7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787081/Brain-Veh-6_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-6_S1_L001_R2_001.fastq.gz" size="20955374602" date="2024-07-11 17:40:43" md5="55cf2c12bb124dc945c90159134ec61e" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787081/Brain-Veh-6_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787081" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787081/SRR29787081" size="32697172492" date="2024-07-11 17:45:35" md5="a3e64d79206f8ad432d4eb4c726f3c75" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787081/SRR29787081" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787081.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787081/SRR29787081.lite.1" size="20903806332" date="2024-07-11 18:20:15" md5="581933a285019aecb0c346ceaca4cd38" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787081/SRR29787081.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787081/SRR29787081.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787081/SRR29787081.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="265912125"/>
+                <Elements count="81900934500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286970" alias="GSM8392293_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286970</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392293_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392293: NeuN- cells from vehicle-treated brain, rep 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965720">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965720</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392293</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392293</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392293" accession="SRS21965720">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965720</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436320</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392293</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from vehicle-treated brain, rep 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965720" sample_name="GSM8392293" sample_title="NeuN- cells from vehicle-treated brain, rep 2" spots="363783365" bases="112045276420" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965720</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436320</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392293</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="112045276420" spots="363783365" bytes="44751650338">
+      <RUN accession="SRR29787082" alias="GSM8392293_r1" total_spots="363783365" total_bases="112045276420" size="44751650338" load_done="true" published="2025-05-22 00:01:18" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787082</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392293_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286970">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392293_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965720" sample_name="GSM8392293" sample_title="NeuN- cells from vehicle-treated brain, rep 2" spots="363783365" bases="112045276420" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965720</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436320</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392293</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-Veh-5_S1_L001_I1_001.fastq.gz" size="2384155889" date="2024-07-11 17:25:49" md5="42f3f095f3e161acd4dddf2f8b0eaf20" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787082/Brain-Veh-5_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-5_S1_L001_R1_001.fastq.gz" size="34929666324" date="2024-07-11 17:27:52" md5="261ff8a09111b10aaf99e4a922254edd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787082/Brain-Veh-5_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-5_S1_L001_R2_001.fastq.gz" size="28755770793" date="2024-07-11 17:26:55" md5="65be203fabf0720c7af18aa3cce28296" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR29787082/Brain-Veh-5_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787082" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787082/SRR29787082" size="44751652853" date="2024-07-11 17:34:08" md5="c540c85215a3979a9535d7d55b153bad" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787082/SRR29787082" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787082.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787082/SRR29787082.lite.1" size="28538371049" date="2024-07-11 18:22:42" md5="dd3e39cddc76683dd518094da601a2dd" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787082/SRR29787082.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787082/SRR29787082.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787082/SRR29787082.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="363783365">
+          <Read index="0" count="363783365" average="8" stdev="0"/>
+          <Read index="1" count="363783365" average="150" stdev="0"/>
+          <Read index="2" count="363783365" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="363783365"/>
+                <Elements count="112045276420"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="109135009500">
+          <Base value="A" count="32029768870"/>
+          <Base value="C" count="22182348678"/>
+          <Base value="G" count="20742957475"/>
+          <Base value="T" count="34178763531"/>
+          <Base value="N" count="1170946"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286969" alias="GSM8392292_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286969</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392292_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392292: NeuN- cells from vehicle-treated brain, rep 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965719">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965719</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392292</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392292</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392292" accession="SRS21965719">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965719</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436321</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392292</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from vehicle-treated brain, rep 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Vehicle</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965719" sample_name="GSM8392292" sample_title="NeuN- cells from vehicle-treated brain, rep 1" spots="304283529" bases="93719326932" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965719</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436321</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392292</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="93719326932" spots="304283529" bytes="37325552504">
+      <RUN accession="SRR29787083" alias="GSM8392292_r1" total_spots="304283529" total_bases="93719326932" size="37325552504" load_done="true" published="2025-05-22 00:01:17" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787083</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392292_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286969">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392292_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965719" sample_name="GSM8392292" sample_title="NeuN- cells from vehicle-treated brain, rep 1" spots="304283529" bases="93719326932" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965719</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436321</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392292</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-Veh-4_S1_L001_I1_001.fastq.gz" size="2079291135" date="2024-07-11 17:44:21" md5="60c1fad2f6a0ed9069a6a45af4a08374" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787083/Brain-Veh-4_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-4_S1_L001_R1_001.fastq.gz" size="29175825454" date="2024-07-11 17:45:29" md5="20ff054e5248527f1491e41c8785c1e2" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787083/Brain-Veh-4_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-Veh-4_S1_L001_R2_001.fastq.gz" size="23946495617" date="2024-07-11 17:46:22" md5="9f8c10b928f4f394c8a7e660e288e084" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787083/Brain-Veh-4_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787083" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787083/SRR29787083" size="37325555020" date="2024-07-11 17:52:30" md5="9fb7321e1e69b22ca39831fa8611561c" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787083/SRR29787083" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787083.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787083/SRR29787083.lite.1" size="23905757424" date="2024-07-11 18:24:34" md5="1523bdb2478a08b7b05a19d399511b6f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787083/SRR29787083.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787083/SRR29787083.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787083/SRR29787083.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="304283529">
+          <Read index="0" count="304283529" average="8" stdev="0"/>
+          <Read index="1" count="304283529" average="150" stdev="0"/>
+          <Read index="2" count="304283529" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="304283529"/>
+                <Elements count="93719326932"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="91285058700">
+          <Base value="A" count="26884660238"/>
+          <Base value="C" count="18351814382"/>
+          <Base value="G" count="17169091574"/>
+          <Base value="T" count="28878517558"/>
+          <Base value="N" count="974948"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286968" alias="GSM8392291_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286968</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392291_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392291: NeuN- cells from LPA-treated brain, rep 3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965718">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965718</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392291</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392291</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392291" accession="SRS21965718">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965718</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436322</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392291</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from LPA-treated brain, rep 3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>LPA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965718" sample_name="GSM8392291" sample_title="NeuN- cells from LPA-treated brain, rep 3" spots="311738599" bases="96015488492" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965718</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436322</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392291</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="96015488492" spots="311738599" bytes="38326578565">
+      <RUN accession="SRR29787084" alias="GSM8392291_r1" total_spots="311738599" total_bases="96015488492" size="38326578565" load_done="true" published="2025-05-22 00:01:17" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787084</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392291_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286968">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392291_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965718" sample_name="GSM8392291" sample_title="NeuN- cells from LPA-treated brain, rep 3" spots="311738599" bases="96015488492" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965718</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436322</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392291</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-LPA-3_S1_L001_I1_001.fastq.gz" size="2103376617" date="2024-07-11 18:03:20" md5="861982b97e71d04c16883181c64e1e68" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787084/Brain-LPA-3_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-3_S1_L001_R1_001.fastq.gz" size="29930303302" date="2024-07-11 18:15:40" md5="613d0cfd0be46aa074680cf188bf3a03" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787084/Brain-LPA-3_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-3_S1_L001_R2_001.fastq.gz" size="24627254413" date="2024-07-11 18:08:27" md5="da8ad8880656224d2019749682834902" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787084/Brain-LPA-3_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787084" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787084/SRR29787084" size="38326581081" date="2024-07-11 18:35:10" md5="6e799baabaf5acbed0a97ef7a1a1dbce" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787084/SRR29787084" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787084.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787084/SRR29787084.lite.1" size="24486349197" date="2024-07-11 19:53:11" md5="5eb60260d458f3235bcf64b093af03f3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787084/SRR29787084.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787084/SRR29787084.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787084/SRR29787084.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="311738599">
+          <Read index="0" count="311738599" average="8" stdev="0"/>
+          <Read index="1" count="311738599" average="150" stdev="0"/>
+          <Read index="2" count="311738599" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="311738599"/>
+                <Elements count="96015488492"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="93521579700">
+          <Base value="A" count="27412440491"/>
+          <Base value="C" count="18904116702"/>
+          <Base value="G" count="17713159931"/>
+          <Base value="T" count="29490866997"/>
+          <Base value="N" count="995579"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286967" alias="GSM8392290_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286967</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392290_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392290: NeuN- cells from LPA-treated brain, rep 2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965717">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965717</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392290</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392290</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392290" accession="SRS21965717">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965717</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436323</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392290</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from LPA-treated brain, rep 2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>LPA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965717" sample_name="GSM8392290" sample_title="NeuN- cells from LPA-treated brain, rep 2" spots="333596701" bases="102747783908" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965717</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436323</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392290</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="102747783908" spots="333596701" bytes="41056266070">
+      <RUN accession="SRR29787085" alias="GSM8392290_r1" total_spots="333596701" total_bases="102747783908" size="41056266070" load_done="true" published="2025-05-22 00:01:18" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787085</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392290_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286967">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392290_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965717" sample_name="GSM8392290" sample_title="NeuN- cells from LPA-treated brain, rep 2" spots="333596701" bases="102747783908" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965717</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436323</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392290</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-LPA-2_S1_L001_I1_001.fastq.gz" size="2295397299" date="2024-07-11 18:07:13" md5="670a9b56486e9c5c254492798ffb0897" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787085/Brain-LPA-2_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-2_S1_L001_R1_001.fastq.gz" size="32023057211" date="2024-07-11 18:14:50" md5="3fc3cfe8f33449fcbfa172a6a6a1fda5" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787085/Brain-LPA-2_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-2_S1_L001_R2_001.fastq.gz" size="26368644406" date="2024-07-11 18:21:13" md5="8c043eafa599d683d309b385bd87948c" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787085/Brain-LPA-2_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787085" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787085/SRR29787085" size="41056268587" date="2024-07-11 18:53:17" md5="60ff0c3803836205c06938a8bc958e54" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787085/SRR29787085" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787085.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787085/SRR29787085.lite.1" size="26194555059" date="2024-07-11 19:53:27" md5="76dcde627d3ada3716abf105ab5b0c12" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787085/SRR29787085.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787085/SRR29787085.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787085/SRR29787085.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="333596701">
+          <Read index="0" count="333596701" average="8" stdev="0"/>
+          <Read index="1" count="333596701" average="150" stdev="0"/>
+          <Read index="2" count="333596701" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="333596701"/>
+                <Elements count="102747783908"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="100079010300">
+          <Base value="A" count="29302936931"/>
+          <Base value="C" count="20303444871"/>
+          <Base value="G" count="19006447504"/>
+          <Base value="T" count="31465123751"/>
+          <Base value="N" count="1057243"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX25286966" alias="GSM8392289_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX25286966</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392289_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8392289: NeuN- cells from LPA-treated brain, rep 1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP519373">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP519373</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1134761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21965716">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21965716</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8392289</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8392289</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Mice injected with LPA or vehicle were perfused with Hanks' Balanced Salt Solution (HBSS) and RNAse inhibitors (0.2%) (Takara). Whole brains (except for the olfactory bulbs and the cerebellum) were stored at -80° C and were removed from frozen storage and immediately submerged in 1 ml of nuclei isolation buffer (20 mM Tris, 320 mM sucrose, 5 mM CaCl2, 3 mM Mg(Ac)2, 0.1 mM EDTA, 0.1% Triton-X 100, 0.2% RNase inhibitors, (Takara Bio recombinant RNAse Inhibitor). Extracted nuclei were washed twice in PBS + 0.25mM EGTA + 1% BSA + 0.2% RNase inhibitors (Takara Bio, Mountain View, CA). They were then suspended in PBS + EGTA (250µM) + 1% BSA + 0.2% RNase inhibitors + 1.25 µg/ml 4',6-diamidino-2-phenylindole (DAPI) (Sigma, St. Louis, MO) + NeuN antibody (1:500, Abcam), to label neuronal populations. Stained nuclei were sorted on a FACSAria Fusion (BD Biosciences, Franklin Lakes, NJ) gating for NeuN- populations, and collecting non-neuronal nuclei. Sorted nuclei were diluted to ~700-1,500 nuclei/ml, and a final concentration was determined using a fluorescent cell counter. The 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Sanford Burnham Prebys Medical Discovery Institute" accession="SRA1922293" alias="SUB14598382">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1922293</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Sanford Burnham Prebys Medical Discovery Institute">SUB14598382</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Sanford Burnham Prebys Medical Discovery Institute</Name>
+      <Contact email="jchun@sbpdiscovery.org">
+        <Address>
+          <Street>1090 N. Torrey Pines Rd</Street>
+          <City>La Jolla</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Jerold</First>
+          <Last>Chun</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE272062" accession="SRP519373">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP519373</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1134761</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE272062</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Lysophosphatidic acid (LPA)-dependent propagation of neuroinflammation in an optimized model of post-hemorrhagic hydrocephalus.</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Post-hemorrhagic hydrocephalus (PHH) is a neurological disease that primarily affects premature infants and involves infiltration of blood into the brain's ventricles followed by excessive accumulation of cerebrospinal fluid (CSF) leading to ventricular enlargement and increased intracranial pressure. However, the precise mechanisms driving PHH development and persistence remain incompletely known and lack medical and disease modifying treatments. Here we use a mouse model of PHH to identify transcriptomic, proteomic and cellular changes involving neurovascular and neuroimmunological microglial alterations as features of PHH, overlapping with those reported in human disease.  Improvements on a lysophosphatidic acid (LPA)-initiated PHH mouse model were developed and combined with unbiased proteomic and single-nucleus transcriptomics that identified microglial molecular pathways promoting PHH.  Pharmacological disruption of microglia in vivo significantly reduced PHH-associated ventriculomegaly.  These data identify microglia and neurovascular molecular elements in the development of PHH, implicating them as potentially tractable therapeutic targets towards developing new treatments for PHH. Overall design: NeuN- nuclei were isolated from whole brains from mice treated with vehicle or LPA injection. 10x Genomics Single Cell 3' v3 kit was then used to prepare samples targeting 10,000 profiled cells</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE272062</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8392289" accession="SRS21965716">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21965716</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN42436324</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8392289</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>NeuN- cells from LPA-treated brain, rep 1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1134761</ID>
+            <LABEL>PRJNA1134761</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NeuN- cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>LPA</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21965716" sample_name="GSM8392289" sample_title="NeuN- cells from LPA-treated brain, rep 1" spots="316373965" bases="97443181220" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21965716</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN42436324</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392289</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="97443181220" spots="316373965" bytes="38688520433">
+      <RUN accession="SRR29787086" alias="GSM8392289_r1" total_spots="316373965" total_bases="97443181220" size="38688520433" load_done="true" published="2025-05-22 00:01:18" is_public="true" cluster_name="public" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29787086</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8392289_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX25286966">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8392289_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21965716" sample_name="GSM8392289" sample_title="NeuN- cells from LPA-treated brain, rep 1" spots="316373965" bases="97443181220" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21965716</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN42436324</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8392289</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Brain-LPA-1_S1_L001_I1_001.fastq.gz" size="2048088971" date="2024-07-11 17:47:35" md5="2637728da2730429c23e1f6190d70175" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787086/Brain-LPA-1_S1_L001_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-1_S1_L001_R1_001.fastq.gz" size="30353426338" date="2024-07-11 17:49:43" md5="399b238096baf06eefc8053beda2e383" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787086/Brain-LPA-1_S1_L001_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Brain-LPA-1_S1_L001_R2_001.fastq.gz" size="24746274006" date="2024-07-11 17:48:21" md5="4032a16f7a656285aa2f7479a0b3f8b4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29787086/Brain-LPA-1_S1_L001_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787086" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787086/SRR29787086" size="38688522950" date="2024-07-11 17:56:28" md5="fdee31fdf40b7bcca177d06d7206c293" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29787086/SRR29787086" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29787086.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787086/SRR29787086.lite.1" size="24846610566" date="2024-07-11 18:35:45" md5="35aedf18484d1fc470f0353a225722b0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29787/SRR29787086/SRR29787086.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-8/SRR29787086/SRR29787086.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR29787086/SRR29787086.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="316373965">
+          <Read index="0" count="316373965" average="8" stdev="0"/>
+          <Read index="1" count="316373965" average="150" stdev="0"/>
+          <Read index="2" count="316373965" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="316373965"/>
+                <Elements count="97443181220"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="94912189500">
+          <Base value="A" count="28095782525"/>
+          <Base value="C" count="19054778098"/>
+          <Base value="G" count="17893203447"/>
+          <Base value="T" count="29867425495"/>
+          <Base value="N" count="999935"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

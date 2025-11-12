@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747081" alias="GSM8295842_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747081</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295842_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295842: HippoCortex_Young_EGFP_3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468868">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468868</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295842</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295842</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295842" accession="SRS21468868">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468868</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595640</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295842</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Young_EGFP_3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468868" sample_name="GSM8295842" sample_title="HippoCortex_Young_EGFP_3" spots="347982036" bases="107178467088" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468868</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595640</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295842</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="107178467088" spots="347982036" bytes="39735898279">
+      <RUN accession="SRR29228310" alias="GSM8295842_r1" total_spots="347982036" total_bases="107178467088" size="39735898279" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228310</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295842_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747081">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295842_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468868" sample_name="GSM8295842" sample_title="HippoCortex_Young_EGFP_3" spots="347982036" bases="107178467088" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468868</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595640</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295842</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_I1_001.fastq.gz" size="2559142537" date="2024-05-30 00:33:11" md5="f6d1716956fad4147ef4f5ca370caf86" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228310/Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_R1_001.fastq.gz" size="30674487982" date="2024-05-30 00:33:57" md5="7cf61959607dd8f63d6e8958eb3187e6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228310/Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_R2_001.fastq.gz" size="23348037458" date="2024-05-30 00:34:49" md5="68e2a4c038b4537d44dfa44ced7295c9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228310/Young_EGFP_3_N9_CKDL240004922-1A_223WTHLT4_S2_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228310" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228310/SRR29228310" size="39735900791" date="2024-05-30 00:41:52" md5="3f29984cb77a5047edf7b7190992f435" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228310/SRR29228310" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228310.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228310/SRR29228310.lite.1" size="27291598767" date="2024-05-30 03:24:23" md5="f3413e477da1585de29184ec649e9eaa" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228310/SRR29228310.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228310/SRR29228310.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228310/SRR29228310.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="347982036">
+          <Read index="0" count="347982036" average="8" stdev="0"/>
+          <Read index="1" count="347982036" average="150" stdev="0"/>
+          <Read index="2" count="347982036" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="347982036"/>
+                <Elements count="107178467088"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="104394610800">
+          <Base value="A" count="27771531008"/>
+          <Base value="C" count="20455290813"/>
+          <Base value="G" count="19670807053"/>
+          <Base value="T" count="36486462717"/>
+          <Base value="N" count="10519209"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747080" alias="GSM8295841_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747080</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295841_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295841: HippoCortex_Young_EGFP_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468867">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468867</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295841</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295841</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295841" accession="SRS21468867">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468867</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595641</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295841</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Young_EGFP_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468867" sample_name="GSM8295841" sample_title="HippoCortex_Young_EGFP_2" spots="404661685" bases="124635798980" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468867</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595641</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295841</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="124635798980" spots="404661685" bytes="46052730853">
+      <RUN accession="SRR29228311" alias="GSM8295841_r1" total_spots="404661685" total_bases="124635798980" size="46052730853" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228311</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295841_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747080">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295841_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468867" sample_name="GSM8295841" sample_title="HippoCortex_Young_EGFP_2" spots="404661685" bases="124635798980" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468867</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595641</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295841</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_I1_001.fastq.gz" size="2844709840" date="2024-05-30 01:25:05" md5="0c67544769f1ac28283ef6c6c51f62cd" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228311/Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_R1_001.fastq.gz" size="35594706641" date="2024-05-30 01:40:02" md5="670f41b8203c68bd146951c773994e87" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228311/Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_R2_001.fastq.gz" size="27009689586" date="2024-05-30 01:31:29" md5="fd2106fe01c7a66716725b2361e73614" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228311/Young_EGFP_2_N8_CKDL240004921-1A_223WTHLT4_S1_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228311" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228311/SRR29228311" size="46052733373" date="2024-05-30 02:06:35" md5="75fc6bcfc95e6f1e70aa995fe7616b69" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228311/SRR29228311" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228311.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228311/SRR29228311.lite.1" size="31704608893" date="2024-05-30 03:06:25" md5="70459b120d1bb03855f4b8499ade076d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228311/SRR29228311.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228311/SRR29228311.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228311/SRR29228311.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="404661685">
+          <Read index="0" count="404661685" average="8" stdev="0"/>
+          <Read index="1" count="404661685" average="150" stdev="0"/>
+          <Read index="2" count="404661685" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="404661685"/>
+                <Elements count="124635798980"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="121398505500">
+          <Base value="A" count="32235965696"/>
+          <Base value="C" count="23855986503"/>
+          <Base value="G" count="22972471690"/>
+          <Base value="T" count="42321916597"/>
+          <Base value="N" count="12165014"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747079" alias="GSM8295840_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747079</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295840_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295840: HippoCortex_Young_EGFP_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468866">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468866</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295840</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295840</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295840" accession="SRS21468866">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468866</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595642</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295840</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Young_EGFP_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468866" sample_name="GSM8295840" sample_title="HippoCortex_Young_EGFP_1" spots="369954181" bases="113945887748" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468866</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595642</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295840</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="113945887748" spots="369954181" bytes="42243786599">
+      <RUN accession="SRR29228312" alias="GSM8295840_r1" total_spots="369954181" total_bases="113945887748" size="42243786599" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228312</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295840_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747079">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295840_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468866" sample_name="GSM8295840" sample_title="HippoCortex_Young_EGFP_1" spots="369954181" bases="113945887748" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468866</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595642</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295840</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_I1_001.fastq.gz" size="2623242942" date="2024-05-30 01:00:27" md5="3f0232c12c4b632702812d69d147a995" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228312/Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_R1_001.fastq.gz" size="32644130385" date="2024-05-30 01:02:12" md5="d4c8b88563d8f2fdf5cacdd4604e7696" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228312/Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_R2_001.fastq.gz" size="24447936251" date="2024-05-30 01:01:08" md5="13a6d46d2410e3820cb811570c1a4ee4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228312/Young_EGFP_1_N6_CKDL240004919-1A_223WTHLT4_S8_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228312" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228312/SRR29228312" size="42243789115" date="2024-05-30 01:09:38" md5="34c07ef0b1008d0ca86fc0725ba24fe5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228312/SRR29228312" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228312.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228312/SRR29228312.lite.1" size="29011850451" date="2024-05-30 03:32:34" md5="35e32414b5d4512dba64f908483e2a1c" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228312/SRR29228312.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228312/SRR29228312.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228312/SRR29228312.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="369954181">
+          <Read index="0" count="369954181" average="8" stdev="0"/>
+          <Read index="1" count="369954181" average="150" stdev="0"/>
+          <Read index="2" count="369954181" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="369954181"/>
+                <Elements count="113945887748"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="110986254300">
+          <Base value="A" count="29230067929"/>
+          <Base value="C" count="22072267299"/>
+          <Base value="G" count="21514800352"/>
+          <Base value="T" count="38157992059"/>
+          <Base value="N" count="11126661"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747078" alias="GSM8295839_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747078</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295839_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295839: HippoCortex_Aged_B3GNT3_3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468865">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468865</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295839</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295839</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295839" accession="SRS21468865">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468865</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595643</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295839</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_B3GNT3_3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-B3GNT3</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468865" sample_name="GSM8295839" sample_title="HippoCortex_Aged_B3GNT3_3" spots="418595454" bases="128927399832" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468865</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595643</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295839</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="128927399832" spots="418595454" bytes="47666012251">
+      <RUN accession="SRR29228313" alias="GSM8295839_r1" total_spots="418595454" total_bases="128927399832" size="47666012251" load_done="true" published="2024-12-17 19:36:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228313</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295839_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747078">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295839_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468865" sample_name="GSM8295839" sample_title="HippoCortex_Aged_B3GNT3_3" spots="418595454" bases="128927399832" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468865</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595643</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295839</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR29228313.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228313/SRR29228313.lite.1" size="32804640182" date="2024-05-30 04:02:21" md5="de38f49bcf5f9935c21aaa88f3edcf10" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228313/SRR29228313.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228313/SRR29228313.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228313/SRR29228313.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228313" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228313/SRR29228313" size="47666014766" date="2024-05-30 01:32:42" md5="d5dfd52b8dd1712e3efe19847af097ce" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228313/SRR29228313" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_R2_001.fastq.gz" size="27876824511" date="2024-05-30 01:19:11" md5="84ff3a402a6973d266cab3c089aa4724" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228313/Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_R1_001.fastq.gz" size="36810566732" date="2024-05-30 01:20:38" md5="8ca4a8ba57917a77a5fbc8eb3e24b0f1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228313/Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_I1_001.fastq.gz" size="3001671798" date="2024-05-30 01:17:59" md5="83dd364a50088325b0153c6c9dab5966" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228313/Aged_B3GNT3_3_N7_CKDL240004920-1A_223WTHLT4_S9_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="418595454">
+          <Read index="0" count="418595454" average="8" stdev="0"/>
+          <Read index="1" count="418595454" average="150" stdev="0"/>
+          <Read index="2" count="418595454" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="418595454"/>
+                <Elements count="128927399832"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="125578636200">
+          <Base value="A" count="33312130392"/>
+          <Base value="C" count="24640399514"/>
+          <Base value="G" count="23749377969"/>
+          <Base value="T" count="43864145711"/>
+          <Base value="N" count="12582614"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747077" alias="GSM8295838_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747077</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295838_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295838: HippoCortex_Aged_B3GNT3_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468863">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468863</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295838</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295838</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295838" accession="SRS21468863">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468863</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595644</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295838</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_B3GNT3_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-B3GNT3</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468863" sample_name="GSM8295838" sample_title="HippoCortex_Aged_B3GNT3_2" spots="291574630" bases="89804986040" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468863</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595644</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295838</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="89804986040" spots="291574630" bytes="33288945469">
+      <RUN accession="SRR29228314" alias="GSM8295838_r1" total_spots="291574630" total_bases="89804986040" size="33288945469" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228314</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295838_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747077">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295838_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468863" sample_name="GSM8295838" sample_title="HippoCortex_Aged_B3GNT3_2" spots="291574630" bases="89804986040" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468863</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595644</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295838</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_I1_001.fastq.gz" size="2173422420" date="2024-05-30 00:49:28" md5="5e86dd3a9cac3e897779223aadebbafc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228314/Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_R1_001.fastq.gz" size="25738002771" date="2024-05-30 00:51:27" md5="2212879c9e7993d4cedf0d2563a036d6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228314/Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_R2_001.fastq.gz" size="19552176409" date="2024-05-30 00:50:20" md5="9e017ae7e4362c90c51a36aea0a676cb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228314/Aged_B3GNT3_2_N5_CKDL240004918-1A_223WTHLT4_S7_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228314" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228314/SRR29228314" size="33288947978" date="2024-05-30 00:58:57" md5="ed1588f0c70dba77ac931d121215d296" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228314/SRR29228314" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228314.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228314/SRR29228314.lite.1" size="22886445346" date="2024-05-30 03:01:21" md5="3b825ded3bf4e16d0d833bad34e305c6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228314/SRR29228314.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228314/SRR29228314.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228314/SRR29228314.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="291574630">
+          <Read index="0" count="291574630" average="8" stdev="0"/>
+          <Read index="1" count="291574630" average="150" stdev="0"/>
+          <Read index="2" count="291574630" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="291574630"/>
+                <Elements count="89804986040"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="87472389000">
+          <Base value="A" count="23043979330"/>
+          <Base value="C" count="17456516991"/>
+          <Base value="G" count="16808926039"/>
+          <Base value="T" count="30154091612"/>
+          <Base value="N" count="8875028"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747076" alias="GSM8295837_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747076</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295837_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295837: HippoCortex_Aged_B3GNT3_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468864">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468864</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295837</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295837</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295837" accession="SRS21468864">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468864</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595645</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295837</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_B3GNT3_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-B3GNT3</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468864" sample_name="GSM8295837" sample_title="HippoCortex_Aged_B3GNT3_1" spots="323473599" bases="99629868492" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468864</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595645</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295837</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="99629868492" spots="323473599" bytes="36942521522">
+      <RUN accession="SRR29228315" alias="GSM8295837_r1" total_spots="323473599" total_bases="99629868492" size="36942521522" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228315</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295837_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747076">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295837_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468864" sample_name="GSM8295837" sample_title="HippoCortex_Aged_B3GNT3_1" spots="323473599" bases="99629868492" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468864</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595645</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295837</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_I1_001.fastq.gz" size="2333094809" date="2024-05-30 00:59:51" md5="e722913421f7cb1cb3dc1d48d4d00d56" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228315/Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_R1_001.fastq.gz" size="28563186087" date="2024-05-30 01:02:06" md5="0d1f4c52da66348dc97020a2dce092a4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228315/Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_R2_001.fastq.gz" size="21350136706" date="2024-05-30 01:00:50" md5="ff60ce1c1957b8b3f5cea8be599edacb" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228315/Aged_B3GNT3_1_N4_CKDL240004917-1A_223WTHLT4_S6_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228315" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228315/SRR29228315" size="36942524035" date="2024-05-30 01:15:26" md5="d871a2fb426a50867d9e13d2b574d6a1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228315/SRR29228315" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228315.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228315/SRR29228315.lite.1" size="25381009783" date="2024-05-30 03:13:05" md5="fe027c80a505a1c5f8ea2469284a80a5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228315/SRR29228315.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228315/SRR29228315.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228315/SRR29228315.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="323473599">
+          <Read index="0" count="323473599" average="8" stdev="0"/>
+          <Read index="1" count="323473599" average="150" stdev="0"/>
+          <Read index="2" count="323473599" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="323473599"/>
+                <Elements count="99629868492"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="97042079700">
+          <Base value="A" count="25507500468"/>
+          <Base value="C" count="19329963483"/>
+          <Base value="G" count="18887344377"/>
+          <Base value="T" count="33307503370"/>
+          <Base value="N" count="9768002"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747075" alias="GSM8295836_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747075</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295836_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295836: HippoCortex_Aged_EGFP_3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468862">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468862</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295836</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295836</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295836" accession="SRS21468862">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468862</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595646</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295836</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_EGFP_3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468862" sample_name="GSM8295836" sample_title="HippoCortex_Aged_EGFP_3" spots="430099125" bases="132470530500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468862</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595646</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295836</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="132470530500" spots="430099125" bytes="49208482930">
+      <RUN accession="SRR29228316" alias="GSM8295836_r1" total_spots="430099125" total_bases="132470530500" size="49208482930" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228316</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295836_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747075">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295836_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468862" sample_name="GSM8295836" sample_title="HippoCortex_Aged_EGFP_3" spots="430099125" bases="132470530500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468862</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595646</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295836</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_I1_001.fastq.gz" size="3253516061" date="2024-05-30 01:10:40" md5="c9f3e8b5d6a030143bf89abafee3d117" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228316/Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_R1_001.fastq.gz" size="37926546954" date="2024-05-30 01:13:18" md5="33ed512ce2b007791b49851730a5ccd4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228316/Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_R2_001.fastq.gz" size="28920631121" date="2024-05-30 01:11:31" md5="bfac8a44197679792638437dcbe6f5ff" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228316/Aged_EGFP_3_N3_CKDL240004916-1A_223WTHLT4_S5_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228316" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228316/SRR29228316" size="49208485449" date="2024-05-30 01:18:59" md5="0f6088f9e71644caac1c5322143be487" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228316/SRR29228316" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228316.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228316/SRR29228316.lite.1" size="33718501105" date="2024-05-30 03:06:33" md5="050aef13755e2a546dbb8f41bf4ead4e" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228316/SRR29228316.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228316/SRR29228316.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228316/SRR29228316.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="430099125">
+          <Read index="0" count="430099125" average="8" stdev="0"/>
+          <Read index="1" count="430099125" average="150" stdev="0"/>
+          <Read index="2" count="430099125" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="430099125"/>
+                <Elements count="132470530500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="129029737500">
+          <Base value="A" count="34055230636"/>
+          <Base value="C" count="25781129665"/>
+          <Base value="G" count="24727592265"/>
+          <Base value="T" count="44453015440"/>
+          <Base value="N" count="12769494"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747074" alias="GSM8295835_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747074</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295835_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295835: HippoCortex_Aged_EGFP_2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468861">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468861</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295835</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295835</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295835" accession="SRS21468861">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468861</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595647</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295835</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_EGFP_2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468861" sample_name="GSM8295835" sample_title="HippoCortex_Aged_EGFP_2" spots="377717573" bases="116337012484" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468861</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595647</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295835</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="116337012484" spots="377717573" bytes="43393036587">
+      <RUN accession="SRR29228317" alias="GSM8295835_r1" total_spots="377717573" total_bases="116337012484" size="43393036587" load_done="true" published="2024-12-17 19:36:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228317</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295835_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747074">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295835_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468861" sample_name="GSM8295835" sample_title="HippoCortex_Aged_EGFP_2" spots="377717573" bases="116337012484" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468861</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595647</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295835</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_I1_001.fastq.gz" size="2891831192" date="2024-05-30 01:20:34" md5="f7144b8248b2f18358f8b9e7143a8705" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228317/Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_R1_001.fastq.gz" size="33493054413" date="2024-05-30 01:34:02" md5="22c7dc289c7ddee2cd4f2429d2495aa8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228317/Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_R2_001.fastq.gz" size="25756192785" date="2024-05-30 01:26:30" md5="9295868dcec9c7e166a29c57621b316b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228317/Aged_EGFP_2_N2_CKDL240004915-1A_223WTHLT4_S4_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228317" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228317/SRR29228317" size="43393039102" date="2024-05-30 01:58:14" md5="7f8b625eb913f55a3020af07982e6c80" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228317/SRR29228317" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228317.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228317/SRR29228317.lite.1" size="29627285494" date="2024-05-30 03:00:41" md5="90c3c9c8264f013ef6614c7f19fd8f15" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228317/SRR29228317.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228317/SRR29228317.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228317/SRR29228317.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="377717573">
+          <Read index="0" count="377717573" average="8" stdev="0"/>
+          <Read index="1" count="377717573" average="150" stdev="0"/>
+          <Read index="2" count="377717573" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="377717573"/>
+                <Elements count="116337012484"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="113315271900">
+          <Base value="A" count="30020110564"/>
+          <Base value="C" count="22608305961"/>
+          <Base value="G" count="21650239020"/>
+          <Base value="T" count="39025220639"/>
+          <Base value="N" count="11395716"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24747073" alias="GSM8295834_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24747073</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295834_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8295834: HippoCortex_Aged_EGFP_1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP510722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP510722</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1117950</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21468860">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21468860</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8295834</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8295834</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Nuclei were extracted from pooled cortical and hippocampal tissues using dounce homogenization and EZ lysis buffer (Sigma). Singlet nuclei stained with Hoechst were collected via FACS. Libraries were prepared using the Chromium Single Cell 3' Kit v3.1 (10X Genomics) according to the manufacturer's protocol, targeting 10,000 nuclei per sample.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq X Plus</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Stanford University" accession="SRA1883009" alias="SUB14490486">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1883009</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Stanford University">SUB14490486</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Stanford University</Name>
+      <Contact email="olivia.m.gautier@gmail.com">
+        <Address>
+          <Street>279 Campus Dr</Street>
+          <City>Stanford</City>
+          <Sub>CA</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Olivia</First>
+          <Last>Gautier</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE268642" accession="SRP510722">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP510722</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1117950</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE268642</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Overexpression of brain endothelial mucin-type O-glycan biosynthesis promotes brain homeostasis in aged mice</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>In our study, we find that AAV-mediated brain endothelial B3GNT3 overexpression reduces neuroinflammatory markers and cognitive deficits in aged mice. Here, we perform snRNA-seq to characterize the cellular and molecular changes induced by brain endothelial B3GNT3 overexpression. Overall design: snRNA-sequencing of pooled cortical and hippocampal tissues from aged mice treated with AAV-EGFP, aged mice treated with AAV-B3GNT3, and young mice treated with AAV-EGFP</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE268642</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>40011765</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8295834" accession="SRS21468860">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21468860</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41595648</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8295834</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>HippoCortex_Aged_EGFP_1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1117950</ID>
+            <LABEL>PRJNA1117950</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus and cortex</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>AAV-EGFP</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21468860" sample_name="GSM8295834" sample_title="HippoCortex_Aged_EGFP_1" spots="388101849" bases="119535369492" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21468860</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41595648</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295834</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="119535369492" spots="388101849" bytes="44334062717">
+      <RUN accession="SRR29228318" alias="GSM8295834_r1" total_spots="388101849" total_bases="119535369492" size="44334062717" load_done="true" published="2024-12-17 19:36:31" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29228318</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8295834_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24747073">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8295834_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21468860" sample_name="GSM8295834" sample_title="HippoCortex_Aged_EGFP_1" spots="388101849" bases="119535369492" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21468860</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41595648</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8295834</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_I1_001.fastq.gz" size="2837976468" date="2024-05-30 01:14:09" md5="bf9715cecd36623dd24c643e439cda10" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228318/Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_I1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_R1_001.fastq.gz" size="34296840628" date="2024-05-30 01:28:24" md5="ce7aad215e08d2635d8e07e3e2c3846b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228318/Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_R2_001.fastq.gz" size="26247273706" date="2024-05-30 01:20:19" md5="52532d040064f73c109dc96cc9bd6ca9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29228318/Aged_EGFP_1_N1_CKDL240004914-1A_223WTHLT4_S3_L003_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228318" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228318/SRR29228318" size="44334065233" date="2024-05-30 01:44:07" md5="07ecde4ecd68dea76ed3d300158c2f9a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29228318/SRR29228318" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29228318.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228318/SRR29228318.lite.1" size="30425413873" date="2024-05-30 03:36:23" md5="3a4748482dba7e6a71abde6acca8b4c2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos7/sra-pub-zq-41/SRR029/29228/SRR29228318/SRR29228318.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR29228318/SRR29228318.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-106/SRR29228318/SRR29228318.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="3" nspots="388101849">
+          <Read index="0" count="388101849" average="8" stdev="0"/>
+          <Read index="1" count="388101849" average="150" stdev="0"/>
+          <Read index="2" count="388101849" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="388101849"/>
+                <Elements count="119535369492"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="116430554700">
+          <Base value="A" count="30898689059"/>
+          <Base value="C" count="23211025808"/>
+          <Base value="G" count="22209214580"/>
+          <Base value="T" count="40099927261"/>
+          <Base value="N" count="11697992"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

@@ -36,9 +36,9 @@ def collect_geo_samples(f):
             continue
         if sample_type.text == 'SRA':
             library_source = x.find('miniml:Library-Source', ns)
-            if library_source is not None and library_source.text == 'transcriptomic':
+            if library_source is not None and library_source.text in ['transcriptomic', 'transcriptomic single cell']:
                 library_strategy = x.find('miniml:Library-Strategy', ns)
-                if library_strategy is not None and library_strategy.text in ['RNA-Seq', 'ssRNA-seq', 'OTHER']:
+                if library_strategy is not None and library_strategy.text in ['RNA-Seq', 'ssRNA-seq', 'scRNA-Seq', 'snRNA-Seq', 'OTHER']:
                     gsm_identifiers.add(gsm_id.text)
 
     return gsm_identifiers

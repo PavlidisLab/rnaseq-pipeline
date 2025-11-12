@@ -19,17 +19,18 @@ import luigi.format
 import requests
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask, TaskWithMetadataMixin
 from luigi.util import requires
+from luigi.task import flatten
 
 from .sra import DownloadSraExperiment
-from ..config import rnaseq_pipeline
+from ..config import Config
 from ..miniml_utils import collect_geo_samples, collect_geo_samples_info
 from ..platforms import BgiPlatform, IlluminaPlatform
 from ..targets import ExpirableLocalTarget
 from ..utils import RerunnableTaskMixin
 
-cfg = rnaseq_pipeline()
+cfg = Config()
 
-logger = logging.getLogger('luigi-interface')
+logger = logging.getLogger(__name__)
 
 ns = {'miniml': 'http://www.ncbi.nlm.nih.gov/geo/info/MINiML'}
 
@@ -64,7 +65,7 @@ class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     """
     Download the MiNiML metadata for a given GEO Sample.
     """
-    gsm = luigi.Parameter()
+    gsm: str = luigi.Parameter()
 
     resources = {'geo_http_connections': 1}
 
@@ -91,6 +92,8 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download a GEO Sample given a runinfo file and
     """
+    gsm: str
+    metadata: dict
 
     @property
     def sample_id(self):
@@ -121,7 +124,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
     Download a GEO Series metadata containg information about related GEO
     Samples.
     """
-    gse = luigi.Parameter()
+    gse: str = luigi.Parameter()
 
     resources = {'geo_http_connections': 1}
 
@@ -131,7 +134,7 @@ class DownloadGeoSeriesMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luig
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
         res = requests.get('https://ftp.ncbi.nlm.nih.gov/geo/series/' + self.gse[
-                                                                        :-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz',
+            :-3] + 'nnn/' + self.gse + '/miniml/' + self.gse + '_family.xml.tgz',
                            stream=True)
         res.raise_for_status()
         # we need to use a temporary file because Response.raw does not allow seeking
@@ -154,6 +157,8 @@ class DownloadGeoSeries(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     Download all GEO Samples related to a GEO Series.
     """
+    gse: str
+    metadata: dict
 
     ignored_samples = luigi.ListParameter(default=[], description='Ignored GSM identifiers')
 
@@ -170,6 +175,7 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
     Extract the GEO Series batch information by looking up the GEO Series
     metadata and some downloaded FASTQs headers.
     """
+    gse: str
 
     def run(self):
         geo_series_metadata, samples = self.requires()
@@ -184,20 +190,21 @@ class ExtractGeoSeriesBatchInfo(luigi.Task):
                     continue
 
                 # TODO: find a cleaner way to obtain the SRA run accession
-                for fastq in sample.output():
-                    # strip the two extensions (.fastq.gz)
-                    fastq_name, _ = os.path.splitext(fastq.path)
-                    fastq_name, _ = os.path.splitext(fastq_name)
+                for run in flatten(sample.output()):
+                    for fastq in run.files:
+                        # strip the two extensions (.fastq.gz)
+                        fastq_name, _ = os.path.splitext(fastq)
+                        fastq_name, _ = os.path.splitext(fastq_name)
 
-                    # is this necessary?
-                    fastq_id = os.path.basename(fastq_name)
+                        # is this necessary?
+                        fastq_id = os.path.basename(fastq_name)
 
-                    platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
+                        platform_id, srx_uri = sample_geo_metadata[sample.sample_id]
 
-                    with gzip.open(fastq.path, 'rt') as f:
-                        fastq_header = f.readline().rstrip()
+                        with gzip.open(fastq, 'rt') as f:
+                            fastq_header = f.readline().rstrip()
 
-                    info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
+                        info_out.write('\t'.join([sample.sample_id, fastq_id, platform_id, srx_uri, fastq_header]) + '\n')
 
     def output(self):
         # TODO: organize batch info per source

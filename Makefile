@@ -16,7 +16,7 @@ install: install-python install-systemd-units install-RSEM install-scripts insta
 
 install-fish-completion:
 	mkdir -p "${DESTDIR}/etc/fish/completions"
-	install data/luigi.fish "${DESTDIR}/etc/fish/completions/"
+	install -m644 data/luigi.fish "${DESTDIR}/etc/fish/completions/"
 
 install-scripts:
 	$(MAKE) -C scripts install
@@ -26,7 +26,7 @@ install-python:
 
 install-systemd-units:
 	mkdir -p "${DESTDIR}/etc/systemd/system/"
-	install data/systemd/*.{service,timer,target} "${DESTDIR}/etc/systemd/system/"
+	install -m644 data/systemd/*.{service,timer} "${DESTDIR}/etc/systemd/system/"
 	@echo "Remember to run 'systemctl override rnaseq-pipeline-viewer' and 'systemctl override rnaseq-pipeline-worker@' and set CONDA_BIN, CONDA_ENV, GEMMA_USERNAME and GEMMA_PASSWORD environment variables."
 
 install-RSEM:

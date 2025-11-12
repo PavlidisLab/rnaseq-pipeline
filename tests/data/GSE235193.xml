@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710819" alias="GSM7496626_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710819</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496626_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496626: Hippocampus, pre-onset 3, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003555">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003555</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496626</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496626</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496626" accession="SRS18003555">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003555</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778241</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496626</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, pre-onset 3, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8aN1768D/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003555" sample_name="GSM7496626" sample_title="Hippocampus, pre-onset 3, snRNAseq" spots="557905357" bases="99865058903" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003555</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778241</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496626</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="99865058903" spots="557905357" bytes="32378234538">
+      <RUN accession="SRR24952767" alias="GSM7496626_r1" total_spots="557905357" total_bases="99865058903" size="32378234538" load_done="true" published="2024-07-05 17:04:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952767</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496626_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710819">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496626_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003555" sample_name="GSM7496626" sample_title="Hippocampus, pre-onset 3, snRNAseq" spots="557905357" bases="99865058903" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003555</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778241</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496626</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5863-SH-4_CATGTGGGTT-TAAAGGAATC_S4_R1_001.fastq.gz" size="11772353807" date="2023-06-16 22:33:16" md5="a552f03be72cda3c4cc61debd3498f2d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952767/5863-SH-4_CATGTGGGTT-TAAAGGAATC_S4_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5863-SH-4_CATGTGGGTT-TAAAGGAATC_S4_R2_001.fastq.gz" size="42123187472" date="2023-06-16 22:34:37" md5="d9ea05c1854414f8968cdbcab9fc17a9" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952767/5863-SH-4_CATGTGGGTT-TAAAGGAATC_S4_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952767" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952767/SRR24952767" size="32378236463" date="2023-06-16 22:37:12" md5="e8a896d75e091543806e5399188e9d1f" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952767/SRR24952767" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952767.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952767/SRR24952767.lite.1" size="25681519035" date="2023-06-22 09:42:41" md5="e97845d9da8adf42b5e235fc9b56d2d5" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952767/SRR24952767.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952767/SRR24952767.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952767/SRR24952767.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="557905357">
+          <Read index="0" count="557905357" average="28" stdev="0"/>
+          <Read index="1" count="557905357" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="557905357"/>
+                <Elements count="99865058903"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="99865058903">
+          <Base value="A" count="29567226320"/>
+          <Base value="C" count="20821666821"/>
+          <Base value="G" count="23080360864"/>
+          <Base value="T" count="26395135490"/>
+          <Base value="N" count="669408"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710818" alias="GSM7496625_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710818</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496625_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496625: Hippocampus, pre-onset 2, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003556">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003556</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496625</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496625</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496625" accession="SRS18003556">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003556</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778242</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496625</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, pre-onset 2, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8aN1768D/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003556" sample_name="GSM7496625" sample_title="Hippocampus, pre-onset 2, snRNAseq" spots="644263322" bases="115323134638" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003556</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778242</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496625</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="115323134638" spots="644263322" bytes="37564239599">
+      <RUN accession="SRR24952768" alias="GSM7496625_r1" total_spots="644263322" total_bases="115323134638" size="37564239599" load_done="true" published="2024-07-05 17:04:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952768</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496625_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710818">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496625_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003556" sample_name="GSM7496625" sample_title="Hippocampus, pre-onset 2, snRNAseq" spots="644263322" bases="115323134638" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003556</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778242</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496625</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5863-SH-3_AAGGGCCGCA-GAGGAATCAG_S3_R1_001.fastq.gz" size="13591705726" date="2023-06-16 22:27:50" md5="c5f680d722d22da63208a29686b874e8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952768/5863-SH-3_AAGGGCCGCA-GAGGAATCAG_S3_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5863-SH-3_AAGGGCCGCA-GAGGAATCAG_S3_R2_001.fastq.gz" size="49055456920" date="2023-06-16 22:29:20" md5="26b9ba0c09077c0d6166379f215863fc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952768/5863-SH-3_AAGGGCCGCA-GAGGAATCAG_S3_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952768" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952768/SRR24952768" size="37564241522" date="2023-06-16 22:32:48" md5="88440d1fcb6fbdd3edd1af9e2cfb83b1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952768/SRR24952768" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952768.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952768/SRR24952768.lite.1" size="29631603910" date="2023-06-22 09:16:00" md5="67052683c50fad5e0eb1223d96c23bb0" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952768/SRR24952768.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952768/SRR24952768.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952768/SRR24952768.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="644263322">
+          <Read index="0" count="644263322" average="28" stdev="0"/>
+          <Read index="1" count="644263322" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="644263322"/>
+                <Elements count="115323134638"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="115323134638">
+          <Base value="A" count="34182943179"/>
+          <Base value="C" count="24241453213"/>
+          <Base value="G" count="26507553895"/>
+          <Base value="T" count="30390413330"/>
+          <Base value="N" count="771021"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710817" alias="GSM7496624_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710817</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496624_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496624: Hippocampus, pre-onset 1, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003554">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003554</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496624</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496624</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496624" accession="SRS18003554">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003554</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778243</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496624</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, pre-onset 1, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8aN1768D/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003554" sample_name="GSM7496624" sample_title="Hippocampus, pre-onset 1, snRNAseq" spots="309012124" bases="93321661448" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003554</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778243</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496624</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="93321661448" spots="309012124" bytes="35033267353">
+      <RUN accession="SRR24952769" alias="GSM7496624_r1" total_spots="309012124" total_bases="93321661448" size="35033267353" load_done="true" published="2024-07-05 17:04:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952769</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496624_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710817">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496624_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003554" sample_name="GSM7496624" sample_title="Hippocampus, pre-onset 1, snRNAseq" spots="309012124" bases="93321661448" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003554</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778243</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496624</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5390-SH-2_CAATCCCGAC-TACTACTCGG_S2_R1_001.fastq.gz" size="29081224660" date="2023-06-16 22:22:34" md5="3a82cd49c8a0e95a7666b1ed9b9b4be0" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952769/5390-SH-2_CAATCCCGAC-TACTACTCGG_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5390-SH-2_CAATCCCGAC-TACTACTCGG_S2_R2_001.fastq.gz" size="26516631319" date="2023-06-16 22:21:00" md5="d39b7f63792e4333d2fa5d16d71aab68" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952769/5390-SH-2_CAATCCCGAC-TACTACTCGG_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952769" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952769/SRR24952769" size="35033269572" date="2023-06-16 22:25:35" md5="d124ec3f1523ac32e3b86222c4dc4df4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952769/SRR24952769" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952769.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952769/SRR24952769.lite.1" size="23823080900" date="2023-06-22 09:16:39" md5="05e583ed48650c43a7f65c43b4d6aeeb" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952769/SRR24952769.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952769/SRR24952769.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952769/SRR24952769.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="309012124">
+          <Read index="0" count="309012124" average="151" stdev="0"/>
+          <Read index="1" count="309012124" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="309012124"/>
+                <Elements count="93321661448"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="93321661448">
+          <Base value="A" count="28311836334"/>
+          <Base value="C" count="15150065276"/>
+          <Base value="G" count="17186567634"/>
+          <Base value="T" count="32672909658"/>
+          <Base value="N" count="282546"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710816" alias="GSM7496623_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710816</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496623_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496623: Hippocampus, control 3, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003552">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003552</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496623</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496623</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496623" accession="SRS18003552">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003552</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778244</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496623</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, control 3, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8a+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003552" sample_name="GSM7496623" sample_title="Hippocampus, control 3, snRNAseq" spots="627844842" bases="112384226718" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003552</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778244</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496623</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="112384226718" spots="627844842" bytes="36624597408">
+      <RUN accession="SRR24952770" alias="GSM7496623_r1" total_spots="627844842" total_bases="112384226718" size="36624597408" load_done="true" published="2024-07-05 17:04:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952770</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496623_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710816">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496623_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003552" sample_name="GSM7496623" sample_title="Hippocampus, control 3, snRNAseq" spots="627844842" bases="112384226718" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003552</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778244</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496623</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5863-SH-2_ATGGAGGGAG-AATGGGTTAT_S2_R1_001.fastq.gz" size="13163635483" date="2023-06-16 22:44:07" md5="d0426229e7f1d8ba086676c95b454309" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952770/5863-SH-2_ATGGAGGGAG-AATGGGTTAT_S2_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5863-SH-2_ATGGAGGGAG-AATGGGTTAT_S2_R2_001.fastq.gz" size="47848885253" date="2023-06-16 22:46:40" md5="bb7e32608fd502cf6bf2c6d99cb5aede" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952770/5863-SH-2_ATGGAGGGAG-AATGGGTTAT_S2_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952770" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952770/SRR24952770" size="36624599330" date="2023-06-16 22:54:31" md5="cd2aedb1a408f1804bda80f1ca77888a" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952770/SRR24952770" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952770.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952770/SRR24952770.lite.1" size="28880037942" date="2023-06-22 09:17:10" md5="5a49883ab2289b9bbb6a5099b5daf079" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952770/SRR24952770.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952770/SRR24952770.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952770/SRR24952770.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="627844842">
+          <Read index="0" count="627844842" average="28" stdev="0"/>
+          <Read index="1" count="627844842" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="627844842"/>
+                <Elements count="112384226718"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="112384226718">
+          <Base value="A" count="33422037938"/>
+          <Base value="C" count="23474768312"/>
+          <Base value="G" count="25691006866"/>
+          <Base value="T" count="29795659150"/>
+          <Base value="N" count="754452"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710815" alias="GSM7496622_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710815</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496622_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496622: Hippocampus, control 2, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003553">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003553</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496622</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496622</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496622" accession="SRS18003553">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003553</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778245</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496622</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, control 2, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8a+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003553" sample_name="GSM7496622" sample_title="Hippocampus, control 2, snRNAseq" spots="512005777" bases="91649034083" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003553</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778245</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496622</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="91649034083" spots="512005777" bytes="29616431225">
+      <RUN accession="SRR24952771" alias="GSM7496622_r1" total_spots="512005777" total_bases="91649034083" size="29616431225" load_done="true" published="2024-07-05 17:04:33" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952771</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496622_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710815">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496622_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003553" sample_name="GSM7496622" sample_title="Hippocampus, control 2, snRNAseq" spots="512005777" bases="91649034083" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003553</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778245</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496622</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5863-SH-1_TTAATACGCG-ACCCGAGGTG_S1_R1_001.fastq.gz" size="10865507348" date="2023-06-16 22:27:40" md5="e53477fd50c8de0d016cd6a08d280a09" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952771/5863-SH-1_TTAATACGCG-ACCCGAGGTG_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5863-SH-1_TTAATACGCG-ACCCGAGGTG_S1_R2_001.fastq.gz" size="38765408885" date="2023-06-16 22:29:11" md5="48b74741d3c3c839b9c124f08d0d0aa1" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952771/5863-SH-1_TTAATACGCG-ACCCGAGGTG_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952771" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952771/SRR24952771" size="29616433147" date="2023-06-16 22:33:43" md5="45ab0e3f81a1ba623ee9661d620ba4ae" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952771/SRR24952771" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952771.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952771/SRR24952771.lite.1" size="23584421111" date="2023-06-22 09:43:36" md5="97f97b4c5044b9fbcecc1ebac0599a70" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952771/SRR24952771.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952771/SRR24952771.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952771/SRR24952771.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="512005777">
+          <Read index="0" count="512005777" average="28" stdev="0"/>
+          <Read index="1" count="512005777" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="512005777"/>
+                <Elements count="91649034083"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="91649034083">
+          <Base value="A" count="27176447621"/>
+          <Base value="C" count="19284370930"/>
+          <Base value="G" count="20975683332"/>
+          <Base value="T" count="24211919579"/>
+          <Base value="N" count="612621"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX20710814" alias="GSM7496621_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX20710814</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496621_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7496621: Hippocampus, control 1, snRNAseq; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP444479">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP444479</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA984742</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18003551">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18003551</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7496621</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7496621</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>snRNA-seq sample collection was performed on fresh tissue over two batches: batch 1 (pre-onset 1 and control 1) and batch 2 (pre-onset 2&amp;3 and control 2&amp;3)At postnatal day 50 (n = 3 each), mice were euthanized and their brains were removed (Fig 1A-B). Bilateral hippocampi were immediately dissected and placed in a Dounce homogenizer with 1 mL lysis buffer: EZ Prep Lysis Buffer from Nuclei EZ Prep (Sigma #NUC101), 1mM DTT, 27U/mL Protector RNase inhibitor (Sigma #3335399001). Hippocampi were homogenized as follows: 25X with pestle A, 25X with pestle B, wait 2.5 minutes, 15X with pestle B, wait 2.5 minutes, 15X with pestle B. Samples were filtered through 30 um MACS strainers (Myltenyi, 130-098-458) and an additional 1 mL lysis buffer was added. Samples were centrifuged (500 rcf, 5 minutes, 4°C) and supernatant was discarded. Samples were resuspended in 750 uL wash buffer: 5mM MgCl­2, 10mM Tris buffer pH 8.0, 25 mM KCl, 1mM DTT, 27U/mL Protector RNase inhibitor, 1% bovine serum albumin. Samples were filtered through 30 um MACS strainers and centrifuged (500 rcf, 5 minutes, 4°C). Supernatant was discarded and pellets were resuspended in 1 mL wash buffer. Nuclei were stained with propidium iodide at a final concentration of 0.4ug/mL. Sorting was performed at the University of Michigan Flow Cytometry Core on a MoFlo Astrios Cell Sorter (Beckman Coulter). Sorted nuclei were collected in pre-washed tubes containing 100 uL wash buffer. Library preparation and sequencing were performed by the University of Michigan Advanced Genomics Core using the 10X Genomics single-nucleus 3' gene expression platform targeting 10,000 nuclei per sample and 60,000 reads per nucleus. Paired-end sequencing was performed on the NovaSeq6000.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Meisler Lab, Human Genetics, University of Michigan" accession="SRA1657699" alias="SUB13551322">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1657699</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Meisler Lab, Human Genetics, University of Michigan">SUB13551322</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Meisler Lab, Human Genetics, University of Michigan</Name>
+      <Contact email="sfhill@umich.edu">
+        <Address>
+          <Street>1241 E. Catherine St</Street>
+          <City>Ann Arbor</City>
+          <Sub>MI</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Sophie</First>
+          <Last>Hill</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE235193" accession="SRP444479">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP444479</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA984742</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE235193</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Long-term downregulation of SCN8A in mouse models of developmental and epileptic encephalopathy</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>De novo mutations of the voltage-gated sodium channel SCN8A cause severe developmental and epileptic encephalopathy (DEE).  Since pathogenic variants have gain-of-function effects on SCN8A activity, reduction of SCN8A expression is an effective therapeutic strategy. We previously described an antisense oligonucleotide (ASO) that delays seizure onset in a mouse model of SCN8A-DEE when administered at postnatal day 2. To investigate the potential effectiveness of post-onset ASO treatment, we first examined the extent of differential gene expression in hippocampus during the pre-onset period. Hippocampal single-nucleus RNA-sequencing detected only minor expression changes after the two month pre-seizure period.  ASO treatments that were initiated after seizure onset were protective in the Scn8a mutant mice during the 12 month observation period. As an alternative treatment for down-regulation of Scn8a, we administered a single dose of an AAV10 virus expressing Scn8a shRNA.  The viral shRNA was protective against seizures and lethality during the 12 month observation period. These data indicate that reduction of SCN8A expression, either by repeated administration of ASO or a single dose of shRNA virus, may be effective for longterm control of SCN8A-DEE. Overall design: Nuclei from adult mouse hippocampus were isolated, purified with FACS sorting, and analyzed with single-nucleus RNA-sequencing (10X Genomics 3' gene expression).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE235193</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7496621" accession="SRS18003551">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18003551</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN35778246</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7496621</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus, control 1, snRNAseq</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>984742</ID>
+            <LABEL>PRJNA984742</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>P50</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Scn8a+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain</TAG>
+          <VALUE>C57BL/6J</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>batch</TAG>
+          <VALUE>1</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18003551" sample_name="GSM7496621" sample_title="Hippocampus, control 1, snRNAseq" spots="324406721" bases="97970829742" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18003551</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN35778246</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496621</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="97970829742" spots="324406721" bytes="36708457730">
+      <RUN accession="SRR24952772" alias="GSM7496621_r1" total_spots="324406721" total_bases="97970829742" size="36708457730" load_done="true" published="2024-07-05 17:04:32" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR24952772</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7496621_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX20710814">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7496621_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18003551" sample_name="GSM7496621" sample_title="Hippocampus, control 1, snRNAseq" spots="324406721" bases="97970829742" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18003551</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN35778246</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7496621</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="5390-SH-1_TCTACCATTT-GACTCTCCCG_S1_R1_001.fastq.gz" size="30489633336" date="2023-06-16 22:33:24" md5="0f30669b645208dc275f8acd7fe024f4" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952772/5390-SH-1_TCTACCATTT-GACTCTCCCG_S1_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="5390-SH-1_TCTACCATTT-GACTCTCCCG_S1_R2_001.fastq.gz" size="27862037592" date="2023-06-16 22:31:57" md5="e06760624e84acc2ecbd4419a05d7e4d" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-14/SRR24952772/5390-SH-1_TCTACCATTT-GACTCTCCCG_S1_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952772" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952772/SRR24952772" size="36708459948" date="2023-06-16 22:38:24" md5="af725758981c94c0d594a0c409a4fdd4" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24952772/SRR24952772" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR24952772.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952772/SRR24952772.lite.1" size="25019986948" date="2023-06-22 09:30:20" md5="f35fa69cce122eb39737f8220c640f2a" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR024/24952/SRR24952772/SRR24952772.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-1/SRR24952772/SRR24952772.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR24952772/SRR24952772.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="2" nspots="324406721">
+          <Read index="0" count="324406721" average="151" stdev="0"/>
+          <Read index="1" count="324406721" average="151" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="324406721"/>
+                <Elements count="97970829742"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="97970829742">
+          <Base value="A" count="29565768455"/>
+          <Base value="C" count="15881619608"/>
+          <Base value="G" count="18008494187"/>
+          <Base value="T" count="34514665031"/>
+          <Base value="N" count="282461"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

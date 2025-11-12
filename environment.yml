@@ -4,13 +4,15 @@ channels:
 - bioconda
 - nodefaults
 dependencies:
-- python=3.10
+- python=3.12
 - pip
-- cutadapt==4.8
-- multiqc==1.29
+- cutadapt==4.9
+- multiqc==1.32
 - polars-lts-cpu # for our older servers that lack support for AVX2
 - sra-tools
 - fastqc==0.12.1
 - star==2.7.3a
 - entrez-direct
 - perl # rsem expects this
+- samtools
+- curl

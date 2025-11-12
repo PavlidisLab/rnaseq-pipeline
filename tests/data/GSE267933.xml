@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614051" alias="GSM8281763_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614051</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281763_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281763: Hippocampus_Surgery_rep3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351285">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351285</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281763</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281763</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281763" accession="SRS21351285">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351285</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463838</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281763</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Surgery_rep3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351285" sample_name="GSM8281763" sample_title="Hippocampus_Surgery_rep3" spots="423159635" bases="63473945250" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351285</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463838</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281763</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="63473945250" spots="423159635" bytes="10387456052">
+      <RUN accession="SRR29089909" alias="GSM8281763_r1" total_spots="423159635" total_bases="63473945250" size="10387456052" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089909</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281763_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614051">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281763_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351285" sample_name="GSM8281763" sample_title="Hippocampus_Surgery_rep3" spots="423159635" bases="63473945250" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351285</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463838</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281763</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_S3_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089909/Hippocampus_S3_raw.bam.1" size="25951322161" date="2024-05-20 21:46:43" md5="5454752f0b33909c2e68382beb2a8233" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR29089909/Hippocampus_S3_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089909/Hippocampus_S3_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089909" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089909/SRR29089909" size="10387471106" date="2024-05-20 21:52:05" md5="25c93b8d0e770593f94c0a2e32da8a9d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089909/SRR29089909" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089909.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089909/SRR29089909.lite.1" size="5480064035" date="2024-05-20 22:41:39" md5="5f14c88f11e2b3bcdf0a2c6d3c02c1ff" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089909/SRR29089909.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089909/SRR29089909.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089909/SRR29089909.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="423159635">
+          <Read index="0" count="423159635" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="406158935"/>
+                <Elements count="60923840250"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546192"/>
+                <Elements count="2730806273"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="52859046"/>
+                <Elements count="7928856900"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="423159635"/>
+                <Elements count="63473945250"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="63473945250">
+          <Base value="A" count="17672979246"/>
+          <Base value="C" count="14644863795"/>
+          <Base value="G" count="14929291351"/>
+          <Base value="T" count="16225432883"/>
+          <Base value="N" count="1377975"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614050" alias="GSM8281762_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614050</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281762_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281762: Hippocampus_Surgery_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351284">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351284</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281762</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281762</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281762" accession="SRS21351284">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351284</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463839</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281762</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Surgery_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351284" sample_name="GSM8281762" sample_title="Hippocampus_Surgery_rep2" spots="606186168" bases="90927925200" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351284</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463839</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281762</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="90927925200" spots="606186168" bytes="16210457764">
+      <RUN accession="SRR29089910" alias="GSM8281762_r1" total_spots="606186168" total_bases="90927925200" size="16210457764" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089910</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281762_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614050">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281762_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351284" sample_name="GSM8281762" sample_title="Hippocampus_Surgery_rep2" spots="606186168" bases="90927925200" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351284</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463839</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281762</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_S2_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089910/Hippocampus_S2_raw.bam.1" size="38669714080" date="2024-05-20 21:48:09" md5="439355351f141857b919742f5d82da44" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR29089910/Hippocampus_S2_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089910/Hippocampus_S2_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089910" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089910/SRR29089910" size="16210472820" date="2024-05-20 21:51:19" md5="3b0c34b5840af5ec258ace479780ed6b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089910/SRR29089910" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089910.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089910/SRR29089910.lite.1" size="9066679726" date="2024-05-20 22:43:10" md5="85e80abbf1605c4f6ef9c0b9f59e0ed4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089910/SRR29089910.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089910/SRR29089910.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089910/SRR29089910.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="606186168">
+          <Read index="0" count="606186168" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="576547816"/>
+                <Elements count="86482172400"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546187"/>
+                <Elements count="2730781950"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="82042770"/>
+                <Elements count="12306415500"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="606186168"/>
+                <Elements count="90927925200"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="90927925200">
+          <Base value="A" count="26748181737"/>
+          <Base value="C" count="20139404795"/>
+          <Base value="G" count="20770374193"/>
+          <Base value="T" count="23267843535"/>
+          <Base value="N" count="2120940"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614049" alias="GSM8281761_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614049</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281761_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281761: Hippocampus_Surgery_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351282">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351282</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281761</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281761</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281761" accession="SRS21351282">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351282</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463840</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281761</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Surgery_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351282" sample_name="GSM8281761" sample_title="Hippocampus_Surgery_rep1" spots="506214479" bases="75932171850" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351282</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463840</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281761</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="75932171850" spots="506214479" bytes="13094906660">
+      <RUN accession="SRR29089911" alias="GSM8281761_r1" total_spots="506214479" total_bases="75932171850" size="13094906660" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089911</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281761_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614049">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281761_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351282" sample_name="GSM8281761" sample_title="Hippocampus_Surgery_rep1" spots="506214479" bases="75932171850" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351282</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463840</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281761</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_S1_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089911/Hippocampus_S1_raw.bam.1" size="32261038609" date="2024-05-20 22:04:41" md5="9d8746165c932a1c77d07b1a75f9bbd4" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR29089911/Hippocampus_S1_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089911/Hippocampus_S1_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089911" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089911/SRR29089911" size="13094921722" date="2024-05-20 22:09:05" md5="635c8516755c78a60bad7113aa78d523" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089911/SRR29089911" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089911.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089911/SRR29089911.lite.1" size="7040072846" date="2024-05-20 22:42:40" md5="c7d4c5bed497bae057b76ab0ab45d0a6" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089911/SRR29089911.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089911/SRR29089911.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089911/SRR29089911.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="506214479">
+          <Read index="0" count="506214479" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="484926092"/>
+                <Elements count="72738913800"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546192"/>
+                <Elements count="2730806273"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="65100163"/>
+                <Elements count="9765024450"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="506214479"/>
+                <Elements count="75932171850"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="75932171850">
+          <Base value="A" count="22015695271"/>
+          <Base value="C" count="16845359350"/>
+          <Base value="G" count="16994966426"/>
+          <Base value="T" count="20074464594"/>
+          <Base value="N" count="1686209"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614048" alias="GSM8281760_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614048</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281760_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281760: Hippocampus_Control_rep3; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351283">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351283</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281760</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281760</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281760" accession="SRS21351283">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351283</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463841</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281760</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Control_rep3</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351283" sample_name="GSM8281760" sample_title="Hippocampus_Control_rep3" spots="573782818" bases="86067422700" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351283</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463841</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281760</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="86067422700" spots="573782818" bytes="14452751436">
+      <RUN accession="SRR29089912" alias="GSM8281760_r1" total_spots="573782818" total_bases="86067422700" size="14452751436" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089912</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281760_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614048">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281760_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351283" sample_name="GSM8281760" sample_title="Hippocampus_Control_rep3" spots="573782818" bases="86067422700" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351283</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463841</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281760</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_C3_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089912/Hippocampus_C3_raw.bam.1" size="35573457487" date="2024-05-20 22:17:04" md5="4e0f4385610dfefcdfdbbbf4fde7ce02" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR29089912/Hippocampus_C3_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089912/Hippocampus_C3_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089912" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089912/SRR29089912" size="14452766498" date="2024-05-20 22:21:55" md5="bb089e9849b94765aa268fecdc961c3e" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089912/SRR29089912" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089912.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089912/SRR29089912.lite.1" size="7357640816" date="2024-05-20 22:43:35" md5="b1f7ef75bf6b0249538c5939ff67aaa2" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089912/SRR29089912.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089912/SRR29089912.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089912/SRR29089912.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="573782818">
+          <Read index="0" count="573782818" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="549669837"/>
+                <Elements count="82450475550"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546184"/>
+                <Elements count="2730771033"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="69084461"/>
+                <Elements count="10362669150"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="573782818"/>
+                <Elements count="86067422700"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="86067422700">
+          <Base value="A" count="24525247198"/>
+          <Base value="C" count="19524999974"/>
+          <Base value="G" count="19765639294"/>
+          <Base value="T" count="22249599248"/>
+          <Base value="N" count="1936986"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614047" alias="GSM8281759_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614047</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281759_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281759: Hippocampus_Control_rep2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351281">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351281</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281759</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281759</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281759" accession="SRS21351281">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351281</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463842</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281759</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Control_rep2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351281" sample_name="GSM8281759" sample_title="Hippocampus_Control_rep2" spots="522691396" bases="78403709400" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351281</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463842</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281759</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="78403709400" spots="522691396" bytes="13031772610">
+      <RUN accession="SRR29089913" alias="GSM8281759_r1" total_spots="522691396" total_bases="78403709400" size="13031772610" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089913</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281759_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614047">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281759_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351281" sample_name="GSM8281759" sample_title="Hippocampus_Control_rep2" spots="522691396" bases="78403709400" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351281</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463842</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281759</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_C2_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089913/Hippocampus_C2_raw.bam.1" size="32706048517" date="2024-05-20 22:25:28" md5="f4ae8a2ea6354c56ed628764f62c8111" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-12/SRR29089913/Hippocampus_C2_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089913/Hippocampus_C2_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089913" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089913/SRR29089913" size="13031787671" date="2024-05-20 22:32:00" md5="b198f764a34d3a7a0033aedaf6679cd5" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089913/SRR29089913" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089913.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089913/SRR29089913.lite.1" size="6652176737" date="2024-05-20 22:41:43" md5="5c4047cbb88c92434da71f853608d6da" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089913/SRR29089913.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089913/SRR29089913.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089913/SRR29089913.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="522691396">
+          <Read index="0" count="522691396" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="502018681"/>
+                <Elements count="75302802150"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546190"/>
+                <Elements count="2730796895"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="78803540"/>
+                <Elements count="11820531000"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="522691396"/>
+                <Elements count="78403709400"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="78403709400">
+          <Base value="A" count="22794512026"/>
+          <Base value="C" count="17742554932"/>
+          <Base value="G" count="17371888233"/>
+          <Base value="T" count="20493008671"/>
+          <Base value="N" count="1745538"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24614046" alias="GSM8281758_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24614046</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281758_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8281758: Hippocampus_Control_rep1; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP508801">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP508801</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1113658</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21351280">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21351280</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8281758</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8281758</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC SINGLE CELL</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Hippocampal cells were isolated using the Adult Brain Dissociation Kit (Miltenyi Biotec), with freshly dissected brain tissues enzymatically digested and suspended in 0.5% BSA-PSA. Tissues were washed in cold D-PBS, dissected, and treated with enzyme mixes in a gentleMACS C Tube. Post gentleMACS processing, samples were filtered through a 70 µm MACS SmartStrainer, washed, and centrifuged. The supernatant was removed, cells were treated with Debris Removal Solution, and the final cell suspension was prepared for analysis. scRNA-seq libraries were prepared according to the Single Cell 3' Reagent Kits v2 manual. Cells were encapsulated with reagents and beads containing Illumina linkers, 10X cell barcodes, UMIs, and poly dT on a microfluidic chip to form GEMs. After cell lysis within each GEM, mRNA was reverse transcribed to cDNA, tagged with a unique barcode. The pooled cDNA was then amplified and prepared for sequencing.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Chinese Academy of Medical Sciences and Peking Union Medical College" accession="SRA1871912" alias="SUB14463243">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1871912</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Chinese Academy of Medical Sciences and Peking Union Medical College">SUB14463243</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Chinese Academy of Medical Sciences and Peking Union Medical College</Name>
+      <Contact email="228201025@csu.com">
+        <Address>
+          <Street>No.4 Jiang Wang Temple Street</Street>
+          <City>Nanjing</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiaoli</First>
+          <Last>Min</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE267933" accession="SRP508801">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP508801</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1113658</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE267933</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Hippocampal single-cell atlas screening unveils disrupted neuroglial system in postoperative cognitive impairment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>This study investigates the roles of neurons, microglia, astrocytes, and oligodendrocytes in the pathogenesis of postoperative cognitive impairment, focusing on a dysregulated glia-neuron cycle. We utilized 18-month male C57BL/6 mice to model this condition, conducting single-cell RNA sequencing in the hippocampus to explore the neuroglial interactions and their implications in neuroinflammation, synaptic dysfunction, and myelin loss. This dataset includes transcriptomic profiles aimed at decoding the cellular communication in aged hippocampal cells and assessing the impact of therapeutic interventions on postoperative cognitive decline. Overall design: In this study, we examined the effects of sevoflurane anesthesia combined with surgical stress on hippocampal function in mice. The surgery group was exposed to 2.5% sevoflurane in 50% oxygen for 30 minutes using a breathing mask, while the control group received only 50% oxygen for the same duration. Sevoflurane levels were continuously monitored using a Datex anesthetic monitor. A modified exploratory laparotomy was performed on the surgery group, followed by a recovery period in 50% oxygen. After 24 hours, hippocampal tissues were collected for single-cell RNA sequencing.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE267933</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39540334</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8281758" accession="SRS21351280">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21351280</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41463843</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8281758</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Hippocampus_Control_rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1113658</ID>
+            <LABEL>PRJNA1113658</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Hippocampus</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21351280" sample_name="GSM8281758" sample_title="Hippocampus_Control_rep1" spots="499719130" bases="74957869500" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21351280</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41463843</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281758</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="74957869500" spots="499719130" bytes="12549082044">
+      <RUN accession="SRR29089914" alias="GSM8281758_r1" total_spots="499719130" total_bases="74957869500" size="12549082044" load_done="true" published="2024-11-15 03:44:10" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29089914</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8281758_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24614046">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8281758_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>assembly</TAG>
+            <VALUE>mm10</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>intentional_duplicate</TAG>
+            <VALUE/>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS21351280" sample_name="GSM8281758" sample_title="Hippocampus_Control_rep1" spots="499719130" bases="74957869500" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21351280</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41463843</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8281758</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Hippocampus_C1_raw.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089914/Hippocampus_C1_raw.bam.1" size="31101069179" date="2024-09-03 17:16:33" md5="61b576edc2876e0b5e759006ce64a871" version="1" semantic_name="10X Genomics bam file" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-9/SRR29089914/Hippocampus_C1_raw.bam.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR29089914/Hippocampus_C1_raw.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089914" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089914/SRR29089914" size="12549097105" date="2024-09-03 17:20:55" md5="48af6345883abb5bc9e6d9a5cba02bed" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29089914/SRR29089914" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29089914.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089914/SRR29089914.lite.1" size="6402246590" date="2024-09-03 18:14:29" md5="8deb2103b62dc8452b188bd042d516f4" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos6/sra-pub-zq-40/SRR029/29089/SRR29089914/SRR29089914.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29089914/SRR29089914.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29089914/SRR29089914.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="TenX" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="499719130">
+          <Read index="0" count="499719130" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="PRIMARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="478884786"/>
+                <Elements count="71832717900"/>
+              </Statistics>
+            </Table>
+            <Table name="REFERENCE">
+              <Statistics source="meta">
+                <Rows count="546182"/>
+                <Elements count="2730761655"/>
+              </Statistics>
+            </Table>
+            <Table name="SECONDARY_ALIGNMENT">
+              <Statistics source="meta">
+                <Rows count="63505308"/>
+                <Elements count="9525796200"/>
+              </Statistics>
+            </Table>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="499719130"/>
+                <Elements count="74957869500"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="74957869500">
+          <Base value="A" count="21469759172"/>
+          <Base value="C" count="16964762192"/>
+          <Base value="G" count="17149245951"/>
+          <Base value="T" count="19372450528"/>
+          <Base value="N" count="1651657"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>
