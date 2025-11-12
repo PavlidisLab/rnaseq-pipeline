@@ -637,7 +637,7 @@ class DownloadSraExperimentMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, 
     resources = {'edirect_http_connections': 1}
 
     # retry this task at least once (see https://github.com/PavlidisLab/rnaseq-pipeline/issues/66)
-    retry_count = 1
+    retry_count = 3
 
     def run(self):
         if self.output().is_stale():
