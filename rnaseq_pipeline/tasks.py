@@ -382,6 +382,20 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                            scope=self.scope)
                for dst in download_sample_tasks]
 
+def write_sample_names_file(sample_names_file, trim_sample_dirs, qc_sample_dirs):
+    os.makedirs(dirname(sample_names_file), exist_ok=True)
+    with open(sample_names_file, 'w') as out:
+        for sample_trim_dirs in trim_sample_dirs:
+            for lane_trim in sample_trim_dirs:
+                run_id = '___'.join(str(basename(lt.path).removesuffix('.fastq.gz'))
+                                    for lt in lane_trim)
+                sample_id = basename(dirname(dirname(lane_trim[0].path)))
+                out.write(f'{run_id}\t{sample_id}_{run_id}\n')
+        for lane_qc in flatten(qc_sample_dirs):
+            run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
+            sample_id = basename(dirname(dirname(dirname(lane_qc.path))))
+            out.write(f'{run_id}\t{sample_id}_{run_id}\n')
+
 @no_retry
 @requires(TrimExperiment, QualityControlExperiment, AlignExperiment)
 class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
@@ -399,21 +413,10 @@ class GenerateReportForExperiment(RerunnableTaskMixin, luigi.Task):
         search_dirs.update(dirname(out.path) for out in flatten(trim_sample_dirs))
         search_dirs.update(dirname(out.path) for out in flatten(qc_sample_dirs)),
         search_dirs.update(dirname(out.path) for out in flatten(align_sample_dirs))
-        self.output().makedirs()
         # we used to write the sample_names.tsv file inside the directory, but that is not working anymore since writing
         # MultiQC report now uses atomic write
         sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id + '.sample_names.tsv')
-        with open(sample_names_file, 'w') as out:
-            for sample_trim_dirs in trim_sample_dirs:
-                for lane_trim in sample_trim_dirs:
-                    run_id = '___'.join(str(basename(lt.path).removesuffix('.fastq.gz'))
-                                        for lt in lane_trim)
-                    sample_id = basename(dirname(dirname(lane_trim[0].path)))
-                    out.write(f'{run_id}\t{sample_id}_{run_id}\n')
-            for lane_qc in flatten(qc_sample_dirs):
-                run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
-                sample_id = basename(dirname(dirname(dirname(lane_qc.path))))
-                out.write(f'{run_id}\t{sample_id}_{run_id}\n')
+        write_sample_names_file(sample_names_file, trim_sample_dirs, qc_sample_dirs)
         yield multiqc.GenerateReport(input_dirs=search_dirs,
                                      output_dir=dirname(self.output().path),
                                      replace_names=sample_names_file,
@@ -512,6 +515,7 @@ class AlignSingleCellSample(DynamicWrapperTask):
 @requires(DownloadExperiment)
 class OrganizeSingleCellExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     experiment_id: str
+
     def run(self):
         download_sample_tasks = next(self.requires().run())
         yield [OrganizeSingleCellSample(experiment_id=self.experiment_id, sample_id=task.sample_id)
@@ -552,19 +556,7 @@ class GenerateReportForSingleCellExperiment(RerunnableTaskMixin, luigi.Task):
         # we used to write the sample_names.tsv file inside the directory, but that is not working anymore since writing
         # MultiQC report now uses atomic write
         sample_names_file = join(cfg.OUTPUT_DIR, 'report', self.reference_id, self.experiment_id + '.sample_names.tsv')
-        os.makedirs(dirname(sample_names_file), exist_ok=True)
-        with open(sample_names_file, 'w') as out:
-            for sample_trim_dirs in trim_sample_dirs:
-                for lane_trim in sample_trim_dirs:
-                    run_id = '___'.join(str(basename(lt.path).removesuffix('.fastq.gz'))
-                                        for lt in lane_trim)
-                    sample_id = basename(dirname(dirname(lane_trim[0].path)))
-                    out.write(f'{run_id}\t{sample_id}_{run_id}\n')
-            for lane_qc in flatten(qc_sample_dirs):
-                run_id = basename(lane_qc.path).removesuffix('_fastqc.html')
-                sample_id = basename(dirname(dirname(dirname(lane_qc.path))))
-                out.write(f'{run_id}\t{sample_id}_{run_id}\n')
-
+        write_sample_names_file(sample_names_file, trim_sample_dirs, qc_sample_dirs)
         yield multiqc.GenerateReport(input_dirs=search_dirs,
                                      output_dir=dirname(self.output().path),
                                      replace_names=sample_names_file,
