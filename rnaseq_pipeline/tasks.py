@@ -23,7 +23,7 @@ from luigi.task import flatten, flatten_output
 from luigi.util import requires
 
 from rnaseq_pipeline.config import Config
-from .gemma import GemmaAssayType, GemmaTaskMixin, GemmaConfig
+from .gemma import GemmaAssayType, GemmaTaskMixin, GemmaConfig, gemma_api
 from .gemma import GemmaCliTask
 from .sources.arrayexpress import DownloadArrayExpressSample, DownloadArrayExpressExperiment
 from .sources.gemma import DownloadGemmaExperiment
@@ -819,7 +819,7 @@ class ReorganizeSplitExperiment(GemmaTaskMixin):
         for split_id in range(self.num_splits):
             split_id = self.experiment_id + '.' + str(split_id + 1)
             logger.info('Reorganizing data for %s.', split_id)
-            for sample in self._gemma_api.samples(split_id):
+            for sample in gemma_api.samples(split_id):
                 sample_id = sample['accession']['accession']
                 for d in dirs_to_relocate:
                     for sample_file in iglob(join(d, self.experiment_id, sample_id)):

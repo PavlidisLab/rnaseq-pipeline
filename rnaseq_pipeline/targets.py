@@ -8,7 +8,7 @@ from typing import Optional
 
 import luigi
 
-from .gemma import GemmaApi
+from .gemma import gemma_api
 
 logger = logging.getLogger(__name__)
 
@@ -52,14 +52,13 @@ class GemmaDatasetQuantitationType(luigi.Target):
         self.dataset = dataset
         self.quantitation_type = quantitation_type
         self.vector_type = vector_type
-        self._gemma_api = GemmaApi()
 
     def exists(self):
         return any(
             (quantitation_type['id'] == self.quantitation_type or quantitation_type['name'] == self.quantitation_type
              if self.quantitation_type else quantitation_type['isPreferred'])
             and (quantitation_type['vectorType'] == self.vector_type.value if self.vector_type else True)
-            for quantitation_type in self._gemma_api.quantitation_types(self.dataset))
+            for quantitation_type in gemma_api.quantitation_types(self.dataset))
 
     def __repr__(self):
         return f'GemmaDatasetQuantitationType(dataset={self.dataset}, quantitation_type={self.quantitation_type}, vector_type={self.vector_type})'
@@ -71,10 +70,9 @@ class GemmaDatasetHasBatch(luigi.Target):
 
     def __init__(self, dataset_short_name):
         self.dataset_short_name = dataset_short_name
-        self._gemma_api = GemmaApi()
 
     def exists(self):
-        return self._gemma_api.dataset_has_batch(self.dataset_short_name)
+        return gemma_api.dataset_has_batch(self.dataset_short_name)
 
 class ExpirableLocalTarget(luigi.LocalTarget):
     """

@@ -71,17 +71,15 @@ class GemmaApi:
     def quantitation_types(self, experiment_id):
         return self._query_api(join('datasets', experiment_id, 'quantitationTypes'))
 
+gemma_api = GemmaApi()
+
 class GemmaTaskMixin(luigi.Task):
     experiment_id = luigi.Parameter()
-
-    def __init__(self, *kwargs, **kwds):
-        super().__init__(*kwargs, **kwds)
-        self._gemma_api = GemmaApi()
 
     @property
     def dataset_info(self):
         if not hasattr(self, '_dataset_info'):
-            data = self._gemma_api.datasets(self.experiment_id)
+            data = gemma_api.datasets(self.experiment_id)
             if not data:
                 raise RuntimeError('Could not retrieve Gemma dataset with short name {}.'.format(self.experiment_id))
             self._dataset_info = data[0]
@@ -112,7 +110,7 @@ class GemmaTaskMixin(luigi.Task):
         try:
             if self.assay_type == GemmaAssayType.BULK_RNA_SEQ:
                 return {'human': cfg.human_reference_id, 'mouse': cfg.mouse_reference_id, 'rat': cfg.rat_reference_id}[
-                self.taxon]
+                    self.taxon]
             elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
                 return {'human': cfg.human_single_cell_reference_id, 'mouse': cfg.mouse_single_cell_reference_id,
                         'rat': cfg.rat_single_cell_reference_id}[
@@ -150,7 +148,7 @@ class GemmaTaskMixin(luigi.Task):
                           'http://www.ebi.ac.uk/efo/EFO_0005684']
         fac_sorted_uri = 'http://www.ebi.ac.uk/efo/EFO_0009108'
 
-        annotations = self._gemma_api.dataset_annotations(self.experiment_id)
+        annotations = gemma_api.dataset_annotations(self.experiment_id)
         fac_sorted = any(annotation['classUri'] == assay_type_class_uri and annotation['termUri'] == fac_sorted_uri
                          for annotation in annotations)
         for annotation in annotations:

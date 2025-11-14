@@ -1,12 +1,12 @@
 import logging
 
 import luigi
-
 from bioluigi.tasks.utils import DynamicTaskWithOutputMixin, DynamicWrapperTask
+
 from .geo import DownloadGeoSample
 from .sra import DownloadSraExperiment
 from ..config import Config
-from ..gemma import GemmaApi
+from ..gemma import gemma_api
 
 logger = logging.getLogger(__name__)
 
@@ -21,12 +21,8 @@ class DownloadGemmaExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     """
     experiment_id: str = luigi.Parameter()
 
-    def __init__(self, *kwargs, **kwds):
-        super().__init__(*kwargs, **kwds)
-        self._gemma_api = GemmaApi()
-
     def run(self):
-        data = self._gemma_api.samples(self.experiment_id)
+        data = gemma_api.samples(self.experiment_id)
         download_sample_tasks = []
         for sample in data:
             accession = sample['accession']['accession']
