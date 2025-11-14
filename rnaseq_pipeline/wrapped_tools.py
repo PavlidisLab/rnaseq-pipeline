@@ -66,10 +66,10 @@ def move_directory(from_dir, to_dir):
         shutil.move(from_dir, to_dir)
 
 def subprocess_run(args, **kwargs):
-    proc = subprocess.Popen(args, **kwargs)
-    with ExternalProgramRunContext(proc):
-        proc.wait()
-    return proc.returncode
+    with subprocess.Popen(args, **kwargs) as proc:
+        with ExternalProgramRunContext(proc):
+            proc.wait()
+        return proc.returncode
 
 def rsem_calculate_expression_wrapper():
     """Wrapper script for RSEM that copies the reference to a local temporary directory."""
