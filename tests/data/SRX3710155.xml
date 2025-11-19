@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM3014592" accession="SRX3710155">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX3710155</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM3014592: KRT5-traced transformed bladder cells [CTB056]; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP132946" refname="GSE110694">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP132946</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS2968652">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS2968652</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM3014592</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <SINGLE/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>RNA was extracted using the MagMAX-96 RNA isolation kit (Ambion). Quality control was performed with Agilent Bioanalyser 2100. We use poly-A pull-down to enrich mRNAs from total RNA samples (5ng-200ng per sample, RIN&gt;8 required) and proceed on library preparation by using Illumina TruSeq RNA prep kit. Libraries are then sequenced using Illumina HiSeq2500 at Columbia Genome Center. We multiplex samples in each lane, which yields targeted number of single-end/paired-end 100bp reads for each sample, as a fraction of 180 million reads for the whole lane.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>303014592</ID>
+            <LABEL>GSM3014592</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+      <EXPERIMENT_ATTRIBUTES>
+        <EXPERIMENT_ATTRIBUTE>
+          <TAG>GEO Accession</TAG>
+          <VALUE>GSM3014592</VALUE>
+        </EXPERIMENT_ATTRIBUTE>
+      </EXPERIMENT_ATTRIBUTES>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE110694" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA659887">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA659887</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE110694</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE110694" accession="SRP132946">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP132946</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA434288</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE110694</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Transcriptome profiling of normal and transformed mouse urothelial cells</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Transcriptome analysis of urothelial KRT5-traced and KRT8-traced YFP-sorted cells with and without combinatorial loss of Trp53 and Pten. Bladders from 2-month-old KRT5-CreERT2, Rosa26YFP/LacZ mice, 2-month-old KRT8-CreERT2, Rosa26YFP/LacZ mice, 5-month-old KRT5-CreERT2, p53flox/flox, Ptenflox/flox, Rosa26YFP/+ mice, and 5-month-old KRT8-CreERT2, p53flox/flox, Ptenflox/flox, Rosa26YFP/+ mice were enzymatically dissociated, sorted for YFP by FACS, harvested, resuspended in Trizol and snap frozen for subsequent molecular analysis. Overall design: Total RNA obtained from YFP-sorted urothelial cells were harvested and processed for RNA isolation and transcriptome analysis using the MagMAX RNA isolation kit (Ambion). RNA was amplified using SMART-Seq® v4 Ultra® Low Input RNA Kit (Takara # 634891).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE110694</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34470779</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM3014592" accession="SRS2968652">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS2968652</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN08550524</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM3014592</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KRT5-traced transformed bladder cells [CTB056]</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>434288</ID>
+            <LABEL>PRJNA434288</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>urothelial cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>strain/background</TAG>
+          <VALUE>outbreed</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype/variation</TAG>
+          <VALUE>KRT5-CreERT2, p53flox/flox, Ptenflox/flox, Rosa26YFP/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>age</TAG>
+          <VALUE>5 months</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>Sex</TAG>
+          <VALUE>female</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>bladder</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>YFP-sorted urothelial cells</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS2968652" sample_name="GSM3014592" sample_title="KRT5-traced transformed bladder cells [CTB056]" spots="19676478" bases="1978227095" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS2968652</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN08550524</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM3014592</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="1978227095" spots="19676478" bytes="398152762">
+      <RUN alias="GSM3014592_r1" accession="SRR6737222" total_spots="19676478" total_bases="1978227095" size="398152762" load_done="true" published="2019-01-02 11:50:06" is_public="true" cluster_name="public" static_data_available="1" assembly="mm10">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR6737222</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM3014592_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX3710155" refname="GSM3014592"/>
+        <Pool>
+          <Member member_name="" accession="SRS2968652" sample_name="GSM3014592" sample_title="KRT5-traced transformed bladder cells [CTB056]" spots="19676478" bases="1978227095" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS2968652</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN08550524</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM3014592</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <AlignInfo cnt="55">
+          <Alignment name="chr1" seqid="NC_000067.6" gi="372099109"/>
+          <Alignment name="chr2" seqid="NC_000068.7" gi="372099108"/>
+          <Alignment name="chrX" seqid="NC_000086.7" gi="372099090"/>
+          <Alignment name="chr3" seqid="NC_000069.6" gi="372099107"/>
+          <Alignment name="chr4" seqid="NC_000070.6" gi="372099106"/>
+          <Alignment name="chr5" seqid="NC_000071.6" gi="372099105"/>
+          <Alignment name="chr6" seqid="NC_000072.6" gi="372099104"/>
+          <Alignment name="chr7" seqid="NC_000073.6" gi="372099103"/>
+          <Alignment name="chr10" seqid="NC_000076.6" gi="372099100"/>
+          <Alignment name="chr8" seqid="NC_000074.6" gi="372099102"/>
+          <Alignment name="chr14" seqid="NC_000080.6" gi="372099096"/>
+          <Alignment name="chr9" seqid="NC_000075.6" gi="372099101"/>
+          <Alignment name="chr11" seqid="NC_000077.6" gi="372099099"/>
+          <Alignment name="chr13" seqid="NC_000079.6" gi="372099097"/>
+          <Alignment name="chr12" seqid="NC_000078.6" gi="372099098"/>
+          <Alignment name="chr15" seqid="NC_000081.6" gi="372099095"/>
+          <Alignment name="chr16" seqid="NC_000082.6" gi="372099094"/>
+          <Alignment name="chr17" seqid="NC_000083.6" gi="372099093"/>
+          <Alignment name="chrY" seqid="NC_000087.7" gi="372099089"/>
+          <Alignment name="chr18" seqid="NC_000084.6" gi="372099092"/>
+          <Alignment name="chr19" seqid="NC_000085.6" gi="372099091"/>
+          <Alignment name="chrM" seqid="NC_005089.1" gi="34538597"/>
+          <Alignment name="GL456210.1" seqid="GL456210.1" local="y"/>
+          <Alignment name="GL456211.1" seqid="GL456211.1" local="y"/>
+          <Alignment name="GL456212.1" seqid="GL456212.1" local="y"/>
+          <Alignment name="GL456213.1" seqid="GL456213.1" local="y"/>
+          <Alignment name="GL456216.1" seqid="GL456216.1" local="y"/>
+          <Alignment name="GL456219.1" seqid="GL456219.1" local="y"/>
+          <Alignment name="GL456221.1" seqid="GL456221.1" local="y"/>
+          <Alignment name="GL456233.1" seqid="GL456233.1" local="y"/>
+          <Alignment name="GL456350.1" seqid="GL456350.1" local="y"/>
+          <Alignment name="GL456354.1" seqid="GL456354.1" local="y"/>
+          <Alignment name="GL456359.1" seqid="GL456359.1" local="y"/>
+          <Alignment name="GL456366.1" seqid="GL456366.1" local="y"/>
+          <Alignment name="GL456367.1" seqid="GL456367.1" local="y"/>
+          <Alignment name="GL456368.1" seqid="GL456368.1" local="y"/>
+          <Alignment name="GL456370.1" seqid="GL456370.1" local="y"/>
+          <Alignment name="GL456372.1" seqid="GL456372.1" local="y"/>
+          <Alignment name="GL456378.1" seqid="GL456378.1" local="y"/>
+          <Alignment name="GL456379.1" seqid="GL456379.1" local="y"/>
+          <Alignment name="GL456382.1" seqid="GL456382.1" local="y"/>
+          <Alignment name="GL456389.1" seqid="GL456389.1" local="y"/>
+        </AlignInfo>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="CTB056Aligned.sortedByCoord.out.bam" url="https://sra-pub-src-1.s3.amazonaws.com/SRR6737222/CTB056Aligned.sortedByCoord.out.bam.1" size="1128391869" date="2020-03-04 05:34:28" md5="573543fdba974bb4d0e893cdc3281df5" version="1" semantic_name="bam" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-5/SRR6737222/CTB056Aligned.sortedByCoord.out.bam" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+            <Alternatives url="https://sra-pub-src-1.s3.amazonaws.com/SRR6737222/CTB056Aligned.sortedByCoord.out.bam.1" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR6737222.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR006/737/SRR6737222/SRR6737222.sralite.1" size="155860064" date="2020-08-14 08:24:34" md5="465573221f9bbfdeeeeee0e2e1b6b45d" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-11/SRR006/737/SRR6737222/SRR6737222.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR6737222/SRR6737222.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-105/SRR6737222/SRR6737222.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="bam" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

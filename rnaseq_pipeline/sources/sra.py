@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import timedelta
 from glob import glob
-from os.path import join, basename
+from os.path import join
 from typing import Optional, List
 
 import luigi
@@ -129,7 +129,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
         library_source = root.find(
             'EXPERIMENT_PACKAGE/EXPERIMENT[@accession=\'' + srx + '\']/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE')
 
-        if library_strategy is not None and library_strategy.text not in ['RNA-Seq', 'ssRNA-seq']:
+        if library_strategy is not None and library_strategy.text not in ['RNA-Seq', 'ssRNA-seq', 'OTHER']:
             logger.warning('%s Ignoring run with %s library strategy.', srr, library_strategy.text)
             continue
 
@@ -146,9 +146,11 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
 
         sra_10x_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'10X Genomics bam file\']')
 
+        sra_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'bam\']')
+
         issues = SraRunIssue(0)
 
-        if not sra_fastq_files and not sra_10x_bam_files:
+        if not sra_fastq_files and not sra_10x_bam_files and not sra_bam_files:
             issues |= SraRunIssue.NO_SRA_FILES
 
         # if the data was loaded with fastq-load.py, we can obtain the order of the files from the options
@@ -202,6 +204,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                     number_of_spots -= 1
                     reads.pop(i)
                     spot_read_lengths.pop(i)
+
         else:
             logger.warning(
                 '%s: No spot statistics found, cannot use the average read lengths to determine the order of the FASTQ files.',
@@ -295,7 +298,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
 
             if flowcells:
                 logger.info('%s: Detected read types from BAM file %s: %s', srr, bam_file.attrib['filename'],
-                             ', '.join(rt.name for rt in bam_read_types))
+                            ', '.join(rt.name for rt in bam_read_types))
                 # FIXME: report FASTQ filenames for all flowcells and lanes
                 flowcell = next(iter(flowcells.values()))
                 lane_id, read_types = next(iter(flowcell.items()))
@@ -312,6 +315,51 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 bam_filenames = [bam_file.attrib['filename']]
                 bam_file_urls = [bam_file.attrib['url']]
                 bam_fastq_filenames = get_fastq_filenames_for_10x_sequencing_layout(flowcells)
+            else:
+                logger.warning('%s: Failed to detect read types from BAM file, ignoring that run.', srr)
+                issues |= SraRunIssue.INVALID_RUN
+                if include_invalid_runs:
+                    result.append(SraRunMetadata(srx, srr,
+                                                 is_single_end=is_single_end,
+                                                 is_paired=is_paired,
+                                                 fastq_filenames=None,
+                                                 fastq_file_sizes=None,
+                                                 read_types=None,
+                                                 number_of_spots=None,
+                                                 average_read_lengths=None,
+                                                 fastq_load_options=None,
+                                                 use_bamtofastq=False,
+                                                 bam_filenames=None,
+                                                 bam_file_urls=None,
+                                                 bam_fastq_filenames=None,
+                                                 layout=[],
+                                                 issues=issues))
+                continue
+
+        # check for regular BAM files
+        elif sra_bam_files:
+            logger.info('%s: Using regular BAM files to detect read layout.', srr)
+
+            if len(sra_bam_files) > 1:
+                logger.warning('%s: Multiple BAM files found, will only use the first one.', srr)
+            bam_file = sra_bam_files[0]
+
+            if is_single_end:
+                fastq_filenames = ['R1.fastq.gz']
+                fastq_file_sizes = None
+                read_types = [SraReadType.BIOLOGICAL]
+                use_bamtofastq = True
+                bam_filenames = [bam_file.attrib['filename']]
+                bam_file_urls = [bam_file.attrib['url']]
+                bam_fastq_filenames = ['R1.fastq.gz']
+            elif is_paired:
+                fastq_filenames = ['R1.fastq.gz', 'R2.fastq.gz']
+                fastq_file_sizes = None
+                read_types = [SraReadType.BIOLOGICAL, SraReadType.BIOLOGICAL]
+                use_bamtofastq = True
+                bam_filenames = [bam_file.attrib['filename']]
+                bam_file_urls = [bam_file.attrib['url']]
+                bam_fastq_filenames = ['R1.fastq.gz', 'R2.fastq.gz']
             else:
                 logger.warning('%s: Failed to detect read types from BAM file, ignoring that run.', srr)
                 issues |= SraRunIssue.INVALID_RUN
@@ -400,6 +448,16 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 read_types = None
                 issues |= SraRunIssue.AMBIGUOUS_READ_SIZES
 
+        elif len(sra_fastq_files) == 1:
+            logger.info('%s: Single FASTQ file found, using it as a single-end dataset.', srr)
+            fastq_filenames = [sf.attrib['filename'] for sf in sra_fastq_files]
+            fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
+            use_bamtofastq = False
+            bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+            bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
+            bam_fastq_filenames = None
+            read_types = fastq_load_read_types
+
         else:
             issues |= SraRunIssue.INVALID_RUN
             logger.warning(
@@ -463,7 +521,7 @@ def read_bam_header(srr, filename, url):
         logger.info('%s: Using cached 10x BAM header from %s...', srr, bam_header_file)
     else:
         logger.info('%s: Reading header from 10x BAM file %s from %s to %s...', srr,
-                     filename, url, bam_header_file)
+                    filename, url, bam_header_file)
         os.makedirs(os.path.dirname(bam_header_file), exist_ok=True)
         with open(bam_header_file, 'w') as f:
             # FIXME: use requests
@@ -534,7 +592,7 @@ class DumpSraRun(luigi.Task):
     def output(self):
         return DownloadRunTarget(run_id=self.srr,
                                  files=[join(self.output_dir, self.srr + '_' + str(i + 1) + '.fastq.gz') for i in
-                                            range(len(self.layout))],
+                                        range(len(self.layout))],
                                  layout=self.layout,
                                  output_dir=self.output_dir)
 

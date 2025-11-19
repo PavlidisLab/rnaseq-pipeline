@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT alias="GSM4026932" accession="SRX6701021">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX6701021</PRIMARY_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM4026932: Rep2_Ribo_S6; Mus musculus; OTHER</TITLE>
+      <STUDY_REF accession="SRP218125" refname="GSE135722">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP218125</PRIMARY_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS5256023">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS5256023</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM4026932</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_STRATEGY>OTHER</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>other</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <SINGLE/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Limb pairs from each embryo were lysed via vigorous pipetting and 30 minute incubation at 4oC in 215 μL buffer A (25 mM Tris-HCl pH 7.5, 150 mM NaCl, 15 mM MgCl2, 1 mM DTT, 8% glycerol, 1% Triton X-100, 100 μg/ml CHX (Sigma-Aldrich, C7698-1G), 20 U/ml Turbo DNAse (Thermo Fisher, AM2238), and Complete Protease Inhibitor EDTA-free (Sigma-Aldrich, 11836170001). Lysates were cleared via sequential centrifugation at 1,300g, 5 min and 10,000g, 10 min at 4oC. For RNA input for RNA-Seq, 70 μL of lysate was diluted in 55 μL of water and stored at -80oC in 375 μL of TRIzol LS (Thermo Fisher, 10296010). For ribosome profiling, 120 μL of cleared lysate was treated with 0.5 μg RNase A (Thermo Fisher, AM2271) and 300 U RNase T1 (Thermo Fisher, EN0541) for 30 min, RT with gentle rocking. The reaction was stopped by the addition of 100 U SUPERase RNase Inhibitor (Thermo Fisher, AM2694). Ribosomes were enriched by adding 110 μL lysate onto 900 μL sucrose cushion buffer (1 M sucrose in buffer A containing 20 U/mL SUPERase RNase Inhibitor), and centrifuging in a TLA 120.2 rotor (Beckman) 70,000 rpm, 4 h, 4 °C. The ribosome pellet containing the ribosome footprinted Ribo-Seq library was resuspended in 500 μL TRIzol. Library preparation was adapted from previous protocols59,61 and the ARTseq Ribosome Profiling Kit manual (Epicentre, Illumina). In summary, total RNA and ribosome footprints were extracted using the Direct-zol Micro Kit (Zymo, R2060) with in-column DNase I treatment. To have an adequate amount of RNA for subsequent steps, pairs of samples of the same genotype were pooled to generate a single replicate sample, brought up to 90 μL with water, and precipitated with 150 μL isopropanol overnight -80oC after addition of 10 μL 3 M NaOAc pH 5.5 and 1.5 μL 15 mg/mL GlycoBlue Coprecipitant (Thermo Fisher, AM9515). The samples were then centrifuged at 21,000g, 30 min, 4oC, supernatant was removed, and the RNA pellet was washed 500 μL cold 75% ethanol. Pellets were dried for 10 min, RT and resuspended in 15 μL nuclease free water. After extraction and precipitation, both ribosome footprinting and total RNA samples were depleted of rRNA using the Ribo-Zero Gold rRNA Removal Kit (H/M/R) (Illumina, catalog no. MRZG126) with the modification that the 50oC incubation was not performed for the ribosome footprinting samples. The samples were then column purified (RNA Clean &amp; Concentrator 5, Zymo Research, catalog no. R1016) with the modifications that 2 volumes of RNA Binding Buffer and 4.5 volumes of ethanol were added to ribosome footprinting samples to purify small RNAs and 1 volume of RNA Binding Buffer and 1 volume of ethanol was added to total RNA samples to isolate RNA &gt; 200 nt. Total RNA samples were then fragmented by partial alkaline hydrolysis. The samples were diluted to 100 μL with 5 mM Tris-HCl, pH 7.5 and incubated with 100 μL 2x alkaline fragmentation buffer (100 mM Na2CO3 pH 9.2, 2 mM EDTA) for 20 minutes at 95oC. The reaction was neutralized with 440 μL STOP Buffer (70 μL 3 M NaOAc pH 5.5, 2 μL Glycoblue, and 370 μL nuclease free water) and isopropanol precipitated overnight at -80oC.   Ribosome protected fragments and total RNA samples were then size selected by running the samples out on a 15% TBE-Urea polyacrylamide gel. Ribosome protected fragments were size selected between 28-nt and 34-nt as marked by RNA oligonucleotides oNTI199 and oNTI265, respectively62. Total RNA samples were size selected between 34-70 nt as marked by a 10 bp DNA ladder (Invitrogen, catalog no. 10821015). Gel slices were crushed and extracted at room temperature overnight in 400 μL RNA extraction buffer (300 mM NaOAc pH 5.5, 1 mM EDTA, 0.25% SDS) and isopropanol precipitated. Samples were then 3'dephosphorylated by denaturing at 65oC for 5 min and incubating with T4 PNK (NEB, catalog no. M0201S) in a 10 μL reaction (7 μL precipitated RNA, 1 μL 10x T4 PNK Buffer, 1 μL SUPERase Inhibitor, 1 μL 10 U/μL T4 PNK) at 37oC for 1 hour. The reaction was stopped through heat inactivation at 65oC for 20 min. To ligate adaptor, samples were then incubated with 0.5 μL of 50 μM Universal miRNA Cloning Linker (NEB, catalog no. S1315S) and denatured at 65oC for 5 min. The denatured sample was then incubated with 1 μL T4 RNA Ligase 2, truncated KQ (NEB, M0373S), 1 μL 10x buffer, 6 μL 50% PEG 8000, and 1.5 μL water for 4.5 h at 25oC. Free adaptor was then removed by addition of 1 μL 10 U/μL 5'-Deadenylase (NEB, M0331S). 1 μL 10 U/μL RecJ Exonuclease (Lucigen/Epicentre, RJ411250). and 1 μL 20 U/μL SUPERase Inhibitor. Samples were then purified using Zymo RNA Clean &amp; Concentrator-5 columns using the protocol above to preserve small RNAs (100 μL sample, 200 μL RNA binding buffer, 450 μL 100% ethanol).    To perform reverse transcription, 10 μL sample was incubated with 2 μL of 1.25 μM RT primer (see table) and denatured at 65oC for 5 min. Reverse transcription (RT) was performed with primers containing sample barcodes and unique molecular identifiers. RT was performed with SuperScript III (Thermo Fisher, 18080-044) in a 20 μL reaction (48oC, 40 min). RNA was then hydrolyzed by adding 2.2 μL of 1N NaOH and incubating for 20 min at 98oC. Samples were then purified using Zymo RNA Clean &amp; Concentrator-5 columns (100 μL sample, 200 μL RNA binding buffer, 450 μL 100% ethanol). RT products were size selected and gel extracted from 10% TBE Urea polyacrylamide gels as described above instead that DNA extraction buffer was used for overnight extraction (300 mM NaCl, 10 mM Tris-HCl pH 8, 1 mM EDTA, 0.1% SDS). Eluate was then isopropanol precipitated overnight at -80oC overnight. Samples were then circularized with CircLigase (Illumina, CL4115K) in a 20 μL reaction (15 μL cDNA, 2 μL 10x CircLigase Buffer, 1 μL 1 mM ATP, 1 μL MnCl2, 1 μL CircLigase) for 12 hours at 60oC and subsequently purified by Zymo RNA Clean &amp; Concentrator 5 columns (100 μL sample, 200 μL RNA binding buffer, 450 μL 100% ethanol) and eluted with 12 μL 10 mM Tris-HCl pH 8. 1 μL of library was used for PCR amplification with Phusion High-Fidelity DNA Polymerase (Thermo Fisher, catalog no. F530S) (98oC 30s, 98oC 10s, 65oC 10s, 72oC 5s) for 9-10 cycles (see table for primers). PCR product was PAGE purified from native 8% TBE polyacrylamide gels, extracted overnight using DNA extraction buffer, and isopropanol precipitated for &gt; 2 h at -80oC. DNA was measured and quality controlled on the Agilent 2100 Bioanalyzer (High-Sensitivity DNA) by the Stanford Protein and Nucleic Acid (PAN) Facility. Libraries were sequenced by the Stanford Functional Genomics Facility (SFGF) on the Illumina NextSeq 500 (1x75nt). Ribosome profiling, RNA-Seq</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>NextSeq 500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+      <EXPERIMENT_LINKS>
+        <EXPERIMENT_LINK>
+          <XREF_LINK>
+            <DB>gds</DB>
+            <ID>304026932</ID>
+            <LABEL>GSM4026932</LABEL>
+          </XREF_LINK>
+        </EXPERIMENT_LINK>
+      </EXPERIMENT_LINKS>
+    </EXPERIMENT>
+    <SUBMISSION alias="GEO: GSE135722" broker_name="GEO" center_name="GEO" submission_comment="submission brokered by GEO" lab_name="" accession="SRA938600">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA938600</PRIMARY_ID>
+        <SUBMITTER_ID namespace="GEO">GEO: GSE135722</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="center">
+      <Name abbr="GEO">NCBI</Name>
+      <Contact email="geo-group@ncbi.nlm.nih.gov">
+        <Name>
+          <First>Geo</First>
+          <Last>Curators</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE135722" accession="SRP218125">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP218125</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA559859</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE135722</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>A p53-dependent translational program directs tissue-selective phenotypes in a model of ribosomopathies</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Other"/>
+        <STUDY_ABSTRACT>In ribosomopathies, perturbed expression of ribosome components leads to tissue-specific phenotypes. What accounts for such tissue-selective manifestations as a result of mutations in the ribosome, a ubiquitous cellular machine, has remained a mystery. Combining mouse genetics and in vivo ribosome profiling, we observe limb patterning phenotypes in ribosomal protein (RP) haploinsufficient embryos and uncover selective translational changes of transcripts controlling limb development. Surprisingly, both loss of p53, which is activated by RP haploinsufficiency, and augmented protein synthesis rescue these phenotypes. These findings are explained by the identification that p53 functions as a master regulator of protein synthesis, at least in part, through transcriptional activation of 4E-BP1. 4E-BP1, a key translational regulator, in turn, facilitates selective changes in the translatome downstream of p53, and thereby explains how RP haploinsufficiency may elicit specificity to gene expression. These results provide an integrative model to understand how in vivo tissue-specific phenotypes emerge in ribosomopathies. Overall design: Ribosome profiling from E10.5 mouse forelimbs (N=3 of each genotype): Rps6lox/+;Trp53+/+, Prx1Cre;Rps6lox/+;Trp53+/+, Rps6lox/+;Trp53-/-, Prx1Cre;Rps6lox/+;Trp53-/-</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE135722</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>34242585</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM4026932" accession="SRS5256023">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS5256023</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN12561547</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM4026932</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Rep2_Ribo_S6</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>559859</ID>
+            <LABEL>PRJNA559859</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>E10.5 mouse forelimbs</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Rps6lox/+;Trp53+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype simplified</TAG>
+          <VALUE>Rps6 WT; Trp53 WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>replicate</TAG>
+          <VALUE>Replicate 2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS5256023" sample_name="GSM4026932" sample_title="Rep2_Ribo_S6" spots="50311960" bases="1618498801" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS5256023</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN12561547</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM4026932</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="1618498801" spots="50311960" bytes="2073548479">
+      <RUN alias="GSM4026932_r1" accession="SRR9952657" total_spots="50311960" total_bases="1618498801" size="2073548479" load_done="true" published="2020-01-01 01:33:55" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR9952657</PRIMARY_ID>
+          <SUBMITTER_ID namespace="GEO">GSM4026932_r1</SUBMITTER_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX6701021" refname="GSM4026932"/>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS5256023" sample_name="GSM4026932" sample_title="Rep2_Ribo_S6" spots="50311960" bases="1618498801" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS5256023</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN12561547</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM4026932</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Rep2_Trimmed_Ribo_S6_BC4_rem_bc.fastq.gz" size="1068464077" date="2019-11-14 15:58:31" md5="f187aff3e2874a1d59d0da39a665bd04" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR9952657/Rep2_Trimmed_Ribo_S6_BC4_rem_bc.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR9952657" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9952657/SRR9952657" size="2073550104" date="2019-11-14 15:59:49" md5="1bcdaf5c5ad800984821c4d34b13ee9b" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9952657/SRR9952657" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR9952657.sralite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR009/952/SRR9952657.sralite.1" size="1902408472" date="2020-06-19 19:19:34" md5="8cb6ac6b24bb8af0c693d48b384e75c1" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos5/sra-pub-zq-16/SRR009/952/SRR9952657.sralite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-7/SRR9952657/SRR9952657.sralite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-102/SRR9952657/SRR9952657.zq.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="50311960">
+          <Read index="0" count="50311960" average="32.17" stdev="3.44"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="50311960"/>
+                <Elements count="1618498801"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="1618498801">
+          <Base value="A" count="214960620"/>
+          <Base value="C" count="560064781"/>
+          <Base value="G" count="616668840"/>
+          <Base value="T" count="226796962"/>
+          <Base value="N" count="7598"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

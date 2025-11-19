@@ -4,7 +4,7 @@ from xml.etree import ElementTree
 import pytest
 
 from rnaseq_pipeline.sources.sra import DownloadSraExperimentMetadata, DownloadSraProjectRunInfo, read_xml_metadata, \
-    SequencingFileType, DownloadSraExperiment, read_runinfo
+    SequencingFileType, DownloadSraExperiment, read_runinfo, SraRunIssue
 
 test_data_dir = join(dirname(__file__), 'data')
 
@@ -301,10 +301,51 @@ def test_SRR14827398():
         assert run.layout == [R1]
 
 def test_SRX26188816():
+    """This experiment uses the ssRNA-Seq library strategy"""
     runs = read_xml_metadata(join(test_data_dir, 'SRX26188816.xml'))
     assert len(runs) == 1
     for run in runs:
         assert run.layout == [R1]
+
+def test_SRX6701021():
+    """This experiment uses the OTHER library strategy"""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX6701021.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.layout == [R1]
+
+def test_SRX1871057():
+    """This run lack spot statistics, but has a single FASTQ file, so order is not important."""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX1871057.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.layout == [R1]
+        assert run.is_single_end
+        assert run.fastq_filenames == ['WD1603_CCGTCC_L001_R1_001.fastq.gz']
+        assert run.issues == SraRunIssue.NO_FASTQ_LOAD | SraRunIssue.NO_SPOT_STATISTICS
+
+def test_SRX1772599():
+    """This experiment is single-end, has a single FASTQ file, but is labelled as paired."""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX1772599.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.is_paired  # FIXME: this label is wrong, but is coming from SRA
+        assert run.layout == [R1]
+        assert run.fastq_filenames == ['Mcf10A_p53_Hras_set6_TGACCA_L001_R1_001.fastq.gz']
+        assert run.issues == SraRunIssue.NO_SPOT_STATISTICS | SraRunIssue.NO_FASTQ_LOAD
+
+def test_SRX3710155():
+    """This experiment has been submitted as a BAM (not a 10x one)"""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX3710155.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.is_single_end
+        assert run.layout == [R1]
+        assert run.bam_filenames == ['CTB056Aligned.sortedByCoord.out.bam']
+        assert run.bam_file_urls == [
+            'https://sra-pub-src-1.s3.amazonaws.com/SRR6737222/CTB056Aligned.sortedByCoord.out.bam.1']
+        assert run.fastq_filenames == ['R1.fastq.gz']
+        assert run.issues == SraRunIssue.NO_FASTQ_LOAD | SraRunIssue.NO_SPOT_STATISTICS
 
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
