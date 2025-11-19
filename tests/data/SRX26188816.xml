@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX26188816" alias="GSM8534778_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX26188816</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8534778_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8534778: KLtumors,combination,3weeks,rep1; Mus musculus; ssRNA-seq</TITLE>
+      <STUDY_REF accession="SRP534524">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP534524</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1164765</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS22731661">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS22731661</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8534778</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8534778</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>ssRNA-seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <SINGLE/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For RNA-seq, total RNA was isolated using Quick-RNA Miniprep Kit (Zymo Research). RNA-Seq libraries were prepared using Illumina TruSeq RNA Library Prep Kit v2 following the manufacturer's instructions.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 2500</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="Biochemistry and Molecular Genetics, Northwestern University" accession="SRA1981400" alias="SUB14756222">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1981400</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Biochemistry and Molecular Genetics, Northwestern University">SUB14756222</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>Biochemistry and Molecular Genetics, Northwestern University</Name>
+      <Contact email="m-schipma@northwestern.edu">
+        <Address>
+          <Street>750 N. Lake Shore Drive</Street>
+          <City>Chicago</City>
+          <Sub>IL</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Matthew</First>
+          <Last>Schipma</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE277929" accession="SRP534524">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP534524</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1164765</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE277929</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Transcriptional repression by HDAC3 mediates T cell exclusion from Kras mutant lung tumors [KL GEMM Treated Primary Tumors RNA-seq]</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Histone Deacetylase 3 (HDAC3) function in vivo is nuanced and directed in a tissue specific fashion.  The importance of HDAC3 in Kras mutant lung tumors has recently been identified, but HDAC3 function in this context remains to be fully elucidated.  Here, we identified HDAC3 as a lung tumor cell-intrinsic transcriptional regulator of the tumor immune microenvironment.  In Kras mutant lung cancer cells, we found that HDAC3 is a direct transcriptional repressor of a cassette of secreted chemokines, including Cxcl10.  Genetic and pharmacological inhibition of HDAC3 robustly upregulated this gene set in human and mouse Kras, LKB1 (KL) and Kras, p53 (KP) mutant lung cancer cells through an NF-kB/p65-dependent mechanism.  Using genetic engineered mouse models, we found that HDAC3 inactivation in vivo induced expression of this gene set selectively in lung tumors, and resulted in enhanced T-cell recruitment at least in part via Cxcl10.  Furthermore, we found that inhibition of HDAC3 in the presence of Kras pathway inhibitors dissociated Cxcl10 expression from that of immunosuppressive chemokines, and that combination treatment of entinostat with trametinib enhanced T-cell recruitment into lung tumors in vivo.  Finally, we showed that T-cells contribute to in vivo tumor growth control in the presence of entinostat and trametinib combination treatment.  Together, our findings reveal that HDAC3 is a druggable endogenous repressor of T-cell recruitment into Kras mutant lung tumors. Overall design: RNA-seq on primary NSCLC tumors from the KL model treated with trametinib, entinostat, combination, or vehicle</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE277929</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>39388266</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8534778" accession="SRS22731661">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS22731661</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN43908283</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8534778</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>KLtumors,combination,3weeks,rep1</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1164765</ID>
+            <LABEL>PRJNA1164765</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>lung tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>lung tumor</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Kras-mutant, Lkb1-/-</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS22731661" sample_name="GSM8534778" sample_title="KLtumors,combination,3weeks,rep1" spots="30604062" bases="1560807162" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS22731661</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN43908283</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8534778</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="1560807162" spots="30604062" bytes="580807619">
+      <RUN accession="SRR30787172" alias="GSM8534778_r1" total_spots="30604062" total_bases="1560807162" size="580807619" load_done="true" published="2024-10-10 16:41:38" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR30787172</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8534778_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX26188816">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8534778_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS22731661" sample_name="GSM8534778" sample_title="KLtumors,combination,3weeks,rep1" spots="30604062" bases="1560807162" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS22731661</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN43908283</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8534778</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Combo_1_LJE28.fastq.gz" size="989528325" date="2024-09-24 17:42:45" md5="f2ae6b087e2ec749acf0c7a227473e94" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-18/SRR30787172/Combo_1_LJE28.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30787172" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30787172/SRR30787172" size="580809541" date="2024-09-24 17:43:08" md5="170e3899556f16873b0867d1e25a0ed1" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR30787172/SRR30787172" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR30787172.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-5/SRR030/30787/SRR30787172/SRR30787172.lite.1" size="433863829" date="2024-09-24 18:31:15" md5="96f1ec7bb91fc19cc5a69e69e08f68a3" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos4/sra-pub-zq-5/SRR030/30787/SRR30787172/SRR30787172.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-9/SRR30787172/SRR30787172.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-101/SRR30787172/SRR30787172.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="30604062">
+          <Read index="0" count="30604062" average="51" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="30604062"/>
+                <Elements count="1560807162"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="1560807162">
+          <Base value="A" count="367596816"/>
+          <Base value="C" count="376622144"/>
+          <Base value="G" count="395572006"/>
+          <Base value="T" count="420953195"/>
+          <Base value="N" count="63001"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

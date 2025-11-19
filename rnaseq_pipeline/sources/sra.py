@@ -129,7 +129,7 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
         library_source = root.find(
             'EXPERIMENT_PACKAGE/EXPERIMENT[@accession=\'' + srx + '\']/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE')
 
-        if library_strategy is not None and library_strategy.text not in ['RNA-Seq']:
+        if library_strategy is not None and library_strategy.text not in ['RNA-Seq', 'ssRNA-seq']:
             logger.warning('%s Ignoring run with %s library strategy.', srr, library_strategy.text)
             continue
 
