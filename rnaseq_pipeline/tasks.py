@@ -164,7 +164,7 @@ class TrimSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                     report_file=join(destdir, basename(r2) + '.cutadapt.json'),
                     cpus=4))
             else:
-                raise NotImplementedError('Unsupported lane layout: ' + lane.layout + '.')
+                raise NotImplementedError('Unsupported lane layout: ' + '|'.join(lane.layout) + '.')
         yield tasks
 
 class TrimExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
