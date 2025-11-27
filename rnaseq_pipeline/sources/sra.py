@@ -144,9 +144,9 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
 
         sra_fastq_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'fastq\']')
 
-        sra_10x_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'10X Genomics bam file\']')
-
-        sra_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'bam\']')
+        # since we need to download these file, require a URL to be present
+        sra_10x_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'10X Genomics bam file\'][@url]')
+        sra_bam_files = run.findall('SRAFiles/SRAFile[@semantic_name=\'bam\'][@url]')
 
         issues = SraRunIssue(0)
 

@@ -347,6 +347,14 @@ def test_SRX3710155():
         assert run.fastq_filenames == ['R1.fastq.gz']
         assert run.issues == SraRunIssue.NO_FASTQ_LOAD | SraRunIssue.NO_SPOT_STATISTICS
 
+def test_SRX29529383():
+    """This dataset was submitted as BAM that is not freely available, so we have to fallback on the SRA metadata"""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX29529383.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        # FIXME: this should be [R1, R2], but it is mislabelled as single-end in SRA
+        assert run.layout == [R1, I1]
+
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
     assert len(meta) == 2
