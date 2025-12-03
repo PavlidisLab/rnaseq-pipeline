@@ -117,7 +117,13 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
     :return:
     """
     root = ET.parse(path)
+
+    errors = root.find('ERROR')
+    if errors is not None:
+        raise RuntimeError(errors.text)
+
     runs = root.findall('EXPERIMENT_PACKAGE/RUN_SET/RUN')
+
     result = []
     for run in runs:
         srr = run.attrib['accession']

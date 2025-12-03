@@ -355,6 +355,11 @@ def test_SRX29529383():
         # FIXME: this should be [R1, R2], but it is mislabelled as single-end in SRA
         assert run.layout == [R1, I1]
 
+def test_SRX835000():
+    """This dataset was not publicly released at the time of writing, so we're making sure we can handle the <ERROR> tag"""
+    with pytest.raises(RuntimeError, match='SRA Experiment SRX835000 is not public'):
+        read_xml_metadata(join(test_data_dir, 'SRX835000.xml'))
+
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
     assert len(meta) == 2
