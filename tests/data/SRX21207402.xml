@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX21207402" alias="GSM7671185_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX21207402</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7671185_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM7671185: Sham-Polg+/+-Biol rep 4; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP452526">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP452526</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1000944</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS18464871">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS18464871</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM7671185</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM7671185</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>RNA were extracted by RNeasy kit  (QIAGEN) following manufactor's protocols. Total 2 ug of RNA were used for library constraction. RNA library were prepared using NEBNext Ultra II RNA prep kit following manufactor's protocols.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina HiSeq 4000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="UT Southwestern Medical Center" accession="SRA1684585" alias="SUB13725214">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1684585</PRIMARY_ID>
+        <SUBMITTER_ID namespace="UT Southwestern Medical Center">SUB13725214</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>UT Southwestern Medical Center</Name>
+      <Contact email="chen.yao@utsouthwestern.edu">
+        <Address>
+          <Street>5901 FOREST PARK RD, NS6 218</Street>
+          <City>Dallas</City>
+          <Sub>Texas</Sub>
+          <Country>USA</Country>
+        </Address>
+        <Name>
+          <First>Chen</First>
+          <Last>Yao</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE239772" accession="SRP452526">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP452526</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1000944</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE239772</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Persistent injury-induced mtDNA mutations compromise organ fitness by suppressing nucleotide biosynthesis</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>The mitochondrial genome is present at thousands of copies/cell in metabolically active tissues. In organs such as the kidney that are exposed to frequent sublethal insults, the impact on mitochondrial DNA (mtDNA) quality is unknown. Here we show that acute kidney injury induces a burst of persistent random mtDNA mutations (?mtDNA) that impair mitochondrial function, induce fibrosis, and increase subsequent injury risk in cells, mice, and humans, implicating a feed-forward loop of accumulating mtDNA mutations driving chronic disease. Multi-omic interrogation of ?mtDNA settings implicates marked reduction of energy-intensive nucleotide biosynthesis. Strikingly, repletion of adenosine, but not other nucleosides, restores ATP and ameliorates injury risk via the purine biosynthetic enzyme adenylate kinase 4. ?mtDNA may therefore be a durable remnant of acute injuries that compromise future health and both a genetic and tissue-based indicator of organ fitness. Augmented purine biosynthesis may protect vulnerable organs from acute insults. Overall design: To inverstigate how mtDNA mutations contribute to injury following ischemia reperfusion injury, we applied RNA sequencing to IRI kidneys from Polg+/+ and PolgD257A littermates</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE239772</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM7671185" accession="SRS18464871">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS18464871</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN36783866</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM7671185</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Sham-Polg+/+-Biol rep 4</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1000944</ID>
+            <LABEL>PRJNA1000944</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Kidney</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Kidney</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell line</TAG>
+          <VALUE>N/A</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>N/A</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>Polg+/+</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Sham</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS18464871" sample_name="GSM7671185" sample_title="Sham-Polg+/+-Biol rep 4" spots="59443377" bases="8916506550" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS18464871</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN36783866</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7671185</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="8916506550" spots="59443377" bytes="3573991644">
+      <RUN accession="SRR25475180" alias="GSM7671185_r1" total_spots="59443377" total_bases="8916506550" size="3573991644" load_done="true" published="2025-09-20 00:42:23" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR25475180</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM7671185_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX21207402">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM7671185_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS18464871" sample_name="GSM7671185" sample_title="Sham-Polg+/+-Biol rep 4" spots="59443377" bases="8916506550" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS18464871</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN36783866</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM7671185</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="18--5_R1_001.fastq.gz" size="2447174312" date="2023-08-01 10:44:28" md5="1087de8a9c0d5e0aa97ae90545e971c8" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR25475180/18--5_R1_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="18--5_R2_001.fastq.gz" size="2906822228" date="2023-08-01 10:44:38" md5="3dc2e8d6b9847d2bf4cf4f617973bcd6" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-10/SRR25475180/18--5_R2_001.fastq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25475180" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25475180/SRR25475180" size="3573993859" date="2023-08-01 10:45:07" md5="3b02b70d0a78449106e722045e849f01" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR25475180/SRR25475180" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR25475180.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR025/25475/SRR25475180/SRR25475180.lite.1" size="2339345679" date="2023-08-06 12:18:26" md5="1b39ae492fd2bedcf6cdd73941d2ce55" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-818/SRR025/25475/SRR25475180/SRR25475180.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-5/SRR25475180/SRR25475180.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR25475180/SRR25475180.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="1" nspots="59443377">
+          <Read index="0" count="59443377" average="150" stdev="0"/>
+        </Statistics>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="59443377"/>
+                <Elements count="8916506550"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="8916506550">
+          <Base value="A" count="2312225231"/>
+          <Base value="C" count="2136499243"/>
+          <Base value="G" count="2201043884"/>
+          <Base value="T" count="2266277618"/>
+          <Base value="N" count="460574"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

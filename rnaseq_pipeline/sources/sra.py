@@ -455,7 +455,18 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
                 issues |= SraRunIssue.AMBIGUOUS_READ_SIZES
 
         elif len(sra_fastq_files) == 1:
-            logger.info('%s: Single FASTQ file found, using it as a single-end dataset.', srr)
+            logger.info('%s: Single FASTQ file found, assuming it as a single-end dataset.', srr)
+            fastq_filenames = [sf.attrib['filename'] for sf in sra_fastq_files]
+            fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
+            use_bamtofastq = False
+            bam_filenames = [bf.attrib['filename'] for bf in sra_10x_bam_files]
+            bam_file_urls = [bf.attrib['url'] for bf in sra_10x_bam_files]
+            bam_fastq_filenames = None
+            read_types = fastq_load_read_types
+
+        elif len(sra_fastq_files) == 2:
+            logger.warning('%s: Two FASTQ file found, assuming it as a paired-end dataset, but order might be arbitrary.', srr)
+            # this is not ordered, but aligner can usually deal with that pretty well
             fastq_filenames = [sf.attrib['filename'] for sf in sra_fastq_files]
             fastq_file_sizes = [int(sf.attrib['size']) for sf in sra_fastq_files]
             use_bamtofastq = False

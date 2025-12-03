@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX24833773" alias="GSM8312961_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX24833773</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8312961_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8312961: WT2_B1_D60; Homo sapiens; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP512381">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP512381</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioProject">PRJNA1121199</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS21545604">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS21545604</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8312961</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8312961</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>For RNA extraction from each organoid generation batch, 20 organoids were pooled at day 30 and 15 organoids at day 60 of midbrain organoid culture. RNA isolation was done using RNeasy Mini Kit (Qiagen, cat.no. 74106) following the manufacturer's protocol. Messenger RNA was purified from total RNA using poly-T oligo-attached magnetic beads. After fragmentation, the first strand cDNA was synthesized using random hexamer primers, followed by the second strand cDNA synthesis using either dUTP for directional library or dTTP for non-directional library.Library preparations were sequenced on an Illumina platform by Novogene sequencing service.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <ILLUMINA>
+          <INSTRUMENT_MODEL>Illumina NovaSeq 6000</INSTRUMENT_MODEL>
+        </ILLUMINA>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="LCSB" accession="SRA1891862" alias="SUB14513227">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA1891862</PRIMARY_ID>
+        <SUBMITTER_ID namespace="LCSB">SUB14513227</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>LCSB</Name>
+      <Contact email="matthieu.gobin@uni.lu">
+        <Address>
+          <Street>6, avenue du Swing</Street>
+          <City>Belval</City>
+          <Country>Luxembourg</Country>
+        </Address>
+        <Name>
+          <First>Matthieu</First>
+          <Last>Gobin</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE269316" accession="SRP512381">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP512381</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1121199</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE269316</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>Reproducibility of PD patient-specific midbrain organoid data for in vitro disease modelling (timepoints)</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>Midbrain organoids are advanced in vitro cellular models for disease modelling. They have been used successfully over the past decade for Parkinson's disease (PD) research and drug development. The three-dimensional structure and multicellular composition allow disease research under more physiological conditions than is possible with conventional 2D cellular models. However, there are concerns in the field regarding the organoid batch-to-batch variability and thus the reproducibility of the results. In this manuscript, we generate multiple independent midbrain organoid batches derived from healthy individuals or GBA-N370S mutation-carrying PD patients to evaluate the reproducibility of the GBA-N370S mutation-associated PD transcriptomic and metabolic signature as well as selected protein abundance. Our analysis shows that GBA-PD-associated phenotypes are reproducible across organoid generation batches and time points. This proves that midbrain organoids are not only suitable for PD in vitro modelling, but also represent robust and highly reproducible cellular models. Overall design: RNA sequencing data of midbrain organoids from 3 healthy (WT1-3) and PD patients with GBA-N409S mutation (GBA1-3). Data comes from 30 or 60 days old organoids (D30 or D60) and 4 individual organoid generation batches (B1-4).</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE269316</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+      <STUDY_LINKS>
+        <STUDY_LINK>
+          <XREF_LINK>
+            <DB>pubmed</DB>
+            <ID>41050933</ID>
+          </XREF_LINK>
+        </STUDY_LINK>
+      </STUDY_LINKS>
+    </STUDY>
+    <SAMPLE alias="GSM8312961" accession="SRS21545604">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS21545604</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN41737214</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8312961</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>WT2_B1_D60</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>9606</TAXON_ID>
+        <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1121199</ID>
+            <LABEL>PRJNA1121199</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>midbrain oragnoid</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>midbrain oragnoid</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell line</TAG>
+          <VALUE>56</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell type</TAG>
+          <VALUE>NESC derived midbrain organoids</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>genotype</TAG>
+          <VALUE>WT</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>WT2</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS21545604" sample_name="GSM8312961" sample_title="WT2_B1_D60" spots="27117413" bases="8135223900" tax_id="9606" organism="Homo sapiens">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS21545604</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN41737214</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8312961</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="8135223900" spots="27117413" bytes="2551375068">
+      <RUN accession="SRR29317021" alias="GSM8312961_r1" total_spots="27117413" total_bases="8135223900" size="2551375068" load_done="true" published="2025-09-18 14:45:38" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR29317021</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8312961_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX24833773">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8312961_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <Pool>
+          <Member member_name="" accession="SRS21545604" sample_name="GSM8312961" sample_title="WT2_B1_D60" spots="27117413" bases="8135223900" tax_id="9606" organism="Homo sapiens">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS21545604</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN41737214</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8312961</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="SRR29317021.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR029/29317/SRR29317021/SRR29317021.lite.1" size="2083247088" date="2024-06-07 09:39:23" md5="0feb6a50b7ac03c9e81b85bc83080eba" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos8/sra-pub-zq-820/SRR029/29317/SRR29317021/SRR29317021.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-6/SRR29317021/SRR29317021.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-100/SRR29317021/SRR29317021.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR29317021" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29317021/SRR29317021" size="2551377588" date="2024-06-07 08:15:13" md5="c53ca97642a8eb0e446bc2ed9595b9bf" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29317021/SRR29317021" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="S8_EKRN230066849-1A_HFVTFDSX7_L1_2.fq.gz" size="2083375944" date="2024-06-07 08:14:59" md5="7cb0bbff368a69b4e86389875a99d0a7" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29317021/S8_EKRN230066849-1A_HFVTFDSX7_L1_2.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="S8_EKRN230066849-1A_HFVTFDSX7_L1_1.fq.gz" size="2033874492" date="2024-06-07 08:14:56" md5="8879eb0846940b086029d4c288ae4f1b" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-16/SRR29317021/S8_EKRN230066849-1A_HFVTFDSX7_L1_1.fq.gz.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="27117413"/>
+                <Elements count="8135223900"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>

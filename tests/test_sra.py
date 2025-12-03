@@ -360,6 +360,17 @@ def test_SRX835000():
     with pytest.raises(RuntimeError, match='SRA Experiment SRX835000 is not public'):
         read_xml_metadata(join(test_data_dir, 'SRX835000.xml'))
 
+def test_SRX21207402():
+    """Paired data for this one is mangled in a single read/spot"""
+    runs = read_xml_metadata(join(test_data_dir, 'SRX21207402.xml'))
+    assert len(runs) == 0
+
+def test_SRX24833773():
+    runs = read_xml_metadata(join(test_data_dir, 'SRX24833773.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.layout == [R1, R2]
+
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
     assert len(meta) == 2
