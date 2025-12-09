@@ -25,6 +25,7 @@ class WrappedToolsConfig(luigi.Config):
 
     cellranger_bin: str = luigi.Parameter(default='cellranger')
     rsem_calculate_expression_bin: str = luigi.Parameter(default='contrib/RSEM/rsem-calculate-expression')
+    shared_memory_cleanup_bin: str = luigi.Parameter(default='scripts/clean-unused-shm-objects')
 
 cfg = WrappedToolsConfig()
 
@@ -77,9 +78,10 @@ def rsem_calculate_expression_wrapper():
     # execv expects an absolute path
     args[0] = shutil.which(cfg.rsem_calculate_expression_bin)
     if len(args) > 2 and os.path.isdir(args[-2]):
-        # remove unused shared memory?
+        # RSEM jobs that were interrupted while STAR is running will leave a large shared memory object behind, this
+        # script will clean them up
         print('Removing unused shared memory objects...')
-        subprocess_run(['scripts/clean-unused-shm-objects'])
+        subprocess_run([cfg.shared_memory_cleanup_bin])
         # copy the reference to local scratch
         ref_dir = args[-2]
         new_dir, lockfile = copy_directory_to_local_scratch(ref_dir)
