@@ -77,6 +77,9 @@ def rsem_calculate_expression_wrapper():
     # execv expects an absolute path
     args[0] = shutil.which(cfg.rsem_calculate_expression_bin)
     if len(args) > 2 and os.path.isdir(args[-2]):
+        # remove unused shared memory?
+        print('Removing unused shared memory objects...')
+        subprocess_run(['scripts/clean-unused-shm-objects'])
         # copy the reference to local scratch
         ref_dir = args[-2]
         new_dir, lockfile = copy_directory_to_local_scratch(ref_dir)
