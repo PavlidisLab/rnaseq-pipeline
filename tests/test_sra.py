@@ -371,6 +371,12 @@ def test_SRX24833773():
     for run in runs:
         assert run.layout == [R1, R2]
 
+def test_SRX28160368():
+    runs = read_xml_metadata(join(test_data_dir, 'SRX28160368.xml'))
+    assert len(runs) == 1
+    for run in runs:
+        assert run.layout == [R1, R2]
+
 def test_read_runinfo():
     meta = read_runinfo(join(test_data_dir, 'SRX26261721.runinfo'))
     assert len(meta) == 2

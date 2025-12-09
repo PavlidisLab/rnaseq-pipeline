@@ -202,14 +202,22 @@ def read_xml_metadata(path, include_invalid_runs=False) -> List[SraRunMetadata]:
             # this may take the value 'variable'
             number_of_spots = int(statistics.attrib['nreads']) if statistics.attrib['nreads'] != 'variable' else None
             reads = sorted(statistics.findall('Read'), key=lambda r: int(r.attrib['index']))
-            spot_read_lengths = [float(r.attrib['average']) for r in reads]
-            # check for zero-length reads, perform traversal in reverse order to preserve indices
-            for i, srl in reversed(list(enumerate(spot_read_lengths))):
-                if srl == 0:
-                    logger.warning('%s: Empty read for position %d in spot, will ignore it.', srr, i + 1)
-                    number_of_spots -= 1
-                    reads.pop(i)
-                    spot_read_lengths.pop(i)
+            if reads:
+                spot_read_lengths = [float(r.attrib['average']) for r in reads]
+                # check for zero-length reads, perform traversal in reverse order to preserve indices
+                for i, srl in reversed(list(enumerate(spot_read_lengths))):
+                    if srl == 0:
+                        logger.warning('%s: Empty read for position %d in spot, will ignore it.', srr, i + 1)
+                        number_of_spots -= 1
+                        reads.pop(i)
+                        spot_read_lengths.pop(i)
+            else:
+                logger.warning(
+                    '%s: No reads found in spot statistics, those will not be considered for determining the sequencing layout,.',
+                    srr)
+                statistics = None
+                spot_read_lengths = None
+                issues |= SraRunIssue.NO_SPOT_STATISTICS
 
         else:
             logger.warning(

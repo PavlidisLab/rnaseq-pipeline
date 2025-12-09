@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <EXPERIMENT_PACKAGE>
+    <EXPERIMENT accession="SRX28160368" alias="GSM8874595_r1">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRX28160368</PRIMARY_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8874595_r1</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>GSM8874595: Mock2; Mus musculus; RNA-Seq</TITLE>
+      <STUDY_REF accession="SRP573523">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRP573523</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSE293057</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </STUDY_REF>
+      <DESIGN>
+        <DESIGN_DESCRIPTION/>
+        <SAMPLE_DESCRIPTOR accession="SRS24513318">
+          <IDENTIFIERS>
+            <PRIMARY_ID>SRS24513318</PRIMARY_ID>
+            <EXTERNAL_ID namespace="GEO">GSM8874595</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </SAMPLE_DESCRIPTOR>
+        <LIBRARY_DESCRIPTOR>
+          <LIBRARY_NAME>GSM8874595</LIBRARY_NAME>
+          <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+          <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+          <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+          <LIBRARY_LAYOUT>
+            <PAIRED/>
+          </LIBRARY_LAYOUT>
+          <LIBRARY_CONSTRUCTION_PROTOCOL>Neuro-2a cells were infected with HSV-1 virus for 5 h (MOI = 10) before being harvested for RNA extraction using a total RNA extraction kit (Vazyme RC112-01) DNA libraries were constructed and sequenced by Tianjin Novogene Bioin_x0002_formatic Technology Co., Ltd. Briefly, an NEBNext® Ultra™ II DNA Library Prep kit (catalogue no. E7645L; NEB) was used for library preparation.</LIBRARY_CONSTRUCTION_PROTOCOL>
+        </LIBRARY_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <BGISEQ>
+          <INSTRUMENT_MODEL>BGISEQ-500</INSTRUMENT_MODEL>
+        </BGISEQ>
+      </PLATFORM>
+    </EXPERIMENT>
+    <SUBMISSION lab_name="" center_name="none" accession="SRA2100914" alias="SUB15204537">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRA2100914</PRIMARY_ID>
+        <SUBMITTER_ID namespace="none">SUB15204537</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SUBMISSION>
+    <Organization type="institute">
+      <Name>none</Name>
+      <Contact email="12118165@zju.edu.cn">
+        <Address>
+          <Street>Yuhang Tang street</Street>
+          <City>Hangzhou</City>
+          <Country>China</Country>
+        </Address>
+        <Name>
+          <First>Xiang</First>
+          <Last>Yuhang</Last>
+        </Name>
+      </Contact>
+    </Organization>
+    <STUDY center_name="GEO" alias="GSE293057" accession="SRP573523">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRP573523</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioProject" label="primary">PRJNA1242709</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSE293057</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+        <STUDY_TITLE>RNAseq analysis of Neuro-2a cells after infection with HSV-1</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Transcriptome Analysis"/>
+        <STUDY_ABSTRACT>We used HSV-1 to infect Neuro-2a cells (MOI=10) for 5h, and set the mock group without infection as a control. Host genes that were significantly changed between HSV-1 infected and control groups were compared. Overall design: We focused on genes that were significantly up-regulated or down-regulated in the infected group compared to the control group. Three replicates were set for each group, named MOCK1, MOCK2, MOCK3, HSV1, HSV2, and HSV3.</STUDY_ABSTRACT>
+        <CENTER_PROJECT_NAME>GSE293057</CENTER_PROJECT_NAME>
+      </DESCRIPTOR>
+    </STUDY>
+    <SAMPLE alias="GSM8874595" accession="SRS24513318">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS24513318</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN47600631</EXTERNAL_ID>
+        <EXTERNAL_ID namespace="GEO">GSM8874595</EXTERNAL_ID>
+      </IDENTIFIERS>
+      <TITLE>Mock2</TITLE>
+      <SAMPLE_NAME>
+        <TAXON_ID>10090</TAXON_ID>
+        <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+      </SAMPLE_NAME>
+      <SAMPLE_LINKS>
+        <SAMPLE_LINK>
+          <XREF_LINK>
+            <DB>bioproject</DB>
+            <ID>1242709</ID>
+            <LABEL>PRJNA1242709</LABEL>
+          </XREF_LINK>
+        </SAMPLE_LINK>
+      </SAMPLE_LINKS>
+      <SAMPLE_ATTRIBUTES>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>source_name</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>tissue</TAG>
+          <VALUE>Brain</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>cell line</TAG>
+          <VALUE>Neuro-2a</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>treatment</TAG>
+          <VALUE>Mock</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>geo_loc_name</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+          <TAG>collection_date</TAG>
+          <VALUE>missing</VALUE>
+        </SAMPLE_ATTRIBUTE>
+      </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <Pool>
+      <Member member_name="" accession="SRS24513318" sample_name="GSM8874595" sample_title="Mock2" spots="20516641" bases="1633050300" tax_id="10090" organism="Mus musculus">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRS24513318</PRIMARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMN47600631</EXTERNAL_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8874595</EXTERNAL_ID>
+        </IDENTIFIERS>
+      </Member>
+    </Pool>
+    <RUN_SET runs="1" bases="1633050300" spots="20516641" bytes="873530827">
+      <RUN accession="SRR32879745" alias="GSM8874595_r1" total_spots="20516641" total_bases="1633050300" size="873530827" load_done="true" published="2025-08-31 03:30:49" is_public="true" cluster_name="public" has_taxanalysis="1" static_data_available="1">
+        <IDENTIFIERS>
+          <PRIMARY_ID>SRR32879745</PRIMARY_ID>
+          <EXTERNAL_ID namespace="GEO">GSM8874595_r1</EXTERNAL_ID>
+        </IDENTIFIERS>
+        <EXPERIMENT_REF accession="SRX28160368">
+          <IDENTIFIERS>
+            <EXTERNAL_ID namespace="GEO">GSM8874595_r1</EXTERNAL_ID>
+          </IDENTIFIERS>
+        </EXPERIMENT_REF>
+        <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+            <TAG>loader</TAG>
+            <VALUE>fastq-load.py</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+            <TAG>options</TAG>
+            <VALUE>--allowEarlyFileEnd</VALUE>
+          </RUN_ATTRIBUTE>
+        </RUN_ATTRIBUTES>
+        <Pool>
+          <Member member_name="" accession="SRS24513318" sample_name="GSM8874595" sample_title="Mock2" spots="20516641" bases="1633050300" tax_id="10090" organism="Mus musculus">
+            <IDENTIFIERS>
+              <PRIMARY_ID>SRS24513318</PRIMARY_ID>
+              <EXTERNAL_ID namespace="BioSample">SAMN47600631</EXTERNAL_ID>
+              <EXTERNAL_ID namespace="GEO">GSM8874595</EXTERNAL_ID>
+            </IDENTIFIERS>
+          </Member>
+        </Pool>
+        <SRAFiles>
+          <SRAFile cluster="public" filename="Mock2f.fq" size="1900519646" date="2025-03-27 09:07:58" md5="7e9ac5574d6bfa9bd16a19ea37ce69fc" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR32879745/Mock2f.fq.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="Mock2r.fq" size="3210720433" date="2025-03-27 09:08:04" md5="40842e4a26c97ee820ab5fc4f02b7605" version="1" semantic_name="fastq" supertype="Original" sratoolkit="0">
+            <Alternatives url="s3://sra-pub-src-3/SRR32879745/Mock2r.fq.1" free_egress="-" access_type="Use Cloud Data Delivery" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR32879745" url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32879745/SRR32879745" size="873534235" date="2025-03-27 09:08:17" md5="9314cc430d036febfd94a88610ea0c4d" version="1" semantic_name="SRA Normalized" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32879745/SRR32879745" free_egress="worldwide" access_type="anonymous" org="AWS"/>
+          </SRAFile>
+          <SRAFile cluster="public" filename="SRR32879745.lite" url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR032/32879/SRR32879745/SRR32879745.lite.1" size="458041753" date="2025-03-27 12:29:30" md5="35f2d13d9c6864f1aec8cc0cbb6c4a3f" version="1" semantic_name="SRA Lite" supertype="Primary ETL" sratoolkit="1">
+            <Alternatives url="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos1/sra-pub-zq-38/SRR032/32879/SRR32879745/SRR32879745.lite.1" free_egress="worldwide" access_type="anonymous" org="NCBI"/>
+            <Alternatives url="s3://sra-pub-zq-2/SRR32879745/SRR32879745.lite.1" free_egress="s3.us-east-1" access_type="aws identity" org="AWS"/>
+            <Alternatives url="gs://sra-pub-zq-103/SRR32879745/SRR32879745.lite.1" free_egress="gs.us-east1" access_type="gcp identity" org="GCP"/>
+          </SRAFile>
+        </SRAFiles>
+        <CloudFiles>
+          <CloudFile filetype="fastq" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run" provider="s3" location="s3.us-east-1"/>
+          <CloudFile filetype="run.zq" provider="gs" location="gs.us-east1"/>
+          <CloudFile filetype="run.zq" provider="s3" location="s3.us-east-1"/>
+        </CloudFiles>
+        <Statistics nreads="variable"/>
+        <Databases>
+          <Database>
+            <Table name="SEQUENCE">
+              <Statistics source="meta">
+                <Rows count="20516641"/>
+                <Elements count="1633050300"/>
+              </Statistics>
+            </Table>
+          </Database>
+        </Databases>
+        <Bases cs_native="false" count="1633050300">
+          <Base value="A" count="435247725"/>
+          <Base value="C" count="381896553"/>
+          <Base value="G" count="386037288"/>
+          <Base value="T" count="429722074"/>
+          <Base value="N" count="146660"/>
+        </Bases>
+      </RUN>
+    </RUN_SET>
+  </EXPERIMENT_PACKAGE>
+</EXPERIMENT_PACKAGE_SET>
