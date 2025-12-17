@@ -293,7 +293,7 @@ class AlignSample(ScheduledExternalProgramTask):
 
     cpus = 8
     memory = 32
-    walltime = datetime.timedelta(days=1)
+    walltime = luigi.TimeDeltaParameter(default=datetime.timedelta(days=1), significant=False, positional=False)
 
     # cleanup unused shared memory objects before and after the task is run
     # FIXME: move this into the configuration
