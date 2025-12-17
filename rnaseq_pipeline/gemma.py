@@ -34,8 +34,7 @@ cfg = GemmaConfig()
 
 class GemmaApi:
     def __init__(self):
-        self._session = requests.Session()
-        self._session.auth = HTTPBasicAuth(os.getenv('GEMMA_USERNAME'), self._get_password()) if os.getenv(
+        self._auth = HTTPBasicAuth(os.getenv('GEMMA_USERNAME'), self._get_password()) if os.getenv(
             'GEMMA_USERNAME') else None
 
     def _get_password(self):
@@ -49,7 +48,7 @@ class GemmaApi:
             return getpass()
 
     def _query_api(self, endpoint):
-        res = self._session.get(join(cfg.baseurl, 'rest/v2', endpoint))
+        res = requests.get(join(cfg.baseurl, 'rest/v2', endpoint), auth=self._auth)
         res.raise_for_status()
         return res.json()['data']
 
