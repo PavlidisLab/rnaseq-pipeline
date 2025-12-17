@@ -76,7 +76,7 @@ def rsem_calculate_expression_wrapper():
     """Wrapper script for RSEM that copies the reference to a local temporary directory."""
     args = sys.argv.copy()
     # execv expects an absolute path
-    args[0] = shutil.which(cfg.rsem_calculate_expression_bin)
+    args[0] = cfg.rsem_calculate_expression_bin
     if len(args) > 2 and os.path.isdir(args[-2]):
         # RSEM jobs that were interrupted while STAR is running will leave a large shared memory object behind, this
         # script will clean them up
@@ -88,26 +88,29 @@ def rsem_calculate_expression_wrapper():
         args[-2] = new_dir
         with lockf(lockfile) as f:
             print('Final command: ' + ' '.join(args), flush=True)
-            os.set_inheritable(f.fileno(), True)
-            os.execv(args[0], args)
+            returncode = subprocess_run(args)
+            print('Removing unused shared memory objects...')
+            subprocess_run([cfg.shared_memory_cleanup_bin])
+            sys.exit(returncode)
     else:
         print('Final command: ' + ' '.join(args), flush=True)
-        os.execv(args[0], args)
+        returncode = subprocess_run(args)
+        sys.exit(returncode)
 
 def cellranger_wrapper():
     args = sys.argv.copy()
     args[0] = cfg.cellranger_bin
-    lockfile = None
+    transcriptome_reference_lockfile = None
     output_dir = None
     with tempfile.TemporaryDirectory(prefix='cellranger-') as temp_dir:
         print('Created a temporary directory for Cell Ranger execution: ' + temp_dir)
         temp_output_dir = join(temp_dir, 'cellranger')
         for i, arg in enumerate(args):
             if arg == '--transcriptome':
-                new_dir, lockfile = copy_directory_to_local_scratch(args[i + 1])
+                new_dir, transcriptome_reference_lockfile = copy_directory_to_local_scratch(args[i + 1])
                 args[i + 1] = new_dir
             elif arg.startswith('--transcriptome='):
-                new_dir, lockfile = copy_directory_to_local_scratch(arg.removeprefix('--transcriptome='))
+                new_dir, transcriptome_reference_lockfile = copy_directory_to_local_scratch(arg.removeprefix('--transcriptome='))
                 args[i] = '--transcriptome=' + new_dir
             elif arg == '--output-dir':
                 output_dir = args[i + 1]
@@ -117,8 +120,8 @@ def cellranger_wrapper():
                 args[i] = '--output-dir=' + temp_output_dir
         print('Final command: ' + ' '.join(args))
 
-        if lockfile:
-            with lockf(lockfile, exclusive=False) as f:
+        if transcriptome_reference_lockfile:
+            with lockf(transcriptome_reference_lockfile, exclusive=False):
                 returncode = subprocess_run(args, cwd=temp_dir)
         else:
             returncode = subprocess_run(args, cwd=temp_dir)
