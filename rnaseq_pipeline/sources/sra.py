@@ -576,7 +576,7 @@ class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
                                   max_size=100,
                                   scheduler_partition='Wormhole',
                                   metadata=self.metadata,
-                                  walltime=timedelta(hours=2))
+                                  walltime=timedelta(hours=4))
 
     def output(self):
         return luigi.LocalTarget(join(sra_config.ncbi_public_dir, 'sra', f'{self.srr}.sra'))
