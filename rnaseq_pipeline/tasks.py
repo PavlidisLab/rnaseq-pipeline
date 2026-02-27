@@ -604,10 +604,12 @@ class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
     subcommand = 'loadSingleCellData'
 
     resources = {'submit_data_jobs': 1}
+    chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
 
     def requires(self):
         return AlignSingleCellExperiment(experiment_id=self.experiment_id,
                                          reference_id=self.reference_id,
+                                         chemistry=self.chemistry,
                                          source='gemma')
 
     def subcommand_args(self):
@@ -639,11 +641,14 @@ class SubmitSingleCellExperimentDataToGemma(GemmaCliTask):
         return GemmaDatasetQuantitationType(self.experiment_id, '10x MEX', vector_type=GemmaDataVectorType.SINGLE_CELL)
 
 class SubmitExperimentDataToGemma(GemmaTaskMixin, WrapperTask):
+    chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
+
     def requires(self):
         if self.assay_type == GemmaAssayType.BULK_RNA_SEQ:
             return SubmitBulkExperimentDataToGemma(experiment_id=self.experiment_id)
         elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
-            return SubmitSingleCellExperimentDataToGemma(experiment_id=self.experiment_id)
+            return SubmitSingleCellExperimentDataToGemma(experiment_id=self.experiment_id,
+                                                         chemistry=self.chemistry)
         else:
             raise NotImplementedError('Loading ' + self.assay_type + ' data to Gemma is not implemented.')
 
@@ -679,6 +684,7 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
     Submit an experiment QC report to Gemma.
     """
     experiment_id: str = luigi.Parameter()
+    chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
 
     subcommand = 'addMetadataFile'
 
@@ -693,7 +699,8 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
             return GenerateReportForSingleCellExperiment(experiment_id=self.experiment_id,
                                                          reference_id=self.reference_id,
                                                          source='gemma',
-                                                         rerun=self.rerun)
+                                                         rerun=self.rerun,
+                                                         chemistry=self.chemistry)
         else:
             raise NotImplementedError('Cannot generate report for a ' + self.assay_type + ' experiment.')
 
