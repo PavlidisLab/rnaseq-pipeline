@@ -40,8 +40,10 @@ def submit_experiment(argv):
     parser.add_argument('--workers', type=int, default=30, help='Number of workers to use (defaults to 30)')
     parser.add_argument('--local-scheduler', action='store_true', default=False)
     parser.add_argument('--chemistry', type=str, default=None)
+    parser.add_argument('--ignore-mate', type=str, default='neither')
+
     args = parser.parse_args(argv)
-    run_luigi_task(SubmitExperimentToGemma(experiment_id=args.experiment_id, rerun=args.rerun, priority=args.priority, chemistry=args.chemistry),
+    run_luigi_task(SubmitExperimentToGemma(experiment_id=args.experiment_id, rerun=args.rerun, priority=args.priority, chemistry=args.chemistry, ignore_mate=args.ignore_mate),
                    args)
 
 def submit_experiment_batch_info(argv):

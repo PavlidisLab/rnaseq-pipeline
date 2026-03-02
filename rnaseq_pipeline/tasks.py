@@ -368,6 +368,7 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
     taxon: str = luigi.Parameter(positional=False)
     reference_id: str = luigi.Parameter(positional=False)
     scope: str = luigi.Parameter(default='genes', positional=False)
+    ignore_mate = luigi.ChoiceParameter(choices=['forward', 'reverse', 'neither'], default='neither', positional=False)
 
     def requires(self):
         return DownloadExperiment(self.experiment_id, source=self.source).requires().requires()
@@ -379,7 +380,8 @@ class AlignExperiment(DynamicTaskWithOutputMixin, DynamicWrapperTask):
                            source=self.source,
                            taxon=self.taxon,
                            reference_id=self.reference_id,
-                           scope=self.scope)
+                           scope=self.scope,
+                           ignore_mate=self.ignore_mate)
                for dst in download_sample_tasks]
 
 def write_sample_names_file(sample_names_file, trim_sample_dirs, qc_sample_dirs):
@@ -685,6 +687,7 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
     """
     experiment_id: str = luigi.Parameter()
     chemistry: Optional[str] = luigi.OptionalParameter(default=None, positional=False)
+    ignore_mate = luigi.ChoiceParameter(choices=['forward', 'reverse', 'neither'], default='neither', positional=False)
 
     subcommand = 'addMetadataFile'
 
@@ -694,7 +697,8 @@ class SubmitExperimentReportToGemma(RerunnableTaskMixin, GemmaCliTask):
                                                taxon=self.taxon,
                                                reference_id=self.reference_id,
                                                source='gemma',
-                                               rerun=self.rerun)
+                                               rerun=self.rerun,
+                                               ignore_mate=self.ignore_mate)
         elif self.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ:
             return GenerateReportForSingleCellExperiment(experiment_id=self.experiment_id,
                                                          reference_id=self.reference_id,
