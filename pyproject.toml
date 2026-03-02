@@ -8,7 +8,7 @@ version = "2.1.12"
 description = "RNA-Seq pipeline for the Pavlidis Lab"
 authors = [
     { name = "Guillaume Poirier-Morency", email = "poirigui@msl.ubc.ca" },
-    { name = "Ogan Mancarcii", email = "ogan.mancarcii@msl.ubc.ca" }
+    { name = "Ogan Mancarci", email = "ogan.mancarci@msl.ubc.ca" }
 ]
 readme = "README.md"
 license = "Unlicense"
