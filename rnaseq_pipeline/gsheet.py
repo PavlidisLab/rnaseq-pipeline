@@ -9,10 +9,10 @@ import xdg.BaseDirectory
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from pkg_resources import resource_filename
+from importlib import resources
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-CREDENTIALS_FILE = resource_filename('rnaseq_pipeline', 'credentials.json')
+CREDENTIALS_FILE = str(resources.files("rnaseq_pipeline")/"credentials.json")
 
 logger = logging.getLogger(__name__)
 
