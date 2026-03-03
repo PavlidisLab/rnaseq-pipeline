@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE EXPERIMENT_PACKAGE_SET>
+<EXPERIMENT_PACKAGE_SET>
+  <ERROR procedure="SRA_Main..GET_ExperimentPackage_xml" line="68" severity="13" number="50000" public="yes">SRA Experiment SRX835000 is not public</ERROR>
+</EXPERIMENT_PACKAGE_SET>
