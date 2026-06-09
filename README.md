@@ -71,10 +71,10 @@ your tasks at http://localhost:8082/.
 luigid
 ```
 
-For convenience, we provide a `rnaseq-pipeline-cli` tool to run high-level tasks:
+For convenience, we provide a `rnaseq-pipeline-cli` tool to run high-level tasks.
 
 ```bash
-luigi-wrapper <task> <task_args>
+rnaseq-pipeline-cli run <task> <task_args>
 ```
 
 ## Setting up a genomic reference
@@ -94,7 +94,7 @@ following files under `pipeline-output/genomes/mm10_ensembl98`:
 The top-level task you will likely want to use is `rnaseq_pipeline.tasks.GenerateReportForExperiment`.
 
 ```bash
-luigi-wrapper rnaseq_pipeline.tasks.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
+rnaseq-pipeline-cli run rnaseq_pipeline.tasks.GenerateReportForExperiment --source geo --taxon mouse --reference mm10_ensembl98 --experiment-id GSE80745
 ```
 
 The output is organized as follow:
@@ -172,6 +172,23 @@ rsem_calculate_expression_bin=/absolute/path/to/rsem
 
 The RNA-Seq pipeline is capable of communicating with Gemma using its [RESTful API](https://gemma.msl.ubc.ca/resources/restapidocs/).
 
+Authentication uses the `GEMMA_USERNAME` environment variable together with one
+of `GEMMA_PASSWORD`, `GEMMA_PASSWORD_CMD` (a command whose first line of output
+is the password), or an interactive prompt.
+
+The following `rnaseq-pipeline-cli` subcommands submit pipeline results to Gemma:
+
+```bash
+# Quantify and submit an experiment's data, batch info and QC report
+rnaseq-pipeline-cli submit-experiment --experiment-id <experiment_id>
+
+# Submit only the batch information for an experiment
+rnaseq-pipeline-cli submit-experiment-batch-info --experiment-id <experiment_id>
+```
+
+Pass `--rerun` to force a rerun of an already-completed experiment, and
+`--local-scheduler` to run without a `luigid` daemon.
+
 ## External spreadsheet via Google Sheets API
 
 The RNA-Seq pipeline can pull experiment IDs from a collaborative spreadsheet
@@ -182,11 +199,11 @@ are supplied by the `gsheet` extra require:
 pip install .[gsheet]
 ```
 
-The `rnaseq_pipelines.tasks.SubmitExperimentsFromGoogleSpreadsheetToGemma` task
-becomes available. We also have
+The `rnaseq_pipeline.tasks.SubmitExperimentsFromGoogleSpreadsheetToGemma` task
+becomes available exposed as `submit-experiments-from-gsheet` subcommand for `rnaseq-pipeline-cli`:
 
 ```bash
-submit-experiments-from-gsheet --spreadsheet-id <spreadsheet_id> --sheet-name <sheet_name>
+rnaseq-pipeline-cli submit-experiments-from-gsheet --spreadsheet-id <spreadsheet_id> --sheet-name <sheet_name>
 ```
 
 The remote spreadsheet must be structured to have the following columns:
