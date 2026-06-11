@@ -4,7 +4,7 @@ from xml.etree import ElementTree
 import pytest
 
 from rnaseq_pipeline.sources.sra import DownloadSraExperimentMetadata, DownloadSraProjectRunInfo, read_xml_metadata, \
-    SequencingFileType, DownloadSraExperiment, read_runinfo, SraRunIssue
+    SequencingFileType, DownloadSraExperiment, read_runinfo, SraRunIssue, PrefetchSraRun
 
 test_data_dir = join(dirname(__file__), 'data')
 
@@ -412,3 +412,19 @@ def test_download_sra_project_run_info():
     contents = task.output().open('r').read()
     assert contents
     assert task.complete()
+
+def test_prefetch_sra_run_uses_output_directory():
+    # sra-tools >= 3.3 uses `--output-directory` with <SRR>/<SRR>.sra instead of
+    # using `prefetch --output-file`
+    task = PrefetchSraRun(srr='SRR22550129', metadata={})
+
+    prefetch = next(task.run())
+    args = list(map(str, prefetch.program_args()))
+
+    assert '--output-directory' in args
+    assert '--output-file' not in args
+
+    output_directory = args[args.index('--output-directory') + 1]
+    assert prefetch.output().path == join(output_directory, 'SRR22550129', 'SRR22550129.sra')
+
+    assert task.output().path == prefetch.output().path
