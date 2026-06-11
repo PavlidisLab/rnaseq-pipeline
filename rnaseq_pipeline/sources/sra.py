@@ -5,6 +5,7 @@ import enum
 import gzip
 import logging
 import os
+import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -26,7 +27,7 @@ from ..rnaseq_utils import SequencingFileType, detect_layout
 from ..targets import ExpirableLocalTarget, DownloadRunTarget
 from ..tenx_utils import read_sequencing_layout_from_10x_bam_header, get_fastq_filenames_for_10x_sequencing_layout, \
     get_fastq_filename
-from ..utils import remove_task_output, RerunnableTaskMixin
+from ..utils import RerunnableTaskMixin
 
 cfg = Config()
 
@@ -560,26 +561,54 @@ def read_bam_header(srr, filename, url):
                     curl_proc.terminate()
     return bam_header_file
 
+class Prefetch(sratoolkit.Prefetch):
+    """
+    Prefetch a SRA run using ``prefetch --output-directory``.
+
+    bioluigi's Prefetch passes the deprecated ``--output-file`` flag, which
+    sra-tools >= 3.x rejects. We override it to use ``--output-directory``,
+    the supported replacement: prefetch writes the run to
+    ``<output_directory>/<SRR>/<SRR>.sra`` along with any auxiliary files for
+    the run (e.g. ``<SRR>.sra.vdbcache``).
+    """
+    output_directory: str = luigi.Parameter(positional=False,
+                                             description='Directory under which prefetch creates <SRR>/<SRR>.sra')
+
+    # output_file (inherited, required) is unused with --output-directory
+    output_file: str = luigi.Parameter(default='', positional=False)
+
+    def program_args(self):
+        args = [sratoolkit.cfg.prefetch_bin,
+                '--max-size', '{}G'.format(self.max_size),
+                '--output-directory', self.output_directory]
+        args.extend(self.extra_args)
+        args.append(self.srr_accession)
+        return args
+
+    def output(self):
+        return luigi.LocalTarget(join(self.output_directory, self.srr_accession,
+                                      self.srr_accession + '.sra'))
+
 class PrefetchSraRun(TaskWithMetadataMixin, luigi.Task):
     """
     Prefetch a SRA run using prefetch from sratoolkit
 
-    SRA archives are stored in a shared cache.
+    SRA runs are stored in a shared cache as ``<SRR>/<SRR>.sra``.
     """
     srr: str = luigi.Parameter(description='SRA run identifier')
 
     retry_count = 3
 
     def run(self):
-        yield sratoolkit.Prefetch(srr_accession=self.srr,
-                                  output_file=self.output().path,
-                                  max_size=100,
-                                  scheduler_partition='Wormhole',
-                                  metadata=self.metadata,
-                                  walltime=timedelta(hours=4))
+        yield Prefetch(srr_accession=self.srr,
+                       output_directory=join(sra_config.ncbi_public_dir, 'sra'),
+                       max_size=100,
+                       scheduler_partition='Wormhole',
+                       metadata=self.metadata,
+                       walltime=timedelta(hours=4))
 
     def output(self):
-        return luigi.LocalTarget(join(sra_config.ncbi_public_dir, 'sra', f'{self.srr}.sra'))
+        return luigi.LocalTarget(join(sra_config.ncbi_public_dir, 'sra', self.srr, f'{self.srr}.sra'))
 
 @requires(PrefetchSraRun)
 class DumpSraRun(luigi.Task):
@@ -599,9 +628,12 @@ class DumpSraRun(luigi.Task):
         return join(cfg.OUTPUT_DIR, cfg.DATA, 'sra', self.srx, self.srr)
 
     def on_success(self):
-        # cleanup SRA archive once dumped if it's still hanging around
-        prefetch_task = self.requires()
-        remove_task_output(prefetch_task)
+        # cleanup the prefetched SRA run directory (archive + any .vdbcache)
+        # once dumped if it's still hanging around
+        prefetch_dir = os.path.dirname(self.requires().output().path)
+        if os.path.isdir(prefetch_dir):
+            logger.info('Cleaning up prefetched SRA run directory %s...', prefetch_dir)
+            shutil.rmtree(prefetch_dir, ignore_errors=True)
         return super().on_success()
 
     def run(self):
