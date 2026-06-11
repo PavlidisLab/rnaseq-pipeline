@@ -9,7 +9,7 @@ dependencies:
 - cutadapt==4.9
 - multiqc==1.32
 - polars-lts-cpu # for our older servers that lack support for AVX2
-- sra-tools
+- sra-tools==3.4.1
 - fastqc==0.12.1
 - star==2.7.3a
 - entrez-direct
