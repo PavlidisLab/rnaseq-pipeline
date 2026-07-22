@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rnaseq-pipeline"
-version = "2.1.12"
+version = "2.1.13"
 description = "RNA-Seq pipeline for the Pavlidis Lab"
 authors = [
     { name = "Guillaume Poirier-Morency", email = "poirigui@msl.ubc.ca" },
