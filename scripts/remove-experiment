@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Remove all pipeline outputs for a given experiment.
+#
+# This deletes the trimmed reads, QC, alignments, quantifications, report and
+# single-cell outputs that are keyed by experiment ID. It does NOT touch raw
+# downloaded data under data/ (keyed by sample/run, not experiment) nor data
+# already submitted to Gemma.
+#
+# Usage: remove-experiment [-n|--dry-run] EXPERIMENT_ID
+#
+# OUTPUT_DIR is read from luigi.cfg (the [rnaseq_pipeline] OUTPUT_DIR setting);
+# override by exporting OUTPUT_DIR. The subdirectory names below match the
+# defaults in rnaseq_pipeline/config.py.
+
+set -u
+
+dry_run=0
+if [ "${1:-}" = "-n" ] || [ "${1:-}" = "--dry-run" ]; then
+    dry_run=1
+    shift
+fi
+
+if [ -z "${1:-}" ]; then
+    echo "Usage: $0 [-n|--dry-run] EXPERIMENT_ID" >&2
+    exit 1
+fi
+
+experiment_id=$1
+
+# Resolve OUTPUT_DIR: explicit env override, else luigi.cfg, else the lab default.
+if [ -z "${OUTPUT_DIR:-}" ]; then
+    cfg="$(dirname "$0")/../luigi.cfg"
+    [ -f "$cfg" ] || cfg=luigi.cfg
+    if [ -f "$cfg" ]; then
+        OUTPUT_DIR=$(sed -n 's/^OUTPUT_DIR=//p' "$cfg" | head -1)
+    fi
+fi
+OUTPUT_DIR="${OUTPUT_DIR:-/cosmos/data/pipeline-output/rnaseq}"
+
+if [ ! -d "$OUTPUT_DIR" ]; then
+    echo "OUTPUT_DIR does not exist: $OUTPUT_DIR" >&2
+    exit 1
+fi
+
+# Only expand globs that match something, so unmatched patterns disappear
+# instead of being passed literally to rm.
+shopt -s nullglob
+
+# Experiment-keyed targets. Reference-scoped stages live under */<experiment_id>.
+targets=(
+    "$OUTPUT_DIR/data-trimmed/$experiment_id"
+    "$OUTPUT_DIR/data-qc/$experiment_id"
+    "$OUTPUT_DIR/data-single-cell/$experiment_id"
+    "$OUTPUT_DIR"/aligned/*/"$experiment_id"
+    "$OUTPUT_DIR"/quantified/*/"${experiment_id}"_*
+    "$OUTPUT_DIR"/quantified-single-cell/*/"$experiment_id"
+    "$OUTPUT_DIR"/report/*/"$experiment_id"
+    "$OUTPUT_DIR"/report/*/"$experiment_id".sample_names.tsv
+)
+
+found=0
+for t in "${targets[@]}"; do
+    [ -e "$t" ] || continue
+    found=1
+    if [ "$dry_run" -eq 1 ]; then
+        echo "would remove $t"
+    else
+        echo "removing $t"
+        rm -rf "$t"
+    fi
+done
+
+if [ "$found" -eq 0 ]; then
+    echo "No outputs found for $experiment_id under $OUTPUT_DIR."
+fi
