@@ -19,5 +19,7 @@ def test_gemma_task():
 
 @pytest.mark.skip('This dataset is not public yet.')
 def test_fac_sorted_dataset():
+    # FAC-sorted single-cell datasets are treated as single-cell like any
+    # other; there is no longer a special case routing them to bulk.
     task = GemmaCliTask(experiment_id='GSE232833')
-    assert task.assay_type == GemmaAssayType.BULK_RNA_SEQ
+    assert task.assay_type == GemmaAssayType.SINGLE_CELL_RNA_SEQ

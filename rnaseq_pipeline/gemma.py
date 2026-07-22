@@ -145,11 +145,8 @@ class GemmaTaskMixin(luigi.Task):
         sc_rnaseq_uris = ['http://purl.obolibrary.org/obo/OBI_0002631', 'http://www.ebi.ac.uk/efo/EFO_0008913',
                           'http://www.ebi.ac.uk/efo/EFO_0009809', 'http://purl.obolibrary.org/obo/OBI_0003109',
                           'http://www.ebi.ac.uk/efo/EFO_0005684']
-        fac_sorted_uri = 'http://www.ebi.ac.uk/efo/EFO_0009108'
 
         annotations = gemma_api.dataset_annotations(self.experiment_id)
-        fac_sorted = any(annotation['classUri'] == assay_type_class_uri and annotation['termUri'] == fac_sorted_uri
-                         for annotation in annotations)
         for annotation in annotations:
             if annotation['classUri'] == assay_type_class_uri:
                 value_uri = annotation['termUri']
@@ -158,13 +155,7 @@ class GemmaTaskMixin(luigi.Task):
                 elif value_uri in bulk_rnaseq_uris:
                     return GemmaAssayType.BULK_RNA_SEQ
                 elif value_uri in sc_rnaseq_uris:
-                    if fac_sorted:
-                        # fac-sorted scRNA-Seq is treated as bulk
-                        logger.info('%s: Dataset is a FAC-sorted single-cell RNA-Seq, will treat as bulk RNA-Seq.',
-                                    self.dataset_short_name)
-                        return GemmaAssayType.BULK_RNA_SEQ
-                    else:
-                        return GemmaAssayType.SINGLE_CELL_RNA_SEQ
+                    return GemmaAssayType.SINGLE_CELL_RNA_SEQ
 
         raise ValueError('No suitable experiment tag to determine the assay type .')
 
