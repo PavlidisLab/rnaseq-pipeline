@@ -3,16 +3,16 @@ This module contains all the logic to retrieve RNA-Seq data from GEO.
 """
 
 import gzip
+import json
 import logging
 import os
 import re
 import tarfile
 import tempfile
+import time
 from datetime import timedelta
 from functools import lru_cache
 from os.path import join
-from urllib.parse import urlparse, parse_qs
-from xml.etree import ElementTree
 
 import luigi
 import luigi.format
@@ -32,19 +32,73 @@ cfg = Config()
 
 logger = logging.getLogger(__name__)
 
-ns = {'miniml': 'http://www.ncbi.nlm.nih.gov/geo/info/MINiML'}
+
+EUTILS_URL = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils'
+
+def _eutils_params(**params):
+    """Add the NCBI API key from the environment (the same variable EDirect reads) when it is set."""
+    api_key = os.environ.get('NCBI_API_KEY')
+    if api_key:
+        params['api_key'] = api_key
+    return params
+
+#: Entrez answers 429 above 3 requests/s without an API key (10/s with one); several tasks share that budget, so a
+#: 429 is retried a few times with a growing delay rather than failing the task outright
+EUTILS_RATE_LIMIT_RETRIES = 3
+
+def _eutils_get(endpoint, **params):
+    params = _eutils_params(retmode='json', **params)
+    for attempt in range(EUTILS_RATE_LIMIT_RETRIES + 1):
+        res = requests.get(EUTILS_URL + '/' + endpoint, params=params)
+        if res.status_code != 429 or attempt == EUTILS_RATE_LIMIT_RETRIES:
+            break
+        delay = float(res.headers.get('Retry-After') or 2 ** attempt)
+        logger.info('Entrez %s is rate-limited, retrying in %.0f s...', endpoint, delay)
+        time.sleep(delay)
+    # Errors are raised by hand rather than with raise_for_status(): the request URL carries the API key, and
+    # requests puts the full URL in its error message (and Entrez echoes the key back in its error body).
+    body = res.text
+    if 'api_key' in params:
+        body = body.replace(params['api_key'], '<NCBI_API_KEY>')
+    if res.status_code != 200:
+        hint = ' (NCBI rejected the API key in NCBI_API_KEY)' if 'API key status invalid' in body else ''
+        raise RuntimeError(f'Entrez {endpoint} answered HTTP {res.status_code}{hint}: {body[:300]}')
+    payload = res.json()
+    # Entrez reports some failures (e.g. "API rate limit exceeded") in the body of a 200 response
+    if 'error' in payload:
+        raise RuntimeError(f'Entrez {endpoint} failed: {body[:300]}')
+    return payload
+
+def retrieve_geo_summary(accession, entry_type):
+    """
+    Retrieve the Entrez summary of a GEO record (db=gds).
+
+    GEO's acc.cgi pages are served behind a reCAPTCHA challenge (an HTML page with HTTP 200) unless the request
+    carries a particular set of parameters, and that set has changed over time. Entrez is the supported API: it is
+    not challenged, takes an API key and publishes its rate limits.
+
+    :param accession: a GEO accession (e.g. GSM9939224 or GPL24676)
+    :param entry_type: the GEO entry type to search (gsm, gpl, gse); without it, searching a platform accession also
+    returns every series that uses it
+    """
+    search = _eutils_get('esearch.fcgi', db='gds', term=f'{accession}[ACCN] AND {entry_type}[ETYP]')
+    uids = search['esearchresult']['idlist']
+    if not uids:
+        raise ValueError(f'No GEO record found for {accession} (Entrez db=gds, entry type {entry_type}).')
+    summary = _eutils_get('esummary.fcgi', db='gds', id=','.join(uids))['result']
+    for uid in summary['uids']:
+        if summary[uid].get('accession') == accession:
+            return summary[uid]
+    raise ValueError(f'Entrez returned no summary for {accession} among {uids}.')
 
 @lru_cache()
-def retrieve_geo_platform_miniml(geo_platform):
-    """Retrieve a GEO platform MINiML metadata"""
-    res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=geo_platform, form='xml'))
-    res.raise_for_status()
-    return ElementTree.fromstring(res.text).find('miniml:Platform', ns)
+def retrieve_geo_platform_title(geo_platform):
+    """Retrieve the title of a GEO platform"""
+    return retrieve_geo_summary(geo_platform, 'gpl')['title']
 
 def match_geo_platform(geo_platform):
     """Infer the type of platform given a GEO platform"""
-    root = retrieve_geo_platform_miniml(geo_platform)
-    geo_platform_title = root.find('miniml:Title', ns).text
+    geo_platform_title = retrieve_geo_platform_title(geo_platform)
 
     # BGI
     if geo_platform_title.startswith('BGISEQ') or geo_platform_title.startswith('DNBSEQ'):
@@ -63,29 +117,40 @@ def match_geo_platform(geo_platform):
 
 class DownloadGeoSampleMetadata(TaskWithMetadataMixin, RerunnableTaskMixin, luigi.Task):
     """
-    Download the MiNiML metadata for a given GEO Sample.
+    Download the Entrez summary (db=gds) for a given GEO Sample.
+
+    The summary carries the sample's platform and its SRA link, which is all DownloadGeoSample needs.
     """
     gsm: str = luigi.Parameter()
 
-    resources = {'geo_http_connections': 1}
+    resources = {'edirect_http_connections': 1}
 
     retry_count = 3
 
     def run(self):
         if self.output().is_stale():
             logger.info('%s is stale, redownloading...', self.output())
-        res = requests.get('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi', params=dict(acc=self.gsm, form='xml'))
-        res.raise_for_status()
-        try:
-            ElementTree.fromstring(res.text)
-        except ElementTree.ParseError as e:
-            raise Exception('Failed to parse XML from GEO sample metadata of ' + self.gsm) from e
+        summary = retrieve_geo_summary(self.gsm, 'gsm')
         with self.output().open('w') as f:
-            f.write(res.text)
+            json.dump(summary, f)
 
     def output(self):
-        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.xml'.format(self.gsm)),
+        return ExpirableLocalTarget(join(cfg.OUTPUT_DIR, cfg.METADATA, 'geo', '{}.json'.format(self.gsm)),
                                     ttl=timedelta(days=14))
+
+def read_geo_sample_info(path):
+    """
+    Read the platform and SRA experiment of a GEO sample from its Entrez summary.
+
+    :return: a (platform, SRX accession) tuple, or None if the sample is not linked to SRA
+    """
+    with open(path) as f:
+        summary = json.load(f)
+    srx = next((r['targetobject'] for r in summary.get('extrelations') or []
+                if r.get('relationtype') == 'SRA'), None)
+    if srx is None:
+        return None
+    return 'GPL' + summary['gpl'], srx
 
 @requires(DownloadGeoSampleMetadata)
 class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
@@ -101,18 +166,17 @@ class DownloadGeoSample(DynamicTaskWithOutputMixin, DynamicWrapperTask):
 
     @property
     def platform(self):
-        samples_info = collect_geo_samples_info(self.input().path)
-        if not self.gsm in samples_info:
+        sample_info = read_geo_sample_info(self.input().path)
+        if sample_info is None:
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
-        geo_platform, _ = samples_info[self.gsm]
+        geo_platform, _ = sample_info
         return match_geo_platform(geo_platform)
 
     def run(self):
-        samples_info = collect_geo_samples_info(self.input().path)
-        if not self.gsm in samples_info:
+        sample_info = read_geo_sample_info(self.input().path)
+        if sample_info is None:
             raise RuntimeError('{} GEO record is not linked to SRA.'.format(self.gsm))
-        platform, srx_url = samples_info[self.gsm]
-        srx = parse_qs(urlparse(srx_url).query)['term'][0]
+        platform, srx = sample_info
         metadata = dict(self.metadata)
         # do not override the sample_id when invoked from DownloadGemmaExperiment
         if 'sample_id' not in metadata:

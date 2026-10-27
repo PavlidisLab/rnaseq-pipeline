@@ -1,0 +1,37 @@
+{
+ "uid": "309939224",
+ "accession": "GSM9939224",
+ "gds": "",
+ "title": "HD10 treated with PHN sera EV replicate 1",
+ "summary": "HD10",
+ "gpl": "24676",
+ "gse": "342782",
+ "taxon": "Homo sapiens",
+ "entrytype": "GSM",
+ "gdstype": "",
+ "ptechtype": "",
+ "valtype": "",
+ "ssinfo": "",
+ "subsetinfo": "",
+ "pdat": "2026/09/02",
+ "suppfile": "",
+ "samples": [],
+ "relations": [],
+ "extrelations": [
+  {
+   "relationtype": "SRA",
+   "targetobject": "SRX34701233",
+   "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByExp/sra/SRX/SRX347/SRX34701233/"
+  }
+ ],
+ "n_samples": "",
+ "seriestitle": "",
+ "platformtitle": "",
+ "platformtaxa": "",
+ "samplestaxa": "",
+ "pubmedids": [],
+ "projects": [],
+ "ftplink": "",
+ "geo2r": "",
+ "bioproject": ""
+}
