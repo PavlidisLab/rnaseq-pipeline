@@ -148,8 +148,11 @@ class GemmaTaskMixin(luigi.Task):
 
         annotations = gemma_api.dataset_annotations(self.experiment_id)
         for annotation in annotations:
-            if annotation['classUri'] == assay_type_class_uri:
-                value_uri = annotation['termUri']
+            # Gemma 2.0 renamed classUri/termUri to categoryUri/valueUri (no aliases); accept either so this also
+            # works against a 1.x server
+            category_uri = annotation.get('categoryUri') or annotation.get('classUri')
+            if category_uri == assay_type_class_uri:
+                value_uri = annotation.get('valueUri') or annotation.get('termUri')
                 if value_uri in microarray_uris:
                     return GemmaAssayType.MICROARRAY
                 elif value_uri in bulk_rnaseq_uris:
